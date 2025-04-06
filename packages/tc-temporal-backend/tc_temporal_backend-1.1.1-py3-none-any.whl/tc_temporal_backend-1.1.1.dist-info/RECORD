@@ -1,0 +1,8 @@
+tc_temporal_backend/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tc_temporal_backend/client.py,sha256=Uj6WxUlwY9gPlm0v6bSaN35Nx7a0HKobCvFf0IBdtNI,1512
+tc_temporal_backend/schema/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tc_temporal_backend/schema/hivemind.py,sha256=08ijqTlfAE10jU17PTproSzoLQcSqafYB3TY--zhgqk,612
+tc_temporal_backend-1.1.1.dist-info/METADATA,sha256=_ZyK4AzMPyeK5uleRwn0Pa07l31IV3RTUjaz1QSDM4c,620
+tc_temporal_backend-1.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+tc_temporal_backend-1.1.1.dist-info/top_level.txt,sha256=hIwJxiEMVoTo1wmssD6CjXvQx_XingNKtgQFZIR4WQc,20
+tc_temporal_backend-1.1.1.dist-info/RECORD,,
