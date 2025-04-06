@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: ml2_1416
+Version: 0.1.0
+Summary: A simple greeting module called ML2
+Author-email: Your Name <your@email.com>
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# ml2
+
+A Python module with a simple `greet()` function.
