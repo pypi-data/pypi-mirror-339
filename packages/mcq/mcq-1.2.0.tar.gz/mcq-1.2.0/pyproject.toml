@@ -1,0 +1,18 @@
+[project]
+name = "mcq"
+version = "1.2.0"
+description = "A library that employs multiple-choice questions to guide LLM outputs by constraining unstable generated answers to one of the predefined options."
+authors = [
+    {name = "Tomo Kanazawa"}
+]
+license = {text = "MIT License"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openai (>=1.70.0,<2.0.0)",
+    "numpy (>=2.2.4,<3.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
