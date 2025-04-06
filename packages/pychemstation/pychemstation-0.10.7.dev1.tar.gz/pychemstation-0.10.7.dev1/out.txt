@@ -1,0 +1,511 @@
+Local Rows
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+LoadMethod "D:\Chemstation\1\Methods\", "GENERAL-POROSHELL-OPT.M"
+response$ = _MethFile$
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _MethFile$
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "Time")
+response_num = ObjHdrVal("RCPMP1Method[1]", "PumpChannel2_CompositionPercentage")
+response_num = ObjHdrVal("RCPMP1Method[1]", "Flow")
+response_num = ObjHdrVal("RCPMP1Method[1]", "StopTime_Time")
+response_num = ObjHdrVal("RCPMP1Method[1]", "PostTime_Time")
+SetObjHdrVal RCPMP1Method[1], Flow, 0.4
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrText RCPMP1Method[1], PostTime_Mode, Set
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrVal RCPMP1Method[1], PostTime_Time, 4
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrText RCPMP1Method[1], StopTime_Mode, Set
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrVal RCPMP1Method[1], StopTime_Time, 14
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrVal RCPMP1Method[1], PumpChannel2_CompositionPercentage, 22
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _MethFile$
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "Time")
+response_num = ObjHdrVal("RCPMP1Method[1]", "PumpChannel2_CompositionPercentage")
+response_num = ObjHdrVal("RCPMP1Method[1]", "Flow")
+response_num = ObjHdrVal("RCPMP1Method[1]", "StopTime_Time")
+response_num = ObjHdrVal("RCPMP1Method[1]", "PostTime_Time")
+LoadMethod "D:\Chemstation\1\Methods\", "GENERAL-POROSHELL-OPT.M"
+response$ = _MethFile$
+Sleep 0.1
+DelTab RCPMP1Method[1], "Timetable"
+Sleep 0.1
+SetObjHdrVal RCPMP1Method[1], PumpChannel2_CompositionPercentage, 5.0
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrVal RCPMP1Method[1], Flow, 0.65
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrText RCPMP1Method[1], StopTime_Mode, Set
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrVal RCPMP1Method[1], StopTime_Time, 4.0
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrText RCPMP1Method[1], PostTime_Mode, Set
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrVal RCPMP1Method[1], PostTime_Time, 1.0
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTab RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+NewTab RCPMP1Method[1], "Timetable"
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Sleep 0.1
+NewColText RCPMP1Method[1], "Timetable", "Function", "SolventComposition"
+Sleep 0.1
+Sleep 0.1
+NewColVal RCPMP1Method[1], "Timetable", "Time", 3.5
+Sleep 0.1
+Sleep 0.1
+NewColVal RCPMP1Method[1], "Timetable", "SolventCompositionPumpChannel2_Percentage", 100.0
+Sleep 0.1
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "RCPMP1Method[1]", "Timetable", Rows, "Function", "Flow"
+Sleep 0.1
+Sleep 0.1
+NewColVal RCPMP1Method[1], "Timetable", "FlowFlow", 0.65
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "FlowFlow", 0.65
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Local Rows
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+LoadMethod "D:\Chemstation\1\Methods\", "GENERAL-POROSHELL-OPT.M"
+response$ = _MethFile$
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _MethFile$
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "Time")
+response_num = ObjHdrVal("RCPMP1Method[1]", "PumpChannel2_CompositionPercentage")
+response_num = ObjHdrVal("RCPMP1Method[1]", "Flow")
+response_num = ObjHdrVal("RCPMP1Method[1]", "StopTime_Time")
+response_num = ObjHdrVal("RCPMP1Method[1]", "PostTime_Time")
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTab RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+NewTab RCPMP1Method[1], "Timetable"
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Sleep 0.1
+NewColText RCPMP1Method[1], "Timetable", "Function", "SolventComposition"
+Sleep 0.1
+Sleep 0.1
+NewColVal RCPMP1Method[1], "Timetable", "Time", 5
+Sleep 0.1
+Sleep 0.1
+NewColVal RCPMP1Method[1], "Timetable", "SolventCompositionPumpChannel2_Percentage", 22
+Sleep 0.1
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "RCPMP1Method[1]", "Timetable", Rows, "Function", "Flow"
+Sleep 0.1
+Sleep 0.1
+NewColVal RCPMP1Method[1], "Timetable", "FlowFlow", 0.2
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "FlowFlow", 0.2
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "RCPMP1Method[1]", "Timetable", Rows, "Function", "SolventComposition"
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "Time", 10
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "SolventCompositionPumpChannel2_Percentage", 78
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "RCPMP1Method[1]", "Timetable", Rows, "Function", "Flow"
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "FlowFlow", 0.8
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "Time", 10
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _MethFile$
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 3, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 3, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 3, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 4, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 4, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 4, "Time")
+response_num = ObjHdrVal("RCPMP1Method[1]", "PumpChannel2_CompositionPercentage")
+response_num = ObjHdrVal("RCPMP1Method[1]", "Flow")
+response_num = ObjHdrVal("RCPMP1Method[1]", "StopTime_Time")
+response_num = ObjHdrVal("RCPMP1Method[1]", "PostTime_Time")
+LoadMethod "D:\Chemstation\1\Methods\", "GENERAL-POROSHELL-OPT.M"
+response$ = _MethFile$
+Sleep 0.1
+DelTab RCPMP1Method[1], "Timetable"
+Sleep 0.1
+SetObjHdrVal RCPMP1Method[1], PumpChannel2_CompositionPercentage, 5.0
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrVal RCPMP1Method[1], Flow, 0.65
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrText RCPMP1Method[1], StopTime_Mode, Set
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrVal RCPMP1Method[1], StopTime_Time, 4.0
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrText RCPMP1Method[1], PostTime_Mode, Set
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrVal RCPMP1Method[1], PostTime_Time, 1.0
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTab RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Local Rows
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+Local Rows
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+Local Rows
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+LoadMethod "D:\Chemstation\1\Methods\", "GENERAL-POROSHELL-OPT.M"
+response$ = _MethFile$
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Local Rows
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+LoadMethod "D:\Chemstation\1\Methods\", "GENERAL-POROSHELL-OPT.M"
+response$ = _MethFile$
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Local Rows
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+LoadMethod "D:\Chemstation\1\Methods\", "GENERAL-POROSHELL-OPT.M"
+response$ = _MethFile$
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Local Rows
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+LoadMethod "D:\Chemstation\1\Methods\", "GENERAL-POROSHELL-OPT.M"
+response$ = _MethFile$
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response$ = AcqStatus$
+Local Rows
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+LIDoOperation "TURN_ON"
+PrepRun
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = AcqStatus$
+Local Rows
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+LIDoOperation "TURN_ON"
+PrepRun
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+PrepRun
+SaveMethod _MethPath$, _MethFile$, "{commit_msg}"
+SaveSequence _SeqPath$, _SeqFile$
+response_num = ObjHdrVal("RCPMP1Method[1]", "PostTime_Time")
+response_num = ObjHdrVal("RCPMP1Method[1]", "StopTime_Time")
+response$ = _MethFile$
+RunSequence
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+Local Rows
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+LIDoOperation "TURN_ON"
+PrepRun
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+PrepRun
+SaveMethod _MethPath$, _MethFile$, "{commit_msg}"
+SaveSequence _SeqPath$, _SeqFile$
+response_num = ObjHdrVal("RCPMP1Method[1]", "PostTime_Time")
+response_num = ObjHdrVal("RCPMP1Method[1]", "StopTime_Time")
+response$ = _MethFile$
+RunSequence
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = AcqStatus$
