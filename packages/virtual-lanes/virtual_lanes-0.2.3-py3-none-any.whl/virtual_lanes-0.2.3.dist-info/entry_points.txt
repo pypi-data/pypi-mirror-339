@@ -1,0 +1,2 @@
+[console_scripts]
+virtual-lanes = virtual_lanes.cli.commands:app
