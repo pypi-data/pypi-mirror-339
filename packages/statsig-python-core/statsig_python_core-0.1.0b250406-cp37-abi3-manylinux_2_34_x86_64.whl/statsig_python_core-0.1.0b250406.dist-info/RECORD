@@ -1,0 +1,11 @@
+statsig_python_core-0.1.0b250406.dist-info/METADATA,sha256=W89oudPfAr66GdII7EoDRKal1MjiQzHOPkXbIDLFZRs,312
+statsig_python_core-0.1.0b250406.dist-info/WHEEL,sha256=Q3nPWhySCYUxSjKh8F_J4i16W-ppcrZAPhi8aFqcRv8,106
+statsig_python_core/statsig.py,sha256=P5sguX1-ZDs3VCL6cTisb-200ArxjKlaTRwebavi5vg,2282
+statsig_python_core/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+statsig_python_core/requirements.txt,sha256=fMSVmHfb5rbGOo6xv-O_tUX6j-WyixssE-SnwcDRxNQ,9
+statsig_python_core/__init__.py,sha256=6tp5exyI7pYf42vgKaPfQn__5v2zMVJAgnp5Oy4BiQw,151
+statsig_python_core/observability_client.py,sha256=NHXBWZd8-ZaEB2pvl4LTmyP9MnNp7d95u4w9Pr7-BMM,701
+statsig_python_core/statsig_python_core.pyi,sha256=wjyS-J8w1TYMbFecmnR3SHeS2m4zal4npgj_-fqoHOw,7015
+statsig_python_core/error_boundary.py,sha256=AzDiHnffBeo7H5bk_kjPRSuB_T_64V3hU8hY6ChB5Rw,1501
+statsig_python_core/statsig_python_core.abi3.so,sha256=49-Uv5FkjNu8R5QuGBlCjX6lG-2qj8Z26iNFkyzWlDc,3652368
+statsig_python_core-0.1.0b250406.dist-info/RECORD,,
