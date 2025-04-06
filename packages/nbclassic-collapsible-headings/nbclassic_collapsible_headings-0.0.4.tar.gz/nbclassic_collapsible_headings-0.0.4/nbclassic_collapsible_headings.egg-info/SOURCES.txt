@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+jupyter-config/collapsible_headings.json
+nbclassic_collapsible_headings.egg-info/PKG-INFO
+nbclassic_collapsible_headings.egg-info/SOURCES.txt
+nbclassic_collapsible_headings.egg-info/dependency_links.txt
+nbclassic_collapsible_headings.egg-info/not-zip-safe
+nbclassic_collapsible_headings.egg-info/requires.txt
+nbclassic_collapsible_headings.egg-info/top_level.txt
+static/collapsible_headings.css
+static/collapsible_headings.js

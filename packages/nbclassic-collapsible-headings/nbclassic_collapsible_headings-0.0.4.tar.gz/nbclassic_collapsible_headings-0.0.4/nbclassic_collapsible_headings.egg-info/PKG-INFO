@@ -1,0 +1,57 @@
+Metadata-Version: 2.4
+Name: nbclassic-collapsible-headings
+Version: 0.0.4
+Summary: Allows notebook to have collapsible sections, separated by headings
+Home-page: https://github.com/AnswerDotAI/nbclassic-collapsible-headings
+Author: Nbextensions team
+Author-email: info@fast.ai
+License: Apache Software License 2.0
+Keywords: notebook
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pip
+Requires-Dist: packaging
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# nbclassic-collapsible-headings
+Allows notebook to have collapsible sections, separated by headings
+
+## Installation
+
+```
+pip install nbclassic-collapsible-headings
+```
+
+> [!TIP]
+>
+> ### Where to find the complete documentation for this nbclassic extension
+>
+> If you want to learn about everything this project can do, we
+> recommend reading:
+> * The original documentation on [jupyter_contrib_nbextensions's collapsible headers](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/collapsible_headings/readme.html).
+> * The original [collapsible_headings source code](https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tree/master/src/jupyter_contrib_nbextensions/nbextensions/collapsible_headings)
+>
+> This project wouldn’t exist without the excellent
+> [jupyter_contrib_nbextensions](https://jupyter-contrib-nbextensions.readthedocs.io/) project. 
