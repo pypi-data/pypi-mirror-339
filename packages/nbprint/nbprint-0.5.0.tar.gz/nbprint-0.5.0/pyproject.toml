@@ -1,0 +1,260 @@
+[build-system]
+requires = [
+    "hatchling>=1.20",
+    "hatch-jupyter-builder",
+    "jupyterlab>=4,<5",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "nbprint"
+description = "A framework for customizing NBConvert templates and building reports"
+version = "0.5.0"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+authors = [
+    { name = "Tim Paine", email = "3105306+timkpaine@users.noreply.github.com" },
+]
+keywords = [
+    "Jupyter",
+    "JupyterLab",
+    "Notebook",
+    "Notebooks",
+    "Report",
+    "Reports",
+    "Reporting",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Jupyter",
+    "Framework :: Jupyter :: JupyterLab",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: Apache Software License",
+]
+
+dependencies = [
+    "ccflow>=0.4.0",
+    "dominate",
+    "hydra-core",
+    "ipywidgets",
+    "nbconvert[webpdf]>=7.11.0",
+    "nbformat",
+    "notebook",
+    "omegaconf",
+    "pydantic>=2,<3",
+    "pydantic_extra_types",
+    "strenum",
+    "typer",
+    "typing-extensions",
+]
+
+[project.optional-dependencies]
+develop = [
+    "bump-my-version",
+    "hatchling>=1.20",
+    "hatch-jupyter-builder",
+    "jupyterlab>=4,<5",
+    "ruff>=0.5.0,<0.12",
+    "twine",
+    "wheel",
+    # test
+    "pytest",
+    "pytest-cov",
+    # notebook deps
+    "great_tables",
+    "matplotlib",
+    "nbprint-example-plugin",
+    "pandas",
+    "perspective-python>=3",
+    "plotly",
+    "pyarrow",
+    "seaborn",
+    "superstore",
+]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+
+[project.scripts]
+nbprint = "nbprint.cli:main"
+
+[project.urls]
+Repository = "https://github.com/nbprint/nbprint"
+Homepage = "https://github.com/nbprint/nbprint"
+
+[tool.bumpversion]
+current_version = "0.5.0"
+commit = true
+tag = false
+
+[[tool.bumpversion.files]]
+filename = "nbprint/__init__.py"
+search = '__version__ = "{current_version}"'
+replace = '__version__ = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "js/package.json"
+search = '"version": "{current_version}"'
+replace = '"version": "{new_version}"'
+
+[tool.hatch.build]
+artifacts = [
+    "nbprint/templates",
+    "nbprint/extension",
+]
+
+[tool.hatch.build.sources]
+src = "/"
+
+[tool.hatch.build.targets.sdist]
+packages = [
+    "nbprint",
+    "hydra_plugins",
+]
+include = [
+    "LICENSE",
+    "README.md",
+]
+exclude = [
+    "/.github",
+    "/.gitignore",
+    "/dist",
+    "/examples",
+    "/js/node_modules",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "nbprint",
+    "hydra_plugins",
+]
+exclude = [
+    "/.github",
+    "/.gitignore",
+    "/pyproject.toml",
+    "/dist",
+    "/examples",
+    "/js/node_modules"
+]
+
+[tool.hatch.build.targets.wheel.shared-data]
+"nbprint/templates/nbprint" = "share/jupyter/nbconvert/templates/nbprint"
+"nbprint/extension" = "share/jupyter/labextensions/nbprint"
+"nbprint/voila" = "share/jupyter/voila/templates/nbprint_voila"
+
+[tool.hatch.build.hooks.jupyter-builder]
+build-function = "hatch_jupyter_builder.npm_builder"
+ensured-targets = [
+    "nbprint/templates/nbprint/static/nbprint.css",
+    "nbprint/extension/index.js",
+]
+skip-if-exists = [
+    "nbprint/templates/nbprint/static/nbprint.css",
+    "nbprint/extension/index.js",
+]
+dependencies = [
+    "hatch-jupyter-builder>=0.5.0",
+]
+
+[tool.hatch.build.hooks.jupyter-builder.build-kwargs]
+path = "js"
+build_cmd = "build"
+npm = "pnpm"
+
+[tool.pytest.ini_options]
+asyncio_mode = "strict"
+testpaths = "nbprint/tests"
+
+[tool.ruff]
+line-length = 150
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    # TODO:remove first
+    "D101",
+    "D102",
+    "D103",
+    "D105",
+    "D107",
+    "D205",
+    "D400",
+    "D415",
+    "D417",
+    "PLR0913",
+    "PTH100",
+    "PTH110",
+    "PTH118",
+    "PTH120",
+    "PTH123",
+    "SLF001",
+    # TODO:remove later
+    "ANN001",
+    "D100",
+    "D104",
+    "ERA001",
+    "FA100",
+    "PT007",
+    "S101",
+    "T203",
+    "UP006",
+    "UP035",
+
+    "A005", # module shadowing standard library
+    "ANN002", # missing-type-args - Missing type annotation for *{name}
+    "ANN003", # missing-type-kwargs - Missing type annotation for **{name}
+    "B008",  # function-call-in-default-argument
+    "COM812", # missing-trailing-comma - Trailing comma missing
+    "D203", # one-blank-line-before-class - 1 blank line required before class docstring
+    "D213", # multi-line-summary-second-line - Multi-line docstring summary should start at the second line
+    "D401", # non-imperative-mood - First line of docstring should be in imperative mood: "{first_line}"
+    "DTZ",  # flake8-datetimez
+    "FBT", # flake8-boolean-trap
+    "FIX002", # line-contains-todo - Line contains TODO, consider resolving the issue
+    "ISC001", # single-line-implicit-string-concatenation - Implicitly concatenated string literals on one line
+    "TC001", # typing-only-first-party-import Move application import {} into a type-checking block
+    "TC002", # typing-only-third-party-import Move third-party import {} into a type-checking block
+    "TD002", # missing-todo-author - Missing author in TODO; try: # TODO(<author_name>): ... or # TODO @<author_name>: ...
+    "TD003", # missing-todo-link - Missing issue link on the line following this TODO
+]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+default-section = "third-party"
+known-first-party = ["nbprint"]
+section-order = [
+    "future",
+    "standard-library",
+    "third-party",
+    "first-party",
+    "local-folder",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "F403"]
+"nbprint/tests/*" = [
+    "ANN",
+    "D",
+    "S101",
+    "PLR2004",
+]
+"nbprint/example/*" = [
+    "ANN",
+    "ARG",
+    "D",
+    "E501",
+    "ERA",
+    "S101",
+]
