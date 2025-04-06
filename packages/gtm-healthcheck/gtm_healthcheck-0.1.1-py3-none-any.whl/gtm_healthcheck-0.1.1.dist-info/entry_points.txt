@@ -1,0 +1,2 @@
+[console_scripts]
+healthcheck = gtm_healthcheck_automation.gtm_size:main
