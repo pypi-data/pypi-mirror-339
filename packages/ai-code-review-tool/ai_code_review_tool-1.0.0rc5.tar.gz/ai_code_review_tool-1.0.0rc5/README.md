@@ -1,0 +1,235 @@
+# ai-code-review-tool
+
+[![PyPI](https://img.shields.io/pypi/v/ai-code-review-tool.svg)](https://pypi.org/project/ai-code-review-tool/)
+
+<!-- CLI-DOCS-START -->
+
+# 🧠 AI Code Review Tool – CLI Commands
+
+**Version:** `1.0.0-rc3`  
+**Last updated:** `2025-04-05 11:22:30`
+
+---
+## 🧰 Main CLI
+
+```
+Usage: main.py [OPTIONS] COMMAND [ARGS]...                                    
+                                                                               
++- Options -------------------------------------------------------------------+
+| --install-completion          Install completion for the current shell.     |
+| --show-completion             Show completion for the current shell, to     |
+|                               copy it or customize the installation.        |
+| --help                        Show this message and exit.                   |
++-----------------------------------------------------------------------------+
++- Commands ------------------------------------------------------------------+
+| review                     Run a full code review and generate a roadmap.   |
+| take-snapshot              Take a project snapshot.                         |
+| generate-patches-command   Generate patches from reviews.                   |
+| update-requirements        Auto-generate requirements.txt based on current  |
+|                            imports.                                         |
+| generate-docs              Generate CLI docs automatically from the typer   |
+|                            app. Saves to both docs/cli_commands.md and      |
+|                            optionally updates README.md.                    |
+| release                                                                     |
++-----------------------------------------------------------------------------+
+```
+
+## `review` command
+
+```
+Usage: main.py review [OPTIONS]                                               
+                                                                               
+ Run a full code review and generate a roadmap.                                
+                                                                               
++- Options -------------------------------------------------------------------+
+| --path        TEXT  [default: src]                                          |
+| --help              Show this message and exit.                             |
++-----------------------------------------------------------------------------+
+```
+
+## `take-snapshot` command
+
+```
+Usage: main.py take-snapshot [OPTIONS]                                        
+                                                                               
+ Take a project snapshot.                                                      
+                                                                               
++- Options -------------------------------------------------------------------+
+| --tools-only    --no-tools-only          [default: no-tools-only]           |
+| --output                           TEXT  [default: project_snapshot.json]   |
+| --help                                   Show this message and exit.        |
++-----------------------------------------------------------------------------+
+```
+
+## `generate-docs` command
+
+```
+Usage: main.py generate-docs [OPTIONS]                                        
+                                                                               
+ Generate CLI docs automatically from the typer app. Saves to both             
+ docs/cli_commands.md and optionally updates README.md.                        
+                                                                               
++- Options -------------------------------------------------------------------+
+| --output                                 TEXT  [default:                    |
+|                                                docs/cli_commands.md]        |
+| --update-readme    --no-update-readme          [default: update-readme]     |
+| --version                                TEXT  [default: v1.0.0]            |
+| --help                                         Show this message and exit.  |
++-----------------------------------------------------------------------------+
+```
+
+## `generate-patches` command
+
+```
+❌ Failed to get help for `generate-patches`
+```
+
+## `update-requirements` command
+
+```
+Usage: main.py update-requirements [OPTIONS]                                  
+                                                                               
+ Auto-generate requirements.txt based on current imports.                      
+                                                                               
++- Options -------------------------------------------------------------------+
+| --help          Show this message and exit.                                 |
++-----------------------------------------------------------------------------+
+```
+
+## `release` command
+
+```
+Usage: main.py release [OPTIONS] COMMAND [ARGS]...                            
+                                                                               
++- Options -------------------------------------------------------------------+
+| --help          Show this message and exit.                                 |
++-----------------------------------------------------------------------------+
++- Commands ------------------------------------------------------------------+
+| prepare      Prepare a new release: bump version, update files, and show    |
+|              next version.                                                  |
+| publish      Build and publish the current version to PyPI.                 |
+| prerelease   Automate pre-release steps before versioning and publishing.   |
++-----------------------------------------------------------------------------+
+```
+
+## 🧾 Changes Since Last CLI Docs
+
+
+## 🧠 Learning Progress & Concepts
+
+```markdown
+- [ ] Learn how to diagram project architecture and module relationships
+- [ ] Learn to read and write patch files for applying suggested changes
+- [ ] Understand how CLI tools work with Typer
+- [ ] Learn how to structure a Python project with modules and commands
+- [ ] Learn how to publish a Python package to PyPI
+- [ ] Learn how to track changes with Git and structure nightly updates
+```
+
+# 🧠 How This Project Works
+
+This document is automatically generated to help you (or others) understand the structure and purpose of the project.
+
+## `__init__.py`
+**Path**: `src\__init__.py`
+
+
+## `ai_code_review_tool\chunk_file.py`
+**Path**: `src\ai_code_review_tool\chunk_file.py`
+
+- `def chunk_file()` — Chunks a file into smaller parts if it's too large to process at once.
+
+## `ai_code_review_tool\generate_patches.py`
+**Path**: `src\ai_code_review_tool\generate_patches.py`
+
+- `def generate_patches()` — Placeholder for patch generation logic based on AI reviews.
+
+## `ai_code_review_tool\generate_roadmap.py`
+**Path**: `src\ai_code_review_tool\generate_roadmap.py`
+
+- `def generate_roadmap()` — Generate a development roadmap based on code review feedback.
+
+## `ai_code_review_tool\get_code_review_suggestions.py`
+**Path**: `src\ai_code_review_tool\get_code_review_suggestions.py`
+
+
+## `ai_code_review_tool\git_utils.py`
+**Path**: `src\ai_code_review_tool\git_utils.py`
+
+- `def get_changed_files()` — Returns a list of staged file paths (relative to repo root).
+- `def generate_commit_message()` — Generates a commit message summary based on a list of changed files.
+- `def commit_and_push()` — Commits staged changes with the provided message and pushes to origin.
+
+## `ai_code_review_tool\learning_tracker.py`
+**Path**: `src\ai_code_review_tool\learning_tracker.py`
+
+- `def initialize_learning_baseline()` — Save the baseline snapshot from the first known working state of the codebase.
+- `def update_learning_progress()` — Update the learning progress file with details of what was changed or added,
+- `def summarize_learning_progress()` — Provide a text summary of progress made so far.
+
+## `ai_code_review_tool\openai_integration.py`
+**Path**: `src\ai_code_review_tool\openai_integration.py`
+
+- `def get_openai_response()` — Function to send a prompt to OpenAI and receive a response.
+
+## `ai_code_review_tool\project_explainer.py`
+**Path**: `src\ai_code_review_tool\project_explainer.py`
+
+- `def generate_how_it_works()` — Walks the project and generates a high-level overview of how the code works.
+
+## `ai_code_review_tool\release.py`
+**Path**: `src\ai_code_review_tool\release.py`
+
+- `def prepare_release()` — Prepare a new release: bump version, update files, and show next version.
+- `def publish_to_pypi()` — Build and publish the current version to PyPI.
+- `def prerelease_workflow()` — Automate pre-release steps before versioning and publishing.
+
+## `ai_code_review_tool\requirements_updater.py`
+**Path**: `src\ai_code_review_tool\requirements_updater.py`
+
+- `def update_requirements()` — Regenerates requirements.txt using pipreqs.
+
+## `ai_code_review_tool\snapshot_tool.py`
+**Path**: `src\ai_code_review_tool\snapshot_tool.py`
+
+- `def is_valid_file()` — No docstring.
+- `def walk_project()` — No docstring.
+- `def save_snapshot()` — No docstring.
+- `def snapshot()` — Generate a project snapshot of code files for AI review.
+
+## `ai_code_review_tool\troubleshoot_code_errors.py`
+**Path**: `src\ai_code_review_tool\troubleshoot_code_errors.py`
+
+- `def troubleshoot_code_errors()` — Analyze error logs or console output and suggest troubleshooting steps.
+
+## `ai_code_review_tool\version_utils.py`
+**Path**: `src\ai_code_review_tool\version_utils.py`
+
+- `def get_project_version()` — Extracts the current version from pyproject.toml.
+- `def set_project_version()` — Updates the version field in pyproject.toml.
+- `def bump_version()` — Bumps the version based on the specified part (major, minor, patch, rc).
+- `def parse_version()` — No docstring.
+
+## `ai_code_review_tool\walk_and_review_project.py`
+**Path**: `src\ai_code_review_tool\walk_and_review_project.py`
+
+
+## `ai_code_review_tool\walk_project.py`
+**Path**: `src\ai_code_review_tool\walk_project.py`
+
+- `def walk_project()` — Walks through a project directory and collects all files with the specified extensions.
+
+## `ai_code_review_tool\__init__.py`
+**Path**: `src\ai_code_review_tool\__init__.py`
+
+
+
+## 🚀 Release & Publish Instructions
+
+- [ ] Run `python main.py release prerelease --bump rc`
+- [ ] Run `python main.py release prepare --bump rc`
+- [ ] Run `python main.py release publish`
+- [ ] Push with `git push --follow-tags`
+- [ ] Verify on PyPI: [ai-code-review-tool v1.0.0-rc3](https://pypi.org/project/ai-code-review-tool/1.0.0-rc3/)
+
+<!-- CLI-DOCS-END -->

@@ -1,0 +1,19 @@
+[project]
+name = "ai-code-review-tool"
+version = "1.0.0-rc5"
+description = "AI-powered code review assistant using OpenAI"
+authors = [{ name = "Your Name" }]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "typer>=0.9",
+    "openai>=1.0.0",
+    "python-dotenv",
+]
+
+[project.scripts]
+ai-review = "main:cli"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
