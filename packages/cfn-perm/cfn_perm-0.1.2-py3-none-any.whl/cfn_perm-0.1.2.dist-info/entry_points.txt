@@ -1,0 +1,2 @@
+[console_scripts]
+cfn-perm = source.app:main
