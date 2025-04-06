@@ -1,0 +1,26 @@
+[project]
+name = "haproxy-fusion-client"
+version = "0.1.1"
+description = "A client and service wrapper for HAProxy Fusion API"
+authors = [{name = "Henry Pikner", email = "henrypikner@gmail.com"}]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dnspython>=2.7.0",
+    "pydantic>=2.11.1",
+    "requests>=2.32.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/hepikn/haproxy-fusion-client"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

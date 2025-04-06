@@ -1,0 +1,28 @@
+from enum import Enum
+
+
+class SyslogFacility(str, Enum):
+    KERN = "kern"
+    USER = "user"
+    MAIL = "mail"
+    DAEMON = "daemon"
+    AUTH = "auth"
+    SYSLOG = "syslog"
+    LPR = "lpr"
+    NEWS = "news"
+    UUCP = "uucp"
+    CRON = "cron"
+    AUTH2 = "auth2"
+    FTP = "ftp"
+    NTP = "ntp"
+    AUDIT = "audit"
+    ALERT = "alert"
+    CRON2 = "cron2"
+    LOCAL0 = "local0"
+    LOCAL1 = "local1"
+    LOCAL2 = "local2"
+    LOCAL3 = "local3"
+    LOCAL4 = "local4"
+    LOCAL5 = "local5"
+    LOCAL6 = "local6"
+    LOCAL7 = "local7"
