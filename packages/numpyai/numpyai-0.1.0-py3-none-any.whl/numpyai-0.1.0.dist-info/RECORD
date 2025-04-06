@@ -1,0 +1,12 @@
+numpyai/__init__.py,sha256=Z0DKw-W6MKOIdvcN1M2DxbWdP48fy3NDT5_VeKVjVaU,63
+numpyai/_ai.py,sha256=v-fuTxHIoCtmknhB5X001eLDXGkUPDYoS3Ga76cxW90,5346
+numpyai/_array.py,sha256=JAFbHxj2GPodcsj-jAIlreAACcYWYOty2F9PNO7-iow,10677
+numpyai/_exceptions.py,sha256=TTwhcWpL2_1fCVNGn3RNa56SxzRX0F5VyhJi8sY3m0I,98
+numpyai/_session.py,sha256=xgfuJUZWGl_yh_kY6pMqeAQbtV9IPAbdY0yadC0X3g8,8206
+numpyai/_utils.py,sha256=cIhcuyYN8gQpkyw4YZZVrRzDYWfvAOLW7pXtaaozFXE,4390
+numpyai/_validator.py,sha256=1sbxPTCdPm9QDFZNhEKt33IfBZc_g15K1m6QNxV1QrY,5285
+numpyai-0.1.0.dist-info/licenses/LICENSE,sha256=nwQ-dpxLwqquHjlRMpFZgkGcFAk_qMw3W1k1Q6pzY64,1093
+numpyai-0.1.0.dist-info/METADATA,sha256=3fTKleHWI_J0mFqeNdfPZqaR0njAwH04qq9ucqvCYdQ,627
+numpyai-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+numpyai-0.1.0.dist-info/top_level.txt,sha256=qnYOmp1kauAnfYU4_vWjoOeuijJqNSeVgWSTuXyedcc,8
+numpyai-0.1.0.dist-info/RECORD,,
