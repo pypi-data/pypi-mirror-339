@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+gtm_healthcheck.egg-info/PKG-INFO
+gtm_healthcheck.egg-info/SOURCES.txt
+gtm_healthcheck.egg-info/dependency_links.txt
+gtm_healthcheck.egg-info/entry_points.txt
+gtm_healthcheck.egg-info/top_level.txt
+gtm_healthcheck_automation/__init__.py
+gtm_healthcheck_automation/gtm_size.py
