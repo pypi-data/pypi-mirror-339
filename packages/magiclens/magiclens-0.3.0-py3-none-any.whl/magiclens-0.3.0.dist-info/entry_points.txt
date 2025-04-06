@@ -1,0 +1,2 @@
+[console_scripts]
+magiclens = magiclens.cli:main
