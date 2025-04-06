@@ -1,0 +1,14 @@
+fastapi
+argparse
+uvicorn
+gunicorn
+pandas
+numpy
+matplotlib
+yfinance
+plotly
+requests
+seaborn
+statsmodels
+nbformat
+scikit-learn
