@@ -1,0 +1,2 @@
+[console_scripts]
+emrrunner = app.cli:cli_main
