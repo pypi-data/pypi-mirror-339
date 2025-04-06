@@ -1,0 +1,2 @@
+[console_scripts]
+funrun = funrun.run:run_task
