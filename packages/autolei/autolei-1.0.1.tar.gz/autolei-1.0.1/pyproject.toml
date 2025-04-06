@@ -1,0 +1,69 @@
+[tool.poetry]
+name = "autolei"
+version = "1.0.1"
+description = "A GUI for electron diffraction data analysis"
+keywords = [
+    "electron-diffraction",
+    "XDS",
+    "microed",
+    "data-analysis",
+    "automation",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+homepage = "https://gitlab.com/395736627tristone/autolei"
+repository = "https://gitlab.com/395736627tristone/autolei"
+documentation = "https://gitlab.com/395736627tristone/autolei/docs"
+maintainers = ["Lei Wang <lei.wang@mmk.su.se>", "Yinlin Chen <yinlin.chen@mmk.su.se>"]
+authors = ["Lei Wang <lei.wang@mmk.su.se>", "Yinlin Chen <yinlin.chen@mmk.su.se>"]
+license = "BSD 3-Clause"
+readme = "README.md"
+include = [
+  "LICENSE",
+  "README.md",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+numpy = ">=1.19.5"
+fabio = ">=0.14.0"
+matplotlib = ">=3.3.4"
+mrcfile = ">=1.5.0"
+pandas = ">=1.1.5"
+scipy = ">=1.5.4"
+screeninfo = ">=0.8.1"
+tqdm = ">=4.46.1"
+h5py = ">=3.1.0"
+mplcursors = ">=0.5.1"
+hdf5plugin = ">=3.3.1"
+openpyxl = ">=3.0.0"
+plotly = ">=5.0.0"
+scikit-image = ">=0.18.0"
+mpld3 = ">=0.5.0"
+numba = ">=0.53.0"
+pillow = ">=8.0.0"
+
+[poetry.group.dev.dependencies]
+check-manifest = "*"
+pre-commit = "*"
+bump2version = "^1.0.1"
+
+[tool.poetry.scripts]
+autolei = "autolei.autolei:main"
+autolei_setting = "autolei.autolei:setting"
+autolei_add_instrument = "autolei.autolei:add_instrument"
+autolei_mrc2pets = "autolei.src.generate_pets:main"
+
+[tool.poetry.urls]
+"Bug Reports" = "https://gitlab.com/395736627tristone/autolei/issues"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
