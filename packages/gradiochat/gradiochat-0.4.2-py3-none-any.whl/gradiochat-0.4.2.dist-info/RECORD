@@ -1,0 +1,14 @@
+gradiochat/__init__.py,sha256=jULeNZ-cN5jbNhlpiR0owkw2wmgd9g6KwlGKmU95rcs,78
+gradiochat/_modidx.py,sha256=xOvlMRO0LxgfP0CowuJE1w2UHrc7nXWoXJuypjXQ0uE,6294
+gradiochat/app.py,sha256=GVw91v6n_fKyMudSclcf3KrhlUskQliojhtRy46r1q8,11441
+gradiochat/config.py,sha256=pHShGyBL_1f56xm0VN5m3tIuDJAu_WoPZLVkcSIEBq0,3499
+gradiochat/gradio_configpresets.py,sha256=EfybeJvgwd-6qKPUaqGqBZroXzDRf6hvUJd1kxlgRx4,255
+gradiochat/gradio_themebuilder.py,sha256=k-yBOiWRKc_a_Dradmzg9U4WTfWrk824pdzEeRbjkKA,305
+gradiochat/gradio_themes.py,sha256=hfWZc4MzaXmWFye-nNkMfncoSL192B1Ztlk-JBOERkI,1255
+gradiochat/ui.py,sha256=B-UZq9-5uAJrtlUjpnyzs9O29jQgyV1ApA-gM7aAKt8,7785
+gradiochat/utils.py,sha256=MxLAN3v3JLPNDTU1oJ4dMlwzuon1hRs5kGhIh589F2o,5317
+gradiochat-0.4.2.dist-info/METADATA,sha256=dpv_-NmBN1G2XG3xSBHZtriXidZBo_eUJipU4i_rLcs,12657
+gradiochat-0.4.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gradiochat-0.4.2.dist-info/entry_points.txt,sha256=fZ6bHh1hLkchpUNDbN4aYLOpiHWvu8shxkaCWg-Dtr4,47
+gradiochat-0.4.2.dist-info/licenses/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+gradiochat-0.4.2.dist-info/RECORD,,
