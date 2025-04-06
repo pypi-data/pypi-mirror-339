@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: hdl-block-design
+Version: 0.1.0
+Summary: A library to represent and manipulate HDL block designs in python
+Project-URL: Repository, https://gitlab.com/dawalters/hdl-block-design
+Author: Dom Walters
+License-Expression: MIT
+License-File: LICENSE
+Keywords: block,design,hdl,vhdl
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.13
+Requires-Dist: typer==0.15.2
+Provides-Extra: dev
+Requires-Dist: pre-commit==4.2.0; extra == 'dev'
+Provides-Extra: lint-and-format
+Requires-Dist: ruff==0.11.4; extra == 'lint-and-format'
+Provides-Extra: static-analysis
+Requires-Dist: mypy==1.15.0; extra == 'static-analysis'
+Description-Content-Type: text/markdown
+
+# HDL Block Design
+
+A library to represent and manipulate Hardware Description Language (HDL) block
+designs in Python.
+
+## Installation
+
+```bash
+pip install hdl-block-design
+```
+
+## Usage
+
+The `hbd` command-line tool allows you to test the capabilities of the library.
