@@ -1,0 +1,3 @@
+[console_scripts]
+deng=sprngbk_de_toolkit.main:cli
+
