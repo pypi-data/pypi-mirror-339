@@ -1,0 +1,31 @@
+[project]
+name = "wpmx"
+version = "0.1.0"
+description = "Next-gen CLI typing speed tracker with visualization"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+# license = { text = "AGPL-3.0-or-later" }
+authors = [
+    { name = "Gabriel Rockson", email = "dev@gabrielrockson.com" }
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/Gabriel-Rockson/wpmx"
+
+[project.scripts]
+wpmx = "wpm.commandline:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

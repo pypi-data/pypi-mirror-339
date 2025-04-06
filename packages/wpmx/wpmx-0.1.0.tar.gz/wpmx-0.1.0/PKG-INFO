@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: wpmx
+Version: 0.1.0
+Summary: Next-gen CLI typing speed tracker with visualization
+Author-email: Gabriel Rockson <dev@gabrielrockson.com>
+Project-URL: Homepage, https://github.com/Gabriel-Rockson/wpmx
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Dynamic: license-file
