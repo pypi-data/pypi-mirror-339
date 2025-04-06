@@ -1,0 +1,6 @@
+[console_scripts]
+refine = refine.__main__:main
+
+[refine.mods]
+cli-dashes = refine.mods.cli.flags:CliDashes
+format-sql = refine.mods.sql.fmt:FormatSQL
