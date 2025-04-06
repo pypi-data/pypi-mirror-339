@@ -1,0 +1,11 @@
+eslogging/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eslogging/handlers.py,sha256=IxfTvm4CwIbjcE-XvvM8N1_AoRSu3-OadATxzO20nPs,15866
+eslogging/serializers.py,sha256=hWOxAzh12o_a3nFZ1krNy4P9N2QpwBoog447SsK4a8w,730
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_cmreshandler.py,sha256=9HRs74Db_tiiiIOdPw3B2A-p3v255CyUC1VJuVlLnfE,8294
+tests/test_cmresserializer.py,sha256=h1yEz554hmSr1le0TdCpieA9L9S9ET6rvdOQVpHVIZ4,3621
+LoggingEsHandler-1.0.4.dist-info/LICENSE.md,sha256=6ILmvMj9RMwprc2Cnsqm7AlrlkqXo-BzhXqOnBSN6u4,568
+LoggingEsHandler-1.0.4.dist-info/METADATA,sha256=WddoPVKqVMKYq2jz4eYskRylmjUmHd6qRDdob9nXBnA,11593
+LoggingEsHandler-1.0.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+LoggingEsHandler-1.0.4.dist-info/top_level.txt,sha256=IyY7W_phhD1wbqPVzvMA7-sWORsHqLLVWLsYid9jAxk,16
+LoggingEsHandler-1.0.4.dist-info/RECORD,,
