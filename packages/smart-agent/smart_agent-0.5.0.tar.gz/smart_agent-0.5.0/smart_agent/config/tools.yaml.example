@@ -1,0 +1,32 @@
+# Smart Agent Tools Configuration Example
+# Copy this file to tools.yaml and update with your values
+
+tools:
+  mcp_think_tool:
+    enabled: true
+    type: uvx
+    repository: git+https://github.com/ddkang1/mcp-think-tool
+    url: http://localhost:8000/sse
+  ddg_mcp:
+    enabled: true
+    type: uvx
+    repository: git+https://github.com/ddkang1/ddg-mcp
+    url: http://localhost:8001/sse
+  python_repl:
+    enabled: true
+    type: docker
+    image: ghcr.io/ddkang1/mcp-py-repl:latest
+    storage_path: ./storage
+    url: http://localhost:8002/sse
+    
+# Tool configuration schema
+# Each tool should have:
+# - enabled: Whether the tool is enabled (required)
+# - url: URL to access the tool (required)
+# 
+# For local tools that need to be launched:
+# - repository: Git repository or Docker image (REQUIRED for local tools, optional for remote SSE tools)
+# - launch_cmd: Command to launch the tool (REQUIRED for local tools, one of: "docker", "uvx", "npx")
+# 
+# Optional fields:
+# - storage_path: Path for tool data storage (for Docker container tools)
