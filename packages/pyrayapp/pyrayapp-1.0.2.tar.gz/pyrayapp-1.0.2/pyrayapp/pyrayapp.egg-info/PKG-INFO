@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: pyrayapp
+Version: 1.0.2
+Summary: Python Ray debug client
+Author-email: Sergey Safronov <safronov.ser@icloud.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: markdown
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Dynamic: license-file
+
+# pyray
+
+Python [Ray](https://myray.ap) debugging client.
+
+This package allows you to send structured debug payloads to Ray.app from your Python application,
+including rich content like text, images, HTML, and formatted dumps — all with optional delayed sending.
+
+## Features
+
+- Send payloads like strings, booleans, images, dumps, and more
+- Lazy evaluation — chain multiple calls and send once
+- Stack trace origin support
+- Compatible with Ray.app (https://myray.app)
+
+## Installation
+
+```bash
+pip install pyrayapp
+```
+
+## Usage
+
+```python
+from pyrayapp import ray
+
+ray("Hello from Python!").color("green").notify("Payload sent!").pause()
+```
+
+## License
+
+MIT — see [LICENSE](./LICENSE)

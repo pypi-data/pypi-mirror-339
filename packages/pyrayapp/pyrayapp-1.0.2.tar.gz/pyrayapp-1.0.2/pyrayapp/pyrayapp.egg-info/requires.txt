@@ -1,0 +1,6 @@
+markdown
+requests
+
+[dev]
+build
+twine

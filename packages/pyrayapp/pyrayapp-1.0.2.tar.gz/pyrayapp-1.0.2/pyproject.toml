@@ -1,0 +1,27 @@
+[project]
+name = "pyrayapp"
+version = "1.0.2"
+description = "Python Ray debug client"
+authors = [{ name = "Sergey Safronov", email = "safronov.ser@icloud.com" }]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "markdown",
+    "requests",
+]
+
+[project.optional-dependencies]
+dev = ["build", "twine"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["pyrayapp"]
+
+[dependency-groups]
+dev = [
+    "build>=1.2.2.post1",
+    "twine>=6.1.0",
+]
