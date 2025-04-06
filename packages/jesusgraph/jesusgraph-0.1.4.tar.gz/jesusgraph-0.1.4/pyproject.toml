@@ -1,0 +1,23 @@
+[project]
+name = "jesusgraph"
+version = "0.1.4"
+description = "Um orquestrador de fluxos inspirado pela fé, propósito e clareza."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+  { name = "Carlos Viana", email = "suporte@carlosviana.com" }
+]
+dependencies = [
+  "requests>=2.25.1"
+]
+
+[project.urls]
+Homepage = "https://github.com/ITValley-School/Jesusgraph"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
