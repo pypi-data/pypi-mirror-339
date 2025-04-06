@@ -1,0 +1,70 @@
+[build-system]
+requires = [
+    "setuptools>=61.0", 
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-process-core"
+authors = [
+    {name="Paul Bouillon", email="pbouill@gmail.com"},
+]
+description = "Core Industrial Process Control and Simulation Package"
+license = "GPL-3.0-or-later" 
+license-files = ["LICENSE.*"]
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = [
+    "process",
+    "control",
+    "simulation",
+    "industrial",
+    "automation",
+    "APC",
+    "MPC",
+    "model-predictive-control",
+    "process-control",
+    "process-simulation",
+    "process-model",
+    "process-control-simulation",
+    "model-identification",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+]
+dynamic = [
+    "version", 
+    "dependencies",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/pbouill/process"
+"Repository" = "https://github.com/pbouill/process.git"
+"Bug Tracker" = "https://github.com/pbouill/process/issues"
+
+# Define the extras here. Users install `process[feature]`
+[project.optional-dependencies]
+control = ["python-process-control"] 
+model = ["python-process-model"]
+simulate = ["python-process-simulate"]
+all = [
+    "process[control]",
+    "process[model]",
+    "process[simulate]",
+]
+
+[tool.setuptools]
+package-dir = {"process" = "process"}
+
+[tool.setuptools.package-data]
+"*" = ["*.html", "*.css", "*.ico", "*.js"]
+
+[tool.setuptools.dynamic]
+version = {attr = "process._version.__version__"} # Adjust path if needed
+dependencies = {file = ["requirements.txt"]}

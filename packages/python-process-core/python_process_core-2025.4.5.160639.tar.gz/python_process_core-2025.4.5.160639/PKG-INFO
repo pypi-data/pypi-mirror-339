@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: python-process-core
+Version: 2025.4.5.160639
+Summary: Core Industrial Process Control and Simulation Package
+Author-email: Paul Bouillon <pbouill@gmail.com>
+License-Expression: GPL-3.0-or-later
+Project-URL: Homepage, https://github.com/pbouill/process
+Project-URL: Repository, https://github.com/pbouill/process.git
+Project-URL: Bug Tracker, https://github.com/pbouill/process/issues
+Keywords: process,control,simulation,industrial,automation,APC,MPC,model-predictive-control,process-control,process-simulation,process-model,process-control-simulation,model-identification
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: python-dateutil>=2.9.0
+Requires-Dist: colorama>=0.4.6
+Provides-Extra: control
+Requires-Dist: python-process-control; extra == "control"
+Provides-Extra: model
+Requires-Dist: python-process-model; extra == "model"
+Provides-Extra: simulate
+Requires-Dist: python-process-simulate; extra == "simulate"
+Provides-Extra: all
+Requires-Dist: process[control]; extra == "all"
+Requires-Dist: process[model]; extra == "all"
+Requires-Dist: process[simulate]; extra == "all"
+
+# process
+  Industrial process control, modelling, optimization, and simulation library for python
