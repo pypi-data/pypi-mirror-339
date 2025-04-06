@@ -1,0 +1,13 @@
+pre_commit_hooks/__init__.py,sha256=A2CO8YXbK_4wM9T4MjB9ER7186mt_3IDyyFvBxYjBc4,60
+pre_commit_hooks/common.py,sha256=v2pUvEMLMfAXg2nNJOH9LYHbFWkdOssLFwnDXsIEkqk,2703
+pre_commit_hooks/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pre_commit_hooks/run_bump2version/__init__.py,sha256=1Qgt7njFfTlH39ZY4TucZREUJgqtGMe37U5mLkFmupc,1433
+pre_commit_hooks/run_bump2version/__main__.py,sha256=BZy8mDElAK3-X2iKvqg1XnGbCiYXcLoMDefaPanWx4g,153
+pre_commit_hooks/run_bump_my_version/__init__.py,sha256=cl6KTxPaKPmHuebddgfs_OqPK_oYI3R15AbLo8kcFRY,1837
+pre_commit_hooks/run_bump_my_version/__main__.py,sha256=w2V3y61jrSau-zxjl8ciHtWPlJQwXbYxNJ2tGYVyI4s,156
+pre_commit_hooks/run_ruff_format/__init__.py,sha256=4qLSMmPwS50Uqo3FW9joYXaiQ5uKwlvjmk4Vzu6PLrI,2041
+pre_commit_hooks/run_ruff_format/__main__.py,sha256=faesqqpMaesg5r-LvkkQt1W9kahvNr-60K3SMYv1NgY,152
+dycw_pre_commit_hooks-0.10.24.dist-info/METADATA,sha256=orT7e-hcorSV7yk0rxVT6BXcxfYRF1pOZwe3BiBS_5g,852
+dycw_pre_commit_hooks-0.10.24.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dycw_pre_commit_hooks-0.10.24.dist-info/entry_points.txt,sha256=URODtkWLHrg6PagXnVbubNWnEUjExjCM_lCPf2LEllo,196
+dycw_pre_commit_hooks-0.10.24.dist-info/RECORD,,
