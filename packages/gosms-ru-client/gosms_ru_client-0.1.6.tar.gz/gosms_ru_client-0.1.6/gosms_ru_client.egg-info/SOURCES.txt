@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+gosms_ru_client/__init__.py
+gosms_ru_client/client.py
+gosms_ru_client/exceptions.py
+gosms_ru_client.egg-info/PKG-INFO
+gosms_ru_client.egg-info/SOURCES.txt
+gosms_ru_client.egg-info/dependency_links.txt
+gosms_ru_client.egg-info/requires.txt
+gosms_ru_client.egg-info/top_level.txt
