@@ -1,0 +1,56 @@
+Metadata-Version: 2.3
+Name: procenty
+Version: 0.1.2
+Summary: 
+Author: szalaj
+Author-email: mszalajski@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: pendulum (>=2.1.2,<3.0.0)
+Requires-Dist: pytest (>=7.4.3,<8.0.0)
+Requires-Dist: python-dateutil (>=2.8.2,<3.0.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Requires-Dist: scipy (>=1.11.4,<2.0.0)
+Description-Content-Type: text/markdown
+
+# to do
+
+- jaki będzie harmonogram splaty kredytu
+- porownanie splaty z inną ofertą kredytu
+- porownanie splaty z inna stopa procentowa
+- dodanie inflacji
+- dodanie ceny nieruchomosci
+- dodanie obligacji
+- dodanie portfela
+- dodanie dochodu 
+- dodanie wydatku
+- pokazanie majątku w miesiącach
+
+
+# procenty
+
+- symulacja różnych typów kredytu
+- symulacja kreacji i cyrkulacji pieniądza
+
+# połączenia za pomocą networkx
+
+stworzenie grafu o kształcie prostokąta
+
+https://networkx.org/documentation/stable/reference/generated/networkx.generators.lattice.grid_2d_graph.html
+
+stworzeniu grafu składającego się z heksów
+
+https://networkx.org/documentation/stable/reference/generated/networkx.generators.lattice.hexagonal_lattice_graph.html
+
+# zasoby
+
+W gospodarce są zasoby tj. r1, r2, ... ri ... rn
+
+Zasoby występują w zonach tj. z1, z2, ..., zn
+
