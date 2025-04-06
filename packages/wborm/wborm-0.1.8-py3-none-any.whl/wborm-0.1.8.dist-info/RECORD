@@ -1,0 +1,13 @@
+wborm/__init__.py,sha256=r5gyjJdIGy0rKQFi7Tb7de775cvIsv29EhyjgiVGXN0,144
+wborm/core.py,sha256=I6V3l3UxymR6iLA9ToWixQvfAU6U6Y-VVEPRGKfDUv4,8312
+wborm/fields.py,sha256=zLjKZqQnXeWkUrLCsdbZFbcUJXTpPVqzOyobXYyz3go,268
+wborm/introspect.py,sha256=wRD16EcU6O_4eIrEGsobxCJUNbbQJbPYpy99KJepG74,1054
+wborm/query.py,sha256=0nFW1rAl_yF4KCVbU7fWOScslT6Ex2iiQrBZ5RAor_g,5397
+wborm/utils.py,sha256=3EjTI6tJu1KCzrloVpMh4MjxY9vapCFdXrV6udgvm1g,2062
+wborm/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wborm/tests/test_model.py,sha256=OVwklZKjCgFwQOxcdxSxg8QYAfF4mJEsoqyeGnlxM-E,1771
+wborm-0.1.8.dist-info/licenses/LICENSE,sha256=W0UdQWgdeJxAnKScs1FrJYJgl0UcSu09JxlO4vZDRfU,1081
+wborm-0.1.8.dist-info/METADATA,sha256=rRQQDXCvGk3qpzK-GtMBEqxH35Oqw59z-SdZSNVuy0g,4753
+wborm-0.1.8.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+wborm-0.1.8.dist-info/top_level.txt,sha256=Y-7qg6si3Jr26N9QHwONPgoNbKEhGNAtQA_eJKHwfNM,6
+wborm-0.1.8.dist-info/RECORD,,
