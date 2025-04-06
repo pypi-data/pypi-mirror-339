@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: ashare-data
+Version: 0.1.0
+Summary: A command-line tool for A-share market data management.
+Author-email: zw <szzend@qq.com>
+Requires-Python: >=3.13
+Requires-Dist: click>=8.1.8
