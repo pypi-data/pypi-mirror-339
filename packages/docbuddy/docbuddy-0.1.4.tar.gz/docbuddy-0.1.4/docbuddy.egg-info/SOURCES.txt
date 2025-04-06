@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+docbuddy/__init__.py
+docbuddy.egg-info/PKG-INFO
+docbuddy.egg-info/SOURCES.txt
+docbuddy.egg-info/dependency_links.txt
+docbuddy.egg-info/requires.txt
+docbuddy.egg-info/top_level.txt
