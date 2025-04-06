@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: chuk-mcp-time-server
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: mcp>=1.6.0
+Requires-Dist: pydantic>=2.11.2
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: pyz>=0.4.3
