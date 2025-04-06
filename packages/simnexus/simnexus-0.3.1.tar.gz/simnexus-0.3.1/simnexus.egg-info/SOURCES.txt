@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+simnexus/__init__.py
+simnexus.egg-info/PKG-INFO
+simnexus.egg-info/SOURCES.txt
+simnexus.egg-info/dependency_links.txt
+simnexus.egg-info/top_level.txt
+tests/test_import.py
