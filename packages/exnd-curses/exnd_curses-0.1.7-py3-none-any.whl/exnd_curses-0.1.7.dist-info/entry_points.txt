@@ -1,0 +1,2 @@
+[console_scripts]
+read = exnd_curses.read:main
