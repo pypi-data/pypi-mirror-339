@@ -1,0 +1,24 @@
+palettum/__init__.py,sha256=XfQVETLvfb-h_poEjZ8K4o0CewbCLVqK5h-tTWbaAhc,436
+palettum/cli.py,sha256=nfgMiszwKofGcopqSLZkIPaAlQOt2yONPfqbSShgXfQ,31070
+palettum/gif.dll,sha256=nrjKdZWhTNXgozJL5Ohc5LP0_TiD98qw6PR65CZpYzs,36352
+palettum/libpng16.dll,sha256=pFpYZCx17XDV812bcKPxvTdAP7NJDqRyDpxigzRmuoM,203776
+palettum/libsharpyuv.dll,sha256=KAya4bUWjNsPDYws8bjtqsPuYvzdNI_gdfvnEwxiAtk,25600
+palettum/libwebp.dll,sha256=-l9OBCtqSMfDaVo-vPacRP0OkDegSBL8UiovxHk0kEA,367104
+palettum/mtpng.dll,sha256=x5Ew7eFEGfF49mWTYmGPuNHlDh6Lc0tPC57WgEN4nbk,386048
+palettum/palettum.cp38-win_amd64.pyd,sha256=tClegaJWa8EBvNwnBPfUF2jCn24AeJZVOeZlPIfIuZA,353280
+palettum/turbojpeg.dll,sha256=qzUQe0dFCMtS11vUPinUIbNtxeRaupm-h3_IULbXnqk,817152
+palettum/zlib1.dll,sha256=y69GL4a4SL5-r_bdpPJP2SC_eUnnrZ6vcp15Db0yDZ8,89088
+palettum/palettes/Catppuccin Frappe.json,sha256=GBEemwm1G47AAvaJdypCC3cpJutu2QHmC8SMpRAJ_Zk,1830
+palettum/palettes/Catppuccin Latte.json,sha256=6aabjAzZ_BJTmaIj54pIs1WVrlPYKSYYupa1v7rs8s0,1825
+palettum/palettes/Catppuccin Macchiato.json,sha256=BzqYk6BoteCto212XGSpo7TnxY-qKjXmofMzWaIilkY,1835
+palettum/palettes/Catppuccin Mocha.json,sha256=R2phKDKy8AhbuGFpq8eNXJQ1jorgQBnPm-DUkscVslc,1826
+palettum/palettes/Dracula.json,sha256=kmeb4Q034jMUDj6er_zOx2WzjqNgcWjPbCk3EnTSgg4,911
+palettum/palettes/Nord.json,sha256=MMwxXui-MhkBq7yXyrlyW8TsPQzGhYwVTNAcUsRg87Q,1151
+palettum/palettes/gruvbox.json,sha256=PTByQ_R7cS9PB9Ro55HKWHnEmxY4P7_zLezvqe902W8,2499
+palettum/palettes/r_place 2022.json,sha256=V668w1QeetILA93TnGXRXk7UsQbiFhFFVGwD9GuEpt8,1665
+palettum-0.4.8.dist-info/LICENSE,sha256=bx5iLIKjgAdYQ7sISn7DsfHRKkoCUm1154sJJKhgqnU,35184
+palettum-0.4.8.dist-info/METADATA,sha256=PShI36BK67UGwImjLJC7OAXRCR4FtqXHLoQsKMC5yg0,462
+palettum-0.4.8.dist-info/WHEEL,sha256=2M046GvC9RLU1f1TWyM-2sB7cRKLhAC7ucAFK8l8f24,99
+palettum-0.4.8.dist-info/entry_points.txt,sha256=HWUalUr5nAYCwCn6R4L9-5DjfnFFoIwfPS-6u5w3Gm0,47
+palettum-0.4.8.dist-info/top_level.txt,sha256=ZFGa2zTZRgKDo1c-Vk89UcFbwLo0Ifh_eBBUyneyZ7Y,9
+palettum-0.4.8.dist-info/RECORD,,
