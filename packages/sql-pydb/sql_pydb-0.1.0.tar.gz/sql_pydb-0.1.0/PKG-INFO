@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: sql_pydb
+Version: 0.1.0
+Summary: A Python package for simplified SQL operations across MSSQL, PostgreSQL, MySQL, and SQLite.
+Home-page: https://github.com/dwarakhnv/SQLPy
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: pyodbc>=4.0.30
+Requires-Dist: python-dateutil>=2.8.1
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+# SQLPy
+
+
+
+
+
+
+
+
