@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: discordus
+Version: 0.3
+Summary: A simpler version of discord.py. Check out the github page! https://github.com/RobloxFactoryRyaturmite/discordus/tree/main
+Requires-Dist: discord.py
+
+Discordus Documentation: https://discordusdocs.github.io/
