@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+ignoreme/__init__.py
+ignoreme/api_client.py
+ignoreme/main.py
+ignoreme.egg-info/PKG-INFO
+ignoreme.egg-info/SOURCES.txt
+ignoreme.egg-info/dependency_links.txt
+ignoreme.egg-info/entry_points.txt
+ignoreme.egg-info/requires.txt
+ignoreme.egg-info/top_level.txt
+tests/test_api_client.py
+tests/test_main.py

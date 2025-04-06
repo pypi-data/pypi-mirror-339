@@ -1,0 +1,2 @@
+[console_scripts]
+ignoreme = ignoreme.main:app
