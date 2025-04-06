@@ -1,0 +1,12 @@
+process/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+process/_version.py,sha256=2AnnhR0ffqyNegKn4f7gXbfrmt4Zuy4dlMeTZgfny8A,146
+process/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+process/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+process/util/config.py,sha256=tbp_ho5wLP-TK5wVrvkP_GB3ySne_thDxhmdlY0goTs,257
+process/util/log.py,sha256=d01yxjFb3hxKqMQHOYKaaxa6drc9o_Ln6iDj2ETVfIA,10399
+process/util/pkg.py,sha256=E4mFI1qLZQmRj3Ddd-vINCwtT-56Gwx8a18ttRc_iJI,3626
+process/util/time.py,sha256=YWdEumCNc2qNu4cOfnpJFozKlnCH_RZ13xcHTFIb2BQ,697
+python_process_core-2025.4.5.160639.dist-info/METADATA,sha256=4bScJ1QvOzRyM7V7aaYcq4NZItaieyKvzsfbPOmuko8,1619
+python_process_core-2025.4.5.160639.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+python_process_core-2025.4.5.160639.dist-info/top_level.txt,sha256=uOBF9vRsq0O49Mc-HVKjbn_VzZ-X-GDcq5Zs3UyiXi0,8
+python_process_core-2025.4.5.160639.dist-info/RECORD,,
