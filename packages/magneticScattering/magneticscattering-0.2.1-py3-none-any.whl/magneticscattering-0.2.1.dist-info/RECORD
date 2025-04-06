@@ -1,0 +1,14 @@
+magneticScattering/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+magneticScattering/dft.py,sha256=WdGrPwYP8MupZckz9iNdKVBMEX8jKP_Q7TEC1QuMWR8,5568
+magneticScattering/examples.py,sha256=snMDAaZ6CIcwQw4nT-xZQtqOxFNA0ErERj9aO-3mb2A,2369
+magneticScattering/holography.py,sha256=KUOMP4RGwyOScgW3k3G5uxeAGzh4kX5y2cRwUX26fNE,3725
+magneticScattering/plot.py,sha256=0L_W4cseYO6xx_vi1dcAW08p69qMW2ApxOs2Pcp_rbI,10537
+magneticScattering/scatter.py,sha256=bjO_7hjd6RSBPptQSXh0h7P20Nnc64AFV30S25gLmc0,16741
+magneticScattering/structures.py,sha256=wInfSsSVTmUG42KvK9u2oiAQ229blZZrw6TlcxKUsB0,6595
+magneticScattering/data/__init__.py,sha256=Mn-s7UY3_38t29zyOswVlTQP-dfxGrzVxs-xa9rGuuY,146
+magneticScattering/data/labyrinthine.npy.gz,sha256=p5Itk3st7_uTSkrtInu2xjcQhHYAsVqPSxKteMIlcP4,138196
+magneticscattering-0.2.1.dist-info/licenses/LICENSE.txt,sha256=qhMlsiDkf11MhDCC7AnhOwibe5Oo-ef8feDoB7K904E,1461
+magneticscattering-0.2.1.dist-info/METADATA,sha256=-mwAKSY08jnDaYe85DXyzbNxcTbxT7jAueVvx8GDM8Q,4549
+magneticscattering-0.2.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+magneticscattering-0.2.1.dist-info/top_level.txt,sha256=038YynX61sOSvQLY3phdfTnwh4vj-ta38EAEJq72qYk,19
+magneticscattering-0.2.1.dist-info/RECORD,,
