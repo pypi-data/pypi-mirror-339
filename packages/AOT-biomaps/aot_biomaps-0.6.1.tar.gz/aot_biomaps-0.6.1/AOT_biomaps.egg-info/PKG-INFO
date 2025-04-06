@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: AOT_biomaps
+Version: 0.6.1
+Summary: Acousto-Optic Tomography
+Home-page: https://github.com/LucasDuclos/AcoustoOpticTomography
+Author: Lucas Duclos
+Author-email: lucas.duclos@universite-paris-saclay.fr
+Description-Content-Type: text/markdown
+Requires-Dist: k-wave-python
+
+# TomographyAcoustoOptic
+Acosuto-optic tomographic reconstruction 
