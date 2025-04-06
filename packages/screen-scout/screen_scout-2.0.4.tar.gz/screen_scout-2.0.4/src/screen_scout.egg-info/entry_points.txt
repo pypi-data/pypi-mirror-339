@@ -1,0 +1,2 @@
+[console_scripts]
+screen_scout = main:main
