@@ -1,0 +1,7 @@
+certbot_dns_cdmon/__init__.py,sha256=zbK7vMDg_zfUZpmnQGA60hH9EFb-K1yEaWbunipHn0Q,51
+certbot_dns_cdmon/dns_cdmon.py,sha256=fbB5wi8OOsJtN4C7nMO8mQIu0UqmJ-j0HDwv5jLKh8Y,10248
+certbot_dns_cdmon-0.4.1.dist-info/METADATA,sha256=vBAHs-kb5FsD9Wu3IpIgqceOL07TF9I4OAOAPnoi_Nk,6547
+certbot_dns_cdmon-0.4.1.dist-info/WHEEL,sha256=-Dn6BGn92y7Vt2sgNw19WpHEM9l6anhrkIDyS2x_lUI,91
+certbot_dns_cdmon-0.4.1.dist-info/entry_points.txt,sha256=BCJR9XzaBbRMOOBNB6AVzCbAU751jdNQHWm3Vf6-HyY,72
+certbot_dns_cdmon-0.4.1.dist-info/top_level.txt,sha256=HqXaNxMBNSpthLJtINnD8yustlHjuBQG-QIS0NQY2uc,18
+certbot_dns_cdmon-0.4.1.dist-info/RECORD,,
