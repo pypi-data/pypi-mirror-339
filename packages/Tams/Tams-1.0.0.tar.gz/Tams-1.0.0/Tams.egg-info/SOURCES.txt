@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+Tams/__init__.py
+Tams/matematika.py
+Tams.egg-info/PKG-INFO
+Tams.egg-info/SOURCES.txt
+Tams.egg-info/dependency_links.txt
+Tams.egg-info/top_level.txt
