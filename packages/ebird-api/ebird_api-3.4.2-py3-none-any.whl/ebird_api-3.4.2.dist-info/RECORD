@@ -1,0 +1,17 @@
+ebird/api/__init__.py,sha256=OyIIp2bOHigmDk4yTRbYla9OpgZ6ExXwoDEmV5VWIlo,939
+ebird/api/checklists.py,sha256=lBjWPyqhTocE0Fzd6C1yKznxXpVWXgm22IXwXv6L290,3293
+ebird/api/client.py,sha256=Guov8oPIrtXZ_enqQnyqtRfJE9sdhA9XO-yo888rmYU,12942
+ebird/api/constants.py,sha256=vT29vK48U4ZNZYsdiu-fs8nyQ3QQErEUpCCklOR7NHY,2772
+ebird/api/hotspots.py,sha256=Xu9OfmNA0-e1OBUYxCR9qb_ipuC5I7gN-w5lXfSL4iA,7517
+ebird/api/observations.py,sha256=frQaQPmCh9L4PvEfHaMxDtGmYZ904lmMvK16JxDYZeM,24196
+ebird/api/regions.py,sha256=QNBRn7Y0Su6ydjXQalL5jEoVjs1Tcy2XSE8zQ3vyt7M,3468
+ebird/api/species.py,sha256=tPKBuXBVCnwmUl6n7JfptFqrwr5Y2OFJc1IuCw6sQJU,1059
+ebird/api/statistics.py,sha256=FO3Lm7rqmPuEx-WCpWWRXul6ni4id3jNshJOeyxcpds,2560
+ebird/api/taxonomy.py,sha256=5YJekFL_Nkid2uOIwRTmN2PLZgiRmkXyIEPyuT5tBSU,6465
+ebird/api/utils.py,sha256=wD6rLMPGbi8vmF60B3rz6jfq6Ym7-kcS97fqAGBlzxs,4324
+ebird/api/validation.py,sha256=I3VD44QaO5INPM3DSZrVW-7LOK5BxP1vkW6avv6Bm40,9301
+ebird_api-3.4.2.dist-info/licenses/LICENSE.txt,sha256=8DJqD01TX_pbk_cYAaf_vdCV47TLnnHVRD0cYp0kQ5E,1086
+ebird_api-3.4.2.dist-info/METADATA,sha256=hPnuTeEoYzXMIq8mPWJDWeWG17k1rsjtH1nFZ8vPzRg,12786
+ebird_api-3.4.2.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+ebird_api-3.4.2.dist-info/top_level.txt,sha256=lBp3I23K75tsPJn7Jdz7d4Tk7JeRhbVkcuGthNk7LaM,6
+ebird_api-3.4.2.dist-info/RECORD,,
