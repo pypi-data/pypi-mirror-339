@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+aipowershell/__init__.py
+aipowershell/analyzer.py
+aipowershell/cli.py
+aipowershell/error_handler.py
+aipowershell.egg-info/PKG-INFO
+aipowershell.egg-info/SOURCES.txt
+aipowershell.egg-info/dependency_links.txt
+aipowershell.egg-info/entry_points.txt
+aipowershell.egg-info/requires.txt
+aipowershell.egg-info/top_level.txt
