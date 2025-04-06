@@ -1,0 +1,2 @@
+[console_scripts]
+timi = timi.main:main
