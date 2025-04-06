@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: dh_pyspark
+Version: 0.3
+Requires-Dist: dataheroes
+Requires-Dist: pyarrow
+Requires-Dist: scikit-learn ==1.4.2
+
