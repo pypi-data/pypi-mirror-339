@@ -1,0 +1,9 @@
+pyamdgpuinfo/__init__.py,sha256=Glo5EzyfZKFVSGzYMXS_kTiO19V3wDJaZlUg8F-vXQM,370
+pyamdgpuinfo/_impl.cpython-39-x86_64-linux-gnu.so,sha256=puu49Fr6uB-XZ5mk-ffuYLyC2_xZ5U7QMeSyg-CF1MI,732569
+pyamdgpuinfo.libs/libdrm-f5f8fc5d.so.2.123.0,sha256=kHAq1WccUqplPSz4Izzq6pMKheNgZXYpfO1xzIcCtJk,97297
+pyamdgpuinfo.libs/libdrm_amdgpu-550cc0eb.so.1.123.0,sha256=9seETeqeJE_6t6Us5PkcWXTwB5tTN5Xb5g3nWU8ln1I,56377
+pyamdgpuinfo-2.1.7.dist-info/METADATA,sha256=4nIDicmrrUMzLlDAr_yFwh0KPw33tcqMpKLkrROE6MY,2611
+pyamdgpuinfo-2.1.7.dist-info/WHEEL,sha256=dygxghiRV9JTYZ0KWRTlQWrNGgRs9bzKS66-L8fT8uI,110
+pyamdgpuinfo-2.1.7.dist-info/top_level.txt,sha256=iVbwbDknKqY9DDvFqbcWYYHQ78UxGHSVYLVvz-DmD3Y,13
+pyamdgpuinfo-2.1.7.dist-info/RECORD,,
+pyamdgpuinfo-2.1.7.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
