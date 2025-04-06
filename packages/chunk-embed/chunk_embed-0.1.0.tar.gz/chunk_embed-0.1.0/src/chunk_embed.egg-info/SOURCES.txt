@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/chunk_embed/__init__.py
+src/chunk_embed/__main__.py
+src/chunk_embed/server.py
+src/chunk_embed.egg-info/PKG-INFO
+src/chunk_embed.egg-info/SOURCES.txt
+src/chunk_embed.egg-info/dependency_links.txt
+src/chunk_embed.egg-info/entry_points.txt
+src/chunk_embed.egg-info/requires.txt
+src/chunk_embed.egg-info/top_level.txt

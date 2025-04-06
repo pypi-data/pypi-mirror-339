@@ -1,0 +1,2 @@
+[console_scripts]
+chunk-embed = chunk_embed.__main__:main
