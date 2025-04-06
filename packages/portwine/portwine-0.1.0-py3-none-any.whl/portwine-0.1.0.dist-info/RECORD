@@ -1,0 +1,16 @@
+portwine/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+portwine/analyzers/__init__.py,sha256=H7XP8V-gl0smsZM470V2eVb8qzCgHTNndXd0-6i1QHQ,238
+portwine/analyzers/base.py,sha256=Ja8YBMiKOODYejPuB61k5X00_pgV2fVFaHCWyEmfQqA,288
+portwine/analyzers/equitydrawdown.py,sha256=J5EHl2Qw86N8iycLJ3eIj--gr3yiGSZ8mzct1VEVOEs,4731
+portwine/analyzers/montecarlo.py,sha256=it-rZjX0y6cvDGLqLZb9tnX2j19Soka23UmsjV0mUOY,10472
+portwine/analyzers/seasonality.py,sha256=GyrQhx90VL0-IUvM0F_q0vsKOrZmVLInvMdJolGp0RY,26221
+portwine/backtester.py,sha256=545f6maNvuUmoyPJ32fmX5v6ED-Dg96KQcSVDY2Q4vE,5459
+portwine/loaders/__init__.py,sha256=mh4hpWyYsRZL4rAhKbsfH6q56egog8IcR6jmFCa7zNY,169
+portwine/loaders/base.py,sha256=1J0k-jS8EI6eyfN9d0ScLgRm5fQr01QL_baP1P4wQgo,1648
+portwine/loaders/eodhd.py,sha256=EZPoruaBP3KZoDrWsWVCYmV-htbKxcmhVTfSfWSrJ7c,1706
+portwine/loaders/polygon.py,sha256=OchtJ4-3R9RVTOV-mQEkzgtXOi5IArZkM_ZWw920jfo,897
+portwine/strategies/__init__.py,sha256=is2wDCA9SW-xDjv2PF3UqU5KZXulz8dkclw_NDl4RoQ,50
+portwine/strategies/base.py,sha256=9hIweZaFGARDqSTrsjFWkbF2kDHe8S0U5zEvPQL88rM,2054
+portwine-0.1.0.dist-info/METADATA,sha256=94IuFNNqn7r2Tr4e62i7xhPSIslpiZfXk1OPFrM98r8,6063
+portwine-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+portwine-0.1.0.dist-info/RECORD,,
