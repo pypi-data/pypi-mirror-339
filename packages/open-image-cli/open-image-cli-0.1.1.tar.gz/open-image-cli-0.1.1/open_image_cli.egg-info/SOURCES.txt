@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+imagecli/__init__.py
+imagecli/cli.py
+imagecli/image.py
+open_image_cli.egg-info/PKG-INFO
+open_image_cli.egg-info/SOURCES.txt
+open_image_cli.egg-info/dependency_links.txt
+open_image_cli.egg-info/entry_points.txt
+open_image_cli.egg-info/requires.txt
+open_image_cli.egg-info/top_level.txt
