@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/nerd_dictation_gui/__init__.py
+src/nerd_dictation_gui/main.py
+src/nerd_dictation_gui.egg-info/PKG-INFO
+src/nerd_dictation_gui.egg-info/SOURCES.txt
+src/nerd_dictation_gui.egg-info/dependency_links.txt
+src/nerd_dictation_gui.egg-info/entry_points.txt
+src/nerd_dictation_gui.egg-info/requires.txt
+src/nerd_dictation_gui.egg-info/top_level.txt
+src/nerd_dictation_gui/resources/mic_idle.png
+src/nerd_dictation_gui/resources/mic_recording.png

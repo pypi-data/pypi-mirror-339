@@ -1,0 +1,2 @@
+[console_scripts]
+nerd-dictation-gui = nerd_dictation_gui.main:main
