@@ -1,0 +1,9 @@
+treelang/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+treelang/ai/arborist.py,sha256=uy63atizFGVHiT_-djUj4znoSQz_xrxL3FyuoO3kY-A,8348
+treelang/ai/prompt.py,sha256=19bfg0YRFGNIYV6LgEl8y8U2D17DfQnKpw_JdsY48Pw,5889
+treelang/ai/selector.py,sha256=rF6Xph509W1N8TjUQ6eyDDORwxR_HOsN2k-zJSGjfPc,1092
+treelang/trees/tree.py,sha256=9Ez80DuezMWAvsW6TOkZmm8U42FFYRzQHQNwkSggXLM,7571
+treelang-0.2.0.dist-info/LICENSE,sha256=OC9HcoNio7YFFziAzsiYopKdO38y6xQk8zuGeB4u71w,1063
+treelang-0.2.0.dist-info/METADATA,sha256=4QLg2eW5cMOMh_ojaqZbE_iaK39_l-5-aQ7HDYC_Ps0,2674
+treelang-0.2.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+treelang-0.2.0.dist-info/RECORD,,
