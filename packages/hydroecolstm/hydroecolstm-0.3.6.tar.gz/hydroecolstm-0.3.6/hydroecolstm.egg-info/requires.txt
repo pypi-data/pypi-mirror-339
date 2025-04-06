@@ -1,0 +1,13 @@
+pandas
+numpy
+torch
+pandastable
+tkcalendar
+PyYAML
+pathlib
+customtkinter
+CTkToolTip
+CTkMessagebox
+CTkListbox
+matplotlib
+ray[tune]
