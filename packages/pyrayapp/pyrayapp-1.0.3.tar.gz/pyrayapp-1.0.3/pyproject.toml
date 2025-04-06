@@ -1,0 +1,22 @@
+[project]
+name = "pyrayapp"
+version = "1.0.3"
+description = "Python Ray debug client"
+authors = [{ name = "Sergey Safronov", email = "safronov.ser@icloud.com" }]
+license = "MIT"
+license-files = [ "LICENSE" ]
+urls = { "Homepage" = "https://github.com/olddeda/pyray" }
+keywords = ["ray", "rayapp"]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "markdown",
+    "requests",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
