@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: systemmonitoragent
+Version: 0.1.0
+Summary: Just to monitor your system
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# My Package
+
+Monitor Your System
+
+## Installation
+
+```bash
+pip3 install systemmonitor
