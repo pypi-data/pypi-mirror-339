@@ -1,0 +1,193 @@
+/* AskDocs TUI CSS */
+
+Screen {
+    background: $surface;
+    color: $text;
+}
+
+/* Main screen components */
+#main-container {
+    width: 100%;
+    height: auto;
+    margin: 1 2;
+}
+
+.intro {
+    text-style: bold;
+    margin-bottom: 1;
+}
+
+#input-container {
+    width: 100%;
+    margin-bottom: 1;
+}
+
+#question-input {
+    width: 100%;
+    margin-bottom: 1;
+}
+
+#controls {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1;
+}
+
+#model-selector,
+#template-selector {
+    width: 50%;
+}
+
+#buttons {
+    width: 100%;
+    align-horizontal: center;
+    height: auto;
+}
+
+/* Results screen */
+#result-container {
+    width: 100%;
+    height: auto;
+    margin: 1 2;
+}
+
+.question {
+    text-style: bold;
+    margin-bottom: 1;
+    color: $accent;
+}
+
+.section-header {
+    text-style: bold underline;
+    margin-top: 1;
+    margin-bottom: 1;
+}
+
+.answer-container {
+    width: 100%;
+    height: auto;
+    border: solid $primary;
+    padding: 1;
+}
+
+.answer {
+    width: 100%;
+}
+
+.sources-container {
+    width: 100%;
+    height: auto;
+    margin-top: 1;
+    margin-bottom: 1;
+}
+
+.source-item {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1;
+    border: dashed $primary;
+    padding: 0 1;
+}
+
+.source-filename {
+    text-style: italic;
+    color: $accent;
+}
+
+.source-snippet {
+    width: 100%;
+}
+
+.model-info {
+    text-style: italic;
+    margin-top: 1;
+    color: $text-muted;
+}
+
+/* Preview screen */
+#preview-container {
+    width: 100%;
+    height: auto;
+    margin: 1 2;
+}
+
+.matches-container {
+    width: 100%;
+    height: auto;
+    margin-top: 1;
+}
+
+.match-item {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1;
+    border: dashed $primary;
+    padding: 0 1;
+}
+
+.match-filename {
+    text-style: italic;
+    color: $accent;
+}
+
+.match-snippet {
+    width: 100%;
+}
+
+/* Loading screen */
+.loading-container {
+    width: 100%;
+    height: auto;
+    align: center middle;
+    background: $surface;
+    padding: 2;
+}
+
+.loading-message {
+    text-style: bold;
+    margin-top: 1;
+}
+
+/* KB Info screen */
+#kb-info-container {
+    width: 100%;
+    height: auto;
+    margin: 1 2;
+}
+
+.screen-title {
+    text-style: bold;
+    text-align: center;
+    margin-bottom: 1;
+}
+
+#kb-info-content {
+    width: 100%;
+    height: auto;
+    margin-top: 1;
+    margin-bottom: 1;
+    border: solid $primary;
+    padding: 1;
+}
+
+.kb-info-item {
+    margin-bottom: 1;
+}
+
+.kb-info-status {
+    text-style: bold;
+    margin-top: 1;
+}
+
+.kb-info-status.success {
+    color: $success;
+}
+
+.kb-info-status.error {
+    color: $error;
+}
+
+.kb-info-hint {
+    text-style: italic;
+    color: $text-muted;
+}
