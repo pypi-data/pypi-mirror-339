@@ -1,0 +1,17 @@
+main.py,sha256=qSD-_gNBWcJtQMQqSxdtTlQ62OjgBl0yYF3zMTzYL_4,16882
+manzh/__init__.py,sha256=nF9hxiRv7YFMsTVQgr5fO7OOaWVN7Ufe3OCjd_PQyv4,1437
+manzh/clean.py,sha256=9G18Rt30Pcnqti3e1t2LSOoLwhOnXWYQM0OA7-r3Olo,4918
+manzh/cli.py,sha256=39UtbW-sh7lCct-i-I9Et2-GleJBbFoaKsiM5yCF5-4,16791
+manzh/config.json.example,sha256=QPaYTXlgKnOBppGyaiUplwkbaQmor80jJ2qdKTD9r8o,1240
+manzh/config_cli.py,sha256=vOtJHzjb1ZzwuQF1G34EIdDg8O7tV8TLFddGdy3-J-U,60284
+manzh/config_manager.py,sha256=eN5-GHkHHiJi-5scXghQlIp9WlJ-brBH7J-_weLLoEo,14139
+manzh/list_manuals.py,sha256=7rngjxnHz9emkSFyh4xXKqyh7K9Gmi7Cfj8Sga7kBPs,982
+manzh/man_utils.py,sha256=Q5dFIkeu-LyGBLK40tOrP_nC0hCmK7T4K8KPRKLJX7c,19490
+manzh/optimize.py,sha256=EMvop4BKD31ztB6JW-nmUDpVkspDmjY988MPpCiFpXM,12376
+manzh/translate.py,sha256=TgRa1PqSw4WnljfWYpWM9AtVQA2vIH0kA49_LLcvKBs,40773
+manzh-1.0.8.data/data/share/man/man1/manzh.1,sha256=mgMwg8zKJDPZxghXwy42NhPeqz2QT2Mpa1-5KoryRpw,6448
+manzh-1.0.8.dist-info/METADATA,sha256=RuMTPsKP2UqI0QLGlSIGgKUm9jdpVZ8hCJRZJ_HhYYw,11625
+manzh-1.0.8.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+manzh-1.0.8.dist-info/entry_points.txt,sha256=YcE4uC3RI7XhXsaqNHjpxfgJstka6xXRNcQLOgGufPA,41
+manzh-1.0.8.dist-info/top_level.txt,sha256=bRJw1dD5gfdeNY76QYTopy2gXCmLPmMk4vgpjiBFfbM,11
+manzh-1.0.8.dist-info/RECORD,,
