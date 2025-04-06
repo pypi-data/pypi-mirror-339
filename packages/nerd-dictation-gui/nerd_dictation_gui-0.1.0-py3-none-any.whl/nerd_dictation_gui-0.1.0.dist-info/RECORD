@@ -1,0 +1,10 @@
+nerd_dictation_gui/__init__.py,sha256=xD1MGZwZY6tPQ0W2E_2JmuWbLxjJyO-ASlKdTbyc6LA,98
+nerd_dictation_gui/main.py,sha256=7tZLxls6DLDf6WS0OkSHtNfIVU3wwm-8yE6k6xeawks,6535
+nerd_dictation_gui/resources/mic_idle.png,sha256=0b6fHGoHPCIkzWMwHH6PqOT5kIKhCeOHC8Hs7CKkZyc,1057201
+nerd_dictation_gui/resources/mic_recording.png,sha256=wb4Anh_y5x3FouPoUxXz4FKCgy4VmNmNHFcxtbN0RdM,21338
+nerd_dictation_gui-0.1.0.dist-info/licenses/LICENSE,sha256=lMcG_VGrLkOeg75OH4Yodjywk-bZGkP50sAiRygLWfQ,4915
+nerd_dictation_gui-0.1.0.dist-info/METADATA,sha256=D9eab8rAUfWR-0jGKDD8QoemSzJb6ae_gJjxmJPICfc,406
+nerd_dictation_gui-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+nerd_dictation_gui-0.1.0.dist-info/entry_points.txt,sha256=rocCiuI-meQYBWbrzsmWVTMIyCZV294Js95LGW15tdM,68
+nerd_dictation_gui-0.1.0.dist-info/top_level.txt,sha256=JYhHgMpaqEn3OMJ-8j_lhuBU94ENEuEqsKtvmX11MHg,19
+nerd_dictation_gui-0.1.0.dist-info/RECORD,,
