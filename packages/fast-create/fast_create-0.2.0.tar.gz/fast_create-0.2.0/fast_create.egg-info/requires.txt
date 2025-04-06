@@ -1,0 +1,11 @@
+fastapi[all]
+uvicorn
+python-dotenv
+psycopg2-binary
+sqlmodel
+fastapi_mail
+pydantic
+python-jose[cryptography]
+oauth2
+passlib
+sqlalchemy
