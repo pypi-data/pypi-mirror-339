@@ -1,0 +1,25 @@
+#!/bin/bash
+# Enhanced wrapper script for Bolor CLI
+# Usage: ./bolor-cli [command] [arguments]
+
+# Get the script directory
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+# Define bolor CLI function to ensure it's called as a direct command
+bolor_cmd() {
+    # Suppress warnings and run bolor directly to avoid python -m prefix
+    PYTHONPATH="$DIR" PYTHONWARNINGS=ignore python3 -c "import sys; from bolor.__main__ import main; sys.argv[0] = 'bolor'; sys.exit(main())" "$@"
+}
+
+# Special handling for the generate command
+if [[ "$1" == "generate" && $# -ge 2 ]]; then
+    # Extract the prompt and other arguments
+    PROMPT="$2"
+    shift 2  # Remove 'generate' and the prompt
+    
+    # Call with properly positioned arguments
+    bolor_cmd "generate" "$PROMPT" "$@"
+else
+    # Call the function with all arguments unchanged
+    bolor_cmd "$@"
+fi
