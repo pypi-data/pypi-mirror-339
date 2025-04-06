@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: tinywebflaskTWF
+Version: 0.1.1
+Summary: A tiny Python web framework with HTML templating and py-events.
+Author: victor
+Author-email: pradocash8@email.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-python
+Dynamic: summary
