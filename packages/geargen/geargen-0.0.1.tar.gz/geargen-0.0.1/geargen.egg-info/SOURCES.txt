@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+geargen/__init__.py
+geargen/__main__.py
+geargen/bevel.py
+geargen/cli.py
+geargen/parallel.py
+geargen/profile.py
+geargen.egg-info/PKG-INFO
+geargen.egg-info/SOURCES.txt
+geargen.egg-info/dependency_links.txt
+geargen.egg-info/entry_points.txt
+geargen.egg-info/requires.txt
+geargen.egg-info/top_level.txt
