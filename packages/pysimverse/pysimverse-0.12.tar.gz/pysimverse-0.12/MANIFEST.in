@@ -1,0 +1,4 @@
+include pysimverse/simulators/*
+recursive-include pysimverse/simulators/*
+include pysimverse/simulators/drone/*
+recursive-include pysimverse/simulators/drone/*
