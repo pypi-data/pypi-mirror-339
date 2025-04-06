@@ -1,0 +1,4 @@
+aiohttp>=3.10
+xmltodict>=0.13.0
+pycryptodome>=3.21.0
+pre-commit>=4.2.0
