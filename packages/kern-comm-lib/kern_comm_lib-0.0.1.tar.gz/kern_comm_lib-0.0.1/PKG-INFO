@@ -1,0 +1,51 @@
+Metadata-Version: 2.3
+Name: kern-comm-lib
+Version: 0.0.1
+Summary: Kern: A collection of robust, foundational Python utilities for building reliable and maintainable applications.
+License: BSD-3-Clause
+Author: Martin Urban
+Author-email: martin.urban@studmail.w-hs.de
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Project-URL: Homepage, https://github.com/urban233/kern-comm-lib
+Project-URL: Repository, https://github.com/urban233/kern-comm-lib
+Description-Content-Type: text/markdown
+
+# Kern - Common Python Libraries
+[![Python Version](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/) [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+
+The repository contains the Kern Python library code. 
+Kern (`kern-comm-lib`) is an open-source collection of Python code designed to augment the Python standard library.
+It provides robust, exception-free Python utilities for building reliable applications
+and features modern error handling with `Status` and `StatusOr` to eliminate runtime surprises.
+<p align="center">
+    <img alt="Kern Logo" src="assets/logo.png"  width="200"/>
+</p>
+
+[**Features**](#features) | [**Installation**](#installation) | [**License**](#license)
+
+> [!IMPORTANT]  
+> 📣 **Kern-comm-lib is under active development.**  
+> APIs will (greatly) evolve until v1.0.
+
+## Features ✨  
+- **Exception-Free Modules**: Predictable error handling without `try/except` sprawl.  
+- **Status & StatusOr**: Modern result types for explicit success/failure handling.
+
+## Installation ⚙️  
+```bash
+pip install kern-comm-lib
+```
+
+## License 📜
+BSD-3 Clause. See [LICENSE](LICENSE).
+
+---
+
+*Engineered for reliability.*
+
