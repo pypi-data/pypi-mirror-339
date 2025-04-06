@@ -1,0 +1,85 @@
+[project]
+name = "vehiclepass"
+version = "0.2.0"
+description = "A Python API to manage your FordPass-enabled vehicle."
+readme = "README.md"
+authors = [
+    { name = "Austin de Coup-Crank", email = "austindcc@gmail.com" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "httpx>=0.28.1",
+    "pydantic>=2.11.1",
+    "python-dotenv>=1.1.0",
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: The Unlicense (Unlicense)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/austind/retryhttp"
+Repository = "https://github.com/austind/retryhttp.git"
+Issues = "https://github.com/austind/retryhttp/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ipdb>=0.13.13",
+    "mypy>=1.15.0",
+    "nox>=2025.2.9",
+    "pytest>=8.3.5",
+    "respx>=0.22.0",
+    "ruff>=0.11.2",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+    "N",   # pep8-naming
+    "RUF", # ruff-specific rules
+    "W",   # pycodestyle warnings
+    "D",   # pydocstyle
+]
+
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["vehiclepass"]
+combine-as-imports = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
