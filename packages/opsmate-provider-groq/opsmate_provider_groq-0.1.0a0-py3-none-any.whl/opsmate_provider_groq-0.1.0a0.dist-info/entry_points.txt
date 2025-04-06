@@ -1,0 +1,2 @@
+[opsmate.dino.providers]
+groq = provider_groq:GroqProvider
