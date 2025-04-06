@@ -1,0 +1,138 @@
+from .generic import contain, intersection, min_dist, overlap
+from .vector2 import Vector2
+from dataclasses import dataclass
+from typing import Any
+
+@dataclass(order=True)
+class Point:
+    xcoord: Any
+    ycoord: Any
+
+    def copy(self):
+        """[summary]
+
+        Returns:
+            [type]: [description]
+        """
+        return Point(self.x_, self.y_)
+
+    def __iadd__(self, rhs: Vector2):
+        """[summary]
+
+        Args:
+            rhs (Vector2): [description]
+
+        Returns:
+            [type]: [description]
+        """
+        self.xcoord += rhs.xcoord
+        self.ycoord += rhs.ycoord
+        return self
+
+    def __add__(self, rhs):
+        """[summary]
+
+        Args:
+            rhs ([type]): [description]
+
+        Returns:
+            [type]: [description]
+        """
+        if isinstance(rhs, Vector2):
+            return Point(self.xcoord + rhs.xcoord, self.ycoord + rhs.ycoord)
+        else:
+            return Point(self.xcoord + rhs, self.ycoord + rhs)
+
+    def __isub__(self, rhs: Vector2):
+        """[summary]
+
+        Args:
+            rhs (Vector2): [description]
+
+        Returns:
+            [type]: [description]
+        """
+        self.xcoord -= rhs.xcoord
+        self.ycoord -= rhs.ycoord
+        return self
+
+    def __sub__(self, rhs):
+        """[summary]
+
+        Args:
+            rhs ([type]): [description]
+
+        Returns:
+            [type]: [description]
+        """
+        if isinstance(rhs, Vector2):
+            return Point(self.xcoord - rhs.xcoord, self.ycoord - rhs.ycoord)
+        elif isinstance(rhs, Point):
+            return Vector2(self.xcoord - rhs.xcoord, self.ycoord - rhs.ycoord)
+        else:
+            return Point(self.xcoord - rhs, self.ycoord - rhs)
+
+    def flip(self):
+        """[summary]
+
+        Returns:
+            [type]: [description]
+        """
+        return Point(self.ycoord, self.xcoord)
+
+    def overlaps(self, other) -> bool:
+        """[summary]
+
+        Args:
+            other ([type]): [description]
+
+        Returns:
+            [type]: [description]
+        """
+        return overlap(self.xcoord, other.xcoord) and overlap(self.ycoord, other.ycoord)
+
+    def contains(self, other) -> bool:
+        """[summary]
+
+        Args:
+            other ([type]): [description]
+
+        Returns:
+            [type]: [description]
+        """
+        return contain(self.xcoord, other.xcoord) and contain(self.ycoord, other.ycoord)
+
+    def intersect_with(self, other):
+        """[summary]
+
+        Args:
+            other ([type]): [description]
+
+        Returns:
+            [type]: [description]
+        """
+        return Point(intersection(self.xcoord, other.xcoord), intersection(self.ycoord, other.ycoord))
+
+    def min_dist_with(self, other):
+        """[summary]
+
+        Args:
+            other ([type]): [description]
+
+        Returns:
+            [type]: [description]
+        """
+        return min_dist(self.xcoord, other.xcoord) + min_dist(self.ycoord, other.ycoord)
+
+
+class dualpoint(Point):
+    def __init__(self, xcoord, ycoord):
+        Point.__init__(self, xcoord, ycoord)
+
+    @property
+    def xcoord(self):
+        return self.ycoord
+
+    @property
+    def ycoord(self):
+        return self.xcoord

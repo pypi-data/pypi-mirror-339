@@ -1,0 +1,52 @@
+Metadata-Version: 2.4
+Name: physdes-py
+Version: 0.1
+Summary: Physical Design Python Code
+Home-page: https://github.com/luk036/physdes-py/
+Author: Wai-Shing Luk
+Author-email: luk036@gmail.com
+License: MIT
+Project-URL: Documentation, https://pyscaffold.org/
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: LICENSE.txt
+Requires-Dist: importlib-metadata; python_version < "3.9"
+Requires-Dist: typing_extensions
+Provides-Extra: testing
+Requires-Dist: setuptools; extra == "testing"
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: pytest-cov; extra == "testing"
+Requires-Dist: hypothesis; extra == "testing"
+Requires-Dist: typing_extensions; extra == "testing"
+Dynamic: license-file
+
+[![codecov](https://codecov.io/gh/luk036/physdes-py/branch/main/graph/badge.svg?token=EIv4D8NlYj)](https://codecov.io/gh/luk036/physdes-py)
+[![Documentation Status](https://readthedocs.org/projects/physdes-py/badge/?version=latest)](https://physdes-py.readthedocs.io/en/latest/?badge=latest)
+
+<p align="center">
+  <img src="./rectilinear-shapes-for-vlsi-physical-desgin.svg"/>
+</p>
+
+# 🧱 physdes-py
+
+> Physical Design Python Code
+
+## ✨ Features
+
+- Rectilinear Polygon support
+
+## Dependencies
+
+- [luk036/lds-gen](https://github.com/luk036/lds-gen) (for testing only)
+
+## 👀 See also
+
+- [physdes-cpp](https://github.com/luk036/physdes-cpp)
+- [physdes-rs](https://github.com/luk036/physdes-rs)
+
+## 👉 Note
+
+This project has been set up using PyScaffold 3.2.1. For details and usage
+information on PyScaffold see <https://pyscaffold.org/>.
