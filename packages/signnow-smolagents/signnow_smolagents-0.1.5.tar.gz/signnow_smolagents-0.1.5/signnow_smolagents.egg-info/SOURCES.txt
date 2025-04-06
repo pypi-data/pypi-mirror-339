@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+signnow_smolagents.egg-info/PKG-INFO
+signnow_smolagents.egg-info/SOURCES.txt
+signnow_smolagents.egg-info/dependency_links.txt
+signnow_smolagents.egg-info/requires.txt
+signnow_smolagents.egg-info/top_level.txt
+sn_smolagent_tools_demo/__init__.py
