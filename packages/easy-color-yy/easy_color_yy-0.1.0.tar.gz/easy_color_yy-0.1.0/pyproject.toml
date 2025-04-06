@@ -1,0 +1,38 @@
+# [build-system] 部分定义了构建项目所需的依赖项和构建后端
+[build-system]
+# requires 列出了构建项目所需要的包，这里需要 setuptools 和 wheel 这两个包
+requires = ["setuptools", "wheel"]
+# build-backend 指定了用于构建项目的后端，这里使用 setuptools.build_meta
+build-backend = "setuptools.build_meta"
+
+# [project] 部分包含了项目的元数据，如项目名称、版本、作者等
+[project]
+# name 是项目的名称，也就是发布到 PyPI 上的包名
+name = "easy_color_yy"
+# version 是项目的版本号，遵循语义化版本规范
+version = "0.1.0"
+# authors 是一个列表，包含了项目作者的信息，每个作者用字典表示，包含 name 和 email 字段
+authors = [
+  { name="杨政烨", email="yangzhengye163@163.com" },
+]
+# description 是对项目的简短描述，会显示在 PyPI 上项目的简介部分
+description = "这是一个简化colorama的库"
+# readme 指定了项目的 README 文件，通常是 Markdown 格式，会显示在 PyPI 上项目的详细页面
+readme = "README.md"
+# requires-python 规定了项目所支持的 Python 版本范围，这里要求 Python 版本大于等于 3.7
+requires-python = ">=3.7"
+# classifiers 是一个列表，包含了项目的分类信息，用于在 PyPI 上对项目进行分类和筛选
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+
+dependencies = [
+    "colorama",
+]
+
+# [project.urls] 部分提供了项目的相关链接，如主页、问题跟踪器等
+[project.urls]
+# "Homepage" 是项目的主页链接，通常是项目的 GitHub 仓库地址
+#"Homepage" = "https://github.com/yourusername/my_package"
+# "Bug Tracker" 是项目的问题跟踪器链接，用于用户报告项目的 bug
+#"Bug Tracker" = "https://github.com/yourusername/my_package/issues"

@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: easy_color_yy
+Version: 0.1.0
+Summary: 这是一个简化colorama的库
+Author-email: 杨政烨 <yangzhengye163@163.com>
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: colorama
+
+简化colorama

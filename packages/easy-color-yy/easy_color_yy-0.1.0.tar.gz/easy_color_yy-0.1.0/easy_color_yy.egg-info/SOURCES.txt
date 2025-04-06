@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+easy_color_yy/__init__.py
+easy_color_yy/color.py
+easy_color_yy.egg-info/PKG-INFO
+easy_color_yy.egg-info/SOURCES.txt
+easy_color_yy.egg-info/dependency_links.txt
+easy_color_yy.egg-info/requires.txt
+easy_color_yy.egg-info/top_level.txt
