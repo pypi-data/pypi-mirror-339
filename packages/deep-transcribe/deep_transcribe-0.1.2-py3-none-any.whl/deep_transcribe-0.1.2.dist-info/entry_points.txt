@@ -1,0 +1,2 @@
+[console_scripts]
+deep_transcribe = deep_transcribe.deep_transcribe_cli:main
