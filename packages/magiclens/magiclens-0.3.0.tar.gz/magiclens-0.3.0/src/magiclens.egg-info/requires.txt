@@ -1,0 +1,14 @@
+beautifulsoup4>=4.9.0
+lxml>=4.6.0
+requests>=2.25.0
+
+[dev]
+pytest>=7.0.0
+pytest-cov>=3.0.0
+ruff>=0.0.240
+mypy>=0.910
+black>=22.1.0
+
+[docs]
+sphinx>=4.3.0
+sphinx-rtd-theme>=1.0.0
