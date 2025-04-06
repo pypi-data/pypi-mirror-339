@@ -1,0 +1,11 @@
+better_regressions/__init__.py,sha256=yxZrM_Kz2LL5jAQv8txTguNuuA-yuTBJIZU8J4DKeAI,770
+better_regressions/linear.py,sha256=ACBMOz4oegtAZqsEGlXPATQKYBy23GBx-awHevk7aZM,2798
+better_regressions/piecewise.py,sha256=OhzjwQaDoCQhDUt2dswUGQMT2l2mcs9PxAOj31_jlBM,3679
+better_regressions/scaling.py,sha256=2Eb5LmHnw1_bJOsNtn8koUCHAoxKM-BM5Ez4lPuBxik,10950
+better_regressions/smoothing.py,sha256=8KObie8EZAZGBKjwOsEAR7Mfqeo5V55j03YYAV50WPg,5974
+better_regressions/tree.py,sha256=i1UIHN6aa8uxs5YyzHXiCSRfhJMAZNWczuBtW0Ko32s,9294
+better_regressions/utils.py,sha256=k7IGePJHrymXKIRclTXM-vRcHUm6LTtzxBE4FyBOUvs,1655
+better_regressions-0.1.0.dist-info/METADATA,sha256=aTkmioexZdyTvQOhvJOi1Jx6IySt9kGc1PsXZ5Eqev0,3122
+better_regressions-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+better_regressions-0.1.0.dist-info/licenses/LICENSE,sha256=Dmsy1rh4nSQQ0Oxyt6DkJkUy5pB6hZq5pPWT1U3_aOs,1073
+better_regressions-0.1.0.dist-info/RECORD,,
