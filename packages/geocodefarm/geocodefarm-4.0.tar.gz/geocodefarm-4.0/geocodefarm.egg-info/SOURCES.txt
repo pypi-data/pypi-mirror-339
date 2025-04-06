@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+geocodefarm/__init__.py
+geocodefarm.egg-info/PKG-INFO
+geocodefarm.egg-info/SOURCES.txt
+geocodefarm.egg-info/dependency_links.txt
+geocodefarm.egg-info/top_level.txt
+tests/test_basic.py
