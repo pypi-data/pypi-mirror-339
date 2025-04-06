@@ -1,0 +1,78 @@
+Metadata-Version: 2.4
+Name: pwlfit
+Version: 0.2.0
+Summary: Package for piecewise linear fitting of noisy data
+Home-page: https://github.com/dkirkby/pwlfit
+Author: David Kirkby
+Author-email: dkirkby@uci.edu
+Project-URL: Documentation, https://github.com/dkirkby/pwlfit
+Project-URL: Bug Reports, https://github.com/dkirkby/pwlfit/issues
+Project-URL: Source Code, https://github.com/dkirkby/pwlfit
+Keywords: linear fitting,piecewise linear,astronomy,data analysis
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pyyaml
+Provides-Extra: dev
+Requires-Dist: check-manifest; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Piecewise Linear Fits to Noisy Data
+
+[![PyPI package](https://img.shields.io/badge/pip%20install-pwlfit-brightgreen)](https://pypi.org/project/pwlfit/) [![GitHub Release](https://img.shields.io/github/v/release/dkirkby/pwlfit?color=green)](https://github.com/dkirkby/pwlfit/releases) [![Actions Status](https://github.com/dkirkby/pwlfit/workflows/Test/badge.svg)](https://github.com/dkirkby/pwlfit/actions) [![License](https://img.shields.io/github/license/dkirkby/pwlfit)](https://github.com/dkirkby/pwlfit/blob/main/LICENSE)
+
+Use this package to perform efficient piecewise linear fits to noisy data.
+
+## Installation
+
+Install the [latest released version](https://github.com/dkirkby/pwlfit/releases/latest) from [pypi](https://pypi.org/project/pwlfit/) using:
+```
+pip install pwlfit
+```
+The required dependencies are numpy, scipy, yaml.
+
+The changes with each version are documented [here](CHANGELOG.md).
+
+## Quick Start
+
+Fit some sample data included in this package using:
+```
+from pwlfit.util import read_sample_data
+from pwlfit.grid import Grid
+from pwlfit.driver import PWLinearFitter
+
+x, y, ivar = read_sample_data('A')
+grid = Grid(x, ngrid=100)
+
+fitter = PWLinearFitter(grid)
+
+fit = fitter(y, ivar)
+
+plt.plot(x, y, '.')
+plt.plot(fit.xknots, fit.yknots, 'o-');
+```
+to produce this plot:
+
+![Fit to sample A data](https://github.com/dkirkby/pwlfit/blob/main/examples/Quickstart-sampleA.png?raw=true)
+
+For more details see the Quickstart notebook: [readonly](https://github.com/dkirkby/pwlfit/blob/main/examples/Quickstart.ipynb) or [live (via google colab)](https://colab.research.google.com/github/dkirkby/pwlfit/blob/main/examples/Quickstart.ipynb).

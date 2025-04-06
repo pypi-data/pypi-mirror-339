@@ -1,0 +1,15 @@
+pwlfit/__init__.py,sha256=Zn1KFblwuFHiDRdRAiRnDBRkbPttWh44jKa5zG2ov0E,22
+pwlfit/driver.py,sha256=KoRbbovUGGhPFi4gkhezumx2sMu1z0Q-JY2ZTJsze8E,6486
+pwlfit/fit.py,sha256=Z0je2Qee8bVRHfnKf4zTgvZWKaT13wRpDiKj0D83Ut0,15741
+pwlfit/grid.py,sha256=EMMCtEgsFybdyXuYeXXsjFbvLO1vmRntVg7iURR5vMA,4524
+pwlfit/region.py,sha256=caJavPaSNffYLAR812P8d5Oxo3ysNxZZ3LtveeO_kQ4,10791
+pwlfit/util.py,sha256=ldrEPc_E7APysTC-gdGFhc_EDBf3RVGXyt-nWTE0fdk,9303
+pwlfit/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pwlfit/data/sampleA.json,sha256=8QQ5ztuXgiEu67ZqQ_EcHrvZApvTtjTDBhdLSz_MSzI,11572
+pwlfit/data/sampleB.json,sha256=8v_bJQ2JQMDJLZ1ZEJYLrb7X4Y0BSELKl-obi03vrcI,6250
+pwlfit/data/sampleC.json,sha256=GZjnbDm4QHyfxM5ldgZPGiF-e4-fEMLstZQuVGXSe5k,154643
+pwlfit-0.2.0.dist-info/licenses/LICENSE,sha256=c5IiPt3GRSQI0jL5XpzBPTNZkE8Xu7fMl8M-1_x8RVs,1087
+pwlfit-0.2.0.dist-info/METADATA,sha256=zQFhFOFoFm4Sfdoyc1tp3qpAvJB6Km5paElX6VmrJGI,2921
+pwlfit-0.2.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+pwlfit-0.2.0.dist-info/top_level.txt,sha256=kelP3HvdaxMHH007KA8sZ7Fa86W0wDYqMvqf9Z_GySs,7
+pwlfit-0.2.0.dist-info/RECORD,,
