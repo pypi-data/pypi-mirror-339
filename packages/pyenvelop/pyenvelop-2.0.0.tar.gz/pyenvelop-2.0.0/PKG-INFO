@@ -1,0 +1,226 @@
+Metadata-Version: 2.4
+Name: pyenvelop
+Version: 2.0.0
+Summary: A Python package for handling envelope-style data structures
+Author: linzhiwei
+Author-email: LinZhiWei <linzhiwie@foxmail.com>
+License: Proprietary License
+        
+        Copyright (c) 2024 LinZhiWei. All rights reserved.
+        
+        This software and associated documentation files (the "Software") are proprietary and confidential. 
+        The Software is protected by copyright laws and international copyright treaties, as well as other 
+        intellectual property laws and treaties.
+        
+        Terms and Conditions:
+        
+        1. You may not redistribute, sublicense, sell, rent, lease, or otherwise transfer the Software 
+           or any portion thereof.
+        
+        2. You may not reverse engineer, decompile, disassemble, or attempt to derive the source code 
+           of the Software.
+        
+        3. You may not modify, adapt, translate, or create derivative works based upon the Software.
+        
+        4. This license is effective until terminated. Your rights under this License will terminate 
+           automatically without notice if you fail to comply with any term(s) of this License.
+        
+        5. This Software is provided "AS IS", without warranty of any kind, express or implied, 
+           including but not limited to the warranties of merchantability, fitness for a particular 
+           purpose and noninfringement.
+        
+        6. In no event shall the authors or copyright holders be liable for any claim, damages or 
+           other liability, whether in an action of contract, tort or otherwise, arising from, out 
+           of or in connection with the Software or the use or other dealings in the Software.
+        
+        For licensing inquiries, please contact:
+        LinZhiWei <linzhiwie@foxmail.com> 
+Project-URL: Homepage, https://github.com/yourusername/pyenvelop
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic>=2.0.0
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# PyEnvelop
+
+PyEnvelop 是一个用于处理信封式数据结构的 Python 包。它提供了一套简单而强大的 API 来处理嵌套的数据结构，特别适合处理复杂的业务数据交换场景。
+
+## 版本信息
+
+当前版本：2.0.0
+
+## 更新日志
+
+### 2.0.0 (2024-04-05)
+- 重构了 `Entity` 类，改进了类型处理和嵌套结构支持
+- 修复了 `Data` 对象转换为 `Entity` 对象的问题
+- 添加了 `get_string` 方法到 `Entity` 类
+- 改进了 XML 特殊字符的转义处理
+- 优化了类型注解和文档
+
+### 1.0.1.1 (2024-02-16)
+- 初始发布版本
+
+## 系统要求
+
+- Python >= 3.7
+- 依赖包：
+  - setuptools >= 45
+  - wheel
+  - pydantic >= 2.0.0
+
+## 安装
+
+```bash
+pip install pyenvelop
+```
+
+## 主要类说明
+
+### Data 类
+`Data` 类是一个字典类型的容器，用于存储键值对数据。
+
+主要方法：
+- `set_string(k: str, v: str)`: 设置字符串值
+- `set_dataset(k: str, v: DataSet)`: 设置数据集
+- `get_string_item(k: str) -> str`: 获取字符串值
+- `get_integer_item(k: str) -> int`: 获取整数值
+- `get_long_item(k: str) -> int`: 获取长整数值
+- `get_big_decimal(k: str) -> float`: 获取浮点数值
+- `get_datas() -> List[str]`: 获取所有字符串值
+- `get_datasets() -> Dict[str, DataSet]`: 获取所有数据集
+- `to_json() -> str`: 转换为JSON格式
+- `to_xml() -> str`: 转换为XML格式
+
+### DataSet 类
+`DataSet` 类是一个列表类型的容器，用于存储多行数据。
+
+主要方法：
+- `get_row(index: int = 0) -> Data`: 获取指定索引的行
+- `set_row(data: Dict[str, str])`: 设置一行数据
+- `to_json() -> str`: 转换为JSON格式
+- `to_xml() -> str`: 转换为XML格式
+
+### Entity 类
+`Entity` 类是一个字典类型的容器，用于存储节点数据。
+
+主要方法：
+- `get_node(node: str = "default") -> Union[str, Data, DataSet, Entity]`: 获取指定节点
+- `get_node_dataset(name: str, node: str = "default") -> DataSet`: 获取节点数据集
+- `get_node_item(name: str, node: str = "default") -> str`: 获取节点项
+- `set_node(data: Union[str, Dict, List[Dict], Data, DataSet, Entity], node: str = "default")`: 设置节点
+- `set_node_dataset(name: str, dataset: DataSet, node: str = "default")`: 设置节点数据集
+- `set_node_item(name: str, value: str, node: str = "default")`: 设置节点项
+- `get_string(key: str) -> str`: 获取字符串值
+- `to_json() -> str`: 转换为JSON格式
+- `to_xml() -> str`: 转换为XML格式
+
+### EnvelopHead 类
+`EnvelopHead` 类继承自 `Entity`，用于存储信封头部信息。
+
+默认值：
+- `success`: "true"
+- `message`: "执行成功"
+
+### EnvelopBody 类
+`EnvelopBody` 类继承自 `Entity`，用于存储信封主体信息。
+
+### Envelop 类
+`Envelop` 类是信封的主类，包含头部和主体两部分。
+
+主要方法：
+- `get_header() -> EnvelopHead`: 获取头部
+- `get_body() -> EnvelopBody`: 获取主体
+- `set_header(header: EnvelopHead)`: 设置头部
+- `set_body(body: EnvelopBody)`: 设置主体
+- `to_json() -> str`: 转换为JSON格式
+- `to_xml() -> str`: 转换为XML格式
+
+### 异常类
+- `CheckedException`: 可检查异常，继承自 `Exception`
+- `UnCheckedException`: 不可检查异常，继承自 `RuntimeError`
+
+## 使用示例
+
+### 基本使用
+
+```python
+from pyenvelop import Data, DataSet, Envelop, EnvelopHead
+
+# 创建数据
+data = Data()
+data.set_string("name", "test")
+data.set_string("value", "123")
+
+# 创建数据集
+dataset = DataSet()
+dataset.set_row({"id": "1", "name": "test1"})
+dataset.set_row({"id": "2", "name": "test2"})
+
+# 创建信封
+envelop = Envelop()
+
+# 设置头部
+head = EnvelopHead()
+head.set_node_item("custom", "value")
+envelop.set_header(head)
+
+# 设置主体
+body = envelop.get_body()
+body.set_node_dataset("users", dataset)
+body.set_node_item("total", "2")
+
+# 转换为JSON
+json_str = envelop.to_json()
+print(json_str)
+
+# 转换为XML
+xml_str = envelop.to_xml()
+print(xml_str)
+```
+
+### 异常处理
+
+```python
+from pyenvelop import Data, CheckedException
+
+try:
+    data = Data()
+    value = data.get_string_item("non_existent_key")
+except CheckedException as e:
+    print(f"发生错误: {str(e)}")
+```
+
+## 特性
+
+- 支持JSON和XML格式的序列化和反序列化
+- 提供类型安全的数据访问方法
+- 完整的异常处理机制
+- 支持嵌套的数据结构
+- 与Java版本完全兼容
+- 简单直观的API设计
+- 支持自定义节点名称
+- 灵活的数据类型转换
+
+## 贡献指南
+
+欢迎提交问题和改进建议。如果您想贡献代码，请确保：
+
+1. 代码符合项目的编码规范
+2. 添加适当的测试用例
+3. 更新相关文档
+
+## License
+
+This software is proprietary and confidential. 
+Unauthorized copying of this file, via any medium is strictly prohibited.
+Written by linzhiwei <linzhiwie@foxmail.com>, 2024
