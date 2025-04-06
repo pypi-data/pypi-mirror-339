@@ -1,0 +1,9 @@
+xmlschema
+
+[dev]
+black
+build
+pylint
+pytest
+setuptools
+twine
