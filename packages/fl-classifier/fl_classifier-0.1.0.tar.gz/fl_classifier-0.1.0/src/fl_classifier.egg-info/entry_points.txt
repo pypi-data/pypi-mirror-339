@@ -1,0 +1,2 @@
+[console_scripts]
+fl-classifier = fl_classifier:main

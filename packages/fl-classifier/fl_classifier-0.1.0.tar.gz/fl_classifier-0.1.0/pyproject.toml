@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fl-classifier"
+version = "0.1.0"
+description = "A tool to automatically classify files based on extension or timestamp"
+readme = "README.md"
+authors = [{name = "Brian Adi", email = "maill.brianadi@gmail.com"}]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.6"
+keywords = ["file", "organization", "classification"]
+
+[project.urls]
+"Homepage" = "https://github.com/bri-anadi/fl-classifier"
+"Bug Tracker" = "https://github.com/bri-anadi/fl-classifier/issues"
+
+[project.scripts]
+fl-classifier = "fl_classifier:main"
