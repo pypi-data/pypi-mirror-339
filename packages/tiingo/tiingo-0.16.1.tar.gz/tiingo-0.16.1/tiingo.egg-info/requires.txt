@@ -1,0 +1,5 @@
+requests
+websocket-client
+
+[pandas]
+pandas>=0.18
