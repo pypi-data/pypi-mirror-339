@@ -1,0 +1,14 @@
+tsplit/__init__.py,sha256=Oykm1bb2WY7y2VrM2Edirhf38kxsUQvt_6eSs467gS4,921
+tsplit/_version.py,sha256=hcPkC9vIGgfrKK6ft7ysLT7iOCjpFmCBmyKLmXiaZ1g,511
+tsplit/app_tsplit.py,sha256=mX44kp5gvElL4pbhCWwfTt2bE1yXI6_EVxhqJJDdERk,8610
+tsplit/cmd_LTR.py,sha256=Y1TihyJsb-k-b1YMfMpufqyI8DQ58bb137WptT_9mJA,3385
+tsplit/cmd_TIR.py,sha256=7Ntb7NbCzpIMATQAp0O5sRxd2cCSj9iE7u-h919MWWY,3653
+tsplit/logs.py,sha256=c2-P354x837YbBJ_9bU1r2v7hGdYvbU67UuaAs4inak,1641
+tsplit/parseAlign.py,sha256=GuiXstww07loM5FIYrzim-no5vg5YZeS7jCgb8y8sv8,27543
+tsplit/utils.py,sha256=wxKqipwTnkMxhFUHc3m-8aVLcjoyfBiMHw3SeOwcGIw,6543
+tsplit/wrapping.py,sha256=3qjWJACZwvhYbHOQHsNjBLnRigpAVM3-AdLi8MgOGgM,3513
+tsplit-0.1.4.dist-info/METADATA,sha256=Vsy3n6YIwZ6TgenOF_hXiFhFXIalBBPYpmNr_tDrAHo,4973
+tsplit-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tsplit-0.1.4.dist-info/entry_points.txt,sha256=FcDrvM1WgQl1-zMv0JTl_dnLgcv7WYL3Ry_xj2NhYbE,50
+tsplit-0.1.4.dist-info/licenses/LICENSE.txt,sha256=-eNqXP7WDQbXy-tq1kxASuvA2CKlmpEzM2nx8-I0kWU,1074
+tsplit-0.1.4.dist-info/RECORD,,
