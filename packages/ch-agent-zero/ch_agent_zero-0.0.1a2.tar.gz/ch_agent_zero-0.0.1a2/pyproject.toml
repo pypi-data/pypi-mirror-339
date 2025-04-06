@@ -1,0 +1,81 @@
+[project]
+name = "ch_agent_zero"
+# version = "0.0.0"
+dynamic = ["version"]
+# Using dynamic version from __version__ in __init__.py
+description = "Model Context Protocol (MCP) server for monitoring, analyzing, and managing ClickHouse databases"
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [
+    {name = "Maruthi Prithivi", email = "maruthiprithivi@gmail.com"},
+]
+license = {text = "Apache-2.0"}
+dependencies = [
+    "aiohttp>=3.11.14",
+    "build>=1.2.2.post1",
+    "clickhouse-connect>=0.8.15",
+    "mcp[cli]>=1.4.1",
+    "pkginfo>=1.12.1.2",
+    "pre-commit>=4.2.0",
+    "prometheus-client>=0.21.1",
+    "pydantic>=2.10.6",
+    "python-dotenv>=1.0.1",
+    "structlog>=25.2.0",
+    "tenacity>=9.0.0",
+    "twine>=6.1.0",
+    "uvicorn>=0.34.0",
+    "wheel>=0.45.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "ruff>=0.3.1",
+    "black>=23.12.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/maruthiprithivi/agent_zero"
+Documentation = "https://github.com/maruthiprithivi/agent_zero/blob/main/README.md"
+"Bug Tracker" = "https://github.com/maruthiprithivi/agent_zero/issues"
+
+[project.scripts]
+ch-agent-zero = "agent_zero.main:main"
+
+[tool.setuptools]
+packages = ["agent_zero", "agent_zero.monitoring"]
+package-dir = {"" = "."}
+# Explicitly include specific packages
+include-package-data = true
+
+[tool.setuptools.package-data]
+agent_zero = ["py.typed"]
+
+[tool.setuptools.dynamic]
+version = {attr = "agent_zero.__version__"}
+
+[tool.ruff]
+line-length = 100
+target-version = "py312" # Using py312 as the closest available to py313
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "B", "UP", "C", "T", "PT", "RUF"]
+ignore = [
+    "E501",  # Line too long (handled by Black)
+    "PT009", # Use a regular assert instead of unittest-style assert (we're using unittest)
+    "RUF013", # PEP 484 prohibits implicit Optional (we're keeping for backwards compatibility)
+    "C901",  # Function is too complex (we'll address this in refactoring)
+    "F841",  # Local variable is assigned to but never used (will be addressed separately)
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["agent_zero"]
+
+[tool.black]
+line-length = 100
+target-version = ["py312"] # Using py312 as the closest available to py313
+preview = true
+
+[build-system]
+requires = ["setuptools>=65.0", "wheel<0.43"]  # Update to newer setuptools
+build-backend = "setuptools.build_meta"
