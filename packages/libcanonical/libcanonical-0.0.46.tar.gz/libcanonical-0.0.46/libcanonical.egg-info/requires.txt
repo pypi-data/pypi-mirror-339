@@ -1,0 +1,6 @@
+click
+pydantic>2
+email-validator
+phonenumbers
+pytz
+typer
