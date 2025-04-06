@@ -1,0 +1,9 @@
+pandemic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pandemic/data_unloader.py,sha256=9B9U5LoHvkDC7jrQck5mYHWDtvI_ajXohDzSDGl2EQc,8636
+pandemic/functions.py,sha256=aqLExiFg5bBJihdWCQ3adGBRlWLrUsStTNPZuGNDaz0,2338
+pandemic/turn_handler.py,sha256=tw2nmJrLNNsFZ-AI3dQSdxVj9cvoH49h7MtZPCCCcbc,3086
+pandemic/world_map_drawer.py,sha256=6kz1aI1BC7adLIO7X4v4X_bkebSKMXQlmcmxNGC1Spc,20082
+pandemic_scipy-0.1.0.dist-info/METADATA,sha256=cWb6jU-kS2o7FIaAz7-TaJaFOe7p7ya1dbphR_Wk5lY,1557
+pandemic_scipy-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+pandemic_scipy-0.1.0.dist-info/top_level.txt,sha256=0MXDLYC9zL-2eOVqmhDDNePqmjaA-42Cy7gFZkh4Z-Y,9
+pandemic_scipy-0.1.0.dist-info/RECORD,,
