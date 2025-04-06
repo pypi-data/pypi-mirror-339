@@ -1,0 +1,49 @@
+Metadata-Version: 2.3
+Name: zmp-alert-mcp-server
+Version: 0.1.9
+Summary: 
+Author: Kilsoo Kang
+Author-email: kilsoo75@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: mcp (>=1.4.1,<1.5)
+Requires-Dist: zmp-openapi-models (>=0.1.1,<0.2.0)
+Description-Content-Type: text/markdown
+
+# How to run
+## sse
+```bash
+zmp-alert-mcp-server -e https://api.ags.cloudzcp.net -p 8888 -s zmp-f9aed626-c0d6-4293-8a66-c36755e8e948 --transport sse
+```
+
+## stdio
+first install the zmp-alert-mcp-server
+```bash
+pip install zmp-alert-mcp-server
+```
+
+then configure the mcp server into the mcp host like claude desktop or cursor
+```json
+{
+  "mcpServers": {
+    "zmp-alert-mcp-server": {
+      "command": "python3",
+      "args": [
+        "-m",
+        "zmp_alert_mcp_server",
+        "--transport",
+        "stdio",
+        "--endpoint",
+        "https://api.ags.cloudzcp.net",
+        "--access-key",
+        "xxxxxxx"
+      ]
+    }
+  }
+}
+
+```
+

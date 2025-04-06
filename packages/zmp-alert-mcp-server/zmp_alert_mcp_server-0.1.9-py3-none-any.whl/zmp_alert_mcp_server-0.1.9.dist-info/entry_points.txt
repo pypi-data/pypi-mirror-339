@@ -1,0 +1,3 @@
+[console_scripts]
+zmp-alert-mcp-server=zmp_alert_mcp_server.server:main
+
