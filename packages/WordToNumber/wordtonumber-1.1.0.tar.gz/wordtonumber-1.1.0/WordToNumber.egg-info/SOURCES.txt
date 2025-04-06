@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+WordToNumber/__init__.py
+WordToNumber/word_to_number.py
+WordToNumber.egg-info/PKG-INFO
+WordToNumber.egg-info/SOURCES.txt
+WordToNumber.egg-info/dependency_links.txt
+WordToNumber.egg-info/top_level.txt
+tests/__init__.py
+tests/test_word_to_number.py
