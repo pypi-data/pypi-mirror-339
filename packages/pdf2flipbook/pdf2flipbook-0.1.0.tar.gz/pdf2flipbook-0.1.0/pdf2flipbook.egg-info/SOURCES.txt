@@ -1,0 +1,10 @@
+README.md
+flipbook_generator.py
+pyproject.toml
+setup.py
+pdf2flipbook.egg-info/PKG-INFO
+pdf2flipbook.egg-info/SOURCES.txt
+pdf2flipbook.egg-info/dependency_links.txt
+pdf2flipbook.egg-info/entry_points.txt
+pdf2flipbook.egg-info/requires.txt
+pdf2flipbook.egg-info/top_level.txt
