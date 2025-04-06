@@ -1,0 +1,11 @@
+narrative_mapper/__init__.py,sha256=gTXsquZcmYVAhsiZ0chnAoBkBFYkW9iFGIzU-i9dPIw,534
+narrative_mapper/narrative_analyzer/clustering.py,sha256=onjrxO6zZfeIBUVS6JzQK1cTXkLo1ROwTLIyb5yWgY8,2403
+narrative_mapper/narrative_analyzer/embeddings.py,sha256=h0jMbLb6GGBx7U51jxt4SVR-JQ-SElkpxV0wF3-vWuE,2862
+narrative_mapper/narrative_analyzer/formatters.py,sha256=HoNu6mH8dC4fm7L6TGTMEbHkK5zItS5N8iTYNfrG-C0,3738
+narrative_mapper/narrative_analyzer/narrative_mapper.py,sha256=U-whcc7bjGuq2SoKFZCUzih93r2emTaUDZpitFt7_r4,3982
+narrative_mapper/narrative_analyzer/summarize.py,sha256=oBCjEUgUdY8j_qR8sDTwp1CDzS9mtd3pB_eFanpArkU,4532
+narrativemapper-0.1.5.dist-info/licenses/LICENSE,sha256=mOki21WAo2l5bkFZ0tJ26b2SIQkxad9KLu3s9-Ukk4c,1086
+narrativemapper-0.1.5.dist-info/METADATA,sha256=FsZVjfK5x0dYiJ2e3i3TH4zz7T6iCckWZHkhSaVPuRg,11405
+narrativemapper-0.1.5.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+narrativemapper-0.1.5.dist-info/top_level.txt,sha256=IoN2mI3PlDknCk2M2F0iD1OVlSGAePE1DDhJwA4WCRU,17
+narrativemapper-0.1.5.dist-info/RECORD,,
