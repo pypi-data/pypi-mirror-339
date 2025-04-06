@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-telnet-client = chuk_mcp_telnet_client.main:main
