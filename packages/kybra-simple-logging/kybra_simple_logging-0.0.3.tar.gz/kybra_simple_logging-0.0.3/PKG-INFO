@@ -1,0 +1,178 @@
+Metadata-Version: 2.4
+Name: kybra_simple_logging
+Version: 0.0.3
+Summary: A lightweight logging library for Kybra on the Internet Computer (IC)
+Home-page: https://github.com/Batou125/kybra_simple_logging
+Author: Kybra Team
+Author-email: Smart Social Contracts <smartsocialcontracts@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Smart Social Contracts
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/smart-social-contracts/kybra_simple_logging
+Project-URL: Repository, https://github.com/smart-social-contracts/kybra-simple-logging.git
+Project-URL: Issues, https://github.com/smart-social-contracts/kybra-simple-logging/issues
+Keywords: database,key-value,entity,relationship,audit
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# Kybra Simple Logging
+
+[![Test](https://github.com/smart-social-contracts/kybra-simple-logging/actions/workflows/test_ic.yml/badge.svg)](https://github.com/smart-social-contracts/kybra-simple-logging/actions/workflows/test_ic.yml)
+[![Python Versions](https://img.shields.io/pypi/pyversions/kybra-simple-logging.svg)](https://pypi.org/project/kybra-simple-logging/)
+[![License](https://img.shields.io/github/license/smart-social-contracts/kybra-simple-logging.svg)](https://github.com/smart-social-contracts/kybra-simple-logging/blob/main/LICENSE)
+
+A robust logging system for Internet Computer canisters built with Kybra, designed to overcome the limitations of Python's standard logging module in the IC environment.
+
+## Features
+
+- Works seamlessly in both Internet Computer and non-IC environments
+- Avoids using Python's standard logging module (which has compatibility issues in the IC environment)
+- Named loggers with `get_logger()` function similar to Python's standard library
+- Support for level-based filtering (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+- Global and per-logger log level configuration
+- Ability to enable/disable logging completely
+- Best practices for library logging implementation
+
+## Installation
+
+### Using pip
+
+```bash
+pip install kybra-simple-logging
+```
+
+### Manual Installation
+
+In your Kybra project, simply copy the `kybra_simple_logging` directory to your project.
+
+## Quick Start
+
+```python
+from kybra_simple_logging import get_logger
+
+# Create a logger
+logger = get_logger("my_canister")
+
+# Log messages at different levels
+logger.debug("This is a debug message")
+logger.info("This is an info message")
+logger.warning("This is a warning message")
+logger.error("This is an error message")
+logger.critical("This is a critical message")
+
+# Configure logging
+from kybra_simple_logging import set_log_level, LogLevel
+
+# Set global log level
+set_log_level(LogLevel.INFO)
+
+# Set log level for a specific logger
+logger.set_level(LogLevel.DEBUG)
+
+# Disable logging completely
+from kybra_simple_logging import disable_logging, enable_logging
+
+disable_logging()
+# ... operations without logging ...
+enable_logging()
+```
+
+## Advanced Usage
+
+### Creating Multiple Loggers
+
+```python
+# Create loggers for different components
+db_logger = get_logger("database")
+api_logger = get_logger("api")
+auth_logger = get_logger("auth")
+
+# Set different log levels per component
+db_logger.set_level(LogLevel.DEBUG)  # More verbose logging for database
+api_logger.set_level(LogLevel.INFO)  # Standard logging for API
+auth_logger.set_level(LogLevel.WARNING)  # Only warnings and above for auth
+```
+
+### In Kybra Canister Functions
+
+```python
+from kybra import query
+from kybra_simple_logging import get_logger
+
+logger = get_logger("my_canister")
+
+@query
+def get_data():
+    logger.info("Processing get_data request")
+    # ... your code ...
+    return result
+```
+
+## Development
+
+```bash
+# Clone the repository
+git clone https://github.com/smart-social-contracts/kybra-simple-logging.git
+cd kybra-simple-logging
+
+# Recommended setup
+pip install pyenv virtualenv
+pyenv local 3.10.7
+python -m virtualenv venv
+source venv/bin/activate
+
+# Install development dependencies
+pip install -r requirements-dev.txt
+
+# Run tests
+cd tests && ./run_test.sh
+
+# Run linters
+black .
+isort .
+flake8 .
+mypy .
+```
+
+## Running Tests
+
+```bash
+pip install -r requirements-dev.txt
+python -m pytest -v
+```
+
+## License
+
+MIT
