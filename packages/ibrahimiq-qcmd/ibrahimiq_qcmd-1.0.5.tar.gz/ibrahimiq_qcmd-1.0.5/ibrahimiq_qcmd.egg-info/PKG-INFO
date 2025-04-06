@@ -1,0 +1,119 @@
+Metadata-Version: 2.4
+Name: ibrahimiq-qcmd
+Version: 1.0.5
+Summary: AI-powered Command Generator using Local LLMs
+Author-email: Ibrahim <ibrahimihssan1@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/aledanee/qcmd
+Project-URL: Bug Tracker, https://github.com/aledanee/qcmd/issues
+Project-URL: Documentation, https://github.com/aledanee/qcmd/blob/main/qcmd-docs.html
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Topic :: Utilities
+Classifier: Environment :: Console
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Requires-Dist: configparser>=5.0.0
+Dynamic: license-file
+
+# qcmd - AI-powered Command Generator
+
+A simple command-line tool that generates shell commands using local AI models via Ollama.
+
+**Version 1.0.5**
+
+## Overview
+
+**qcmd** is a powerful command-line tool that generates shell commands using AI language models via Ollama. Simply describe what you want to do in natural language, and qcmd will generate the appropriate command.
+
+## Key Features
+
+- **Natural Language Inputs**: Describe what you want to do in plain English
+- **Auto-fix Mode**: Automatically fixes failed commands and retries
+- **AI Error Analysis**: Explains errors and suggests solutions
+- **Interactive Shell**: Continuous operation with command history
+- **Multiple Models**: Works with any Ollama model (default: qwen2.5-coder:0.5b)
+- **Safety First**: Always asks for confirmation before executing any command
+- **Log Analysis**: Find and analyze system log files with real-time monitoring
+
+## Installation
+
+### Prerequisites
+
+- Python 3.6 or higher
+- [Ollama](https://ollama.ai/) installed and running
+- At least one language model pulled (e.g., qwen2.5-coder:0.5b)
+
+### Install from PyPI
+
+```bash
+pip install ibrahimiq-qcmd
+```
+
+Make sure Ollama is running before using qcmd:
+```bash
+ollama serve
+```
+
+## Basic Usage
+
+```bash
+# Generate and confirm a command
+qcmd "list all files in the current directory"
+
+# Auto-execute mode
+qcmd -e "find large log files"
+
+# Smart auto-fix mode
+qcmd -A "find Python files modified today"
+
+# Interactive shell
+qcmd -s
+```
+
+## What's New in 1.0.5
+
+- Fixed compatibility with Python 3.12+ by removing pkg_resources dependency
+- Improved version detection using Python standard library (importlib.metadata)
+- Removed external dependency requirements for better cross-version compatibility
+- Enhanced installation reliability across all Python versions
+- Simplified update checking mechanism
+
+## What's New in 1.0.4
+
+- Initial attempt at fixing Python 3.12+ compatibility issues
+- Updated documentation for better clarity
+- Minor code improvements
+
+## What's New in 1.0.3
+
+- Implemented improved release automation workflow
+- Enhanced package publishing process
+- Updated GitHub Actions configuration 
+- Streamlined deployment process
+- Documentation improvements for contributors
+
+## What's New in 1.0.2
+
+- Fixed undefined variable errors in interactive shell and auto mode
+- Improved error handling and command detection for dangerous operations
+- Streamlined GitHub Actions workflow for Python 3.10 and 3.11
+- Enhanced compatibility with continuous integration systems
+- Fixed tab completion issues in interactive shell
+
+## What's New in 1.0.1
+
+- Updated documentation with improved installation instructions
+- Fixed package structure for better compatibility
+- Added PyPI integration for easier installation
+
+## Full Documentation
+
+For full documentation and source code, visit the [GitHub repository](https://github.com/aledanee/qcmd). 
