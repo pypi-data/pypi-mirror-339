@@ -1,0 +1,6 @@
+[console_scripts]
+autolei=autolei.autolei:main
+autolei_add_instrument=autolei.autolei:add_instrument
+autolei_mrc2pets=autolei.src.generate_pets:main
+autolei_setting=autolei.autolei:setting
+
