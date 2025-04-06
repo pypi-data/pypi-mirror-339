@@ -1,0 +1,5 @@
+[console_scripts]
+legionella_sbt = legionella_sbt.leg_sbt:cli
+
+[nbdev]
+legionella_sbt = legionella_sbt._modidx:d

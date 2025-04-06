@@ -1,0 +1,8 @@
+include settings.ini
+include LICENSE
+include CONTRIBUTING.md
+include README.md
+recursive-exclude * __pycache__
+include legionella_sbt/config/config.default.env
+include legionella_sbt/config/config.default.yaml
+recursive-include legionella_sbt_resources *
