@@ -1,0 +1,3 @@
+[console_scripts]
+lsudt = lsudt.lsudt:main
+

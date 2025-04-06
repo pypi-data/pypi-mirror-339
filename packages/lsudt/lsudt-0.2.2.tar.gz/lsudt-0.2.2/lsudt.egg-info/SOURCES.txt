@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+lsudt/lsudt.py
+lsudt.egg-info/PKG-INFO
+lsudt.egg-info/SOURCES.txt
+lsudt.egg-info/dependency_links.txt
+lsudt.egg-info/entry_points.txt
+lsudt.egg-info/requires.txt
+lsudt.egg-info/top_level.txt
