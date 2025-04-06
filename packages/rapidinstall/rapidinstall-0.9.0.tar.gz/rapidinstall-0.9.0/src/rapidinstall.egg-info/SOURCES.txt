@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/rapidinstall/__init__.py
+src/rapidinstall/run.py
+src/rapidinstall.egg-info/PKG-INFO
+src/rapidinstall.egg-info/SOURCES.txt
+src/rapidinstall.egg-info/dependency_links.txt
+src/rapidinstall.egg-info/top_level.txt
+tests/test.py
