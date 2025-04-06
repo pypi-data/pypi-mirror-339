@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: djangocms-zb-repository
+Version: 1.0.0
+Summary: Zibanu Repository Plugin for Django CMS
+Author-email: Jhony Gonzalez <jhonny.gonzalez@cqinversiones.co>
+License-Expression: GPL-3.0-or-later
+Keywords: django,zibanu,organizations,openstreetmap
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Environment :: Web Environment
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django~=3.2
+Requires-Dist: django-cms>=3.9
+Requires-Dist: django-filer
+Requires-Dist: django-ckeditor
+Requires-Dist: django-cities-light
+Requires-Dist: geopandas
+Requires-Dist: gdal>=3.0.4
+Requires-Dist: djangorestframework-gis
+Dynamic: license-file
+
+Django CMS Zibanu Repository
+-----------
+
