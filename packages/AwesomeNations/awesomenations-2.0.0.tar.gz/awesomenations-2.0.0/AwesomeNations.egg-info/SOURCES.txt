@@ -1,0 +1,16 @@
+CHANGELOG.md
+License
+MANIFEST.in
+README.md
+pyproject.toml
+AwesomeNations.egg-info/PKG-INFO
+AwesomeNations.egg-info/SOURCES.txt
+AwesomeNations.egg-info/dependency_links.txt
+AwesomeNations.egg-info/requires.txt
+AwesomeNations.egg-info/top_level.txt
+awesomeNations/__init__.py
+awesomeNations/connection.py
+awesomeNations/customMethods.py
+awesomeNations/exceptions.py
+awesomeNations/internalTools.py
+awesomeNations/main.py
