@@ -1,0 +1,15 @@
+LICENSE.md
+README.md
+setup.cfg
+setup.py
+LoggingEsHandler.egg-info/PKG-INFO
+LoggingEsHandler.egg-info/SOURCES.txt
+LoggingEsHandler.egg-info/dependency_links.txt
+LoggingEsHandler.egg-info/requires.txt
+LoggingEsHandler.egg-info/top_level.txt
+eslogging/__init__.py
+eslogging/handlers.py
+eslogging/serializers.py
+tests/__init__.py
+tests/test_cmreshandler.py
+tests/test_cmresserializer.py
