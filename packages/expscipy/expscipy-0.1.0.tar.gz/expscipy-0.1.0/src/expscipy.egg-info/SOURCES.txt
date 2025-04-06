@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/expscipy/__init__.py
+src/expscipy/core.py
+src/expscipy/version.py
+src/expscipy.egg-info/PKG-INFO
+src/expscipy.egg-info/SOURCES.txt
+src/expscipy.egg-info/dependency_links.txt
+src/expscipy.egg-info/requires.txt
+src/expscipy.egg-info/top_level.txt
