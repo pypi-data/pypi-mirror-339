@@ -1,0 +1,53 @@
+Metadata-Version: 2.4
+Name: chatgpt-mirai-qq-bot-onebot-adapter
+Version: 0.3.0.post1
+Summary: OneBot adapter for Kirara AI
+Home-page: https://github.com/cloxl/chatgpt-mirai-qq-bot-onebot-adapter
+Author: Cloxl
+Author-email: cloxl2017@outlook.at
+Project-URL: Bug Tracker, https://github.com/cloxl/chatgpt-mirai-qq-bot-onebot-adapter/issues
+Project-URL: Documentation, https://oa-docs.cloxl.com
+Project-URL: Source Code, https://github.com/cloxl/chatgpt-mirai-qq-bot-onebot-adapter
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiocqhttp[all]>=1.4.4
+Requires-Dist: kirara-ai>=3.2.0a1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# OneBot Adapter for Kirara AI
+
+本项目是 [Kirara-AI](https://github.com/lss233/Kirara-AI) 的一个插件，用于将OneBot协议的消息转换为Kirara-AI的消息格式。
+
+## 安装
+
+```bash
+pip install chatgpt-mirai-qq-bot-onebot-adapter
+```
+## 使用
+
+请浏览[使用文档](https://oa-docs.cloxl.com)。
+
+## 开源协议
+
+本项目基于 [Kirara-AI](https://github.com/lss233/kirara-ai) 开发，遵循其 [开源协议](https://github.com/lss233/kirara-ai/blob/master/LICENSE)
+
+## 感谢
+
+感谢 [kirara-ai](https://github.com/lss233/kirara-ai) 的作者 [lss233](https://github.com/lss233) 提供框架支持
+
+感谢 [AIOCQHTTP](https://github.com/nonebot/aiocqhttp) 的作者 [nonebot](https://github.com/nonebot) 提供CQHTTP协议支持
+
