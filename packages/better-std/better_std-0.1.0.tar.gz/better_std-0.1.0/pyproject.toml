@@ -1,0 +1,16 @@
+[project]
+name = "better-std"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [{ name = "hhglory", email = "hhglory@outlook.com" }]
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/std"] # 包路径

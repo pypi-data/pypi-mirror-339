@@ -1,0 +1,35 @@
+version: "3"
+
+tasks:
+  env:
+    cmds:
+      - echo "env"
+      - echo "ENV1= $UV_PUBLISH_TOKEN"
+    dotenv:
+      - ../../.env
+
+  build:
+    aliases: ["b"]
+    cmds:
+      - echo "build"
+      - uv build -o dist/
+    dir: .
+    ignore_error: true
+
+  clean:
+    aliases: ["c", "cl"]
+    cmds:
+      - echo "clean"
+      - rm -rf dist
+    dir: .
+    ignore_error: true
+
+  publish:
+    aliases: ["pub", "up"]
+    cmds:
+      - task: build
+      - echo "publish to pypi, token is $UV_PUBLISH_TOKEN"
+      - uv publish --token $UV_PUBLISH_TOKEN
+    ignore_error: true
+    dotenv:
+      - ../../.env
