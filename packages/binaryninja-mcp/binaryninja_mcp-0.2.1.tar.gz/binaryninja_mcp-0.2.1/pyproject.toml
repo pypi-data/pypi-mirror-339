@@ -1,0 +1,44 @@
+[project]
+name = "binaryninja-mcp"
+description = "MCP Server for Binary Ninja"
+readme = "README.md"
+authors = [
+    { name = "ttimasdf", email = "opensource@rabit.pw" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "anyio>=4.9.0",
+    "mcp>=1.6.0",
+    "starlette>=0.46.1",
+    "trio>=0.29.0",
+]
+
+dynamic = ["version"]
+
+[dependency-groups]
+dev = [
+    "mcp[cli]>=1.6.0",
+    "pytest>=8.3.5",
+    "ruff>=0.11.3",
+    "syrupy>=4.9.1",
+]
+
+[project.scripts]
+binaryninja-mcp = "binaryninja_mcp.cli:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "regex"
+path = "plugin.json"
+pattern = '"version" *: *"(?P<version>[^"]+)"'
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "tab"
+docstring-code-format = true
