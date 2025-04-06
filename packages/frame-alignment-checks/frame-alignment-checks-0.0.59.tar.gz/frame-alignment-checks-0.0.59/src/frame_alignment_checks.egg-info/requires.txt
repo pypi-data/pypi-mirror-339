@@ -1,0 +1,8 @@
+dconstruct>=1.0.0
+frozendict>=2.4.6
+matplotlib_venn>=1.1.1
+numpy
+permacache>=3.12.0
+render-psam>=1.0.1
+run-batched>=1.0.2
+tqdm>4.0.0
