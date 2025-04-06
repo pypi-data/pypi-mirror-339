@@ -1,0 +1,156 @@
+Metadata-Version: 2.4
+Name: qexo-mcp
+Version: 0.1.3
+Summary: MCP server implementation for Qexo CMS
+Author-email: "yuzhi.jiang" <yefengzhiming@gmail.com>
+License: MIT
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: httpx
+Requires-Dist: mcp[cli]
+Requires-Dist: requests>=2.32.3
+Description-Content-Type: text/markdown
+
+# Qexo MCP Server
+
+An MCP (Machine Communication Protocol) server implementation for interacting with Qexo CMS, allowing seamless integration with Qexo's content management capabilities.
+
+## Overview
+
+Qexo MCP Server provides a bridge between MCP clients and the Qexo CMS API, enabling programmatic management of content through a standardized interface. This server implementation simplifies the process of working with Qexo CMS by providing a set of well-defined tools for common operations.
+
+## Features
+
+- **Content Management**: Create, read, update, and delete blog posts and files
+- **Post Management**: Save and manage draft posts
+- **Search Capability**: Search through existing posts
+- **Metadata Handling**: Manage categories and tags for posts
+- **Full Integration**: Complete integration with the Qexo API
+- **Commit Messages**: Support for custom commit messages when saving changes
+
+## Installation
+
+### Using pip
+
+```bash
+pip install qexo-mcp
+```
+
+### From Source
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yuzhi-jiang/mcp-servers.git
+cd mcp-servers/qexo-mcp
+```
+
+2. Install the package:
+```bash
+pip install -e .
+```
+
+## Configuration
+
+Qexo MCP Server requires API credentials to connect to your Qexo instance. You can provide these through environment variables:
+
+1. Create a `.env` file in your project directory:
+```
+api_url=https://your-qexo-instance.com
+api_token=your-api-token
+```
+
+2. Alternatively, set the environment variables directly:
+```bash
+# Linux/macOS
+export api_url=https://your-qexo-instance.com
+export api_token=your-api-token
+
+# Windows
+set api_url=https://your-qexo-instance.com
+set api_token=your-api-token
+```
+
+## Running the Server
+
+```bash
+qexo-mcp
+```
+
+This will start the MCP server, which will listen for incoming requests.
+
+## Available Tools
+
+### Post Management
+
+- `get_posts(s: str = None) -> List[dict]`
+  - Get all posts, optionally filtered by search string
+  - Parameters:
+    - `s`: Optional search string
+
+- `save_or_update_post(title: str, content: str, categories: List[str]=[], tags: List[str]=[], commitchange: str=None) -> dict`
+  - Save or update a blog post
+  - Parameters:
+    - `title`: Post title
+    - `content`: Post content
+    - `categories`: List of categories
+    - `tags`: List of tags
+    - `commitchange`: Optional commit message
+
+- `delete_post(title: str) -> dict`
+  - Delete a post
+  - Parameters:
+    - `title`: Post title
+
+### File Management
+
+- `save_or_update_file(file: str, content: str) -> dict`
+  - Save or update a file
+  - Parameters:
+    - `file`: File path
+    - `content`: File content
+
+- `new_file(file: str, content: str) -> dict`
+  - Create a new file
+  - Parameters:
+    - `file`: File path
+    - `content`: File content
+
+- `delete_file(file: str) -> dict`
+  - Delete a file
+  - Parameters:
+    - `file`: File path
+
+## Usage Examples
+mcp config
+
+```json
+{
+    "mcpServers": {
+        "qexo-mcp-server": {
+            "name": "qexo",
+            "description": "",
+            "isActive": true,
+            "command": "uvx",
+            "args": [
+                "qexo-mcp"
+            ],
+            "env": {
+                "api_url": "https://your-qexo-instance.com",
+                "api_token": "your-api-token"
+            }
+        }
+    }
+}
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Author
+
+- yuzhi.jiang <yefengzhiming@gmail.com>
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.

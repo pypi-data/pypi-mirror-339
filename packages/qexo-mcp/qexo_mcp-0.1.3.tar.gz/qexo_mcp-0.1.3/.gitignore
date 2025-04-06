@@ -1,0 +1,24 @@
+*.env
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+# 所有目录下的环境变量
+**/.venv
+**/.env
+
+# 所有的build、dist、wheels
+**/build
+**/dist
+**/wheels
+**/*.egg-info
+
+# 所有目录下的pycache
+**/__pycache__
+
+# 所有目录下的pyo、pyc
+**/*.py[oc]
