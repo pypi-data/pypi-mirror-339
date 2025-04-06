@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: house_prices_jz
+Version: 0.1.0
+Summary: A package for house price prediction model
+Author: Jiso Chacko
+Author-email: jisochacko007@gmail.com
+Requires-Python: >=3.8
+Requires-Dist: pandas==2.2.2
+Requires-Dist: numpy==1.26.4
+Requires-Dist: scikit-learn==1.4.2
+Requires-Dist: joblib==1.4.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
