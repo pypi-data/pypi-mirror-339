@@ -1,0 +1,13 @@
+cookie/__init__.py,sha256=kJT59M-qxzolRkD3MAr8VuH-Pg7kmPp1ZSV4_FmBRmo,155
+cookie/api.py,sha256=i-uUeoym66E14PUKGj_lboSMYv2LQrgvz1rtK8a5guQ,11277
+cookie/errors.py,sha256=A50afNYeEcWRh8mebro10Ku50k52xemRbeClJ28OvHc,1173
+cookie/models.py,sha256=ZUf4yM2jzhUdPQ3VoUijCxHU04kIUyWPrRHZiK4zYj4,3824
+cookie/_internal/__init__.py,sha256=EWKkEUJc1gIpb1gBrzAAnoLHkXq57Fa51a_OSStqEhM,37
+cookie/_internal/custom_models.py,sha256=nTf0nNtuIPXkU-M9Z51YCH54h2p9x3GmHAkKHFJVAhc,692
+cookie/_internal/formatter.py,sha256=-kOSwqTtaNKWscpmM03dlVKly12pGmWLXhWwlXFVZ8E,412
+cookie/_internal/model_generator.py,sha256=VP_iibHMyNeLK47cMSNEO3XGpr_rx4TRJEh-a8MdK3U,615
+cookie_api-0.3.0.dist-info/licenses/LICENSE,sha256=RV9LpffaVc_LW0jcpzRYzDZ_ln1PzDxSMg0kXmBYzgg,1061
+cookie_api-0.3.0.dist-info/METADATA,sha256=bRVV2-INFEsnhv7eYQYgjbsHxHY4kO-4lkqZit82oHI,2991
+cookie_api-0.3.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+cookie_api-0.3.0.dist-info/top_level.txt,sha256=lGBArPgroFR-MrFn8O_CBurpkjSjUOvJTZgpuIzIp4c,7
+cookie_api-0.3.0.dist-info/RECORD,,
