@@ -1,0 +1,2 @@
+[console_scripts]
+server-launcher = chuk_protocol_server.server_launcher:main
