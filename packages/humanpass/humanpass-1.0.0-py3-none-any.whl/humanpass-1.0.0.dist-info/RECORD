@@ -1,0 +1,9 @@
+humanpass-1.0.0.dist-info/licenses/LICENSE,sha256=UZ7Ecm0vO0G4T-mQv02d3ul7Qg5jXI_3fhwmREgUsVo,1067
+passgen/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+passgen/generator.py,sha256=v6XK9LJA36VXAdlMIlb9itdHb3fpKgBiWPNwaJtI-q4,1121
+passgen/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+passgen/tests/test_generator.py,sha256=M6oYwUNTbaOG3JlpSYiyjpgZZkuKEEZ1Lrrh-t4qews,2559
+humanpass-1.0.0.dist-info/METADATA,sha256=iLtshOP8mgEQPJXXMwcsEK8ouwkB3UIWU4LC1a13uNI,1801
+humanpass-1.0.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+humanpass-1.0.0.dist-info/top_level.txt,sha256=nWGVmHIcxlN6Tcs2srVvUP34lMYLlzIGIHl_bfH8XYs,8
+humanpass-1.0.0.dist-info/RECORD,,
