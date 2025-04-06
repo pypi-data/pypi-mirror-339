@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: CustomPyPong2
+Version: 0.0.1
+Summary: Ping Pong package
+Home-page: 
+Author: Abhinav S Nair
+Author-email: svnair.1984@gmail.com
+License: MIT
+Project-URL: Documentation, https://CustomPyPong2.readthedocs.io
+Project-URL: Source, https://github.com/Sarish002/CustomPyPong2
+Project-URL: Bug Tracker, https://github.com/Sarish002/CustomPyPong2/issues
+Keywords: Table Tennis
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+Requires-Dist: Pygame
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: summary
+
+# A Simple Way to make a Customizable Pong Game in Python.
+***
+## Instructions: 
+- Left Player --> W to move up, S to move down 
+- Right Player --> Up Arrow to move up, Down Arrow to move up 
+- Required Packages: Pygame
+***
+## Files:
+- Two sounds for winning,
+- Success Sound, 
+- Bat Sound, 
+- Font file (.ttf),
+
+Change Log
+0.0.1 (06/04/25)--> First Release
