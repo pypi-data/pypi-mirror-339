@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: elinor
+Version: 0.0.1
+Summary: some util functions
+Author: Dashvvood
+Author-email: mathismottis@gmail.com
+Requires-Dist: numpy
+Requires-Dist: pillow
+Requires-Dist: matplotlib
+Requires-Dist: pybase64
+Requires-Dist: pyyaml
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: summary
