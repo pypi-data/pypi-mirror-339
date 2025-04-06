@@ -1,0 +1,9 @@
+fastapi_mcp/__init__.py,sha256=OvmnI8NRdLDMQEqwsBH3j7_JCXzg0VWEw-5UadNiSus,407
+fastapi_mcp/http_tools.py,sha256=J6-bTbMUEJ7ajB0fObT22vvcoImL5rimWJasRqwow0M,19594
+fastapi_mcp/openapi_utils.py,sha256=vwaojdrOsg3TFJtRZXENPgFayNvVzE17dOHRL6FH0rw,10687
+fastapi_mcp/server.py,sha256=CMLVOSfFaKw4RHC0cZ7IuCnmQ38OferUnsizx16G4Bc,5286
+fastapi_mcp-0.1.6.dist-info/METADATA,sha256=jksxOuPrFEj8eDRYZD331P5jMwA41VQDzJsSTneHQ-U,8465
+fastapi_mcp-0.1.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fastapi_mcp-0.1.6.dist-info/entry_points.txt,sha256=QnW3KT5oTFjioMzOWh4GgyZC1NteJ1lGaIKsX9zk4WM,52
+fastapi_mcp-0.1.6.dist-info/licenses/LICENSE,sha256=OognJ35WTakeNH3a_LSKgklg_5ZCarI0WrZxOrmh9b0,1068
+fastapi_mcp-0.1.6.dist-info/RECORD,,
