@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "virtual-lanes"
+version = "0.2.3"
+description = "A ten-pin bowling simulation library for modeling games"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [
+    {name = "Michael Borck", email = "michael@borck.me"}
+]
+dependencies = [
+    "numpy>=1.26.4",
+    "typer>=0.9.0",
+    "rich>=13.7.0",
+    "textual>=0.52.1", 
+    "python-fasthtml>=0.8.2",
+]
+
+[project.scripts]
+virtual-lanes = "virtual_lanes.cli.commands:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+# Migrated from .flake8
+line-length = 120
+target-version = "py310"
+select = ["E", "F", "I", "N", "UP", "B", "A", "C4", "SIM", "ERA"]
+ignore = ["E501"]  # Line too long
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+]
+
+[tool.ruff.isort]
+known-first-party = ["virtual_lanes"]
+
+[tool.ruff.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.pytest]
+testpaths = ["tests"]
+python_files = "test_*.py"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+strict_optional = true
+
+[[tool.mypy.overrides]]
+module = ["numpy.*"]
+ignore_missing_imports = true
