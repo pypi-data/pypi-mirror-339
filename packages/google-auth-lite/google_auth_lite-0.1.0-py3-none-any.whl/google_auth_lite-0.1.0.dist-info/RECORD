@@ -1,0 +1,13 @@
+google_auth_lite-0.1.0.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+google_auth_rewired/__init__.py,sha256=SrF8yHREQNW0R4i7ppxKTmp2ERz9wBNa3pOtCy3OO2Q,103
+google_auth_rewired/cli.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+google_auth_rewired/config.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+google_auth_rewired/impersonation.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+google_auth_rewired/lite.py,sha256=vOB435nXaBXKdq_S2gm4t2KdmPZaa6WnPJ9i4RdiIUo,1653
+google_auth_rewired/oauth_flow.py,sha256=UaKEc16LGtGtTIoe2lXlavmgqs9klhlcNU0lRjStrZE,1404
+google_auth_rewired/scopes.py,sha256=GKG2e9c8-JaFXlv1E8VeJir8J_2UA-54SD8KI7kL16I,1117
+google_auth_rewired/utils.py,sha256=FTTTMdkMW0w1Ttw-DR1QkS-kGlYiN19RphvRCdXJQP0,1059
+google_auth_lite-0.1.0.dist-info/METADATA,sha256=9sMAflexX6cFWMT4zMTyY4pRxyj5QxtFkt8k4Gsx6MA,770
+google_auth_lite-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+google_auth_lite-0.1.0.dist-info/top_level.txt,sha256=XSrshDuJxMH50u5sCR0rNFZeRFX0i-F-I_BBOYqDjP4,20
+google_auth_lite-0.1.0.dist-info/RECORD,,
