@@ -1,0 +1,82 @@
+Metadata-Version: 2.4
+Name: plquery
+Version: 0.1.0
+Summary: Query dataframes interactively
+Project-URL: repository, https://github.com/pavelzw/plquery
+Author-email: Pavel Zwerschke <pavelzw@gmail.com>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2024, Pavel Zwerschke, Daniel Elsner
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.13
+Requires-Dist: polars<2,>=1.26.0
+Requires-Dist: textual<4,>=3.0.0
+Description-Content-Type: text/markdown
+
+# plquery: query dataframes interactively
+
+[![CI](https://img.shields.io/github/actions/workflow/status/pavelzw/plquery/ci.yml?style=flat-square&branch=main)](https://github.com/pavelzw/plq/actions/workflows/ci.yml)
+[![conda-forge](https://img.shields.io/conda/vn/conda-forge/plquery?logoColor=white&logo=conda-forge&style=flat-square)](https://prefix.dev/channels/conda-forge/packages/plq)
+[![pypi-version](https://img.shields.io/pypi/v/plquery.svg?logo=pypi&logoColor=white&style=flat-square)](https://pypi.org/project/plq)
+[![python-version](https://img.shields.io/pypi/pyversions/plquery?logoColor=white&logo=python&style=flat-square)](https://pypi.org/project/plq)
+
+This tui allows you to query polars dataframes interactively by running polars expressions on parquet and CSV files from your system.
+
+## 💿 Installation
+
+### conda-forge
+
+```bash
+pixi global install plquery
+# or to run it in a temporary environment
+pixi exec plquery my-df.parquet
+```
+
+### PyPi
+
+```bash
+pip install plquery
+# or to run it in a temporary environment
+uvx plquery my-df.parquet
+```
+
+## 📥 Development Setup
+
+This project is managed by [pixi](https://pixi.sh).
+You can install the package in development mode using:
+
+```bash
+git clone https://github.com/pavelzw/plquery
+cd plquery
+
+pixi run pre-commit-install
+pixi run postinstall
+pixi run test
+```
