@@ -1,0 +1,88 @@
+Metadata-Version: 2.4
+Name: rubu
+Version: 1.0.0
+Summary: Temas Socket API zur Steuerung und Kommunikation mit Temas-Geräten
+Home-page: https://rubu-tech.de
+Author: Muhammed
+Author-email: Muhammed <info@rubu-tech.de>
+Project-URL: Homepage, https://rubu-tech.de
+Keywords: temas,rubu-tech,hardware-control,socket
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Rubu Tech – Temas Socket API
+
+## Overview
+
+This Python package provides an easy-to-use API for controlling Temas hardware devices via TCP/IP socket communication. It is designed for laboratory setups, test stations, robotic platforms, or any scenario requiring accurate positioning and sensor feedback.
+
+---
+
+## Features
+
+- TCP socket communication with Temas devices
+- Distance and mean distance queries
+- Azimuth and elevation positioning in coarse, fast, fine steps
+- Device control commands like `move_home`, `shutdown`, `restart`
+- System status queries: temperature, hostname, MAC address, etc.
+- Simple object-oriented interface for quick integration
+
+---
+
+## Installation
+
+Install via pip:
+
+```bash
+pip install rubu
+
+## Usage
+
+## Basic Example: Query distance
+
+```python
+import cv2
+from rubu import temas
+
+# Connect to the device (via hostname or IP address)
+device = temas.Connect(hostname="temas")
+# Alternatively: device = temas.Connect(ip_address="192.168.4.4")
+
+# Initialize control class
+control = temas.Control()
+
+# Measure distance (laser, in cm)
+distance = control.distance()
+print(f"Measured distance: {distance} cm")
+
+# Move to a specific position (Pan, Tilt)
+control.move_pos(60, 30)
+
+# Initialize camera (Visual Port: 8081, ToF Port: 8084)
+camera = temas.Camera(port=8081)
+camera.start_thread()
+
+while True:
+    try:
+        frame = camera.get_frame()
+        if frame is not None:
+            cv2.imshow('Visual Camera', frame)
+
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            print("Exiting camera stream...")
+            break
+    except Exception as e:
+        print(f"Error retrieving camera frame: {e}")
+
+# Reset camera and control
+control.move_home()
+camera.stop_thread()
+cv2.destroyAllWindows()
+print("Program terminated.")
