@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: reacter-openapitools
+Version: 0.1.0
+Summary: Python package for working with AI API providers
+Author-email: Sankar kvs <openapitools@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/kvssankar/openapitools-python-sdk
+Project-URL: Bug Tracker, https://github.com/kvssankar/openapitools-python-sdk/issues
+Project-URL: Documentation, https://docs.openapitools.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+Dynamic: requires-python
+
+# OpenAPI Tools Overview
+
+OpenAPI Tools provides a unified toolkit for creating, managing, and using AI tools across different LLM platforms like OpenAI, Anthropic, and LangChain.
+
+> The most critical aspect to understand is that tool execution happens
+> on your server where you're using the SDK. This means:
+>
+> - You bear the infrastructure costs
+> - We manage and provide a streamlined, automated way of creating agents and executing tools
+> - Your data remains in your environment during execution
+
+## Key Features
+
+- **Centralized tool management** through Swagger/OpenAPI specs conversion
+- **Multi-platform compatibility** with various AI providers
+- **Local execution** for your security and control
+- **Simple integration** via easy-to-use adapters
+
+## Getting Started
+
+Installation is simple:
+
+```bash
+pip install reacter-openapitools
+```
