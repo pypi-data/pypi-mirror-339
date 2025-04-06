@@ -1,0 +1,69 @@
+Metadata-Version: 2.4
+Name: humanpass
+Version: 1.0.0
+Summary: This is a package for generating random secure passwords for humans.
+Home-page: https://github.com/mwanjajoel/humanpass
+Author: mwanjajoel
+Author-email: joelsilverworks@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
+
+# HumanPass
+
+**HumanPass** is a Python package designed to generate secure, customizable passwords suitable for various applications.
+
+## Features
+
+- **Customizable Length**: Specify password lengths between 14 and 64 characters.
+- **Character Inclusions**: Choose to include uppercase letters, numbers, and special characters.
+- **Cryptographic Security**: Utilizes Python's `secrets` module for generating cryptographically secure passwords.
+
+## Installation
+
+Install humanpass using pip:
+
+```bash
+pip install humanpass
+```
+
+## Usage
+
+```python
+from passgen import PasswordGenerator
+
+# Create a password generator with default settings
+password_generator = PasswordGenerator()
+
+# Generate a password
+password = password_generator.generate()
+```
+
+You can also customize the password generator by setting the following parameters:
+
+```python
+from passgen import PasswordGenerator
+
+# Create a password generator with custom settings
+password_generator = PasswordGenerator(
+    length=20,
+    include_uppercase=True,
+    include_numbers=True,
+    include_special_characters=True
+)
+
+# Generate a password
+password = password_generator.generate()
+```
