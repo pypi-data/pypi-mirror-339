@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: aipowershell
+Version: 0.1.0
+Summary: An AI-powered smart shell with command suggestions and natural language processing
+Home-page: https://github.com/yourusername/aipowershell
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openai
+Requires-Dist: prompt_toolkit
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# AI Power Shell
+
+An AI-powered smart shell with command suggestions and natural language processing.
+
+## Installation
+
+```bash
+pip install aipowershell
+```
+
+## Usage
+
+1. Set your OpenRouter API key in your environment:
+```bash
+export DEEPSEEK_API="your-api-key-here"
+```
+
+2. Run the shell:
+```bash
+aipowershell
+```
+
+## Features
+
+- AI-powered command suggestions
+- Natural language command processing (prefix with ?)
+- Error analysis and fixing
+- Project structure analysis
+
+## Examples
+
+```bash
+$ ?show current directory  # Will translate to: pwd
+$ ?list all files         # Will translate to: ls -la
+$ !error ModuleNotFoundError: No module named 'pandas'  # Will analyze and fix the error
+```
