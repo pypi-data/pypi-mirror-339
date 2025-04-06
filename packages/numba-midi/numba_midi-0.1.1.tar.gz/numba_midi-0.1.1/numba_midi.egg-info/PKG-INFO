@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: numba_midi
+Version: 0.1.1
+Summary: numba-accelerated python midi score processing library.
+Author: Martin de La Gorce
+Requires-Dist: numba>=0.61
+Requires-Dist: numpy
