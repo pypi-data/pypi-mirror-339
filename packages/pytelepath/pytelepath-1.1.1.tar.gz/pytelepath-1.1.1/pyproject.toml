@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pytelepath"
+version = "1.1.1"
+description = "Cool beautiful tools for telegram bots."
+authors = [{name = "Dmitor cel Mare", email = "dmeety@yandex.ru"}]
+dependencies = [
+    "beautools",
+    "sqlalchemy",
+    "python-telegram-bot"
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]  # Only for development
+
+
+[tool.hatch.build]
+packages = ["telepath"]
+
+[tool.hatch.build.targets.sdist]
+include = [] #, "tests", "README.md", "LICENSE"]
