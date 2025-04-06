@@ -1,0 +1,85 @@
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore virtual environments
+.venv/
+env/
+venv/
+pip-wheel-metadata/
+
+# Ignore dependency caches
+.uv/
+.uv.lock
+poetry.lock
+Pipfile.lock
+site-packages/
+.eggs/
+*.egg-info/
+dist/
+build/
+
+# Ignore logs and runtime files
+*.log
+logs/
+*.pid
+*.seed
+*.cover
+*.DS_Store
+*.swp
+*.swo
+
+# Ignore system files
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/
+*.bak
+*.orig
+
+# Ignore test and coverage results
+.coverage
+coverage.xml
+htmlcov/
+pytest_cache/
+.nox/
+
+# Ignore Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Ignore database and compiled files
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.pyo
+
+# Ignore Docker and CI/CD files
+docker-compose.override.yml
+terraform.tfstate*
+.cloudfoundry/
+.terraform/
+node_modules/
+
+# Ignore specific package artifacts
+*.whl
+*.tar.gz
+
+# Ignore local README backup files
+README.md~
+
+.langgraph_api/
+lightrag.log
+
+*zip
+
+.DS_Store
+enron_txt/
+enron_txt_cleaned/
+enron-scandal-summary/
+graphrag_indexer.log
+tests/data_text/
+graphrag_index/
+ragdata/
+tmp/
