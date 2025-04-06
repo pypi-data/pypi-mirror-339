@@ -1,0 +1,2 @@
+[console_scripts]
+cfn-cur = continue_update_rollback.app:main
