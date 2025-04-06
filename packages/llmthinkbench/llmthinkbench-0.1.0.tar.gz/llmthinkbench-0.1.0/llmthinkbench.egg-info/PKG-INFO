@@ -1,0 +1,81 @@
+Metadata-Version: 2.4
+Name: llmthinkbench
+Version: 0.1.0
+Summary: A framework for evaluating overthinking and basic reasoning capabilities of Large Language Models
+Home-page: https://github.com/ctrl-gaurav/LLMThinkBench
+Author: Gaurav Srivastava
+Author-email: gauravhhh30@gmail.com
+Project-URL: Bug Tracker, https://github.com/ctrl-gaurav/LLMThinkBench/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: vllm>=0.2.0
+Requires-Dist: transformers>=4.30.0
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: tqdm>=4.64.0
+Requires-Dist: tabulate>=0.9.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# llmthinkbench: LLM Reasoning Evaluation Framework
+
+A framework for evaluating overthinking and basic reasoning capabilities of Large Language Models
+
+## Features
+
+- Modular architecture for easy addition of new evaluation tasks
+- Built-in tasks: sorting, number comparison
+- Detailed reporting and metrics
+- Efficient batched inference using vLLM
+
+## Installation
+
+```bash
+pip install llmthinkbench
+```
+
+## Quick Start
+
+```bash
+# Run evaluation with default parameters
+llmthinkbench --model_id "Qwen/Qwen2.5-1.5B-Instruct" --tasks sorting comparison
+
+# Run with custom parameters
+llmthinkbench --model_id "meta-llama/Llama-2-7b-chat-hf" \
+  --tensor_parallel_size 2 \
+  --gpu_memory_utilization 0.9 \
+  --temperature 0.7 \
+  --top_p 0.9 \
+  --max_tokens 512 \
+  --tasks sorting comparison \
+  --datapoints 100 \
+  --list_sizes 8 16 32 \
+  --folds 3 \
+  --range -100 100 \
+  --store_details
+```
+
+## Adding New Tasks
+
+1. Create a new task module in `llmthinkbench/tasks/your_task.py`
+2. Implement a class that inherits from `BaseTask` and implements required methods
+3. Register your task in `llmthinkbench/tasks/__init__.py`
+4. Run with `--tasks your_task`
+
+## License
+
+MIT License
