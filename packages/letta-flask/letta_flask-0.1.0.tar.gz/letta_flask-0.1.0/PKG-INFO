@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: letta-flask
+Version: 0.1.0
+Summary: A flask extension to build with Letta with ease
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Classifier: Framework :: Flask
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Typing :: Typed
+Requires-Dist: flask>=3.1.0
+Requires-Dist: letta-client>=0.1.67
+Requires-Dist: pre-commit>=4.1.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: typing>=3.10.0.0
+
+# Letta-Flask
+`letta_flask` is a [Flask](https://flask.palletsprojects.com/en/stable/) extension that provides a simple way to access [Letta](https://www.letta.com/)'s web apis in a safe and secure way.
+
+## Installation
+```bash
+pip install letta-client letta-flask 
+```
+
+## Usage
+```python
+from flask import Flask, send_from_directory
+
+from letta_flask import Letta, LettaFlaskConfig
+
+app = Flask(__name__)
+
+# Initialize
+
+letta_flask = Letta(config=LettaFlaskConfig(
+    base_url="http://localhost:8283",
+    api_key="OPTIONAL_LETTA_API_KEY"
+))
+
+# Attach to app
+letta_flask.init_app(app)
+
+# do your routing
+@app.route('/')
+def index():
+    return send_from_directory('index.html')
+
+```
