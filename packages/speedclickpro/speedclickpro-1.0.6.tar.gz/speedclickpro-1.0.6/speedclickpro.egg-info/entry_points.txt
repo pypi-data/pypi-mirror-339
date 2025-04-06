@@ -1,0 +1,5 @@
+[console_scripts]
+speedclickpro = speedclickpro:run
+
+[gui_scripts]
+speedclickpro-gui = speedclickpro:run
