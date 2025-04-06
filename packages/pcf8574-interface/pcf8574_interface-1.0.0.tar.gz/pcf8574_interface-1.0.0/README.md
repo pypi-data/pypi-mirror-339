@@ -1,0 +1,124 @@
+# PCF8574 interface
+
+This is a Python library designed to extend the functionality of the [pcf8574 library](https://pypi.org/project/pcf8574/).
+It allows you to easily control and interact with the PCF8574 I/O expander, with some additional features that make it more flexible.
+
+## Features
+
+- **Wrapper of the original PCF8574 library**: Compatible with all functionalities of the [pcf8574 library](https://pypi.org/project/pcf8574/).
+- **Inversion of input/output values**: Option to invert logic levels for high-voltage inputs or outputs.
+- **Pin reversal**: Option to reverse pin numbering to match the PCF8574 datasheet.
+- **Value overrides**: Option to override input/output values for testing purposes while retaining the original state in the background.
+- **Client notification**: Integration with custom APIs to notify clients about changes in I/O states.
+- **Simulation**: Automatic fallback to the [pcf8574_simulation library](https://pypi.org/project/pcf8574_simulation/) if the [pcf8574 library](https://pypi.org/project/pcf8574/) is not available. Useful when hardware access is not available.
+
+
+## Installation
+
+You can install the library with the following command:
+
+```bash
+pip install pcf8574_interface[hardware]
+```
+
+This installs both:
+- `pcf8574_interface` — this wrapper library
+- `pcf8574` — the original hardware library for real I2C communication
+
+Alternatively, you can install the libraries separately:
+
+```bash
+pip install pcf8574
+pip install pcf8574_interface
+```
+
+
+### Installing without hardware
+If you don't have access to the hardware or want to develop and test in a simulation environment it is sufficient to install the `pcf8574_interface` package.
+The library will then automatically fall back to the [pcf8574_simulation library](https://pypi.org/project/pcf8574_simulation/).
+
+```bash
+pip install pcf8574_interface
+```
+
+
+## Usage
+
+> **Note:** You can only use a port (all 8 pins) as either an output or an input.
+
+
+### Basic Example: Inversion and Reversal
+
+You can use all functionalities that are provided by the original PCF8574 class.
+Additionally, set the `io_type` (either `IoPortType.OUT` or `IoPortType.IN`) and specify if you want the read or output data to be `inverted` and `reversed`.
+
+By default, `invert` and `reverse` are set to True because this allows for better compatibility with systems that use high voltages instead of GND for input states and ensures that the pin numbering aligns with the standard pinout as described in the PCF8574 datasheet.
+
+```python
+from pcf8574_interface import PCF8574Interface, IoPortType
+
+# Initialize the PCF8574 interface
+pcf = PCF8574Interface(i2c_bus_no=1, address=0x20, io_type=IoPortType.OUT, invert=True, reverse=True)
+
+# Set an output pin
+pcf.set_output(output_number=0, value=True)
+# or
+pcf.port[0] = True
+
+# Read a pin state
+pin_state = pcf.get_pin_state(pin_number=0)
+# or
+pin_state = pcf.port[0]
+```
+
+
+### Overrides
+
+Overrides allow you to manually set the state of individual pins or the entire port, bypassing the normal input/output behavior. This is useful for testing or simulation purposes.
+
+```python
+# Override a pin state
+pcf.set_override_pin(pin_number=0, override_value=False)
+pcf.set_override_pin(pin_number=3, override_value=True)
+# or override the whole port
+pcf.set_override([False, None, None, True, None, None, None, None])
+```
+In the list, None means no override for that pin. This allows selective overriding while keeping other pins' states unchanged.
+
+
+### Custom API Integration
+
+The PCF8574InterfaceApi class allows you to integrate a custom API for client notification when the port state is updated.
+By subclassing this class, you can implement your own logic for notifying clients and providing them the port's unspoiled and overridden values.
+
+To create a custom API integration, you need to implement the notify_clients method. This method will be called whenever the port state changes, and it receives the current unspoiled and overridden values along with the I2C bus and address.
+
+```python
+from pcf8574_interface import PCF8574InterfaceApi, PCF8574Interface
+
+class CustomPCF8574Api(PCF8574InterfaceApi):
+    def notify_clients(
+            self,
+            unspoiled_values,
+            override_values,
+            i2c_bus,
+            i2c_address
+    ):
+        """
+        Notifies all clients (just prints in this example).
+        """
+        print(f"Port updated (Bus {i2c_bus}, Address {i2c_address}):")
+        print(f"Unspoiled: {unspoiled_values}")
+        print(f"Override: {override_values}")
+
+# Usage example
+custom_api = CustomPCF8574Api()
+
+# Creating an instance of PCF8574Interface with the custom API
+pcf = PCF8574Interface(i2c_bus_no=1, address=0x20, api=custom_api)
+# or set the api at a later time
+pcf.api = custom_api
+```
+
+In this simplified example, the state is printed to the console.
+You can modify the notify_clients method to notify actual clients based on your specific needs
