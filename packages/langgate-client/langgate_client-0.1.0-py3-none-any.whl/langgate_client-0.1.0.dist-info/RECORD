@@ -1,0 +1,7 @@
+langgate/client/__init__.py,sha256=59jMilfHRa22lHGpRosrcpcly3sYs7wPkx3NBW1ZZSo,258
+langgate/client/http.py,sha256=43J-6oiQJREoRGw7jR1f_-Q90Py8856I4cPJt473HnY,3435
+langgate/client/protocol.py,sha256=QlliHBTDAntBdp6f4AP_BSZ8XMsmhNNUTEX9RI-xihg,2962
+langgate/client/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langgate_client-0.1.0.dist-info/METADATA,sha256=F_cdPfu8QAZTibRCyNksMEZtnsbwrDKH5jmfDOHoL1k,585
+langgate_client-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+langgate_client-0.1.0.dist-info/RECORD,,
