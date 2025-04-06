@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: helloworld-test-fiap-package
+Version: 1.0.0
+Summary: Descricao da sua lib helloworld
+Home-page: https://github.com/gabrieljoaooo5/helloworld
+Author: seu nome
+Author-email: joaogabriel1598@gmail.com
+License: MIT
+Description: # Helloworld
+        A simple example library.
+        ## Installation
+        ```sh
+        pip install helloworld
+        ```
+        ## Usage
+        ```python
+        from helloworld import hello_world
+        print(hello_world())
+        ```
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

@@ -1,0 +1,8 @@
+README.md
+setup.py
+helloworld/__init__.py
+helloworld/core.py
+helloworld_test_fiap_package.egg-info/PKG-INFO
+helloworld_test_fiap_package.egg-info/SOURCES.txt
+helloworld_test_fiap_package.egg-info/dependency_links.txt
+helloworld_test_fiap_package.egg-info/top_level.txt
