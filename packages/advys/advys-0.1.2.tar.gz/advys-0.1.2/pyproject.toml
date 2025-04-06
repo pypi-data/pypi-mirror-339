@@ -1,0 +1,36 @@
+
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "advys"
+version = "0.1.2"
+authors = [
+    { name = "Chen", email = "chenpsilva@gmail.com" }
+]
+description = "Directories structure"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["estrutura","automacoes","configuracoes","validadores"]
+
+[tool.setuptools.package-data]
+estrutura = ["*.json"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -v --tb=short --disable-warnings"
+testpaths = ["tests"]
+python_files = ["test_*.py","*_test.py","tests_*.py","*_tests.py"]
+python_functions = ["test_*", "_test"]
