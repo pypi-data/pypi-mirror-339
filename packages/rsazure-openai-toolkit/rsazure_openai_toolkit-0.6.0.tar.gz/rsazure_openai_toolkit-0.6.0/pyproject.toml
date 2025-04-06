@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rsazure-openai-toolkit"
+version = "0.6.0"
+description = "A fast, modular, secure, and auditable toolkit to integrate with Azure OpenAI — with a friendly CLI and dev-first architecture."
+authors = [{ name = "Renan Siqueira Antonio", email = "renan.siqu@gmail.com" }]
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+dependencies = [
+    "openai>=1.0.0",
+    "tenacity>=8.2.0",
+    "python-dotenv>=1.0.0",
+    "click>=8.1.0",
+    "Jinja2>=3.1.2",
+    "tiktoken>=0.9.0"
+]
+
+keywords = ["azure", "openai", "chatgpt", "llm", "cli", "toolkit", "prompt", "chatbot", "azure-openai", "prompt-engineering", "developer-tools"]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities",
+    "Topic :: Documentation"
+]
+
+[project.scripts]
+rschat = "rsazure_openai_toolkit.cli:cli"
+rschat-tools = "rsazure_openai_toolkit.cli.tools:main"
+
+[project.urls]
+"Homepage" = "https://github.com/renan-siqueira/rsazure-openai-toolkit"
+"Repository" = "https://github.com/renan-siqueira/rsazure-openai-toolkit"
+"Documentation" = "https://github.com/renan-siqueira/rsazure-openai-toolkit/tree/main/docs"
+"Security Policy" = "https://github.com/renan-siqueira/rsazure-openai-toolkit/security/policy"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.exclude-package-data]
+"*" = ["__pycache__/*", "*.pyc", "*.pyo"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"rsazure_openai_toolkit.samples" = ["templates/*.j2"]
