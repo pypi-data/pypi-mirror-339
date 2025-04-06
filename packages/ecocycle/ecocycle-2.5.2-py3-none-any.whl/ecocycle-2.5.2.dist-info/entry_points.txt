@@ -1,0 +1,3 @@
+[console_scripts]
+ecocycle=ecocycle.main:main_program
+
