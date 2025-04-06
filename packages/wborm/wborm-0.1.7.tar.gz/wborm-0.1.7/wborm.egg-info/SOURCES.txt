@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+wborm/__init__.py
+wborm/core.py
+wborm/fields.py
+wborm/introspect.py
+wborm/query.py
+wborm/utils.py
+wborm.egg-info/PKG-INFO
+wborm.egg-info/SOURCES.txt
+wborm.egg-info/dependency_links.txt
+wborm.egg-info/requires.txt
+wborm.egg-info/top_level.txt
+wborm/tests/__init__.py
+wborm/tests/test_model.py
