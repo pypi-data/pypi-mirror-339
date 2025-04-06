@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "zonaite"
+version = "0.2.0"
+description = "气象数据处理工具包"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [
+    { name = "Clarmy", email = "clarmyleewt@outlook.com" }
+]
+dependencies = [
+    "boto3>=1.26.0",
+    "loguru>=0.7.0",
+    "pandas>=2.0.0",
+    "requests>=2.32.3",
+    "tqdm>=4.67.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=zonaite --cov-report=term-missing"
