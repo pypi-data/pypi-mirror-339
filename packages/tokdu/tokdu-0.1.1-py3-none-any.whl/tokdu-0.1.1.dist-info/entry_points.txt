@@ -1,0 +1,2 @@
+[console_scripts]
+tokdu = tokdu:main
