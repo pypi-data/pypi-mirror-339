@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: descartcan
+Version: 2025.4.4.2
+Summary: A Python toolkit for advanced data processing and API interactions
+Home-page: 
+Author: DescartCan
+Author-email: louishwh@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp>=3.11.10
+Requires-Dist: aiofiles~=24.1.0
+Requires-Dist: loguru==0.6.0
+Requires-Dist: openai~=1.58.1
+Requires-Dist: anthropic~=0.42.0
+Requires-Dist: boto3~=1.34.79
+Requires-Dist: httpx==0.25.2
+Requires-Dist: tiktoken==0.8.0
+Requires-Dist: pyyaml~=6.0.2
+
+
+# descartkit
+
+### LLM
+
+#### Three steps to use models
+
+##### Step1, llm_config.yaml
+
+```yaml
+openai:
+  keys:
+    - name: "openai_key1"
+      api_key: "XXX"
+  models:
+    gpt4: "gpt-4-0125-preview"
+    gpt40: "gpt-4o"
+
+bedrock:
+  keys:
+    - name: "bedrock"
+      api_key: "XXX"
+      api_secret: "XXXXX"
+  models:
+      haiku35: "us.anthropic.claude-3-5-haiku-20241022-v1:0"
+
+```
+
+##### Step2, load models
+
+```python
+from descartcan.llm.factory import LLModelFactory
+model_factory = LLModelFactory.from_config(config="llm_config.yaml")
+model = model_factory.get_model("openai.gpt4")
+
+# 单轮对话
+response = await model.chat(
+    question="Show Python",
+    system="你是一个编程专家"
+)
+print(f"回复: {response.content}")
+print(f"Token统计: 提示词{response.prompt_tokens}, 生成{response.completion_tokens}, 总计{response.total_tokens}")
+
+# 多轮对话
+history = [
+    {"role": "user", "content": "Python和Java的区别是什么？"},
+    {"role": "assistant", "content": "Python和Java有以下主要区别：..."}
+]
+response = await model.chat(
+    question="哪个更适合初学者？",
+    system="你是一个编程专家",
+    history=history
+)
+print(f"多轮对话回复: {response.content}")
+```
