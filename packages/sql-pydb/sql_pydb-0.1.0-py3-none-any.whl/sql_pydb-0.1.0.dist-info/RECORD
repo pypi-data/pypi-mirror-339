@@ -1,0 +1,10 @@
+sql_pydb/Cell.py,sha256=NR9Nc3M27DMo6dDn9Mc-Vq83_bWrINiN_lC0dKAIT40,2958
+sql_pydb/Column.py,sha256=_DaS9PfJbvLoznp74iqLqRZTwt56En0IKViZDzICTY8,3169
+sql_pydb/Database.py,sha256=X-sMVW7QtXUIqqvMJaG2oZSL3TtDVOZ8DsKY54a2oXQ,11044
+sql_pydb/Table.py,sha256=Qit--dm_fvTfVPfq80p52k55GBfP8eUk8BNlnroXbHY,18959
+sql_pydb/TableCommands.py,sha256=_GY3-zO6dYF4zSiYE91dn6fxfV36a3iZ0sYEnTVMa1o,3657
+sql_pydb/__init__.py,sha256=t85Ya8AyM1YKKMUUGmuBzc9FOYNbw78kARbOeTDTkp4,241
+sql_pydb-0.1.0.dist-info/METADATA,sha256=aikBEPhmjA-EwhK6bUxn2WZy45IZHciXb_uCyWJPeGE,573
+sql_pydb-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+sql_pydb-0.1.0.dist-info/top_level.txt,sha256=-V0yXDUfViqN_3-5usL6p6n3Lp1gaxx-Gc6X-L6q_aA,9
+sql_pydb-0.1.0.dist-info/RECORD,,
