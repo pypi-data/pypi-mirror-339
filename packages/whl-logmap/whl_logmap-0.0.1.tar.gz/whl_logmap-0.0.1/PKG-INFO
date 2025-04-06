@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: whl-logmap
+Version: 0.0.1
+Summary: wheelos map tool
+Author-email: daohu527 <daohu527@gmail.com>
+Project-URL: Homepage, https://github.com/wheelos-tools/whl-logmap
+Project-URL: Bug Tracker, https://github.com/wheelos-tools/whl-logmap/issues
+Keywords: logmap,wheelos,gis,mapping
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cyber_record
+Requires-Dist: record_msg
+Requires-Dist: shapely
+Requires-Dist: matplotlib
+Dynamic: license-file
+
+# whl-logmap
+
+A tool to generate map data from path files.
+
+## Install
+
+```bash
+pip3 install whl_logmap
+```
+
+## Quick Start
+
+Generate map data from a path file (CSV format with x,y values):
+
+```bash
+whl_logmap --input_path=your_record_dir
+```
+
+## Options
+
+- **--input_path** (required): Path to the input file containing path points.
+- **--output_path**: Path to the output directory (default: `"map"`). The tool will create corresponding `.txt` and `.bin` files.
+- **--extra_roi_extension**: Extra ROI extension distance (default: `0.3`).
