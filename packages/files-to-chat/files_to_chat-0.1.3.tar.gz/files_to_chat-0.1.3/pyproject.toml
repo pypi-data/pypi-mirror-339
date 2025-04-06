@@ -1,0 +1,22 @@
+[project]
+name = "files-to-chat"
+version = "0.1.3"
+description = "`files-to-chat` is a command-line tool designed to process files or folders, converting their contents into a format suitable for use as a prompt context to chat with large language models (LLMs)."
+readme = "README.md"
+authors = [
+    { name = "anchen", email = "li.anchen.au@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "docling>=2.18.0",
+    "mlx>=0.22.0",
+    "mlx-lm>=0.21.1",
+    "transformers>=4.42.4",
+]
+
+[project.scripts]
+files-to-chat = "files_to_chat:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
