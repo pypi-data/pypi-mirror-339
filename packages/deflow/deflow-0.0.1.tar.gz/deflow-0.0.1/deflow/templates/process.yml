@@ -1,0 +1,8 @@
+process-workflow:
+  type: Workflow
+  params:
+    name: str
+  jobs:
+    start-job:
+      stages:
+        - name: "Start run Group"
