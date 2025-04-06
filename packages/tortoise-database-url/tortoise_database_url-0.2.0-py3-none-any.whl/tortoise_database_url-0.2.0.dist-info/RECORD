@@ -1,0 +1,6 @@
+database_url/__init__.py,sha256=hz_EJQRM6pO8WzPaLYp_Y8_kOxb5cn5E5asP1ogZTRY,552
+database_url/_main.py,sha256=pTYM0a9P3kGUpyaWSkyvhSU4u0W85dDPoEfDAQCswSo,3955
+database_url/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tortoise_database_url-0.2.0.dist-info/METADATA,sha256=rDdn-OyQjnJjsW-efdUgdbVXX_EUmgNEqLtjLONJgO4,2456
+tortoise_database_url-0.2.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+tortoise_database_url-0.2.0.dist-info/RECORD,,
