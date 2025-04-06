@@ -1,0 +1,17 @@
+dotbins/__init__.py,sha256=dPwJfnEO-Kg3x16FTrsmJrWdA4RbEaTEA-2D0uBSmX4,701
+dotbins/cli.py,sha256=qqfUzRBBo-XSf2WUDOxjVOZh0EKBbaIwAyKczHfx88c,11852
+dotbins/config.py,sha256=D1KnC3fOsddQUc4dmRc4Id80tmBhp7SKxXK_uONYR8c,28321
+dotbins/detect_asset.py,sha256=KdFzJeTMCUHi2dCk9dh_FQ-iIUxFgb1vtkLjCo07KAk,12199
+dotbins/detect_binary.py,sha256=cBGYjXtfSUdu8GL2p7Mv59dhoxpD39jTvazK8-4f69Y,4086
+dotbins/download.py,sha256=NZ2IpNBFD4dyeNwE4u1xlHnvrzJJM75_vxoUx69_Rgs,14945
+dotbins/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dotbins/readme.py,sha256=Q5KsHfq13KPU2REmxycnC_zz6rQIkEMPfMVcKZOISYU,15547
+dotbins/summary.py,sha256=5rdTsFnN48370eTCsXR1olrEK2lyCaRi_pV1-aZocw4,5377
+dotbins/utils.py,sha256=0hy_neQXERm9EVlnDSS9r_iNgKGk0dMjFgNvgbA-it8,15505
+dotbins/versions.py,sha256=XCfAAFc0-GYUf8oQVAa031WVEwJp4Fvg0AMGISVbKZs,10137
+dotbins-1.3.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dotbins-1.3.0.dist-info/METADATA,sha256=pAngYs6SjC1oa9kqIRs2Uff12N26pmTQabARGPZfk3k,39449
+dotbins-1.3.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+dotbins-1.3.0.dist-info/entry_points.txt,sha256=89bPl07gPZgdOZM5y-mc5EVxeJAOFXuNjVON_sqNYdc,45
+dotbins-1.3.0.dist-info/top_level.txt,sha256=PR1DmDRrM8WBcW_v9lRO5QLK3zeZonHYGjY3nPUFto0,8
+dotbins-1.3.0.dist-info/RECORD,,
