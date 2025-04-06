@@ -1,0 +1,3 @@
+[console_scripts]
+gitparse=gitparse.cli:main
+
