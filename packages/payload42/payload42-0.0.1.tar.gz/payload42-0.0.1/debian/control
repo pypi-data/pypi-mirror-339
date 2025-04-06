@@ -1,0 +1,18 @@
+Source: payload42
+Maintainer: Jacob Appelbaum <jacob@appelbaum.net>
+Section: python
+Priority: optional
+Build-Depends: dh-python, python3-setuptools, python3,
+  pybuild-plugin-pyproject, flit, debhelper (>= 9)
+Standards-Version: 3.9.6
+Homepage: https://codeberg.org/rendezvous/reunion
+
+Package: python3-payload42
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, python3-click,
+  python3-cryptography, python3-hkdf, python3-ifaddr, python3-pymonocypher,
+  python3-highctidh
+Recommends: python3-flask, python3-requests, python3-stem
+Description: Payload42 is for data serialization
+ This is the reference implementation of the Payload42 data format.
+ .

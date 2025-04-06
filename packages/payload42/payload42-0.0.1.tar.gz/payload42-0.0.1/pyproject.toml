@@ -1,0 +1,41 @@
+[project]
+name = "payload42"
+authors = [ { name = "Jacob Appelbaum" }, { email = "jacob@appelbaum.net" } ]
+description = "payload"
+license = { text = "GPLv3" }
+readme = "README.md"
+keywords = [ "payload", "payload42" ]
+requires-python = ">=3.9"
+dynamic = ["version"]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "click>=8.0.0",
+  "pyyaml",
+  "cbor2"
+]
+
+[project.urls]
+homepage = "https://www.github.com/ioerror/payload"
+repository = "https://www.github.com/ioerror/payload"
+
+[build-system]
+requires = ["flit_core"]
+build-backend = "flit_core.buildapi"
+
+[testenv]
+commands = ["pytest"]
+
+[tool.setuptools]
+packages = ["payload42"]
+
+[tool.setuptools.dynamic]
+version = {attr = "payload42.__version__.__version__"}
+
+[tool.pytest.ini_options]
+addopts = "-v --doctest-modules"

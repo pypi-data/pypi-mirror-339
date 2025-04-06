@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+
+export PYBUILD_DISABLE=test
+export PYBUILD_NAME=payload
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_test:
+	# Do not run the tests
