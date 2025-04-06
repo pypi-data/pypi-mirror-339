@@ -1,0 +1,4 @@
+[console_scripts]
+hs=hypershell:main
+hyper-shell=hypershell:main
+
