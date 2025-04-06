@@ -1,0 +1,17 @@
+pi_core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pi_core/enum.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pi_core/settings.py,sha256=YsdV7eqdJ0yhXXashnNaAKCVdJShMg2xWP-JQ426Jc8,209
+pi_core/validators.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pi_core/dependencies/school.py,sha256=CTIi3rpqqxCgxWQqMAdYSmxw_lEo6eCcYIlJpRMtyrc,402
+pi_core/dependencies/user.py,sha256=12UhNXAeRu7FfzHrsFifu7pZkLs9ZJ94tf1WDGTSlF8,1091
+pi_core/middleware/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pi_core/middleware/user_context.py,sha256=5JdsoN421ErhIaON_hRHplmah_As7PXUKiVDJjZYpr8,563
+pi_core/models/pupil.py,sha256=64UFV8O1aCVeL9tbhYRY45fnQ0YTgPrDB8J1NKcdEYg,3654
+pi_core/models/school.py,sha256=fteNG3UyyMck_VZhjLp1vFeXruGYWexSFc_v4Q_Kzcg,1151
+pi_core/models/user.py,sha256=vvr2seOOyXXFT072DTC7iO1bEF276pepDLuieyArvu8,1838
+pi_core/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pi_core/tests/test_models.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pi_core-0.1.0.dist-info/METADATA,sha256=rIZ1-la724F_dbzGYHyF2OXww-2K_qfDrIm6ukzdDLA,349
+pi_core-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+pi_core-0.1.0.dist-info/top_level.txt,sha256=BJUWdMUGswOuIiHNgnR7dXVkCxMjwW4XOTvd0RMBg3o,8
+pi_core-0.1.0.dist-info/RECORD,,
