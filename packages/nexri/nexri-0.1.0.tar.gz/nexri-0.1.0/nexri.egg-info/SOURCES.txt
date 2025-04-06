@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+nexri/__init__.py
+nexri/dense.py
+nexri.egg-info/PKG-INFO
+nexri.egg-info/SOURCES.txt
+nexri.egg-info/dependency_links.txt
+nexri.egg-info/requires.txt
+nexri.egg-info/top_level.txt
+nexri/tests/__init__.py
+nexri/tests/test_dense.py

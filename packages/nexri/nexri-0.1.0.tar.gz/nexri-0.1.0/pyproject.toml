@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nexri"
+version = "0.1.0"
+description = "Advanced layers for TensorFlow Keras"
+readme = "README.md"
+authors = [
+    {name = "Pawel Tomkiewicz", email = "pawel.tomkiewicz@nexri.eu"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+keywords = ["keras", "tensorflow", "deep-learning", "neural-network", "machine-learning"]
+dependencies = [
+    "tensorflow>=2.19.0",
+]
+requires-python = ">=3.9"
+
+[project.urls]
+"Homepage" = "https://github.com/nexri/nexri"
+"Bug Tracker" = "https://github.com/nexri/nexri/issues"
+"Documentation" = "https://github.com/nexri/nexri#readme"
