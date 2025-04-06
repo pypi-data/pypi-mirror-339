@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linkedPack"  # Package name
+version = "0.1.0"
+authors = [
+    { name="William Vasquez", email="will.vasq77@gmail.com" }
+]
+description = "A simple custom linked list implementation."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.6"
+dependencies = []
+
+[tool.setuptools]
+packages = ["linkedPack"]
