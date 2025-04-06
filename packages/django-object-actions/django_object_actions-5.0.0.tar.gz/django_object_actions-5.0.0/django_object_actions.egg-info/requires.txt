@@ -1,0 +1,11 @@
+
+[build]
+build
+twine
+
+[dev]
+coverage==7.*
+django-extensions==3.*
+factory-boy==3.*
+dj-database-url==2.*
+ruff
