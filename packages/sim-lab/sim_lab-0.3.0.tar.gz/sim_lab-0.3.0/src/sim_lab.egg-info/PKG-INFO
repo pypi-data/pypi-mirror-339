@@ -1,0 +1,194 @@
+Metadata-Version: 2.4
+Name: sim-lab
+Version: 0.3.0
+Summary: A set of classes for simulating various business-related scenarios for educational use
+Author-email: Michael Borck <michael@borck.me>
+License-Expression: MIT
+Project-URL: Homepage, http://sim-lab.borck.me
+Project-URL: Documentation, https://michael-borck.github.io/sim-lab/
+Project-URL: Repository, https://github.com/michael-borck/sim-lab
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.26.0
+Requires-Dist: typer[all]>=0.9.0
+Requires-Dist: uvicorn>=0.29.0
+Requires-Dist: textual>=0.52.1
+Requires-Dist: matplotlib>=3.8.0
+Requires-Dist: plotly>=5.19.0
+Requires-Dist: pydantic>=2.7.0
+Requires-Dist: pymdown-extensions>=10.8.1
+Requires-Dist: pycparser>=2.22
+Requires-Dist: jinja2>=3.1.3
+Requires-Dist: python-fasthtml>=0.1.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.2.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.1.0; extra == "dev"
+Requires-Dist: mkdocs>=1.6.0; extra == "dev"
+Requires-Dist: mkdocs-material>=9.5.2; extra == "dev"
+Requires-Dist: mkdocstrings>=0.25.0; extra == "dev"
+Requires-Dist: mkdocstrings-python>=1.10.0; extra == "dev"
+Requires-Dist: ruff>=0.1.5; extra == "dev"
+Requires-Dist: mypy>=1.8.0; extra == "dev"
+Requires-Dist: build>=1.0.0; extra == "dev"
+Requires-Dist: twine==6.0.1; extra == "dev"
+Provides-Extra: web
+Requires-Dist: uvicorn>=0.29.0; extra == "web"
+Requires-Dist: python-fasthtml>=0.1.0; extra == "web"
+Provides-Extra: cli
+Requires-Dist: typer[all]>=0.9.0; extra == "cli"
+Dynamic: license-file
+
+# SimLab: Business Simulation Toolkit
+
+This Python package provides a set of classes for simulating various
+business-related scenarios. It is designed for educational use, allowing
+students to experiment with modeling, analysis, and decision-making in different
+contexts.
+
+## Installation
+
+To install SimLab with all features:
+
+```bash
+pip install sim-lab
+```
+
+For specific interfaces only:
+
+```bash
+# CLI only
+pip install sim-lab[cli]
+
+# Web interface
+pip install sim-lab[web]
+```
+
+## Features
+
+- Multiple simulation types for business scenarios
+- Command-line interface (CLI)
+- Terminal user interface (TUI)
+- Web interface with REST API
+- Visualization tools
+- Data import/export
+
+## Available Simulations
+
+- **Stock Market Simulation:** Simulate stock price fluctuations, incorporate
+  technical indicators, and develop simple trading strategies.
+- **Resource Fluctuations Simulation:** Model changes in the price of a
+  resource, analyze supply/demand dynamics, and implement hedging strategies.
+- **Product Popularity Simulation:** Simulate the rise and fall of product
+  demand, investigate virality factors, and examine different marketing
+  strategies.
+
+## Usage
+
+### Python API
+
+```python
+from sim_lab import ResourceFluctuationsSimulation
+
+# Create a resource simulation
+sim = ResourceFluctuationsSimulation(
+    start_price=100, 
+    days=365, 
+    volatility=0.05, 
+    drift=0.01,
+    supply_disruption_day=180, 
+    disruption_severity=0.2
+)
+
+# Run the simulation and get results
+prices = sim.run_simulation()
+
+# Visualize the results
+from sim_lab.viz import plot_time_series
+plot_time_series(
+    data=prices,
+    title="Resource Price Fluctuations",
+    xlabel="Days",
+    ylabel="Price ($)",
+    events={180: "Supply Disruption"}
+)
+```
+
+### Command Line Interface
+
+```bash
+# Run a stock market simulation
+simlab stock run --start-price 100 --days 365 --volatility 0.02 --drift 0.001 --output prices.csv
+
+# Get help for all commands
+simlab --help
+```
+
+### Terminal UI
+
+```bash
+# Launch the interactive terminal UI
+simlab-tui
+```
+
+### Web Interface
+
+```bash
+# Start the web server
+simlab-web
+
+# Then visit http://localhost:8000 in your browser
+```
+
+## Project Goals (For Students)
+
+- Gain familiarity with using simulations to model dynamic systems
+- Understand the impact of different parameters on simulation outcomes
+- Develop data analysis and visualization skills in the context of business problems
+- Practice translating business concepts into simulation parameters
+
+## Documentation
+
+For more detailed information about using SimLab, see the [documentation](https://yourproject.readthedocs.io/).
+
+## Development
+
+SimLab uses modern Python development tools:
+
+- [uv](https://github.com/astral-sh/uv) for dependency management
+- [Ruff](https://github.com/astral-sh/ruff) for linting and formatting
+- [pytest](https://docs.pytest.org/) for testing
+- [MkDocs](https://www.mkdocs.org/) for documentation
+
+To setup a development environment:
+
+```bash
+# Clone the repository
+git clone https://github.com/teaching-repositories/sim-lab.git
+cd sim-lab
+
+# Run the setup script
+./scripts/setup_dev.sh
+
+# Or manually
+uv venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+uv pip install -e .[dev]
+```
+
+See [DEVELOPMENT.md](DEVELOPMENT.md) for more details.
+
+## Contributing
+
+We welcome contributions to the SimLab project! See the [Contributing Guide](CONTRIBUTING.md) for more details.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
