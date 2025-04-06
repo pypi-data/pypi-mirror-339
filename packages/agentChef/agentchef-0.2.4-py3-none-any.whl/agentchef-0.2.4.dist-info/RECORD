@@ -1,0 +1,15 @@
+agentChef/__init__.py,sha256=KG5A_ksmBsRT4RLzZXB-cCGp9FAYAd5VvNK5lg2K8lk,1794
+agentChef/conversation_generator.py,sha256=k4nSBc3DL418YnVs1fqcr_18KLO5fd8eio5C8W2ACYY,21956
+agentChef/crawlers_module.py,sha256=_0sdnyw8eb7BmUqyQp5U4jQNG4oHOKG-7jEZfh__FAU,43240
+agentChef/dataset_cleaner.py,sha256=nrvSU_frpXrJLjiMPJqWcYvG0-WGY0zCRZvYAh97hQg,16589
+agentChef/dataset_expander.py,sha256=P8G8J9iDyPu5ZNlzyVHsXw7Bl83fzVWUigkui5El4Ao,28761
+agentChef/ollama_interface.py,sha256=bFqUF4rD4dbOnc_SeA5OjfuSBvDTVMJQDfrD_cbi5xY,3246
+agentChef/pandas_query.py,sha256=qdEXOeaRyVnKPIeTf0bj8bUUpvn1aQi94D-BcbYn28U,17348
+agentChef/udrags.py,sha256=dFmcatIkMU1SOBDvB9uXss3X4lN1vBGXmBd7ZaXgHMY,35314
+agentChef/ui_module.py,sha256=k0xC_9VnYxdVVw_LuoXOLl28hB8oosrmXYBid1MiA4k,16309
+agentchef-0.2.4.dist-info/licenses/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+agentchef-0.2.4.dist-info/METADATA,sha256=nBWX5lJTpcNMu4OnDil5MPzhsLOfDeaayaS8IVe-4vQ,40751
+agentchef-0.2.4.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+agentchef-0.2.4.dist-info/entry_points.txt,sha256=n9O4sYj5BBSXTIoOz4C0qcmjrgB78R0zMdnsjmLOEYE,52
+agentchef-0.2.4.dist-info/top_level.txt,sha256=WZgB5OECELnuoHLQDULCwW3jua6tzVHwAsvGVccjRsQ,10
+agentchef-0.2.4.dist-info/RECORD,,
