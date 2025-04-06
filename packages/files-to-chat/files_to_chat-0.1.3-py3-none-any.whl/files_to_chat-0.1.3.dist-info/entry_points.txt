@@ -1,0 +1,2 @@
+[console_scripts]
+files-to-chat = files_to_chat:main
