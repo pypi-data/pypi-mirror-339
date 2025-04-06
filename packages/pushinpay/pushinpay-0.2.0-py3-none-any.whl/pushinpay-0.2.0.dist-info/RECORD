@@ -1,0 +1,10 @@
+pushinpay/__init__.py,sha256=j_EvUnKSTZkHx_W6iO2AdmLBCckE_PbFHkUV3l596ic,1652
+pushinpay/errors.py,sha256=bChQFXFOjq_OjOUiLXXVe1EHclYD41QVQ7lOy6R6Dx8,855
+pushinpay/pix/__init__.py,sha256=7VcDFPzRmj8MOpCj_3C-uNboZiFAVX5Fd0yKNiJzGDA,4232
+pushinpay/pix/responses/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+pushinpay/pix/responses/qrcode.py,sha256=jo3foSnbCLvBIZDzugM6rcCTwnBVa6o4T8HSzBhdMHQ,4390
+pushinpay-0.2.0.dist-info/licenses/LICENSE,sha256=U1F8790Ee5N9I3ANix84FWh0Pm5p5-MKjqdYfULaFC0,1071
+pushinpay-0.2.0.dist-info/METADATA,sha256=ClQ7aL6s26TRC3SDH3Jh5Fj9jWQXOY1dDnCPk1QC35M,3565
+pushinpay-0.2.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+pushinpay-0.2.0.dist-info/top_level.txt,sha256=zCXY-ramr6FV_zsaOYutD7ZStRezKtrhovco_VhoHK0,10
+pushinpay-0.2.0.dist-info/RECORD,,
