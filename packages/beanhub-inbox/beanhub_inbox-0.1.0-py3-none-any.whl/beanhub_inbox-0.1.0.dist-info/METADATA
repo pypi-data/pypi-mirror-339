@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: beanhub-inbox
+Version: 0.1.0
+Summary: Email processing engine for archiving and extracting financial data
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jinja2>=3.1.6
+Requires-Dist: pydantic>=2.11.2
+Requires-Dist: pyyaml>=6.0.2
+Dynamic: license-file
+
+# beanhub-inbox
+Email processing engine for archiving and extracting financial data
