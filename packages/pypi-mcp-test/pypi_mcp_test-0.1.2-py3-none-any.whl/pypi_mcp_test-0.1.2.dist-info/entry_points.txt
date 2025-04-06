@@ -1,0 +1,2 @@
+[console_scripts]
+pypi-mcp-test = pypi_mcp_test:main
