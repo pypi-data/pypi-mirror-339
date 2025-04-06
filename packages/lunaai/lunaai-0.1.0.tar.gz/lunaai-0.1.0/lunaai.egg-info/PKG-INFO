@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: lunaai
+Version: 0.1.0
+Summary: A retrieval-based QnA and code generation chatbot using sentence-transformer embeddings.
+Author: Joydeep Dutta
+Author-email: joydeep.development.cse@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# LunaAI
+
+**LunaAI** is a retrieval-based QnA and code generation chatbot built using SentenceTransformer embeddings and cosine similarity.  
+It can answer natural language questions and retrieve highly relevant answers from a preloaded CSV dataset â€” no fine-tuning required.
+
+---
+
+## ðŸ”§ Features
+
+- Embedding-based search using SentenceTransformers
+- Cosine similarity + fuzzy matching fallback
+- Loads embeddings and CSV from Google Drive
+- Clean CLI interface with feedback saving
+- Lightweight and fast â€” works offline after setup
+
+---
+
+## ðŸš€ Installation
+
+```bash
+pip install lunaai
