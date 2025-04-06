@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+EduTri/__init__.py
+EduTri.egg-info/PKG-INFO
+EduTri.egg-info/SOURCES.txt
+EduTri.egg-info/dependency_links.txt
+EduTri.egg-info/top_level.txt
