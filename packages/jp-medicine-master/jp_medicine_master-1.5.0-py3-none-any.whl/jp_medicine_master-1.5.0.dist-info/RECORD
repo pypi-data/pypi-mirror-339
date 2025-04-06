@@ -1,0 +1,14 @@
+jp_medicine_master/__init__.py,sha256=GpInoUmYrgBARXvDUlI0eDtQJC20PIRYFK6QaBypCBo,476
+jp_medicine_master/_/__init__.py,sha256=-0hP2lHWna-B0-_Soh_E4jKAcd99vITExTqyhdfRzpA,3739
+jp_medicine_master/ag/__init__.py,sha256=uvaDOGCYfMvZDgwyMN_dG949We4CcMhekoaWHFm3kwA,5312
+jp_medicine_master/bs/__init__.py,sha256=Nl18Wh8NsPSuso7fzC14HyKHhvvm8XEwFPKmM1F0QSE,3953
+jp_medicine_master/mhlw/__init__.py,sha256=iFhlDtXa-Con897ooJL5UKxrgxjmXb4QcybRXSdcbPg,11196
+jp_medicine_master/shinryohoshu_mhlw/__init__.py,sha256=dbB2gJSvplt3lQnis_2aHVUzUMb-1Q5XiHO52FGMidc,6153
+jp_medicine_master/shinryohoshu_mhlw/y_header.csv,sha256=bg7gJf2pYhnVYqzBMQ1spKGLM4RdkTQ7dd46-YcQl7k,958
+jp_medicine_master/ssk/__init__.py,sha256=862XzxtYVD1dVHhLSTHpChlPUlcko_nF3kB13z-D5V0,5472
+jp_medicine_master/ssk/ssk_y_header.csv,sha256=bg7gJf2pYhnVYqzBMQ1spKGLM4RdkTQ7dd46-YcQl7k,958
+jp_medicine_master-1.5.0.dist-info/licenses/LICENSE,sha256=B5eKZCSaR5RMWJ--ND0t5_1tkN8OHx91qK-pY4Hcbsc,1081
+jp_medicine_master-1.5.0.dist-info/METADATA,sha256=TpQZNUjlFdd5Zgy4P-2JL_fAUQNbOEpZtajTH1a-0R8,5801
+jp_medicine_master-1.5.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+jp_medicine_master-1.5.0.dist-info/top_level.txt,sha256=m-2OjbHaRaMGDM-a1pApcnoOabmyyjVX_jvpDYLgLKk,19
+jp_medicine_master-1.5.0.dist-info/RECORD,,
