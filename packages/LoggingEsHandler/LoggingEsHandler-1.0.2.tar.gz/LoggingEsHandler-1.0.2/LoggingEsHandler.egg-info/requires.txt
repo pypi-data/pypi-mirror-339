@@ -1,0 +1,10 @@
+elasticsearch==7.17.9
+requests
+
+[dev]
+check-manifest
+six
+pylint
+
+[test]
+coverage
