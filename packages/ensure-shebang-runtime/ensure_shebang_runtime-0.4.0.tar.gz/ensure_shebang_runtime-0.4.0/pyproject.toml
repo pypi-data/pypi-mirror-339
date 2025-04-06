@@ -1,0 +1,13 @@
+[project]
+name = "ensure-shebang-runtime"
+version = "0.4.0"
+description = "Re-executes Python scripts under the interpreter specified in the shebang line."
+authors = [{name = "simranjeet", email = "simranjeetdua@gmail.com"}]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.6"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
