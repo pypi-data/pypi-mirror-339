@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pyvirtuals/__init__.py
+pyvirtuals.egg-info/PKG-INFO
+pyvirtuals.egg-info/SOURCES.txt
+pyvirtuals.egg-info/dependency_links.txt
+pyvirtuals.egg-info/requires.txt
+pyvirtuals.egg-info/top_level.txt
