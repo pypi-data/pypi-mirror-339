@@ -1,0 +1,5 @@
+[console_scripts]
+marklogic-mcp = marklogic_mcp.server:cli
+
+[uvx.commands]
+marklogic-mcp = marklogic_mcp.server:cli
