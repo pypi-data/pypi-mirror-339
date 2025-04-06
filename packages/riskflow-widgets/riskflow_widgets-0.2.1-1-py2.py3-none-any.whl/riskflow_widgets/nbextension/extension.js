@@ -1,0 +1,1 @@
+define((()=>{return e={758:e=>{window.require&&window.require.config({map:{"*":{riskflow_widgets:"nbextensions/riskflow_widgets/index"}}}),e.exports={load_ipython_extension:function(){}}}},r={},function i(n){var o=r[n];if(void 0!==o)return o.exports;var t=r[n]={exports:{}};return e[n](t,t.exports,i),t.exports}(758);var e,r}));

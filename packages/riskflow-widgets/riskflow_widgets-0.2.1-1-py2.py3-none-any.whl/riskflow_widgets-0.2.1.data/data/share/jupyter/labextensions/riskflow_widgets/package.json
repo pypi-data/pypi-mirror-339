@@ -1,0 +1,64 @@
+{
+  "name": "riskflow_widgets",
+  "version": "0.2.1",
+  "description": "Custom jupyter widgets for riskflow",
+  "author": "Shuaib Osman",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sylam/riskflow_widgets.git"
+  },
+  "keywords": [
+    "jupyter",
+    "widgets",
+    "ipython",
+    "ipywidgets",
+    "jupyterlab-extension"
+  ],
+  "files": [
+    "lib/**/*.js",
+    "dist/*.js"
+  ],
+  "scripts": {
+    "clean": "rimraf dist/ && rimraf ../riskflow_widgets/labextension/ && rimraf ../riskflow_widgets/nbextension",
+    "prepublish": "yarn run clean && yarn run build:prod",
+    "build": "webpack --mode=development && yarn run build:labextension:dev",
+    "build:prod": "webpack --mode=production && yarn run build:labextension",
+    "build:labextension": "jupyter labextension build .",
+    "build:labextension:dev": "jupyter labextension build --development True .",
+    "watch": "webpack --watch --mode=development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@jupyterlab/builder": "^4.0.0",
+    "css-loader": "^6.8.1",
+    "expose-loader": "^4.1.0",
+    "file-loader": "^6.2.0",
+    "rimraf": "^2.6.1",
+    "style-loader": "^1.1.2",
+    "url-loader": "^4.1.1",
+    "webpack": "^5"
+  },
+  "dependencies": {
+    "@jupyter-widgets/base": "^2 || ^3 || ^4 || ^5 || ^6",
+    "flot": "^4.2.6",
+    "handsontable": "^6.2.2",
+    "jquery": "^3.6.0",
+    "jstree": "^3.3.9",
+    "lodash": "^4.17.4"
+  },
+  "jupyterlab": {
+    "extension": "lib/labplugin",
+    "outputDir": "../riskflow_widgets/labextension",
+    "sharedPackages": {
+      "@jupyter-widgets/base": {
+        "bundled": false,
+        "singleton": true
+      }
+    },
+    "_build": {
+      "load": "static/remoteEntry.556c8dd2b76c18ffbec8.js",
+      "extension": "./extension"
+    }
+  }
+}

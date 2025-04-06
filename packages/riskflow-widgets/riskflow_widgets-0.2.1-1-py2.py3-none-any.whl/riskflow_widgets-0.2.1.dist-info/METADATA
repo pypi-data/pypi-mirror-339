@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: riskflow_widgets
+Version: 0.2.1
+Summary: Jupyter widget library for riskflow
+Home-page: https://github.com/sylam/riskflow_widgets
+Author: Shuaib Osman
+Author-email: sosman@investec.co.za
+Keywords: ipython,jupyter,widgets
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: IPython
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: ipywidgets <9,>=7
+Requires-Dist: k3d >=2.14.5
+
+Jupyter widget library for riskflow
