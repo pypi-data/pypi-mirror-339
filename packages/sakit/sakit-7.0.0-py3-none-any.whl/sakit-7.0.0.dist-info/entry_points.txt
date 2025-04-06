@@ -1,0 +1,4 @@
+[solana_agent.plugins]
+mcp=sakit.mcp:get_plugin
+search_internet=sakit.search_internet:get_plugin
+
