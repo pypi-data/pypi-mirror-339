@@ -1,0 +1,39 @@
+[project]
+name = "dotenv-schema"
+version = "0.1.0"
+description = "A simple Python package to load, validate, and type-cast environment variables from .env files using a schema."
+authors = [
+  { name="Athingban Pelumi", email="maulomepelumi@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/skyspec28/dotenv-schema"
+"Documentation" = "https://github.com/skyspec28/dotenv-schema#readme"
+"Bug Tracker" = "https://github.com/skyspec28/dotenv-schema/issues"
+"Source Code" = "https://github.com/skyspec28/dotenv-schema"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
