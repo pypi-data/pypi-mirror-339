@@ -1,0 +1,11 @@
+insightlog/__init__.py,sha256=0d9v8_qSjxcpRG9mxD3kRUJfXcaHWQ2_SUhHuzewAaU,715
+insightlog/config.py,sha256=ZsNgi1aPTF3U8En4KEtmHmnjHuu2MFGfBsOlxUuxoeE,2025
+insightlog/filters.py,sha256=uB1trBcQy03K7JfnoyhMJCPDpfASKwkfcIPhDxiQe8I,2240
+insightlog/formatter.py,sha256=IeGG6iLiD_wtsYaweghLFURVg1_pOCfbi1YzMrp3xNE,2031
+insightlog/logger.py,sha256=2vhHsh5DfgrPUPBnX2wWjBAnzl8qpXgVSSZEmVv0LlI,3032
+insightlog/sinks.py,sha256=TYsmNwoU8M0pX1z753b6QOHJo6fagypUBWbCAKepPRM,2474
+insightlog/utils.py,sha256=KUXyl-2sll9t79oxc1Q54E2p3QHIpWBeYIzvEncama4,1848
+insightlog101-0.1.10.dist-info/METADATA,sha256=JjXXzfNLbjexDJDbc8gsYiO_PCfdrE14PlpQSUriRp4,2698
+insightlog101-0.1.10.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+insightlog101-0.1.10.dist-info/top_level.txt,sha256=a1AYmcW_I2NzM_OVsphA1FRbTXQ-ZmmuQKAZJhTF6nc,11
+insightlog101-0.1.10.dist-info/RECORD,,
