@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+test/test_mat_mul.py
+test/test_matmul_kernel.py
+tlama_core.egg-info/PKG-INFO
+tlama_core.egg-info/SOURCES.txt
+tlama_core.egg-info/dependency_links.txt
+tlama_core.egg-info/not-zip-safe
+tlama_core.egg-info/requires.txt
+tlama_core.egg-info/top_level.txt
