@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: user-local
+Version: 0.0.22
+Summary: PyPI Package for Circles Python user Local Python
+Home-page: https://github.com/circles-zone/user-local-python-package
+Author: Circles
+Author-email: info@circlez.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: database-mysql-local>=0.0.451
+Requires-Dist: logger-local>=0.0.46
+Requires-Dist: database-infrastructure-local>=0.0.9
+Requires-Dist: email-address-local
+Requires-Dist: location-local
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+This is a package for user local python
