@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+CSVAlchemy/__init__.py
+CSVAlchemy/main.py
+CSVAlchemy/config/__init__.py
+CSVAlchemy/config/default_config.py
+CSVAlchemy/core/__init__.py
+CSVAlchemy/core/spreadsheet_parser.py
+CSVAlchemy/utils/__init__.py
+CSVAlchemy/utils/excel.py
+CSVAlchemy_sdk.egg-info/PKG-INFO
+CSVAlchemy_sdk.egg-info/SOURCES.txt
+CSVAlchemy_sdk.egg-info/dependency_links.txt
+CSVAlchemy_sdk.egg-info/requires.txt
+CSVAlchemy_sdk.egg-info/top_level.txt
