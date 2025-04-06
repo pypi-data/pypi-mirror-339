@@ -1,0 +1,82 @@
+# pypi-mcp-test
+
+A simple MCP (Model Context Protocol) server demonstration package.
+
+## Installation
+
+```bash
+uv add pypi-mcp-test
+```
+
+Or install directly from the source:
+
+```bash
+uv add git+https://github.com/username/pypi-mcp-test.git
+```
+
+## Usage
+
+### Run as a standalone server
+
+```bash
+uv run mcp install -m pypi_mcp_test
+```
+
+Or run directly:
+
+```bash
+uv run -m pypi_mcp_test
+```
+
+### Use with MCP Inspector
+
+```bash
+npx @modelcontextprotocol/inspector uvx pypi-mcp-test
+```
+
+### Configure in Claude Desktop, Cursor or Windsurf
+
+Add this to your MCP configuration:
+
+```json
+{
+  "mcpServers": {
+    "Demo": {
+      "command": "uvx",
+      "args": [
+        "pypi-mcp-test"
+      ]
+    }
+  }
+}
+```
+The nice thing about this approach is that `uvx` will install dependencies into a temporary directory, so you don't need to first install and then figure out the path of that environment.
+
+## Features
+
+This simple MCP server provides:
+
+1. An `add` tool that adds two numbers
+2. A greeting resource that returns a personalized greeting
+
+### Example Tool Usage
+
+- Adding numbers: Call the `add` tool with parameters `a` and `b`
+- Getting a greeting: Access the resource at `greeting://{name}`
+
+## Development
+
+To set up the development environment:
+
+```bash
+# Clone the repository
+git clone https://github.com/username/pypi-mcp-test.git
+cd pypi-mcp-test
+
+# Set up a virtual environment
+uv init
+uv add mcp[cli]
+
+# Run the server locally
+uv run -m pypi_mcp_test
+```
