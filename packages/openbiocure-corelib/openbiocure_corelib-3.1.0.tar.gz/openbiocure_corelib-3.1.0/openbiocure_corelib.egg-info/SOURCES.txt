@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+./openbiocure_corelib/__init__.py
+./openbiocure_corelib/__version__.py
+./openbiocure_corelib/cli.py
+openbiocure_corelib/__init__.py
+openbiocure_corelib/__version__.py
+openbiocure_corelib/cli.py
+openbiocure_corelib.egg-info/PKG-INFO
+openbiocure_corelib.egg-info/SOURCES.txt
+openbiocure_corelib.egg-info/dependency_links.txt
+openbiocure_corelib.egg-info/requires.txt
+openbiocure_corelib.egg-info/top_level.txt
+tests/test_smoke.py
