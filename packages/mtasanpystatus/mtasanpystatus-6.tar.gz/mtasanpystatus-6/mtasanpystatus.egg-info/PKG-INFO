@@ -1,0 +1,58 @@
+Metadata-Version: 2.4
+Name: mtasanpystatus
+Version: 6
+Summary: Multi Theft Auto San Andreas Server Monitoring Library Using Python
+Home-page: https://github.com/ieoub/mtasanpystatus
+Author: ieoub
+Author-email: rib7daily@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: twine>=3.0; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-python
+Dynamic: summary
+
+# MTASANPyStatus
+
+Multi Theft Auto San Andreas Server Monitoring Library
+
+## Usage
+Here are some key attributes you can access using mtasanpystatus:
+
+| Attribute                     | Description                     | Example Value                     |
+|-------------------------------|---------------------------------|-----------------------------------|
+| `mtasanpystatus.address`      | Server IP address               | `'01.23.456.789'`                 |
+| `mtasanpystatus.name`         | Server name                     | `'Ieoub MTA SERVER'`              |
+| `mtasanpystatus.port`         | Server port                     | `22003`                           |
+| `mtasanpystatus.game`         | Always "MTA:SA"                 | `'MTA:SA'`                        |
+| `mtasanpystatus.gamemode`     | Current gamemode                | `'Freeroam'`                      |
+| `mtasanpystatus.map`          | Current map                     | `'Los Santos'`                    |
+| `mtasanpystatus.version`      | Server version                  | `'1.6'`                           |
+| `mtasanpystatus.players`      | Online players count            | `5`                              |
+| `mtasanpystatus.maxplayers`   | Max player slots                | `32`                             |
+| `mtasanpystatus.join_link`    | Direct join link                | `'mtasa://01.23.456.789:22003'`   |
+| `mtasanpystatus.playing_now_names` | List of player names [removed]       | `['Player1', 'Player2']`        |
+
+Online Players names has been removed (version 4)
+
+
+
+## Installation
+
+Install the library [using pip](https://pypi.org/project/mtasanpystatus/):
+
+```bash
+pip install mtasanpystatus
