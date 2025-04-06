@@ -1,0 +1,16 @@
+arc-agi-core/README.md,sha256=uMIyLJ-2I0HuMGl2nx5DwycuwQyD2JpEUptRm5fJyuQ,7
+arc-agi-core/pyproject.toml,sha256=IU5f82r98sq32PVi6dRol5xcXsl_RNuBc0-VjRMqO9g,498
+arc-agi-core/src/arc-agi/core/__init__.py,sha256=_yi3Xs5EbCiLIGv7aQbdhtu2rPeVq_KhwYsaX-2Xurk,211
+arc-agi-core/src/arc-agi/core/contants.py,sha256=zjm9z6OQJSDhrNzhHrifi_cI1uLbWM-v1KTc6F0ksP0,663
+arc-agi-core/src/arc-agi/core/datasets.py,sha256=N0tsW0_WVApFB16Nafs9teH7rfKIZIdqX8GXDmLYwvk,2053
+arc-agi-core/src/arc-agi/core/grid.py,sha256=q2VMUwKB_0ZQBSpgGWJ3GOIgOHaSN5N9J_j1Md717rI,3908
+arc-agi-core/src/arc-agi/core/pair.py,sha256=SAeM7cjYaxbuTZlVQ_UbDgUpYebaDC5hCtGeJ0tka4Y,2121
+arc-agi-core/src/arc-agi/core/task.py,sha256=xGv5hwd_WWb8FTo4rkHbY2EB7FYAD0s5YWHgw35zaco,4383
+arc-agi-core/src/arc-agi/core/utils.py,sha256=g-x51fPI5uCTQaG1UiHkYEXFOZ8uqC8QCVfztIKT8JE,6683
+arc-agi-llm/README.md,sha256=uMIyLJ-2I0HuMGl2nx5DwycuwQyD2JpEUptRm5fJyuQ,7
+arc-agi-llm/pyproject.toml,sha256=v08HTfeojWm9MLphMn2aoD5zxw_v3gMHYC3SZwpnU0k,452
+arc-agi-llm/src/arc-agi/llm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arc-agi-llm/src/arc-agi/llm/something.py,sha256=VcLkaxbL3kxBtBzG9Tv9QoiGHKLEzpECvmuUTrw1qOs,22
+arc_agi-0.0.5.dist-info/METADATA,sha256=nj6QxBDjw9hZRUFHosM5_GLE4AnvQR0V99fhTpEfpEs,193
+arc_agi-0.0.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+arc_agi-0.0.5.dist-info/RECORD,,

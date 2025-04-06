@@ -1,0 +1,24 @@
+[project]
+name = "arc-agi-llm"
+version = "0.0.3"
+description = "..."
+readme = "README.md"
+authors = [
+    { name = "Jumyung Park", email = "parkjumyungpublic@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+lint = ["ruff>=0.11.2"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+extend-include = ["*.ipynb"]
+
+[tool.ruff.lint]
+select = ["D"]
+pydocstyle = { convention = "google" }
