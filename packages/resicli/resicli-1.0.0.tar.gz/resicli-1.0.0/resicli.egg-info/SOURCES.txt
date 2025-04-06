@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+resicli/__init__.py
+resicli/cli.py
+resicli/config.py
+resicli/image_resizer.py
+resicli/utils.py
+resicli.egg-info/PKG-INFO
+resicli.egg-info/SOURCES.txt
+resicli.egg-info/dependency_links.txt
+resicli.egg-info/entry_points.txt
+resicli.egg-info/requires.txt
+resicli.egg-info/top_level.txt
