@@ -1,0 +1,14 @@
+binaryninja_mcp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+binaryninja_mcp/cli.py,sha256=LXx85ssLpRV-tMXEm7FZSu1En5lXefAkcQN0aoZ048g,5964
+binaryninja_mcp/consts.py,sha256=w6rs0xIPJ0tMEkiyT-dtoz011CnLftvTsoi24r2p6-M,74
+binaryninja_mcp/log.py,sha256=IdJ5BxoB6J3V-6H9NEPktxMvmmkyYf-n6MvhsgpKZLY,1637
+binaryninja_mcp/plugin.py,sha256=EP9iaABN3NHimXronho7EVlxUa3gcS0SRyXoS7tSfEs,4561
+binaryninja_mcp/resources.py,sha256=14McxZE6vpYorK_sngncQ1GKIuV-HNozNHiyTycl2E4,5469
+binaryninja_mcp/server.py,sha256=fdG8vplCTews6Np8kB7LQYNxy2i6mZlPpVz_Msnaa1U,19017
+binaryninja_mcp/tools.py,sha256=oRxBAZhqYO0w8omRB4HePQK9cGMld9S8lOvbu4ThcB8,14779
+binaryninja_mcp/utils.py,sha256=s8OVaEm8DTwmwz-Dz4K8ixZGPwVwj3NZ1Nw4wVQ-F-E,1433
+binaryninja_mcp-0.2.1.dist-info/METADATA,sha256=9bAPFHRjFgdtrITcqkQ3xMz56q4O5Im2itzImTd50RE,4946
+binaryninja_mcp-0.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+binaryninja_mcp-0.2.1.dist-info/entry_points.txt,sha256=_scur0gnQu9Oya69C-pmLV90cz_if_SC0cNK25KxjPA,60
+binaryninja_mcp-0.2.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+binaryninja_mcp-0.2.1.dist-info/RECORD,,
