@@ -1,0 +1,55 @@
+Metadata-Version: 2.3
+Name: mhcflow
+Version: 0.2.1
+Summary: MHC Class I and II workflow with fisher, realigner and typer.
+Project-URL: Source, https://github.com/svm-zhang/mhcflow
+Project-URL: Documentation, https://svm-zhang.github.io/mhcflow/
+Project-URL: Issues, https://github.com/svm-zhang/mhcflow/issues
+Author-email: simo <svm.zhang@gmail.com>
+Maintainer-email: Simo Zhang <svm.zhang@gmail.com>
+License: MIT
+Keywords: bioinformatics, genomics, sequencing, HLA typing
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.10
+Requires-Dist: mhctyper>=0.1.7
+Requires-Dist: pyahocorasick>=2.1.0
+Requires-Dist: pyfaidx>=0.8.1.3
+Requires-Dist: tinyscibio>=0.4.3
+Description-Content-Type: text/markdown
+
+# mhcflow
+
+[![PyPI version](https://img.shields.io/pypi/v/mhcflow)](https://pypi.org/project/mhcflow/)
+![Python versions](https://img.shields.io/pypi/pyversions/mhcflow)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/mhcflow)](https://pypistats.org/packages/mhcflow)
+![License](https://img.shields.io/pypi/l/mhcflow)
+
+MHC class I and II typing workflow including fishing, realigning, and typing that
+generates results ready for detection of HLA loss of heterozygosity (LOH) and
+peptide binding prediction.
+
+## Installation
+
+Starting from `v0.2.0`, `mhcflow` can be installed from PyPI:
+
+```bash
+pip install mhcflow
+```
+
+If you prefer to use the shell script implementation, please check out the
+`v0.1.0` branch of this repo. For details on how to use the `v0.1.0` version,
+please refer to the [documentation](https://svm-zhang.github.io/mhcflow).
+
+## Quick start
+
+Please refer to [documentation](https://svm-zhang.github.io/mhcflow) for more details.
