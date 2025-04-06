@@ -1,0 +1,6 @@
+flask
+Flask-IAM
+
+[dev]
+pytest
+flake8

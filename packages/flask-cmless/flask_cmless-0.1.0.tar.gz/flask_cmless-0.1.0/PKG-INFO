@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: flask_cmless
+Version: 0.1.0
+Summary: Headless CMS in Flask
+License: MIT
+Project-URL: repository, https://github.com/frncspeck/Flask-CMLess
+Project-URL: documentation, https://github.com/frncspeck/Flask-CMLess/docs
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: flask
+Requires-Dist: Flask-IAM
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Dynamic: license-file
+
+# Flask-CMLess
+Flask headless CMS solution
