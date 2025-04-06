@@ -1,0 +1,63 @@
+[project]
+name = "better-px" # py-extension # py-ext
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [{ name = "hhglory", email = "hhglory@outlook.com" }]
+keywords = [
+    "python extension",
+    "px",
+    "pyext",
+    "py-ext",
+    "python",
+    "extension",
+    "extension module",
+    "python extension module",
+]
+
+
+requires-python = ">=3.12"
+dependencies = []
+
+
+[project.urls]
+Documentation = "https://github.com/better-py/py-pkg"
+Repository = "https://github.com/better-py/py-pkg/"
+Tracker = "https://github.com/better-py/py-pkg/issues"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# requires = ["pdm-backend"]
+# build-backend = "pdm.backend"
+
+
+[tool.hatch.build]
+sources = ["src"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/px"] # 将模块 a 映射为包 b
+name = "pyext"        # 自定义编译结果的包名
+
+[tool.hatch.build.targets.wheel.sources]
+"src/py_ext" = "pyext" # 将模块 a 映射为包 b
+
+# pdm 自定义包路径
+[tool.pdm.build]
+
+
+# 自定义编译结果的包名
+# [tool.uv.build]
+# name = "py-ext"
+# package-dir = { "py-ext" = "src/py_ext" } # 将模块 a 映射为包 b
+
+# [tool.hatch.metadata]
+# name = "py-ext"
+# package-dir = { "py-ext" = "src/py_ext" } # 将模块 a 映射为包 b
+
+# [tool.setuptools]
+# package-dir = { "py-ext" = "src/py_ext" } # 将模块 a 映射为包 b
+# [tool.hatch.build.targets.wheel.sources]
+# "src/py_ext" = "pyext"

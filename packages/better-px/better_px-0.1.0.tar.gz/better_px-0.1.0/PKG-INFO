@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: better-px
+Version: 0.1.0
+Summary: Add your description here
+Project-URL: Documentation, https://github.com/better-py/py-pkg
+Project-URL: Repository, https://github.com/better-py/py-pkg/
+Project-URL: Tracker, https://github.com/better-py/py-pkg/issues
+Author-email: hhglory <hhglory@outlook.com>
+Keywords: extension,extension module,px,py-ext,pyext,python,python extension,python extension module
+Requires-Python: >=3.12
