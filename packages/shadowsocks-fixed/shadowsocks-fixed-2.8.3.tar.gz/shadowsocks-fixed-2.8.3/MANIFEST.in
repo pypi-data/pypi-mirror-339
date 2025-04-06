@@ -1,0 +1,4 @@
+include *.py
+recursive-include shadowsocks *.py
+include README.md
+include LICENSE
