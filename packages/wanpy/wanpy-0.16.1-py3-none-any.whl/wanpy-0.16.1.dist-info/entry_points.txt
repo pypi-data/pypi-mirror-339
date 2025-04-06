@@ -1,0 +1,6 @@
+[console_scripts]
+findmsg = wanpy.scripts.findmsg:main
+statistic-cores = wanpy.scripts.statistic_cores:main
+wanpy = wanpy.scripts.wanpy:main
+wanpy-postinstall = wanpy.scripts.postinstall:main
+wpyplotband = wanpy.scripts.wpyplotband:main
