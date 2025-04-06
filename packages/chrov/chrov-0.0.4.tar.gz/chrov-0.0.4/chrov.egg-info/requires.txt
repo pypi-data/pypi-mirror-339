@@ -1,0 +1,13 @@
+argh>=0.31.3
+fastcore==1.7.10
+matplotlib>=3.10.1
+nbdev==2.3.31
+numpy<2
+pandas>=2
+pybiomart==0.2.0
+pyensembl
+pyranges>=0.1.4
+roux
+scipy>=1.15.2
+seaborn>=0.13.2
+setuptools>=77.0.3
