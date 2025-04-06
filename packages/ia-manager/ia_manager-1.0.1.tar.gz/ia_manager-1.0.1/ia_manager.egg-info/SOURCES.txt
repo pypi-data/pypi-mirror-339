@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+ia_manager.egg-info/PKG-INFO
+ia_manager.egg-info/SOURCES.txt
+ia_manager.egg-info/dependency_links.txt
+ia_manager.egg-info/entry_points.txt
+ia_manager.egg-info/requires.txt
+ia_manager.egg-info/top_level.txt
+iadl/__init__.py
+iadl/__main__.py
+iadl/cli.py
+iadl/downloader.py
+iadl/extensions.py
+iadl/scraper.py
+iadl/scripts/__init__.py
+iadl/scripts/uninstall.py
