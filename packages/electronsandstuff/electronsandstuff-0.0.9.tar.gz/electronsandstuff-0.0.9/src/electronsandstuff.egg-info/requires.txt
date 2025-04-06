@@ -1,0 +1,12 @@
+KDEpy
+matplotlib
+numpy
+openpmd-beamphysics
+pandas
+paretobench
+pillow
+scipy
+
+[tests]
+pytest
+xopt

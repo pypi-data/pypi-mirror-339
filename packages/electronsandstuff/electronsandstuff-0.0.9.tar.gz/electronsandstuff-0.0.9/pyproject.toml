@@ -1,0 +1,30 @@
+[project]
+name = "electronsandstuff"
+version = "0.0.9"
+authors = [
+  { name="Christopher M. Pierce", email="contact@chris-pierce.com" },
+]
+description = "A mono-repo for miscellaneous publicly released code"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE.txt"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "KDEpy",
+  "matplotlib",
+  "numpy",
+  "openpmd-beamphysics",
+  "pandas",
+  "paretobench",
+  "pillow",
+  "scipy",
+]
+
+[project.optional-dependencies]
+tests = [
+  "pytest",
+  "xopt",
+]
