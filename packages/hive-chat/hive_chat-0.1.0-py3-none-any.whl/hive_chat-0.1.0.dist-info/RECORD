@@ -1,0 +1,11 @@
+hive/chat/__init__.py,sha256=ecY864LSPPlbalaiJNL26ux1NCD0V366mjrgz99K1-U,131
+hive/chat/__version__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+hive/chat/matrix.py,sha256=FWG7JEt0Mlt50r74_wgH4wqUPfO9tCMRtgVwd0aA9Jw,2823
+hive/chat/message.py,sha256=d7eO4mGmsXR8gejh6YxD-BfWFRanT3-8C8_frqtHjt8,4303
+hive/chat/util.py,sha256=JjABD9yISUmdMQ85XMvdadYsYogd273QORMJHf1TZpk,757
+hive/chat/v1.py,sha256=iRtz1QBkFI_ZC3BiOWcdpmWaONtmLm6niobO49Oj3B4,2454
+hive/chat/v2.py,sha256=yVuQSbKc9IuwDNF9wiA5FhpPi0uoeekAZBItK4VeNA8,1868
+hive_chat-0.1.0.dist-info/METADATA,sha256=D_6AI7UsFKa-r2qUhv_Sa4jUjfHOs5TvQHUGJz2F2no,925
+hive_chat-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+hive_chat-0.1.0.dist-info/top_level.txt,sha256=pLpVAuviHGk3pzaFXU-4GKttxGTGAbFoWK8JvUl1jHQ,5
+hive_chat-0.1.0.dist-info/RECORD,,
