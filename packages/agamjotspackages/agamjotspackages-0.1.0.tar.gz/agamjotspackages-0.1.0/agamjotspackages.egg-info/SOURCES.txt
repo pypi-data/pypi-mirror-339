@@ -1,0 +1,10 @@
+LICENCE
+MANIFEST.in
+README.md
+setup.py
+Library/__init__.py
+agamjotspackages.egg-info/PKG-INFO
+agamjotspackages.egg-info/SOURCES.txt
+agamjotspackages.egg-info/dependency_links.txt
+agamjotspackages.egg-info/requires.txt
+agamjotspackages.egg-info/top_level.txt
