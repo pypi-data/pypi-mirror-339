@@ -1,0 +1,11 @@
+temporis-1.0.5.dist-info/METADATA,sha256=u3KHlvMQTUujR0OM_qt58k0TS2_oFkvFQRKgSGpN6mE,4784
+temporis-1.0.5.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+temporis-1.0.5.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+temporis-1.0.5.dist-info/licenses/LICENSE,sha256=i7EhciVlOPmzxnWSIuZdPKrK4ijICQKM5OjOHSFUx3c,1068
+temporis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+temporis/format.py,sha256=QYyo33qpWTv0n2A78nng30sFh58t3tlYvPpjNZ2YpMo,1385
+temporis/references.py,sha256=DN3beWE9wMWzFFZZR9RbI0HlUAo516hZm4QRMd2AGKg,2176
+temporis/temporis.py,sha256=HQqi0031WOXUEY3Ijmz7NFR44EJTfb_7BqDveVOlRH0,3581
+temporis/timezone.py,sha256=pybQC9G63h-m7EHN3qNMpH8iIzMU3tj1_66n_6OFhbA,745
+temporis/zones.py,sha256=YG0eXDnayMM2SSSkW6I5hNI1lxysQjAJwDyU6JpH0ic,23184
+temporis-1.0.5.dist-info/RECORD,,
