@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+awholenewworld.egg-info/PKG-INFO
+awholenewworld.egg-info/SOURCES.txt
+awholenewworld.egg-info/dependency_links.txt
+awholenewworld.egg-info/requires.txt
+awholenewworld.egg-info/top_level.txt
+library/__init__.py
+tests/test.py
