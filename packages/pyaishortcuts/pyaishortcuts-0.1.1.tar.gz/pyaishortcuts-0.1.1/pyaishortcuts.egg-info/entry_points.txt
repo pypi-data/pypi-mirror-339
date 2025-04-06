@@ -1,0 +1,2 @@
+[console_scripts]
+pyextractme = pyaishortcuts.main:main
