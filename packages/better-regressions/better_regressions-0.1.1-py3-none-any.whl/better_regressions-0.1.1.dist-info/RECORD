@@ -1,0 +1,10 @@
+better_regressions/__init__.py,sha256=wV-ubCPmL2ohecOjpf9TMzoeo0DR7xwZY6Jr_m3f6xA,768
+better_regressions/linear.py,sha256=ACBMOz4oegtAZqsEGlXPATQKYBy23GBx-awHevk7aZM,2798
+better_regressions/piecewise.py,sha256=OhzjwQaDoCQhDUt2dswUGQMT2l2mcs9PxAOj31_jlBM,3679
+better_regressions/scaling.py,sha256=eIRqi6IV2LqsqU88gU3kU5Q8BKGbRgzAvJklPn0KKpo,14721
+better_regressions/smoothing.py,sha256=agWsUnLkQguwBv-X_7UdzL0FH5wJZnT430Sh7MdtIvc,5973
+better_regressions/utils.py,sha256=k7IGePJHrymXKIRclTXM-vRcHUm6LTtzxBE4FyBOUvs,1655
+better_regressions-0.1.1.dist-info/METADATA,sha256=PsfVZ5nx8qk62p39Yusc5g5AtVWNGkWA6JgcdrmDRC8,1981
+better_regressions-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+better_regressions-0.1.1.dist-info/licenses/LICENSE,sha256=Dmsy1rh4nSQQ0Oxyt6DkJkUy5pB6hZq5pPWT1U3_aOs,1073
+better_regressions-0.1.1.dist-info/RECORD,,
