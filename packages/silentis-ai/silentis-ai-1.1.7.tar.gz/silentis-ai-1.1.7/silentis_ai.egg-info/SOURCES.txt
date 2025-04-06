@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+silentis.html
+Silentisai/silentis.html
+silentis_ai.egg-info/PKG-INFO
+silentis_ai.egg-info/SOURCES.txt
+silentis_ai.egg-info/dependency_links.txt
+silentis_ai.egg-info/entry_points.txt
+silentis_ai.egg-info/requires.txt
+silentis_ai.egg-info/top_level.txt
+silentisai/__init__.py
+silentisai/run.py
+silentisai/silentis.py
