@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: exppandas
+Version: 0.1.1
+Summary: Enhanced version of Pandas with improved data manipulation capabilities
+Home-page: https://github.com/Sumedh1599/exppandas
+Author: Sumedh Patil
+Author-email: sumedh@aipresso.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/Sumedh1599/exppandas/issues
+Project-URL: Source, https://github.com/Sumedh1599/exppandas
+Project-URL: Documentation, https://exppandas.readthedocs.io/
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas (>=1.0.0)
+Requires-Dist: numpy (>=1.20.0)
+Requires-Dist: scipy (>=1.7.0)
+Provides-Extra: dev
+Requires-Dist: pytest (>=7.0.0) ; extra == 'dev'
+Requires-Dist: pytest-cov (>=4.0.0) ; extra == 'dev'
+Requires-Dist: black (>=23.0.0) ; extra == 'dev'
+Requires-Dist: isort (>=5.0.0) ; extra == 'dev'
+Requires-Dist: sphinx (>=5.0.0) ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme (>=1.0.0) ; extra == 'dev'
+
+# exppandas
+
+[![PyPI version](https://img.shields.io/pypi/v/exppandas.svg)](https://pypi.org/project/exppandas/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/exppandas.svg)](https://pypi.org/project/exppandas/)
+[![License](https://img.shields.io/github/license/Sumedh1599/exppandas.svg)](https://github.com/Sumedh1599/exppandas/blob/main/LICENSE)
+[![GitHub Issues](https://img.shields.io/github/issues/Sumedh1599/exppandas.svg)](https://github.com/Sumedh1599/exppandas/issues)
+[![Tests](https://github.com/Sumedh1599/exppandas/workflows/Tests/badge.svg)](https://github.com/Sumedh1599/exppandas/actions)
+[![Documentation Status](https://readthedocs.org/projects/exppandas/badge/?version=latest)](https://exppandas.readthedocs.io/en/latest/?badge=latest)
+
+## Overview
+
+Enhanced version of Pandas with improved data manipulation capabilities
+
+This library is an enhanced version of pandas with additional features and improvements.
+
+## Features
+
+- All features from the original pandas
+- Faster data processing
+- Advanced data cleaning
+- Better visualization
+- Seamless integration with other exp libraries
+
+## Installation
+
+```bash
+pip install exppandas
+```
+
+## Quick Start
+
+```python
+import exppandas as exp
+
+# Example code
+# Example code for exppandas
+result = exp.function()
+```
+
+## Documentation
+
+For full documentation, visit [exppandas.readthedocs.io](https://exppandas.readthedocs.io/).
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+Copyright (c) 2025 Sumedh Patil, Aipresso Limited, UK
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
