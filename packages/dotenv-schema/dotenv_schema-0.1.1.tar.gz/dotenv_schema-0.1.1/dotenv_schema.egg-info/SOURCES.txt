@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+dotenv_schema/__init__.py
+dotenv_schema/loader.py
+dotenv_schema.egg-info/PKG-INFO
+dotenv_schema.egg-info/SOURCES.txt
+dotenv_schema.egg-info/dependency_links.txt
+dotenv_schema.egg-info/requires.txt
+dotenv_schema.egg-info/top_level.txt
+tests/test_loader.py
