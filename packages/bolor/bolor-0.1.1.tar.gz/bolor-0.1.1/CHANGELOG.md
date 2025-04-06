@@ -1,0 +1,26 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [0.1.1] - 2025-04-05
+
+### Fixed
+- CLI script installation issue: Fixed issue where the `bolor` command wasn't in PATH
+- Added helper scripts for CLI installation troubleshooting
+- Included CLI wrapper script as an alternative method to run Bolor
+
+### Added
+- Added CHANGELOG.md file to track changes
+- Added more detailed CLI installation instructions in documentation
+
+## [0.1.0] - 2025-04-05
+
+### Added
+- Initial release of Bolor
+- Scan functionality for detecting code issues
+- Fix functionality for automatically repairing detected issues
+- Plan functionality for suggesting code improvements without modifying code
+- deploy-check functionality for analyzing CI/CD configurations
+- Support for Python, JavaScript/TypeScript, Java and C/C++ code analysis
+- Local LLM integration with Phi-2
+- Dataset integration with CodeXGLUE, MBPP, and QuixBugs

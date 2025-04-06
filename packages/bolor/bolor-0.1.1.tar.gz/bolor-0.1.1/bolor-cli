@@ -1,0 +1,6 @@
+#!/bin/bash
+# Simple wrapper script for Bolor CLI
+# Usage: ./bolor-cli [command] [arguments]
+
+# Pass all arguments to the Python module
+python3 -m bolor "$@"
