@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: slim-common-robot
+Version: 2025.4.5.82.195322
+Summary: Important keywords configured with robotframework to use Snaplogic Apis
+Author-email: Your Name <your.email@snaplogic.com>
+License: fill in
+Project-URL: homepage, https://github.com/SnapLogic/slim-common-robot#readme
+Project-URL: repository, https://github.com/SnapLogic/slim-common-robot
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: robotframework
+Requires-Dist: robotframework-requests
+Requires-Dist: robotframework-docker
+Requires-Dist: robotframework-databaselibrary
+Requires-Dist: robotframework-jsonlibrary
+Requires-Dist: robotframework-robocop
+Requires-Dist: robotframework-tidy[generate_config]
+Requires-Dist: robotframework-dependencylibrary
+Requires-Dist: envyaml
+Requires-Dist: deepdiff
+Requires-Dist: pyyaml
+Requires-Dist: jinja2
+Requires-Dist: tabulate
+Requires-Dist: pymongo
+Requires-Dist: robotframework-pabot==2.18.0
+Requires-Dist: awscli
+Requires-Dist: build
+Requires-Dist: python-dotenv
+Requires-Dist: oracledb
+Requires-Dist: twine
