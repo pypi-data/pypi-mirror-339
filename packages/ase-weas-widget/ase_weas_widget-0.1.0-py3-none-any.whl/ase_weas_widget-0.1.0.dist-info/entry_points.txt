@@ -1,0 +1,2 @@
+[ase.visualize]
+weas = ase_weas_widget.registry:VIEWER_ENTRYPOINT
