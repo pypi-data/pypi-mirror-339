@@ -1,0 +1,2 @@
+[console_scripts]
+kybra-simple-shell = kybra_simple_shell.cli:main
