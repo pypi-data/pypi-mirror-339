@@ -1,0 +1,9 @@
+build
+dist
+docs
+docs_env
+examples
+model_cache
+rag_colls
+samples
+tests
