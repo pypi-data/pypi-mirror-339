@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+src/orshot/__init__.py
+src/orshot/constants.py
+src/orshot/exceptions.py
+src/orshot/orshot.py
+src/orshot/types.py
+src/orshot.egg-info/PKG-INFO
+src/orshot.egg-info/SOURCES.txt
+src/orshot.egg-info/dependency_links.txt
+src/orshot.egg-info/requires.txt
+src/orshot.egg-info/top_level.txt
