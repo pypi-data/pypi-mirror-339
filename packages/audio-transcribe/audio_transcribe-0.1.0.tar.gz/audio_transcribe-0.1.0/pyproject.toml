@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audio_transcribe"
+version = "0.1.0"
+description = "A command-line tool for transcribing audio files using OpenAI's Whisper model"
+authors = [{ name = "samurmaykrr", email = "towha@tutanota.com" }]
+requires-python = ">=3.7"
+keywords = ["audio", "transcription", "whisper", "openai", "speech-to-text"]
+readme = "README.md"
+license = { text = "MIT" }
+dependencies = ["openai-whisper", "typer", "rich"]
+
+[project.urls]
+"Bug Reports" = "https://github.com/samurmaykrr/audio_transcribe/issues"
+"Source" = "https://github.com/samurmaykrr/audio_transcribe"
+
+[project.scripts]
+audio-transcribe = "audio_transcribe.cli:app"
