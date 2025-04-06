@@ -1,0 +1,10 @@
+ashare_data/__init__.py,sha256=l-lEcRdlHQy8O2PaKFVHbsGx9EPWapJWXxk1CPfvdaY,57
+ashare_data/cli.py,sha256=n1qOyCSaMmHFAoe0gSzHjgeUQmXxRQiTlwl8iW3xADk,6720
+ashare_data/utils/DailyDataReader.py,sha256=60jYj4WIMPbwa3TMxPpCsldBgsKS10lbJ2C1s71yRu0,14843
+ashare_data/utils/KLineFetcher_EM.py,sha256=F1g8Vjl_wPRRV64RwdfRdL--w5MyGh354gCPPaGTCQM,7776
+ashare_data/utils/ParquetDailyStore.py,sha256=YPwWjoK69jp45q82gJ7X3nHuF_T3APPvd1WsnJO8y3A,17446
+ashare_data/utils/__init__.py,sha256=5kFuCi_QINEMoS38e25wcZB-i3ePIYgcHMQghpsIsRM,3345
+ashare_data-0.2.0.dist-info/METADATA,sha256=CKknly9VxsHMdIwoQwWomzrHnrxEB5ROInhNVKXDas4,297
+ashare_data-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ashare_data-0.2.0.dist-info/entry_points.txt,sha256=bwnCqUH7XFWzb6iGb1FO5VSOtmp4znixdZPRedsv_wQ,47
+ashare_data-0.2.0.dist-info/RECORD,,
