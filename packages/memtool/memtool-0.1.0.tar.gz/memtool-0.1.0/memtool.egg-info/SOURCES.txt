@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+memtool/__init__.py
+memtool/arrays.py
+memtool/base.py
+memtool/core.c
+memtool.egg-info/PKG-INFO
+memtool.egg-info/SOURCES.txt
+memtool.egg-info/dependency_links.txt
+memtool.egg-info/not-zip-safe
+memtool.egg-info/top_level.txt
