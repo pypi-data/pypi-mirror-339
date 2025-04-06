@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/djc_ext_pydantic.egg-info/PKG-INFO
+src/djc_ext_pydantic.egg-info/SOURCES.txt
+src/djc_ext_pydantic.egg-info/dependency_links.txt
+src/djc_ext_pydantic.egg-info/requires.txt
+src/djc_ext_pydantic.egg-info/top_level.txt
+src/djc_pydantic/__init__.py
+src/djc_pydantic/extension.py
+src/djc_pydantic/monkeypatch.py
+src/djc_pydantic/py.typed
+src/djc_pydantic/validation.py
+tests/test_validation.py
+tests/testutils.py
