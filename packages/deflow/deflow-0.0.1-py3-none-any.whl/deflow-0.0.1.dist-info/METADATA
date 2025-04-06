@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: deflow
+Version: 0.0.1
+Summary: Lightweight Declarative Data Workflow Framework
+Project-URL: Homepage, https://github.com/ddeutils/deflow/
+Project-URL: Source Code, https://github.com/ddeutils/deflow/
+Author-email: ddeutils <korawich.anu@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: declarative,framework,workflow
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9.13
+Requires-Dist: ddeutil-workflow==0.0.41
+Requires-Dist: python-dotenv==1.1.0
+Requires-Dist: typer==0.15.2
+Description-Content-Type: text/markdown
+
+# DeFlow
+
+A Lightweight Declarative Data Workflow Framework that build on the
+[🏃Workflow](https://github.com/ddeutils/ddeutil-workflow) package.
+
+## 📦 Installation
+
+```shell
+pip install -U deflow
+```
+
+## 💬 Contribute
+
+I do not think this project will go around the world because it has specific propose,
+and you can create by your coding without this project dependency for long term
+solution. So, on this time, you can open [the GitHub issue on this project 🙌](https://github.com/ddeutils/fastflow/issues)
+for fix bug or request new feature if you want it.

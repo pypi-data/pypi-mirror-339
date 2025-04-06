@@ -1,0 +1,36 @@
+stream-workflow:
+  type: Workflow
+  desc: |
+    Stream workflow that run all process groups.
+  params:
+    stream: str
+    run_mode: str
+  jobs:
+    start-steam:
+      stages:
+        - name: Get stream info
+          id: get-stream
+          echo: "Start getting stream of ${{ params.stream }}"
+
+        - name: Start stream
+          id: start-stream
+          echo: "Start stream with ${{ stages.get-stream.outputs.name }}"
+
+        - name: Get priority group
+          id: priority-group
+          echo: "Priority Group"
+
+        - name: For-each priority
+          foreach: ${{ stages.priority-group.outputs.items }}
+          stages:
+            - name: Run Group
+              trigger: group-workflow
+              params:
+                priority: ${{ item }}
+                stream-dates: ${{ stages.start-stream.outputs.stream-dates }}
+
+        - name: Clear log
+          echo: "Clear logging and close stream"
+
+        - name: Alert
+          echo: "Alert with mail or notify-services"

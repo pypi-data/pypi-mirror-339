@@ -1,0 +1,20 @@
+group-priority-workflow:
+  type: Workflow
+  params:
+    priority: int
+    audit-date: datetime
+  jobs:
+    start-priority:
+      stages:
+        - name: Get Groups
+          echo: "Get Groups from priority: ${{ params.priority }}"
+
+group-workflow:
+  type: Workflow
+  params:
+    name: str
+    audit-date: datetime
+  jobs:
+    start-job:
+      stages:
+        - name: "Start run Group"
