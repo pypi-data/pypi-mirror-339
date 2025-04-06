@@ -1,0 +1,9 @@
+README.md
+setup.py
+eziql/__init__.py
+eziql/core.py
+eziql.egg-info/PKG-INFO
+eziql.egg-info/SOURCES.txt
+eziql.egg-info/dependency_links.txt
+eziql.egg-info/requires.txt
+eziql.egg-info/top_level.txt
