@@ -1,0 +1,12 @@
+ddapi/__init__.py,sha256=ULzqm7iL-AhcLZYwLOayd_Z9-3nPBprAwaDQ_CDFl2g,212
+ddapi/api.py,sha256=0SdmcTPoVyxBz4LFNYdR6m_wcQ7EFcwiWu-5wFEApxo,2133
+ddapi/main.py,sha256=zPoyn8LIgtiN7xLbuR9jsYA2FCdtl4Y8G34j2ZQ3U4M,7949
+ddapi/scheme/__init__.py,sha256=a-ITcJrjOQhDFzJoa3mzNUSChR43vtAT4VfLCtbQJBk,75
+ddapi/scheme/ddnet.py,sha256=wZSDuzrkmAM_iFHQmKl34BL5Eb7WoDIbAtTXphORuEs,7523
+ddapi/scheme/ddstats_tw.py,sha256=on1-65BOHCqXoYwB1phGqiuYrcPYAZR4sECzdSWMx9g,6187
+ddapi/scheme/status_tw.py,sha256=ljqLjQ6LUo2tXmeaaMxlmML45262gpnYTidWPNkfZA4,2282
+ddapi-0.10.0.dist-info/licenses/LICENSE,sha256=W4kN1MW8f-TkMq53LaWHCju0aOi5mWgMvp_kjrYGwOY,1083
+ddapi-0.10.0.dist-info/METADATA,sha256=y7zdL1a9dtR9JDk45ILQunkIiXkJxpZu8Xdo2surUh4,1471
+ddapi-0.10.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+ddapi-0.10.0.dist-info/top_level.txt,sha256=BgV_9Wja4JjgIvlSd9BEcP-g0JN-oTqFqxwd2vo1uY8,6
+ddapi-0.10.0.dist-info/RECORD,,
