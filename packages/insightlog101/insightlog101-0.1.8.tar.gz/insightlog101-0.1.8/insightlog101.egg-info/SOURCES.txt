@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+insightlog/__init__.py
+insightlog/config.py
+insightlog/filters.py
+insightlog/formatter.py
+insightlog/logger.py
+insightlog/sinks.py
+insightlog/utils.py
+insightlog101.egg-info/PKG-INFO
+insightlog101.egg-info/SOURCES.txt
+insightlog101.egg-info/dependency_links.txt
+insightlog101.egg-info/not-zip-safe
+insightlog101.egg-info/requires.txt
+insightlog101.egg-info/top_level.txt
