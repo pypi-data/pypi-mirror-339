@@ -1,0 +1,23 @@
+[project]
+name = "brseclabcripto"
+version = "2.0.0"
+description = ""
+authors = [
+    {name = "Rafael Perazzo",email = "rafaelperazzo@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "cryptography (>=44.0.2,<45.0.0)",
+    "argon2-cffi (>=23.1.0,<24.0.0)",
+    "python-gnupg (>=0.5.4,<0.6.0)",
+    "pytest (>=8.3.5,<9.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "brseclabcripto", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
