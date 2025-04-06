@@ -1,0 +1,55 @@
+site_name: mkdocs-nbstore
+site_url: https://daizutabi.github.io/mkdocs-nbstore/
+site_description: A plugin for mkdocs to convert notebooks to markdown
+site_author: daizutabi
+repo_url: https://github.com/daizutabi/mkdocs-nbstore/
+repo_name: daizutabi/mkdocs-nbstore
+edit_uri: edit/main/docs/
+theme:
+  name: material
+  font:
+    text: Fira Sans
+    code: Fira Code
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: black
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - content.tooltips
+    - content.code.annotate
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+plugins:
+  - search
+  - mkdocs-nbstore:
+      notebook_dir: ../notebooks
+  - mkapi
+markdown_extensions:
+  - pymdownx.magiclink
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+nav:
+  - Home: index.md
+  - Reference: $api/mkdocs_nbstore.***
