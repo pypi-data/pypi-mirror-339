@@ -1,0 +1,11 @@
+dhvagna/__init__.py,sha256=TWHy00tOswk1pig5VmEMBKP6KWnhLWMQ9D1nwCA6Nxw,669
+dhvagna/agents.py,sha256=3LvH8pScn3rC6DdojyEGxKm5_0by8S8EjE2Qgo6OTGo,3038
+dhvagna/cli.py,sha256=UoCvGUKdQ5M1Mg6j0U0k88U1QT7VsMNAkjXjel0clNM,1352
+dhvagna/utils.py,sha256=Nk5syXgRD1FCYWzEormiKltVb5k0HVkDs8iTTrbNq-k,584
+dhvagna/wav.py,sha256=M7tYXBgNTXuLYabpJa5FUlxM3GhG51VuWECnsXmCtwg,43061
+dhvagna-0.1.0.dist-info/licenses/LICENSE,sha256=uIVk9BlIHOBMbealu1Ji57TxvZLqTSif7q1JLmU9lno,1093
+dhvagna-0.1.0.dist-info/METADATA,sha256=9Pu1hn_qHtvOGJv4wqcZdjD-g25xve8jQg-wQHtKDkA,7131
+dhvagna-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+dhvagna-0.1.0.dist-info/entry_points.txt,sha256=JKO9XELYbCxAOnPhKZnTB9daDoKiHoWaqTm-6trQWSY,45
+dhvagna-0.1.0.dist-info/top_level.txt,sha256=cmnpCjSElOwFMonshG-1dSnAQR2eUnEItq7XHTu_VkY,8
+dhvagna-0.1.0.dist-info/RECORD,,
