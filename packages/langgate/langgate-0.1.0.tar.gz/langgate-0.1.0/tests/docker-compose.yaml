@@ -1,0 +1,19 @@
+x-api-test-service: &api-test-service
+  environment:
+    IS_TEST: "true"
+    LANGGATE_HOST: 'langgate_test'
+    LANGGATE_PORT: '4001'
+
+services:
+  # LLM GATEWAY
+
+  llm_gateway:
+    extends:
+      file: ../../docker/compose/docker-compose.base.yaml
+      service: langgate
+    container_name: langgate_test
+    <<: *api-test-service
+    ports:
+      - "4001:4000"
+    env_file:
+      - ../../.env

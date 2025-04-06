@@ -1,0 +1,52 @@
+{
+  "terminal.integrated.env.windows": {
+    "PYTHONPATH": "${workspaceFolder}/src/langgate${pathSeparator}${workspaceFolder}/tests"
+  },
+  "terminal.integrated.env.osx": {
+    "APP_ENV": "local:host"
+  },
+  "python.envFile": "${workspaceFolder}/.env",
+  "python.testing.unittestEnabled": true,
+  "python.testing.pytestEnabled": true,
+  "python.testing.cwd": "${workspaceFolder}/src/langgate",
+  "python.testing.pytestArgs": ["."],
+  "pytest.command": "${workspaceFolder}/.venv/bin/pytest",
+  "python.testing.pytestPath": "${workspaceFolder}/.venv/bin/pytest",
+  "pythonTestExplorer.testFramework": "pytest",
+  "pythonTestExplorer.testplanEnabled": false,
+  "testExplorer.gutterDecoration": true,
+  "testing.gutterEnabled": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.extraPaths": ["${workspaceFolder}/stubs"],
+  "notebook.formatOnSave.enabled": true,
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    },
+    "notebook.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    }
+  },
+  "[helm]": {
+    "editor.formatOnSave": false
+  },
+  "python.defaultInterpreterPath": "/Users/saran/repos/eleutheria_meta/llm_gateway/.venv/bin/python",
+  "search.useIgnoreFiles": false,
+  "scm.alwaysShowRepositories": false,
+  "scm.alwaysShowActions": false,
+  "scm.autoReveal": true,
+  "git.openRepositoryInParentFolders": "prompt",
+  "gitlens.detectNestedRepositories": false,
+  // "mypy-type-checker.args": [
+  //   "--config-file=/Users/saran/repos/eleutheria_meta/llm_gateway/pyproject.toml"
+  // ],
+  // "mypy-type-checker.cwd": "${workspaceFolder}/src/langgate",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.shellcheck": "explicit"
+  },
+  "ruff.nativeServer": "on",
+  "ruff.configuration": "/Users/saran/repos/eleutheria_meta/llm_gateway/pyproject.toml",
+  "ruff.format.preview": true
+}
