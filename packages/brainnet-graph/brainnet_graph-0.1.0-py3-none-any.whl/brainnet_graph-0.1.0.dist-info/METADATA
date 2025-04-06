@@ -1,0 +1,52 @@
+Metadata-Version: 2.4
+Name: brainnet-graph
+Version: 0.1.0
+Summary: Graph construction from BOLD signal time series
+Home-page: https://github.com/yourname/brainnet-graph
+Author: Songlin Zhao
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: torch
+Requires-Dist: torch-geometric
+Requires-Dist: scikit-learn
+Requires-Dist: tqdm
+Requires-Dist: matplotlib
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# brainnet-graph
+
+A Python package for constructing brain graphs from fMRI BOLD signal at ROI level.
+
+## Features
+
+- Pearson, cosine, partial correlation methods
+- Supports , ,  input
+- Output graph as PyTorch Geometric or CSV
+- CLI with demo mode
+
+## Usage
+
+Install:
+```bash
+pip install brainnet-graph
+```
+
+Run demo:
+```bash
+construct-graph --demo
+```
+
