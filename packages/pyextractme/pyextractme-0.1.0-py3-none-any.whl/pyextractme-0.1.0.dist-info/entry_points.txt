@@ -1,0 +1,2 @@
+[console_scripts]
+pyextractme = pyextractme.main:app
