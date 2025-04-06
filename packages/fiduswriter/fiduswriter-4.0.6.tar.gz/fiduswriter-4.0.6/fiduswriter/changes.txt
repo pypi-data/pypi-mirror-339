@@ -1,0 +1,310 @@
+503ec1671 4.0.5
+6a39e7889 prevent scrolling after closing dialogs in editor, fixes #1308
+8678492c7 Add keyboard navigation to nav menu + allow scrolling in nav menu, fixes
+7e4c09d63 github actions: run debug mode only once
+89204b25e github actions: split video upload into 2
+018044f4d Add video capture of test debugs
+b468f6c54 reorganize test check order
+c5c54f9b4 citation - extended check
+7b307e6bd Merge branch 'main' of github.com:fiduswriter/fiduswriter
+8c5d747e2 citation test: more specific selectors
+4ce0df1f4 Merge pull request #1310 from neuged/fixed-locking-ui
+56153e25a Merge branch 'main' into fixed-locking-ui
+37e6ffc29 collaboration test: wait a little more for "John" to be typed.
+3422f9751 Remove tag and contributor input elements when locking is set to fixed
+c03bc4de8 change import of serializeForClipboard
+53527c2d3 Update some JS dependencies
+9b1022a3e don't prefix ws urls if there is only one thread
+9c5cd6aaf Twisted[tls,http2]
+14720df67 4.0.4
+dba549119 build script updates
+fd51c40a8 Merge pull request #1306 from neuged/runserver-addrport-issue
+2fa13ed93 Fix an issue in the runserver command where the addrpart argument could not be used
+26adb116e 4.0.3
+906bfa7e7 adjust requirements for social accounts
+e5be63b75 4.0.2
+fa6d348a1 Add requests for google oauth plugin
+d0b96cc6c 4.0.1
+f417e879d Merge branch 'main' of github.com:fiduswriter/fiduswriter
+8adbc4701 4.0.0
+8daca3a7f update dependencies to 4.0.0
+768b9f8df add test timeout
+e1d95828f set citation style for citation collaboration test
+c046f2ac9 Merge remote-tracking branch 'origin/dependabot/pip/fiduswriter/django-5.1.7'
+255f562aa Improved test debug output
+c8a055675 Merge branch 'main' into dependabot/pip/fiduswriter/django-5.1.7
+61f2c6e08 handle situation where consumer has disconnected before participant list has been sent.
+06146551f Merge branch 'main' into dependabot/pip/fiduswriter/django-5.1.7
+753a6c791 docx importer: footnotes, cross references & math equations
+16a4576ba docx import: basic tracking support
+a9e46c0ed Bump django from 5.1.6 to 5.1.7 in /fiduswriter
+a7ad3555f docx: add tracking
+090982e5a odt importer: unique 9-digit numbers
+e0b65f7e7 docx import: work with figure captions
+253145cae base docx importer + improvements odt importer
+9ad7b502e translate string
+ddbaa06c0 4.0.0rc19
+54c3b1c51 pandoc export - export nodes without ids
+48360cbfa pandoc import - better table/figure recognition
+48d09e8a6 4.0.0rc18
+8e62514f0 add missing cookie name setting
+fcb8acc67 4.0.0rc17
+c2be9b8a2 set csrf cookie name in js
+76878a26f 4.0.0rc16
+6839f1b91 make cookie names configurable
+ba392adf3 4.0.0rc15
+e4504e2aa django-npm-mjs==3.1.6
+425d0cb57 4.0.0rc14
+68ab08629 django-npm-mjs==3.1.5
+039265b94 4.0.0rc13
+f7b8a0252 url fix settings paths
+073db02d3 4.0.0rc12
+74ca647f8 allow different internal and external ports
+872fce8af 4.0.0rc11
+43c14e89f recover SETTINGS_PATHS and SETTINGS_MODULE settings.
+3286e417d skip PORTS when testing
+4078477cc 4.0.0rc10
+1ec915320 reorg setting.py
+b478947c4 PORT/WS_URLS => PORTS + handle multiple instance running in runserver
+58167ca74 rsync with --no-perms
+b6d0dda04 4.0.0rc9
+d37b56f96 django-npm-mjs==3.1.4
+467c97b47 4.0.0rc8
+826928887 django-npm-mjs==3.1.3
+f7ac9b25b 4.0.0rc7
+51528f8e7 improved pandoc json importer
+733ceb75b adjust gitignore
+0992b1369 cache files up to 100MB (relevant for wasm)
+d5e1e582c allow for wasm
+1f1fe28a7 4.0.0rc6
+25a52a13f Merge branch 'main' of github.com:fiduswriter/fiduswriter
+361708be1 remove tenacity requirement (covered by OJS plugin)
+42299c078 4.0.0rc5
+c656da3a4 fixed plugin version requirements
+30f815fbb 4.0.0rc4
+0d718b3ad Update version of initial templates
+994019c39 4.0.0rc3
+02f415823 Django==5.1.6
+70c8e85cc 4.0.0rc2
+a64e88422 Update files to be included
+7c9e88205 4.0.0rc1
+f0d71c28e remove bountysource
+7fba727f4 typo
+809aeae5c 4.0.0-dev
+6cda357f0 Merge pull request #1303 from fiduswriter/develop
+ebbb50269 set dependencies to 4.0.0rc1
+3b872ae82 Tets: add shortcut for invite contact
+48171066c destroy dtbulk when table is reinitiated
+de141a2d7 top right corner menus keyboard navigation
+e2737254b Make bulk menu accessible
+3c3114b89 allow dialog escape also with cancel key
+f57584bdc SDT 10.0.0
+ced26d449 MAthLive 0.104.0
+6eedc0bc0 fix tests, readd tooltips header menu
+3a8716187 fix user template manager tests
+0e2827204 fix bibliography tests
+6a1c5a519 bibtests: fix selectors
+00e76a007 typo
+de042546c allow link clicking on overview pages
+a9273d9d8 fix doc export tests
+70ee708fa Add Mathml formula output to JATS, fixes #1281
+51a8247d4 editor: allow movement through document using arrow keys, #1279
+77a527c6c Allow escaping dialogs with esc if cancel button present, #1279
+bc7c79448 add keyboard navigation to overview pages #1279
+c8356d27c keyboard navigation for site menu, #1279
+b59541fc7 make dialogs work with keyboard-only input, #1279
+09cbd8cf3 add keyboard shortcuts for overview header menu, #1279
+2791d5c92 language
+6352b5617 Add keyboard shortcut visual hint in editor + aria tags, #1279
+9e13473d7 Allow commenting on title (bug)
+1fa7549a7 add tenacity (for OJS plugin)
+f8609e403 sort reqs alphabetially
+97f235a2f tests: make login page configurable
+1ee49ff72 make editor test less brittle
+8c13c0fc2 increase wait time
+2bfb25c5a Bump django from 5.1.4 to 5.1.5 in /fiduswriter (#1301)
+ea43dbfe3 make html exporter work with website plugin
+ee9b7fb81 rename style migration
+43be09007 Merge branch 'develop' of github.com:fiduswriter/fiduswriter into develop
+2d99fdbec Fix style update
+af25d5b51 Bump django from 5.1.2 to 5.1.4 in /fiduswriter (#1300)
+1688438f3 html exporter: add options for book exports + convert old style files
+e4e9852d4 tests: fix offline tests
+3fdf36470 tests: test for file output rather than alert when exporting HTML.
+81e80e1ed remove old tests
+11a43fae0 remove unused import
+b684b709c remove DOMExporter
+088e4f166 refactor HTML, EPUB and Print exporter
+8e5160ea0 print exporter: DOMExporter => HTMLExporter
+7cbbe5bdf refactor HTML/EPUB exporters
+4f171edfa EPUB exporter: DOMExporter => HTMLExporter
+69a7426a0 unlog
+d81b123fc ODT import: cleaner code, fixes to tracked changes handling, #1277
+088529c3f pandoc json + ODT import (#1299)
+400d36c28 move directories
+3191d24be move native importer to subfolder
+b9391b4c5 change import location
+a105e804d update dependencies (#1298)
+edcc483bc Bump django from 4.2.15 to 4.2.16 in /fiduswriter (#1297)
+26fe2fec5 make async paste handling possible. refactor citation pasting
+1b5384429 webpack => rspack, eslint/prettier => biome, custom lint => pre-commit (#1296)
+b108de215 make also base path of ws urls configurable
+e1b9bd958 doc template copying: create new import id and set correct value for added field
+94fc78c29 rewording
+8022c1af8 lint
+4034eb167 docx: improved inline render
+b514ccd98 simplify base consumer (#1295)
+e0d9086ca Add internal load balancing
+b2c563a85 change variable name confusion, part 2
+0ca753b79 change variable name confusion
+167e0e55d lint
+d34f34c75 docx: fixes for comment export + reusability for multi doc export, #1273
+c0507af83 lint
+9e3f67835 DOCX/ODT: noSpaceTmp no longer needed
+3a7a972eb docx: make render function usable for multiple documents, #1273
+a72614d40 docx: move docContent
+1aa55ad6c docx, configurable metadata, needed for #1273
+b9a175ebf docx exporter: modularize, required for #1273
+10ae46d97 switch to Javascript based dom for XML file manipulation (DOCX, ODT) (#1293)
+6e4236a75 ODT exporter: make extendable
+fcde2d8be remove article node (#1292)
+f158d4e8d html => old_html, html2 => html
+609b12733 Merge branch 'user-invite-accept-early' into develop
+741deef23 ODT/DOCX: use capitalization for method names + restructure ODT rendering
+018962a82 Bump django from 4.2.14 to 4.2.15 in /fiduswriter
+49d5e8039 user invites - store accept before emailing
+88a7f0dd5 user invites - store accept before emailing
+b166c37a6 jats exporter, use csl, #1275
+4280e6553 JATS exporter, allow reusage in books, #1275
+1e0d29c65 update JATS to 1.3 and make parse current jats4r validator + export docs as BITS (JATS for books), #1275
+78b35f7ce add custom runserver for daphne
+258eacfb7 testing: longer cool off time
+4fcb4bc5a improvements to tracking of tables and figures, #1278
+b5590323e testing coverage: add time to end of multiprocess tests
+268fe56ed limit test timeout to 10 min
+d10ec2aab testing: add wait times after tests
+70943cd7e testing: allow for leave site when nothing was loaded
+7daf44e17 Bump setuptools from 68.2.2 to 70.0.0 in /fiduswriter
+9b7d64386 Bump django from 4.2.11 to 4.2.14 in /fiduswriter
+b15e3336b lint
+74e9eba64 testing: better check for theApp
+92f0b0ab7 change import order for test classes
+bad082274 testing: always leave site after test
+4eda8063b ga: increase timeout
+5e8fef332 spell
+e1aff0440 Merge branch 'develop' of github.com:fiduswriter/fiduswriter into odt-tracked-changes
+dd195d787 make editor headerbar keybaord-navigable, #1279
+733479c11 ODT export: track inline deletions/additions, #1278
+eb807536b ODT export: track paragraph splits, #1278
+ec4ef1476 ODT export: track paragraph merges, #1278
+2f0d8a605 ODT export: track inline deletions/additions, #1278
+f831633c8 ODT export: track paragraph splits, #1278
+d03673592 ODT export: track paragraph merges, #1278
+08f5fe37d docx: tracked changes export format changes, #1278
+aa52aa60c single comment reference
+c9a6e3be8 cleanup, #1278
+594fe1864 select list and block quotation when inside of given node, #1279
+b04d51442 docx: export tracking of block types, #1278
+a804d1550 docx: track change of block insertion/deletion, #1278
+7a843ef59 github actions: correct timeout
+217e5d253 github actions: update for node20
+8f30ffc9c github actions: 15 minutes timeout
+d655d062e github actions: update dependencies
+49f7b57eb docx: export tracked changes on inline text, #1278
+aaa26c3a2 serializing: better fragment handling
+c9c55036b Merge branch 'main' of github.com:fiduswriter/fiduswriter into develop
+c1897f964 Merge branch 'main' of github.com:fiduswriter/fiduswriter
+a3b491fd6 disable option to assign comments to invites (temporarily), distinguish between invites and users on margin box rendering
+2bad1e1d0 remove memory upload size default
+8b84c72fc Merge branch 'main' of github.com:fiduswriter/fiduswriter into develop
+98d98199f lint
+420b86624 handle toc correctly, #1276
+68af63591 Add odt/docx export filters higher up in priority list, #1276
+e85a23427 function to allow posting json objects instead of form data, #1276
+1cb8b2c23 export mathml in html exporter
+2d98d2c30 make pandoc exporter reusable, #1276
+3444e2e1b allow overriding pandoc export
+40f932834 pandoc: sectios, hard breaks, separators and links #1276
+f11adbbbb simplify, #1276
+24195689d add missing types to pandoc export filter,#1276
+5608e38b3 remove obsolete mathml helpers
+5e21ef520 pandoc: improved table/figure handling, #1276
+6d2c189bc first basic pandoc json exporter connected to menu, #1276
+c1d270bbf initial pandoc export, #1276
+c15b6e236 first attempt at sharing websocket sessions
+85badf5a0 lint
+e73ad1948 user django channel layers for system messages
+6cd5161d0 coverage: turn on sigterm option
+8f536cfb5 remove unused print statements
+2fdd2b678 make mailbox deletion manual
+751eefc12 store outbox in memory
+5a43958b1 update retry
+741851982 mailbox additional debug feedback
+a9bb7a911 mailbox debug feedback
+ad51bfdd8 more sleep time before mailbox checking
+e9474afc2 mail storage name for user profile test
+fe7210bed separate email boxes for each test series
+31fd5e367 remove duplicate
+fef18b590 lint
+72e824941 add mailbox solution for testing
+d81453668 daphne: serve media files even when not in debug mode
+7ea8d3ac4 serve media files with daphne
+27cd71435 run disconnect code on websocket
+1c4c818b8 lint
+5dd33f172 disable message_exchange test (wait for switch to channel data storage)
+5318e7759 fix offline tests
+0ae8b3ed5 change teardown leave_site order to allow screenshots + remove message exchange tests
+b7821dfa2 leave site in-between editor tests
+87440b76b lint
+193234907 fix browser_check tests
+f943b7c31 typo
+3d2e6e9a0 Replace tornado with django channels
+c1ddb9a71 Bump django from 4.2.7 to 4.2.11 in /fiduswriter
+8a14fa9fe send user invites sequentially
+6c4e37814 lint
+2fb7fc02f upgrade mathlive
+8bba1f0bd update github actions
+90a7fed71 Make formula virtual keyboard handle manual
+822f6221b improved accessibility colors, #1279
+636e05295 fix usermedia tests
+63b410e98 lint
+816a668bd fix usermedia tests
+07b7be607 accessibility fixes, #1279
+561a16d15 update sdt, fix tests
+c532a077e color adjustments based on accessibility review, #1279
+8202c6cc4 lint
+3ad552612 update node and pythopon used by github actions
+b08a7986a Merge branch 'dependabot/pip/fiduswriter/black-24.3.0' of github.com:fiduswriter/fiduswriter into develop
+3eecda5a8 Bump black from 23.1.0 to 24.3.0 in /fiduswriter
+974a299da lint
+27b2b8b78 Merge branch 'main' of github.com:fiduswriter/fiduswriter into develop
+ca961860b Merge branch 'main' of github.com:fiduswriter/fiduswriter into develop
+9f3aa2472 Merge branch 'main' of github.com:fiduswriter/fiduswriter into develop
+29c9c4fe5 Merge branch 'main' of github.com:fiduswriter/fiduswriter into develop
+2e4c1bda7 update datatable links
+dabc7e3b3 change test timing
+3fde6ab21 Bump django from 4.2.6 to 4.2.7 in /fiduswriter
+71db5dc51 efficiency fixes
+77dbde462 make parent path row be part of renderTable instead of adding to data to prevent sorting issues
+6c287755b adjustments for simpledatatables 8
+deee3e056 lint
+d1fd169f1 test_path: adjust for diferent timeouts
+de6775ecf adjustments for mathlive and back to default stylelint
+808508c2a lint
+4a3adedeb Update data tables
+3c2216ff7 mathlive: "0.95.5"
+976b61edc reenable mathlive bundling even when running lint_css or prettier
+6712517ae require mathlive package for lint_js
+996bbd515 add prettier, store packages as json5
+6698108a4 stylelint
+75f38f25a update js dependencies
+4f34b34b4 make test wait longer for answer editor
+ad255db9d dependency updates
+29f17a597 Update remaining python dependencies
+7ac81d1d9 update python dependencies
+6b190383a switch image anti alias reference
+893dd2e3a remove secondary avatar urls
+7d3d123e6 Merge pull request #1257 from fiduswriter/dependabot/pip/fiduswriter/pillow-10.0.1
+efc4ea07e Merge branch 'main' into dependabot/pip/fiduswriter/pillow-10.0.1
+0a85a38ad django-avatar==8.0.0
+a43faddd2 Bump pillow from 9.3.0 to 10.0.1 in /fiduswriter
