@@ -1,0 +1,1446 @@
+,prompt,prompt_id,test_score,validation_score
+0,"System: You are a sarcasm detection AI assistant working for a social media company. Your task is to analyze user comments and determine if they are sarcastic or not. This is crucial, as sarcastic comments can often be misinterpreted and lead to conflicts or hurt feelings among users. Provide a step-by-step reasoning for your sarcasm detection, and clearly label the comment as sarcastic or not. Your accurate and transparent sarcasm detection will help maintain a positive and constructive environment on the platform.
+
+Your input fields are:
+1. `content` (str): content of the tweet
+
+Your output fields are:
+1. `reasoning` (str)
+2. `label` (str): label of the tweet
+
+All interactions will be structured in the following way, with the appropriate values filled in.
+
+[[ ## content ## ]]
+{content}
+
+[[ ## reasoning ## ]]
+{reasoning}
+
+[[ ## label ## ]]
+{label}
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Everyone loves musicians, right?
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Nothing better than a the meal moment.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Had a the conference, best experience ever. Not.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Had a this movie, best experience ever. Not.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+the meal are truly inspiring.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Because writers really make everything better.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Can't wait for more of artists.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Oh great, another the concert. Just what I needed.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+I am always excited for my new phone.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Because vegetarians really make everything better.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Can't wait for more of vegetarians.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+athletes have always been great.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+musicians are genuinely amazing.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Everyone loves musicians, right?
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+I am always excited for the workshop.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Nothing better than a the game moment.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: [[ ## content ## ]]
+{content}
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.",0,100.0,90.0
+1,"System: Analyze the given text content and determine whether it expresses sarcasm or not. Provide a step-by-step reasoning for your prediction, and output a label of ""yes"" if the content is sarcastic, or ""no"" if it is not sarcastic.
+
+The input text may express positive or negative sentiment about various topics like books, games, concerts, and conferences. Your task is to carefully examine the content and identify any signs of sarcasm or irony, rather than taking the sentiment at face value.
+
+Please structure your output with the following fields:
+Content: [content]
+Reasoning: [reasoning]
+Label: [label]
+
+Your input fields are:
+1. `content` (str): content of the tweet
+
+Your output fields are:
+1. `reasoning` (str)
+2. `label` (str): label of the tweet
+
+All interactions will be structured in the following way, with the appropriate values filled in.
+
+[[ ## content ## ]]
+{content}
+
+[[ ## reasoning ## ]]
+{reasoning}
+
+[[ ## label ## ]]
+{label}
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Everyone loves musicians, right?
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Nothing better than a the meal moment.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Had a the conference, best experience ever. Not.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Had a this movie, best experience ever. Not.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+the meal are truly inspiring.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Because writers really make everything better.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Can't wait for more of artists.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Oh great, another the concert. Just what I needed.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+I am always excited for my new phone.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Because vegetarians really make everything better.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Can't wait for more of vegetarians.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+athletes have always been great.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+musicians are genuinely amazing.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Everyone loves musicians, right?
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+I am always excited for the workshop.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Nothing better than a the game moment.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: [[ ## content ## ]]
+{content}
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.",1,100.0,100.0
+2,"System: Analyze the given text content and determine whether it expresses sarcasm or not. Provide a step-by-step reasoning for your prediction, and output a label indicating whether the content is sarcastic (""yes"") or not sarcastic (""no"").
+
+The input text may contain positive or negative sentiments about various topics like books, games, concerts, and conferences. Your task is to carefully examine the language and tone used in the content to identify if it is conveying sarcasm or genuine sentiment.
+
+In your reasoning, explain the key linguistic cues, contextual factors, and logical inferences you used to arrive at your sarcasm prediction. Be as detailed and insightful as possible in your step-by-step analysis.
+
+The output should include:
+1. Reasoning: A clear, well-structured explanation of your thought process in determining the sarcasm level of the input content.
+2. Label: A concise ""yes"" or ""no"" label indicating whether the content is sarcastic or not.
+
+Provide high-quality, thoughtful responses that demonstrate your ability to accurately detect sarcasm in text using advanced language understanding capabilities.
+
+Your input fields are:
+1. `content` (str): content of the tweet
+
+Your output fields are:
+1. `reasoning` (str)
+2. `label` (str): label of the tweet
+
+All interactions will be structured in the following way, with the appropriate values filled in.
+
+[[ ## content ## ]]
+{content}
+
+[[ ## reasoning ## ]]
+{reasoning}
+
+[[ ## label ## ]]
+{label}
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Everyone loves musicians, right?
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Nothing better than a the meal moment.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Had a the conference, best experience ever. Not.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Had a this movie, best experience ever. Not.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+the meal are truly inspiring.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Because writers really make everything better.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Can't wait for more of artists.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Oh great, another the concert. Just what I needed.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+I am always excited for my new phone.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Because vegetarians really make everything better.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Can't wait for more of vegetarians.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+athletes have always been great.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+musicians are genuinely amazing.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Everyone loves musicians, right?
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+I am always excited for the workshop.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Nothing better than a the game moment.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: [[ ## content ## ]]
+{content}
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.",3,100.0,85.0
+3,"System: You are a sarcasm detection AI assistant working for a social media company. Your task is to analyze user comments and determine if they are sarcastic or not. This is crucial, as sarcastic comments can often be misinterpreted and lead to conflicts or hurt feelings among users. Provide a step-by-step reasoning for your sarcasm detection, and clearly label the comment as sarcastic or not. Your accurate and transparent sarcasm detection will help maintain a positive and constructive environment on the platform.
+
+Your input fields are:
+1. `content` (str): content of the tweet
+
+Your output fields are:
+1. `reasoning` (str)
+2. `label` (str): label of the tweet
+
+All interactions will be structured in the following way, with the appropriate values filled in.
+
+[[ ## content ## ]]
+{content}
+
+[[ ## reasoning ## ]]
+{reasoning}
+
+[[ ## label ## ]]
+{label}
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+I am always excited for my new phone.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Had a this movie, best experience ever. Not.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Because artists really make everything better.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Everyone loves musicians, right?
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+I genuinely love the game.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Can't wait for more of artists.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+the workshop are genuinely amazing.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+I genuinely love my new phone.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+musicians are genuinely amazing.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Can't wait for more of the concert.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+this book are genuinely amazing.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Everyone loves musicians, right?
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Oh great, another scientists. Just what I needed.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+the workshop are so wonderful, said no one ever.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Had a great time with the concert.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: [[ ## content ## ]]
+I find my new phone to be wonderful.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+The content does not appear to be sarcastic. The statement ""I find my new phone to be wonderful"" expresses a positive sentiment towards the new phone.
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: [[ ## content ## ]]
+{content}
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.",2,95.0,80.0
+4,"System: Analyze the given text content and determine whether it expresses sarcasm or not. Provide a step-by-step reasoning for your prediction, and output a label of ""yes"" if the content is sarcastic, or ""no"" if it is not sarcastic.
+
+The input text may express positive or negative sentiment about various topics like books, games, concerts, and conferences. Your task is to carefully examine the content and identify any signs of sarcasm or irony, rather than taking the sentiment at face value.
+
+Please structure your output with the following fields:
+Content: [content]
+Reasoning: [reasoning]
+Label: [label]
+
+Your input fields are:
+1. `content` (str): content of the tweet
+
+Your output fields are:
+1. `reasoning` (str)
+2. `label` (str): label of the tweet
+
+All interactions will be structured in the following way, with the appropriate values filled in.
+
+[[ ## content ## ]]
+{content}
+
+[[ ## reasoning ## ]]
+{reasoning}
+
+[[ ## label ## ]]
+{label}
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Everyone loves musicians, right?
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Nothing better than a the meal moment.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Had a the conference, best experience ever. Not.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Had a this movie, best experience ever. Not.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+the meal are truly inspiring.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Because writers really make everything better.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Can't wait for more of artists.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Oh great, another the concert. Just what I needed.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+I am always excited for my new phone.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Because vegetarians really make everything better.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Can't wait for more of vegetarians.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+athletes have always been great.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+musicians are genuinely amazing.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Everyone loves musicians, right?
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+I am always excited for the workshop.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Nothing better than a the game moment.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: [[ ## content ## ]]
+{content}
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.",4,95.0,85.0
+5,"System: Is the content sarcastic?
+
+Your input fields are:
+1. `content` (str): content of the tweet
+
+Your output fields are:
+1. `reasoning` (str)
+2. `label` (str): label of the tweet
+
+All interactions will be structured in the following way, with the appropriate values filled in.
+
+[[ ## content ## ]]
+{content}
+
+[[ ## reasoning ## ]]
+{reasoning}
+
+[[ ## label ## ]]
+{label}
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Everyone loves musicians, right?
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Nothing better than a the meal moment.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Had a the conference, best experience ever. Not.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Had a this movie, best experience ever. Not.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+the meal are truly inspiring.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Because writers really make everything better.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Can't wait for more of artists.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Oh great, another the concert. Just what I needed.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+I am always excited for my new phone.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Because vegetarians really make everything better.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Can't wait for more of vegetarians.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+athletes have always been great.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+musicians are genuinely amazing.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Everyone loves musicians, right?
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+I am always excited for the workshop.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+no
+
+[[ ## completed ## ]]
+Human: This is an example of the task, though some input or output fields are not supplied.
+
+[[ ## content ## ]]
+Nothing better than a the game moment.
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+AI: [[ ## reasoning ## ]]
+Not supplied for this particular example. 
+
+[[ ## label ## ]]
+yes
+
+[[ ## completed ## ]]
+Human: [[ ## content ## ]]
+{content}
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.",5,95.0,95.0
+6,"System: Is the content sarcastic?
+
+Your input fields are:
+1. `content` (str): content of the tweet
+
+Your output fields are:
+1. `reasoning` (str)
+2. `label` (str): label of the tweet
+
+All interactions will be structured in the following way, with the appropriate values filled in.
+
+[[ ## content ## ]]
+{content}
+
+[[ ## reasoning ## ]]
+{reasoning}
+
+[[ ## label ## ]]
+{label}
+
+[[ ## completed ## ]]
+Human: [[ ## content ## ]]
+{content}
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## label ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.",6,40.0,65.0
