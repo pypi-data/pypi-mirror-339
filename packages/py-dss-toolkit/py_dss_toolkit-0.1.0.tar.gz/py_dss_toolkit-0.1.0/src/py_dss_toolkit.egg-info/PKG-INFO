@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: py-dss-toolkit
+Version: 0.1.0
+Summary: Advanced Python Tools for OpenDSS Powered by EPRI.
+Author-email: Paulo Radatz <paulo.radatz@gmail.com>
+License: MIT
+Project-URL: Changelog, https://github.com/PauloRadatz/py_dss_toolkit/blob/master/CHANGELOG.rst
+Project-URL: Issue Tracker, https://github.com/PauloRadatz/py_dss_toolkit/issues
+Project-URL: Source, https://github.com/PauloRadatz/py_dss_toolkit
+Keywords: OpenDSS,Python,Power Systems,Distribution Systems,Energy
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: py-dss-interface>=2.1.0
+Requires-Dist: pandas>=1.5.0
+Requires-Dist: matplotlib>=3.6.0
+Requires-Dist: plotly>=5.10.0
+Dynamic: license-file
