@@ -1,0 +1,95 @@
+Metadata-Version: 2.4
+Name: zetnlp
+Version: 1.0.0
+Home-page: https://github.com/prasenjeett/ZetNLP
+Author: Prasenjeet Howlader
+Author-email: prasenjeethowlader122@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: nltk
+Requires-Dist: spacy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+
+# ZetNLP - Multilingual Natural Language Processing Library
+
+ZetNLP is a multilingual NLP library built from scratch, designed to provide an extensive range of natural language processing capabilities for multiple languages. 
+
+## Features
+
+- **Multilingual Support**: Process text in multiple languages with ease.
+- **Tokenization**: Efficiently tokenize text into words, sentences, and more.
+- **Part-of-Speech Tagging**: Identify parts of speech in text.
+- **Named Entity Recognition**: Detect and classify named entities in text.
+- **Sentiment Analysis**: Analyze the sentiment of text data.
+- **Text Classification**: Classify text into predefined categories.
+- **Text Summarization**: Generate concise summaries of text data.
+- **Language Detection**: Automatically detect the language of text data.
+
+## Installation
+
+To install ZetNLP, simply run:
+
+```bash
+pip install zet-nlp
+```
+
+## Usage
+
+Below is a basic example of how to use ZetNLP:
+
+```
+from znlp import ZetNLP
+
+# Initialize ZetNLP for Bangla language
+nlp = ZetNLP(language='bangla')
+
+# Process the text
+doc = nlp("ঢাকায় আজ খুব গরম।")
+
+# Print token information
+for token in doc.tokens:
+    print(f"{token.text} => POS: {token.pos}, Lemma: {token.lemma}, Entity: {token.entity}")
+
+```
+## Use for multilingual 
+```
+from zet-nlp import ZetNLP
+
+# Initialize ZNLP for English language
+nlp = ZetNLP(language='english')
+
+# Process the text
+doc = nlp("The weather is very hot in New York today.")
+
+# Print token information
+for token in doc.tokens:
+    print(f"{token.text} => POS: {token.pos}, Lemma: {token.lemma}, Entity: {token.entity}")
+```
+## Documentation
+
+Comprehensive documentation is available at [ZNLP Documentation](https://znlp-docs.example.com).
+
+## Contributing
+
+We welcome contributions from the community! Please read our [Contributing Guidelines](CONTRIBUTING.md) for more information on how to get started.
+
+## License
+
+ZNLP is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For any questions or inquiries, please contact us at [support@znlp.com](mailto:support@znlp.com).
