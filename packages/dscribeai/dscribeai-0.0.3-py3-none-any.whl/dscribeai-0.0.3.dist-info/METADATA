@@ -1,0 +1,75 @@
+Metadata-Version: 2.4
+Name: dscribeai
+Version: 0.0.3
+Summary: dScribe AI is an API to extract transcriptions and visual summaries from social media videos like TikTok, YouTube, Instagram, and X.
+Author-email: dScribe AI <jordan@dscribeai.com>
+Project-URL: Homepage, https://dscribeai.com?utm_source=pypi
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pydantic
+
+# dScribe AI
+
+## Overview
+
+[dScribe AI](https://dscribeai.com?utm_source=pypi) helps developers turn social media videos into actionable insights by extracting transcriptions, generating video summaries, and enabling direct question-answering from video content.
+
+## Features
+
+- **Video Transcription**: Extract text from video content across multiple languages
+- **Content Analysis**: Analyze and generate insights from videos with simple prompts
+- **Multiplatform Support**: Process content from YouTube, TikTok, X, Instagram, Facebook, Spotify, Apple Podcasts, and more
+- **Multilingual Support**: Process content in 16+ languages
+- **Real-time Processing**: Get insights on the fly without waiting for indexing
+- **Structured Output**: Receive structured insights in markdown format, ready for AI applications
+
+## Installation
+
+```bash
+pip install dscribeai
+```
+
+## Quick Start
+
+```python
+from dscribeai import DScribeClient
+
+# Initialize client with your API key
+client = DScribeClient(api_key="your_api_key_here")
+
+post_url = "https://www.youtube.com/watch?v=UF8uR6Z6KLc"
+# Process a social media video
+results = client.transcribe(url=post_url)
+
+# Access transcription
+transcript = results.transcript
+print(f"Transcript: {transcript}")
+
+# Ask specific questions about video content
+answer = client.analyze(
+    url=post_url,
+    prompt="What are the main themes of this video?"
+)
+print(f"Answer: {answer.query_result.answer}")
+```
+
+## Use Cases
+
+- **Social Listening**: Monitor brand mentions and sentiment across social platforms
+- **Content Analysis**: Extract key topics and opinions from video content
+- **Engagement Tracking**: Measure audience interaction with content
+- **AI Agents**: Power your AI assistants with video understanding capabilities
+
+## Documentation
+
+For comprehensive documentation, visit our [official documentation](https://docs.dscribeai.com?utm_source=pypi).
+
+## Authentication
+
+You'll need an API key to use dScribe AI. Sign up at [dscribeai.com](https://dscribeai.com?utm_source=pypi) to get your API key.
+
+## Support
+
+- **Email**: jordan@dscribeai.com
+- **Discord**: [Join our community](https://discord.gg/5AwtMsddXq)
