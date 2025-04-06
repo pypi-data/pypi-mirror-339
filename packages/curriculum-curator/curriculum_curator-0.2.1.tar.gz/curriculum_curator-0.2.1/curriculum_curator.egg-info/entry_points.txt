@@ -1,0 +1,2 @@
+[console_scripts]
+curator = curriculum_curator.cli:main
