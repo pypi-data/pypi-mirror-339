@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyodide-cli"
+dynamic = ["version"]
+authors = [{name = "Pyodide developers"}]
+description = '"The command line interface for the Pyodide project"'
+license = "MPL-2.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+requires-python = ">= 3.12"
+dependencies = [
+    "typer",
+    "rich",
+]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.urls]
+Homepage = "https://github.com/pyodide/pyodide"
+"Bug Tracker" = "https://github.com/pyodide/pyodide/issues"
+Documentation = "https://pyodide.org/en/stable/"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.hatch.version]
+source = "vcs"
+
+[project.scripts]
+pyodide = "pyodide_cli.__main__:main"
+
+[tool.pycln]
+all = true
+
+[tool.isort]
+profile = "black"
