@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>managestate &#8212; django-extensions 3.2.3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="_static/documentation_options.js?v=7895512d"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="merge_model_instances" href="merge_model_instances.html" />
+    <link rel="prev" title="mail_debug" href="mail_debug.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="merge_model_instances.html" title="merge_model_instances"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mail_debug.html" title="mail_debug"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">django-extensions 3.2.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="command_extensions.html" accesskey="U">Command Extensions</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">managestate</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="managestate">
+<h1>managestate<a class="headerlink" href="#managestate" title="Link to this heading">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">synopsis<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Saves current applied migrations to a file or applies migrations from this file.</p>
+</dd>
+</dl>
+<p>The <cite>managestate</cite> command fetches last applied migrations from a specified database
+and saves them to a specified file. After that, you may easily apply saved migrations.
+The advantage of this approach is that you may have at hand several database states
+and quickly switch between them.</p>
+<section id="why">
+<h2>Why?<a class="headerlink" href="#why" title="Link to this heading">¶</a></h2>
+<p>While you develop several features or fix some bugs at the same time you often meet
+the situation when you need to apply or unapply database migrations before you check out
+to another feature/bug branch. You always need to view current migrations by <cite>showmigrations</cite>,
+then apply or unapply it manually using <cite>migrate</cite> and there is no problem if you work with
+one Django app. But when there is more than one, it starts to annoy. To forget about the problem
+and quickly switch between branches use the <cite>managestate</cite> command.</p>
+</section>
+<section id="how">
+<h2>How?<a class="headerlink" href="#how" title="Link to this heading">¶</a></h2>
+<p>To dump current migrations use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./manage.py managestate dump
+</pre></div>
+</div>
+<p>A state will be saved to <cite>managestate.json</cite> just about the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;default&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;admin&quot;</span><span class="p">:</span> <span class="s2">&quot;0003_logentry_add_action_flag_choices&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;auth&quot;</span><span class="p">:</span> <span class="s2">&quot;0012_alter_user_first_name_max_length&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;contenttypes&quot;</span><span class="p">:</span> <span class="s2">&quot;0002_remove_content_type_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sessions&quot;</span><span class="p">:</span> <span class="s2">&quot;0001_initial&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sites&quot;</span><span class="p">:</span> <span class="s2">&quot;0002_alter_domain_unique&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;myapp&quot;</span><span class="p">:</span> <span class="s2">&quot;zero&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-06-27 10:42:50.364070&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>As you see, migrations have been saved as the state called “default”.
+You can specify it using the positional argument:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./manage.py managestate dump my_feature_branch
+</pre></div>
+</div>
+<p>Then migrations will be added to <cite>managestate.json</cite> under the key “my_feature_branch”.
+To change the filename use <cite>-f</cite> or <cite>–filename</cite> flag.</p>
+<p>When you load a state from a file, you may also use all arguments defined for the <cite>migrate</cite> command.</p>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h2>
+<p>Save an initial database state of the branch “master/main” before developing features:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./manage.py managestate dump master
+</pre></div>
+</div>
+<p>Check out to your branch, develop your feature, and dump its state when you are going to get reviewed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./manage.py managestate dump super-feature
+</pre></div>
+</div>
+<p>Check out to the “master” branch back and rollback a database state with just one command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./manage.py managestate load master
+</pre></div>
+</div>
+<p>If you need to add some improvements to your feature, just use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./manage.py managestate load super-feature
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">managestate</a><ul>
+<li><a class="reference internal" href="#why">Why?</a></li>
+<li><a class="reference internal" href="#how">How?</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="mail_debug.html"
+                          title="previous chapter">mail_debug</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="merge_model_instances.html"
+                          title="next chapter">merge_model_instances</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/managestate.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="merge_model_instances.html" title="merge_model_instances"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mail_debug.html" title="mail_debug"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">django-extensions 3.2.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="command_extensions.html" >Command Extensions</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">managestate</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Copyright (C) 2008-2024 Michael Trier, Bas van Oostveen and contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

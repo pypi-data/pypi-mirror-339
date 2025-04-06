@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>sqldsn &#8212; django-extensions 3.2.3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="_static/documentation_options.js?v=7895512d"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="validate_templates" href="validate_templates.html" />
+    <link rel="prev" title="sqlcreate" href="sqlcreate.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="validate_templates.html" title="validate_templates"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sqlcreate.html" title="sqlcreate"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">django-extensions 3.2.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="command_extensions.html" accesskey="U">Command Extensions</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">sqldsn</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="sqldsn">
+<h1>sqldsn<a class="headerlink" href="#sqldsn" title="Link to this heading">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">synopsis<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Prints Data Source Name connection string on stdout</p>
+</dd>
+</dl>
+<section id="supported-databases">
+<h2>Supported Databases<a class="headerlink" href="#supported-databases" title="Link to this heading">¶</a></h2>
+<p>Currently the following databases are supported:</p>
+<ul class="simple">
+<li><p>PostgreSQL (psycopg2, psycopg3, or postgis)</p></li>
+<li><p>Sqlite3</p></li>
+<li><p>MySQL</p></li>
+</ul>
+<p>Patches to support other databases are welcome! :-)</p>
+</section>
+<section id="supported-styles">
+<h2>Supported Styles<a class="headerlink" href="#supported-styles" title="Link to this heading">¶</a></h2>
+<p>Currently the following databases are supported:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Style</p></th>
+<th class="head"><p>PostgreSQL</p></th>
+<th class="head"><p>MySQL</p></th>
+<th class="head"><p>Sqlite3</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>args</p></td>
+<td></td>
+<td><p>Y</p></td>
+<td></td>
+<td><p>command-line arguments</p></td>
+</tr>
+<tr class="row-odd"><td><p>filename</p></td>
+<td></td>
+<td></td>
+<td><p>Y</p></td>
+<td><p>filename</p></td>
+</tr>
+<tr class="row-even"><td><p>keyvalue</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td></td>
+<td><p>key-value pairs (legacy)</p></td>
+</tr>
+<tr class="row-odd"><td><p>kwargs</p></td>
+<td><p>Y</p></td>
+<td></td>
+<td></td>
+<td><p>Python keyword arguments</p></td>
+</tr>
+<tr class="row-even"><td><p>pgpass</p></td>
+<td><p>Y</p></td>
+<td></td>
+<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.pgpass</span></code> format</p></td>
+</tr>
+<tr class="row-odd"><td><p>uri</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>(See <code class="docutils literal notranslate"><span class="pre">dj-database-url</span></code>)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exit-codes">
+<h2>Exit Codes<a class="headerlink" href="#exit-codes" title="Link to this heading">¶</a></h2>
+<p>Exit status is 0 unless invalid options were given.</p>
+</section>
+<section id="example-usage">
+<h2>Example Usage<a class="headerlink" href="#example-usage" title="Link to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Prints the DSN for the default database
+$ ./manage.py sqldsn
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Prints the DSN for all databases
+$ ./manage.py sqldsn --all
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Print the DSN for database named &#39;slave&#39;
+$ ./manage.py sqldsn --database=slave
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Print all DSN styles available for the default database
+$ ./manage.py sqldsn --style=all
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Print the URI for the default database
+$ ./manage.py sqldsn -q --style=uri
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Create .pgpass file for default database by using the quiet option
+$ ./manage.py sqldsn -q --style=pgpass &gt; .pgpass
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">sqldsn</a><ul>
+<li><a class="reference internal" href="#supported-databases">Supported Databases</a></li>
+<li><a class="reference internal" href="#supported-styles">Supported Styles</a></li>
+<li><a class="reference internal" href="#exit-codes">Exit Codes</a></li>
+<li><a class="reference internal" href="#example-usage">Example Usage</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="sqlcreate.html"
+                          title="previous chapter">sqlcreate</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="validate_templates.html"
+                          title="next chapter">validate_templates</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/sqldsn.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="validate_templates.html" title="validate_templates"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sqlcreate.html" title="sqlcreate"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">django-extensions 3.2.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="command_extensions.html" >Command Extensions</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">sqldsn</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Copyright (C) 2008-2024 Michael Trier, Bas van Oostveen and contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

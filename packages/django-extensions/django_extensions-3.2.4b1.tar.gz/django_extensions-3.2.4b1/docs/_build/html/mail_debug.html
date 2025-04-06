@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>mail_debug &#8212; django-extensions 3.2.3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="_static/documentation_options.js?v=7895512d"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="managestate" href="managestate.html" />
+    <link rel="prev" title="list_signals" href="list_signals.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="managestate.html" title="managestate"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="list_signals.html" title="list_signals"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">django-extensions 3.2.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="command_extensions.html" accesskey="U">Command Extensions</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">mail_debug</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="mail-debug">
+<h1>mail_debug<a class="headerlink" href="#mail-debug" title="Link to this heading">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">synopsis<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Starts a mail server which echos out the contents of the email
+instead of sending it.</p>
+</dd>
+</dl>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
+<p>This command requires installation of <a class="reference external" href="https://github.com/aio-libs/aiosmtpd">aiosmtpd</a>. You can get it from PyPI with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">aiosmtpd</span>
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
+<p>You can start the mail server with the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python manage.py mail_debug
+Now accepting mail at 127.0.0.1:1025 -- use CONTROL-C to quit
+</pre></div>
+</div>
+<p>By default, it will start a process listening on port 1025 on local host.
+Assuming your Django settings <code class="docutils literal notranslate"><span class="pre">EMAIL_HOST</span></code> and <code class="docutils literal notranslate"><span class="pre">EMAIL_PORT</span></code> are configured to
+point to the same IP and port, in another terminal, open the Django shell and run</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">django.core.mail</span><span class="w"> </span><span class="kn">import</span> <span class="n">send_mail</span>
+
+<span class="n">send_mail</span><span class="p">(</span>
+    <span class="s2">&quot;Subject here&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Here is the message.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;from@example.com&quot;</span><span class="p">,</span>
+    <span class="p">[</span><span class="s2">&quot;to@example.com&quot;</span><span class="p">],</span>
+    <span class="n">fail_silently</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>If you go back to the terminal with the <code class="docutils literal notranslate"><span class="pre">mail_debug</span></code> command is running, you
+should see the email coming through:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">----------</span> <span class="n">MESSAGE</span> <span class="n">FOLLOWS</span> <span class="o">----------</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">text</span><span class="o">/</span><span class="n">plain</span><span class="p">;</span> <span class="n">charset</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span>
+<span class="n">MIME</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span> <span class="mf">1.0</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Transfer</span><span class="o">-</span><span class="n">Encoding</span><span class="p">:</span> <span class="mi">7</span><span class="n">bit</span>
+<span class="n">Subject</span><span class="p">:</span> <span class="n">Subject</span> <span class="n">here</span>
+<span class="n">From</span><span class="p">:</span> <span class="n">from</span><span class="nd">@example</span><span class="o">.</span><span class="n">com</span>
+<span class="n">To</span><span class="p">:</span> <span class="n">to</span><span class="nd">@example</span><span class="o">.</span><span class="n">com</span>
+<span class="n">Date</span><span class="p">:</span> <span class="n">Sun</span><span class="p">,</span> <span class="mi">19</span> <span class="n">Jan</span> <span class="mi">2025</span> <span class="mi">12</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mi">47</span> <span class="o">-</span><span class="mi">0000</span>
+<span class="n">Message</span><span class="o">-</span><span class="n">ID</span><span class="p">:</span>
+ <span class="o">&lt;</span><span class="mf">173728930732.90349.12519699486821706188</span><span class="o">@</span><span class="mf">1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0</span><span class="o">.</span><span class="n">ip6</span><span class="o">.</span><span class="n">arpa</span><span class="o">&gt;</span>
+<span class="n">X</span><span class="o">-</span><span class="n">Peer</span><span class="p">:</span> <span class="mf">127.0.0.1</span>
+
+<span class="n">Here</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">message</span><span class="o">.</span>
+<span class="o">------------</span> <span class="n">END</span> <span class="n">MESSAGE</span> <span class="o">------------</span>
+</pre></div>
+</div>
+</section>
+<section id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Link to this heading">¶</a></h2>
+<p>You can specify a different port by passing it as argument to the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python manage.py mail_debug 1026
+Now accepting mail at 127.0.0.1:1026 -- use CONTROL-C to quit
+</pre></div>
+</div>
+<p>You can also pass the host + port separated by a colon, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python manage.py mail_debug 192.168.1.1:1234
+Now accepting mail at 192.168.1.1:1234 -- use CONTROL-C to quit
+</pre></div>
+</div>
+</section>
+<section id="options">
+<h2>Options<a class="headerlink" href="#options" title="Link to this heading">¶</a></h2>
+<p>The command also accepts the following options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--output</span></code>: Specifies an output file to send a copy of all messages (not flushed immediately).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--use-settings</span></code>: Uses EMAIL_HOST and HOST_PORT from Django settings. This option is ignored if the address
+or port is passed as an argument</p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">mail_debug</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#arguments">Arguments</a></li>
+<li><a class="reference internal" href="#options">Options</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="list_signals.html"
+                          title="previous chapter">list_signals</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="managestate.html"
+                          title="next chapter">managestate</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/mail_debug.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="managestate.html" title="managestate"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="list_signals.html" title="list_signals"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">django-extensions 3.2.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="command_extensions.html" >Command Extensions</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">mail_debug</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Copyright (C) 2008-2024 Michael Trier, Bas van Oostveen and contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>
