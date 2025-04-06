@@ -1,0 +1,65 @@
+Metadata-Version: 2.4
+Name: easyxp
+Version: 1.0
+Summary: Simple add quiver legend toolkit for matplotlib
+Home-page: https://github.com/Blissful-Jasper/Easyxp
+Author: Xianpu JI
+Author-email: xianpuji@hhu.edu.cn
+License: MIT
+Keywords: quiver legend matplotlib
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+## example:
+
+
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+from easyxp import simple_quiver_legend
+
+
+x = np.linspace(0, 2*np.pi, 10)
+y = np.sin(x)
+u = np.cos(x)
+v = np.sin(x)
+
+
+fig, ax = plt.subplots(dpi=200)
+q = ax.quiver(x, y, u, v)
+
+
+simple_quiver_legend(
+    ax=ax,
+    quiver=q,
+    reference_value=1.0,
+    unit='m/s',
+    legend_location='upper right',
+    box_facecolor='lightgray'
+)
+
+plt.show()
+```
+
+![](./quiver.png)
+
+---

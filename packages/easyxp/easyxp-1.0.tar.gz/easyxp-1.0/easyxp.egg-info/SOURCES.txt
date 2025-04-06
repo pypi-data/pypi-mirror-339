@@ -1,0 +1,10 @@
+README.md
+setup.py
+easyxp.egg-info/PKG-INFO
+easyxp.egg-info/SOURCES.txt
+easyxp.egg-info/dependency_links.txt
+easyxp.egg-info/not-zip-safe
+easyxp.egg-info/requires.txt
+easyxp.egg-info/top_level.txt
+tests/__init__.py
+tests/test_example.py
