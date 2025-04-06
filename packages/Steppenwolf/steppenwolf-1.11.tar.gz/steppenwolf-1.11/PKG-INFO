@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: Steppenwolf
+Version: 1.11
+Home-page: https://github.com/eddo888/Steppenwolf
+Download-URL: https://github.com/eddo888/Steppenwolf/archive/1.11.tar.gz
+Author: David Edson
+Author-email: eddo888@tpg.com.au
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: twine
+Requires-Dist: PyGithub
+Requires-Dist: Baubles
+Requires-Dist: Perdy
+Requires-Dist: Argumental
+Requires-Dist: Spanners
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+
+# Steppenwolf
+
+simple example using PyGithub to do github things
+like perform a release for pypi.org
+
+
+
