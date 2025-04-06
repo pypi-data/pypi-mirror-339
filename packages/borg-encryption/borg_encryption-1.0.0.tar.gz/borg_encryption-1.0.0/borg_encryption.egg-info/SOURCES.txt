@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+borg_encryption/__init__.py
+borg_encryption/adaptive_defense.py
+borg_encryption/api.py
+borg_encryption/borg_encryption.py
+borg_encryption/cli.py
+borg_encryption/client.py
+borg_encryption/key_manager.py
+borg_encryption.egg-info/PKG-INFO
+borg_encryption.egg-info/SOURCES.txt
+borg_encryption.egg-info/dependency_links.txt
+borg_encryption.egg-info/entry_points.txt
+borg_encryption.egg-info/requires.txt
+borg_encryption.egg-info/top_level.txt

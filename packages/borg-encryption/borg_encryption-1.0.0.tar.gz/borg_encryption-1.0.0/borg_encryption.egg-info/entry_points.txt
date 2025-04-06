@@ -1,0 +1,2 @@
+[console_scripts]
+borg-encrypt = borg_encryption.cli:main
