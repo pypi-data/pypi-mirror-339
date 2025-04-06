@@ -1,0 +1,8 @@
+setup.py
+smkml/__init__.py
+smkml/smk.py
+smkml.egg-info/PKG-INFO
+smkml.egg-info/SOURCES.txt
+smkml.egg-info/dependency_links.txt
+smkml.egg-info/requires.txt
+smkml.egg-info/top_level.txt
