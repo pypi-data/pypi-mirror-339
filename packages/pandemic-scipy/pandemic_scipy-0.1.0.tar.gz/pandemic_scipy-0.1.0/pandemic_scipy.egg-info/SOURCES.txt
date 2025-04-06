@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+pandemic/__init__.py
+pandemic/data_unloader.py
+pandemic/functions.py
+pandemic/turn_handler.py
+pandemic/world_map_drawer.py
+pandemic_scipy.egg-info/PKG-INFO
+pandemic_scipy.egg-info/SOURCES.txt
+pandemic_scipy.egg-info/dependency_links.txt
+pandemic_scipy.egg-info/requires.txt
+pandemic_scipy.egg-info/top_level.txt
