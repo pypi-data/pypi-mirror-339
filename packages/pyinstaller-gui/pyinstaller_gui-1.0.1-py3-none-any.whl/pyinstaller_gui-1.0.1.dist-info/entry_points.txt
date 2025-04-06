@@ -1,0 +1,3 @@
+[console_scripts]
+pyinstaller-gui = pyinstaller_gui.__main__:run
+pyinstallergui = pyinstaller_gui.__main__:run
