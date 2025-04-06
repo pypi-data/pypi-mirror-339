@@ -1,0 +1,13 @@
+gits/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gits/main.py,sha256=FJeznCb7VNE6SDWLSbuN7KhH6XnEZRfrGkI4ctBEbzE,616
+gits/.system/imports.py,sha256=CsRhO_XWL1YA7Wf-cpc8sUop8iIONFx6CCjRrv8Mbug,122
+gits/.system/index.py,sha256=OqvFJR5ERA0nhE8vR9wdM4jSG6s0NtWxfp-cp7a-Fkw,1151
+gits/.system/modules/jobs.py,sha256=KGITUbwkDDyN3CmsMzEycYp65U41VisKSl4LV7UEkj4,538
+gits/.system/sources/clight.json,sha256=4rZV4e35Jt4LxxsLP_DhyhALS75DOix8Mjmn2BWz_AM,793
+gits/.system/sources/logo.ico,sha256=J10bf44mN_Mor5rovX-DMB51w5Z2048BiN-SQ1T6Nm0,75715
+gits-1.0.0.dist-info/licenses/LICENSE,sha256=3U_CaMRQisXoQHsc9kJrlUBUKI6_M5KcJvzkURHBRmU,1096
+gits-1.0.0.dist-info/METADATA,sha256=3cdir8O0VvRGgI4tEE7aKw2ntMg6FCzU4KTYX-ZS_4w,1125
+gits-1.0.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+gits-1.0.0.dist-info/entry_points.txt,sha256=jys3XKFxTXkZqajLb80DHjr8biEi9QKG1-GBllFhUNw,40
+gits-1.0.0.dist-info/top_level.txt,sha256=DMCRff6_R6PB6UnpaFwaHN5NHwoh38RUIHFlEr2871s,5
+gits-1.0.0.dist-info/RECORD,,
