@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: ensure-shebang-runtime
+Version: 0.3.0
+Summary: Re-executes Python scripts under the interpreter specified in the shebang line.
+Author-email: simranjeet <simranjeetdua@gmail.com>
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# ensure-shebang-runtime
+
+A lightweight helper to re-execute a Python script using the interpreter defined in its shebang (`#!`) line — even if it was run via `python script.py`.
+
+## Usage
+
+```python
+import ensure_shebang_runtime
+ensure_shebang_runtime.reexec_with_shebang(__file__)
+# === Your actual logic starts here including imports ===
+
