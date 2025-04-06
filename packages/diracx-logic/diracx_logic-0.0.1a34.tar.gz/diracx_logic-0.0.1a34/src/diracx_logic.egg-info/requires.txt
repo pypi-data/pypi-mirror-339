@@ -1,0 +1,8 @@
+cachetools
+dirac
+diracx-core
+diracx-db
+pydantic>=2.10
+
+[types]
+types-cachetools
