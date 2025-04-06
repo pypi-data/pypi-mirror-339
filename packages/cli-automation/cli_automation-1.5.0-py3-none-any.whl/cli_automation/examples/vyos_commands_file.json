@@ -1,0 +1,13 @@
+{
+   "X.X.X.X": {
+      "commands": [
+         "configure",
+         "set interfaces ethernet eth1 address",
+         "set interfaces ethernet eth1 description \"LAN Interface\"",
+         "set system host-name \"VyOS-Router\"",
+         "commit",
+         "save",
+         "exit"
+      ]
+   }
+}
