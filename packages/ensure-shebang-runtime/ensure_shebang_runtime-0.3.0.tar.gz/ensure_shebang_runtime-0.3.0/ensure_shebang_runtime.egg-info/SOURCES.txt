@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+ensure_shebang_runtime/__init__.py
+ensure_shebang_runtime.egg-info/PKG-INFO
+ensure_shebang_runtime.egg-info/SOURCES.txt
+ensure_shebang_runtime.egg-info/dependency_links.txt
+ensure_shebang_runtime.egg-info/top_level.txt
