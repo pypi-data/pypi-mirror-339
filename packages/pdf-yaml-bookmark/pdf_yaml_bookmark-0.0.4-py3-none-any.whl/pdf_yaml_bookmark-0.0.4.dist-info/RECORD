@@ -1,0 +1,11 @@
+pdf_yaml_bookmark/__init__.py,sha256=y749oRNkBxgIjQxTdPqYlqUzLeNqUfZhDjpiV9wDNqc,72
+pdf_yaml_bookmark/bkm_to_yaml.py,sha256=1UwjfyzjQqhbf68MvFS-zQpBXzCLJpkfRy6MXfWxcHg,2224
+pdf_yaml_bookmark/cli.py,sha256=H5vr2ioKAOHvojgGjHbzQttoFHhYe0b3B3BBzCTCcVM,1640
+pdf_yaml_bookmark/common.py,sha256=W3Ktb08u_V-yrvy2O0irDDtvAo5-qR2qN9pZ_gmkqyw,353
+pdf_yaml_bookmark/run_gs.py,sha256=nYAXSPfWQY18u3N1BNYTycMqd8iciDHyHKmOZmcAjd4,2356
+pdf_yaml_bookmark/yaml_to_gs.py,sha256=xa3LBN9Qmg9g-e86K75X0XazRyd5s-RqB3UA30Iov_M,1230
+pdf_yaml_bookmark-0.0.4.dist-info/METADATA,sha256=3nDbKfNUzqPmLALqO-2lD8ZVMVOq5qg7aD9cZd70wyQ,4289
+pdf_yaml_bookmark-0.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pdf_yaml_bookmark-0.0.4.dist-info/entry_points.txt,sha256=3A5IGfltwbRVjMueh7etw0cI2-qOWhnzAJbwkXYtrao,64
+pdf_yaml_bookmark-0.0.4.dist-info/licenses/LICENSE,sha256=Z3vMYY6cUlwPfIdTUzS5ve0X-l9QckEG8HQWKZkOamo,1070
+pdf_yaml_bookmark-0.0.4.dist-info/RECORD,,
