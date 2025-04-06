@@ -1,0 +1,2 @@
+[console_scripts]
+fread = exnd_curses.read:main
