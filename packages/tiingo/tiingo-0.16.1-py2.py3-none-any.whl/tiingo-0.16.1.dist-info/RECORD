@@ -1,0 +1,12 @@
+tiingo/__init__.py,sha256=p0-s5pRpkC-pHfsmZNyNgeZoPqZ1QSrits8yhGAdqMs,181
+tiingo/__version__.py,sha256=z1NVYoWuZFyxnktgJ9LPreMcwkzQWY9p8HjUNsKXluo,47
+tiingo/api.py,sha256=58NAtGcyBqMPIcK7CcJzH8MGy8rfzL-5wq6gYLdpMbc,20444
+tiingo/exceptions.py,sha256=ylAGoV9PSr1j66dncj4S9q4KoyhUL997RIGj5sq68CI,227
+tiingo/restclient.py,sha256=jf-0NwNaOCG2wbj0xbNBprnj4Fqx4FgzAeXulYXV8ug,1653
+tiingo/wsclient.py,sha256=l0zPEOWDjD0oM9Dhdrcwu5AKPvErm5IZL3sD2X9a5Jk,3663
+tiingo-0.16.1.dist-info/licenses/AUTHORS.rst,sha256=nuEA3TKn_uAyPHHaTkSuPgNy8reaI0M931Z_CByosyM,334
+tiingo-0.16.1.dist-info/licenses/LICENSE,sha256=uTb3GkvsQo2O7w0dFWpsDxJq8vsC9PLVGNOsxvyEmW8,1072
+tiingo-0.16.1.dist-info/METADATA,sha256=xhETZmygsqACnpX6si528i1xfltxo-Wtk5TUUsQZ5fk,16272
+tiingo-0.16.1.dist-info/WHEEL,sha256=MAQBAzGbXNI3bUmkDsiV_duv8i-gcdnLzw7cfUFwqhU,109
+tiingo-0.16.1.dist-info/top_level.txt,sha256=NPRB6byEFl07GWIg0kZ6eKu82fFziXpJnXruCMSTJtk,7
+tiingo-0.16.1.dist-info/RECORD,,
