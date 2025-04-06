@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: exnd-curses
+Version: 0.1.8
+Summary: Simple use of curses.
+Project-URL: Homepage, https://github.com/putterPatcher/exnd_curses
+Project-URL: Issues, https://github.com/putterPatcher/exnd_curses/issues
+Author-email: Kor Shantanu Nitin <korshantanu@gmail.com>
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: curses; platform_system == 'linux'
+Requires-Dist: windows-curses; platform_system == 'windows'
+Description-Content-Type: text/markdown
+
+from exnd_curses import test
