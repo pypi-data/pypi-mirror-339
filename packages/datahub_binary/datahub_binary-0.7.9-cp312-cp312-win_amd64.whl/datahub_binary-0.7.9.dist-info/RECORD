@@ -1,0 +1,17 @@
+datahub.cp312-win_amd64.pyd,sha256=GBeJv6yIr6Psr9HHx2YUrqMG0jH_Mo24q-JlWzoLmUs,1378304
+datahub.pyi,sha256=O9EXz2lYTF1c1FjfHEnOw0YG-qTCIOu4As_I4ciGbCs,1068
+datahub/protos/client_pb2.pyi,sha256=Z-DFR1iUjl49DXEgWkoyrbyJaXI_9Wrur-fQvCdpIak,203322
+datahub/protos/common_pb2.pyi,sha256=F6E-v_KFerzZz4ck3Ru1s0fzVd1OSUK7Qu4BdgFCX68,32812
+datahub/protos/management_pb2.pyi,sha256=MJBltow6rxFspCZ6sTIXLb1_fsUtked141YP1xhWk0g,23155
+datahub/protos/martrix_pb2.pyi,sha256=7kzztGJ5UnSPyiiv6qsBlOKFGwcj4Qm-2_Ke6EqML8A,1342
+datahub/protos/position_pb2.pyi,sha256=Cr-YN8ps9qF18hN4uq8iQWzs59S7nqr5uV-ZhdHC7yM,19342
+datahub/protos/query_pb2.pyi,sha256=ccsTOeG2DyP9eTT_lWCZy14zz4wpzc44ktWZgjPC-9Y,15918
+datahub/protos/quote_pb2.pyi,sha256=jm4Bi32BpZCi6Lq_UjP1iEvE2YeAEDJnYlzK6AHtfYk,25156
+datahub/protos/signal_pb2.pyi,sha256=d3TPBmB_1_PnMu7tkrvbyOacbg-TiI221Noh7PkKv2E,15576
+datahub/protos/strategy_pb2.pyi,sha256=iujX-GnYBULUjiwrmTkor_WJRjwjFgBXDio2-yur3WE,32144
+datahub/protos/trade_pb2.pyi,sha256=-TDJLvDEpRQwaNkn4JPTi39kOraD8PFZHeMQ3z1-bY0,49339
+datahub.build/.gitignore,sha256=aEiIwOuxfzdCmLZe4oB1JsBmCUxwG8x-u-HBCV9JT8E,1
+datahub_binary-0.7.9.dist-info/METADATA,sha256=oqeH84_HiwF9fSaxjtlIYLTWqyBQkBxxSDOezEsRw28,670
+datahub_binary-0.7.9.dist-info/WHEEL,sha256=x5rgv--I0NI0IT1Lh9tN1VG2cI637p3deednwYLKnxc,96
+datahub_binary-0.7.9.dist-info/top_level.txt,sha256=J0rzqYfZghMgpObWaPGhQtV88I-KXrgArDvi_ddf6ZA,8
+datahub_binary-0.7.9.dist-info/RECORD,,
