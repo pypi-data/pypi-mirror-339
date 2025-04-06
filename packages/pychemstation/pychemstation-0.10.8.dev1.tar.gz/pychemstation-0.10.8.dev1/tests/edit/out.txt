@@ -1,0 +1,5068 @@
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+LoadMethod "D:\Chemstation\1\Methods\", "GENERAL-POROSHELL-OPT.M"
+response$ = _MethFile$
+LoadMethod "D:\Chemstation\1\Methods\", "GENERAL-POROSHELL-OPT.M"
+response$ = _MethFile$
+Sleep 0.1
+DelTab RCPMP1Method[1], "Timetable"
+Sleep 0.1
+SetObjHdrVal RCPMP1Method[1], PumpChannel2_CompositionPercentage, 5.0
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrVal RCPMP1Method[1], Flow, 0.65
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrText RCPMP1Method[1], StopTime_Mode, Set
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrVal RCPMP1Method[1], StopTime_Time, 4.0
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrText RCPMP1Method[1], PostTime_Mode, Set
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrVal RCPMP1Method[1], PostTime_Time, 1.0
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTab RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+NewTab RCPMP1Method[1], "Timetable"
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Sleep 0.1
+NewColText RCPMP1Method[1], "Timetable", "Function", "SolventComposition"
+Sleep 0.1
+Sleep 0.1
+NewColVal RCPMP1Method[1], "Timetable", "Time", 1.0
+Sleep 0.1
+Sleep 0.1
+NewColVal RCPMP1Method[1], "Timetable", "SolventCompositionPumpChannel2_Percentage", 20.0
+Sleep 0.1
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "RCPMP1Method[1]", "Timetable", Rows, "Function", "Flow"
+Sleep 0.1
+Sleep 0.1
+NewColVal RCPMP1Method[1], "Timetable", "FlowFlow", 0.65
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "FlowFlow", 0.65
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "RCPMP1Method[1]", "Timetable", Rows, "Function", "SolventComposition"
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "Time", 2.0
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "SolventCompositionPumpChannel2_Percentage", 30.0
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "RCPMP1Method[1]", "Timetable", Rows, "Function", "Flow"
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "FlowFlow", 0.65
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "Time", 2.0
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "RCPMP1Method[1]", "Timetable", Rows, "Function", "SolventComposition"
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "Time", 2.5
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "SolventCompositionPumpChannel2_Percentage", 60.0
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "RCPMP1Method[1]", "Timetable", Rows, "Function", "Flow"
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "FlowFlow", 0.65
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "Time", 2.5
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "RCPMP1Method[1]", "Timetable", Rows, "Function", "SolventComposition"
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "Time", 3.0
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "SolventCompositionPumpChannel2_Percentage", 80.0
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "RCPMP1Method[1]", "Timetable", Rows, "Function", "Flow"
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "FlowFlow", 0.65
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "Time", 3.0
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "RCPMP1Method[1]", "Timetable", Rows, "Function", "SolventComposition"
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "Time", 3.5
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "SolventCompositionPumpChannel2_Percentage", 100.0
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "RCPMP1Method[1]", "Timetable", Rows, "Function", "Flow"
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "FlowFlow", 0.65
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "Time", 3.5
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SaveMethod _MethPath$, _MethFile$, "saved method at 1743827189.9090538"
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _MethFile$
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 3, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 3, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 3, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 4, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 4, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 4, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 5, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 5, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 5, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 6, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 6, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 6, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 7, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 7, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 7, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 8, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 8, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 8, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 9, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 9, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 9, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 10, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 10, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 10, "Time")
+response_num = ObjHdrVal("RCPMP1Method[1]", "PumpChannel2_CompositionPercentage")
+response_num = ObjHdrVal("RCPMP1Method[1]", "Flow")
+response_num = ObjHdrVal("RCPMP1Method[1]", "StopTime_Time")
+response_num = ObjHdrVal("RCPMP1Method[1]", "PostTime_Time")
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+LoadMethod "D:\Chemstation\1\Methods\", "GENERAL-POROSHELL-OPT.M"
+response$ = _MethFile$
+SetObjHdrVal RCPMP1Method[1], Flow, 0.3
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrText RCPMP1Method[1], PostTime_Mode, Set
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrVal RCPMP1Method[1], PostTime_Time, 4
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrText RCPMP1Method[1], StopTime_Mode, Set
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrVal RCPMP1Method[1], StopTime_Time, 7
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+SetObjHdrVal RCPMP1Method[1], PumpChannel2_CompositionPercentage, 27
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _MethFile$
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 3, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 3, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 3, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 4, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 4, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 4, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 5, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 5, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 5, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 6, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 6, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 6, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 7, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 7, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 7, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 8, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 8, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 8, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 9, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 9, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 9, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 10, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 10, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 10, "Time")
+response_num = ObjHdrVal("RCPMP1Method[1]", "PumpChannel2_CompositionPercentage")
+response_num = ObjHdrVal("RCPMP1Method[1]", "Flow")
+response_num = ObjHdrVal("RCPMP1Method[1]", "StopTime_Time")
+response_num = ObjHdrVal("RCPMP1Method[1]", "PostTime_Time")
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+LoadMethod "D:\Chemstation\1\Methods\", "GENERAL-POROSHELL-OPT.M"
+response$ = _MethFile$
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTab RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+NewTab RCPMP1Method[1], "Timetable"
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Sleep 0.1
+NewColText RCPMP1Method[1], "Timetable", "Function", "SolventComposition"
+Sleep 0.1
+Sleep 0.1
+NewColVal RCPMP1Method[1], "Timetable", "Time", 3
+Sleep 0.1
+Sleep 0.1
+NewColVal RCPMP1Method[1], "Timetable", "SolventCompositionPumpChannel2_Percentage", 27
+Sleep 0.1
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "RCPMP1Method[1]", "Timetable", Rows, "Function", "Flow"
+Sleep 0.1
+Sleep 0.1
+NewColVal RCPMP1Method[1], "Timetable", "FlowFlow", 0.2
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "FlowFlow", 0.2
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "RCPMP1Method[1]", "Timetable", Rows, "Function", "SolventComposition"
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "Time", 8
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "SolventCompositionPumpChannel2_Percentage", 78
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+InsTabRow RCPMP1Method[1], "Timetable"
+Sleep 0.1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "RCPMP1Method[1]", "Timetable", Rows, "Function", "Flow"
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "FlowFlow", 0.8
+Sleep 0.1
+Sleep 0.1
+SetTabVal "RCPMP1Method[1]", "Timetable", Rows, "Time", 8
+Sleep 0.1
+Sleep 1
+Sleep 0.1
+DownloadRCMethod PMP1
+Sleep 0.1
+Sleep 1
+Rows = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+response_num = TabHdrVal(RCPMP1Method[1], "Timetable", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _MethFile$
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 1, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 2, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 3, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 3, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 3, "Time")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 4, "FlowFlow")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 4, "SolventCompositionPumpChannel2_Percentage")
+response_num = TabVal("RCPMP1Method[1]", "Timetable", 4, "Time")
+response_num = ObjHdrVal("RCPMP1Method[1]", "PumpChannel2_CompositionPercentage")
+response_num = ObjHdrVal("RCPMP1Method[1]", "Flow")
+response_num = ObjHdrVal("RCPMP1Method[1]", "StopTime_Time")
+response_num = ObjHdrVal("RCPMP1Method[1]", "PostTime_Time")
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "SampleType")
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "SampleType")
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 4
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 3
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 2
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "Vial", 7
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "SampleName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "DataFileName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "Vial", 8513
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "SampleName", "qwe"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "DataFileName", "qwe"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "SampleType", 2
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 3, "Vial", 1
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 3, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "SampleName", "Sampel2232"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "DataFileName", "Sampel2232"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 3, "SampleType", 3
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "SampleType")
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "SampleType")
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "SampleType")
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 3
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 2
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "Vial", 10
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "SampleName", "Sampel2"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "DataFileName", "Sampelasdas2"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "Vial", 8513
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "SampleName", "Sampel2"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "DataFileName", "Sampel2"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 2
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "Vial", 4418
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjectionSource", "Manual"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "SampleName", "Sampel2"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "DataFileName", "Sampelasdas2"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "SampleType", 2
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "Vial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "SampleName", "Sampel2"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "DataFileName", "Sampel2"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 2
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "Vial", 7
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "SampleName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "DataFileName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "Vial", 8195
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "SampleName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "DataFileName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "Vial", 4102
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "SampleName", "4102"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "DataFileName", "4102"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "Vial", 4163
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "SampleName", "4163"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "DataFileName", "4163"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 3, "Vial", 4225
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 3, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "SampleName", "4225"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "DataFileName", "4225"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 3, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 4, "Vial", 4295
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 4, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 4, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 4, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 4, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 4, "SampleName", "4295"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 4, "DataFileName", "4295"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 4, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 5, "Vial", 4354
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 5, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 5, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 5, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 5, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 5, "SampleName", "4354"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 5, "DataFileName", "4354"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 5, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 6, "Vial", 4420
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 6, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 6, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 6, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 6, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 6, "SampleName", "4420"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 6, "DataFileName", "4420"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 6, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 7, "Vial", 8198
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 7, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 7, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 7, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 7, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 7, "SampleName", "8198"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 7, "DataFileName", "8198"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 7, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 8, "Vial", 8257
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 8, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 8, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 8, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 8, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 8, "SampleName", "8257"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 8, "DataFileName", "8257"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 8, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 9, "Vial", 8320
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 9, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 9, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 9, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 9, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 9, "SampleName", "8320"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 9, "DataFileName", "8320"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 9, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 10, "Vial", 8391
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 10, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 10, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 10, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 10, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 10, "SampleName", "8391"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 10, "DataFileName", "8391"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 10, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 11, "Vial", 8450
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 11, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 11, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 11, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 11, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 11, "SampleName", "8450"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 11, "DataFileName", "8450"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 11, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 12, "Vial", 8517
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 12, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 12, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 12, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 12, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 12, "SampleName", "8517"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 12, "DataFileName", "8517"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 12, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "SampleType")
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 7, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 7, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 7, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 8, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 8, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 8, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 9, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 9, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 9, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 10, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 10, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 10, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 10, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 10, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 10, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 10, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 10, "SampleType")
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 7, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 7, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 7, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 8, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 8, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 8, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 9, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 9, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 9, "SampleType")
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 7, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 7, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 7, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 8, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 8, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 8, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 9, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 9, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 9, "SampleType")
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 9
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 8
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 7
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 6
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 5
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 4
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 3
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 2
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "Vial", 7
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "SampleName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "DataFileName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "Vial", 8513
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "SampleName", "qwe"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "DataFileName", "qwe"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "SampleType", 2
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 3, "Vial", 1
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 3, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "SampleName", "Sampel2232"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "DataFileName", "Sampel2232"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 3, "SampleType", 3
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "SampleType")
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "SampleType")
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "SampleType")
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 3
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 2
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "Vial", 10
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "SampleName", "Sampel2"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "DataFileName", "Sampelasdas2"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "Vial", 8513
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "SampleName", "Sampel2"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "DataFileName", "Sampel2"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 2
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "Vial", 4418
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjectionSource", "Manual"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "SampleName", "Sampel2"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "DataFileName", "Sampelasdas2"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "SampleType", 2
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "Vial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "SampleName", "Sampel2"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "DataFileName", "Sampel2"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 2
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "Vial", 7
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "SampleName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "DataFileName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "Vial", 8195
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "SampleName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "DataFileName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "Vial", 4102
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "SampleName", "4102"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "DataFileName", "4102"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "Vial", 4163
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "SampleName", "4163"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 2, "DataFileName", "4163"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 2, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 3, "Vial", 4225
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 3, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "SampleName", "4225"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 3, "DataFileName", "4225"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 3, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 4, "Vial", 4295
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 4, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 4, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 4, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 4, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 4, "SampleName", "4295"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 4, "DataFileName", "4295"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 4, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 5, "Vial", 4354
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 5, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 5, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 5, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 5, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 5, "SampleName", "4354"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 5, "DataFileName", "4354"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 5, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 6, "Vial", 4420
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 6, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 6, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 6, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 6, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 6, "SampleName", "4420"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 6, "DataFileName", "4420"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 6, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 7, "Vial", 8198
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 7, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 7, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 7, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 7, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 7, "SampleName", "8198"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 7, "DataFileName", "8198"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 7, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 8, "Vial", 8257
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 8, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 8, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 8, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 8, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 8, "SampleName", "8257"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 8, "DataFileName", "8257"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 8, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 9, "Vial", 8320
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 9, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 9, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 9, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 9, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 9, "SampleName", "8320"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 9, "DataFileName", "8320"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 9, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 10, "Vial", 8391
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 10, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 10, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 10, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 10, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 10, "SampleName", "8391"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 10, "DataFileName", "8391"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 10, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 11, "Vial", 8450
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 11, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 11, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 11, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 11, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 11, "SampleName", "8450"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 11, "DataFileName", "8450"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 11, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 12, "Vial", 8517
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 12, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 12, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 12, "InjVolume", "4"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 12, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 12, "SampleName", "8517"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 12, "DataFileName", "8517"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 12, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 7, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 7, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 7, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 8, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 8, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 8, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 9, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 9, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 9, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 10, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 10, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 10, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 10, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 10, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 10, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 10, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 10, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 11, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 11, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 11, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 11, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 11, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 11, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 11, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 11, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 12, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 12, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 12, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 12, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 12, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 12, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 12, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 12, "SampleType")
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 2, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 2, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 3, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 3, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 4, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 4, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 5, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 5, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 6, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 6, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 7, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 7, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 7, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 7, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 8, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 8, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 8, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 8, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 9, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 9, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 9, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 9, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 10, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 10, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 10, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 10, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 10, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 10, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 10, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 10, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 11, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 11, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 11, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 11, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 11, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 11, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 11, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 11, "SampleType")
+response$ = TabText$("_sequence[1]", "SeqTable1", 12, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 12, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 12, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 12, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 12, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 12, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 12, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 12, "SampleType")
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 12
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 11
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 10
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 9
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 8
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 7
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 6
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 5
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 4
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 3
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 2
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "Vial", 7
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "SampleName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "DataFileName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "Vial", 8195
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "SampleName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "DataFileName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+_SeqFile$ = "hplc_testing.S"
+_SeqPath$ = "C:\1\Sequence\"
+LoadSequence _SeqPath$, _SeqFile$
+response$ = _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "Vial", 7
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "SampleName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "DataFileName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+DelTabRow _sequence[1], "SeqTable1", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 0.1
+InsTabRow _sequence[1], "SeqTable1"
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "Vial", 8195
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "Method", "D:\Chemstation\1\Methods\GENERAL-POROSHELL-OPT"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "InjVial", 3
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjVolume", "4.0"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "InjectionSource", "HipAls"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "SampleName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabText "_sequence[1]", "SeqTable1", 1, "DataFileName", "asd"
+Sleep 0.1
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+Sleep 0.1
+SetTabVal "_sequence[1]", "SeqTable1", 1, "SampleType", 1
+Sleep 0.1
+SaveSequence _SeqPath$, _SeqFile$
+Sleep 1
+SaveSequence _SeqPath$, _SeqFile$
+LoadSequence _SeqPath$, _SeqFile$
+Rows = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+response_num = TabHdrVal(_sequence[1], "SeqTable1", "NumberOfRows")
+Sleep 0.1
+Print Rows
+response$ = _SeqFile$
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "SampleName")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "Vial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "DataFileName")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "Method")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "InjVial")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjVolume")
+response$ = TabText$("_sequence[1]", "SeqTable1", 1, "InjectionSource")
+response_num = TabVal("_sequence[1]", "SeqTable1", 1, "SampleType")
