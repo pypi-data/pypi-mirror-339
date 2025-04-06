@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: visible_residues
+Version: 0.1.0
+Summary: Find residues with sidechains in a specific region
+Author-email: Kale Kundert <kale@thekunderts.net>
+Project-URL: Documentation, https://visible-residues.readthedocs.io/en/latest/
+Project-URL: Version Control, https://github.com/kalekundert/visible_residues
+Project-URL: Bug Tracker, https://github.com/kalekundert/visible_residues/issues
+Project-URL: Continuous Integration, https://github.com/kalekundert/visible_residues/actions
+Project-URL: Test Coverage, https://app.codecov.io/github/kalekundert/visible_residues
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: ~=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: polars
+Requires-Dist: macromol-dataframe
+Requires-Dist: macromol-voxelize
+Provides-Extra: doc
+Requires-Dist: sphinx ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme ; extra == 'doc'
+Requires-Dist: myst-parser ; extra == 'doc'
+Requires-Dist: autoclasstoc ; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: parametrize-from-file ; extra == 'test'
+
+Visible Residues
+================
+
+[![Last release](https://img.shields.io/pypi/v/visible_residues.svg)](https://pypi.python.org/pypi/visible_residues)
+[![Python version](https://img.shields.io/pypi/pyversions/visible_residues.svg)](https://pypi.python.org/pypi/visible_residues)
+[![Documentation](https://img.shields.io/readthedocs/visible_residues.svg)](https://visible-residues.readthedocs.io/en/latest/)
+[![Test status](https://img.shields.io/github/actions/workflow/status/kalekundert/visible_residues/test.yml?branch=master)](https://github.com/kalekundert/visible_residues/actions)
+[![Test coverage](https://img.shields.io/codecov/c/github/kalekundert/visible_residues)](https://app.codecov.io/github/kalekundert/visible_residues)
+[![Last commit](https://img.shields.io/github/last-commit/kalekundert/visible_residues?logo=github)](https://github.com/kalekundert/visible_residues)
+
+This is an extension module implementing one performance-critical function used 
+to create a machine learning dataset of 3D images of macromolecules with 
+labeled amino acid identities.  Specifically, the function accepts a dataframe 
+of atoms in the image, then samples a fixed number of residues whose sidechains 
+are likely to be mostly within the image.  To avoid biasing the samples based 
+on the specific sidechains involved (e.g. glycine has a smaller sidechain than 
+arginine, so it might be sampled more often if the actual sidechain was 
+considered), this "within the image" determination is based entirely on 
+backbone coordinates.
