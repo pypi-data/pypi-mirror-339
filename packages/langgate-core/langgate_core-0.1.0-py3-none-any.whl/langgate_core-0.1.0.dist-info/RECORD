@@ -1,0 +1,11 @@
+langgate/core/__init__.py,sha256=B-gL6nj8I5U_j7VeyWwMdj1osMXnFWyh1ginCalc5jQ,46
+langgate/core/fields.py,sha256=otnnTg4Q6Tu59oGhERQwIwIcG8GvlHNEyaJM8kwuVU0,379
+langgate/core/logging.py,sha256=bC6cV-1_goqyHxblsZcyCswFckVRlazDmt1WxPY13NI,5705
+langgate/core/models.py,sha256=WZHSfZda0klaII7Jhb2iN5aYpd3Jwv4pgPi2FXmC1Rk,4283
+langgate/core/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langgate/core/data/default_config.yaml,sha256=Up7YbC_jkpw8AdcdSuISKh7AerewcsdW92l523_4Zo8,6513
+langgate/core/utils/__init__.py,sha256=8-iKXRJKr5qNN9228bMuvdxYmWDQbSz3zXtjdQPoD3M,45
+langgate/core/utils/config_utils.py,sha256=pTbUOe_xf_rWDc0SDQSopl14sCTilae2qz1S0D7Oh20,1194
+langgate_core-0.1.0.dist-info/METADATA,sha256=EPTab3GoxWjB9sqUixR41r2qGBSrac0vQJrBU6EsLlA,633
+langgate_core-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+langgate_core-0.1.0.dist-info/RECORD,,
