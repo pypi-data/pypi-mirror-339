@@ -1,0 +1,18 @@
+[project]
+name = "beanhub-inbox"
+version = "0.1.1"
+description = "Email processing engine for archiving and extracting financial data"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "jinja2>=3.1.6",
+    "pydantic>=2.11.2",
+    "pyyaml>=6.0.2",
+]
+
+[dependency-groups]
+dev = [
+    "factory-boy>=3.3.3",
+    "pytest-factoryboy>=2.7.0",
+    "pytest>=8.3.5",
+]
