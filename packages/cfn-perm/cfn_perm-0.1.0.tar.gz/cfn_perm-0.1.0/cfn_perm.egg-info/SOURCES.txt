@@ -1,0 +1,10 @@
+README.md
+setup.py
+cfn_perm.egg-info/PKG-INFO
+cfn_perm.egg-info/SOURCES.txt
+cfn_perm.egg-info/dependency_links.txt
+cfn_perm.egg-info/entry_points.txt
+cfn_perm.egg-info/requires.txt
+cfn_perm.egg-info/top_level.txt
+source/__init__.py
+source/app.py

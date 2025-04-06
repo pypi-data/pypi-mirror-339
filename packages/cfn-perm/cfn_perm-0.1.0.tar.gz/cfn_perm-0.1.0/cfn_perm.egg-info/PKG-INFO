@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: cfn-perm
+Version: 0.1.0
+Summary: A tool to automatically generate IAM permissions from CloudFormation templates
+Home-page: https://github.com/mrlikl/cfn-perm.git
+Author: S Murali Krishnan
+Author-email: mrlikrsh@gmail.com
+Keywords: aws,cloudformation,iam,permissions
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: boto3
+Requires-Dist: pyyaml
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
