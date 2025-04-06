@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp_query_table"
+authors = [
+    { name = "wukan", email = "wu-kan@163.com" },
+]
+description = "query table from website, support MCP"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["playwright", "mcp", "table", "iwencai", "tdx", "eastmoney"]
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python"
+]
+dependencies = [
+    "pandas",
+    "loguru",
+    "playwright",
+    "mcp",
+]
+dynamic = ["version"]
+
+
+[tool.setuptools]
+packages = [
+    "mcp_query_table",
+    "mcp_query_table.sites",
+    "mcp_query_table.providers",
+]
+
+[tool.setuptools.dynamic]
+version = { attr = "mcp_query_table._version.__version__" }
