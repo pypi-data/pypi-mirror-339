@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ML-Methods"
+version = "0.2.1"
+authors = [
+  { name="Kor Shantanu Nitin", email="korshantanu@gmail.com" },
+]
+description = "Implementation of machine learning algorithms."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = { text = "Apache-2.0" }
+
+
+[project.urls]
+Homepage = "https://github.com/putterPatcher/ML-Methods"
+Issues = "https://github.com/putterPatcher/ML-Methods/issues"
+
+[tool.hatch.metadata]
+allow-legacy = true  # if needed to support older classifiers or fields
+
+[tool.hatch.build.targets.sdist]
+include = ["LICENSE", "README.md", "ml_methods/**"]
+
+[tool.hatch.build.targets.wheel]
+include = ["LICENSE", "README.md", "ml_methods/**"]

@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: ML-Methods
+Version: 0.2.1
+Summary: Implementation of machine learning algorithms.
+Project-URL: Homepage, https://github.com/putterPatcher/ML-Methods
+Project-URL: Issues, https://github.com/putterPatcher/ML-Methods/issues
+Author-email: Kor Shantanu Nitin <korshantanu@gmail.com>
+License: Apache-2.0
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# pip install ML-Methods
