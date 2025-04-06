@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: lakeflush
+Version: 0.0.1
+Summary: A solution for small files in your data lake.
+Author: abhinavkaurav, cloudinduscom
+License: MIT
+Project-URL: homepage, https://github.com/cloudinduscom/lakeflush
+Project-URL: source, https://github.com/cloudinduscom/lakeflush
+Project-URL: issues, https://github.com/cloudinduscom/lakeflush/issues
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# lakeflush
+A solution for small files in your data lake

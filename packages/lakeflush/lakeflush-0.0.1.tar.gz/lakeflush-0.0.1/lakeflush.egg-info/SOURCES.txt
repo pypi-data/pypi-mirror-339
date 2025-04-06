@@ -1,0 +1,7 @@
+LICENSE
+README.md
+pyproject.toml
+lakeflush.egg-info/PKG-INFO
+lakeflush.egg-info/SOURCES.txt
+lakeflush.egg-info/dependency_links.txt
+lakeflush.egg-info/top_level.txt

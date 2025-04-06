@@ -1,0 +1,35 @@
+[project]
+name = "lakeflush"
+version = "0.0.1"
+description = "A solution for small files in your data lake."
+authors = [
+    {name = "abhinavkaurav"},
+    {name = "cloudinduscom"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities"
+]
+
+[project.urls]
+homepage = "https://github.com/cloudinduscom/lakeflush"
+source = "https://github.com/cloudinduscom/lakeflush"
+issues = "https://github.com/cloudinduscom/lakeflush/issues"
