@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+signDNE/examples/example.py
+signDNE/signDNE.egg-info/PKG-INFO
+signDNE/signDNE.egg-info/SOURCES.txt
+signDNE/signDNE.egg-info/dependency_links.txt
+signDNE/signDNE.egg-info/entry_points.txt
+signDNE/signDNE.egg-info/requires.txt
+signDNE/signDNE.egg-info/top_level.txt
+signDNE/src/__init__.py
+signDNE/src/_signDNE_cli.py
+signDNE/src/signDNE.py
+signDNE/src/utils.py
+signDNE/tests/test_signDNE.py
+signDNE/tests/test_signDNE_cli.py
+signDNE/tests/test_utils.py

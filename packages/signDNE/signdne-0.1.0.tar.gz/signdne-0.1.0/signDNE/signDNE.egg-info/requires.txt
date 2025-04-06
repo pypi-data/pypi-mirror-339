@@ -1,0 +1,8 @@
+scipy
+trimesh
+numpy
+pyvista
+pandas
+networkx
+rtree
+pyglet<2
