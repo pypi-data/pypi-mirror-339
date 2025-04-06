@@ -1,0 +1,13 @@
+bionemo-core
+lightning>=2.2.1
+megatron-core
+nemo_toolkit[nlp]
+megatron-energon
+pyzmq>=26.4.0
+pytorch-lightning>=2.2.1
+
+[te]
+transformer_engine[pytorch]
+
+[test]
+bionemo-testing

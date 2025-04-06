@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bionemo-llm"
+readme = "README.md"
+description = "BioNeMo Large Language Model Components using NeMo and Megatron"
+authors = [{ name = "BioNeMo Team", email = "bionemofeedback@nvidia.com" }]
+requires-python = ">=3.10"
+license-files = ["LICENSE"]
+dynamic = ["version"]
+dependencies = [
+    # bionemo sub-packages
+    'bionemo-core',
+    # external
+    'lightning>=2.2.1',
+    'megatron-core',
+    'nemo_toolkit[nlp]',
+    'megatron-energon',
+    'pyzmq>=26.4.0',        # TODO(@cspades): Fix this version to exclude outdated pyzmq from nemo_toolkit which doesn't have a wheel for Python 3.12.
+    'pytorch-lightning>=2.2.1',
+]
+
+[project.optional-dependencies]
+test = [
+    'bionemo-testing'
+]
+te = [
+    # TE & Apex need to be installed after PyTorch, NVCC, and CUDA.
+    # TODO(@pstjohn, @cspades): Figure out how to do this without post-installation.
+    'transformer_engine[pytorch]'
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["bionemo.*"]
+namespaces = true
+exclude = ["test*."]
+
+[tool.setuptools.dynamic]
+version = { file = "VERSION" }
+
+[tool.uv]
+cache-keys = [{ git = true }]

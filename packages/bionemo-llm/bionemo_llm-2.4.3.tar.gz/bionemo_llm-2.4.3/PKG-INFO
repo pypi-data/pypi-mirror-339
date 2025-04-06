@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: bionemo-llm
+Version: 2.4.3
+Summary: BioNeMo Large Language Model Components using NeMo and Megatron
+Author-email: BioNeMo Team <bionemofeedback@nvidia.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bionemo-core
+Requires-Dist: lightning>=2.2.1
+Requires-Dist: megatron-core
+Requires-Dist: nemo_toolkit[nlp]
+Requires-Dist: megatron-energon
+Requires-Dist: pyzmq>=26.4.0
+Requires-Dist: pytorch-lightning>=2.2.1
+Provides-Extra: test
+Requires-Dist: bionemo-testing; extra == "test"
+Provides-Extra: te
+Requires-Dist: transformer_engine[pytorch]; extra == "te"
+Dynamic: license-file
+
+# bionemo-llm
+
+The Bionemo Large Language Model (LLM) submodule contains common code used in submodules that train LLMs on biological
+datasets (currently `bionemo-esm2` and `bionemo-geneformer`). This includes data masking and collate functions, the
+bio-BERT common architecture code, loss functions, and other NeMo / Megatron-LM compatibility functions. Sub-packages
+should only depend on `bionemo-llm` if they need access to NeMo and Megatron-LM.
