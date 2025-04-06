@@ -1,0 +1,9 @@
+thinmaxflow/__init__.py,sha256=vkSj1dL1YZzk8DBYVlVu8GmvktIEjYSF0QnhVwLMhiA,24
+thinmaxflow/_maxflow.cpython-310-x86_64-linux-gnu.so,sha256=8IOI6tnnZXiOFaP0HuAAJ0kBhnXhckw3adwmEpo45LY,1167785
+thinmaxflow.libs/libgcc_s-2298274a.so.1,sha256=V2IJwfUuwSSQhJqB29JtMx8hH79dCRjAvTQIGWShH-s,181737
+thinmaxflow.libs/libstdc++-08d5c7eb.so.6.0.33,sha256=k0S_imrCh_IE6WpvxrLoVPYiRyMVf15RDWRiXPIywV8,3562401
+thinmaxflow-0.1.6.dist-info/METADATA,sha256=UQUJRXolKjZCq6FPnCFrDDlgaizNw5qrDWyL2snTOaY,3501
+thinmaxflow-0.1.6.dist-info/WHEEL,sha256=E2TDFMuovCfyGVrjKi1HbqTFrDxfiZ_IRHylC12AYy0,112
+thinmaxflow-0.1.6.dist-info/top_level.txt,sha256=scBLuBGdiM2FpJbV8XBb23pt_mCTwEVZONTsu9SOGzE,12
+thinmaxflow-0.1.6.dist-info/RECORD,,
+thinmaxflow-0.1.6.dist-info/licenses/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
