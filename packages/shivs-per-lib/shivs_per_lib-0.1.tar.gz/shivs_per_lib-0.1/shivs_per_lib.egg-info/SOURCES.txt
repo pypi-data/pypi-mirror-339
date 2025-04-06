@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+shivs_per_lib/__init__.py
+shivs_per_lib/packages.py
+shivs_per_lib.egg-info/PKG-INFO
+shivs_per_lib.egg-info/SOURCES.txt
+shivs_per_lib.egg-info/dependency_links.txt
+shivs_per_lib.egg-info/top_level.txt
