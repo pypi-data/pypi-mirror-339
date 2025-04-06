@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: hubx2-mcp-server
+Version: 0.1.1
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: mcp>=1.6.0
+Requires-Dist: requests>=2.32.3
+
+mcp服务配置，通过uvx执行，需要电脑安装了uv工具
+
+
+"hubx2-mcp-server": {
+  "command": "uvx",
+  "args": [
+	"hubx2-mcp-server"
+  ],
+  "env": {
+	"HUBX_EXEC_HOST": "127.0.0.1"
+  }
+}
