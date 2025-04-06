@@ -1,0 +1,12 @@
+gpbacay_arcane.py,sha256=ML3hJPTOvhsgUvKpuYB_PpR-dHksexUn0y22tjPCfh4,28900
+gpbacay_arcane/__init__.py,sha256=GNMza1xpYXfe39X3GqEPtGYRltHw9L2CtMrueR06ILA,31
+gpbacay_arcane/callbacks.py,sha256=xxs2cu6KQnI-cMevv6-bbSRxcJQSmGqGMYrGvsdKeqk,3348
+gpbacay_arcane/cli_commands.py,sha256=-OX0SSmHhOrxdAhYR0s2NFvnyDw1NmsOXRcxDxBEfig,2137
+gpbacay_arcane/layers.py,sha256=ybar--lp6u8pGi064czF0fSH-G5Ihs8rkM9JGdjlvP0,46466
+gpbacay_arcane/models.py,sha256=SG7zSkeR_4lB8X8yw33cWnX-Gv9mS6NVldPEwv2bMY0,8644
+gpbacay_arcane-0.2.6.dist-info/licenses/LICENSE,sha256=HyBeWynRt2Cekk5phSWnynZnlC3OA_tMSDJBagCHCHs,1085
+gpbacay_arcane-0.2.6.dist-info/METADATA,sha256=-4_GbgNoRCvNxuB0VyvO4GRro-VNW6Ffdxdwc3EpWLQ,1794
+gpbacay_arcane-0.2.6.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+gpbacay_arcane-0.2.6.dist-info/entry_points.txt,sha256=mF0HNjkDGr868ruFo2a5NhL7gZ5fTET5NOg_UYw42RA,274
+gpbacay_arcane-0.2.6.dist-info/top_level.txt,sha256=BnCObl18-AA4SQYO3DYxZ5K-T-9v2yA_i-cD1DqcjWc,15
+gpbacay_arcane-0.2.6.dist-info/RECORD,,
