@@ -1,0 +1,10 @@
+mondaytoframe/__init__.py,sha256=aVAH-18O-Pb-FPVrclpZ3IcfbkAy4yGeslMUOhRygPA,55
+mondaytoframe/io.py,sha256=m92um0CxJgPAjBe3nY-BM74-9F_o3S0MraEWh1-ZE7I,9079
+mondaytoframe/model.py,sha256=MhvExW80QGtdV4tx_FAVBJXFj77UcYiulYXTXxkddUM,5453
+mondaytoframe/parsers_for_frame.py,sha256=pOCHayawPBCxVJU62yBf4mdTa4h3djALBcYM1lvlIUQ,2832
+mondaytoframe/parsers_for_monday.py,sha256=eejrVlXtyNNlB5cWzqwyjE5OVsSCEgsOBoA55Fgmw44,2246
+mondaytoframe/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mondaytoframe-0.1.3.dist-info/METADATA,sha256=zgyPJV9IQE8iwtVdoGYWFaNuFVuxXaLX88uPl_Bz6wY,4853
+mondaytoframe-0.1.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mondaytoframe-0.1.3.dist-info/licenses/LICENSE,sha256=iSftPddhYLV5rousBHuk1qnc4qvfonRldlXqYjOOuNw,1499
+mondaytoframe-0.1.3.dist-info/RECORD,,
