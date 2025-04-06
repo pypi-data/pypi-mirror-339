@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: gits
+Version: 1.0.0
+Summary: Gits is a Python command-line application designed to help you manage multiple GitHub and GitLab repositories on your development machine. Using it, you can easily generate a new SSH key and add a new account to the list with just one command. After that, you can start cloning from and pushing to multiple GitHub and GitLab accounts without any additional OS or HTTP-level configurations. It automatically sets up everything needed to prevent conflicts between your repositories and accounts.
+Home-page: https://github.com/IG-onGit/Gits
+Author: Irakli Gzirishvili
+Author-email: gziraklirex@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: clight
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+Pending ...
