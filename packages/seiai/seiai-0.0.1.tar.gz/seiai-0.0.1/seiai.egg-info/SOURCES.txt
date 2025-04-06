@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+seiai/__init__.py
+seiai.egg-info/PKG-INFO
+seiai.egg-info/SOURCES.txt
+seiai.egg-info/dependency_links.txt
+seiai.egg-info/requires.txt
+seiai.egg-info/top_level.txt

@@ -1,0 +1,40 @@
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seiai"
+version = "0.0.1"
+description = "The Future Of AI On Sei"
+requires-python = ">=3.8"
+authors = [
+    { name = "Teck", email = "Teckdegen@gmail.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+keywords = ["blockchain", "sei", "ai", "defi", "chatbot", "p2p", "tokens"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet"
+]
+dependencies = [
+    "aiohttp>=3.10.5",
+    "cosmpy>=0.8.0",
+    "langchain>=0.3.0",
+    "langchain-openai>=0.2.1",
+    "langchain-anthropic>=0.2.1",
+    "langchain-google-genai>=0.1.1",
+    "langchain-groq>=0.2.1",
+    "mnemonic>=0.20"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4.0"]

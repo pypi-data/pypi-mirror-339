@@ -1,0 +1,502 @@
+Metadata-Version: 2.1
+Name: seiai
+Version: 0.0.1
+Summary: The Future Of AI On Sei
+Author: Teck
+Author-email: Teck <Teckdegen@gmail.com>
+License: MIT
+Keywords: blockchain,sei,ai,defi,chatbot,p2p,tokens
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp>=3.10.5
+Requires-Dist: cosmpy>=0.8.0
+Requires-Dist: langchain>=0.3.0
+Requires-Dist: langchain-openai>=0.2.1
+Requires-Dist: langchain-anthropic>=0.2.1
+Requires-Dist: langchain-google-genai>=0.1.1
+Requires-Dist: langchain-groq>=0.2.1
+Requires-Dist: mnemonic>=0.20
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4.0; extra == "dev"
+
+Table of Contents
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Quick Start](#quick-start)
+4. [Usage Examples](#usage-examples)
+   - [Wallet Import](#wallet-import)
+   - [Token Sending](#token-sending)
+   - [P2P Token Swaps](#p2p-token-swaps)
+   - [DeFi Data Fetching](#defi-data-fetching)
+   - [AI-Powered Insights](#ai-powered-insights)
+   - [Custom Chatbot Development](#custom-chatbot-development)
+   - [Flexible RPC Node Configuration](#flexible-rpc-node-configuration)
+   - [Flexible AI Agent Selection](#flexible-ai-agent-selection)
+5. [API Reference](#api-reference)
+6. [Configuration Options](#configuration-options)
+   - [RPC Node Configuration](#rpc-node-configuration)
+   - [AI Agent Configuration](#ai-agent-configuration)
+7. [Testing](#testing)
+8. [Contributing](#contributing)
+9. [License](#license)
+10. [Support](#support)
+11. [Roadmap](#roadmap)
+12. [Changelog](#changelog)
+
+## Features
+- **Wallet Import**: Import Sei wallets using a mnemonic phrase. 🤑
+- **Token Sending**: Send tokens to other addresses on the Sei blockchain. 💸
+- **P2P Token Swaps**: Facilitate direct token swaps between users (trust-based, no smart contracts or DEX APIs). 🤝
+- **DeFi Data Fetching**: Access real-time token prices (via DexScreener, CoinGecko) and trading pair data (liquidity, volume). 📊
+- **AI-Powered Insights**:
+  - **Market Analysis**: Analyze market trends using real-time price data and historical trends. 📈
+  - **Trading Signals**: Generate buy/sell signals with confidence levels based on historical data. 📉
+  - **Interactive Chatbot**: A default AI chatbot to answer user queries about tokens, NFTs, market trends, and more. 💬
+- **Custom Chatbot Development**: Build tailored chatbots with custom intents, real-time data integration, and conversation memory. 🤖
+- **Flexible RPC Node Support**:
+  - Use a single RPC node or multiple nodes with automatic fallback. 🔄
+  - Default public Sei testnet nodes for easy setup.
+  - Configurable chain ID (e.g., `atlantic-2` for testnet, `pacific-1` for mainnet).
+- **Flexible AI Agent Selection**:
+  - Use a single AI model for all tasks or assign different models for market analysis, trading signals, and chatbots.
+  - Supported models: OpenAI (GPT-4o), Anthropic (Claude), Google (Gemini), Groq (LLaMA). 🔥
+
+## Installation
+### Prerequisites
+- **Python**: Version 3.8 or higher.
+- **pip**: Ensure you have `pip` installed for package management.
+
+### Install via pip
+The `seiai` SDK can be installed directly from PyPI (once published) with:
+```bash
+pip install seiai
+
+Install from Source
+To install from the source code (e.g., for development):
+Clone the repository:
+bash
+
+git clone https://github.com/yourusername/seiai.git
+cd seiai
+
+Install the package locally (editable install for development):
+bash
+
+pip install -e .
+
+This will use pyproject.toml to build and install the package. A setup.py file is also provided for compatibility with older tools that don’t support pyproject.toml.
+
+Dependencies
+The following dependencies are automatically installed with seiai:
+aiohttp>=3.10.5: For asynchronous HTTP requests.
+
+cosmpy>=0.8.0: For Sei blockchain interactions.
+
+langchain>=0.3.0: Core library for AI features.
+
+langchain-openai>=0.2.1: OpenAI model integration.
+
+langchain-anthropic>=0.2.1: Anthropic model integration.
+
+langchain-google-genai>=0.1.1: Google Gemini model integration.
+
+langchain-groq>=0.2.1: Groq model integration.
+
+mnemonic>=0.20: For wallet mnemonic import.
+
+Quick Start
+Here’s a quick example to get started with the seiai SDK using the default Sei testnet RPC nodes and a single AI agent. First, you’ll need to generate a wallet using a separate tool (e.g., cosmpy), then import it into the SDK.
+Step 1: Generate a Wallet (Using cosmpy)
+python
+
+from cosmpy.aerial.wallet import LocalWallet
+import mnemonic
+
+mnemo = mnemonic.Mnemonic("english")
+mnemonic_phrase = mnemo.generate(strength=256)  # 24-word mnemonic
+print("Your mnemonic phrase:", mnemonic_phrase)
+
+Step 2: Use the seiai SDK
+python
+
+import seiai
+import asyncio
+
+# Initialize the SDK with your mnemonic
+sdk = seiai.seiai(
+    mnemonic="your 24-word mnemonic here",  # Replace with your mnemonic
+    ai_config={
+        "model": "groq",
+        "api_key": "your-groq-api-key",  # Replace with your API key
+        "max_tokens": 500,
+        "temperature": 0.8
+    }
+)
+
+async def main():
+    # Import wallet
+    wallet = await sdk.import_wallet("your 24-word mnemonic here")
+    print("Imported Wallet:", wallet)
+
+    # Fetch SEI token price
+    price = await sdk.get_token_price("SEI", "coingecko")
+    print("SEI Price:", price)
+
+    # Send tokens
+    tx_hash = await sdk.send_tokens("sei1recipientaddress", 10.0)
+    print("Transaction Hash:", tx_hash)
+
+    # Chat with the AI
+    response = await sdk.chat_with_ai("What’s the best token to buy on Sei?")
+    print("Chatbot Response:", response)
+
+# Run the example
+asyncio.run(main())
+
+Usage Examples
+Wallet Import
+Import an Existing Wallet
+Import a wallet using a mnemonic phrase:
+python
+
+wallet = await sdk.import_wallet("word1 word2 ... word24")
+print("Imported Wallet:", wallet)
+
+Token Sending
+Send Tokens
+Send tokens to another address:
+python
+
+tx_hash = await sdk.send_tokens(
+    to_address="sei1recipientaddress",
+    amount=10.0,
+    denom="usei"
+)
+print("Transaction Hash:", tx_hash)
+
+Check Transaction Status
+Check the status of a transaction by its hash:
+python
+
+status = await sdk.check_tx_status(tx_hash)
+print("Transaction Status:", status)
+
+P2P Token Swaps
+Perform a trust-based P2P token swap:
+python
+
+swap_result = await sdk.swap_tokens_p2p(
+    counterparty_address="sei1counterparty",
+    token_to_send="usei",
+    amount_to_send=100,
+    token_to_receive="tokenx",
+    amount_to_receive=50
+)
+print("Swap Result:", swap_result)
+# Note: This is a trust-based swap; the counterparty must manually send their tokens.
+
+DeFi Data Fetching
+Fetch Token Price
+Get the real-time price of a token (e.g., SEI) from DexScreener or CoinGecko:
+python
+
+price = await sdk.get_token_price("SEI", source="coingecko")
+print("SEI Price (USD):", price)
+
+Fetch Trading Pair Data
+Get liquidity and volume data for a trading pair:
+python
+
+trading_data = await sdk.get_dex_trading_data("sei1pairaddress")
+print("Trading Data:", trading_data)
+# Example output:
+# {
+#   "liquidity": 100000.0,
+#   "volume": 50000.0,
+#   "pair": "SEI/USDC"
+# }
+
+AI-Powered Insights
+Market Analysis
+Analyze market trends using real-time price data:
+python
+
+market_analysis = await sdk.analyze_market({"price": 0.5, "trend": "up"})
+print("Market Analysis:", market_analysis)
+
+Trading Signals
+Generate buy/sell signals based on historical data:
+python
+
+signals = await sdk.generate_trading_signals([10, 12, 11, 13])
+print("Trading Signals:", signals)
+
+Default AI Chatbot
+Interact with the default AI chatbot:
+python
+
+response = await sdk.chat_with_ai("What’s the best token to buy on Sei?")
+print("Chatbot Response:", response)
+
+Custom Chatbot Development
+Create a Custom Chatbot
+Build a custom chatbot with specific intents:
+python
+
+custom_bot = sdk.create_custom_chatbot(
+    model_name="groq",
+    api_key="your-groq-api-key",
+    intents={
+        "greet": lambda msg, data: f"Hello! SEI price is ${data} USD. {msg}",
+        "help": lambda msg, data: "Need help? Use /import_wallet to start!"
+    },
+    system_prompt="You are a friendly Sei assistant."
+)
+response = await custom_bot.process_message("greet me")
+print("Custom Chatbot Response:", response)
+
+Add Intents Dynamically
+Add new intents to the chatbot at runtime:
+python
+
+async def custom_handler(msg, data):
+    return f"Custom response with SEI price: ${data} USD."
+
+custom_bot.add_intent("custom", custom_handler)
+response = await custom_bot.process_message("custom command")
+print("Custom Intent Response:", response)
+
+Flexible RPC Node Configuration
+Use Default RPC Nodes
+Use the default Sei testnet nodes with automatic fallback:
+python
+
+sdk = seiai.seiai(
+    mnemonic="your 24-word mnemonic here",
+    ai_config={"model": "groq", "api_key": "your-groq-api-key"}
+)
+
+Use a Single Custom RPC Node
+Specify a single custom RPC node:
+python
+
+sdk = seiai.seiai(
+    rpc_nodes=["https://your-custom-rpc-node.com"],
+    chain_id="atlantic-2",
+    mnemonic="your 24-word mnemonic here",
+    ai_config={"model": "groq", "api_key": "your-groq-api-key"}
+)
+
+Use Multiple RPC Nodes
+Provide multiple RPC nodes for fallback:
+python
+
+sdk = seiai.seiai(
+    rpc_nodes=[
+        "https://your-primary-rpc-node.com",
+        "https://your-fallback-rpc-node.com"
+    ],
+    chain_id="pacific-1",  # Sei mainnet
+    mnemonic="your 24-word mnemonic here",
+    ai_config={"model": "groq", "api_key": "your-groq-api-key"}
+)
+
+Flexible AI Agent Selection
+Use a Single AI Agent
+Use one AI agent for all tasks:
+python
+
+# Using LLaMA 3.3 70B Versatile with Groq
+sdk = seiai.seiai(
+    ai_config={
+        "model": "llama-3.3-70b-versatile",  # Advanced LLaMA model
+        "api_key": "your-groq-api-key",
+        "system_prompt": None,
+        "max_tokens": 500,
+        "temperature": 0.8
+    }
+)
+
+# Using Other Models
+sdk = seiai.seiai(
+    ai_config={
+        "model": "groq",  # Can be: "groq", "llama-3.3-70b-versatile", "claude-3-opus-20240229", "gpt-4", "gemini-1.5-pro"
+        "api_key": "your-groq-api-key",
+        "system_prompt": None,
+        "max_tokens": 500,
+        "temperature": 0.8
+    }
+)
+
+API Reference
+SeiAISDK Class
+The main class of the SDK, providing access to all features. Available via seiai.seiai.
+Constructor
+python
+
+seiai.seiai(
+    rpc_nodes: Optional[List[str]] = None,
+    chain_id: str = "atlantic-2",
+    mnemonic: str = None,
+    ai_config: Optional[Dict[str, Any]] = None,
+    ai_agents_config: Optional[Dict[str, Dict[str, Any]]] = None
+)
+
+rpc_nodes: List of RPC node URLs. Defaults to public Sei testnet nodes.
+
+chain_id: Sei network chain ID (e.g., atlantic-2 for testnet, pacific-1 for mainnet).
+
+mnemonic: Mnemonic phrase for wallet import (required for transaction operations).
+
+ai_config: Configuration for a single AI agent.
+
+ai_agents_config: Configuration for multiple AI agents.
+
+Methods
+import_wallet(mnemonic_phrase: str) -> Dict[str, str]: Imports a Sei wallet using a mnemonic phrase.
+
+send_tokens(to_address: str, amount: float, denom: str = "usei") -> Dict[str, Any]: Sends tokens to another address.
+
+check_tx_status(tx_hash: str) -> Dict[str, Any]: Checks the status of a transaction.
+
+swap_tokens_p2p(counterparty_address: str, token_to_send: str, amount_to_send: float, token_to_receive: str, amount_to_receive: float, denom_to_send: str = "usei", denom_to_receive: str = "tokenx") -> Dict[str, Any]: Performs a P2P token swap.
+
+get_token_price(token_symbol: str, source: str = "dexscreener") -> float: Fetches a token’s price.
+
+get_dex_trading_data(pair_address: str) -> Dict[str, float]: Fetches trading pair data.
+
+analyze_market(price_data: Dict[str, Any]) -> str: Analyzes market trends.
+
+generate_trading_signals(historical_data: list) -> str: Generates trading signals.
+
+chat_with_ai(message: str) -> str: Interacts with the default AI chatbot.
+
+create_custom_chatbot(model_name: Optional[str] = None, api_key: Optional[str] = None, intents: Optional[Dict[str, Callable]] = None, system_prompt: Optional[str] = None, max_tokens: Optional[int] = None, temperature: Optional[float] = None) -> CustomChatbot: Creates a custom chatbot.
+
+Configuration Options
+RPC Node Configuration
+The SDK supports flexible RPC node configurations:
+Default Nodes: Uses public Sei testnet nodes if none are provided.
+
+Single Node: Specify a single RPC node:
+python
+
+sdk = seiai.seiai(rpc_nodes=["https://your-custom-rpc-node.com"])
+
+Multiple Nodes: Provide a list of nodes for fallback:
+python
+
+sdk = seiai.seiai(rpc_nodes=["https://node1.com", "https://node2.com"])
+
+Chain ID: Specify the chain ID for the network:
+python
+
+sdk = seiai.seiai(chain_id="pacific-1")  # Sei mainnet
+
+AI Agent Configuration
+Single AI Agent
+Use one AI model for all tasks:
+python
+
+ai_config = {
+    "model": "groq",  # Options: "openai", "claude", "gemini", "groq"
+    "api_key": "your-groq-api-key",
+    "system_prompt": None,  # Optional custom prompt
+    "max_tokens": 500,
+    "temperature": 0.8
+}
+sdk = seiai.seiai(ai_config=ai_config)
+
+Multiple AI Agents
+Assign different models for each task:
+python
+
+ai_agents_config = {
+    "market_analysis": {
+        "model": "openai",
+        "api_key": "your-openai-api-key",
+        "max_tokens": 500,
+        "temperature": 0.7
+    },
+    "trading_signals": {
+        "model": "gemini",
+        "api_key": "your-gemini-api-key",
+        "max_tokens": 400,
+        "temperature": 0.6
+    },
+    "chatbot": {
+        "model": "groq",
+        "api_key": "your-groq-api-key",
+        "max_tokens": 300,
+        "temperature": 0.8
+    }
+}
+sdk = seiai.seiai(ai_agents_config=ai_agents_config)
+
+Testing
+The SDK includes unit tests in the tests/ directory. To run the tests:
+Install development dependencies:
+bash
+
+pip install ".[dev]"
+
+Run the tests:
+bash
+
+pytest tests/
+
+The tests cover wallet import, token sending, P2P swaps, DeFi data fetching, AI interactions, and custom chatbot functionality.
+Contributing
+We welcome contributions to the seiai SDK! Follow these steps to contribute:
+Fork the Repository:
+bash
+
+git clone https://github.com/Teckdegen/seiai.git
+cd seiai
+
+Create a Feature Branch:
+bash
+
+git checkout -b feature/your-feature-name
+
+Make Changes and Commit:
+bash
+
+git add .
+git commit -m "Add your feature description"
+
+Push to Your Fork:
+bash
+
+git push origin feature/your-feature-name
+
+Open a Pull Request: Go to the GitHub repository and create a pull request from your branch.
+
+Code Style
+Follow PEP 8 guidelines for Python code.
+
+Use type hints where applicable.
+
+Include docstrings for all classes and methods.
+
+Add unit tests for new features in the tests/ directory.
+
+Reporting Issues
+If you encounter bugs or have feature requests, open an issue on GitHub.
+License
+The seiai SDK is licensed under the MIT License. See the LICENSE file for details.
+Support
+For questions, issues, or feedback:
+GitHub Issues: Open an issue at https://github.com/Teckdegen/seiai/issues.
+
+
+Email: Contact the author at teckdegen@gmail.com .
