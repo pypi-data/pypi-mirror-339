@@ -1,0 +1,54 @@
+{   
+    "devices": [
+        {
+            "host": "10.2.3.101",
+            "username": "netsim",
+            "password": "netsim1234",
+            "secret": null,
+            "device_type": "extreme_exos"
+        },
+        {
+            "host": "10.2.3.103",
+            "username": "netsim",
+            "password": "netsim1234",
+            "secret": null,
+            "device_type": "cisco_xe"
+        },
+        {
+            "host": "10.2.3.104",
+            "username": "netsim",
+            "password": "netsim1234",
+            "secret": null,
+            "device_type": "juniper",
+            "global_delay_factor": 2
+        },
+        {
+            "host": "10.2.3.105",
+            "username": "netsim",
+            "password": "netsim1234",
+            "secret": null,
+            "device_type": "cisco_xr"
+        },
+        {
+            "host": "10.2.3.107",
+            "username": "netsim",
+            "password": "netsim1234",
+            "secret": null,
+            "device_type": "huawei"
+        },
+        {
+            "host": "10.2.3.108",
+            "username": "netsim",
+            "password": "netsim1234",
+            "secret": null,
+            "device_type": "vyos"
+        },
+        {
+            "host": "10.2.3.109",
+            "username": "netsim",
+            "password": "netsim1234",
+            "secret": null,
+            "device_type": "cisco_nxos"
+        }
+    ]
+}

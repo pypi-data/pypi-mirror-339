@@ -1,0 +1,59 @@
+{
+    "10.2.3.101": {
+      "commands": [
+        "create vlan Loopback0",
+        "configure vlan Loopback0 add ports 1",
+        "configure vlan Loopback0 ipaddress 192.168.10.1/32",
+        "enable loopback0"
+      ]
+    },
+    "10.2.3.103": {
+      "commands": [
+        "interface loop1",
+        "ip address 192.168.11.3 255.255.255.0",
+        "description loopback 1",
+        "end",
+        "write memory"
+      ]
+    },
+    "10.2.3.104": {
+      "commands": [
+        "set interfaces lo0 unit 0 family inet address 192.168.12.4/32",
+        "set interfaces lo0 description Conection_to_core",
+        "commit",
+        "exit"
+      ]
+    },
+    "10.2.3.105": {
+      "commands": [
+        "interface loop0",
+        "ip address 192.168.10.5 255.255.255.0",
+        "commit"
+      ]
+    },
+    "10.2.3.107": {
+      "commands": [
+        "interface LoopBack0",
+        "ip address 192.168.10.7 255.255.255.255",
+        "commit",
+        "quit"
+      ]
+    },
+    "10.2.3.108": {
+      "commands": [
+        "configure",
+        "set interfaces loopback lo description 'Conexion to core'",
+        "commit",
+        "save",
+        "exit"
+      ]
+    },
+    "10.2.3.109": {
+      "commands": [
+        "interface loop0",
+        "ip address 192.168.10.9 255.255.255.0",
+        "end",
+        "copy running-config startup-config"
+      ]
+    }
+ }
