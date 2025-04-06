@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: atex
+Version: 0.2
+Summary: Ad-hoc Test EXecutor
+Project-URL: Homepage, https://github.com/RHSecurityCompliance/atex
+License-Expression: GPL-3.0-or-later
+License-File: COPYING.txt
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Testing
+Requires-Python: >=3.9
+Requires-Dist: fmf>=1.6
+Requires-Dist: urllib3<3,>=2
