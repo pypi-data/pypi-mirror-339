@@ -1,0 +1,5 @@
+[console_scripts]
+dynamont-NT-banded = dynamont.wrappers.nt_banded_entry:main
+dynamont-NTC = dynamont.wrappers.ntc_entry:main
+dynamont-resquiggle = src.python.segmentation.segment:main
+dynamont-train = src.python.segmentation.train:main
