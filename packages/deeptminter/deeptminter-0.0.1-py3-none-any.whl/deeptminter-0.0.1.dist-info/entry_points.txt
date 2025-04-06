@@ -1,0 +1,5 @@
+[console_scripts]
+deeptminter=deeptminter.predict:isite_
+deeptminter_assemble=deeptminter.predict:stacking_
+deeptminter_download=deeptminter.predict:download
+
