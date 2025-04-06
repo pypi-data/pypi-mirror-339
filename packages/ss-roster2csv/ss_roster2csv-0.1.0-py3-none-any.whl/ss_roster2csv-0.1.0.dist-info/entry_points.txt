@@ -1,0 +1,2 @@
+[console_scripts]
+ss_roster2csv = ss_roster2csv.cli:main
