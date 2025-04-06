@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <!-- Pico.css is included by FastHTML -->
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>{{ title }}</h1>
+            <p>Ask questions about your documentation</p>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/kb-status">Knowledge Base</a></li>
+                    <li><a href="/model-info">Models</a></li>
+                    <li><a href="/templates">Templates</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="question-form">
+            <form action="/ask" method="post">
+                <div class="grid">
+                    <div>
+                        <label for="question">Question</label>
+                        <input type="text" id="question" name="question" placeholder="Ask a question about your documentation..." required value="{{ question or '' }}">
+                    </div>
+                    <div>
+                        <label for="model">Model</label>
+                        <select id="model" name="model">
+                            <option value="">Default ({{ default_model }})</option>
+                            <option value="openai" {% if model == "openai" %}selected{% endif %}>OpenAI</option>
+                            <option value="claude" {% if model == "claude" %}selected{% endif %}>Claude</option>
+                            <option value="gemini" {% if model == "gemini" %}selected{% endif %}>Gemini</option>
+                            <option value="groq" {% if model == "groq" %}selected{% endif %}>Groq</option>
+                            <option value="ollama" {% if model == "ollama" %}selected{% endif %}>Ollama (local)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div>
+                        <label for="template">Template</label>
+                        <select id="template" name="template">
+                            <option value="">Default</option>
+                            <option value="isolation" {% if template == "isolation" %}selected{% endif %}>Isolation (document knowledge only)</option>
+                            <option value="complementary" {% if template == "complementary" %}selected{% endif %}>Complementary (docs first, then general knowledge)</option>
+                            <option value="supplementary" {% if template == "supplementary" %}selected{% endif %}>Supplementary (combine docs & general knowledge)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>&nbsp;</label>
+                        <button type="submit" name="action" value="ask">Ask Question</button>
+                    </div>
+                </div>
+            </form>
+            
+            <form action="/preview" method="get" class="mt-3">
+                <input type="hidden" name="question" value="{{ question or '' }}">
+                <button type="submit" name="action" value="preview" {% if not question %}disabled{% endif %}>Preview Matching Documents</button>
+            </form>
+        </section>
+
+        {% if answer %}
+        <section id="results" class="mt-4">
+            <article id="answer-container" class="mb-3">
+                <header>
+                    <h3>Answer</h3>
+                </header>
+                <div id="answer" class="p-3 mt-2" style="background-color: var(--card-background-color); border-radius: var(--border-radius);">
+                    {{ answer|safe }}
+                </div>
+            </article>
+
+            <article id="sources-container" class="mb-3">
+                <details>
+                    <summary>Sources</summary>
+                    <div id="sources" class="mt-2">
+                        {% if matches %}
+                            {% for match in matches %}
+                                <article>
+                                    <header>
+                                        <h5>{{ match.filename }}</h5>
+                                    </header>
+                                    <pre>{{ match.snippet }}</pre>
+                                </article>
+                            {% endfor %}
+                        {% else %}
+                            <p>No source documents matched this query.</p>
+                        {% endif %}
+                    </div>
+                </details>
+            </article>
+            
+            {% if model %}
+            <p class="text-muted"><small>Model used: {{ model }}</small></p>
+            {% endif %}
+        </section>
+        {% endif %}
+
+        {% if preview_matches %}
+        <section id="preview-results" class="mt-4">
+            <article>
+                <header>
+                    <h3>Document Matches for: {{ question }}</h3>
+                </header>
+                <div id="preview-matches" class="mt-2">
+                    {% if preview_matches|length > 0 %}
+                        {% for match in preview_matches %}
+                            <article>
+                                <header>
+                                    <h5>{{ match.filename }}</h5>
+                                </header>
+                                <pre>{{ match.snippet }}</pre>
+                            </article>
+                        {% endfor %}
+                    {% else %}
+                        <p>No matching documents found.</p>
+                    {% endif %}
+                </div>
+            </article>
+        </section>
+        {% endif %}
+
+        {% if error %}
+        <section id="error" class="mt-4">
+            <article class="mb-3">
+                <header>
+                    <h3>Error</h3>
+                </header>
+                <div class="p-3 mt-2" style="background-color: var(--card-sectionning-background-color); border-radius: var(--border-radius);">
+                    {{ error }}
+                </div>
+            </article>
+        </section>
+        {% endif %}
+
+        <footer class="mt-4">
+            <hr>
+            <small>AskDocs - A document assistant powered by LLMs and RAG</small>
+        </footer>
+    </main>
+</body>
+</html>

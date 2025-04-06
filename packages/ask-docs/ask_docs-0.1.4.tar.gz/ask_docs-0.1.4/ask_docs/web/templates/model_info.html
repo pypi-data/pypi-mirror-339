@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <!-- Pico.css is included by FastHTML -->
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>{{ title }}</h1>
+            <p><a href="/">&larr; Back to AskDocs Home</a></p>
+        </header>
+
+        <section>
+            <h2>Available Models</h2>
+            <p>Default model: <strong>{{ default_model }}</strong></p>
+            
+            <div class="grid">
+                {% for name, model in models.items() %}
+                <article>
+                    <header>
+                        <h3>{{ name|title }}</h3>
+                        {% if name == default_model %}
+                        <span class="badge">Default</span>
+                        {% endif %}
+                    </header>
+                    <p><strong>Model:</strong> {{ model.model }}</p>
+                    <p><strong>API Key:</strong> 
+                        {% if model.api_key_set %}
+                        <span style="color: green;">✓ Configured</span>
+                        {% elif name == "ollama" %}
+                        <span>N/A (uses local service)</span>
+                        {% else %}
+                        <span style="color: red;">✗ Not configured</span>
+                        {% endif %}
+                    </p>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <h3>Setting Up API Keys</h3>
+            <p>You can set API keys in your <code>.env</code> file or in <code>config.json</code>:</p>
+            <pre><code># In .env file
+OPENAI_API_KEY=sk-...
+CLAUDE_API_KEY=sk-ant-...
+GEMINI_API_KEY=AIza...
+GROQ_API_KEY=gsk_...</code></pre>
+        </section>
+
+        <footer class="mt-4">
+            <hr>
+            <small>AskDocs - A document assistant powered by LLMs and RAG</small>
+        </footer>
+    </main>
+</body>
+</html>

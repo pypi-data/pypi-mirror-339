@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <!-- Pico.css is included by FastHTML -->
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>{{ title }}</h1>
+            <p><a href="/">&larr; Back to AskDocs Home</a></p>
+        </header>
+
+        <section>
+            <h2>Knowledge Base Status</h2>
+            
+            <article>
+                <header>
+                    <h3>Source Directory</h3>
+                </header>
+                <p>{{ source_dir }}</p>
+                
+                <div class="grid">
+                    <div>
+                        <h4>Documents</h4>
+                        <p class="text-large">{{ document_count }}</p>
+                    </div>
+                    
+                    {% if kb_exists %}
+                    <div>
+                        <h4>Chunks</h4>
+                        <p class="text-large">{{ chunk_count }}</p>
+                    </div>
+                    
+                    <div>
+                        <h4>Embedding Model</h4>
+                        <p>{{ embedding_model or "None (using lexical search)" }}</p>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                {% if kb_exists %}
+                <p style="color: green;">✓ Knowledge base is built and ready</p>
+                {% else %}
+                <p style="color: red;">✗ Knowledge base not yet built</p>
+                <p>To build the knowledge base, run: <code>docbuddy build-kb</code></p>
+                {% endif %}
+            </article>
+        </section>
+
+        <section>
+            <h3>Managing the Knowledge Base</h3>
+            <p>You can manage the knowledge base through the CLI:</p>
+            <pre><code># Build knowledge base
+docbuddy build-kb
+
+# Customize chunking parameters
+docbuddy build-kb --chunk-size 500 --chunk-overlap 100
+
+# Use a different embedding model
+docbuddy build-kb --embedding-model all-mpnet-base-v2
+
+# Force rebuild even if no changes detected
+docbuddy build-kb --force</code></pre>
+        </section>
+
+        <footer class="mt-4">
+            <hr>
+            <small>AskDocs - A document assistant powered by LLMs and RAG</small>
+        </footer>
+    </main>
+</body>
+</html>

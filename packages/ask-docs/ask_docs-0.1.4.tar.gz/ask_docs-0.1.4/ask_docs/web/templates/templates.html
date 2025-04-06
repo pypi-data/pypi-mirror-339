@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <!-- Pico.css is included by FastHTML -->
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>{{ title }}</h1>
+            <p><a href="/">&larr; Back to AskDocs Home</a></p>
+        </header>
+
+        <section>
+            <h2>Available Prompt Templates</h2>
+            <p>Default template: <strong>{{ default_template }}</strong></p>
+            
+            <div class="grid">
+                {% for name, template_text in templates.items() %}
+                <article>
+                    <header>
+                        <h3>{{ name|title }}</h3>
+                        {% if name == default_template %}
+                        <span class="badge">Default</span>
+                        {% endif %}
+                    </header>
+                    <p>
+                        {% if name == "isolation" %}
+                            Uses <strong>only</strong> document knowledge. Best for factual queries about your documents.
+                        {% elif name == "complementary" %}
+                            Uses documents <strong>first</strong>, falls back to LLM knowledge when needed.
+                        {% elif name == "supplementary" %}
+                            <strong>Combines</strong> document knowledge with LLM general knowledge.
+                        {% else %}
+                            Custom template
+                        {% endif %}
+                    </p>
+                    <details>
+                        <summary>View template</summary>
+                        <pre><code>{{ template_text }}</code></pre>
+                    </details>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <h3>Using Templates</h3>
+            <p>You can select a template when asking a question through:</p>
+            <ul>
+                <li>The web interface dropdown menu</li>
+                <li>CLI: <code>docbuddy ask "your question" --template isolation</code></li>
+                <li>Change the default in <code>config.json</code></li>
+            </ul>
+        </section>
+
+        <footer class="mt-4">
+            <hr>
+            <small>AskDocs - A document assistant powered by LLMs and RAG</small>
+        </footer>
+    </main>
+</body>
+</html>

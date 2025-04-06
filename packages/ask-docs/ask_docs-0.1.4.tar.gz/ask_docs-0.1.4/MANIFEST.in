@@ -1,0 +1,8 @@
+include LICENSE
+include CONTRIBUTING.md
+include README.md
+include config.json.example
+include env-template.txt
+recursive-include ask_docs/web/templates *.html
+recursive-include ask_docs/web/static *
+recursive-include ask_docs/tui *.css
