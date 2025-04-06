@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: ecocycle
+Version: 2.5.2
+Summary: Cycle into a greener tomorrow
+Author: Shirish Pothi
+Author-email: shirish.pothi.27@gmail.com
+Requires-Python: >=3.10,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Requires-Dist: cryptography (>=42.0.0,<43.0.0)
+Requires-Dist: google-api-python-client (>=2.149.0,<3.0.0)
+Requires-Dist: google-auth (>=2.35.0,<3.0.0)
+Requires-Dist: google-auth-httplib2 (>=0.1.0,<0.2.0)
+Requires-Dist: google-auth-oauthlib (>=1.0.0,<2.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: tqdm (>=4.66.1,<5.0.0)
+Requires-Dist: weatherapi-python (>=1.2.0,<2.0.0)
+Requires-Dist: yagmail (>=0.15.293,<0.16.0)
