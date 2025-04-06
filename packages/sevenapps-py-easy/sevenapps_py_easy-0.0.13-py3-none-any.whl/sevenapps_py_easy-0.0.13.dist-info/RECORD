@@ -1,0 +1,16 @@
+sevenapps/__init__.py,sha256=1wla5Lnuwk3n-0krqDNdg6J44Y8Hw5LbwIslvWZo5Z0,43
+sevenapps/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sevenapps/services/google_firestore_connector.py,sha256=fJZ1hunIlyLopVDW27EIUcrr2okESZGJa7FYFN1aY-8,9031
+sevenapps/services/google_services_connector.py,sha256=ioG3lSEnwqmKi3bGVuMtgoCVa3koUeSe7Ogu4SOiDu0,2723
+sevenapps/services/my_jdownloader_connector.py,sha256=XWhRBnqAt7Wvoeq48udxwKR5_k3kINCQ9J6ylIi_ojs,2492
+sevenapps/services/plex_connector.py,sha256=hZi7V_PxRtlXlnifDdmvtsf2tBwLp9QcvM58HlhfWE4,339
+sevenapps/services/selenium_connector.py,sha256=obBtK5tyZxLzmVFjtxn-D7ki15HwdfkMQTRaTexDxgw,3301
+sevenapps/services/ssh_connector.py,sha256=KIBxmOQx84zNLzKcAercbPdhli19JBSFr8iWDGhLyyc,1906
+sevenapps/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sevenapps/utils/data_manager.py,sha256=ahcSmSanKPGugy98QVTlbL-pEpihf-CX6ZX08Hsbkwo,1278
+sevenapps/utils/file_manager.py,sha256=xJUjc1Ij7-i-yotnx8CGXuM29TIUBqN3GsQnExAflhE,1584
+sevenapps_py_easy-0.0.13.dist-info/licenses/LICENSE,sha256=EaQhA0IDN21dBIAb-1j1BlwPaznRKFBTEugBoZVcjlI,1086
+sevenapps_py_easy-0.0.13.dist-info/METADATA,sha256=flVXtHWG3RqCYNqZ38OV5k8e1qrpqW9sAjZkrb2zbdM,656
+sevenapps_py_easy-0.0.13.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+sevenapps_py_easy-0.0.13.dist-info/top_level.txt,sha256=1e-bLTKO1CRzE7cuJLrgMP1LfV7-joY5rcgm3p40B2o,10
+sevenapps_py_easy-0.0.13.dist-info/RECORD,,
