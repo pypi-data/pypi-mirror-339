@@ -1,0 +1,64 @@
+CMakeLists.txt
+MANIFEST.in
+setup.py
+external/mtpng/.gitignore
+external/mtpng/.mailmap
+external/mtpng/Cargo.lock
+external/mtpng/Cargo.toml
+external/mtpng/Makefile
+external/mtpng/build-ios.sh
+external/mtpng/build-win.bat
+external/mtpng/license.md
+external/mtpng/readme.md
+external/mtpng/test-filters.sh
+external/mtpng/test-pngsuite.sh
+external/mtpng/test-sample.bat
+external/mtpng/test-sample.sh
+external/mtpng/test-samples.bat
+external/mtpng/test-samples.sh
+external/mtpng/c/module.map
+external/mtpng/c/mtpng.h
+external/mtpng/c/sample.c
+external/mtpng/src/capi.rs
+external/mtpng/src/deflate.rs
+external/mtpng/src/encoder.rs
+external/mtpng/src/filter.rs
+external/mtpng/src/lib.rs
+external/mtpng/src/utils.rs
+external/mtpng/src/writer.rs
+external/mtpng/src/bin/mtpng.rs
+include/color_difference.h
+include/config.h
+include/palettum.h
+include/simd_math.h
+include/color/lab.h
+include/color/rgb.h
+include/image/gif.h
+include/image/image.h
+src/CMakeLists.txt
+src/bindings.cpp
+src/palettum.cpp
+src/color/lab.cpp
+src/color/rgb.cpp
+src/color_difference/cie76.cpp
+src/color_difference/cie94.cpp
+src/color_difference/ciede2000.cpp
+src/image/gif.cpp
+src/image/image.cpp
+src/palettum/__init__.py
+src/palettum/cli.py
+src/palettum.egg-info/PKG-INFO
+src/palettum.egg-info/SOURCES.txt
+src/palettum.egg-info/dependency_links.txt
+src/palettum.egg-info/entry_points.txt
+src/palettum.egg-info/not-zip-safe
+src/palettum.egg-info/requires.txt
+src/palettum.egg-info/top_level.txt
+src/palettum/palettes/Catppuccin Frappe.json
+src/palettum/palettes/Catppuccin Latte.json
+src/palettum/palettes/Catppuccin Macchiato.json
+src/palettum/palettes/Catppuccin Mocha.json
+src/palettum/palettes/Dracula.json
+src/palettum/palettes/Nord.json
+src/palettum/palettes/gruvbox.json
+src/palettum/palettes/r_place 2022.json

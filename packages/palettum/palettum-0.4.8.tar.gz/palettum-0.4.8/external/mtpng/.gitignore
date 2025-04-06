@@ -1,0 +1,11 @@
+/target
+**/*.rs.bk
+Cargo.lock
+/out
+.DS_Store
+cachegrind.out.*
+/perf.*
+/build
+/darwin/mtpng
+xcuserdata
+.vscode

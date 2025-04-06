@@ -1,0 +1,50 @@
+[package]
+name = "mtpng"
+version = "0.4.1"
+authors = ["Brooke Vibber <bvibber@pobox.com>"]
+license = "MIT"
+description = "Multithreaded PNG encoder library"
+readme = "readme.md"
+homepage = "https://github.com/bvibber/mtpng"
+repository = "https://github.com/bvibber/mtpng.git"
+keywords = ["png", "multithreaded", "threaded", "parallel"]
+categories = ["multimedia::images"]
+
+[features]
+
+# Rust-only
+default=[]
+
+# include command-line tool
+cli=["png", "clap", "time"]
+
+# include C symbol exports
+capi=["libc"]
+
+[[bin]]
+name="mtpng"
+path="src/bin/mtpng.rs"
+required-features=["cli"]
+
+[dependencies]
+rayon = "1.5.0"
+crc = "1.8.1"
+libz-sys = "1.0.23"
+itertools = "0.10.0"
+
+# implied deps for cli
+png = { version = "0.17.5", optional = true }
+clap = { version = "3.1.12", optional = true }
+time = { version = "0.3.9", optional = true }
+
+# implied deps for capi
+libc = { version = "0.2.43", optional = true }
+
+[lib]
+crate-type = ["rlib", "cdylib", "staticlib"]
+
+[profile.release]
+## Unoptimized debug builds are too slow to profile!
+## Having debug info doesn't hurt perf but does increase
+## size, so enable this if needed.
+# debug = true

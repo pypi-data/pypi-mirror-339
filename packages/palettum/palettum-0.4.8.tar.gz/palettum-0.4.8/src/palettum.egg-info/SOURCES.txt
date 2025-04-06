@@ -1,0 +1,9 @@
+setup.py
+src/cli.py
+src/palettum.egg-info/PKG-INFO
+src/palettum.egg-info/SOURCES.txt
+src/palettum.egg-info/dependency_links.txt
+src/palettum.egg-info/entry_points.txt
+src/palettum.egg-info/not-zip-safe
+src/palettum.egg-info/requires.txt
+src/palettum.egg-info/top_level.txt
