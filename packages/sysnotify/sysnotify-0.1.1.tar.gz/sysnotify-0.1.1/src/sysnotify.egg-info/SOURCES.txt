@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/sysnotify/__init__.py
+src/sysnotify.egg-info/PKG-INFO
+src/sysnotify.egg-info/SOURCES.txt
+src/sysnotify.egg-info/dependency_links.txt
+src/sysnotify.egg-info/requires.txt
+src/sysnotify.egg-info/top_level.txt

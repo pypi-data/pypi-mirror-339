@@ -1,0 +1,14 @@
+[project]
+name = "sysnotify"
+version = "0.1.1"
+description = "A Python package for system notifications and sounds"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "plyer>=2.1.0",
+    "pyttsx3>=2.98",
+]
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+default = true

@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: sysnotify
+Version: 0.1.1
+Summary: A Python package for system notifications and sounds
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: plyer>=2.1.0
+Requires-Dist: pyttsx3>=2.98
+Dynamic: license-file
