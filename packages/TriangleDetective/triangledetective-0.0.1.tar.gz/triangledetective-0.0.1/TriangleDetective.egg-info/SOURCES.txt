@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+TriangleDetective/__init__.py
+TriangleDetective.egg-info/PKG-INFO
+TriangleDetective.egg-info/SOURCES.txt
+TriangleDetective.egg-info/dependency_links.txt
+TriangleDetective.egg-info/top_level.txt
