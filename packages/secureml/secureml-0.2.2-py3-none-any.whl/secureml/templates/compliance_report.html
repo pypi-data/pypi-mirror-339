@@ -1,0 +1,97 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Compliance Report - {{ report.regulation }}</title>
+            <style>
+                {{ css }}
+            </style>
+        </head>
+        <body>
+            <div class="report-header">
+                <div>
+                    <h1>Compliance Report</h1>
+                    <p>Regulation: {{ report.regulation }}</p>
+                    <p>Generated: {{ generation_time }}</p>
+                </div>
+                {% if logo_base64 %}
+                <div>
+                    <img src="data:image/png;base64,{{ logo_base64 }}" alt="Logo" style="max-height: 60px;">
+                </div>
+                {% endif %}
+            </div>
+            
+            <div class="report-summary">
+                <h2>Summary</h2>
+                <p>Status: <strong>{{ "Compliant" if report.summary().compliant else "Non-compliant" }}</strong></p>
+                <p>Passed Checks: {{ report.passed_checks|length }}</p>
+                <p>Issues: {{ report.issues|length }}</p>
+                <p>Warnings: {{ report.warnings|length }}</p>
+            </div>
+            
+            {% if charts.issues_by_severity_base64 %}
+            <div class="chart-container">
+                <img src="data:image/png;base64,{{ charts.issues_by_severity_base64 }}" alt="Issues by Severity">
+            </div>
+            {% endif %}
+            
+            {% if report.issues %}
+            <div class="report-section">
+                <h2>Issues</h2>
+                <table>
+                    <tr>
+                        <th>Component</th>
+                        <th>Issue</th>
+                        <th>Severity</th>
+                        <th>Recommendation</th>
+                    </tr>
+                    {% for issue in report.issues %}
+                    <tr class="issue">
+                        <td>{{ issue.component }}</td>
+                        <td>{{ issue.issue }}</td>
+                        <td class="{{ issue.severity }}">{{ issue.severity|upper }}</td>
+                        <td>{{ issue.recommendation }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            {% endif %}
+            
+            {% if report.warnings %}
+            <div class="report-section">
+                <h2>Warnings</h2>
+                <table>
+                    <tr>
+                        <th>Component</th>
+                        <th>Warning</th>
+                        <th>Recommendation</th>
+                    </tr>
+                    {% for warning in report.warnings %}
+                    <tr class="warning">
+                        <td>{{ warning.component }}</td>
+                        <td>{{ warning.warning }}</td>
+                        <td>{{ warning.recommendation }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            {% endif %}
+            
+            {% if report.passed_checks %}
+            <div class="report-section">
+                <h2>Passed Checks</h2>
+                <ul>
+                    {% for check in report.passed_checks %}
+                    <li class="passed">{{ check }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            
+            <footer>
+                <p>Generated with SecureML - {{ secureml_version }}</p>
+            </footer>
+        </body>
+        </html>
+        

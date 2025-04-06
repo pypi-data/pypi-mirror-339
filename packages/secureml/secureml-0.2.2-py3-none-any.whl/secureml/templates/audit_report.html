@@ -1,0 +1,74 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Audit Report - {{ title }}</title>
+            <style>
+                {{ css }}
+            </style>
+        </head>
+        <body>
+            <div class="report-header">
+                <div>
+                    <h1>Audit Trail Report</h1>
+                    <p>{{ title }}</p>
+                    <p>Generated: {{ generation_time }}</p>
+                </div>
+                {% if logo_base64 %}
+                <div>
+                    <img src="data:image/png;base64,{{ logo_base64 }}" alt="Logo" style="max-height: 60px;">
+                </div>
+                {% endif %}
+            </div>
+            
+            <div class="report-summary">
+                <h2>Summary</h2>
+                <p>Operation: {{ metadata.operation }}</p>
+                {% if metadata.start_time and metadata.end_time %}
+                <p>Time Period: {{ metadata.start_time }} to {{ metadata.end_time }}</p>
+                {% endif %}
+                <p>Total Events: {{ logs|length }}</p>
+                {% if metadata.regulations %}
+                <p>Relevant Regulations: {{ metadata.regulations|join(', ') }}</p>
+                {% endif %}
+            </div>
+            
+            {% if charts.events_by_type_base64 %}
+            <div class="chart-container">
+                <img src="data:image/png;base64,{{ charts.events_by_type_base64 }}" alt="Events by Type">
+            </div>
+            {% endif %}
+            
+            <div class="report-section">
+                <h2>Event Timeline</h2>
+                <table>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Event Type</th>
+                        <th>Details</th>
+                    </tr>
+                    {% for event in logs %}
+                    <tr>
+                        <td class="timestamp">{{ event.timestamp }}</td>
+                        <td>{{ event.event_type }}</td>
+                        <td>
+                            <ul>
+                            {% for key, value in event.items() %}
+                                {% if key not in ['timestamp', 'event_type'] %}
+                                <li><strong>{{ key }}:</strong> {{ value }}</li>
+                                {% endif %}
+                            {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            
+            <footer>
+                <p>Generated with SecureML - {{ secureml_version }}</p>
+            </footer>
+        </body>
+        </html>
+        
