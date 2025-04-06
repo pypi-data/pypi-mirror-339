@@ -1,0 +1,40 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<div id="site-name">
+    {% if user.is_authenticated %}
+        <a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a>
+
+        <a href="/django_notifications/admin/notifications/"
+           style="position: relative; display: inline-block; text-decoration: none; padding: 10px; color: inherit;">
+            <span style="font-size: 24px;
+                         color: {% if unread_notifications > 0 %}red{% else %}gray{% endif %};">
+                🔔
+            </span>
+
+            {% if unread_notifications > 0 %}
+            <span style="position: absolute;
+                         top: 0;
+                         right: 0;
+                         background-color: red;
+                         color: white;
+                         font-size: 12px;
+                         font-weight: bold;
+                         border-radius: 50%;
+                         padding: 3px 7px;">
+                {{ unread_notifications }}
+            </span>
+            {% endif %}
+        </a>
+    {% endif %}
+</div>
+
+{% if user.is_authenticated %}
+
+{% endif %}
+
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

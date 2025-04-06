@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "azzlem-django-notifications"
+version = "0.1.9"
+description = "Notifications for django"
+authors = ["azzlem <azzlem.sid@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "django_notifications"}]  # Указываем, что пакет — это `myapp`
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+setuptools = "^75.8.2"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
