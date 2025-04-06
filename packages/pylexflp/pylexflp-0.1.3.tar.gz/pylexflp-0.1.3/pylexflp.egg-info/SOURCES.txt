@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pylexflp/__init__.py
+pylexflp/pylexflp.py
+pylexflp.egg-info/PKG-INFO
+pylexflp.egg-info/SOURCES.txt
+pylexflp.egg-info/dependency_links.txt
+pylexflp.egg-info/requires.txt
+pylexflp.egg-info/top_level.txt
