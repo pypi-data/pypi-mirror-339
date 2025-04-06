@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+radarchart/__init__.py
+radarchart/main.py
+radarchart_py.egg-info/PKG-INFO
+radarchart_py.egg-info/SOURCES.txt
+radarchart_py.egg-info/dependency_links.txt
+radarchart_py.egg-info/entry_points.txt
+radarchart_py.egg-info/requires.txt
+radarchart_py.egg-info/top_level.txt
