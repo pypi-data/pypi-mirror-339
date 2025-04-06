@@ -1,0 +1,26 @@
+include README.md
+include LICENSE
+include requirements.in
+include requirements.txt
+include pyproject.toml
+
+# Exclude test files
+exclude tests/*
+exclude test_*
+exclude */test_*
+
+# Exclude development files
+exclude .git*
+exclude .travis.yml
+exclude tox.ini
+exclude make_release.sh
+exclude misc/*
+
+# Exclude cache files
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *.so
+global-exclude .DS_Store
+global-exclude .env
+global-exclude .env.*
+global-exclude *.env

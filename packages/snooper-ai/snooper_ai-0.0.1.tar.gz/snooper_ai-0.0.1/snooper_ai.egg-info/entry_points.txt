@@ -1,0 +1,2 @@
+[console_scripts]
+snoop = snooper_ai.cli:cli
