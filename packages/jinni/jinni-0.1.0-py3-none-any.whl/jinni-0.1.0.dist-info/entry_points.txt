@@ -1,0 +1,6 @@
+[console_scripts]
+jinni = jinni.cli:main
+jinni-server = jinni.server:run_server
+
+[uvx]
+jinni-server = jinni.server:run_server
