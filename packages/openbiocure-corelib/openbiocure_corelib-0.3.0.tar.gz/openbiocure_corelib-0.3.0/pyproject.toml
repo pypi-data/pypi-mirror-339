@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openbiocure_corelib"
+version = "0.3.0"
+description = "HerpAI Core Library, Accelerating the discovery of a functional cure for HSV-1 and HSV-2 using AI."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "OpenBioCure Contributors", email = "openbiocure@gmail.com"}
+]
+dependencies = [
+    "sqlalchemy>=2.0.0",
+    "pyyaml>=6.0",
+    "aiosqlite>=0.17.0",
+    "greenlet>=2.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.18.0",
+    "pytest-cov>=4.0.0",
+    "black",
+    "isort",
+    "mypy",
+    "flake8>=7.0.0",
+    "pre-commit",
+]
+
+[tool.setuptools]
+packages = ["openbiocure_corelib"]
+package-dir = {"" = "."}
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = "E203"
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+    "*.egg-info",
+    "venv",
+]
