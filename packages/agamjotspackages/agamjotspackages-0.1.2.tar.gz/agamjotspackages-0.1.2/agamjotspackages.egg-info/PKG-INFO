@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: agamjotspackages
+Version: 0.1.2
+Summary: A collection of Python packages for various utilities and functionalities.
+Author: Agamjot
+Author-email: agamjotlamba55@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cohere
+
+A ton of Python Codes built by Agamjot
