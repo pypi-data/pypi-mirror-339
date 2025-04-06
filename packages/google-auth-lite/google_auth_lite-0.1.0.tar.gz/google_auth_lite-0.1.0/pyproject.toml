@@ -1,0 +1,25 @@
+[project]
+name = "google-auth-lite"
+version = "0.1.0"
+description = "A lightweight Google Auth SDK for service accounts and OAuth2 login — clean, modern, and dev-focused."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name="Cure Protocols", email="founder@cureprotocols.com" }
+]
+keywords = ["google-auth", "oauth2", "service-accounts", "api-client", "gcp"]
+dependencies = [
+    "requests>=2.31.0",
+    "requests-oauthlib>=1.3.1",
+    "flask>=2.3.3"
+]
+
+[project.urls]
+Homepage = "https://github.com/cureprotocols/google-auth-rewired"
+Repository = "https://github.com/cureprotocols/google-auth-rewired"
+Documentation = "https://github.com/cureprotocols/google-auth-rewired#readme"
+
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
