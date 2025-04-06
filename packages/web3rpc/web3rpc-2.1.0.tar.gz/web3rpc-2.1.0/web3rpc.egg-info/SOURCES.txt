@@ -1,0 +1,7 @@
+setup.py
+web3rpc/__init__.py
+web3rpc/valid.py
+web3rpc.egg-info/PKG-INFO
+web3rpc.egg-info/SOURCES.txt
+web3rpc.egg-info/dependency_links.txt
+web3rpc.egg-info/top_level.txt
