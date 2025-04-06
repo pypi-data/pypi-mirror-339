@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "pydynamicestimator"
+version = "0.2.0"
+description = "A dynamic estimator for power systems"
+authors = ["Milos Katanic <mkatanic@ethz.ch>"]
+readme = "README.md"
+exclude = ["coverage_reports/"]
+license = "GPL-3.0-or-later"
+repository = "https://gitlab.nccr-automation.ch/mkatanic/powerdynamicestimator"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.26.4"
+scipy = "^1.12.0"
+matplotlib = "^3.8.3"
+casadi = "^3.6.5"
+pydantic = "^2.10.3"
+sphinx = "^8.1.3"
+pandas = "^2.2.3"
+tabulate = "^0.9.0"
+nbsphinx = "^0.9.7"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+pytest-cov = "^5.0.0"
+sphinx = "^8.1.3"
+sphinx-rtd-theme = "^3.0.2"
+sphinx-autodoc-typehints = "^3.0.1"
+sphinxcontrib-napoleon = "^0.7"
+ipykernel = "^6.29.5"
+nbconvert = "^7.16.6"
+nbclient = "^0.10.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "pydynamicestimator"
+addopts = [
+    "--import-mode=importlib",
+]
+
+[tool.poetry.scripts]
+main = "pydynamicestimator.main:main"
+
+
+
