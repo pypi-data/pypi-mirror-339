@@ -1,0 +1,101 @@
+Metadata-Version: 2.4
+Name: polyner
+Version: 0.1.0
+Summary: A multilingual NER library that handles text, emojis, and multiple languages
+Author-email: PolyNER Team <example@example.com>
+License: MIT
+Project-URL: Bug Tracker, https://github.com/example/polyner/issues
+Project-URL: Source Code, https://github.com/example/polyner
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=1.0.0
+Requires-Dist: langdetect>=1.0.7
+Requires-Dist: emoji>=1.2.0
+Requires-Dist: spacy>=3.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=3.0.0; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Requires-Dist: mypy>=0.9.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+Requires-Dist: build>=0.8.0; extra == "dev"
+Requires-Dist: twine>=4.0.0; extra == "dev"
+Dynamic: license-file
+
+# PolyNER
+
+PolyNER is a Python library for multilingual Named Entity Recognition that handles text, emojis, and multiple languages.
+
+## Features
+
+- **Language Detection**: Automatically detect the language of each text snippet.
+- **Tokenization and Normalization**: Split text into tokens and normalize them (lowercase, remove punctuation, etc.).
+- **Emoji Handling**: Detect and properly separate emojis as their own tokens.
+- **Data Organization**: Output structured data with columns for each category (tokens, language, emojis, recognized entities).
+- **Extensibility**: Load custom NER models or dictionaries.
+
+## Installation
+
+```bash
+pip install polyner
+```
+
+## Quick Start
+
+```python
+from polyner import PolyNER
+
+# Initialize the processor
+processor = PolyNER()
+
+# Process a text with mixed languages and emojis
+text = "Hello world! 你好世界! 😊 Bonjour le monde!"
+result = processor.process(text)
+
+# Display the results
+print(result)
+```
+
+## Output Format
+
+PolyNER returns a pandas DataFrame with the following columns:
+
+- `token`: The individual token
+- `language`: Detected language of the token
+- `is_emoji`: Boolean indicating if the token is an emoji
+- `norm_token`: Normalized version of the token
+- `entity_label`: Entity type if recognized (PERSON, LOC, ORG, etc.)
+
+## Using Custom NER Models
+
+```python
+import spacy
+
+# Load your custom model
+custom_model = spacy.load("your_custom_model")
+
+# Initialize with custom model
+processor = PolyNER(ner_model=custom_model)
+
+# Process text
+result = processor.process("Your text here with custom entities")
+```
+
+## License
+
+MIT

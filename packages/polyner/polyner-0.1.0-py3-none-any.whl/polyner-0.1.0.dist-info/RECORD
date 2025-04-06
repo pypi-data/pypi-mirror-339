@@ -1,0 +1,12 @@
+polyner/__init__.py,sha256=RvDmldT7ER9e6EN3di6eGqUrmnLwMP1UprU2ngT80JY,175
+polyner/core.py,sha256=H3xoL5DBlMl1jWuKDFnLDtKp4f0NnDAKZRxUj4CJd2M,3561
+polyner/emoji_handling.py,sha256=oiCMCe3oM0N_UlNc6wq4UkvkwKGP3QaVqcmxnEi6SOA,2237
+polyner/entity_recognition.py,sha256=fp3hS5F8lHyA-RJOarQ2auDwWZ46pAID4g3ChBcmkNs,7118
+polyner/language_detection.py,sha256=Z4FTZ9KvVuDMVAu-wxAnLKPrOSpDAD-wcS-VHfILwFI,2252
+polyner/tokenization.py,sha256=0s1QciuW5rVJPhH2el4DQX4Rhaz1N3uSqFPJYiCUeXU,6173
+polyner/utils.py,sha256=9tIA0CxHv8TT4KiOBU4X-XIayrVBprwH-CjS0z7s3Qs,3401
+polyner-0.1.0.dist-info/licenses/LICENSE,sha256=wmjVvqCIZvSmGosXo-Jvt4WAyn0g5jLhN_DcaglEaXo,1088
+polyner-0.1.0.dist-info/METADATA,sha256=clP2KTQMejafpcqqMhj2387lUiJmB594rLNI8P1v39Y,3291
+polyner-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+polyner-0.1.0.dist-info/top_level.txt,sha256=m_SFq0gS3C-PGSwMy6WxvL1WS-_3860flQx5oWijoPg,8
+polyner-0.1.0.dist-info/RECORD,,
