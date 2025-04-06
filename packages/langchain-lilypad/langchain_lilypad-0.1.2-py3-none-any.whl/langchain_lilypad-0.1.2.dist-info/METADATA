@@ -1,0 +1,161 @@
+Metadata-Version: 2.4
+Name: langchain_lilypad
+Version: 0.1.2
+Summary: The  module defines a custom chat model that interacts with the Lilypad API to generate conversational responses and bind tools for enhanced functionality, with mechanisms for parsing tool calls and customizing message payloads.
+Author: Altaga
+Author-email: altaga@protonmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-python
+Dynamic: summary
+
+# ChatLilypad
+
+ChatLilypad is a customizable chat model built on the `LangChain` framework. It connects seamlessly to the Lilypad API and extends the functionality of traditional chat models by offering tool binding capabilities. This module empowers developers to create dynamic, intelligent conversational agents tailored to their needs.
+
+## Table of Contents
+
+1. [Overview](#overview)  
+2. [Features](#features)  
+3. [Getting Started](#getting-started)  
+4. [Dependencies](#dependencies)  
+5. [Usage](#usage)  
+6. [Customization](#customization)   
+7. [License](#license)
+
+## Overview
+
+ChatLilypad is designed to facilitate robust and scalable conversations by integrating a custom chat model with external tools using the Lilypad API. It supports tool binding, dynamic message formatting, and response generation while allowing developers to extend its capabilities to meet specific application requirements.
+
+## Features
+
+- **Custom Chat Model**: Uses Lilypad API to generate responses dynamically.
+- **Tool Binding**: Allows integration of external tools to enhance conversational capabilities.
+- **High Configurability**: Supports custom model parameters like temperature, tool configurations, and API endpoints.
+- **Error Handling**: Graceful fallback mechanisms for API connectivity or response parsing failures.
+- **Extendable**: Built on `LangChain` to support further modular development.
+
+## Getting Started
+
+### Prerequisites
+
+To use ChatLilypad, ensure you have the following installed:
+
+- Python 3.8+
+- Pip (Python package manager)
+- API key for the [Lilypad API](https://anura.lilypad.tech)
+
+## Dependencies
+
+The following Python packages are required:
+
+- `requests`: For making HTTP API calls.
+- `json`: For JSON serialization and deserialization.
+- `pydantic`: For data validation and model properties.
+- `langchain_core`: Provides the base classes and functionality for chat models.
+
+You can install all dependencies by running:
+
+```bash
+pip install requests pydantic langchain-core
+```
+
+### Installation
+
+```bash
+pip install langchain-lilypad 
+```
+
+## Usage
+
+Here's a quick example of how to use `ChatLilypad` in your Python application:
+
+### Step 1: Import the Class
+```python
+from langchain_lilypad import ChatLilypad
+```
+
+### Step 2: Initialize the Model
+Provide your Lilypad API key and model name:
+
+```python
+lilypad_model = ChatLilypad(
+    model_name="your_model_name",
+    api_key="your_api_key"
+)
+```
+
+Available Models:
+
+- "deepscaler:1.5b"
+- "gemma3:4b"
+- "llama3.1:8b"
+- "llava:7b"
+- "mistral:7b"
+- "openthinker:7b"
+- "phi4-mini:3.8b"
+- "deepseek-r1:7b"
+- "phi4:14b"
+- "qwen2.5:7b"
+- "qwen2.5-coder:7b"
+
+### Step 3: Bind Tools (Optional)
+You can enhance the chat model by binding external tools. For example:
+
+```python
+from langchain_community.tools import DuckDuckGoSearchResults
+from langchain_core.tools import tool
+
+search = DuckDuckGoSearchResults(safesearch = "strict", max_results = 10)
+
+@tool
+def websearch(webprompt:str) -> str:
+    """This tool allows users to perform accurate and targeted internet searches for specific terms or phrases. It activates whenever the user explicitly requests a web search, seeks real-time or updated information, or mentions terms like 'search,' 'latest,' or 'current' related to the desired topic."""
+    res = search.invoke(webprompt)
+    return res
+
+lilypad_model = lilypad_model.bind_tools([sample_tool])
+```
+
+### Step 4: Generate Responses
+Send a list of messages to generate a response:
+
+```python
+from langchain_core.messages import BaseMessage
+
+messages = [
+    BaseMessage(type="human", content="Tell me a joke!"),
+]
+
+response = lilypad_model.invoke(messages)
+
+print({"messages": [response]})
+```
+
+## Customization
+
+The `ChatLilypad` class can be customized in the following ways:
+
+1. **Adjusting Temperature**: Modify the `temperature` parameter to control randomness in responses.
+   ```python
+   lilypad_model.temperature = 0.8
+   ```
+
+2. **Changing API Endpoint**: Update the `api_url` to connect to a different API endpoint.
+   ```python
+   lilypad_model.api_url = "https://new-api-endpoint.com"
+   ```
+
+3. **Adding Tools**: Use the `bind_tools` method to integrate external tools dynamically.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
