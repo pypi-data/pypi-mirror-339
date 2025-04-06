@@ -1,0 +1,11 @@
+ThreeDViewer/__init__.py,sha256=22hcV-VgPPq5RIMXqp97lNhZ5ZLZars7_HQap9LYbYg,40
+ThreeDViewer/examples.py,sha256=QaFnslIe0lvbCXbI5kXSCneT9oKOviGlAhlTy4oxdcM,726
+ThreeDViewer/image.py,sha256=2ADlbtafpOyguwJQ5Q3IpR9lF0bZHl3vMK_K9rGNEv4,16125
+ThreeDViewer/vector.py,sha256=tOIW2NmFvufojiozWabqwtJQOIWS_kCCiyDrHTRE9xs,1935
+ThreeDViewer/data/__init__.py,sha256=FFtajvvBgQ6vD5NHzQ-ru55-bxRwwXP3axqCtq7FBcc,214
+ThreeDViewer/data/cylinder.ovf,sha256=sEmtn5YZjN8yclTQYaR4FxnmNNqIucJ5KZMi5LwToLc,786946
+threedviewer-0.2.1.dist-info/licenses/LICENSE.txt,sha256=qhMlsiDkf11MhDCC7AnhOwibe5Oo-ef8feDoB7K904E,1461
+threedviewer-0.2.1.dist-info/METADATA,sha256=zRGKd17b6exFaAu7uuZqw5-DZgteOLLnBxzwzG9wZKw,2003
+threedviewer-0.2.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+threedviewer-0.2.1.dist-info/top_level.txt,sha256=Ft-Ri8tOJMt3_FUIlvjs4WW1OQY9cHgrS1y9oe666Fs,13
+threedviewer-0.2.1.dist-info/RECORD,,
