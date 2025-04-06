@@ -1,0 +1,65 @@
+---
+variables:
+  TWINE_USERNAME: __token__
+  TWINE_PASSWORD: secret
+
+default:
+  image: python:3.9
+
+stages:
+  - build
+  - test
+  - release
+
+build-pypi-package:
+  stage: build
+  script:
+    - pip install --upgrade pip
+    - pip install --upgrade build
+    - python -m build
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - dist/
+
+test-python3:
+  stage: test
+  image: ghcr.io/mamba-org/micromamba:latest
+  parallel:
+    matrix:
+      - PYTHON_VERSION: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+  before_script:
+    - eval "$(micromamba shell hook --shell bash)"
+    - micromamba create -y -c conda-forge -n tango python=$PYTHON_VERSION pip
+    - micromamba activate tango
+  script:
+    - python -m pip install dist/itango-*.whl
+    - itango --help
+    - itango3 --help
+
+# Documentation is on readthedocs
+# We only test doc generation here
+test-docs:
+  image: ghcr.io/prefix-dev/pixi:latest
+  stage: test
+  needs: []
+  script:
+    - pixi run doc
+    - echo "Documentation can be found at https://$CI_PROJECT_NAMESPACE.gitlab.io/-/$CI_PROJECT_NAME/-/jobs/$CI_JOB_ID/artifacts/doc/build/index.html"
+  artifacts:
+    when: always
+    paths:
+      - doc/build
+  environment:
+    name: Docs-dev
+    url: "https://$CI_PROJECT_NAMESPACE.gitlab.io/-/$CI_PROJECT_NAME/-/jobs/$CI_JOB_ID/artifacts/doc/build/index.html"
+
+release-pypi-package:
+  stage: release
+  before_script:
+    - python -m pip install twine
+  script:
+    - twine upload dist/*
+  only:
+    - tags
+  when: manual

@@ -1,0 +1,6 @@
+pytango>=9.2.0
+ipython<9.0,>=4.0
+packaging
+
+[qt]
+qtconsole

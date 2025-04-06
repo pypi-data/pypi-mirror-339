@@ -1,0 +1,43 @@
+[project]
+channels = ["conda-forge"]
+name = "itango"
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
+
+[dependencies]
+python = "*"
+pip = "*"
+pytango = ">=9.2.0"
+ipython = ">=4.0,<9.0"
+packaging= "*"
+qtconsole = "*"
+
+[pypi-dependencies]
+itango = { path = ".", editable = true }
+
+[feature.py39.dependencies]
+python = "~=3.9.0"
+
+[feature.py310.dependencies]
+python = "~=3.10.0"
+
+[feature.py311.dependencies]
+python = "~=3.11.0"
+
+[feature.doc.tasks]
+clean-doc = "rm -rf doc/build"
+doc = "python -m sphinx -n -W -w sphinx-output.log doc doc/build"
+doc_no_cache = "python -m sphinx -n -W -w sphinx-output.log -a -E doc doc/build"
+
+[feature.doc.dependencies]
+python = "3.11.*"
+pip = "*"
+pygments = "*"
+sphinx = "8.*"
+sphinx-book-theme = "*"
+sphinx-copybutton = "*"
+
+[environments]
+py39 = ["py39"]
+py310 = ["py310"]
+py311 = ["py311"]
+doc = { features = ["doc"], no-default-feature = true }

@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "itango/_version.py"
+
+[project]
+name = "itango"
+description = "An interactive Tango client"
+dynamic = ["version"]
+authors = [{ name = "Tiago Coutinho" }]
+maintainers = [{ name = "Benjamin Bertrand" }]
+requires-python = ">=3.8"
+keywords = ["pytango", "ipython"]
+readme = "README.rst"
+license = { file = "LICENSE" }
+dependencies = ["pytango>=9.2.0", "ipython>=4.0,<9.0", "packaging"]
+classifiers = [
+    "Framework :: IPython",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Programming Language :: Python :: 3",
+    "Topic :: System :: Shells",
+]
+
+[project.optional-dependencies]
+qt = ["qtconsole"]
+
+[tool.setuptools]
+packages = ["itango"]
+
+[project.urls]
+Homepage = "https://www.tango-controls.org/"
+Repository = "https://gitlab.com/tango-controls/itango"
+Documentation = "https://itango.readthedocs.io"
+
+[project.scripts]
+itango = "itango:run"
+itango3 = "itango:run"
+
+[project.gui-scripts]
+itango-qt = "itango:run_qt"
+itango3-qt = "itango:run_qt"
