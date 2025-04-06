@@ -1,0 +1,12 @@
+isobiscuit_engine/__engine.py,sha256=WO1-hkWBG5EBWLwm9cEsLCKUNp20ABJV74FPDePZIPk,587
+isobiscuit_engine/__init__.py,sha256=FQV2Q4VwmG6MoPa_jCzW5Mfx7rLY_A2-HKLeEA8sk_4,28
+isobiscuit_engine/_engine.pyx,sha256=ou-gXZPimi4DLkUCEoMYSmSlSLapZhWhflEz0betVG0,17891
+isobiscuit_engine/_engine_py.py,sha256=VsOkT3dg5Y0-IEQvXwiLs5iVK5QJPn1qWN7IkPAfLNE,14579
+isobiscuit_engine/engine.pyi,sha256=N8D87az-LFC4mMmuWbpnJStPMKhnuJs0V6pX61DoJMM,192
+isobiscuit_engine/_engine.c,sha256=G9_09H_9tng5vLFJC_HgWT_xYx3uGMvbSSp3ZimvZhY,1143151
+isobiscuit_engine/_engine.html,sha256=nUoiEDCBy4kX3e7N93cm1RTUFBOuorZUZM0Sb-pZWCo,581292
+isobiscuit_engine/engine.so,sha256=FcPQndy1KttsqYHiso6JEi8WO_C50yY0l5zS68F4yyY,326488
+isobiscuit_engine-0.1.20.dist-info/LICENSE,sha256=2INPgsmsLYbXQBL6QskvpcdxSlC4BCRoWuONFXYGETU,1075
+isobiscuit_engine-0.1.20.dist-info/METADATA,sha256=WncQlAYhZxtcU_Ne7b9PZ9i3we_c3FVReixFgCBnAps,665
+isobiscuit_engine-0.1.20.dist-info/WHEEL,sha256=KOzTM1YL9jvS9frJJWASMX47v93zuMQC-1cNvSiccUU,110
+isobiscuit_engine-0.1.20.dist-info/RECORD,,
