@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/kop/__init__.py
+src/kop.egg-info/PKG-INFO
+src/kop.egg-info/SOURCES.txt
+src/kop.egg-info/dependency_links.txt
+src/kop.egg-info/requires.txt
+src/kop.egg-info/top_level.txt

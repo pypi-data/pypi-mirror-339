@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: kop
+Version: 0.0.1
+Summary: Modern python kubernetes operators
+Author-email: Alex Kwiatkowski <alex+pypi@fremantle.io>
+License: MIT License
+Project-URL: Homepage, https://github.com/rupurt/kop
+Project-URL: Issues, https://github.com/rupurt/kop/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: jinja2>=3.0.0
+Requires-Dist: kopf>=1.37.0
+Requires-Dist: kr8s>=0.17.0
+Requires-Dist: kubernetes>=30.0.0
+Requires-Dist: PyYAML~=6.0.1
+
+# kop
+![pypi](https://img.shields.io/pypi/v/kop.svg)
+![versions](https://img.shields.io/pypi/pyversions/kop.svg)
+
+Modern python kubernetes operators
+
+## Usage
+
+```console
+> pip install kop
+```
+
+## Getting Started
+
+- [Development](./docs/DEVELOPMENT.md)
+  - [setup](./docs/DEVELOPMENT.md#setup)
+  - [check](./docs/DEVELOPMENT.md#check)
+  - [dream2nix](./docs/DEVELOPMENT.md#dream2nix)
+  - [pypi](./docs/DEVELOPMENT.md#pypi)
+
+## License
+
+`kop` is released under the [MIT license](./LICENSE)
