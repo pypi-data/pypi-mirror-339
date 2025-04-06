@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/brazoole/__init__.py
+src/brazoole.egg-info/PKG-INFO
+src/brazoole.egg-info/SOURCES.txt
+src/brazoole.egg-info/dependency_links.txt
+src/brazoole.egg-info/top_level.txt
