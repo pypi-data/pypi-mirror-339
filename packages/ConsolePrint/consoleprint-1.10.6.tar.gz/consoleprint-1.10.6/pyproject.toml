@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ConsolePrint"
+version = "1.10.6"
+authors = [
+  { name="Udemezue Iloabachie", email="udemezue@gmail.com" },
+]
+description = "A package that animates and adds colour to the terminal outputs and can be used to redirect the output to a file"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/iloabachie/ConsolePrint"
+"Bug Tracker" = "https://github.com/iloabachie/ConsolePrint/issues"
