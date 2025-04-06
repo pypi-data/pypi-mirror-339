@@ -1,0 +1,3 @@
+[console_scripts]
+apsim = apsimNGpy.cli.cli:main
+apsim_bin_path = apsimNGpy.cli.set_ups:apsim_bin_path
