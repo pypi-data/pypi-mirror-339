@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+mkdocs-nbstore = mkdocs_nbstore.plugin:NbstorePlugin
