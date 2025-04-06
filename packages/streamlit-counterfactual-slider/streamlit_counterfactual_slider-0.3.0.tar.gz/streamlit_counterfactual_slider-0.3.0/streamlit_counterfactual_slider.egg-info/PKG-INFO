@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: streamlit-counterfactual-slider
+Version: 0.3.0
+Home-page: 
+Author: KentFre
+Author-email: 
+Requires-Python: >=3.6
+Description-Content-Type: text/plain
+License-File: LICENSE
+Requires-Dist: streamlit>=0.63
+Dynamic: author
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python

@@ -1,0 +1,1 @@
+recursive-include streamlit_counterfactual_slider/frontend/build *
