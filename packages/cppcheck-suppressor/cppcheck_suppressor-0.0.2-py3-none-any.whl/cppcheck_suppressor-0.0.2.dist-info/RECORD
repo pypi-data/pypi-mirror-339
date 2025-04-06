@@ -1,0 +1,10 @@
+cppcheck_suppressor/__init__.py,sha256=TUbIgz1XCWYuBdCRqajKSxaiusvpl5mXnbdDstkkhA8,199
+cppcheck_suppressor/__main__.py,sha256=14-xwI5niTOSmAd7Mh-KcvZfK7jNAAo1MmKDB9puS9s,2004
+cppcheck_suppressor/results.py,sha256=9G1eLGIYgRALpGw2_ynpdu-a6nKQhlSl1e3XPy-t0I0,2023
+cppcheck_suppressor/suppressions.py,sha256=dtX0wSaf4Gg-EYg9imRPrtZXg7Dc80c04wGXEEdDHcY,1230
+cppcheck_suppressor/data/cppcheck.xsd,sha256=SVJqcZTjNnrkNfHOU7R8-NnkkmEoMt3mbE4NKutegAs,2632
+cppcheck_suppressor-0.0.2.dist-info/licenses/LICENSE.md,sha256=juq2iQS7E-0Aeq0_YKgARgBX_bqLb4hvCg7xcaHTWJw,1064
+cppcheck_suppressor-0.0.2.dist-info/METADATA,sha256=Iki2TG4e8Drw_B6fPX1P0o62TK3iYV_0FRLvMkvJ-iY,2032
+cppcheck_suppressor-0.0.2.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+cppcheck_suppressor-0.0.2.dist-info/top_level.txt,sha256=JB2r6c__-Kx484mEFcpgdXoVJv3eKh5PUV4cSoras7o,20
+cppcheck_suppressor-0.0.2.dist-info/RECORD,,
