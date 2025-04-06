@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: lambdamaker
+Version: 0.1.0
+Summary: A utility for packaging and deploying AWS Lambda functions from config.
+Home-page: https://github.com/tevslin/lambdamaker
+Author: Tom Evslin
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: boto3
+Dynamic: author
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
