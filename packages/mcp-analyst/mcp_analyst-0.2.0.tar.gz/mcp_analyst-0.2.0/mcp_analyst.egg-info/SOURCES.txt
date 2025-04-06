@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+mcp_analyst/__init__.py
+mcp_analyst/analyst.py
+mcp_analyst.egg-info/PKG-INFO
+mcp_analyst.egg-info/SOURCES.txt
+mcp_analyst.egg-info/dependency_links.txt
+mcp_analyst.egg-info/entry_points.txt
+mcp_analyst.egg-info/requires.txt
+mcp_analyst.egg-info/top_level.txt

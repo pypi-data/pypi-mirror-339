@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: mcp-analyst
+Version: 0.2.0
+Summary: MCP server for data analysis. It provides a set of tools for data analysis on local CSV or Parquet files.
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: polars>=1.26.0
