@@ -1,0 +1,33 @@
+Metadata-Version: 2.3
+Name: minecraft-remote-api
+Version: 1214.10.2
+Summary: Python Client-API for Minecraft Remote or mc-remote
+Keywords: minecraft,remote,API,client
+Author: Naohiro2g
+Author-email: 587586+Naohiro2g@users.noreply.github.com
+Requires-Python: >=3.9
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Project-URL: Documentation, https://github.com/Naohiro2g/minecraft-remote-api/docs
+Project-URL: Homepage, https://github.com/Naohiro2g/minecraft-remote-api
+Project-URL: Repository, https://github.com/Naohiro2g/minecraft-remote-api
+Description-Content-Type: text/markdown
+
+# minecraft-remote-api / Naohiro2g
+
+Python Client/API for Minecraft Remote
+
+- package name: `minecraft-remote-api`
+- description: `Python Client/API for Minecraft Remote`
+- version: `1214.10.2`
+- module name: `mc_remote`
+
+==================================
+
+=x=x=x= UNDER CONSTRUCTION =x=x=x=
+
+==================================
+
