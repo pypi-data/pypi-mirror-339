@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+pyinstaller_gui/__init__.py
+pyinstaller_gui/__main__.py
+pyinstaller_gui/gui.py
+pyinstaller_gui/project_info.py
+pyinstaller_gui/pyinstaller_thread.py
+pyinstaller_gui/styles.py
+pyinstaller_gui.egg-info/PKG-INFO
+pyinstaller_gui.egg-info/SOURCES.txt
+pyinstaller_gui.egg-info/dependency_links.txt
+pyinstaller_gui.egg-info/entry_points.txt
+pyinstaller_gui.egg-info/requires.txt
+pyinstaller_gui.egg-info/top_level.txt
