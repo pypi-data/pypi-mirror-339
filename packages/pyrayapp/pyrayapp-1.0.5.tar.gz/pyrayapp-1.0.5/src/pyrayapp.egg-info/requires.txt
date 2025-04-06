@@ -1,0 +1,4 @@
+markdown
+msgspec>=0.18.6
+pydantic>=2.10.6
+requests

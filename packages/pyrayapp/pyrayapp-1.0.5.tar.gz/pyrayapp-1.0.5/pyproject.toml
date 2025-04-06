@@ -1,0 +1,47 @@
+[project]
+name = "pyrayapp"
+version = "1.0.5"
+description = "Python Ray debug client"
+authors = [{ name = "Sergey Safronov", email = "safronov.ser@icloud.com" }]
+license = "MIT"
+license-files = [ "LICENSE" ]
+urls = { "Homepage" = "https://github.com/olddeda/pyray" }
+keywords = ["ray", "rayapp"]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "markdown",
+    "msgspec>=0.18.6",
+    "pydantic>=2.10.6",
+    "requests",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.bumpver]
+current_version = "1.0.5"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message  = "Bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = false
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'current_version = "{version}"',
+    'version = "{version}"'
+]
+"src/pyrayapp/__init__.py" = [
+    "{version}"
+]
+
+[dependency-groups]
+dev = [
+    "build>=1.2.2.post1",
+]
+
