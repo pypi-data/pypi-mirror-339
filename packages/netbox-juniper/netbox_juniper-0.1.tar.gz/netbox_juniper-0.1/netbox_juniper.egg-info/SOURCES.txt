@@ -1,0 +1,7 @@
+LICENSE
+README.md
+pyproject.toml
+netbox_juniper.egg-info/PKG-INFO
+netbox_juniper.egg-info/SOURCES.txt
+netbox_juniper.egg-info/dependency_links.txt
+netbox_juniper.egg-info/top_level.txt
