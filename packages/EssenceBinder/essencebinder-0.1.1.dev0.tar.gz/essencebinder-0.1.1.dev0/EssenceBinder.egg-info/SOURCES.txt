@@ -1,0 +1,11 @@
+LICENSE.md
+README.md
+pyproject.toml
+EssenceBinder.egg-info/PKG-INFO
+EssenceBinder.egg-info/SOURCES.txt
+EssenceBinder.egg-info/dependency_links.txt
+EssenceBinder.egg-info/requires.txt
+EssenceBinder.egg-info/top_level.txt
+src/essencebinder/__bases__.py
+src/essencebinder/__errors__.py
+src/essencebinder/__init__.py
