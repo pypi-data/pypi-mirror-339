@@ -1,0 +1,16 @@
+django_notifications/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_notifications/admin.py,sha256=zNU0I2-ZRVg94DwLkrJDuvRgtC2hvnz9o-JN_TkVuBQ,719
+django_notifications/apps.py,sha256=LNljw8QK1iBcesSpp9NetBr_Xq0f3xHrL8KLQ9KZXtk,240
+django_notifications/migrations/0001_initial.py,sha256=yy0Kk0AUxibDLkFjbh4w3yktSDfgQYwShFLlkFIh9QU,812
+django_notifications/migrations/0002_notification_app_id_object.py,sha256=lSC4hVWSC44XkQScmHJUJbpdBkSB_4Kb_SxTSaL_raA,419
+django_notifications/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_notifications/models.py,sha256=0uD3VcnWAc0U3TaScd9I5kQ0aK2jCJsbCgw8aVBOxeA,251
+django_notifications/signals.py,sha256=Zwc4QnDYv-4vS9wQyQMvTtGh200zm8BdoczIh3g46Bk,709
+django_notifications/templates/admin/base_site.html,sha256=1UZynIUX7EhMA-qDW-OZ_enJMSgqgeUM8f4R-5nvNyU,1392
+django_notifications/tests.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+django_notifications/urls.py,sha256=YNW88tg3Gkd249_jiq4u827Hd5MmmLC_35Nwff1ory0,239
+django_notifications/views.py,sha256=5lVPT17jDFKQ08GOvv53R3DlGQR5Ba-5YOSL7P4AuBo,515
+azzlem_django_notifications-0.1.9.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+azzlem_django_notifications-0.1.9.dist-info/METADATA,sha256=MRhWzfirX8iYYdDJRvBEmj9S-H07nTo_S28hvBGtxKU,3085
+azzlem_django_notifications-0.1.9.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+azzlem_django_notifications-0.1.9.dist-info/RECORD,,
