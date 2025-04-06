@@ -1,0 +1,12 @@
+oe_python_template_example/__init__.py,sha256=Ks3KjkBuzEO1gaezabSfal_WVOsJbuweHwRCs58oRv4,435
+oe_python_template_example/api.py,sha256=jP3nVgU06OHK0F9oi3h5_xZRWYsAu2fF80ezGshLk70,5034
+oe_python_template_example/cli.py,sha256=qBEl2AweQxL14VZBGN3l8Y6CpDpp2hXM69O4veuc6QI,3884
+oe_python_template_example/constants.py,sha256=6uQHr2CRgzWQWhUQCRRKiPuFhzKB2iblZk3dIRQ5dDc,358
+oe_python_template_example/models.py,sha256=IbegPBFJq0OCAWS70V-ozl6coMd0dC2OsHZY-nIumGs,846
+oe_python_template_example/service.py,sha256=WY7W6MG55cp0sfNVBWSkelXJcZ3dXIY5MQemUeQC-MA,1622
+oe_python_template_example/settings.py,sha256=mQu7Bl2EhR6taQLqbaK1s86Ngn3kLVeEoMyhCqbydig,751
+oe_python_template_example-0.2.14.dist-info/METADATA,sha256=EyDEUUw2LwpklQyu02Vkus0cts_V_KQwSYU9I17dVrk,29751
+oe_python_template_example-0.2.14.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+oe_python_template_example-0.2.14.dist-info/entry_points.txt,sha256=S2eCPB45b1Wgj_GsDRFAN-e4h7dBA5UPxT8od98erDE,82
+oe_python_template_example-0.2.14.dist-info/licenses/LICENSE,sha256=5H409K6xzz9U5eUaoAHQExNkoWJRlU0LEj6wL2QJ34s,1113
+oe_python_template_example-0.2.14.dist-info/RECORD,,
