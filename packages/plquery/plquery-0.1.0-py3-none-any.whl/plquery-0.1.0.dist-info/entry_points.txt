@@ -1,0 +1,3 @@
+[console_scripts]
+plq = plquery.__main__:main
+plquery = plquery.__main__:main
