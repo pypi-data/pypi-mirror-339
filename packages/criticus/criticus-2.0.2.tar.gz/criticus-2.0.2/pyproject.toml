@@ -1,0 +1,117 @@
+[tool.hatch]
+env-type = "virtual"
+installer = "uv"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+    "lxml>=4.8.0",
+    "django>=5.1.4",
+    "toga==0.5.0",
+    "uvicorn>=0.34.0",
+    "whitenoise>=6.8.2",
+    "natsort>=8.1.0",
+    "Markdown==3.5.1",
+    "markdown-del-ins>=1.0.0",
+    "python-docx>=0.8.11",
+]
+description = "A suite of tools for transcribing, collating and creating an apparatus criticus. See also www.apatosaurs.io for a web-based set of tools."
+dynamic = ["version"]
+keywords = ["TEI", "transcription", "collation", "critical", "apparatus"]
+license = "MIT"
+name = "criticus"
+readme = "pypi_readme.md"
+
+[project.urls]
+documentation = "https://github.com/d-flood/criticus#readme"
+issues = "https://github.com/d-flood/criticus/issues"
+source = "https://github.com/d-flood/criticus"
+
+[tool.hatch.version]
+path = "criticus/__about__.py"
+
+[tool.hatch.metadata.package-data]
+criticus = [
+    "py/export_to_docx/*.docx", 
+    "*.sqlite3",
+    "staticfiles/**/*"
+]
+
+[tool.hatch.envs.default]
+installer = "uv"
+python = "3.13"
+dependencies = [
+  "coverage[toml]>=6.5",
+  "pytest",
+  "rich",
+]
+[tool.hatch.envs.default.scripts]
+cov = [
+  "test-cov",
+  "cov-report",
+]
+cov-report = [
+  "- coverage combine",
+  "coverage report",
+]
+test = "pytest {args:tests}"
+test-cov = "coverage run -m pytest {args:tests}"
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.11", "3.12", "3.13"]
+
+[tool.hatch.envs.lint]
+dependencies = []
+detached = true
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/.github",
+  "/docs",
+  "/tests",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["criticus"]
+include = [
+    "criticus/py/export_to_docx/*.docx",
+    "criticus/criticus.sqlite3",
+    "criticus/staticfiles/**/*"
+]
+
+[tool.hatch.build]
+artifacts = [
+    "criticus/criticus.sqlite3",
+    "criticus/staticfiles/**/*"
+]
+
+[tool.coverage.run]
+branch = true
+omit = [
+  "criticus/__about__.py",
+]
+parallel = true
+source_pkgs = ["criticus"]
+
+[tool.coverage.paths]
+apiiif = ["criticus", "*/criticus"]
+tests = ["tests", "*/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
