@@ -1,0 +1,26 @@
+- Create a new GitHub repository:
+
+  https://github.com/new
+
+  Repository name: visible_residues
+
+  $ git remote add origin git@github.com:kalekundert/visible_residues.git
+  $ git push -u origin master
+
+- Create a "pending" trusted publisher:
+
+  https://pypi.org/manage/account/publishing/
+
+  PyPI project name: visible_residues
+  Owner:             kalekundert
+  Repository name:   visible_residues
+  Workflow name:     release.yml
+
+- Add Codecov token to GitHub:
+
+  https://app.codecov.io/gh/kalekundert/visible_residues/new
+  https://github.com/kalekundert/visible_residues/settings/secrets/actions/new
+
+- Build the documentation:
+
+  https://app.readthedocs.org/dashboard/import/

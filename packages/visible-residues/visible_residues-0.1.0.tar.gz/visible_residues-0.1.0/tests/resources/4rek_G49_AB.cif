@@ -1,0 +1,30 @@
+data_4rek
+_entry.id 4rek
+#
+loop_
+_atom_site.group_PDB
+_atom_site.id
+_atom_site.type_symbol
+_atom_site.label_atom_id
+_atom_site.label_alt_id
+_atom_site.label_comp_id
+_atom_site.label_asym_id
+_atom_site.label_entity_id
+_atom_site.label_seq_id
+_atom_site.pdbx_PDB_ins_code
+_atom_site.Cartn_x
+_atom_site.Cartn_y
+_atom_site.Cartn_z
+_atom_site.occupancy
+_atom_site.B_iso_or_equiv
+_atom_site.pdbx_formal_charge
+_atom_site.auth_asym_id
+_atom_site.pdbx_PDB_model_num
+ATOM   1   N N   A GLY A 1 49 ?  0.186 -5.685 29.032 0.69   8.62 0 A 1
+ATOM   2   N N   B GLY A 1 49 ?  0.173 -5.121 28.769 0.31   9.50 0 A 1
+ATOM   3   C CA  A GLY A 1 49 ? -0.488 -4.404 29.071 0.69   8.38 0 A 1
+ATOM   4   C CA  B GLY A 1 49 ? -0.497 -3.834 28.644 0.31   9.32 0 A 1
+ATOM   5   C C   A GLY A 1 49 ? -1.985 -4.540 28.854 0.69   8.32 0 A 1
+ATOM   6   C C   B GLY A 1 49 ? -1.995 -3.997 28.421 0.31   8.98 0 A 1
+ATOM   7   O O   A GLY A 1 49 ? -2.545 -5.631 28.968 0.69   8.35 0 A 1
+ATOM   8   O O   B GLY A 1 49 ? -2.520 -5.105 28.539 0.31   9.10 0 A 1

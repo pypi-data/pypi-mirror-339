@@ -1,0 +1,30 @@
+data_4rek
+_entry.id 4rek
+#
+loop_
+_atom_site.group_PDB
+_atom_site.id
+_atom_site.type_symbol
+_atom_site.label_atom_id
+_atom_site.label_alt_id
+_atom_site.label_comp_id
+_atom_site.label_asym_id
+_atom_site.label_entity_id
+_atom_site.label_seq_id
+_atom_site.pdbx_PDB_ins_code
+_atom_site.Cartn_x
+_atom_site.Cartn_y
+_atom_site.Cartn_z
+_atom_site.occupancy
+_atom_site.B_iso_or_equiv
+_atom_site.pdbx_formal_charge
+_atom_site.auth_asym_id
+_atom_site.pdbx_PDB_model_num
+ATOM   1   N N   . MET A 1 154 ? 26.232 -16.230 20.096 1.00   8.04 0 A 1
+ATOM   2   C CA  . MET A 1 154 ? 25.576 -15.771 21.318 0.62   7.53 0 A 1
+ATOM   3   C C   . MET A 1 154 ? 24.301 -14.989 21.028 1.00   7.72 0 A 1
+ATOM   4   O O   . MET A 1 154 ? 23.319 -15.056 21.769 1.00   8.20 0 A 1
+ATOM   5   C CB  . MET A 1 154 ? 26.512 -14.842 22.100 0.62   8.99 0 A 1
+ATOM   6   C CG  . MET A 1 154 ? 27.591 -15.520 22.886 0.62  14.04 0 A 1
+ATOM   7   S SD  . MET A 1 154 ? 27.013 -16.710 24.094 0.62  17.17 0 A 1
+ATOM   8   C CE  . MET A 1 154 ? 26.025 -15.649 25.149 0.62  17.36 0 A 1

@@ -1,0 +1,14 @@
+numpy
+polars
+macromol_dataframe
+macromol_voxelize
+
+[doc]
+sphinx
+sphinx_rtd_theme
+myst_parser
+autoclasstoc
+
+[test]
+pytest
+parametrize_from_file
