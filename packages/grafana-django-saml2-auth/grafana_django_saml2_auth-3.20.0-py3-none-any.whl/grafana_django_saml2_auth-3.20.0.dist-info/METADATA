@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: grafana-django-saml2-auth
+Version: 3.20.0
+Summary: Django SAML2 Authentication Made Easy.
+Author-email: Mostafa Moradian <mostafa@grafana.com>
+License-File: AUTHORS.md
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: dictor==0.1.12
+Requires-Dist: pyjwt==2.10.1
+Requires-Dist: pysaml2==7.5.2
