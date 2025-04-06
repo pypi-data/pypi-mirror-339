@@ -1,0 +1,31 @@
+[tools]
+uv = "0.6.12"
+
+[tasks.lint]
+description = "Lint code"
+run = "uv run ruff check"
+
+[tasks."lint:fix"]
+description = "Fix any fixable linting errors"
+run = "uv run ruff check --fix"
+
+[tasks.format]
+description = "Format code"
+run = "uv run ruff format"
+
+[tasks."format:check"]
+description = "Check code is formatted"
+run = "uv run ruff format --check"
+
+[tasks.build]
+description = "Build package"
+run = "uv build"
+
+[tasks.test]
+description = "Run tests"
+run = "uv run --python {{option(name='python', default='')}} pytest"
+
+[tasks.publish]
+hide = true  # only run in the pipeline
+description = "Publish to PyPI"
+run = "uv publish"
