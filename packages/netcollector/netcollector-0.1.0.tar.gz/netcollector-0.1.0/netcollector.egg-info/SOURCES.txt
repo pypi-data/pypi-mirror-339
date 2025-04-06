@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.cfg
+netcollector/__init__.py
+netcollector/base_device.py
+netcollector/collector.py
+netcollector/utils.py
+netcollector.egg-info/PKG-INFO
+netcollector.egg-info/SOURCES.txt
+netcollector.egg-info/dependency_links.txt
+netcollector.egg-info/requires.txt
+netcollector.egg-info/top_level.txt
+netcollector/modules/arista_device.py
+netcollector/modules/cisco_device.py
+netcollector/modules/cumulus_device.py
+tests/test_collector.py
