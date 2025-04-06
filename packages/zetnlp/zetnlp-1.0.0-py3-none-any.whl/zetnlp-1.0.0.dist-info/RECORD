@@ -1,0 +1,13 @@
+ZNLP/__init__.py,sha256=Mc-fHmXzL1QejDonOyrBYuxzT3MXOFpKJMJNpt2VDM0,2086
+ZNLP/lemmatizer.py,sha256=sS2_ZZKuTrveQQ8WQkKiuhsnyhPEbuNPuA2b-erEwJQ,283
+ZNLP/metrics.py,sha256=SGYX2yyt2jxpMNA7Yr9Ta_xmrzUtc0ajcHsOI4P1eV4,64
+ZNLP/ner.py,sha256=E9KqAZlAc4rfySN3OJhm4njUx94_YHKOmbw1ETNqys0,599
+ZNLP/parser.py,sha256=lOyxandSH3en0PAYBaLbF8hK4_FrRbS1WUZequSA76o,202
+ZNLP/pos_tagger.py,sha256=VuKMSaH44Lcvnrz3sQJOE63sSSRu8DAvPZziERB-oDo,444
+ZNLP/text_classifier.py,sha256=5OX_QXtYs49p_LqzZPjjGkXZnM2gtUevCg5yvMEDv6s,243
+ZNLP/tokenizer.py,sha256=My3eDo1obB8-FEyunp1VHIJ0CJtBqCaYvMc2ThXeNLQ,348
+zetnlp-1.0.0.dist-info/licenses/LICENSE,sha256=R9fiMwgal_P3DssVeOp_pbswF2lwVu4N_RigZRavQMs,1067
+zetnlp-1.0.0.dist-info/METADATA,sha256=NF3GIW2WBSldyTv9bhFfw5yLyqyJSQphNoSibUktpwk,2776
+zetnlp-1.0.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+zetnlp-1.0.0.dist-info/top_level.txt,sha256=HT3BrAF-ROfXWkAA4lnu7O7HBi96n6eqvTapfifnt4A,5
+zetnlp-1.0.0.dist-info/RECORD,,
