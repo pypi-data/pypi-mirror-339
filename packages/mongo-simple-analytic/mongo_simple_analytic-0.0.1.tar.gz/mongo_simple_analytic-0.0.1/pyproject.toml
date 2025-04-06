@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mongo-simple-analytic"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+    { name = "haowu4", email = "haowu@dataset.sh" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+    'pymongo'
+]
+
+[project.urls]
+Documentation = "https://github.com/haowu4/mongo-logger#readme"
+Issues = "https://github.com/haowu4/mongo-logger/issues"
+Source = "https://github.com/haowu4/mongo-logger"
+
+[tool.hatch.version]
+path = "src/mongo_simple_analytic/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+    "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/mongo_simple_analytic tests}"
+
+[tool.coverage.run]
+source_pkgs = ["mongo_simple_analytic", "tests"]
+branch = true
+parallel = true
+omit = [
+    "src/mongo_simple_analytic/__about__.py",
+]
+
+[tool.coverage.paths]
+mongo_simple_analytic = ["src/mongo_simple_analytic", "*/mongo-simple-analytic/src/mongo_simple_analytic"]
+tests = ["tests", "*/mongo-simple-analytic/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "no cov",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]
