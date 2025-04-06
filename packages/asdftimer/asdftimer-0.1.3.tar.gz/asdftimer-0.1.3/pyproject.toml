@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "asdftimer"
+version = "0.1.3"
+description = "Simple customizable Python timer."
+readme = "README.md"
+license = "MIT"
+authors = ["Nibs"]
+homepage = "https://github.com/snpm/asdftimer"
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+pytest-cov = "*"
