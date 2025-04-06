@@ -1,0 +1,17 @@
+kivg/__init__.py,sha256=j6sz2YDShV6bVbz8LxJkDFb9Afom4OAOtLn8atv-S1U,261
+kivg/data_classes.py,sha256=6Co0uYk3A0cUssy0dghZ3F7UaPhqnSRG37XyCHqssS8,227
+kivg/main.py,sha256=unS0uKF7Co2eJLZgK8HtbSwL_uj23SqdJOcM7730-sU,9142
+kivg/mesh_handler.py,sha256=c9CLoF6XoHo95vrmnFtCEc_YNZs-taZfPJqODmpNI-Y,2192
+kivg/path_utils.py,sha256=TCEYHOKeZfur-S_N8-VKQVZhoV8-BcxfefY1SjB0p-8,5636
+kivg/svg_parser.py,sha256=eEPHlWpIhvpJyyJrrvFG5yTohZL1Q2z2724a8vZq1d0,1684
+kivg/svg_renderer.py,sha256=gPppklQ09-2VMGGpNFfx1kwtDX8pGY2lx0pdCFj5Rt4,4854
+kivg/version.py,sha256=b8hdR9hwz_Gr3c6BweQRR8IGhJxXEoFFxR9Bj4CrYpQ,48
+kivg/animation/animation_shapes.py,sha256=PXBL1KSCvhsiSs8_jVoX8HHGI_52xzxHk3dPsmzcpkg,10084
+kivg/animation/handler.py,sha256=oQvLqxY0yQbt1EZCZzjIszeAAK4uW1eYD_o7TtCbbDE,4937
+kivg/animation/kivy_animation.py,sha256=V1BsISbjWGeaKxOiFZeMnCReBGa1B3dBK9IwiJBXZHM,25785
+kivg/drawing/manager.py,sha256=W4NhUMTEY0iOelG-v3OskxZn1IN8AB_3eP9MNjvA8KY,8114
+kivg-1.2.dist-info/licenses/LICENSE,sha256=JiIaEd4fgMtoTQ-gKA2cbuZ4LOoVdyxsTbjOr3kdolQ,1070
+kivg-1.2.dist-info/METADATA,sha256=2oXe05AH5VTz0_SvucCHHOiCLq65aGj5jg_zBF6kOTc,8917
+kivg-1.2.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+kivg-1.2.dist-info/top_level.txt,sha256=0inxVbg-WgF5ii3QwTDSLCLSvxNNw7l7EpgOZ3m1Ik8,5
+kivg-1.2.dist-info/RECORD,,
