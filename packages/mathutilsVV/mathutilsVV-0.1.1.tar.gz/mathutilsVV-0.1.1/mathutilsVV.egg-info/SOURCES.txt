@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+mathutils/__init__.py
+mathutils/operations.py
+mathutilsVV.egg-info/PKG-INFO
+mathutilsVV.egg-info/SOURCES.txt
+mathutilsVV.egg-info/dependency_links.txt
+mathutilsVV.egg-info/top_level.txt
+tests/test_operations.py

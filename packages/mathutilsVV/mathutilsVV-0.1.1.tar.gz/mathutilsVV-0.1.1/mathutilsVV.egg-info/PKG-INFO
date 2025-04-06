@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: mathutilsVV
+Version: 0.1.1
+Summary: A simple package for basic mathematical operations
+Home-page: https://github.com/yourusername/mathutils
+Author: renfm
+Author-email: 1210139408@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# MathUtils
+
+A simple Python package for basic mathematical operations.
+
+## Installation
+
+```bash
+pip install mathutils
