@@ -1,0 +1,14 @@
+#    Name:		PETSCII C128 (80 col) English Lowercase to Unicode Table
+#    Unicode version:	3.0
+#    Table version:	1.00
+#    Table format:	Format A
+#    Date:		17/03/24
+#    Authors:		Simon Rowe <srowe@mose.org.uk>, Linus Walleij <triad@df.lth.se>
+#    General notes:	Licensed under the GNU GPL, version 2
+
+#IMPORT file://mappings/petscii_c64en_lc.txt
+
+0x08		#UNDEFINED
+0x09		#UNDEFINED
+
+#IMPORT file://include/c128-80-c0-c1.txt
