@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: py_common_func_package
+Version: 1.0
+Requires-Dist: hamcrest
+Requires-Dist: behave
+
