@@ -1,0 +1,45 @@
+Metadata-Version: 2.3
+Name: warg-shell
+Version: 1.1.0
+Summary: DigitalOcean Warg - SSH-like connection to DigitalOcean PaaS console
+License: WTFPL
+Author: Rémy Sanchez
+Author-email: remy.sanchez@hyperthese.net
+Requires-Python: >=3.10,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: click
+Requires-Dist: httpx
+Requires-Dist: keyring
+Requires-Dist: psutil
+Requires-Dist: rich
+Requires-Dist: rich-click
+Requires-Dist: websockets
+Description-Content-Type: text/markdown
+
+# DigitalOcean Warg
+
+This project allows you to take control of a DigitalOcean PaaS terminal from
+your real terminal, making the experience a lot better than just using an
+emulator from the JS side.
+
+There is an authentication protocol to be documented.
+
+## Usage
+
+First, you need to authenticate against your Warg server. Do:
+
+```bash
+uvx warg-shell auth <your-domain> <your-token>
+```
+
+Then you can use any component that you want:
+
+```bash
+uvx warg-shell shell <your-domain> <your-product> <your-env> <your-component>
+```
+
