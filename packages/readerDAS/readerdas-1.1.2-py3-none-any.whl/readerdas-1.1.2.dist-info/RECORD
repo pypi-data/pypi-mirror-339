@@ -1,0 +1,10 @@
+readerDAS/__init__.py,sha256=HOocAHFQLAaGctzm6ABY-0DlFlTOqgMHgMwU-o-tPUo,125
+readerDAS/classes.py,sha256=KhRL6l913XI6uUTKTQ5CAgPJaL3_BWYLK136Rv8EDCk,7326
+readerDAS/errors.py,sha256=WItLS_SKCoYdTib0KkBPF-01HgHhGpVqGz4L0wmDLaI,1611
+readerDAS/main.py,sha256=OzIB6fVjk7dHfKSSfCPJlwwH8QA6JubmdY6DbeB4avA,22440
+readerDAS/sottocampionamento.py,sha256=zhFQVIzVUWwWengX4nnpYeWztgUEfUtkr7rxlaGzZxA,9093
+readerDAS/utils.py,sha256=Fjpt6XwFVzptYj8MpDWRCazZcBngNi0B8A2p0HRfxEk,3999
+readerDAS/versioning.py,sha256=vT7372hbZIi2u2BgyGr4IKKFzr2GFMN4XKhfu2cmGWw,757
+readerdas-1.1.2.dist-info/METADATA,sha256=fQYe4kKCItZgpbdn70kHWdAngqJwvYIPIZt4tfglbok,5626
+readerdas-1.1.2.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+readerdas-1.1.2.dist-info/RECORD,,
