@@ -1,0 +1,61 @@
+Metadata-Version: 2.4
+Name: bolor
+Version: 0.2.2
+Summary: Local LLM-based code repair tool with self-healing capabilities
+Author: Bolorerdene Bundgaa
+Author-email: hi@photoxpedia.studio
+License: MIT
+Keywords: code-fix,debugging,llm,phi-2,repair,bug-fix
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Debuggers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ctransformers>=0.2.0
+Requires-Dist: langchain>=0.0.208
+Requires-Dist: chromadb>=0.4.0
+Requires-Dist: rich>=13.0.0
+Requires-Dist: astunparse>=1.6.3
+Requires-Dist: typer>=0.9.0
+Requires-Dist: pytest>=7.0.0
+Requires-Dist: urllib3<2.0.0,>=1.26.0
+Requires-Dist: charset-normalizer<3.0.0,>=2.0.0
+Requires-Dist: requests<3.0.0,>=2.25.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+    Bolor is a local LLM-based code repair tool with self-healing capabilities.
+    It can scan codebases for issues, fix detected problems, and generate code from natural language descriptions.
+    The tool is designed to work locally without requiring an internet connection.
+    
+    ## Key Features
+    
+    - **Code Scanning**: Scan your code for issues and get suggestions for improvements
+    - **Code Generation**: Generate code from natural language prompts
+    - **Local Operation**: Works offline with local models
+    
+    ## Update Command
+    
+    This version adds a new `update` command that resolves model loading issues:
+    
+    ```
+    bolor update
+    ```
+    
+    This command will download the necessary model files and properly configure Bolor to work with them.
+    
