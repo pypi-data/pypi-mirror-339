@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: at-client-workflow
+Version: 0.1.1
+Summary: AT Client and Schema Package for AT Workflow API
+Home-page: https://github.com/apex-trader/at-backend-workflow
+Author: Ray
+Author-email: rayanywhere@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.8
+Requires-Dist: requests>=2.25.0
+Requires-Dist: pydantic>=1.8.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
