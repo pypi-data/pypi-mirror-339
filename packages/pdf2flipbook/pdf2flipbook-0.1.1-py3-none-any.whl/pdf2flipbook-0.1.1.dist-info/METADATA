@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: pdf2flipbook
+Version: 0.1.1
+Summary: Convert PDF to interactive HTML flipbook (self-contained, no external JS/CSS).
+Home-page: UNKNOWN
+Author: Dheeraj RP
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+Requires-Dist: jinja2
+Requires-Dist: pdf2image
+Requires-Dist: pillow
+
+# pdf2flipbook
+
+Convert any PDF into a self-contained, interactive HTML flipbook — with smooth page-turning, zoom, and navigation controls.
+
+## Installation
+
+```bash
+pip install pdf2flipbook
+```
+
+## Usage
+
+```bash
+pdf2flipbook path/to/file.pdf --output mybook.html
+```
+
+
+
