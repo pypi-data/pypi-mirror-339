@@ -1,0 +1,10 @@
+torch
+transformers
+datasets
+numpy
+tqdm
+wandb
+hydra-core
+omegaconf
+pytorch-lightning
+accelerate
