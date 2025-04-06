@@ -1,0 +1,14 @@
+pydisort-0.10.2.dist-info/RECORD,,
+pydisort-0.10.2.dist-info/WHEEL,sha256=4pobCWGy9_G9CiPXIgRrguud1ZMZKmoGzsz756LE2KI,134
+pydisort-0.10.2.dist-info/top_level.txt,sha256=-CKw1nKEiDzSuU5EGlGlmhMt5D059Yoo8p1lZB0Ntwc,9
+pydisort-0.10.2.dist-info/METADATA,sha256=nK9oHJtjl9c1gOr075F2ogKpyvr3RRQ2ThyLDsvPNP0,2744
+pydisort-0.10.2.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pydisort/__init__.py,sha256=dCjYfvJykrMVnvktSyWS0t0MRlYsycuslvM_HF9_Bv8,36
+pydisort/pydisort.cpython-39-darwin.so,sha256=06ftMryXtraDOM2ISnh19p57Bz5bBRdgbgI-fJL58fc,1072592
+pydisort/.dylibs/libtorch_python.dylib,sha256=SynDx_C76KHca1OPq8vknghgb0pFczy7tuKylsKW1CU,21131456
+pydisort/.dylibs/libtorch.dylib,sha256=AActUNW7Q26Li7Wi1hhUA5cBV5yV3YAoOPfgjOYs0ac,34880
+pydisort/.dylibs/libtorch_global_deps.dylib,sha256=I2RS6nuPw2tEPtxQPYpVAkNL1IfuqvnDt-yn8H8TCQ8,34880
+pydisort/.dylibs/libomp.dylib,sha256=-Ib2LdXThxApbBFtIXxhGdqq8hbOD0lrv_NUFiCgTas,777600
+pydisort/.dylibs/libtorch_cpu.dylib,sha256=SD-xu6U9lyOB3hCaaCpVZxCCu_gStRxd_NYDvBN-fsQ,170547168
+pydisort/.dylibs/libc10.dylib,sha256=3P6IH2BV9kA5idaU97bke42sJAcwhMyyPj3V3HcMFn0,883840
+pydisort/.dylibs/libshm.dylib,sha256=oR-KoPdCe90r4SA_yIPr-ejhtuVk3GE4sJMsK1V_Gp0,95856
