@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "umlars_translator"
+version = "0.0.5"
+description = "UML representation and analysis system - translation service"
+authors = ["Filip Pawłowski <filip.pawlowski001@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+keywords = ["UML", "deserializer", "serializer"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development",
+    "Topic :: Documentation",
+]
+
+packages = [{include = "umlars_translator", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.111.1"
+uvicorn = {extras = ["standard"], version = "^0.30.1"}
+kink = "^0.8.0"
+pydantic = "^2.7.4"
+watchfiles = "0.21.0"
+motor = "^3.5.1"
+aio-pika = "^9.4.2"
+aiohttp = "^3.9.5"
+
+
+[tool.poetry.group.dev.dependencies]
+mkdocs = "^1.5.3"
+mkdocstrings = { extras = ["python"], version = "^0.24.0" }
+mkdocs-material = "^9.5.3"
+tox = "^4.11.4"
+black = "^23.10.1"
+pytest-mock = "^3.14.0"
+pytest-asyncio = "^0.24.0"
+pytest = "^8.3.2"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.plugins]
+[tool.poetry.plugins."umlars_translator.core.deserialization.abstract.base.deserialization_strategy"]
+ea_xmi = "umlars_translator.core.deserialization.formats.ea_xmi.ea_xmi_deserialization_strategy"
+papyrus_xmi = "umlars_translator.core.deserialization.formats.papyrus_xmi.papyrus_xmi_deserialization_strategy"
+notation_xmi = "umlars_translator.core.deserialization.formats.papyrus_xmi.notation_xmi_deserialization_strategy"
+staruml_mdj = "umlars_translator.core.deserialization.formats.staruml_mdj.staruml_mdj_deserialization_strategy"
