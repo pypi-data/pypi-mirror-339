@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+SystemMonitorAgent/__init__.py
+SystemMonitorAgent/core.py
+systemmonitoragent.egg-info/PKG-INFO
+systemmonitoragent.egg-info/SOURCES.txt
+systemmonitoragent.egg-info/dependency_links.txt
+systemmonitoragent.egg-info/requires.txt
+systemmonitoragent.egg-info/top_level.txt

@@ -1,0 +1,143 @@
+Metadata-Version: 2.1
+Name: systemmonitoragent
+Version: 0.1.1
+Summary: Just to monitor your system
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# SystemMonitorAgent
+
+A lightweight Python agent for system monitoring with automatic device registration and heartbeat reporting to a central monitoring server.
+
+## Overview
+
+SystemMonitorAgent is a Python-based monitoring solution that:
+
+- Automatically registers devices with a unique identifier
+- Sends periodic heartbeats to a central monitoring server
+- Adapts reporting intervals based on server configuration
+- Provides configurable logging levels
+- Works across multiple platforms (Windows, Linux, macOS)
+
+## Installation
+
+```bash
+pip3 install systemmonitoragent
+```
+
+## Quick Start
+
+```python
+from SystemMonitorAgent import start_agent
+
+# Replace with your API token
+TOKEN = "your_api_token_here"
+
+# Start the agent with default settings
+start_agent(TOKEN)
+```
+
+## Configuration Options
+
+You can customize the agent's behavior with various configuration options:
+
+```python
+from SystemMonitorAgent import start_agent
+
+config = {
+    "secrets_path": None,         # Folder path to store secrets.json (None = current directory)
+    "log_level": "INFO",          # Logging level (NONE, DEBUG, INFO, ERROR, ALL)
+    "log_to_file": False,         # Whether to save logs to a file
+    "log_file_name": "agent.log", # Log file name (only used if log_to_file = True)
+}
+
+TOKEN = "your_api_token_here"
+
+start_agent(
+    TOKEN,
+    secrets_dir=config.get("secrets_path"),
+    log_level=config.get("log_level"),
+    log_file=config.get("log_file_name"),
+    log_to_file=config.get("log_to_file")
+)
+```
+
+### Logging Levels
+
+The agent supports various logging levels:
+
+- `"NONE"`: Silent operation with no logs displayed
+- `"DEBUG"` or `"ALL"`: Most verbose, shows all logs (for troubleshooting)
+- `"INFO"`: Shows informational messages and above (recommended for normal use)
+- `"ERROR"`: Shows only error messages
+
+## Device Registration
+
+When first run, the agent:
+
+1. Generates a unique device identifier based on hardware information
+2. Creates a device name using the hostname and timestamp
+3. Registers with the monitoring server
+4. Stores credentials in a `secrets.json` file
+
+The agent will handle automatic re-registration attempts if the initial registration fails.
+
+## How It Works
+
+### Device Identification
+
+The agent creates a unique identifier based on:
+- Linux: Machine ID from `/etc/machine-id`
+- Windows: Machine GUID from the registry
+- macOS: Hardware serial number
+
+This ensures consistent device tracking across restarts.
+
+### Communication Protocol
+
+The agent communicates with the monitoring server via HTTP REST API:
+- Device registration endpoint: `/api/add_device/`
+- Heartbeat endpoint: `/api/device_heartbeat/`
+- Configuration endpoint: `/api/get_device_reporting_time/`
+
+All communications are authenticated using a JWT token.
+
+### Automatic Adaptation
+
+The agent automatically:
+- Adjusts reporting frequency based on server configuration
+- Handles network disruptions with graceful retries
+- Exits cleanly if the device is deleted from the server
+
+## Security Considerations
+
+- All authentication credentials are stored in a local `secrets.json` file
+- Communication with the server uses token-based authentication
+- No sensitive system information is transmitted, only a hashed identifier
+
+## Troubleshooting
+
+If you encounter issues:
+
+1. Set the logging level to `"DEBUG"` to see detailed information
+2. Enable file logging with `log_to_file=True` to capture logs for analysis
+3. Check if the `secrets.json` file exists and contains valid credentials
+4. Verify network connectivity to the monitoring server
+
+## Example Use Cases
+
+- Server fleet monitoring
+- IoT device management
+- Distributed system health checking
+- Application deployment tracking
+
+## Requirements
+
+- Python 3.6 or higher
+- `requests` library
+- Internet connectivity to the monitoring server
