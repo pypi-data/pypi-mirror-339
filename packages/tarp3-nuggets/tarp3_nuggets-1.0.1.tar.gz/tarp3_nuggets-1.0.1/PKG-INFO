@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: tarp3-nuggets
+Version: 1.0.1
+Summary: A package of nuggets found on the web
+Author-email: "Anthony R. Plastino III" <anthony.r.plastino.iii@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+# tarp3_nuggets
+
+-----
+
+## Table of Contents
+
+- [License](#license)
+
+## Installation
+
+```console
+pip install tarp3_nuggets
+```
+
+## License
+
+`tarp3_nuggets` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
