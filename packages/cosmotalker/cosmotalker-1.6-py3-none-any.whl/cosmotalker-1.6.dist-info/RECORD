@@ -1,0 +1,15 @@
+cosmotalker/__init__.py,sha256=rkYWCszvqBZGCozPW9am5YQFrypMjhyvMsP3n8_xo_Y,209
+cosmotalker/apod.py,sha256=oxa4p2Md9qWsv8BiE7V2Abi_45k-or3IPTfhJDDKC0k,2044
+cosmotalker/bot.py,sha256=1Eay99axoP8QkiyCLuTw0KL9vSQnfLkeHwIy4Trmtuk,1352
+cosmotalker/celestrak.py,sha256=yVHUm4S5MPrGuzBQhfIKVJZNcLSvTBMgi1TtsiVj9I8,1066
+cosmotalker/chat.py,sha256=S8IjBY5ojDl472S3sDXpHybKtzvgaqLQtMbW8QLNStI,3074
+cosmotalker/feedback.py,sha256=NuPYnwW-Wfp8_jzeYzofWvIrW71XX12Gj53IVHz4nQ8,94
+cosmotalker/get.py,sha256=nQfm9BpMbTqDuLeuu39_RaNEO5qTwLeUKbF2x_eMG_0,2247
+cosmotalker/search.py,sha256=NaHZH_QWUPW9rUudxsD4p2mLM09O_0Kr_XVdm5Ystow,1152
+cosmotalker/spacex.py,sha256=33OfZW66vzeuvRkk1MDBHjnrKvi-uKICHs2MKSlcEpU,1018
+cosmotalker/ss.txt,sha256=Oczoh5_DspuLJHIgvtPfx1ZWFNGfyTA5wmzk_fbQjOg,167458
+cosmotalker/wiki.py,sha256=BtXiciOnYYpGHeGE8WHnGsJ9RfWNU65D8pTyD7ylgWY,1164
+cosmotalker-1.6.dist-info/METADATA,sha256=tukdbtZT84vtzGxc0OWO8kudZKAjhlBRJTANkZ9o_EM,5258
+cosmotalker-1.6.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+cosmotalker-1.6.dist-info/top_level.txt,sha256=mO4NpRNZqYLDNXfMEUyONZXNnUS8262U8ElM7Ep-Rls,12
+cosmotalker-1.6.dist-info/RECORD,,
