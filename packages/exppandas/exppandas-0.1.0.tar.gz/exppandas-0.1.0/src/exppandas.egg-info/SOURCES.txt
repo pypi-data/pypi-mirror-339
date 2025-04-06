@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/exppandas/__init__.py
+src/exppandas/core.py
+src/exppandas/version.py
+src/exppandas.egg-info/PKG-INFO
+src/exppandas.egg-info/SOURCES.txt
+src/exppandas.egg-info/dependency_links.txt
+src/exppandas.egg-info/requires.txt
+src/exppandas.egg-info/top_level.txt
