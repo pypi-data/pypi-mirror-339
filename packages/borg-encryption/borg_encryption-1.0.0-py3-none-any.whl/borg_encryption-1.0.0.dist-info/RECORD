@@ -1,0 +1,13 @@
+borg_encryption/__init__.py,sha256=OWOcYsje1A7HbnfAKVVvaTvAQ2vCVzjQOjWppp-uYoM,835
+borg_encryption/adaptive_defense.py,sha256=aLIh1uPdjSwIZoXQ2wV14PPIlcDCDVKAEoIAT3b8vp8,11742
+borg_encryption/api.py,sha256=axU1a_9CpbLU0uWRWiCy5AvO8pE7U4IJjj7Xs4ERaYo,10869
+borg_encryption/borg_encryption.py,sha256=MpV5mFfB1hB2TCK59AZx0psXHQP6Mv3QU639IaGAZRo,20320
+borg_encryption/cli.py,sha256=1Kj8r837U2qqZzridM1cDcHU9cO69uTg-l2ctCrdgcA,11125
+borg_encryption/client.py,sha256=kXqgrvB8EsW9DH3AiepwlnUBcZM4xoOmKSzFJe8WKiY,9123
+borg_encryption/key_manager.py,sha256=q_X_XqcizGUEX_GJFb1DA3Njy4bPrHSSbUWFSptR-o0,14686
+borg_encryption-1.0.0.dist-info/licenses/LICENSE,sha256=KTC7Sa3ccnVim1a8EJ7cPronszhrQjCqJ5QCAJ4WQxY,1072
+borg_encryption-1.0.0.dist-info/METADATA,sha256=i1AF30vC9HPr2RFXPd14kvRlsjTlvGXqWpzvVSHYors,3638
+borg_encryption-1.0.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+borg_encryption-1.0.0.dist-info/entry_points.txt,sha256=NCTIehUts--RT8Kmth5eyQMEY_WffD9kBtKH2MnRYUM,58
+borg_encryption-1.0.0.dist-info/top_level.txt,sha256=DN9ql3wdyQqHiUrhLl8ikrqTT8Bmg1WowdT14HKG1jM,16
+borg_encryption-1.0.0.dist-info/RECORD,,
