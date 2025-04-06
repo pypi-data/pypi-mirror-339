@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+agentnexus/__init__.py
+agentnexus/action_manager.py
+agentnexus/base_types.py
+agentnexus/event_dispatcher.py
+agentnexus/llm_integration.py
+agentnexus/manifest_generator.py
+agentnexus/session_manager.py
+agentnexus/ui_components.py
+agentnexus/workflow_manager.py
+agentnexus.egg-info/PKG-INFO
+agentnexus.egg-info/SOURCES.txt
+agentnexus.egg-info/dependency_links.txt
+agentnexus.egg-info/requires.txt
+agentnexus.egg-info/top_level.txt
