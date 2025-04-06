@@ -1,0 +1,17 @@
+{
+  "functions": {
+    "known": []
+  },
+  "variables": {
+    "known": [
+      "AUTOTOOLS_COPYACLOCAL",
+      "BBFILES_PRIORITIZED",
+      "BB_LOGCONFIG"
+    ],
+    "renamed": {}
+  },
+  "replacements": {
+    "distros": [],
+    "machines": []
+  }
+}
