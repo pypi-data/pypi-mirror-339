@@ -1,0 +1,17 @@
+HISTORY.md
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+src/mega/__init__.py
+src/mega/crypto.py
+src/mega/errors.py
+src/mega/mega.py
+src/mega_x.egg-info/PKG-INFO
+src/mega_x.egg-info/SOURCES.txt
+src/mega_x.egg-info/dependency_links.txt
+src/mega_x.egg-info/not-zip-safe
+src/mega_x.egg-info/requires.txt
+src/mega_x.egg-info/top_level.txt
