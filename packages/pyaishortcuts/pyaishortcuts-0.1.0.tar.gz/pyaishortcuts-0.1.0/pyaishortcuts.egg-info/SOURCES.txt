@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+pyaishortcuts/__init__.py
+pyaishortcuts/__main__.py
+pyaishortcuts/ai_processor.py
+pyaishortcuts/main.py
+pyaishortcuts.egg-info/PKG-INFO
+pyaishortcuts.egg-info/SOURCES.txt
+pyaishortcuts.egg-info/dependency_links.txt
+pyaishortcuts.egg-info/entry_points.txt
+pyaishortcuts.egg-info/requires.txt
+pyaishortcuts.egg-info/top_level.txt
