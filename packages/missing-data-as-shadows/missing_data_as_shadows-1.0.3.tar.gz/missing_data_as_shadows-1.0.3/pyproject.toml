@@ -1,0 +1,18 @@
+# moja_kniznica/pyproject.toml
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "missing_data_as_shadows"
+version = "1.0.3"
+description = "Vizualize missing data as shadows"
+authors = [{name = "Andrej Suba", email = "andrej69931@gmail.com"}]
+requires-python = ">=3.8"
+readme = "README.md"
+dependencies = [
+    "pandas",
+    "seaborn",
+    "matplotlib",
+    "numpy",
+]
