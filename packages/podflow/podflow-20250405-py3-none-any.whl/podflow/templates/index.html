@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podflow</title>
+  <style>
+    /* 定义颜色变量 - 浅色模式 */
+    :root {
+      --bg-color: #f8f9fa;
+      --text-color: #333333;
+      --secondary-text: #666666;
+      --input-bg: #ffffff;
+      --input-border: #cccccc;
+      --button-bg: #007bff;
+      --button-hover: #0056b3;
+      --button-text: #ffffff;
+      --button-shadow: hsla(0, 0%, 0%, 0.20);
+      --menu-bg: #f0f0f0;
+      --menu-text: #333333;
+      --menu-width: 170px;
+      --menu-selected-bg: #cccccc;
+    }
+
+    /* 深色模式变量 */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #222222;
+        --text-color: #e0e0e0;
+        --secondary-text: #aaaaaa;
+        --input-bg: #333333;
+        --input-border: #555555;
+        --button-bg: #0062cc;
+        --button-hover: #0069d9;
+        --button-text: #f0f0f0;
+        --button-shadow: hsla(0, 0%, 0%, 0.40);
+        --menu-bg: #333333;
+        --menu-text: #e0e0e0;
+        --menu-selected-bg: #555555;
+      }
+    }
+
+    .ansi-url{
+      color: #4064a0;
+      text-decoration: underline;
+    }
+
+    .ansi-30m { color: #000000; }
+    .ansi-31m { color: #bb271b; }
+    .ansi-32m { color: #61992e; }
+    .ansi-33m { color: #bea235; }
+    .ansi-34m { color: #4064a0; }
+    .ansi-35m { color: #705278; }
+    .ansi-36m { color: #449598; }
+    .ansi-37m { color: #d4d7d0; }
+    .ansi-90m { color: #565752; }
+    .ansi-91m { color: #dc3f36; }
+    .ansi-92m { color: #53b739; }
+    .ansi-93m { color: #f9ea6b; }
+    .ansi-94m { color: #7c9ecb; }
+    .ansi-95m { color: #de30c5; }
+    .ansi-96m { color: #51b2bb; }
+    .ansi-97m { color: #eeeeec; }
+
+    @media (prefers-color-scheme: dark) {
+      .ansi-30m { color: #ffffff; }
+      .ansi-31m { color: #bb271b; }
+      .ansi-32m { color: #61992e; }
+      .ansi-33m { color: #bea235; }
+      .ansi-34m { color: #4064a0; }
+      .ansi-35m { color: #705278; }
+      .ansi-36m { color: #449598; }
+      .ansi-37m { color: #d4d7d0; }
+      .ansi-90m { color: #565752; }
+      .ansi-91m { color: #dc3f36; }
+      .ansi-92m { color: #53b739; }
+      .ansi-93m { color: #f9ea6b; }
+      .ansi-94m { color: #7c9ecb; }
+      .ansi-95m { color: #de30c5; }
+      .ansi-96m { color: #51b2bb; }
+      .ansi-97m { color: #eeeeec; }
+    }
+
+    /* 基本样式 */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+      margin: 0;
+      display: flex;
+    }
+    nav {
+      width: var(--menu-width);
+      background-color: var(--menu-bg);
+      color: var(--menu-text);
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: width 0.3s, padding 0.3s, color 0.3s;
+    }
+    nav.hidden {
+      width: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav h3 {
+      text-align: center;
+      margin: 20px 0 0;
+      font-size: 20px;
+    }
+    nav li {
+      margin: 5px 0;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      padding: 0 20px;
+      height: 40px;
+      line-height: 40px;
+    }
+    nav li:hover {
+      background-color: var(--menu-selected-bg);
+      color: var(--button-hover);
+    }
+    main {
+      flex: 1;
+      padding: 40px;
+      max-width: 520px;
+      transition: margin-left 0.3s;
+    }
+    main.full {
+      margin-left: 0;
+    }
+
+    /* 表单与消息区域共用样式 */
+    .common-area {
+      width: 100%;
+      max-width: 520px;
+      padding: 2px;
+      border: 1px solid var(--input-border);
+      border-radius: 4px;
+      background-color: var(--input-bg);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      box-sizing: border-box;
+      line-height: 1.1;
+      overflow-x: auto; /* 当内容超出宽度时显示水平滚动条（可选） */
+      overflow-y: auto;
+      font-family: 'Courier New', Courier, monospace; /* 添加字体 */
+      word-break: break-word;
+      overflow-wrap: break-word;
+      white-space: pre-wrap; /* 保留换行并允许自动换行 */
+    }
+    textarea {
+      height: 350px;
+      font-size: 16px;
+    }
+    #messageArea {
+      height: 350px;
+      font-size: 12px;
+    }
+    #messageHttp {
+      height: 150px;
+      font-size: 12px;
+    }
+    .button-container {
+      margin-top: 10px;
+    }
+    button {
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      padding: 12px 18px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      box-shadow: 2px 2px 8px var(--button-shadow);
+      margin: 5px;
+    }
+    button:hover {
+      background-color: var(--button-hover);
+    }
+    .hint {
+      font-size: 14px;
+      color: var(--secondary-text);
+      margin-top: 10px;
+    }
+    /* 菜单切换按钮 */
+    #toggleMenu {
+      width: 35px;
+      height: 40px;
+      position: fixed;
+      left: var(--menu-width);
+      top: 5px;
+      background: var(--menu-bg);
+      border: none;
+      font-size: 20px;
+      color: var(--text-color);
+      cursor: pointer;
+      transition: left 0.3s, color 0.3s;
+      border-radius: 0 10px 10px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 0px 8px var(--button-shadow);
+      margin: 0;
+    }
+    #toggleMenu:hover {
+      color: var(--button-hover);
+    }
+
+    /* 手机端优化 */
+    @media (max-width: 600px) {
+      #messageArea, textarea {
+        max-width: none;
+      }
+      button {
+        width: 90%;
+      }
+      nav {
+        position: fixed;
+      }
+      /* 确保页面宽度不会超出视口 */
+      body, html {
+        width: 100%;
+        overflow-x: hidden;
+      }
+    }
+    .message {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    /* 二维码容器样式 */
+    .qrcode-container {
+      display: inline-block; /* 让容器并排显示 */
+      margin: 0px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+</head>
+<body>
+  <!-- 菜单栏 -->
+  <nav id="menu">
+    <h3>菜单栏</h3>
+    <ul>
+      <li data-page="pageMessage">Podflow 运行情况</li>
+      <li data-page="pageChannel">获取媒体频道 ID</li>
+    </ul>
+  </nav>
+  <!-- 菜单切换按钮 -->
+  <button id="toggleMenu">❮</button>
+  <!-- 主体区域 -->
+  <main id="main">
+    <!-- 获取 Channel-ID 页面 -->
+    <section id="pageChannel" style="display: none;">
+      <h2>获取媒体频道 ID</h2>
+      <form id="inputForm" method="post" action="getid">
+        <label for="inputOutput">请输入：</label><br>
+        <textarea class="common-area" name="inputOutput" id="inputOutput"></textarea><br>
+        <div class="button-container">
+          <button type="button" id="pasteBtn">📋 粘贴</button>
+          <button type="submit">✅ 提交</button>
+          <button type="button" id="copyBtn">📄 拷贝</button>
+          <button type="button" id="clearBtn">🗑️ 清空</button>
+        </div>
+        <p class="hint">📌 如果粘贴按钮无效，请长按输入框手动粘贴。</p>
+      </form>
+    </section>
+    <!-- 消息滚动显示页面 -->
+    <section id="pageMessage">
+      <h2>Podflow 运行情况</h2>
+      <form>
+        <label>构建服务：</label><br>
+        <div class="common-area" id="messageArea"></div>
+        <label>服务器：</label><br>
+        <div class="common-area" id="messageHttp"></div>
+      </form>
+    </section>
+  </main>
+  <script>
+    (function() {
+      // 生成单个二维码的函数
+      function generateQRCodeForNode(container) {
+        const rootStyles = getComputedStyle(document.documentElement);
+        const textColor = rootStyles.getPropertyValue('--text-color');
+        const inputBg = rootStyles.getPropertyValue('--input-bg');
+        const url = container.dataset.url;
+        container.innerHTML = '';
+        if (url) {
+          new QRCode(container, {
+            text: url,
+            width: 220,
+            height: 220,
+            colorDark: textColor,
+            colorLight: inputBg,
+            correctLevel: QRCode.CorrectLevel.L
+          });
+        } else {
+          container.textContent = 'URL 未提供';
+        }
+      }
+
+      // 为所有存在的二维码容器生成二维码
+      function generateQRCodes() {
+        const containers = document.querySelectorAll('.qrcode-container');
+        containers.forEach(generateQRCodeForNode);
+      }
+
+      // 利用 MutationObserver 动态监听 container 内新增的二维码容器
+      function observeQRCodes(container) {
+        const observer = new MutationObserver((mutationsList) => {
+          mutationsList.forEach(mutation => {
+            mutation.addedNodes.forEach(node => {
+              if (node.nodeType === Node.ELEMENT_NODE) {
+                if (node.classList.contains('qrcode-container')) {
+                  generateQRCodeForNode(node);
+                  // 在生成二维码后，检查是否需要滚动
+                  if (!userScrolled && container.scrollHeight - container.scrollTop <= container.clientHeight + 10) {
+                    container.scrollTop = container.scrollHeight;
+                  }
+                } else {
+                  const childContainers = node.querySelectorAll('.qrcode-container');
+                  childContainers.forEach(generateQRCodeForNode);
+                  // 在生成二维码后，检查是否需要滚动
+                  if (!userScrolled && container.scrollHeight - container.scrollTop <= container.clientHeight + 10) {
+                    container.scrollTop = container.scrollHeight;
+                  }
+                }
+              }
+            });
+          });
+        });
+        observer.observe(container, { childList: true, subtree: true });
+      }
+
+      // 缓存常用节点
+      const menu = document.getElementById('menu');
+      const toggleMenuBtn = document.getElementById('toggleMenu');
+      const mainArea = document.getElementById('main');
+      const pages = {
+        pageChannel: document.getElementById('pageChannel'),
+        pageMessage: document.getElementById('pageMessage')
+      };
+      const inputForm = document.getElementById('inputForm');
+      const inputOutput = document.getElementById('inputOutput');
+      const messageArea = document.getElementById('messageArea');
+      const messageHttp = document.getElementById('messageHttp');
+      const pasteBtn = document.getElementById('pasteBtn');
+      const copyBtn = document.getElementById('copyBtn');
+      const clearBtn = document.getElementById('clearBtn');
+
+      let pollingTimer = null;
+
+      // 监听 messageArea 内动态新增的二维码容器
+      observeQRCodes(messageArea);
+      observeQRCodes(messageHttp); // Also observe for messageHttp
+
+      // 菜单切换函数
+      function toggleMenu() {
+        menu.classList.toggle('hidden');
+        if (menu.classList.contains('hidden')) {
+          toggleMenuBtn.style.left = '0px';
+          toggleMenuBtn.textContent = '❯';
+        } else {
+          toggleMenuBtn.style.left = 'var(--menu-width)';
+          toggleMenuBtn.textContent = '❮';
+        }
+      }
+
+      // 根据页面标识显示对应面板
+      function showPage(pageId) {
+        Object.values(pages).forEach(page => page.style.display = 'none');
+        if (pages[pageId]) {
+          pages[pageId].style.display = 'block';
+          // 手机模式下自动隐藏菜单
+          if (window.innerWidth <= 600 && !menu.classList.contains('hidden')) {
+            toggleMenu();
+          }
+          pageId === 'pageMessage' ? startMessagePolling() : stopMessagePolling();
+          if (pageId === 'pageMessage') {
+            generateQRCodes(); // 页面切换时生成已有二维码
+          }
+        }
+      }
+
+      // 初始化默认页面
+      showPage('pageMessage');
+
+      let lastMessage = { podflow: [], http: [] };
+      let userScrolled = false;
+
+      // 监听滚动事件，检测用户是否手动滚动
+      function onUserScroll(event) {
+        const element = event.target;
+        // 判断是否接近底部，增加一定的容差值
+        const nearBottom = element.scrollHeight - element.scrollTop <= element.clientHeight + 20;
+        userScrolled = !nearBottom;
+      }
+
+      messageArea.addEventListener('scroll', onUserScroll);
+      messageHttp.addEventListener('scroll', onUserScroll);
+
+      // 轮询消息更新，更新 messageArea 与 messageHttp
+      function getMessages() {
+        fetch('message')
+          .then(response => response.json()) // 解析 JSON 数据
+          .then(data => {
+            if (JSON.stringify(data) !== JSON.stringify(lastMessage)) {
+              // 追加新消息
+              appendMessages(messageArea, data.podflow, lastMessage.podflow);
+              appendMessages(messageHttp, data.http, lastMessage.http);
+              lastMessage = data;
+            }
+          })
+          .catch(error => console.error('获取消息失败:', error));
+      }
+
+      function createMessageElement(message) {
+        const p = document.createElement('p');
+        p.innerHTML = message;
+        p.className = 'message';
+        return p;
+      }
+
+      function appendMessages(container, newMessages, oldMessages) {
+        // 判断当前是否在底部
+        const wasAtBottom = container.scrollHeight - container.scrollTop <= container.clientHeight + 10;
+
+        // 当两数组长度相等且有内容时，只比较最后一项
+        if (newMessages.length === oldMessages.length && newMessages.length > 0) {
+          const lastNewMessage = newMessages[newMessages.length - 1];
+          const lastOldMessage = oldMessages[oldMessages.length - 1];
+          if (lastNewMessage !== lastOldMessage) {
+            const p = createMessageElement(lastNewMessage);
+            const lastChild = container.lastElementChild;
+            if (lastChild) {
+              container.replaceChild(p, lastChild);
+            } else {
+              container.appendChild(p);
+            }
+          }
+        } else {
+          // 如果 newMessages 与 oldMessages 数量不一致
+          // 先替换容器中最后一项为 newMessages 中对应位置的消息（若 oldMessages 存在数据）
+          if (oldMessages.length > 0) {
+            const replaceIndex = oldMessages.length - 1;
+            const p = createMessageElement(newMessages[replaceIndex]);
+            const lastChild = container.lastElementChild;
+            if (lastChild) {
+              container.replaceChild(p, lastChild);
+            } else {
+              container.appendChild(p);
+            }
+          }
+          // 再追加从 oldMessages.length 开始的后续消息
+          newMessages.slice(oldMessages.length).forEach(msg => {
+            container.appendChild(createMessageElement(msg));
+          });
+        }
+
+        // 如果之前在底部且用户没有主动滚动，则自动滚动到底部
+        if (wasAtBottom && !userScrolled) {
+          container.scrollTop = container.scrollHeight;
+        }
+      }
+
+      function startMessagePolling() {
+        getMessages();
+        pollingTimer = setInterval(getMessages, 250);
+      }
+
+      function stopMessagePolling() {
+        if (pollingTimer !== null) {
+          clearInterval(pollingTimer);
+          pollingTimer = null;
+        }
+      }
+
+      startMessagePolling();
+
+      // 表单异步提交（获取 Channel-ID）
+      inputForm && inputForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const content = inputOutput.value;
+        fetch('getid', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ content })
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('网络响应异常');
+          }
+          return response.json();
+        })
+        .then(data => inputOutput.value = data.response)
+        .catch(error => {
+          console.error('请求失败:', error);
+          alert('请求失败，请稍后重试！');
+        });
+      });
+
+      // 粘贴功能
+      pasteBtn.addEventListener('click', function() {
+        if (navigator.clipboard && navigator.clipboard.readText) {
+          navigator.clipboard.readText().then(text => {
+            inputOutput.value = text;
+            inputOutput.focus();
+          }).catch(err => {
+            console.warn("剪贴板读取失败:", err);
+            alert("无法读取剪贴板，请手动粘贴！");
+          });
+        } else {
+          try {
+            inputOutput.focus();
+            document.execCommand('paste');
+          } catch (err) {
+            console.warn("execCommand 粘贴失败:", err);
+            alert("您的浏览器不支持自动粘贴，请手动操作！");
+          }
+        }
+      });
+
+      // 复制功能
+      copyBtn.addEventListener('click', function() {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(inputOutput.value).catch(err => {
+            console.warn("复制失败:", err);
+            alert("无法复制，请手动选择文本后按 Ctrl+C 复制！");
+          });
+        } else {
+          try {
+            inputOutput.select();
+            document.execCommand('copy');
+          } catch (err) {
+            console.warn("execCommand 复制失败:", err);
+            alert("您的浏览器不支持复制，请手动操作！");
+          }
+        }
+      });
+
+      // 清空输入框
+      clearBtn.addEventListener('click', function() {
+        inputOutput.value = '';
+      });
+
+      // 菜单项点击事件委托
+      menu.addEventListener('click', function(event) {
+        const target = event.target;
+        if (target.tagName.toLowerCase() === 'li' && target.dataset.page) {
+          showPage(target.dataset.page);
+        }
+      });
+
+      // 菜单切换按钮事件绑定
+      toggleMenuBtn.addEventListener('click', toggleMenu);
+
+      // 针对手机端，初始化时隐藏菜单
+      if (window.innerWidth <= 600) {
+        menu.classList.add('hidden');
+        toggleMenuBtn.style.left = '0px';
+        toggleMenuBtn.textContent = '❯';
+      }
+
+      // 在页面加载完成后首次生成二维码（如果当前显示的是 Channel 页面）
+      window.addEventListener('load', () => {
+        if (pages.pageChannel.style.display === 'block') {
+          generateQRCodes();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
