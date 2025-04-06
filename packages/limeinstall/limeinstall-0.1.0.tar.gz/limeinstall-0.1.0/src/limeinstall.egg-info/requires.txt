@@ -1,0 +1,13 @@
+pip>=25
+
+[build]
+limedev[build]>=0.6.0
+
+[dev]
+limedev[package,readme,test]>=0.6.1
+pre-commit<4,>=3.2.2
+tox>=4.5.1
+tox-uv>=1.25
+
+[test_functional]
+pytest>=7.2.0

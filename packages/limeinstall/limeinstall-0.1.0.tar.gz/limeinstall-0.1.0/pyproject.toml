@@ -1,0 +1,57 @@
+[build-system]
+requires = [
+    "setuptools>=64.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "limeinstall"
+description = "Repository installation tool"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+authors = [
+    { name = "Limespy" },
+]
+requires-python = ">=3.11"
+readme = "README.md"
+version = "0.1.0"
+dynamic = [
+    "dependencies",
+    "optional-dependencies",
+]
+
+[project.scripts]
+limeinstall = "limeinstall:main"
+
+[project.urls]
+Homepage = "https://github.com/Limespy/Limeinstaller"
+Changelog = "https://github.com/Limespy/Limeinstaller/blob/main/README.md#Changelog"
+"Issue Tracker" = "https://github.com/Limespy/Limeinstaller/issues"
+
+[tool.limedev]
+full_name = "LimeInstall"
+
+[tool.setuptools.dynamic.dependencies]
+file = [
+    "dependencies/requirements.txt",
+]
+
+[tool.setuptools.dynamic.optional-dependencies.build]
+file = "dependencies/requirements_build.txt"
+
+[tool.setuptools.dynamic.optional-dependencies.dev]
+file = "dependencies/requirements_dev.txt"
+
+[tool.setuptools.dynamic.optional-dependencies.test_functional]
+file = "dependencies/requirements_test_functional.txt"

@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+pyproject.toml
+dependencies/requirements.txt
+dependencies/requirements_build.txt
+dependencies/requirements_dev.txt
+dependencies/requirements_test_functional.txt
+src/limeinstall/_API.py
+src/limeinstall/__init__.py
+src/limeinstall/__main__.py
+src/limeinstall.egg-info/PKG-INFO
+src/limeinstall.egg-info/SOURCES.txt
+src/limeinstall.egg-info/dependency_links.txt
+src/limeinstall.egg-info/entry_points.txt
+src/limeinstall.egg-info/requires.txt
+src/limeinstall.egg-info/top_level.txt
