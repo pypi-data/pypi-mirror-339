@@ -1,0 +1,146 @@
+[project]
+name = "dsbin"
+version = "0.7.2"
+description = "Personal script library solving problems you didn't know you cared about"
+authors = [{ name = "Danny Stewart", email = "danny@stewart.cc" }]
+urls = { repository = "https://github.com/dannystewart/dsbin" }
+readme = "README.md"
+license = "LGPL-3.0-or-later"
+license-files = ["LICENSE"]
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "blessed (>=1.20.0)",
+    "halo (>=0.0.31)",
+    "inquirer (>=3.4.0)",
+    "mutagen (>=1.47.0)",
+    "mysql-connector-python (>=9.2.0,<10.0.0)",
+    "natsort (>=8.4.0)",
+    "numpy (>=2.2.4)",
+    "packaging (>=24.2)",
+    "paramiko (>=3.5.1)",
+    "pexpect (>=4.9.0)",
+    "pillow (>=11.1.0)",
+    "polykit (>=0.7.0)",
+    "pyperclip (>=1.9.0)",
+    "requests (>=2.32.3)",
+    "rich (>=14.0.0)",
+    "rsa (>=4.9)",
+    "scipy (>=1.15.2)",
+    "scp (>=0.15.0)",
+    "telethon (>=1.39.0)",
+    "tomlkit (>=0.13.2)",
+    "tqdm (>=4.67.1)",
+    "types-paramiko (>=3.5.0.20240928)",
+    "types-pillow (>=10.2.0.20240822)",
+    "types-requests (>=2.32.0.20250328)",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Communications :: File Sharing",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Multimedia :: Sound/Audio :: Conversion",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Multimedia :: Video :: Conversion",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Shells",
+    "Topic :: System :: System Shells",
+    "Topic :: Utilities",
+]
+
+[tool.poetry.group.dev.dependencies]
+mypy = ">=1.15.0"
+pdoc = ">=15.0.1"
+pre-commit = ">=4.2.0"
+ruff = ">=0.11.4"
+polykit = { path = "../polykit", develop = true }
+
+[build-system]
+requires = ["poetry-core>=2.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project.scripts]
+# Scripts to list all my scripts and check versions
+lsbin = "dsbin.lsbin:main"
+dsver = "dsbin.dsver:main"
+
+# File management scripts
+backupsort = "dsbin.files.backupsort:main"
+bigfiles = "dsbin.files.bigfiles:main"
+dupefinder = "dsbin.files.dupefinder:main"
+fml = "dsbin.files.fml:main"
+foldermerge = "dsbin.files.foldermerge:main"
+rsyncer = "dsbin.files.rsyncer:main"
+workcalc = "dsbin.workcalc.main:main"
+
+# Text processing scripts
+pycompare = "dsbin.text.pycompare:main"
+w11renamer = "dsbin.text.w11renamer:main"
+
+# Media scripts
+ffgif = "dsbin.media.ffgif:main"
+fftrim = "dsbin.media.fftrim:main"
+ytdl = "dsbin.media.ytdl:main"
+
+# Music scripts
+aif2wav = "dsbin.music.awa:aif2wav"
+alacrity = "dsbin.music.alacrity:main"
+hpfilter = "dsbin.music.hpfilter:main"
+metacopy = "dsbin.music.metacopy:main"
+mp3ify = "dsbin.music.mp3ify:main"
+mshare = "dsbin.music.mshare:main"
+pybounce = "dsbin.pybounce.main:main"
+rmp3 = "dsbin.music.rmp3:main"
+wav2aif = "dsbin.music.awa:wav2aif"
+wpmusic = "dsbin.wpmusic.main:main"
+
+# Mac-specific scripts
+dmg-encrypt = "dsbin.mac.dmg_encrypt:main"
+dmgify = "dsbin.mac.dmgify:main"
+mvdmg = "dsbin.mac.mvdmg:main"
+netreset = "dsbin.mac.netreset:main"
+pkginst = "dsbin.mac.pkginst:main"
+setmag = "dsbin.mac.setmag:main"
+spacepurger = "dsbin.mac.spacepurger:main"
+timestamps = "dsbin.mac.timestamps:main"
+
+# Logic-specific scripts
+bipclean = "dsbin.logic.bipclean:main"
+bouncefiler = "dsbin.logic.bouncefiler:main"
+bounceprune = "dsbin.logic.bounceprune:main"
+bounces = "dsbin.logic.bounces:main"
+oldprojects = "dsbin.logic.oldprojects:main"
+
+# System tools
+changehostname = "dsbin.tools.changehostname:main"
+dsservice = "dsbin.tools.dsservice:main"
+dsupdater = "dsbin.updater.updater:main"
+dsupdater-install = "dsbin.updater.install:main"
+dockermounter = "dsbin.tools.dockermounter:main"
+envsync = "dsbin.tools.envsync:main"
+ssh-tunnel = "dsbin.tools.ssh_tunnel:main"
+watchtower = "dsbin.tools.watchtower:main"
+
+# Development-related scripts
+changelog = "dsbin.dev.update_changelog:main"
+checkdeps = "dsbin.dev.check_dependencies:main"
+checkimports = "dsbin.dev.check_imports:main"
+codeconfigs = "dsbin.dev.code_configs.code_configs:main"
+impactanalyzer = "dsbin.dev.impact_analyzer:main"
+packageanalyzer = "dsbin.dev.package_analyzer:main"
+poetry-migrate = "dsbin.dev.poetry_migrate:main"
+pybumper = "dsbin.pybumper.main:main"
+pyenversioner = "dsbin.dev.pyenversioner:main"
+reporun = "dsbin.dev.reporun:main"
+rereadme = "dsbin.dev.update_readme:main"
+scriptdep = "dsbin.dev.scriptdep:main"
+tagreplace = "dsbin.dev.tag_replace:main"
+uvmigrate = "dsbin.dev.uvmigrate:main"
