@@ -1,0 +1,16 @@
+fastapi_cachex/__init__.py,sha256=K8zRD7pEOo77Ged7SJQ-BFNMe6Pnz8yM5ePFq97nI_s,82
+fastapi_cachex/cache.py,sha256=b-55IR0kdcVj4yUk8dplqqUy2avW49P-oI01ART9pyU,9174
+fastapi_cachex/directives.py,sha256=kJCmsbyQ89m6tsWo_c1vVJn3rk0pD5JZaY8xtNLcRh0,530
+fastapi_cachex/exceptions.py,sha256=coYct4u6uK_pdjetUWDwM5OUCfhql0OkTECynMRUq4M,379
+fastapi_cachex/proxy.py,sha256=vFShY7_xp4Sh1XU9dJzsBv2ICN8Rtwx6g1qCcCvmdf8,810
+fastapi_cachex/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapi_cachex/types.py,sha256=YkXlBARIr5lHQE4PYQrwXjEoLHdz9CIjfX7V-S9N8p0,328
+fastapi_cachex/backends/__init__.py,sha256=U65JrCeh1eusklqUfV5yvZGK7Kfy5RctzfVrRfFPuaI,166
+fastapi_cachex/backends/base.py,sha256=eGfn0oZNQ8_drNHz4ZtqBVFSxKxEwW8y4ojw5iShgLQ,707
+fastapi_cachex/backends/memcached.py,sha256=g3184fHpFK7LH1UY9xfzRszBBzqmzeaLG806B5MsZDM,2190
+fastapi_cachex/backends/memory.py,sha256=7KFSn5e1CvDzflZ5zqUPDQsBf6emcV0ob_tCsLQcDLw,2445
+fastapi_cachex-0.1.4.dist-info/licenses/LICENSE,sha256=asJkHbd10YDSnjeAOIlKafh7E_exwtKXY5rA-qc_Mno,11339
+fastapi_cachex-0.1.4.dist-info/METADATA,sha256=6qK6F6Pi338JYWN0NEv5SnR8gN4eJaXyFntNmFAu57s,4669
+fastapi_cachex-0.1.4.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+fastapi_cachex-0.1.4.dist-info/top_level.txt,sha256=97FfG5FDycd3hks-_JznEr-5lUOgg8AZd8pqK5imWj0,15
+fastapi_cachex-0.1.4.dist-info/RECORD,,
