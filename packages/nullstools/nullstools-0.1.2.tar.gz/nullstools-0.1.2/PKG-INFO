@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: nullstools
+Version: 0.1.2
+Summary: NullsTools
+Home-page: https://github.com/darkmean-dev/nullstools
+Author: darkmean
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: summary
+
+NullsTools
+
+Простой модуль для сборки вашего .nullsmod пакета.
