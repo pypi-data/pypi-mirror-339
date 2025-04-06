@@ -1,0 +1,17 @@
+speedclickpro_postinstall.py,sha256=ngmmXSSq5ovleCyhXfXdz3zvkmJ74AImVWqNbbUrObk,1924
+speedclickpro/__init__.py,sha256=KMbx1HW57Y53Nfg_z2JssB9TAjQ6AWBIZlvSseBD4q8,188
+speedclickpro/__main__.py,sha256=Kz8AtJymzNAFpKwSiQ9HoKoiXTKRbrW5dxeYVkers3M,148
+speedclickpro/auto_clicker.py,sha256=QWnQ5YQvWY0bXIs-Lpe9ZLBXFW5ujpkg0rALkVLczFs,42502
+speedclickpro/create_icon.py,sha256=Qsuo_xIZnWcRskLYhPitdMUpZ6qP0Gy-uSjuqJmcU_Y,1860
+speedclickpro/languages.py,sha256=OFStiUBtnuNoPW3mlCCbC1oR_mChT0BJL1hBDnXX5CY,16429
+speedclickpro/main.py,sha256=jua_zNglJcOk68i2l-OlEcg8UdpGMZmidxB3I7chr1k,313
+speedclickpro/icons/icon.png,sha256=JPcPNTDHOE544kjQeLSeIdkKZ65Qjf_2vezYjwU-_tk,3996
+speedclickpro/icons/logo.png,sha256=CL66gmk2FNVOqr70nRvL10CSVyqnzRazkztp-NSBObk,59538
+speedclickpro-1.0.7.data/scripts/speedclickpro,sha256=7rWIOsuRyKrujA3Sg1iKr6xT2IKGW_ARPSHnLX03jV0,124
+speedclickpro-1.0.7.data/scripts/speedclickpro.bat,sha256=IkM1mCNMUeehELjraZM-p1jQXj8X-X98_EJpnsAGLTs,37
+speedclickpro-1.0.7.dist-info/licenses/LICENSE,sha256=Cq4dQFGRPRorjXONnpcmPE0olmuAaRyGKtI1si53WpM,1071
+speedclickpro-1.0.7.dist-info/METADATA,sha256=AcAGyQcVzEIoKM676iTE2kg8eTi9iNRvoGYyyXR3bmw,5063
+speedclickpro-1.0.7.dist-info/WHEEL,sha256=MAQBAzGbXNI3bUmkDsiV_duv8i-gcdnLzw7cfUFwqhU,109
+speedclickpro-1.0.7.dist-info/entry_points.txt,sha256=5fBlDauIJ3fm4GqsE_ivyfIR6SWZyk9-l3Uq4-vIE88,105
+speedclickpro-1.0.7.dist-info/top_level.txt,sha256=Cmq_itZimL1WE-L8FFLM2F-ikvIb2bLyV6ZotFBP75w,40
+speedclickpro-1.0.7.dist-info/RECORD,,
