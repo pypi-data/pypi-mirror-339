@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "ecocycle"
+version = "2.5.3"
+description = "Cycle into a greener tomorrow"
+authors = ["Shirish Pothi <shirish.pothi.27@gmail.com>"]
+license = "Apache 2.0"
+readme = "README.md"
+packages = [
+    {include = "ecocycle"}
+]
+
+[tool.poetry.scripts]
+ecocycle = "ecocycle.cli:main"
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+requests = "^2.32.3"
+colorama = "^0.4.6"
+python-dotenv = "^1.0.1"
+google-api-python-client = "^2.149.0"
+google-auth-httplib2 = "^0.2.0"
+google-auth-oauthlib = "^1.0.0"
+google-auth = "^2.35.0"
+tqdm = "^4.66.1"
+cryptography = "^42.0.0"
+yagmail = "^0.15.293"
+weatherapi = "^0.0.4"
+
+[tool.pyright]
+useLibraryCodeForTypes = true
+exclude = [".cache"]
+
+[tool.ruff]
+select = ['E', 'W', 'F', 'I', 'B', 'C4', 'ARG', 'SIM']
+ignore = ['W291', 'W292', 'W293']
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
