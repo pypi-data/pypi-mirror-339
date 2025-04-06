@@ -1,0 +1,11 @@
+typing_extensions
+
+[:python_version < "3.9"]
+importlib-metadata
+
+[testing]
+setuptools
+pytest
+pytest-cov
+hypothesis
+typing_extensions

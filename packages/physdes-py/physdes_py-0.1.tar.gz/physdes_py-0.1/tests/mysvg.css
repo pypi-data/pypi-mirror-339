@@ -1,0 +1,21 @@
+polygon {
+  fill: #0062ff;
+  stroke: black;
+}
+
+circle {
+  r: 10;
+  fill: #ff00a7;
+}
+
+rect {
+  fill: #00321c;
+}
+
+/* PRESENTATIONAL STYLES */
+body {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}

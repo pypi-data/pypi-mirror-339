@@ -1,0 +1,66 @@
+class Vector2:
+    __slots__ = ('x_', 'y_')
+
+    def __init__(self, x, y):
+        self.x_ = x
+        self.y_ = y
+
+    @property
+    def x(self):
+        return self.x_
+
+    @property
+    def y(self):
+        return self.y_
+
+    def copy(self):
+        """[summary]
+
+        Returns:
+            [type]: [description]
+        """
+        return Vector2(self.x_, self.y_)
+
+    def __iadd__(self, rhs):
+        self.x_ += rhs.x
+        self.y_ += rhs.y
+        return self
+
+    def __add__(self, rhs):
+        tmp = self.copy()
+        return tmp.__iadd__(rhs)
+
+    def __isub__(self, rhs):
+        self.x_ -= rhs.x
+        self.y_ -= rhs.y
+        return self
+
+    def __sub__(self, rhs):
+        tmp = self.copy()
+        return tmp.__isub__(rhs)
+
+    def __imul__(self, alpha):
+        self.x_ *= alpha
+        self.y_ *= alpha
+        return self
+
+    def __mul__(self, alpha):
+        tmp = self.copy()
+        return tmp.__imul__(alpha)
+
+    def __idiv__(self, alpha):
+        self.x_ /= alpha
+        self.y_ /= alpha
+        return self
+
+    def __div__(self, alpha):
+        tmp = self.copy()
+        return tmp.__idiv__(alpha)
+
+    def __eq__(self, rhs) -> bool:
+        return (self.x_, self.y_) == (rhs.x_, rhs.y_)
+
+    def __ne__(self, rhs) -> bool:
+        return not self.__eq__(rhs)
+
+    # no less than comparison
