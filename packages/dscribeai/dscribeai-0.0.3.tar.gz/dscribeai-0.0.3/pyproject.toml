@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dscribeai"
+version = "0.0.3"
+description = "dScribe AI is an API to extract transcriptions and visual summaries from social media videos like TikTok, YouTube, Instagram, and X."
+authors = [
+  { name="dScribe AI", email="jordan@dscribeai.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests",
+    "pydantic"
+]
+
+[project.urls]
+Homepage = "https://dscribeai.com?utm_source=pypi"
+
+[tool.setuptools.packages.find]
+include = ["dscribeai*"]
