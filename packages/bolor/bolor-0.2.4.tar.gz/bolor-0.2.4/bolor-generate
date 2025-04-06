@@ -1,0 +1,25 @@
+#!/bin/bash
+# Direct script for Bolor generate command
+# Usage: ./bolor-generate "your prompt here"
+
+# Get the script directory
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+if [ "$#" -lt 1 ]; then
+    echo "Usage: ./bolor-generate \"your prompt here\""
+    exit 1
+fi
+
+# Get prompt from arguments
+PROMPT="$*"
+
+# Call generate function directly
+PYTHONPATH="$DIR" python3 -c "
+import sys
+from bolor.__main__ import generate
+from rich.console import Console
+
+console = Console()
+console.print(f'[bold blue]Generating code for: {sys.argv[1]}[/bold blue]')
+generate(prompt=sys.argv[1])
+" "$PROMPT"

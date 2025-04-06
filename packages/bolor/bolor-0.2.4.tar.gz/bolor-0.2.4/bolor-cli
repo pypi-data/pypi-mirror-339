@@ -1,0 +1,39 @@
+#!/bin/bash
+# Enhanced wrapper script for Bolor CLI
+# Usage: ./bolor-cli [command] [arguments]
+
+# Get the script directory
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+# Define bolor CLI function to ensure it's called as a direct command
+bolor_cmd() {
+    # Suppress warnings and run bolor directly to avoid python -m prefix
+    PYTHONPATH="$DIR" PYTHONWARNINGS=ignore python3 -c "import sys; from bolor.__main__ import main; sys.argv[0] = 'bolor'; sys.exit(main())" "$@"
+}
+
+# Define known commands to avoid treating them as generate prompts
+KNOWN_COMMANDS=("scan" "plan" "update" "generate" "deploy-check")
+
+# Check if first argument is a known command
+is_known_command=false
+for cmd in "${KNOWN_COMMANDS[@]}"; do
+    if [[ "$1" == "$cmd" ]]; then
+        is_known_command=true
+        break
+    fi
+done
+
+# Special handling based on command
+if [[ "$1" == "generate" ]]; then
+    # Pass all arguments directly to avoid issues with quotes and special characters
+    bolor_cmd "$@"
+elif [[ "$1" == "update" ]]; then
+    # Pass all arguments directly for update command
+    bolor_cmd "$@"
+elif [[ "$is_known_command" == "true" ]]; then
+    # For all other known commands, pass arguments directly
+    bolor_cmd "$@"
+else
+    # If not a known command, treat as a natural language prompt for generate
+    bolor_cmd "$@"
+fi
