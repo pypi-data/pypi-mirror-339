@@ -1,0 +1,2 @@
+[console_scripts]
+pelican_exporter = pelican_exporter.pelican_exporter:main
