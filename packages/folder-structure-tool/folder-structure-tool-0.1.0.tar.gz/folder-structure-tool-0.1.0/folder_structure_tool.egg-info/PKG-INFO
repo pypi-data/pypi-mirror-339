@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: folder-structure-tool
+Version: 0.1.0
+Summary: Prints folder structure with smart file truncation
+Home-page: https://github.com/ayyucedemirbas/PeekDirl
+Author: Ayyuce Demirbas
+Author-email: a.ayyuced@gmail.com
+License: GPL-3.0
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+# PeekDir
+
+A Python utility to visualize directory structures with smart truncation of common file types.
+
+## Installation
+```bash
+pip install PeekDir
+```
+
+## Usage
+```bash
+PeekDir [directory]
+```
+
+## Features
+- Truncates file groups with >5 items
+- Directory-first listing
+- Permission handling

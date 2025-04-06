@@ -1,0 +1,10 @@
+LICENSE.md
+README.md
+setup.py
+PeekDir/__init__.py
+PeekDir/cli.py
+folder_structure_tool.egg-info/PKG-INFO
+folder_structure_tool.egg-info/SOURCES.txt
+folder_structure_tool.egg-info/dependency_links.txt
+folder_structure_tool.egg-info/entry_points.txt
+folder_structure_tool.egg-info/top_level.txt
