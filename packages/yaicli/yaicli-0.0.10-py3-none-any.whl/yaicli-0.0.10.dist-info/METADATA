@@ -1,0 +1,517 @@
+Metadata-Version: 2.4
+Name: yaicli
+Version: 0.0.10
+Summary: A simple CLI tool to interact with LLM
+Project-URL: Homepage, https://github.com/belingud/yaicli
+Project-URL: Repository, https://github.com/belingud/yaicli
+Project-URL: Documentation, https://github.com/belingud/yaicli
+Author-email: belingud <im.victor@qq.com>
+License:                                  Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "[]"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright [yyyy] [name of copyright owner]
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               http://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+License-File: LICENSE
+Keywords: ai,chatgpt,cli,gpt,interact,interact with chatgpt,interact with gpt,interact with llm,interact with llms,interact with openai,interactive,llm,llms,openai,terminal
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: distro>=1.9.0
+Requires-Dist: jmespath>=1.0.1
+Requires-Dist: prompt-toolkit>=3.0.50
+Requires-Dist: requests>=2.32.3
+Requires-Dist: rich>=13.9.4
+Requires-Dist: typer>=0.15.2
+Description-Content-Type: text/markdown
+
+# YAICLI - Your AI Command Line Interface
+
+[![PyPI version](https://img.shields.io/pypi/v/yaicli?style=for-the-badge)](https://pypi.org/project/yaicli/)
+![GitHub License](https://img.shields.io/github/license/belingud/yaicli?style=for-the-badge)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/yaicli?logo=pypi&style=for-the-badge)
+![Pepy Total Downloads](https://img.shields.io/pepy/dt/yaicli?style=for-the-badge&logo=python)
+
+YAICLI is a compact yet potent command-line AI assistant, allowing you to engage with Large Language Models (LLMs) such as ChatGPT's gpt-4o directly via your terminal. It offers multiple operation modes for everyday conversations, generating and executing shell commands, and one-shot quick queries.
+
+Support regular and deep thinking models.
+
+> [!WARNING] 
+> This is a work in progress, some features could change or be removed in the future.
+
+## Features
+
+- **Multiple Operation Modes**:
+  - **Chat Mode (💬)**: Interactive conversation with the AI assistant
+  - **Execute Mode (🚀)**: Generate and execute shell commands specific to your OS and shell
+  - **Temp Mode**: Quick queries without entering interactive mode
+
+- **Smart Environment Detection**:
+  - Automatically detects your operating system and shell
+  - Customizes responses and commands for your specific environment
+
+- **Rich Terminal Interface**:
+  - Markdown rendering for formatted responses
+  - Streaming responses for real-time feedback
+  - Color-coded output for better readability
+
+- **Configurable**:
+  - Customizable API endpoints
+  - Support for different LLM providers
+  - Adjustable response parameters
+
+- **Keyboard Shortcuts**:
+  - Tab to switch between Chat and Execute modes
+
+- **History**:
+  - Save and recall previous queries
+
+## Installation
+
+### Prerequisites
+
+- Python 3.9 or higher
+
+### Install from PyPI
+
+```bash
+# Install by pip
+pip install yaicli
+
+# Install by pipx
+pipx install yaicli
+
+# Install by uv
+uv tool install yaicli
+```
+
+### Install from Source
+
+```bash
+git clone https://github.com/yourusername/yaicli.git
+cd yaicli
+pip install .
+```
+
+## Configuration
+
+On first run, YAICLI will create a default configuration file at `~/.config/yaicli/config.ini`. You'll need to edit this file to add your API key and customize other settings.
+
+Just run `ai`, and it will create the config file for you. Then you can edit it to add your api key.
+
+### Configuration File
+
+The default configuration file is located at `~/.config/yaicli/config.ini`. Look at the example below:
+
+```ini
+[core]
+PROVIDER=OPENAI
+BASE_URL=https://api.openai.com/v1
+API_KEY=your_api_key_here
+MODEL=gpt-4o
+
+# auto detect shell and os
+SHELL_NAME=auto
+OS_NAME=auto
+
+# if you want to use custom completions path, you can set it here
+COMPLETION_PATH=/chat/completions
+# if you want to use custom answer path, you can set it here
+ANSWER_PATH=choices[0].message.content
+
+# true: streaming response
+# false: non-streaming response
+STREAM=true
+```
+
+### Configuration Options
+
+Below are the available configuration options and override environment variables:
+
+- **BASE_URL**: API endpoint URL (default: OpenAI API), env: AI_BASE_URL
+- **API_KEY**: Your API key for the LLM provider, env: AI_API_KEY
+- **MODEL**: The model to use (e.g., gpt-4o, gpt-3.5-turbo), default: gpt-4o, env: AI_MODEL
+- **SHELL_NAME**: Shell to use (auto for automatic detection), default: auto, env: AI_SHELL_NAME
+- **OS_NAME**: OS to use (auto for automatic detection), default: auto, env: AI_OS_NAME
+- **COMPLETION_PATH**: Path for completions endpoint, default: /chat/completions, env: AI_COMPLETION_PATH
+- **ANSWER_PATH**: Json path expression to extract answer from response, default: choices[0].message.content, env: AI_ANSWER_PATH
+- **STREAM**: Enable/disable streaming responses, default: true, env: AI_STREAM
+
+Default config of `COMPLETION_PATH` and `ANSWER_PATH` is OpenAI compatible. If you are using OpenAI or other OpenAI compatible LLM provider, you can use the default config.
+
+If you wish to use other providers that are not compatible with the openai interface, you can use the following config:
+
+- claude:
+  - BASE_URL: https://api.anthropic.com/v1
+  - COMPLETION_PATH: /messages
+  - ANSWER_PATH: content.0.text
+- cohere:
+  - BASE_URL: https://api.cohere.com/v2
+  - COMPLETION_PATH: /chat
+  - ANSWER_PATH: message.content.[0].text
+- google:
+  - BASE_URL: https://generativelanguage.googleapis.com/v1beta/openai
+  - COMPLETION_PATH: /chat/completions
+  - ANSWER_PATH: choices[0].message.content
+
+You can use google OpenAI complete endpoint and leave `COMPLETION_PATH` and `ANSWER_PATH` as default. BASE_URL: https://generativelanguage.googleapis.com/v1beta/openai. See https://ai.google.dev/gemini-api/docs/openai
+
+Claude also has a testable OpenAI-compatible interface, you can just use Calude endpoint and leave `COMPLETION_PATH` and `ANSWER_PATH` as default. See: https://docs.anthropic.com/en/api/openai-sdk
+
+If you not sure how to config `COMPLETION_PATH` and `ANSWER_PATH`, here is a guide:
+1. **Find the API Endpoint**:
+   - Visit the documentation of the LLM provider you want to use.
+   - Find the API endpoint for the completion task. This is usually under the "API Reference" or "Developer Documentation" section.
+2. **Identify the Response Structure**:
+   - Look for the structure of the response. This typically includes fields like `choices`, `completion`, etc.
+3. **Identify the Path Expression**:
+   Forexample, claude response structure like this:
+   ```json
+      {
+      "content": [
+        {
+          "text": "Hi! My name is Claude.",
+          "type": "text"
+        }
+      ],
+      "id": "msg_013Zva2CMHLNnXjNJJKqJ2EF",
+      "model": "claude-3-7-sonnet-20250219",
+      "role": "assistant",
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "type": "message",
+      "usage": {
+        "input_tokens": 2095,
+        "output_tokens": 503
+      }
+    }
+   ```
+    We are looking for the `text` field, so the path should be 1.Key `content`, 2.First obj `[0]`, 3.Key `text`. So it should be `content.[0].text`.
+
+
+## Usage
+
+### Basic Usage
+
+```bash
+# One-shot mode
+ai "What is the capital of France?"
+
+# Chat mode
+ai --chat
+
+# Shell command generation mode
+ai --shell "Create a backup of my Documents folder"
+
+# Verbose mode for debugging
+ai --verbose "Explain quantum computing"
+```
+
+### Command Line Options
+
+- `<PROMPT>`: Argument
+- `--verbose` or `-V`: Show verbose information
+- `--chat` or `-c`: Start in chat mode
+- `--shell` or `-s`: Generate and execute shell command
+- `--install-completion`: Install completion for the current shell
+- `--show-completion`: Show completion for the current shell, to copy it or customize the installation
+- `--help` or `-h`: Show this message and exit
+
+```bash
+ai -h
+
+ Usage: ai [OPTIONS] [PROMPT]
+
+ yaicli. Your AI interface in cli.
+
+╭─ Arguments ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│   prompt      [PROMPT]  The prompt send to the LLM                                                                                                       │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --verbose             -V        Show verbose information                                                                                                 │
+│ --chat                -c        Start in chat mode                                                                                                       │
+│ --shell               -s        Generate and execute shell command                                                                                       │
+│ --install-completion            Install completion for the current shell.                                                                                │
+│ --show-completion               Show completion for the current shell, to copy it or customize the installation.                                         │
+│ --help                -h        Show this message and exit.                                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+```
+
+### Interactive Mode
+
+In interactive mode (chat or shell), you can:
+- Type your queries and get responses
+- Use `Tab` to switch between Chat and Execute modes
+- Type '/exit' to exit
+- Type '/clear' to clear history
+- Type '/his' to show history
+
+### Shell Command Generation
+
+In Execute mode:
+1. Enter your request in natural language
+2. YAICLI will generate an appropriate shell command
+3. Review the command
+4. Confirm to execute or reject
+
+## Examples
+
+### Chat Mode Example
+
+```bash
+$ ai --chat
+💬 > Tell me about the solar system
+
+Assistant:
+Certainly! Here’s a brief overview of the solar system:
+
+ • Sun: The central star of the solar system, providing light and energy.
+ • Planets:
+    • Mercury: Closest to the Sun, smallest planet.
+    • Venus: Second planet, known for its thick atmosphere and high surface temperature.
+    • Earth: Third planet, the only known planet to support life.
+    • Mars: Fourth planet, often called the "Red Planet" due to its reddish appearance.
+    • Jupiter: Largest planet, a gas giant with many moons.
+    • Saturn: Known for its prominent ring system, also a gas giant.
+    • Uranus: An ice giant, known for its unique axial tilt.
+    • Neptune: Another ice giant, known for its deep blue color.
+ • Dwarf Planets:
+    • Pluto: Once considered the ninth planet, now classified as
+
+💬 >
+```
+
+### Execute Mode Example
+
+```bash
+$ ai --shell "Find all PDF files in my Downloads folder"
+
+Generated command: find ~/Downloads -type f -name "*.pdf"
+Execute this command? [y/n]: y
+
+Executing command: find ~/Downloads -type f -name "*.pdf"
+
+/Users/username/Downloads/document1.pdf
+/Users/username/Downloads/report.pdf
+...
+```
+
+## Technical Implementation
+
+YAICLI is built using several Python libraries:
+
+- **Typer**: Provides the command-line interface
+- **Rich**: Provides terminal content formatting and beautiful display
+- **prompt_toolkit**: Provides interactive command-line input experience
+- **requests**: Handles API requests
+- **jmespath**: Parses JSON responses
+
+## Contributing
+
+Contributions of code, issue reports, or feature suggestions are welcome.
+
+## License
+
+[Apache License 2.0](LICENSE)
+
+---
+
+*YAICLI - Making your terminal smarter*
