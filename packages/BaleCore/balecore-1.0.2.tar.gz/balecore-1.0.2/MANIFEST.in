@@ -1,0 +1,4 @@
+include README.md LICENSE
+recursive-include balecore/fun *.json.enc
+
+
