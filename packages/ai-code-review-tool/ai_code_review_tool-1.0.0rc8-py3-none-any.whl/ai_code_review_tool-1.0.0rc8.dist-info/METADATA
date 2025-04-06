@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: ai-code-review-tool
+Version: 1.0.0rc8
+Summary: AI-powered code review assistant using OpenAI
+Author: Jordan Eisenback
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: typer>=0.9
+Requires-Dist: openai>=1.0.0
+Requires-Dist: python-dotenv
