@@ -1,0 +1,14 @@
+nonebot_plugin_argot-0.1.7.dist-info/METADATA,sha256=1-AY5aAK3KDoCqtTW_Dx17kJmOnfei98VoTaEnCF6v8,7793
+nonebot_plugin_argot-0.1.7.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+nonebot_plugin_argot-0.1.7.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+nonebot_plugin_argot-0.1.7.dist-info/licenses/LICENSE,sha256=xQ3QCUicEzCFCuHFdyli8yu49f1Xrw4BjrAvyrAyYnY,1065
+nonebot_plugin_argot/__init__.py,sha256=gFD51m2DU9j-eXQTvzCzxutyzGGY1WPOF3MWJLP-7dE,1976
+nonebot_plugin_argot/data_source.py,sha256=UPKsIvuq2R0iHmxytm7DpL4a644Gg_vsdxo7jaRddEk,3221
+nonebot_plugin_argot/extension.py,sha256=To7IN04LAzP4oqO2fPm0euIf_ZfEJQJJSmcilhSQvrM,2106
+nonebot_plugin_argot/hook.py,sha256=W385Y0zT3zlkYax8GsAt-irZwgHPqSgpHQZF9a6SpHw,492
+nonebot_plugin_argot/matcher.py,sha256=sj0SslMi9gezxHqWp_jxYv9MCPoi97qAHknubIr6qSM,1457
+nonebot_plugin_argot/message.py,sha256=mEmoEYq8iEus_u3bSLWHjXv0zgm95UqCYfhKZHaYFNM,1390
+nonebot_plugin_argot/segment.py,sha256=YZlu3sMjnNQy5F9-324-XRvP5dbK_MMevF_0Y6u6m4k,1695
+nonebot_plugin_argot/typing.py,sha256=LV6uZ-wGWWpxSt1JRnC3xMMr7ywEj9ThGz0EPJ8XE_g,1924
+nonebot_plugin_argot/utils.py,sha256=-4i97OglnyZIJO8Q0xfzufvZ1ZVTYpYkoz-odGyAPv0,552
+nonebot_plugin_argot-0.1.7.dist-info/RECORD,,
