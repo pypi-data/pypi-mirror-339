@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+src/grifftools/__init__.py
+src/grifftools/func.py
+src/grifftools/lib.py
+src/grifftools/shell.py
+src/grifftools.egg-info/PKG-INFO
+src/grifftools.egg-info/SOURCES.txt
+src/grifftools.egg-info/dependency_links.txt
+src/grifftools.egg-info/requires.txt
+src/grifftools.egg-info/top_level.txt
