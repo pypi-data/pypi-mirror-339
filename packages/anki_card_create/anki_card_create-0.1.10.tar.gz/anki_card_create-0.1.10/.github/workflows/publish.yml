@@ -1,0 +1,38 @@
+name: Publish Python Package
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  uv-example:
+    name: python
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@v5
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version-file: "pyproject.toml"
+  
+    - name: Install the project
+      run: uv sync --all-extras --dev
+
+    - name: Run tests
+      run: uv run pytest tests --ignore=tests/test_card_creator.py
+
+    - name: Build package
+      run: |
+        uv build
+
+    - name: Publish package to PyPI
+      env:
+        PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
+      run: |
+        uv publish --token ${PYPI_TOKEN} 
