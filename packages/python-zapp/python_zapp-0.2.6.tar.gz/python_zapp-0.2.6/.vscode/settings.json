@@ -1,0 +1,13 @@
+{
+    "cSpell.words": [
+        "abinit",
+        "googletest",
+        "gtest",
+        "indoc",
+        "teardown",
+        "visitable",
+        "zapp"
+    ],
+    "mypy.runUsingActiveInterpreter": true,
+    "ruff.lint.run": "onSave"
+}
