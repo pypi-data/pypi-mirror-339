@@ -1,0 +1,3 @@
+recursive-exclude * *.py
+recursive-include obf/common_fun/__pycache__ *.pyc
+recursive-include obf/test_steps/__pycache__ *.pyc
