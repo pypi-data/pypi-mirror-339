@@ -1,0 +1,2 @@
+[console_scripts]
+silentis = silentisai.run:main
