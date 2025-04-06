@@ -1,0 +1,5 @@
+[console_scripts]
+zxbasm=src.zxbasm.zxbasm:main
+zxbc=src.zxbc:main
+zxbpp=src.zxbpp.zxbpp:entry_point
+
