@@ -1,0 +1,6 @@
+beautifulsoup4
+openpyxl
+pandas
+requests
+typing-extensions
+xlrd>=2.0.1
