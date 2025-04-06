@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/Excnumpy/__init__.py
+src/Excnumpy/core.py
+src/Excnumpy/version.py
+src/Excnumpy.egg-info/PKG-INFO
+src/Excnumpy.egg-info/SOURCES.txt
+src/Excnumpy.egg-info/dependency_links.txt
+src/Excnumpy.egg-info/requires.txt
+src/Excnumpy.egg-info/top_level.txt
