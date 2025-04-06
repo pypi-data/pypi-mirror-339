@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+pysimverse/__init__.py
+pysimverse.egg-info/PKG-INFO
+pysimverse.egg-info/SOURCES.txt
+pysimverse.egg-info/dependency_links.txt
+pysimverse.egg-info/requires.txt
+pysimverse.egg-info/top_level.txt
