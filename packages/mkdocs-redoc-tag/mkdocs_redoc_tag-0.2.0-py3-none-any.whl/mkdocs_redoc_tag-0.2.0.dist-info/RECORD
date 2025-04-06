@@ -1,0 +1,12 @@
+mkdocs_redoc_tag/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mkdocs_redoc_tag/plugin.py,sha256=DNigAKdLX51FVVYiHvQPc71S0iKHQd2ISnkFljoKYww,7492
+mkdocs_redoc_tag/redoc/LICENCE,sha256=e5xOoDqjkSXOmrcbYfBT7gGWuAommIcz3KCMdQdS93g,1099
+mkdocs_redoc_tag/redoc/redoc.html,sha256=f2Yyw5RcuxRlGz8qvZvbO_LfLuE2EPczdb3ZaKCq96c,1233
+mkdocs_redoc_tag/redoc/javascripts/redark.js,sha256=REv8WbnnrYAwQIU_ZM1MpR-8eZHsqLCZQqOeOEifZD0,5346
+mkdocs_redoc_tag/redoc/javascripts/redoc.standalone.js,sha256=LA08saMuJBfFtyANqBL99I5I0qbtnEmjmSbH_TGB0Uw,910724
+mkdocs_redoc_tag/redoc/stylesheets/redark.css,sha256=l_7IVc2Gxi5TmBZ1Pr7loke3bD5wd0l348h4c8Lo5JA,220
+mkdocs_redoc_tag-0.2.0.dist-info/METADATA,sha256=S6DYwA5rvXvTLiWZdiG1b56gLX0S8siWPzraooumByU,3923
+mkdocs_redoc_tag-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mkdocs_redoc_tag-0.2.0.dist-info/entry_points.txt,sha256=kPZDxT2IewtqrlOF4rbVllcjtW5cs2KFXIzMcTe2Pjw,65
+mkdocs_redoc_tag-0.2.0.dist-info/licenses/LICENSE,sha256=qXFnuFsm_A6-C88HRdTH0HQUo8BRr-HXr7WvK192Rjw,1065
+mkdocs_redoc_tag-0.2.0.dist-info/RECORD,,

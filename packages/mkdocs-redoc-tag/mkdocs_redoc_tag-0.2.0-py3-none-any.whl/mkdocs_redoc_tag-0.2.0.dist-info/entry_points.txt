@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+redoc-tag = mkdocs_redoc_tag.plugin:RedocPlugin
