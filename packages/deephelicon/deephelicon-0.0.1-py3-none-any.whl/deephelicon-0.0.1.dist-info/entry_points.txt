@@ -1,0 +1,6 @@
+[console_scripts]
+deephelicon_download=deephelicon.predict:download
+deephelicon_fmt=deephelicon.predict:op_format
+deephelicon_s1=deephelicon.predict:rrc_s1
+deephelicon_s2=deephelicon.predict:rrc_s2
+
