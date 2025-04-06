@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+amsgpack.c
+deque.h
+ext.h
+pyproject.toml
+amsgpack.egg-info/PKG-INFO
+amsgpack.egg-info/SOURCES.txt
+amsgpack.egg-info/dependency_links.txt
+amsgpack.egg-info/top_level.txt
+test/test_amsgpack.py
+test/test_suite.py

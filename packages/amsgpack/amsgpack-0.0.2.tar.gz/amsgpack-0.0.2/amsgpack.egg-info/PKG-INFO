@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: amsgpack
+Version: 0.0.2
+Summary: Another MessagePack library
+Author-email: Arseniy Terekhin <senyai@gmail.com>
+License: MIT
+Requires-Python: >=3.10
