@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: pytelepath
+Version: 1.1.2
+Summary: Cool beautiful tools for telegram bots.
+Author-email: Dmitor cel Mare <dmeety@yandex.ru>
+Requires-Dist: beautools
+Requires-Dist: python-telegram-bot
+Requires-Dist: sqlalchemy
+Provides-Extra: dev
+Requires-Dist: pytest; extra == 'dev'
