@@ -1,0 +1,26 @@
+[project]
+name = "raff"
+version = "0.1.0"
+description = "A library and utility for extensive parsing of IFF-based container formats."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+keywords = ["iff", "riff", "rf64", "rifx", "w64", "wave64", "bw64", "wave"]
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "pytest>=8.3.5",
+    "ruff>=0.11.2",
+]
+
+[tool.setuptools.packages.find]
+where = ["raff"]
+
+[project.scripts]
+sniff = "raff.cli:main"
+
+[project.urls]
+Repository = "https://github.com/ubmu/raff"
+
