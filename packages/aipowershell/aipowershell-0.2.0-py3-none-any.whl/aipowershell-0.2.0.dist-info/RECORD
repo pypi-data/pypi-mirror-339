@@ -1,0 +1,11 @@
+aipowershell/__init__.py,sha256=003dAab6xbZJozjraAqbFPIquMQvwZUJ4fJPWKiUCmE,104
+aipowershell/__main__.py,sha256=FKoDyoHvhJv1WsUewr0fD0ezyDAJjVA5EY9cDpCoogU,131
+aipowershell/analyzer.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aipowershell/cli.py,sha256=yB3JprCLvTl1wVSWMuyLaJL9TZpnVJP8ywc_Tky5Ang,21036
+aipowershell/error_handler.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aipowershell-0.2.0.dist-info/licenses/LICENSE,sha256=q53YqEH5OACuJ8YmE3i9pND509hapVaOX42ix2AMkZ8,1085
+aipowershell-0.2.0.dist-info/METADATA,sha256=DfgsoMzGzIoaE5WCatfHQUgaIbDy61PYHjOvHe6AUuc,2522
+aipowershell-0.2.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+aipowershell-0.2.0.dist-info/entry_points.txt,sha256=4OYprv0TG6s4Rt-LzteJ7-9s8nAaKcw2QAJohzvikxU,55
+aipowershell-0.2.0.dist-info/top_level.txt,sha256=U5hKYrW9XiHFT3RIYC0W7uAyiEcLvb5TXjb6DLM096w,13
+aipowershell-0.2.0.dist-info/RECORD,,
