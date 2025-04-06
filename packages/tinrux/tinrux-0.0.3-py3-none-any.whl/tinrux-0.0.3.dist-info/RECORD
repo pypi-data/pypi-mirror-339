@@ -1,0 +1,10 @@
+tinrux/__about__.py,sha256=CLrL4hFsfmOZVwQes14AKOH4bbl5voVZwl1iGStoZ1o,147
+tinrux/__init__.py,sha256=Go5tZrHMi-auSPeblmYgRzqMNoAyBb6DL0EfidpI6DM,218
+tinrux/cli.py,sha256=SBqhxfxLSStWXef-VUxWmOen494r7y7OOYYfMPAHPbM,2313
+tinrux/tinruxClient.py,sha256=c_mx4EPWTvf2t0GiIS1Xj26wEWYvAZX3JZalY4cnK-I,2697
+tinrux/tinruxServer.py,sha256=vZ0SuORUeWNM_9A5xKIgGp0zaGTEyN5ef2_SV0tuUvc,5411
+tinrux-0.0.3.dist-info/METADATA,sha256=aIRxTx8O3fwYUBFx0kNfSPjvA_IJqBeQ3Zr2JzYUtB0,34845
+tinrux-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tinrux-0.0.3.dist-info/entry_points.txt,sha256=JZIzsE6d-mhq66Eli9zhlUFM6UYX7cBrFQ2_6WxltEE,43
+tinrux-0.0.3.dist-info/licenses/LICENSE.txt,sha256=Jq-u-2k2prhXAVBHecRDqF08WMsPG5smQQ39O0rSbAY,31941
+tinrux-0.0.3.dist-info/RECORD,,
