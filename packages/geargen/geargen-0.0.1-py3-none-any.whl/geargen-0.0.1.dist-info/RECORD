@@ -1,0 +1,12 @@
+geargen/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geargen/__main__.py,sha256=7J6VVrBGWUnI5Tv4A9k5KAVjJhI8B4duAnUWb6QC3I4,89
+geargen/bevel.py,sha256=vAm20Ib5i6aLeqGxfwWjfsppBaqYW6k4Gd9lLejXgcs,2422
+geargen/cli.py,sha256=HLP4XwzT1xfB_z97Sbn9nT1fZ2EA3DH9ShpGjpAtHvU,2450
+geargen/parallel.py,sha256=6ISSuuw6J91fNnFEEbTUzugj14QaofA5-6pspxKSA0I,2036
+geargen/profile.py,sha256=-_aSZbpmj8aiVd_IDsaM7kKW0IZWU6XHLCxt8dLu8O0,4391
+geargen-0.0.1.dist-info/licenses/LICENSE,sha256=QaQvJ_2YsTwecnZSSgqHRyYj-e-JTRzbctlnUPvyoCM,11344
+geargen-0.0.1.dist-info/METADATA,sha256=5K_JXC6-iVSHIHN2e72lUXM4GSjIxLCnB20Y3oewS0k,2409
+geargen-0.0.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+geargen-0.0.1.dist-info/entry_points.txt,sha256=IYaE-zmDE4LCG9wKVrf5vrV_mGuSS8k6QfvMiyQwkMg,45
+geargen-0.0.1.dist-info/top_level.txt,sha256=MjZBPyNZ7sfbLridK9MtbziBQm8L7nOaJS5Jccn_OSQ,8
+geargen-0.0.1.dist-info/RECORD,,
