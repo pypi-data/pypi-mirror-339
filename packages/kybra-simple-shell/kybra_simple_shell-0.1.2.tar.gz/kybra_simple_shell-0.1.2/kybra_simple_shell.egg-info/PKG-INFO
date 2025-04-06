@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: kybra-simple-shell
+Version: 0.1.2
+Summary: A lightweight CLI tool for interacting with Python-based Kybra canisters
+Home-page: https://github.com/your-org/kybra-simple-shell
+Author: Kybra Team
+License-File: LICENSE
+Requires-Dist: prompt_toolkit>=3.0.0
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
