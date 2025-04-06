@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+databloom.egg-info/PKG-INFO
+databloom.egg-info/SOURCES.txt
+databloom.egg-info/dependency_links.txt
+databloom.egg-info/requires.txt
+databloom.egg-info/top_level.txt
