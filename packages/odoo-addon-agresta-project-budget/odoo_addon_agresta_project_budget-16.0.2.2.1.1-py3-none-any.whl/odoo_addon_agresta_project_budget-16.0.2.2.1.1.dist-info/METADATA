@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: odoo-addon-agresta_project_budget
+Version: 16.0.2.2.1.1
+Requires-Python: >=3.10
+Requires-Dist: odoo>=16.0a,<16.1dev
+Summary: Odoo customizations for Agresta
+Home-page: https://coopdevs.org
+License: AGPL-3
+Author: Coopdevs Treball SCCL
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 16.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+
