@@ -1,0 +1,12 @@
+idotmatrix_sdk/__init__.py,sha256=Kz4jxh03k9z9spw6uruaVPBYAhGL6SEWi8TW-Ke-HE4,159
+idotmatrix_sdk/idotmatrix.py,sha256=25h-3HXmOc2JLMmev8SSVL-8eSvNnYSQGSR_TD8awzc,1938
+idotmatrix_sdk/idotmatrix_base.py,sha256=Tc_Jwk4n5ft01qRFWEn6xoQu1LRxR-zDqAMs7S8_dwE,957
+idotmatrix_sdk/idotmatrix_color.py,sha256=wbdzUBY68QH5S-KtK036OC84WS08NW00KyAyCIbDy4I,420
+idotmatrix_sdk/idotmatrix_countdown.py,sha256=TRsuPV0OtlqjVGkG9Yf4Q6XkvwOW26vT0CioAodZM8w,1955
+idotmatrix_sdk/idotmatrix_effects.py,sha256=xBmoBtltq7_zKtymRCr9hz8Go4it0idSO5E1wUSgoME,806
+idotmatrix_sdk/idotmatrix_image.py,sha256=bsuc13OwfaXDL--x01uhAbZegw2LSHEuabh_jJKSPpw,559
+idotmatrix_sdk/idotmatrix_screen.py,sha256=Fcgkk6n6el9icY82t8kjyaPt4B9dUzz8pj4ebl897qg,1244
+idotmatrix_sdk/idotmatrix_time.py,sha256=3jmViE38N76IA_gcpS8RkUWlGWsraSrI9-EOnzr7JfI,1605
+idotmatrix_sdk-0.1.dist-info/METADATA,sha256=V3jRw2DsOE6mXAEOt0RxI8H1RsVXB-h4zerrfzpqlrs,1746
+idotmatrix_sdk-0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+idotmatrix_sdk-0.1.dist-info/RECORD,,
