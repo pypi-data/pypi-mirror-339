@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "exnd-curses"
+version = "0.1.5"
+description = "Simple use of curses."
+authors = [
+  { name="Kor Shantanu Nitin", email="korshantanu@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers=[
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies=[
+	"windows-curses; platform_system == 'windows'",
+	"curses; platform_system == 'linux'",
+]
+
+[license]
+license = "MIT"
+license_files = ["LICENSE"]

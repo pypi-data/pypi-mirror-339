@@ -1,0 +1,6 @@
+
+[:platform_system == "linux"]
+curses
+
+[:platform_system == "windows"]
+windows-curses
