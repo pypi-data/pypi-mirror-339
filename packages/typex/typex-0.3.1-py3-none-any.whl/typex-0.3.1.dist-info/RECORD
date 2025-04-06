@@ -1,0 +1,10 @@
+typex/__init__.py,sha256=9iwjEjZd0t0AYjBNdLaIhIwYWggAKFli72jOfdridAI,753
+typex/basic.py,sha256=FhmcZWmyLeFkgkzg9V0n39nRcq_TcpPtvDXc_y5a9dU,6073
+typex/constants.py,sha256=cPT36vplGJKtE-gH3mOcuy0qnFmE5W1LoveqmBfKuvw,170
+typex/decorators.py,sha256=gxJoCzgWmnfD9iWb8Ztf5AdKvIgBBSRatibAuote_pQ,840
+typex/dirstruct.py,sha256=D1mi8jpaQtGFHX_smbMhc-GRLFlFD-aKHedsYPwfbMg,3465
+typex-0.3.1.dist-info/LICENSE,sha256=EMLYx-h4O4fViUbKyV2PyPzh8Bes4_1ZeIs3HkEpxvI,1086
+typex-0.3.1.dist-info/METADATA,sha256=IfWe_pMzPYK7pH5AwP5ZcmPC4QbAIcHY7zFjervEOZ4,1439
+typex-0.3.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+typex-0.3.1.dist-info/top_level.txt,sha256=T9dQlgPGgNo9uvM7LoAhaJWJhMZUsU45kQt5mld9ubU,6
+typex-0.3.1.dist-info/RECORD,,
