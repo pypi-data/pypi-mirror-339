@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: secure_proxy
+Version: 0.5.0
+Summary: Maxfiy proxy orqali so‘rov yuborish uchun kutubxona
+Home-page: https://github.com/abduvohid26/secure_proxy
+Author: Abduvohid
+Author-email: abdujalilov2629@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: httpx
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Secure Proxy Client
+
+Ushbu kutubxona orqali foydalanuvchilar token orqali xavfsiz proxy ishlata oladilar.
+
+## O'rnatish
+
+```bash
+pip install secure_proxy
