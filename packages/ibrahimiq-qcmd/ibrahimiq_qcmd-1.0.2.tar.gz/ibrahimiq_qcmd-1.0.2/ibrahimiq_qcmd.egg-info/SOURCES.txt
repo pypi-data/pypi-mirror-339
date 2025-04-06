@@ -1,0 +1,17 @@
+LICENSE
+PYPI-README.md
+README.md
+pyproject.toml
+qcmd
+qcmd-completion.bash
+setup.py
+ibrahimiq_qcmd.egg-info/PKG-INFO
+ibrahimiq_qcmd.egg-info/SOURCES.txt
+ibrahimiq_qcmd.egg-info/dependency_links.txt
+ibrahimiq_qcmd.egg-info/entry_points.txt
+ibrahimiq_qcmd.egg-info/requires.txt
+ibrahimiq_qcmd.egg-info/top_level.txt
+qcmd_cli/__init__.py
+qcmd_cli/qcmd-completion.bash
+qcmd_cli/qcmd.py
+tests/test_qcmd.py
