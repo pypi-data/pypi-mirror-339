@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: at-client-data
+Version: 0.2.2
+Summary: AT Client and Schema Package for AT Data API
+Home-page: https://github.com/yourusername/at-client-data
+Author: AT Data
+Author-email: info@atdata.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Requires-Dist: pydantic>=1.8.0
+
