@@ -1,0 +1,7 @@
+name: digraphx
+channels:
+  - conda-forge
+dependencies:
+  - pytest
+  - pytest-benchmark
+  - networkx
