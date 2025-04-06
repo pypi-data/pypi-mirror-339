@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: arc-agi-core
+Version: 0.0.5
+Requires-Python: >=3.12
+Requires-Dist: numpy>=2.2.4
+Requires-Dist: requests>=2.32.3
+Provides-Extra: arc-agi-llm
+Requires-Dist: arc-agi-llm; extra == 'arc-agi-llm'
