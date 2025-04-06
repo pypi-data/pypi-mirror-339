@@ -1,0 +1,2 @@
+[console_scripts]
+awesome-calculator = awesome_calculator:main

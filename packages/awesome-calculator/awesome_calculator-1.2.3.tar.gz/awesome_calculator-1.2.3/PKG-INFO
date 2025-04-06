@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: awesome-calculator
+Version: 1.2.3
+Summary: A colorful CLI calculator with math operations and colorama
+Home-page: https://github.com/abhigyan-709/awesome_calculator
+Author: Project DevOps
+Author-email: projectdevops709@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: colorama
+Dynamic: license-file
+
+# Awesome Calculator
+
+A colorful command-line calculator built in Python. It supports operations like:
+
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Percentage
+- Square root
+- Power
+
+Includes colored CLI using `colorama` for enhanced UX.
+
+## Usage
+
+Install it:
+
+```bash
+pip install awesome-calculator
+```
+
+Run it:
+```bash
+awesome-calculator
+```

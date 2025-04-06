@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+awesome_calculator/__init__.py
+awesome_calculator/main.py
+awesome_calculator.egg-info/PKG-INFO
+awesome_calculator.egg-info/SOURCES.txt
+awesome_calculator.egg-info/dependency_links.txt
+awesome_calculator.egg-info/entry_points.txt
+awesome_calculator.egg-info/requires.txt
+awesome_calculator.egg-info/top_level.txt
