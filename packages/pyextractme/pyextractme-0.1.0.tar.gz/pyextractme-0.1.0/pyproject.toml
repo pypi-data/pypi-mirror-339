@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyextractme"
+version = "0.1.0"
+description = "extract files from the compressed file (.zip/.tar.gz/.gz)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pytest>=8.3.5",
+    "loguru>=0.7.3",
+    "typer>=0.15.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.5",
+    "pytest-cov>=4.1.0",
+    "black>=24.2.0",
+    "isort>=5.13.2",
+]
+
+[project.scripts]
+pyextractme = "pyextractme.main:app"
+
+[project.urls]
+Homepage = "https://github.com/fxyzbtc/pyextractme"
+Issues = "https://github.com/fxyzbtc/pyextractme/issues"
+
+[tool.setuptools]
+packages = ["pyextractme"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+

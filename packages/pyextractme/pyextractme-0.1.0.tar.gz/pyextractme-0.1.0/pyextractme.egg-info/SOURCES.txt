@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+pyextractme/__init__.py
+pyextractme/__main__.py
+pyextractme/main.py
+pyextractme.egg-info/PKG-INFO
+pyextractme.egg-info/SOURCES.txt
+pyextractme.egg-info/dependency_links.txt
+pyextractme.egg-info/entry_points.txt
+pyextractme.egg-info/requires.txt
+pyextractme.egg-info/top_level.txt
+tests/test_main.py
