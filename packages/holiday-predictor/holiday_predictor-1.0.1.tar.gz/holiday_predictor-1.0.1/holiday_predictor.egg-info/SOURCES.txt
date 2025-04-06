@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+holiday_predictor/__init__.py
+holiday_predictor/data.py
+holiday_predictor.egg-info/PKG-INFO
+holiday_predictor.egg-info/SOURCES.txt
+holiday_predictor.egg-info/dependency_links.txt
+holiday_predictor.egg-info/requires.txt
+holiday_predictor.egg-info/top_level.txt
