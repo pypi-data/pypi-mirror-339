@@ -1,0 +1,11 @@
+message_reflector/__init__.py,sha256=6fpU2WNKILN3x_6ll381C6ti466imlDtMphGwbIpTAo,1178
+message_reflector/example.py,sha256=WLgEX9arhIG1fzYpt7K2DAaYB1zx7P7fKnQapoQG3GA,1272
+message_reflector/frontend/build/asset-manifest.json,sha256=o4FK4iGADksBO2Yj07OkpErGq6SLTAriUVPILQyoeTY,221
+message_reflector/frontend/build/index.html,sha256=gLQ-a77kN7NpR6cK2vVXjVddJ050h27RZ4fsBNPH7ss,418
+message_reflector/frontend/build/static/js/main.438b0f7d.js,sha256=HY5Q0puSDChBTehbE6SsHORjLjxqgXuHUlMipQZ7fsY,191379
+message_reflector/frontend/build/static/js/main.438b0f7d.js.LICENSE.txt,sha256=s-XL8Zem1680kJa9h1APqx4H7gsVsSS7Fv65dThWkwg,542
+message_reflector/frontend/build/static/js/main.438b0f7d.js.map,sha256=l2hY6XJDB3rpO7A7E5tRpxjCsAI0leg-VHWZV6BVSrY,937867
+message_reflector-0.0.17.dist-info/METADATA,sha256=R8_CWvy0t5cw5tOgEWo8167-cpB1U1ZvNruh_Zm3rAM,1855
+message_reflector-0.0.17.dist-info/WHEEL,sha256=DK49LOLCYiurdXXOXwGJm6U4DkHkg4lcxjhqwRa0CP4,91
+message_reflector-0.0.17.dist-info/top_level.txt,sha256=_6kdInJ17rbOqbsrSIxPP8JJH7Yg9uFBGK0SNAdIm30,18
+message_reflector-0.0.17.dist-info/RECORD,,
