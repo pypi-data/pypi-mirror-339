@@ -1,0 +1,8 @@
+__pycache__
+tmp
+log/*
+.refresh_stop
+.env
+app.log
+venv
+logs/development.log
