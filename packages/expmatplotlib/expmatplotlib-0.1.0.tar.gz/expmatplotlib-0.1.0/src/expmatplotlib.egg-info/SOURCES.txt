@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/expmatplotlib/__init__.py
+src/expmatplotlib/core.py
+src/expmatplotlib/version.py
+src/expmatplotlib.egg-info/PKG-INFO
+src/expmatplotlib.egg-info/SOURCES.txt
+src/expmatplotlib.egg-info/dependency_links.txt
+src/expmatplotlib.egg-info/requires.txt
+src/expmatplotlib.egg-info/top_level.txt
