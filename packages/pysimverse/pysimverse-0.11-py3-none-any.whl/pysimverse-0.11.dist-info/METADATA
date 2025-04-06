@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pysimverse
+Version: 0.11
+Summary: Python Computer Vision and Robotics Simulator
+Home-page: https://github.com/cvzone/pysimverse.git
+Author: Computer Vision Zone
+Author-email: contact@computervision.zone
+License: MIT
+Keywords: ComputerVision,Simulator,Robotics,Drone
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: pyzmq
+Requires-Dist: opencv-python
+
