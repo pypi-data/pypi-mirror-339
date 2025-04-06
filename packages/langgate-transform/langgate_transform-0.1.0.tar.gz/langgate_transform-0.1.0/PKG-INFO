@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: langgate-transform
+Version: 0.1.0
+Summary: Parameter transformation utilities for LangGate
+Author: Tanantor Ltd.
+Maintainer-email: Saran Connoly <saran@tanantor.com>
+License: MIT
+Requires-Python: >=3.13
+Requires-Dist: langgate-core
+Requires-Dist: pyyaml<7.0.0,>=6.0.1
+Description-Content-Type: text/markdown
+
+# LangGate Transform
+
+Parameter transformation utilities for LangGate AI Gateway.
+
+This package provides the core parameter transformation logic used by both:
+- Local registry clients to transform parameters for direct model calls
+- The Envoy external processor to transform parameters in the proxy
+
+It implements a declarative approach to parameter transformation that can be:
+1. Used directly in Python applications
+2. Potentially reimplemented in other languages (like Go) for external processors
+3. Extended with custom transformation rules
