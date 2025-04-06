@@ -1,0 +1,2 @@
+[opsmate.dino.providers]
+fireworks = provider_fireworks:FireworksProvider
