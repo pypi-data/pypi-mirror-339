@@ -1,0 +1,16 @@
+docal/__init__.py,sha256=OlCAGXIiMRPkTdjAxVLdndVpDsvP9uCo-CjKNQE2v7k,143
+docal/__main__.py,sha256=I9NEftuTiQYs1IetkE5Xw8jO_FhYPrscDxDJ937QEbE,3007
+docal/calculation.py,sha256=cRi34RfKL4WqFA-JcDU-7AEr0s7MQA40Sq1agqbUMBA,14344
+docal/lsp.py,sha256=xmWXHEY0NHYisnB5qGoxs3w9BahVTDjJrixt_Yj0RKQ,1652
+docal/parsing.py,sha256=1RXla_ndaRdwskEYi5AEVIutue-Zkv_A5M4JbIF2qOk,26632
+docal/processing.py,sha256=CvcC1a7U-DHjntRDd4RdpDNsL3G0N5f3AMS18RZYxNs,7522
+docal/document/latex.py,sha256=O7cqvcNFP8IdqhIOV6F3DjbDKAY6ADz85unhDi4882o,8175
+docal/document/word.docx,sha256=311t6D9014AI4D2pfIB5vM2lgo9s9sBAGWxmIEPStsc,14857
+docal/document/word.py,sha256=X1rYiQ7MFKAO5tHeMOKEz_1vjhXohbs1voGZUwp9RGk,17010
+docal/parsers/dcl.py,sha256=vgWJSxBjPHrIIKhIeNKgiP8xVNPOtC6Q7zu_ZnEbRBY,1901
+docal/parsers/excel.py,sha256=PPfOhRwMYHolKdBMDQA-1C-WlS78NIqCdOQhWLRlRqw,5711
+docal-4.0.0.dist-info/METADATA,sha256=r4KC0SZCO2zdEFvD8RfnFdRKCulj5VSaxmW-P7naNWM,9953
+docal-4.0.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+docal-4.0.0.dist-info/entry_points.txt,sha256=1pYHqs_KsJDg8JSUNZmmpasHojSZiKGbFukXJLG2vF4,46
+docal-4.0.0.dist-info/top_level.txt,sha256=6zSaVcfQlO5xNU-bIxLMV-OFQKmYVId8BeuLJWdWoEE,6
+docal-4.0.0.dist-info/RECORD,,
