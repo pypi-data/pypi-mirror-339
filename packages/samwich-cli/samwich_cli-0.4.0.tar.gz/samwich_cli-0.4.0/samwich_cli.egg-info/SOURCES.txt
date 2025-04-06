@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+samwich_cli/cli.py
+samwich_cli/controller.py
+samwich_cli/file_utils.py
+samwich_cli/model.py
+samwich_cli/sam_utils.py
+samwich_cli.egg-info/PKG-INFO
+samwich_cli.egg-info/SOURCES.txt
+samwich_cli.egg-info/dependency_links.txt
+samwich_cli.egg-info/entry_points.txt
+samwich_cli.egg-info/requires.txt
+samwich_cli.egg-info/top_level.txt
+tests/test_file_utils.py
+tests/test_model.py
