@@ -1,0 +1,9 @@
+numcodecs_wasm_round/__init__.py,sha256=vapZKweuEchYcBzSgYDTfhYNdcysbPe2daZW_kdzdh8,266
+numcodecs_wasm_round/__init__.pyi,sha256=DlllJd0y33ZiWlLjB2whj-0GD8JlDpmG7uPeDPP5uCg,2353
+numcodecs_wasm_round/codec.wasm,sha256=lJhlK8WRGobVBjK67cooIDbrIBaXNqzrvSUcckLvvq4,378559
+numcodecs_wasm_round/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+numcodecs_wasm_round-0.3.0.dist-info/METADATA,sha256=BUQuwCtm322HgZOkx1n8_VLrWFHHSFtA9vQjuv0w9fo,21432
+numcodecs_wasm_round-0.3.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+numcodecs_wasm_round-0.3.0.dist-info/entry_points.txt,sha256=hrFlJBz0U81IU3cLMCa1LSrY__2C7qRN4cuI3-NUEg4,57
+numcodecs_wasm_round-0.3.0.dist-info/top_level.txt,sha256=kMhjVd2bZo8-ZJnrDpbCLeFBgQSxbiqsow_cOTW5JYk,21
+numcodecs_wasm_round-0.3.0.dist-info/RECORD,,
