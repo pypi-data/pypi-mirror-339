@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finops_lib"
+version = "1.2.0"
+description = "Multi-cloud FinOps Python library for cost analysis"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "boto3",
+    "azure-mgmt-costmanagement",
+    "azure-identity",
+    "google-cloud-bigquery",
+    "pandas",
+    "click",
+    "scikit-learn",
+    "tabulate",
+    "reportlab",
+    "flask>=2.0.0",
+    "plotly>=5.10.0",
+    "dash>=2.7.0",
+    "dash-bootstrap-components>=1.2.0",
+    "numpy>=1.20.0",
+    "apscheduler>=3.9.0"
+]
+
+[project.scripts]
+finops-cli = "finops_lib.cli:cli"
+
+[tool.setuptools]
+packages = ["finops_lib"]
