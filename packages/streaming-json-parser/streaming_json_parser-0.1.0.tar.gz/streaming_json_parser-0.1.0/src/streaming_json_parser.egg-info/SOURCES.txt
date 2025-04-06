@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/streaming_json_parser/__init__.py
+src/streaming_json_parser/iterative_state_machine.py
+src/streaming_json_parser/streaming_json_parser.py
+src/streaming_json_parser.egg-info/PKG-INFO
+src/streaming_json_parser.egg-info/SOURCES.txt
+src/streaming_json_parser.egg-info/dependency_links.txt
+src/streaming_json_parser.egg-info/requires.txt
+src/streaming_json_parser.egg-info/top_level.txt
+tests/test_streaming_json_parser.py
