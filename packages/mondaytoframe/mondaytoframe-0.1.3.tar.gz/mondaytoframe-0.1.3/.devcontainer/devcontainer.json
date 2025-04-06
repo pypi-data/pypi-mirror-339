@@ -1,0 +1,17 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"features": {
+		"ghcr.io/va-h/devcontainers-features/uv:1": {}
+	},
+
+	"remoteUser": "codespace",
+
+	"postCreateCommand": "uv run pre-commit install && uv run pre-commit autoupdate",
+
+	"secrets": {
+		"MONDAY_TOKEN": {
+			"description": "Monday API token.",
+			"documentationUrl": "https://developer.monday.com/api-reference/docs/authentication#developer-tab"
+		}
+	}
+}
