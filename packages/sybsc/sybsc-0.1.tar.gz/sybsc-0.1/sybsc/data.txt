@@ -1,0 +1,49 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import fetch_california_housing
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+print("don")
+
+california_housing = fetch_california_housing(as_frame=True)
+df = california_housing.frame  # Data ko dataframe me convert karein
+
+# Data dekhne ke liye
+df.head()
+
+correlation_matrix = df.corr()
+target_correlation = correlation_matrix["MedHouseVal"].drop("MedHouseVal")  # Target column ke alawa sab
+top_feature = target_correlation.idxmax()  # Highest correlation wali feature
+
+print(f"Feature with highest correlation: {top_feature}")
+print(f"Correlation Coefficient: {target_correlation[top_feature]}")
+
+X = df[[top_feature]]  # Highest correlated feature
+Y = df["MedHouseVal"]  # Target variable
+
+# Data ka sample dekhein
+X.head(), Y.head()
+
+model = LinearRegression()
+model.fit(X, Y)
+
+# Coefficient aur Intercept Print Karo
+print(f"Coefficient: {model.coef_[0]}")
+print(f"Intercept: {model.intercept_}")
+
+plt.figure(figsize=(8, 6))
+plt.scatter(X, Y, color='blue', label='Actual Data')
+plt.plot(X, model.predict(X), color='red', label='Regression Line')
+plt.xlabel(top_feature)
+plt.ylabel("MedHouseVal")
+plt.title("Simple Linear Regression on California Housing Data")
+plt.legend()
+plt.show()
+
+Y_pred = model.predict(X)  # Predictions
+rmse = np.sqrt(mean_squared_error(Y, Y_pred))  # RMSE Calculation
+
+print(f"Root Mean Squared Error (RMSE): {rmse:.4f}")
+ 

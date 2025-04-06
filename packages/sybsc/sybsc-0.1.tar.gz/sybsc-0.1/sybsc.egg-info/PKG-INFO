@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: sybsc
+Version: 0.1
+Summary: A simple package to retrieve your custom text anywhere.
+Home-page: https://github.com/bipinyada28/sybsc
+Author: Detective
+Author-email: codedbybipin28@outlook.com
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: summary
