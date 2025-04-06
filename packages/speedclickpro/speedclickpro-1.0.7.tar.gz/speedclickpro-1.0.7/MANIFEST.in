@@ -1,0 +1,4 @@
+include LICENSE
+include README.md
+recursive-include speedclickpro/icons *
+recursive-include speedclickpro/profiles *
