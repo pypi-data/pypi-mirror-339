@@ -1,0 +1,15 @@
+requests==2.32.3
+rich==13.9.4
+prompt_toolkit==3.0.50
+
+[dev]
+black==25.1.0
+isort==6.0.1
+mypy==1.15.0
+pytest==8.3.5
+pytest-cov==6.1.0
+pylint==3.3.6
+pre-commit==4.2.0
+build==1.0.3
+twine==5.1.1
+setuptools==78.1.0
