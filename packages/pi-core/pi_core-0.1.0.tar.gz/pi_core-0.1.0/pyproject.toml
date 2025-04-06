@@ -1,0 +1,20 @@
+[project]
+name = "pi-core"
+version = "0.1.0"
+description = "Shared core models and utilities for the PI Platform"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+  { name="Possible Institute", email="support@possible.institute" }
+]
+dependencies = [
+  "pydantic>=2.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/Possible-Institute/pi-core"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
