@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: lockprompt
+Version: 0.1.3
+Summary: Lightweight safety layer to scan prompts and LLM outputs via external API.
+Author: David Willis-Owen
+Author-email: david@willis-owen.com
+Requires-Python: >=3.7
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
