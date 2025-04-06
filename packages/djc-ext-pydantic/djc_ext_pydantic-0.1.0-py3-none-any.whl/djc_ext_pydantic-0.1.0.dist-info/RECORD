@@ -1,0 +1,10 @@
+djc_ext_pydantic-0.1.0.dist-info/licenses/LICENSE,sha256=inryfBkMlRcdoCCKnr9M24ZYZbU0i9QbLHA64uks1vM,1068
+djc_pydantic/__init__.py,sha256=LSbgnNh15-NgmwZQvf9F8xp2OqMUlljumXfwuRuJYYw,200
+djc_pydantic/extension.py,sha256=mD7D1XGoPrccENE-vzCckS7UT51ofNsEgALo24AXiKk,3487
+djc_pydantic/monkeypatch.py,sha256=vVaJCiEl30Ec3rJNiREbjnvzw6_ue2CLI0b_IH0vv1w,2263
+djc_pydantic/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djc_pydantic/validation.py,sha256=g4wfaS7KPK4Pc8E7wtvFzvTqCEE36JXhf0NDr8FhulQ,3749
+djc_ext_pydantic-0.1.0.dist-info/METADATA,sha256=2zzym45EMaAoUkqnFx5kMNRqgFKeaDPRSh-l1TRZZYE,5228
+djc_ext_pydantic-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+djc_ext_pydantic-0.1.0.dist-info/top_level.txt,sha256=O7I_CewO2ZkbRZmL-mj2uO6zQVqpARlnGV9XVLu4njI,13
+djc_ext_pydantic-0.1.0.dist-info/RECORD,,
