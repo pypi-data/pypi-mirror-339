@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: arc-agi-core
+Version: 0.0.4
+Summary: ...
+Author-email: Jumyung Park <parkjumyungpublic@gmail.com>
+Requires-Python: >=3.13
+Requires-Dist: numpy>=2.2.4
+Requires-Dist: requests>=2.32.3
+Description-Content-Type: text/markdown
+
+# Docs

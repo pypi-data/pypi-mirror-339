@@ -1,0 +1,30 @@
+[project]
+name = "arc-agi-core"
+version = "0.0.4"
+description = "..."
+readme = "README.md"
+authors = [
+    { name = "Jumyung Park", email = "parkjumyungpublic@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.2.4",
+    "requests>=2.32.3",
+]
+
+[dependency-groups]
+lint = ["ruff>=0.11.2"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/arc-agi/core"]
+
+[tool.ruff]
+extend-include = ["*.ipynb"]
+
+[tool.ruff.lint]
+select = ["D"]
+pydocstyle = { convention = "google" }
