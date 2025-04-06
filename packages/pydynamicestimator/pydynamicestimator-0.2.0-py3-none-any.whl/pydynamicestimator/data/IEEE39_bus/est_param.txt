@@ -1,0 +1,66 @@
+# Created: 2024-12-01
+# Last Modified: 2025-04-05
+# (c) Copyright 2024 ETH Zurich, Milos Katanic
+# https://doi.org/10.5905/ethz-1007-842
+#
+# Licensed under the GNU General Public License v3.0;
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at:
+#
+#     https://www.gnu.org/licenses/gpl-3.0.en.html
+#
+# This software is distributed "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# express or implied. See the License for specific language governing
+# permissions and limitations under the License.
+#
+
+# The code is based on the publication: Katanic, M., Lygeros, J., Hug, G.: Recursive dynamic state estimation for power systems with an incomplete nonlinear DAE model.
+# IET Gener. Transm. Distrib. 18, 3657–3668 (2024). https://doi.org/10.1049/gtd2.13308
+# The full paper version is available at: https://arxiv.org/abs/2305.10065v2
+# See full metadata at: README.md
+# For inquiries, contact: mkatanic@ethz.ch
+
+
+# This file contains parameters and models of the system used for estimation.
+
+
+SynchronousTransient, idx =  "SG4", bus ="33", Sn = 100, D =  0, H =  28.60, R_s =  0.00, x_dprim = 0.0436, x_qprim = 0.1660, x_d = 0.2620, x_q = 0.2580, T_dprim =  5.69, T_qprim =  1.50, Rd =  0.05, Tch =  0.4, Tsv =  0.2,
+	Pref = 1.00, KA = 20.00, TA =  0.2, KF =  0.08, TF =  0.35, KE =  1.00, TE =  0.314, Vref =  1.00, D =  0.00, f =  0.00, Vf_ref =  1.00, Vr_max = 5.0
+
+SynchronousTransient, idx =  "SG5", bus ="34", Sn = 100, D =  0, H =  26.00, R_s =  0.00, x_dprim = 0.1320, x_qprim = 0.1660, x_d = 0.6700, x_q = 0.6200, T_dprim =  5.40, T_qprim =  0.44, Rd =  0.05, Tch =  0.4, Tsv =  0.2,
+	Pref = 1.00, KA = 20.00, TA =  0.2, KF =  0.030, TF =  0.35, KE =  1.00, TE =  0.314, Vref =  1.00, D =  0.00, f =  0.00, Vf_ref =  1.01, Vr_max = 5.0
+
+SynchronousTransient, idx =  "SG6", bus ="35", Sn = 100, D =  0, H =  34.80, R_s =  0.00, x_dprim = 0.0500, x_qprim = 0.0814, x_d = 0.2540, x_q = 0.2410, T_dprim =  7.30, T_qprim =  0.40, Rd =  0.05, Tch =  0.4, Tsv =  0.2,
+	Pref = 1.00, KA = 20.00, TA =  0.2, KF =  0.0754, TF =  0.35, KE =  1.00, TE =  0.314, Vref =  1.00, D =  0.00, f =  0.00, Vf_ref =  1.03, Vr_max = 5.0
+
+SynchronousTransient, idx =  "SG7", bus ="36", Sn = 100, D =  0, H =  26.40, R_s =  0.00, x_dprim = 0.0490, x_qprim = 0.1860, x_d = 0.2950, x_q = 0.2920, T_dprim =  5.66, T_qprim =  1.50, Rd =  0.05, Tch =  0.4,  Tsv =  0.2,
+	Pref = 1.00, KA = 20.00, TA =  0.2, KF =  0.030, TF =  0.35, KE =  1.00, TE =  0.314, Vref =  1.00, D =  0.00, f =  0.00, Vf_ref =  1.055, Vr_max = 5.0
+
+
+
+Line, bus_i = "16", bus_j = "19", r = 0.0016, x = 0.0195, g = 0, b = 0.304, trafo = 1
+Line, bus_i = "16", bus_j = "21", r = 0.0008, x = 0.0135, g = 0, b = 0.2548, trafo = 1
+Line, bus_i = "16", bus_j = "24", r = 0.0003, x = 0.0059, g = 0, b = 0.068, trafo = 1
+Line, bus_i = "21", bus_j = "22", r = 0.0008, x = 0.014, g = 0, b = 0.2565, trafo = 1
+Line, bus_i = "22", bus_j = "23", r = 0.0006, x = 0.0096, g = 0, b = 0.1846, trafo = 1
+Line, bus_i = "23", bus_j = "24", r = 0.0022, x = 0.035, g = 0, b = 0.361, trafo = 1
+Line, bus_i = "36", bus_j = "23", r = 0.0005, x = 0.0272, g = 0, b = 0, trafo = 1
+Line, bus_i = "34", bus_j = "20", r = 0.0009, x = 0.018, g = 0, b = 0, trafo = 0.991
+Line, bus_i = "33", bus_j = "19", r = 0.0007, x = 0.0142, g = 0, b = 0, trafo = 0.934
+Line, bus_i = "35", bus_j = "22", r = 0, x = 0.0143, g = 0, b = 0, trafo = 0.976
+Line, bus_i = "19", bus_j = "20", r = 0.0007, x = 0.0138, g = 0, b = 0, trafo = 1.06
+
+BusUnknown, bus ="16"
+BusUnknown, bus ="21"
+BusUnknown, bus ="24"
+BusUnknown, bus ="23"
+BusUnknown, bus ="20"
+
+BusVoltagePMU, bus ="16", distr = "normal", acc = 0.001
+BusVoltagePMU, bus ="23", distr = "normal", acc = 0.001
+BusVoltagePMU, bus ="34", distr = "normal", acc = 0.001
+BusVoltagePMU, bus ="21", distr = "normal", acc = 0.001
+BranchCurrentPMU, bus_j = "16", bus_i = "19", acc = 0.001, distr = "normal"
+BranchCurrentPMU, bus_j = "16", bus_i = "24", acc = 0.001, distr = "normal"
+BranchCurrentPMU, bus_j = "22", bus_i = "23", acc = 0.001, distr = "normal"
+
