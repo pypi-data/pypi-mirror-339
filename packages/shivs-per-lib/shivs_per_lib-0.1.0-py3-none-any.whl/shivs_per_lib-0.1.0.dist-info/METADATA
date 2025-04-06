@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: shivs_per_lib
+Version: 0.1.0
+Summary: A personal utility package by Shivsamb Harkare.
+Home-page: https://github.com/yourusername/shivs_per_lib
+Author: Shivsamb Mangalkumar Harkare
+Author-email: shivsamb1984@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# shivs_per_lib
+
+This is a small motivational utility + math package by Shivsamb!  
+Includes:
+- `motivate(name)` â€“ sends a positive message
+- `add(a, b)` â€“ simple addition
