@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: ProgramAnalyze
+Version: 0.1.2
+Description-Content-Type: text/markdown
+
+# ProgramAnalyze
+
+ProgramAnalyze это библиотека для анализа исходного кода программ и показа сколько процентов занимает тот или иной язык программирования
+
+# Установка
+pip install ProgramAnalyze
+
+# Пример использования
+from ProgramAnalyze import analyze_code, print_results
+
+filepaths = [
+    'my_project/server.py'
+    'my_project/index.html'
+    'my_project/script.js'
+]
+
+results = analyze_code(filepaths)
+print_results(results)
