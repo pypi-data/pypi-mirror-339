@@ -1,0 +1,214 @@
+Metadata-Version: 2.4
+Name: brainnet-graph
+Version: 0.1.1
+Summary: Graph construction from BOLD signal time series
+Home-page: https://github.com/yourname/brainnet-graph
+Author: Songlin Zhao
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: torch
+Requires-Dist: torch-geometric
+Requires-Dist: scikit-learn
+Requires-Dist: tqdm
+Requires-Dist: matplotlib
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+# 🧠 brainnet-graph
+
+[![PyPI version](https://img.shields.io/pypi/v/brainnet-graph.svg)](https://pypi.org/project/brainnet-graph/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.7+-brightgreen.svg)](https://www.python.org/)
+[![Docs](https://img.shields.io/badge/docs-online-blue)](https://brainnet-graph.readthedocs.io/)
+
+---
+
+> A lightweight, flexible Python package to construct brain connectivity graphs from ROI-level fMRI BOLD signals using multiple correlation-based methods.
+
+---
+
+## 🚀 Features
+
+- Supports raw time-series inputs: `.csv`, `.tsv`, `.pkl`
+- Build graphs using:
+  - Pearson correlation
+  - Partial correlation
+  - Cosine similarity
+- Outputs in `.pt` (PyTorch Geometric `Data`) or `.csv` (edge list)
+- One-liner CLI usage
+- Easily integrable in pipelines or tutorials
+- Demo mode for quick testing
+- Built-in input validation & flexible formatting
+
+---
+
+## 📦 Installation
+
+```bash
+pip install brainnet-graph
+```
+
+Requires Python 3.7+
+
+---
+
+## 🧠 Concept
+
+Given ROI-level fMRI BOLD signal data \( X \in \mathbb{R}^{T \times N} \), where:
+
+- \( T \) = number of time points
+- \( N \) = number of brain regions (ROIs)
+
+We construct an undirected, weighted graph \( G = (V, E, W) \) such that:
+
+- Each node \( v_i \in V \) represents a brain region
+- Edges \( (v_i, v_j) \in E \) are computed using a similarity or correlation measure between time series \( X_i \) and \( X_j \)
+
+---
+
+## 🧪 Methods Supported
+
+| Method                  | Description                                     |
+| ----------------------- | ----------------------------------------------- |
+| `pearson_correlation` | Classic Pearson correlation:\(\rho(X_i, X_j)\)  |
+| `partial_correlation` | Partial out shared variance with others         |
+| `cosine_similarity`   | Cosine of the angle between time series vectors |
+
+---
+
+## 🚀 Quick Start
+
+### 🛠️ From CLI
+
+```bash
+construct-graph --input bold.csv --output graph.csv --method pearson_correlation
+```
+
+### 📦 With Demo Data
+
+```bash
+construct-graph --demo
+```
+
+Save demo as PyTorch Geometric `.pt`:
+
+```bash
+construct-graph --demo --format pt
+```
+
+---
+
+## 🧰 CLI Arguments
+
+| Flag                 | Description                                |
+| -------------------- | ------------------------------------------ |
+| `--input`, `-i`  | Path to input BOLD signal (.csv/.tsv/.pkl) |
+| `--output`, `-o` | Output file path (.csv or .pt)             |
+| `--method`, `-m` | Method to use (see above)                  |
+| `--format`, `-f` | Output format:`csv` or `pt`            |
+| `--demo`           | Run using generated toy dataset            |
+
+---
+
+## 🧬 Python API
+
+```python
+from brainnet_graph.construction import load_data, validate_data, construct_graph, save_graph
+
+df = load_data("subject001.csv")
+validate_data(df)
+graph = construct_graph(df, method_name="pearson_correlation")
+save_graph(graph, "subject001_graph.csv", fmt="csv")
+```
+
+---
+
+## 📁 Example
+
+```
+Input CSV (ROI x Time):
+
+ROI_1, ROI_2, ROI_3, ...
+0.24,  0.42,  0.11
+0.30,  0.39,  0.14
+...
+
+→ Graph → Edgelist or PyTorch Data object
+```
+
+---
+
+## 📚 Output Format
+
+### 🔹 CSV output
+
+```csv
+source,target,weight
+0,1,0.82
+0,2,0.57
+...
+```
+
+### 🔹 PyTorch Geometric `.pt`
+
+```python
+Data(x=[10, 1], edge_index=[2, 45], edge_attr=[45, 1])
+```
+
+---
+
+## 📷 Visual Example
+
+Use NetworkX + PyTorch Geometric to visualize the graph:
+
+```python
+import torch
+import networkx as nx
+from torch_geometric.utils import to_networkx
+
+graph = torch.load("demo_graph.pt")
+G = to_networkx(graph)
+nx.draw(G, with_labels=True)
+```
+
+---
+
+## 📖 Docs
+
+Full documentation available at:
+👉 https://brainnet-graph.readthedocs.io/
+
+---
+
+## 🛡 License
+
+MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+## 🤝 Contributing
+
+Open to contributions, new methods, bug reports, or real data testing.
+
+---
+
+## 🔗 Related
+
+- [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/)
+- [NetworkX](https://networkx.org/)
+- [fMRIPrep](https://fmriprep.org/)
+- [Nilearn](https://nilearn.github.io/)
