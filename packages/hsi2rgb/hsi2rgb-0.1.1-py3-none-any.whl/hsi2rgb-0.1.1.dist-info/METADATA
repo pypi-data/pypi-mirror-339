@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: hsi2rgb
+Version: 0.1.1
+Summary: Easily convert a hyperspectral image to an RGB image.
+Project-URL: Documentation, https://github.com/songyz2023/hsi2rgb#readme
+Project-URL: Issues, https://github.com/songyz2023/hsi2rgb/issues
+Project-URL: Source, https://github.com/songyz2023/hsi2rgb
+Author-email: songyz2023 <songyz2023dlut@outlook.com>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9
+Requires-Dist: numpy>=1.24.0
+Description-Content-Type: text/markdown
+
+# hsi2rgb
+Easily convert a hyperspectral image to an RGB image. hsi2rgb is a python package that supports numpy, torch and jax, with gamma correction, automatically convertions, XYZ and RGB colorspace suppots, etc.  
+Please visit [hsi2rgb's github repo](https://github.com/songyz2019/hsi2rgb) for more information
