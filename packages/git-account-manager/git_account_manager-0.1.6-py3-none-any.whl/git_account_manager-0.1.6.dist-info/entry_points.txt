@@ -1,0 +1,2 @@
+[console_scripts]
+git-manager = app.main:main

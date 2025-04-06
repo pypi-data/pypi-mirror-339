@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: git-account-manager
+Version: 0.1.6
+Summary: A tool to manage multiple Git accounts and projects
+Author-email: NourEldin <noureldin.osama.saad@gmail.com>
+Requires-Python: >=3.11
+Requires-Dist: fastapi[all]>=0.115.11
+Requires-Dist: sqlmodel>=0.0.24
