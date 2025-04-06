@@ -1,0 +1,13 @@
+plotting/__init__.py,sha256=JG41TDw4qJbsBfM5Y2X-0JNRXNttb2P-6HdAmAUmyWU,304
+plotting/model.py,sha256=WOa1RuNPD4EKe30E1XPjCuzvQ7zD0oAVO85Dvu9AG9w,2466
+plotting/plots.py,sha256=HzmLbSL4tEnbFO16-w5qRZxQgWkCUOPXnLZG3rBCtik,10224
+plotting/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plotting/templates.py,sha256=MIqy2Z51RJnMJc9gckQnTXj52f5xOf_0J_5hM07qm6Y,979
+plotting/titlerenderer.py,sha256=z_xYxOoiypi0rwsc2haDnlqSkTqx0B178cLfxam6Mf0,1298
+plotting/traces.py,sha256=xT5K-ZAh20uWqReprYoSE4K3_-hucyyh0yhtlxqYOgM,8057
+plotting/data/ColdDraftF3APlane.obj,sha256=2Ydgq-2x92c8CzTQLppGQgMAe4vdLCSv4wbw6mXwgdE,142015
+plotting/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flightplotting-0.2.13.dist-info/METADATA,sha256=AGNxxWR06nBdwiJCvRzJS18kgvGXhugIa1s_Vi_aZyY,553
+flightplotting-0.2.13.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+flightplotting-0.2.13.dist-info/licenses/COPYING,sha256=L8vFn9ZHT3RRpTtzuzhkgDTutx_NNhMzCw_9YpbZR4Q,35129
+flightplotting-0.2.13.dist-info/RECORD,,
