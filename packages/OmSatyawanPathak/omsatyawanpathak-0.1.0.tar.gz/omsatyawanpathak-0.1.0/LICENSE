@@ -1,0 +1,7 @@
+
+### Step 3: Test Locally
+Before publishing, test your module locally:
+1. Navigate to your project folder (`OmSatyawanPathak/`).
+2. Install it locally:
+   ```bash
+   pip install .

@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+OmSatyawanPathak.egg-info/PKG-INFO
+OmSatyawanPathak.egg-info/SOURCES.txt
+OmSatyawanPathak.egg-info/dependency_links.txt
+OmSatyawanPathak.egg-info/requires.txt
+OmSatyawanPathak.egg-info/top_level.txt
+omsatyawanpathak/__init__.py
+omsatyawanpathak/omsatyawanpathak.py
