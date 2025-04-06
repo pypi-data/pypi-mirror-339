@@ -1,0 +1,3 @@
+[console_scripts]
+iadl = iadl.cli:main
+iadl-cleanup = iadl.scripts.uninstall:main
