@@ -1,0 +1,72 @@
+[project]
+name = "AgileMind"
+dynamic = ["version"]
+authors = [
+  { name="WnRock" },
+]
+description = "A multi-agent software development tool."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+dependencies = [
+    "annotated-types",
+    "anyio",
+    "astroid",
+    "beautifulsoup4",
+    "certifi",
+    "charset-normalizer",
+    "dill",
+    "distro",
+    "esprima",
+    "h11",
+    "httpcore",
+    "httpx",
+    "idna",
+    "isort",
+    "jiter",
+    "markdown-it-py",
+    "mccabe",
+    "mdurl",
+    "mypy",
+    "mypy-extensions",
+    "openai",
+    "platformdirs",
+    "pydantic",
+    "pydantic_core",
+    "Pygments",
+    "pylint",
+    "python-dotenv",
+    "PyYAML",
+    "readchar",
+    "regex",
+    "requests",
+    "rich",
+    "sniffio",
+    "soupsieve",
+    "tiktoken",
+    "tinycss2",
+    "tomlkit",
+    "tqdm",
+    "typing_extensions",
+    "urllib3",
+    "webencodings",
+]
+
+[tool.hatch.version]
+path = "agilemind/__init__.py"
+
+[project.scripts]
+agilemind = "agilemind.main:entry"
+
+[project.urls]
+Homepage = "https://github.com/wnrock/AgileMind"
+Issues = "https://github.com/wnrock/AgileMind/issues"
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
