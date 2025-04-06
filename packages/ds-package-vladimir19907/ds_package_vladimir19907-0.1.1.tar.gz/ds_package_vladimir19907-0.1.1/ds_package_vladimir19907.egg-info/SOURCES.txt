@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+ds_package/__init__.py
+ds_package/feature_extraction.py
+ds_package/train.py
+ds_package/utils.py
+ds_package/validation.py
+ds_package_vladimir19907.egg-info/PKG-INFO
+ds_package_vladimir19907.egg-info/SOURCES.txt
+ds_package_vladimir19907.egg-info/dependency_links.txt
+ds_package_vladimir19907.egg-info/requires.txt
+ds_package_vladimir19907.egg-info/top_level.txt

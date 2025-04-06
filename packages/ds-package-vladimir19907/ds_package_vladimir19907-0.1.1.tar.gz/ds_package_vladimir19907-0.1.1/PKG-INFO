@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: ds_package_vladimir19907
+Version: 0.1.1
+Summary: DS pack
+Home-page: https://github.com/corpsemanor/ds_deploy
+Author: vp
+Author-email: skip@mail.box
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# ds_deploy
