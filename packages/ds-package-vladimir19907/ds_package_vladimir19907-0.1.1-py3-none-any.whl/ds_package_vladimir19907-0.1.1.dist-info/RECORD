@@ -1,0 +1,9 @@
+ds_package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ds_package/feature_extraction.py,sha256=iUwuoRerqUMHFA9gXZy-S5pF5tSXGevlrTShlZIZnw8,80716
+ds_package/train.py,sha256=e8NY5AG39n1YCFdnOQo3lwE5a-bexoPQJH1MeLvhb1M,11371
+ds_package/utils.py,sha256=2K1DuKzcDRuDrqwx7N0ecqrZ7wO4-bEbhWVOupCWvfo,1309
+ds_package/validation.py,sha256=7qfzknvEFTgdK3m017TxNF3ppb_-Owm-UTvmRHc8BSM,2029
+ds_package_vladimir19907-0.1.1.dist-info/METADATA,sha256=WBQdaK5RLESa8Td9PilZfY8U2ggxStH-dGAZc3xzJ3Q,466
+ds_package_vladimir19907-0.1.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+ds_package_vladimir19907-0.1.1.dist-info/top_level.txt,sha256=5d1IQZNYstUUoB-kx1jY9GD3QMInuLpQJAtRtSuRlhE,11
+ds_package_vladimir19907-0.1.1.dist-info/RECORD,,
