@@ -1,0 +1,10 @@
+datamorphers/__init__.py,sha256=yJuSSEV-7_PBHnwA-m8QOT4IIN3NIK8Se0jdQ2SYfKE,1283
+datamorphers/base.py,sha256=5iguefk_OoVte1ZQcur0HDvFO9BOGNbVrjZpGUuYg38,274
+datamorphers/datamorphers.py,sha256=vSOrgyFCAyybiG2ZqLsVYs70UA-Od1TH1hFF14uY-qk,9759
+datamorphers/pipeline_loader.py,sha256=wgUGnZVT9_3x6sOXmAu3-Hk8TeTmlrivZ2F-NC1X-GY,5390
+datamorphers/storage.py,sha256=NCZJOyAQ0WveJAHB0mwIvyk6cL2IizH5ze31FKalFYo,2930
+datamorphers-1.0.6.dist-info/licenses/LICENSE.txt,sha256=pgM_Fb3HpQ6KE2yavhtlTkQq0W5Nvcf4b2prkiYaLgk,1080
+datamorphers-1.0.6.dist-info/METADATA,sha256=Cm-RYuT9KCStKm01nUZGs8ifHnRv4O8YwDemLHtFjjo,10671
+datamorphers-1.0.6.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+datamorphers-1.0.6.dist-info/top_level.txt,sha256=dBjj-c686etvRSVjZ13NbDDbTHXCTsikM7mSucIQRlE,13
+datamorphers-1.0.6.dist-info/RECORD,,
