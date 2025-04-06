@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: pyotita
+Version: 0.0.1
+Summary: A Code Quality Checker
+Author-email: Markus Feiks <pypi.packages@feyx.de>
+License-File: LICENSE
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# pyotita
+
+A Python-based Code Quality Checker
+
+The Greek word for "quality" is "ποιότητα" (pronounced "piotita").
+
+## Overview
+
+`pyotita` is a code quality assessment tool designed to help developers maintain high standards in their codebases.
+
+## To Do
+...
