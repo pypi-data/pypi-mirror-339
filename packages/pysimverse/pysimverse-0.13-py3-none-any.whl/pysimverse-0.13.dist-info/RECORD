@@ -1,0 +1,9 @@
+pysimverse/__init__.py,sha256=5sFgiCGG3PijJ666Mrtq5Oht4fPMa6RLA7vG3bzWnxA,121
+pysimverse/simulators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pysimverse/simulators/drone/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pysimverse/simulators/drone/drone.py,sha256=qjWM9C-i5qI22bq4WVN4J910xkN13mh2p_QvuqMprPE,9688
+pysimverse/simulators/drone/drone_manager.py,sha256=BkSL0TU6pTbzQCLRm_NtI0iA0w1ZAQ-304FgxvFWi98,4419
+pysimverse-0.13.dist-info/METADATA,sha256=RHcX5Ln2Do7HbmGbeS8Gp0Ve2Z6GfuIH8Lfn9-SBgS8,578
+pysimverse-0.13.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pysimverse-0.13.dist-info/top_level.txt,sha256=Ywucl0bm4Ab0nh1ri3wQd2BT1kPtP12esKrv78IaRNE,11
+pysimverse-0.13.dist-info/RECORD,,
