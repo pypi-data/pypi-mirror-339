@@ -1,0 +1,15 @@
+phi_cloud_server/LICENSE.py,sha256=8tE4uq8MhYPhz0nRGocBexYw1PgMokRD17ggY_wrvB8,3983
+phi_cloud_server/__init__.py,sha256=Y_Dkph39VKzPswWA4INfn70pT9Q4gScsUbIPG77Q1AI,453
+phi_cloud_server/config.py,sha256=X78v0rXcMxiy6eB3hTt-LpFHuxg6uheMi0Lqb_AmHZQ,2199
+phi_cloud_server/db.py,sha256=IrEsXy39XYxGSuRjJliGVP3N5H3y_dAP60VEoBg5rYA,5017
+phi_cloud_server/decorators.py,sha256=3-s_h_7EJN3Iv_MrgpLxgCbl5m-XLNtpF7Enqml2tOU,931
+phi_cloud_server/main.py,sha256=qlOW6MeVtRKbE1yPhO9ZSk1goZ-4S9L3vcCxlvIVAa8,10225
+phi_cloud_server/models.py,sha256=w2rQeFdVjL-iXoGoGSvDYZt6p8YsVQ8ncSI_k50cdDA,2303
+phi_cloud_server/utils.py,sha256=COR9yJWCNSzEWjvm4BZ49G9U80e_n-o_TBpaSNsG7ng,2268
+phi_cloud_server-0.1.0a0.dist-info/licenses/LICENSE,sha256=v1Ds58b2FOWOSwQ51r-3t48VcuLvueUvj8biRxCwXx0,2226
+phi_cloud_server-0.1.0a0.dist-info/licenses/LICENSE-cn,sha256=XHIsbHFDjDGpLa85tHpvsWLxQFJNOOQ3EgfKQRLVtMo,1723
+phi_cloud_server-0.1.0a0.dist-info/METADATA,sha256=IpU7BYJ04Cbbl_mPgyhUktIpVyFb04A4x3jvprMAg2U,904
+phi_cloud_server-0.1.0a0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+phi_cloud_server-0.1.0a0.dist-info/entry_points.txt,sha256=K-IfGY2vC-SI0bdL81fnBx_kv5Mh0IV_nDX4kD12_bU,59
+phi_cloud_server-0.1.0a0.dist-info/top_level.txt,sha256=U2V1tWIDZrF5PaZtwXKp3rKUiwlmiFshtVq9Lj4tsIs,17
+phi_cloud_server-0.1.0a0.dist-info/RECORD,,
