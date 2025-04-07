@@ -1,0 +1,67 @@
+# DO NOT EDIT
+# Generated from .copier-answers.yml
+
+when:
+  event: [push, tag]
+  path:
+    - "slidgram/**"
+    - Dockerfile
+    - pyproject.toml
+    - uv.lock
+
+labels:
+  platform: linux/amd64
+
+clone:
+  - name: clone-deep
+    image: woodpeckerci/plugin-git
+    settings:
+      tags: true
+      partial: false
+
+variables:
+  - &settings
+    repo: codeberg.org/${CI_REPO_OWNER}/slidgram
+    username: ${CI_REPO_OWNER}
+    password:
+      from_secret: CODEBERG_TOKEN
+    registry: codeberg.org
+    target: slidgram
+    # this only caches one of the two platforms unfortunately
+    # https://github.com/docker/buildx/discussions/1382
+    # https://github.com/docker/buildx/issues/1044
+    cache_images:
+      - codeberg.org/${CI_REPO_OWNER}/slidgram:buildcache
+    platforms: linux/amd64,linux/arm64
+
+steps:
+  build-tag:
+    image: woodpeckerci/plugin-docker-buildx
+    when:
+      event: [tag]
+    settings:
+      <<: *settings
+      tags:
+        - latest
+        - ${CI_COMMIT_TAG}
+
+  build-branch:
+    when:
+      event: [push]
+    image: woodpeckerci/plugin-docker-buildx
+    settings:
+      <<: *settings
+      tags:
+        - ${CI_COMMIT_BRANCH}
+
+  build-ci:
+    when:
+      event: [push]
+      branch: ${CI_REPO_DEFAULT_BRANCH}
+    image: woodpeckerci/plugin-docker-buildx
+    settings:
+      <<: *settings
+      target: ci
+      tag: ci
+      cache_images:
+        - codeberg.org/${CI_REPO_OWNER}/slidgram:buildcache-ci
