@@ -1,0 +1,601 @@
+{
+  "material_test.py::test_create_material": {
+    "S": "W / K",
+    "S_std": "W / K",
+    "T": "K",
+    "T_ref": "K",
+    "V": "m ** 3 / s",
+    "mu/H2O": "J / mol",
+    "mu_std/H2O": "J / mol",
+    "n/H2O": "mol / s",
+    "p": "Pa",
+    "p_ref": "Pa",
+    "p_std": "Pa"
+  },
+  "material_test.py::test_material_lab": [
+    "S",
+    "S_std",
+    "T",
+    "T_ref",
+    "V",
+    "mu",
+    "mu_std",
+    "n",
+    "p",
+    "p_ref",
+    "p_std"
+  ],
+  "numeric_test.py::test_bound_sensitivity": "@1=1, \n[[00, @1, 00], \n [00, 00, @1], \n [@1, 00, 00]]",
+  "numeric_test.py::test_collect_hierarchy_material_false": {
+    "args": {
+      "thermo_params": {
+        "default": {
+          "BostonMathiasAlphaFunction": {
+            "eta": {
+              "H2O": "",
+              "NO2": ""
+            }
+          },
+          "CriticalParameters": {
+            "T_c": {
+              "H2O": "K",
+              "NO2": "K"
+            },
+            "omega": {
+              "H2O": "",
+              "NO2": ""
+            },
+            "p_c": {
+              "H2O": "Pa",
+              "NO2": "Pa"
+            }
+          },
+          "H0S0ReferenceState": {
+            "T_ref": "K",
+            "dh_form": {
+              "H2O": "J / mol",
+              "NO2": "J / mol"
+            },
+            "p_ref": "Pa",
+            "s_0": {
+              "H2O": "J / K / mol",
+              "NO2": "J / K / mol"
+            }
+          },
+          "LinearHeatCapacity": {
+            "cp_a": {
+              "H2O": "J / K / mol",
+              "NO2": "J / K / mol"
+            },
+            "cp_b": {
+              "H2O": "J / K ** 2 / mol",
+              "NO2": "J / K ** 2 / mol"
+            }
+          },
+          "MixingRule_A": {
+            "T_ref": "K"
+          },
+          "VolumeShift": {
+            "c_i": {
+              "H2O": "m ** 3 / mol",
+              "NO2": "m ** 3 / mol"
+            }
+          }
+        }
+      },
+      "vectors": {
+        "states": ""
+      }
+    },
+    "res": {
+      "thermo_props": {
+        "child": {
+          "m_child": {
+            "S": "W / K",
+            "S_std": "W / K",
+            "T": "K",
+            "T_ref": "K",
+            "V": "m ** 3 / s",
+            "mu": {
+              "H2O": "J / mol",
+              "NO2": "J / mol"
+            },
+            "mu_std": {
+              "H2O": "J / mol",
+              "NO2": "J / mol"
+            },
+            "n": {
+              "H2O": "mol / s",
+              "NO2": "mol / s"
+            },
+            "p": "Pa",
+            "p_ref": "Pa",
+            "p_std": "Pa"
+          }
+        },
+        "m_parent": {
+          "S": "W / K",
+          "S_std": "W / K",
+          "T": "K",
+          "T_ref": "K",
+          "V": "m ** 3 / s",
+          "mu": {
+            "H2O": "J / mol",
+            "NO2": "J / mol"
+          },
+          "mu_std": {
+            "H2O": "J / mol",
+            "NO2": "J / mol"
+          },
+          "n": {
+            "H2O": "mol / s",
+            "NO2": "mol / s"
+          },
+          "p": "Pa",
+          "p_ref": "Pa",
+          "p_std": "Pa"
+        }
+      },
+      "vectors": {
+        "bounds": "",
+        "residuals": ""
+      }
+    }
+  },
+  "numeric_test.py::test_collect_hierarchy_material_true": {
+    "args": {
+      "thermo_params": {
+        "default": {
+          "BostonMathiasAlphaFunction": {
+            "eta": {
+              "H2O": "",
+              "NO2": ""
+            }
+          },
+          "CriticalParameters": {
+            "T_c": {
+              "H2O": "K",
+              "NO2": "K"
+            },
+            "omega": {
+              "H2O": "",
+              "NO2": ""
+            },
+            "p_c": {
+              "H2O": "Pa",
+              "NO2": "Pa"
+            }
+          },
+          "H0S0ReferenceState": {
+            "T_ref": "K",
+            "dh_form": {
+              "H2O": "J / mol",
+              "NO2": "J / mol"
+            },
+            "p_ref": "Pa",
+            "s_0": {
+              "H2O": "J / K / mol",
+              "NO2": "J / K / mol"
+            }
+          },
+          "LinearHeatCapacity": {
+            "cp_a": {
+              "H2O": "J / K / mol",
+              "NO2": "J / K / mol"
+            },
+            "cp_b": {
+              "H2O": "J / K ** 2 / mol",
+              "NO2": "J / K ** 2 / mol"
+            }
+          },
+          "MixingRule_A": {
+            "T_ref": "K"
+          },
+          "VolumeShift": {
+            "c_i": {
+              "H2O": "m ** 3 / mol",
+              "NO2": "m ** 3 / mol"
+            }
+          }
+        }
+      },
+      "vectors": {
+        "states": ""
+      }
+    },
+    "res": {
+      "thermo_props": {
+        "child": {
+          "m_child": {
+            "S": "W / K",
+            "S_std": "W / K",
+            "T": "K",
+            "T_ref": "K",
+            "V": "m ** 3 / s",
+            "mu": {
+              "H2O": "J / mol",
+              "NO2": "J / mol"
+            },
+            "mu_std": {
+              "H2O": "J / mol",
+              "NO2": "J / mol"
+            },
+            "n": {
+              "H2O": "mol / s",
+              "NO2": "mol / s"
+            },
+            "p": "Pa",
+            "p_ref": "Pa",
+            "p_std": "Pa"
+          },
+          "port": {
+            "S": "W / K",
+            "S_std": "W / K",
+            "T": "K",
+            "T_ref": "K",
+            "V": "m ** 3 / s",
+            "mu": {
+              "H2O": "J / mol",
+              "NO2": "J / mol"
+            },
+            "mu_std": {
+              "H2O": "J / mol",
+              "NO2": "J / mol"
+            },
+            "n": {
+              "H2O": "mol / s",
+              "NO2": "mol / s"
+            },
+            "p": "Pa",
+            "p_ref": "Pa",
+            "p_std": "Pa"
+          }
+        },
+        "m_parent": {
+          "S": "W / K",
+          "S_std": "W / K",
+          "T": "K",
+          "T_ref": "K",
+          "V": "m ** 3 / s",
+          "mu": {
+            "H2O": "J / mol",
+            "NO2": "J / mol"
+          },
+          "mu_std": {
+            "H2O": "J / mol",
+            "NO2": "J / mol"
+          },
+          "n": {
+            "H2O": "mol / s",
+            "NO2": "mol / s"
+          },
+          "p": "Pa",
+          "p_ref": "Pa",
+          "p_std": "Pa"
+        }
+      },
+      "vectors": {
+        "bounds": "",
+        "residuals": ""
+      }
+    }
+  },
+  "numeric_test.py::test_collect_properties": {
+    "J": [
+      [
+        0.1305777060672878,
+        -100635.70928778293,
+        7.956014513089838,
+        11.842261726840444
+      ],
+      [
+        0.11938117446777327,
+        -86114.96251551085,
+        8.985564458623152,
+        7.956014513089838
+      ]
+    ],
+    "names": [
+      "thermo_props/local/mu/CH3-(CH2)2-CH3",
+      "thermo_props/local/mu/CH3-CH2-CH3"
+    ]
+  },
+  "numeric_test.py::test_export_state": {
+    "non-canonical": {},
+    "thermo": {
+      "local": {
+        "T": "10 \u00b0C",
+        "n": {
+          "CH3-(CH2)2-CH3": "1 mol",
+          "CH3-CH2-CH3": "1 mol"
+        },
+        "p": "10 bar"
+      }
+    }
+  },
+  "numeric_test.py::test_extract_parameters": {
+    "J": [
+      [
+        -10000000.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -10000000.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -10000000.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        200000.0
+      ]
+    ],
+    "names": [
+      "model_params/N",
+      "model_params/T",
+      "model_params/p",
+      "model_params/x_c3"
+    ]
+  },
+  "numeric_test.py::test_import_state": {
+    "T": "100 \u00b0C",
+    "n": {
+      "CH3-(CH2)2-CH3": "1 mol",
+      "CH3-CH2-CH3": "2 mol"
+    },
+    "p": "5 bar"
+  },
+  "numeric_test.py::test_jacobian": [
+    [
+      0.0,
+      0.0,
+      10000000.0,
+      10000000.0
+    ],
+    [
+      10000000.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      48540038.91016429,
+      -94926376868053.11,
+      8611496251.551085,
+      10063570928.778292
+    ],
+    [
+      0.0,
+      0.0,
+      -9000000.0,
+      1000000.0
+    ]
+  ],
+  "numeric_test.py::test_material_collect_props": {
+    "S": "W / K",
+    "S_std": "W / K",
+    "T": "K",
+    "T_ref": "K",
+    "V": "m ** 3 / s",
+    "mu": {
+      "H2O": "J / mol",
+      "NO2": "J / mol"
+    },
+    "mu_std": {
+      "H2O": "J / mol",
+      "NO2": "J / mol"
+    },
+    "n": {
+      "H2O": "mol / s",
+      "NO2": "mol / s"
+    },
+    "p": "Pa",
+    "p_ref": "Pa",
+    "p_std": "Pa"
+  },
+  "numeric_test.py::test_material_collect_thermo_param": {
+    "BostonMathiasAlphaFunction": {
+      "eta": {
+        "H2O": "",
+        "NO2": ""
+      }
+    },
+    "CriticalParameters": {
+      "T_c": {
+        "H2O": "K",
+        "NO2": "K"
+      },
+      "omega": {
+        "H2O": "",
+        "NO2": ""
+      },
+      "p_c": {
+        "H2O": "Pa",
+        "NO2": "Pa"
+      }
+    },
+    "H0S0ReferenceState": {
+      "T_ref": "K",
+      "dh_form": {
+        "H2O": "J / mol",
+        "NO2": "J / mol"
+      },
+      "p_ref": "Pa",
+      "s_0": {
+        "H2O": "J / K / mol",
+        "NO2": "J / K / mol"
+      }
+    },
+    "LinearHeatCapacity": {
+      "cp_a": {
+        "H2O": "J / K / mol",
+        "NO2": "J / K / mol"
+      },
+      "cp_b": {
+        "H2O": "J / K ** 2 / mol",
+        "NO2": "J / K ** 2 / mol"
+      }
+    },
+    "MixingRule_A": {
+      "T_ref": "K"
+    },
+    "VolumeShift": {
+      "c_i": {
+        "H2O": "m ** 3 / mol",
+        "NO2": "m ** 3 / mol"
+      }
+    }
+  },
+  "numeric_test.py::test_model_bounds": [
+    "length"
+  ],
+  "numeric_test.py::test_query_bounds": [
+    "source/GibbsIdealGas/p",
+    "source/IdealMix/n/Methane",
+    "source/LinearHeatCapacity/T"
+  ],
+  "numeric_test.py::test_square_model": {
+    "args": {
+      "model_params": {
+        "N": "mol / s",
+        "T": "K",
+        "p": "Pa",
+        "x_c3": ""
+      },
+      "thermo_params": {
+        "default": {
+          "BostonMathiasAlphaFunction": {
+            "eta": {
+              "CH3-(CH2)2-CH3": "",
+              "CH3-CH2-CH3": ""
+            }
+          },
+          "CriticalParameters": {
+            "T_c": {
+              "CH3-(CH2)2-CH3": "K",
+              "CH3-CH2-CH3": "K"
+            },
+            "omega": {
+              "CH3-(CH2)2-CH3": "",
+              "CH3-CH2-CH3": ""
+            },
+            "p_c": {
+              "CH3-(CH2)2-CH3": "Pa",
+              "CH3-CH2-CH3": "Pa"
+            }
+          },
+          "H0S0ReferenceState": {
+            "T_ref": "K",
+            "dh_form": {
+              "CH3-(CH2)2-CH3": "J / mol",
+              "CH3-CH2-CH3": "J / mol"
+            },
+            "p_ref": "Pa",
+            "s_0": {
+              "CH3-(CH2)2-CH3": "J / K / mol",
+              "CH3-CH2-CH3": "J / K / mol"
+            }
+          },
+          "LinearHeatCapacity": {
+            "cp_a": {
+              "CH3-(CH2)2-CH3": "J / K / mol",
+              "CH3-CH2-CH3": "J / K / mol"
+            },
+            "cp_b": {
+              "CH3-(CH2)2-CH3": "J / K ** 2 / mol",
+              "CH3-CH2-CH3": "J / K ** 2 / mol"
+            }
+          },
+          "MixingRule_A": {
+            "T_ref": "K"
+          },
+          "VolumeShift": {
+            "c_i": {
+              "CH3-(CH2)2-CH3": "m ** 3 / mol",
+              "CH3-CH2-CH3": "m ** 3 / mol"
+            }
+          }
+        }
+      },
+      "vectors": {
+        "states": ""
+      }
+    },
+    "res": {
+      "residuals": {
+        "N": "mol / s",
+        "T": "K",
+        "p": "Pa",
+        "x": "mol / s"
+      },
+      "thermo_props": {
+        "local": {
+          "N": "mol / s",
+          "S": "W / K",
+          "S_std": "W / K",
+          "T": "K",
+          "T_ref": "K",
+          "V": "m ** 3 / s",
+          "mu": {
+            "CH3-(CH2)2-CH3": "J / mol",
+            "CH3-CH2-CH3": "J / mol"
+          },
+          "mu_std": {
+            "CH3-(CH2)2-CH3": "J / mol",
+            "CH3-CH2-CH3": "J / mol"
+          },
+          "n": {
+            "CH3-(CH2)2-CH3": "mol / s",
+            "CH3-CH2-CH3": "mol / s"
+          },
+          "p": "Pa",
+          "p_ref": "Pa",
+          "p_std": "Pa",
+          "x": {
+            "CH3-(CH2)2-CH3": "",
+            "CH3-CH2-CH3": ""
+          }
+        }
+      },
+      "vectors": {
+        "bounds": "",
+        "residuals": ""
+      }
+    }
+  },
+  "numeric_test.py::test_square_model_call": {
+    "residuals/N": "1.000000 mol / s",
+    "residuals/T": "0.000000 K",
+    "residuals/p": "0.000000 Pa",
+    "residuals/x": "-0.800000 mol / s",
+    "thermo_props/local/N": "2.000000 mol / s",
+    "thermo_props/local/S": "-154.465034 W / K",
+    "thermo_props/local/S_std": "-8.930247 W / K",
+    "thermo_props/local/T": "283.150000 K",
+    "thermo_props/local/T_ref": "298.150000 K",
+    "thermo_props/local/V": "0.000197 m ** 3 / s",
+    "thermo_props/local/mu/CH3-(CH2)2-CH3": "-497.918361 J / mol",
+    "thermo_props/local/mu/CH3-CH2-CH3": "2275.958715 J / mol",
+    "thermo_props/local/mu_std/CH3-(CH2)2-CH3": "-37.614242 J / mol",
+    "thermo_props/local/mu_std/CH3-CH2-CH3": "-28.786410 J / mol",
+    "thermo_props/local/n/CH3-(CH2)2-CH3": "1.000000 mol / s",
+    "thermo_props/local/n/CH3-CH2-CH3": "1.000000 mol / s",
+    "thermo_props/local/p": "1000000.000000 Pa",
+    "thermo_props/local/p_ref": "101325.000000 Pa",
+    "thermo_props/local/p_std": "101325.000000 Pa",
+    "thermo_props/local/x/CH3-(CH2)2-CH3": "0.500000",
+    "thermo_props/local/x/CH3-CH2-CH3": "0.500000",
+    "vectors/bounds": "[1.000000 0.000197 1.000000 1.000000 283.150000 283.150000 0.000053 0.000197 949263768680.530884 1000000.000000]",
+    "vectors/residuals": "[10000000.000000 0.000000 0.000003 -8000000.000000]"
+  }
+}
