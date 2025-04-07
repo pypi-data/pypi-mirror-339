@@ -1,0 +1,5 @@
+[console_scripts]
+winids-attack-panel = winids.attack_panel:main
+winids-bridge = winids.bridge:main
+winids-dashboard = winids.pro_dashboard:main
+winids-monitor = winids.monitor:main

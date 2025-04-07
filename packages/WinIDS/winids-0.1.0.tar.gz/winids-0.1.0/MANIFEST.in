@@ -1,0 +1,14 @@
+include LICENSE
+include README.md
+include winids/*.py
+include winids/data/*.md
+include winids/data/*.json
+include winids/models/*.md
+include winids/models/*.h5
+include winids/models/*.json
+include winids/attack_simulator/*.py
+include winids/attack_simulator/*.md
+recursive-include winids/tests *.py
+recursive-include winids/docs *.md *.rst *.txt
+recursive-include winids/scripts *.py
+global-exclude *.py[cod] __pycache__ *.so 
