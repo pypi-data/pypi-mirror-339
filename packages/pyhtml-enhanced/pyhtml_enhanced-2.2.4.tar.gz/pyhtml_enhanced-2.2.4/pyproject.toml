@@ -1,0 +1,108 @@
+[project]
+name = "pyhtml-enhanced"
+version = "2.2.4"
+description = "A library for building HTML documents with a simple and learnable syntax"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Maddy Guthridge", email = "maddy.guthridge@unsw.edu.au" }]
+
+keywords = ['html', 'template', 'pyhtml', 'markup', 'documentation']
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content :: CGI Tools/Libraries",
+    "Typing :: Typed",
+]
+
+requires-python = ">=3.10"
+dependencies = ["typing-extensions >=4.12.2"]
+
+[project.urls]
+homepage = "https://comp1010unsw.github.io/pyhtml-enhanced/"
+repository = "https://github.com/COMP1010UNSW/pyhtml-enhanced"
+documentation = "https://comp1010unsw.github.io/pyhtml-enhanced/"
+"Bug Tracker" = "https://github.com/COMP1010UNSW/pyhtml-enhanced/issues"
+
+[tool.poetry]
+include = ["py.typed"]
+packages = [{ include = "pyhtml" }]
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=7.4.2,<9.0.0"
+mypy = "^1.5.1"
+autopep8 = "^2.0.4"
+coverage = "^7.3.1"
+requests = "^2.31.0"
+types-requests = "^2.31.0.2"
+pyyaml = "^6.0.1"
+types-pyyaml = "^6.0.12.11"
+flask = "^3.0.0"
+pytest-mypy-plugins = "^3.0.0"
+ruff = "^0.9.4"
+
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.6.1"
+mkdocs-material = "^9.5.34"
+mkdocstrings = { version = ">=0.26,<0.28", extras = ["python"] }
+mkdocs-awesome-pages-plugin = "^2.9.3"
+mkdocs-section-index = "^0.3.9"
+
+[tool.mypy]
+check_untyped_defs = true
+files = ["pyhtml", "tests", "meta"]
+exclude = ['meta/templates/*']
+
+[tool.ruff]
+line-length = 79
+exclude = ['meta/templates']
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"pyhtml/__tags/input_tag.py" = [
+    # Line too long
+    "E501",
+]
+"pyhtml/__tags/generated.py" = [
+    # Line too long
+    "E501",
+]
+
+[tool.pytest.ini_options]
+addopts = "--doctest-glob README.md --doctest-glob docs/**.md"
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+exclude_also = [
+    'if TYPE_CHECKING:',
+    'return NotImplemented',
+    '@overload',
+    'raise AssertionError',
+    'raise NotImplementedError',
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,77 @@
+Metadata-Version: 2.3
+Name: pyhtml-enhanced
+Version: 2.2.4
+Summary: A library for building HTML documents with a simple and learnable syntax
+License: MIT
+Keywords: html,template,pyhtml,markup,documentation
+Author: Maddy Guthridge
+Author-email: maddy.guthridge@unsw.edu.au
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content :: CGI Tools/Libraries
+Classifier: Typing :: Typed
+Requires-Dist: typing-extensions (>=4.12.2)
+Project-URL: Bug Tracker, https://github.com/COMP1010UNSW/pyhtml-enhanced/issues
+Project-URL: Documentation, https://comp1010unsw.github.io/pyhtml-enhanced/
+Project-URL: Homepage, https://comp1010unsw.github.io/pyhtml-enhanced/
+Project-URL: Repository, https://github.com/COMP1010UNSW/pyhtml-enhanced
+Description-Content-Type: text/markdown
+
+# `<PyHTML/>`
+
+A library for building HTML documents with a simple and learnable syntax,
+inspired by (and similar to)
+[Cenk Altı's PyHTML library](https://github.com/cenkalti/pyhtml), but
+with improved documentation and type safety.
+
+Learn more by reading [the documentation](https://comp1010unsw.github.io/pyhtml-enhanced/).
+
+## Features
+
+* Inline documentation and type safety for all tags.
+
+* Editor support for many common tags (attribute suggestions).
+
+* A modern and readable codebase.
+
+* 100% test coverage.
+
+## Usage
+
+```py
+>>> import pyhtml as p
+>>> my_website = p.html(
+...     p.head(
+...         p.title("Hello, world!"),
+...         p.script(src="http://example.com/script.js"),
+...     ),
+...     p.body(
+...         p.h1("Hello, world!"),
+...         p.p("This is my amazing website!"),
+...     ),
+... )
+>>> print(str(my_website))
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Hello, world!
+    </title>
+    <script type="text/javascript" src="http://example.com/script.js"></script>
+  </head>
+  <body>
+    <h1>
+      Hello, world!
+    </h1>
+    <p>This is my amazing website!</p>
+  </body>
+</html>
+
+```
+
