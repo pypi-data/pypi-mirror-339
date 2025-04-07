@@ -1,0 +1,10 @@
+grifftools/__init__.py,sha256=oyRkfakJ26GGePQCGAPz3Mt9julfXnpBOcbNbEpZ5vw,60
+grifftools/cli.py,sha256=boXIaNXZ0nfMkBrca_0IQzbBu0w0iHIzSKvQadLntWU,117
+grifftools/func.py,sha256=kTPdMnG0dms2jWq4Vl3j-L8QgG8aobtzO78tTFHLh7w,2482
+grifftools/lib.py,sha256=H-ZHK5xi61cstThxivOGQWJH9FzhCCWe2i6E-r3yYGQ,232
+grifftools/shell.py,sha256=umy0Egn1N9szFcW_rt21Rf-p5vcc9G4NDRuWgfWnTdM,2547
+grifftools-0.0.2.dist-info/licenses/LICENSE,sha256=MWR5GU3iCC830so9Qhx7gUk4nxnhKZeKaWlbYADU_LY,1072
+grifftools-0.0.2.dist-info/METADATA,sha256=VvP3jwxCquEH8oZBCUigj-H6kDRgMSLOlpCSk6DTRUc,212
+grifftools-0.0.2.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+grifftools-0.0.2.dist-info/top_level.txt,sha256=NrN2TEa5i91LFlTY2E6A_V-MbaPgOHmsNAXbwj5Osvc,11
+grifftools-0.0.2.dist-info/RECORD,,
