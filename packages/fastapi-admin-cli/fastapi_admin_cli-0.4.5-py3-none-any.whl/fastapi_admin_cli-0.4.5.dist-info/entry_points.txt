@@ -1,0 +1,3 @@
+[console_scripts]
+create-template-structure = scripts.create_template_structure:create_template_structure
+fastapi-admin = fastapi_admin.cli:run_from_command_line
