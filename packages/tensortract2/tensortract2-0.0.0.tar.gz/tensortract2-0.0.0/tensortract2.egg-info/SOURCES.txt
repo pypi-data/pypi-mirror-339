@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+tensortract2/__init__.py
+tensortract2/tensortract2.py
+tensortract2.egg-info/PKG-INFO
+tensortract2.egg-info/SOURCES.txt
+tensortract2.egg-info/dependency_links.txt
+tensortract2.egg-info/requires.txt
+tensortract2.egg-info/top_level.txt
+tensortract2/cfg/tensortract2_version_uc81_am100.yaml
