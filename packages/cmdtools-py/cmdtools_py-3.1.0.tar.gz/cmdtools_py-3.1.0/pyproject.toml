@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "cmdtools-py"
+version = "3.1.0"
+description = "A (not quite) flexible command framework"
+authors = ["HugeBrain16 <hugebrain16@gmail.com>"]
+maintainers = ["HugeBrain16 <hugebrain16@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/HugeBrain16/cmdtools"
+documentation = "https://cmdtools-py.readthedocs.io/en/latest"
+keywords = [
+    "command-parser",
+    "command-processor",
+    "command",
+    "cmd",
+    "cmd-parser",
+    "framework",
+    "command-framework",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+packages = [{ include = "cmdtools" }]
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+typing-extensions = "4.7.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=6.2.5"
+pytest-cov = ">=3.0.0"
+codecov = ">=2.1.13"
+
+[tool.pytest.ini_options]
+pythonpath = "."
+asyncio_default_fixture_loop_scope = "function"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "setuptools"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+"Issues Tracker" = "https://github.com/HugeBrain16/cmdtools/issues"
