@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+synthdef_parser/__init__.py
+synthdef_parser/parser.py
+synthdef_parser.egg-info/PKG-INFO
+synthdef_parser.egg-info/SOURCES.txt
+synthdef_parser.egg-info/dependency_links.txt
+synthdef_parser.egg-info/top_level.txt
+tests/__init__.py
+tests/test_parser.py

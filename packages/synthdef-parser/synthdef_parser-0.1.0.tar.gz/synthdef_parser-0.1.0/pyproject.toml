@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synthdef-parser"
+version = "0.1.0"
+description = "A parser for SuperCollider SynthDef binary files"
+authors = [{ name = "rexmalebka", email = "rexmalebka@krutt.org" }]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.7"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/rexmalebka/synthdef-parser"
