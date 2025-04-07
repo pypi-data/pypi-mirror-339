@@ -1,0 +1,34 @@
+Metadata-Version: 2.3
+Name: dora-magma
+Version: 0.1.0
+Summary: Dora node for Microsoft Magma model
+License: MIT
+Author: Munish Mummadi
+Author-email: moneymindedmunish1@gmail.com
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: accelerate (>=1.5.1)
+Requires-Dist: dora-rs (>=0.3.9)
+Requires-Dist: numpy (<2)
+Requires-Dist: open-clip-torch (>=2.31.0)
+Requires-Dist: opencv-python (>=4.1.1)
+Requires-Dist: psutil (>=7.0.0)
+Requires-Dist: torch (>=2.4.0)
+Requires-Dist: torchvision (>=0.19)
+Requires-Dist: transformers (>=4.45)
+Requires-Dist: wandb
+Description-Content-Type: text/markdown
+
+# Dora Magma Node
+
+This Dora node integrates Microsoft's Magma model for multimodal trajectory planning and visualization within dora.
+
+
+# Additional Documentation
+- Magma: https://github.com/microsoft/Magma
+
