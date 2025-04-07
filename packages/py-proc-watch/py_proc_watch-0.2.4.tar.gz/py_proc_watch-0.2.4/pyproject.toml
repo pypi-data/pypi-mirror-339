@@ -1,0 +1,78 @@
+[tool.poetry]
+name = "py-proc-watch"
+version = "0.2.4"
+description = "Pure Python procps \"watch\" replacement"
+authors = ["Krzysztof Pawlik <krzysiek.pawlik@people.pl>"]
+maintainers = ["Krzysztof Pawlik <krzysiek.pawlik@people.pl>"]
+license = "MIT"
+homepage = "https://gitlab.com/nelchael/py-proc-watch"
+repository = "https://gitlab.com/nelchael/py-proc-watch"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "Topic :: System :: Monitoring",
+    "Topic :: Utilities",
+]
+readme = "README.md"
+packages = [
+    { include = "py_proc_watch.py" },
+    { include = "py_proc_watch_test.py", format = "sdist" },
+]
+
+[tool.poetry.scripts]
+pywatch = 'py_proc_watch:_entry_point'
+
+[tool.poetry.dependencies]
+python = "^3.9"
+colorama = "^0.4.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "25.1.0"
+coverage = "7.8.0"
+isort = "6.0.1"
+mypy = "1.15.0"
+poethepoet = "0.33.1"
+pytest = "8.3.5"
+pytest-cov = "6.1.1"
+pytest-mockito = "0.0.4"
+ruff = "0.11.4"
+types-colorama = "0.4.15.20240311"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["F", "E", "N", "A", "C4", "ISC", "PT", "Q", "RET", "SLF", "ARG", "PTH", "RUF"]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+
+[tool.isort]
+line_length = 120
+profile = "black"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--junitxml=.pytest-report.xml --cov=py_proc_watch --cov-report term-missing --cov-report xml:.coverage-report.xml"
+
+[tool.mypy]
+strict = true
+
+[tool.poe.tasks]
+_format = [ { shell = "isort . && black ." } ]
+_check = [ { shell = "isort --check . && black --check ." } ]
+_lint = [ { shell = "ruff check . && mypy ." } ]
+_test = [ { shell = "pytest" } ]
+format = [ "_format", "_lint" ]
+check = [ "_check", "_lint", "_test" ]
