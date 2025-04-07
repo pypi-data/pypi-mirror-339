@@ -1,0 +1,16 @@
+goksis/__init__.py,sha256=HHNRswnc2cEqVEHUBY9-3T-NdeKvR9mhonLx7V7DKk8,231
+goksis/camera.py,sha256=g_b9FhgJCiSGbY5ZjWFU02xqJuMbzgPFxyIsAvN7L1M,29472
+goksis/constants.py,sha256=kanAdkLae-2CHZPrPLrVPJkdzDr1BylUYVT2OfPKQY8,992
+goksis/enclosure.py,sha256=OD_PUGJqvgdPFXpmz7xy-FUm73_RipoJA4R_K7PTweY,19530
+goksis/errors.py,sha256=dcJz5I_DwER17fMHvGUmxJN3TQGB4L3J3fZ1CXHCYhw,753
+goksis/filterwheel.py,sha256=9h983Dpp9DXxrLT_rExaQ3CgZvqoB1Q-5UIs_wF0IPI,12550
+goksis/focuser.py,sha256=JDBYJBHI7N9Glv8W8cU8WvtBX5-PjbhRpgS3spm86bc,9995
+goksis/models.py,sha256=qElqvxycWoHgSZoMyjH9y69zRK1jSJGUcB0nzjPem5U,432
+goksis/telescope.py,sha256=7NRSHFwUk9majKyZWH94fOHsF_s-AxbcHpyt34AmWAI,38336
+goksis/utils.py,sha256=ZcGr6dLZRDbNA7EZBEx_pAjbx1Oywznluo1s4_Rbpyg,5634
+goksis/weather.py,sha256=2VC9ixHv2-HK8I0Ze3_FA-IvE7xtnzugOFnlJckuWwU,17320
+goksis-0.0.5.dist-info/licenses/LICENSE,sha256=bx5iLIKjgAdYQ7sISn7DsfHRKkoCUm1154sJJKhgqnU,35184
+goksis-0.0.5.dist-info/METADATA,sha256=zNBfjoYK-sNoHjUGBxxoD2UNDA4I1DdadVUomHFhaQ4,904
+goksis-0.0.5.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+goksis-0.0.5.dist-info/top_level.txt,sha256=N5V8jWLxpDbk83PBhAwrneEbDDd6Hbqm1CGMPbEnJSE,7
+goksis-0.0.5.dist-info/RECORD,,
