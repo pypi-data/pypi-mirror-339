@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: keli_scoreboard_driver
+Version: 1.1.0
+Summary: An driver implementation for KELI Scoreboards
+Home-page: https://github.com/alexander-grekov/keli_scoreboard_driver
+Author: Alexander Grekov
+Author-email: contact@agrekov.com
+Project-URL: Bug Tracker, https://github.com/alexander-grekov/keli_scoreboard_driver/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: pyserial<=4
+Dynamic: license-file
