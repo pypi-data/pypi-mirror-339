@@ -1,0 +1,4 @@
+einops
+torch
+numpy
+rotary_embedding_torch
