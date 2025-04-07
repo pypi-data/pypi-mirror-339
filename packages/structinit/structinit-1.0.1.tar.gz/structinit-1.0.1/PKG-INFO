@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: structinit
+Version: 1.0.1
+Summary: 🛠️ Generate full project structures from markdown blueprints.
+Home-page: https://github.com/srijanbahal/Projinit
+Author: Srijan
+Author-email: srijanbahal.work@example.com
+License: MIT
+Keywords: project scaffolding,markdown,CLI,automation
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# 🛠️ Structinit
+
+`structinit` is a simple Python CLI tool to generate project folder structures from a markdown blueprint (like `structure.md`).
+
+Instead of manually creating folders and files every time, define your project structure once — and let `structinit` scaffold it for you instantly.
+
+---
+
+## 🚀 Features
+
+- Generate folders & files based on a markdown tree structure
+- Supports nested directories and clean formatting
+- Automates boilerplate project scaffolding
+- Works great for Python packages, ML projects, or any folder template
+
+---
+
+## 📦 Installation
+
+```bash
+pip install structinit

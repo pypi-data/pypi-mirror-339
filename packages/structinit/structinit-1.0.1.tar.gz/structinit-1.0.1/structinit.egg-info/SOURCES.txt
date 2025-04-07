@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+projinit/__init__.py
+projinit/main.py
+structinit.egg-info/PKG-INFO
+structinit.egg-info/SOURCES.txt
+structinit.egg-info/dependency_links.txt
+structinit.egg-info/entry_points.txt
+structinit.egg-info/requires.txt
+structinit.egg-info/top_level.txt
+tests/test_main.py
