@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: InvestPy-1st-attempt
+Version: 0.1
+Summary: Uma biblioteca para cálculos de investimentos (Material curso FIAP 2025).
+Home-page: https://github.com/devienne/Machine-Learning-Engineering
+Author: José Augusto Devienne
+Author-email: joseaugusto.devienne@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
