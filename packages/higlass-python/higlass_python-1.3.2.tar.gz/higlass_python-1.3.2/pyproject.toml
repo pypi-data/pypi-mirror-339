@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "higlass-python"
+description = "Python bindings for HiGlass"
+authors = [
+    { name = "Fritz Lekschas", email = "code@lekschas.de" },
+    { name = "Nezar Abdennur", email = "nabdennur@gmail.com" },
+    { name = "Peter Kerpdjiev", email = "pkerpedjiev@gmail.com" },
+    { name = "Trevor Manz", email = "trevor.j.manz@gmail.com" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+license = { text = "MIT" }
+dynamic = ["version"]
+readme = "README.md"
+dependencies = [
+    "higlass-schema>=0.2.0",
+    "anywidget>=0.9.0",
+    "typing-extensions ; python_version<'3.9'",
+]
+requires-python = ">=3.8"
+urls = { homepage = "https://github.com/higlass/higlass-python" }
+
+[dependency-groups]
+dev = ["anywidget[dev]", "jupyterlab", "pytest", "ruff"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/higlass"]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+
+[tool.ruff.lint]
+extend-select = [
+    "E", # style errors
+    # "D",  # pydocstyle
+    "F",   # pyflakes
+    "I",   # isort
+    "RUF", # ruff-specific rules
+    "UP",  # pyupgrade
+    "W",   # style  warnings
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = [
+    "F403", # unused-star-used
+    "F401", # unused import
+]
+"examples/*.ipynb" = [
+    "F811", # redefintion
+]
