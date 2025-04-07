@@ -1,0 +1,54 @@
+[project]
+name = "mcpport"
+version = "0.1.4"
+description = "mcpport — A lightweight gateway & registry for Model Context Protocol (MCP), enabling standardized connectivity for AI applications."
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "fangyinc", email = "staneyffer@gmail.com"}
+]
+requires-python = ">=3.10"
+dependencies = [
+    "flask>=3.1.0",
+    "flask-cors>=5.0.1",
+    "httpx<0.28",
+    "mcp>=1.1.3",
+    "pydantic>=2.0.0",
+    "readabilipy>=0.2.0",
+    "requests>=2.32.3",
+    "websockets>=15.0.1",
+    "werkzeug>=3.1.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/fangyinc/mcpport"
+Documentation = "https://github.com/fangyinc/mcpport"
+Repository = "https://github.com/fangyinc/mcpport.git"
+Issues = "https://github.com/fangyinc/mcpport/issues"
+
+[project.scripts]
+mcpport = "mcpport.run:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = ["pyright>=1.1.389", "ruff>=0.7.3"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.format]
+# Format docstrings
+docstring-code-format = true
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[tool.ruff.lint]
+# Enable: eror check, import order
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.isort]
