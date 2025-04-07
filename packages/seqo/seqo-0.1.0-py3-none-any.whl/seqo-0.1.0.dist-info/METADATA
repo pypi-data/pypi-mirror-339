@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: seqo
+Version: 0.1.0
+Summary: Map strings sequencially
+Author-email: Enzo Conejero <enzoconejero0@gmail.com>
+License: GNU
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest>=8.3.5; extra == "dev"
+Requires-Dist: twine>=6.1.0; extra == "dev"
+Requires-Dist: build>=1.2.2.post1; extra == "dev"
+Dynamic: license-file
+
+# seqo
+Python Package for map strings and numbers
