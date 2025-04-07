@@ -1,0 +1,10 @@
+git_commit_generator/__init__.py,sha256=hYzHs6dc42n3VuDDkTlCIReC36TA2GkiM3hEkVqHzr8,709
+git_commit_generator/config.py,sha256=2lN0eJdd3xOPzRIcJvujm0_wyd7xF_x34WCCRYSLKz0,11525
+git_commit_generator/core.py,sha256=Q5GuP3qq3kLfuV0yq3bE-01_VWWoCtvx6cceuFfNpWQ,8288
+git_commit_generator/validators.py,sha256=dH2r8WIgndzY_x7ZL444mtaBN0NwncJUaHCnKmnCRsU,2469
+quick_auto_git-0.1.1.dist-info/licenses/LICENSE,sha256=htiX7W6RbT8DV66x6uANigUYfOw9Q_x4HnZJvOOkAlo,1087
+quick_auto_git-0.1.1.dist-info/METADATA,sha256=o_s-0eM_w6hRo7f71A5MN02OqnrjdaSdYM6vlYtswe4,6526
+quick_auto_git-0.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+quick_auto_git-0.1.1.dist-info/entry_points.txt,sha256=8BgGz0umFtbPa7yD62hfssNLA4QGU90yx4d65Rdy-a4,61
+quick_auto_git-0.1.1.dist-info/top_level.txt,sha256=EPymojwbPwiKG1EmZTHXRo2K4KtXWmLg69K7uFQCx_A,21
+quick_auto_git-0.1.1.dist-info/RECORD,,
