@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: eval_sdk
+Version: 0.1.0
+Summary: A Python SDK for ...
+Home-page: https://github.com/yourusername/your_sdk
+Author: jack
+Author-email: your.email@example.com
+Keywords: sdk api client
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+
