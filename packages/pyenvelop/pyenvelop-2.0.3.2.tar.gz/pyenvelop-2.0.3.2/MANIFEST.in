@@ -1,0 +1,13 @@
+include LICENSE
+include README.md
+include pyproject.toml
+include setup.py
+
+recursive-include src/pyenvelop *.pyc
+recursive-exclude src/pyenvelop *.py
+
+global-exclude test/
+global-exclude __pycache__/
+global-exclude *.py
+global-exclude *.so
+global-exclude .DS_Store 

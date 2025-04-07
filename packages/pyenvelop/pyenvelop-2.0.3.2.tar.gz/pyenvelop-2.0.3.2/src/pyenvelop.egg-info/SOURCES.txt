@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/pyenvelop.egg-info/PKG-INFO
+src/pyenvelop.egg-info/SOURCES.txt
+src/pyenvelop.egg-info/dependency_links.txt
+src/pyenvelop.egg-info/requires.txt
+src/pyenvelop.egg-info/top_level.txt
+src/pyenvelop/__pycache__/__init__.cpython-311.pyc
+src/pyenvelop/__pycache__/__init__.cpython-312.pyc
+src/pyenvelop/__pycache__/core.cpython-311.pyc
+src/pyenvelop/__pycache__/core.cpython-312.pyc
+src/pyenvelop/__pycache__/exceptions.cpython-312.pyc
