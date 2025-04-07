@@ -1,0 +1,10 @@
+*.idea
+.DS_Store
+**.pytest_cache
+**/__pycache__/
+drafts
+
+# draw.io files
+*.dtmp
+*.bkp
+
