@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: spammer7
+Version: 1.0.0
+Summary: Math utilities with Fibonacci, factorial, and Gmail email sending functionality.
+Author: Andy Woz
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/plain
+
+This module provides simple math functions like Fibonacci and factorial, along with tools for sending emails via Gmail. Ideal for experimenting with basic Python automation.
