@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: labone
+Version: 4.0.0
+Summary: Zurich Instruments.
+Project-URL: homepage, https://zhinst.com
+Project-URL: repository, https://github.com/zhinst/toolkit
+Author-email: Zurich Instruments Development Team <info@zhinst.com>
+License: Apache 2.0
+License-File: LICENSE
+Keywords: zhinst
+Classifier: Development Status :: 7 - Inactive
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# LabOne Python API
+
+The `labone` package has been removed for the time being. 
+Please refer to [zhinst-toolkit](https://pypi.org/project/zhinst-toolkit/)
+for the latest LabOne Python API.
+
