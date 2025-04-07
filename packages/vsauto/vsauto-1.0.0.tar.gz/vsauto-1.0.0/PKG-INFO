@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: vsauto
+Version: 1.0.0
+Summary: Allow dynamically loading vapoursynth plugins via pluggy
+License-File: LICENSE
+Requires-Dist: pluggy >=1.5.0
