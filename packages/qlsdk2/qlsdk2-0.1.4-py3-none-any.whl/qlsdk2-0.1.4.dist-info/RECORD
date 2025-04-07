@@ -1,0 +1,11 @@
+qlsdk/__init__.py,sha256=pHMMwFiz7AGYlWvxo-81Obd7gIkojhLAEUGe0yuiAJI,372
+qlsdk/ar4m/__init__.py,sha256=cKGc8qW2e8JDnaDbxxS7GQhtOQF2PlekNf4WA2LmWXY,1640
+qlsdk/ar4m/ar4m.py,sha256=AOYvvo04dD0W4EMrKDCx63pUzwL1f_CVcM_N4rebhQc,1524
+qlsdk/ar4m/ar4sdk.py,sha256=A0-YRC_TAjw7b15mNa9UFwtsp8xMIxCv9WQKgGtb6ZY,14017
+qlsdk/ar4m/example.py,sha256=cm0HeRb53roKw5HYZ4uqnDZ6suaSUdqOW_hCTcGY8lo,1501
+qlsdk/ar4m/libs/libAr4SDK.dll,sha256=kZp9_DRwPdAJ5OgTFQSqS8tEETxUs7YmmETuBP2g60U,15402132
+qlsdk/ar4m/libs/libwinpthread-1.dll,sha256=W77ySaDQDi0yxpnQu-ifcU6-uHKzmQpcvsyx2J9j5eg,52224
+qlsdk2-0.1.4.dist-info/METADATA,sha256=U7-5HjSjE57ptTxzDNQdC_IF-4ZztkP9s_jfvv2D6uQ,7001
+qlsdk2-0.1.4.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+qlsdk2-0.1.4.dist-info/top_level.txt,sha256=2CHzn0SY-NIBVyBl07Suh-Eo8oBAQfyNPtqQ_aDatBg,6
+qlsdk2-0.1.4.dist-info/RECORD,,
