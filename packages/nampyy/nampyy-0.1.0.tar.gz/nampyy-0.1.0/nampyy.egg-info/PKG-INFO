@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: nampyy
+Version: 0.1.0
+Summary: A custom package with greetings and math operations
+Author: notes
+Author-email: notes@email.com
+License: MIT
+Dynamic: author
+Dynamic: author-email
+Dynamic: license
+Dynamic: summary
