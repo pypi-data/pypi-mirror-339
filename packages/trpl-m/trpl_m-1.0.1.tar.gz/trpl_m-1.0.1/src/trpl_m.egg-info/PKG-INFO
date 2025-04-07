@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: trpl-m
+Version: 1.0.1
+Summary: Mental math game in your terminal
+Author-email: Grant Achuzia <achuziaduby@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/GAchuzia/trpl-m
+Project-URL: Issues, https://github.com/GAchuzia/trpl-m/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# TRPL-M
+
+Bored? Do some mental math.
+
+## Installation
+
+In your terminal `pip install trpl-m`
+
+- Then run `trpl_m`
+
+## License
+
+MIT License - more details in the  [LICENSE](LICENSE) file.
