@@ -1,0 +1,11 @@
+requests
+os
+json
+pandas
+tiktoken
+openai
+collections
+re
+textwrap
+InquirerPy
+tqdm
