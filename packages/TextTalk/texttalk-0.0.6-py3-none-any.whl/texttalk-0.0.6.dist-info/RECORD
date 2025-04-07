@@ -1,0 +1,9 @@
+sms/__init__.py,sha256=7_T4J_Yk4SRqpSGKxSw8pXfSXOBmV747voe-YufuwbE,828
+sms/client.py,sha256=M-84UOZlzA8Q6QaDq7eZ4_rYa5ALm9I5zCXKgW-JgUk,4022
+sms/config.py,sha256=oq5vVaAayZtGpwVYpUOuucbhP31ovuFA0g8sx_worZM,2229
+sms/exceptions.py,sha256=RkEQldoC02CJqBw9gbejfQDNl10Pv_TYC_PfLzbam2Q,508
+sms/validators.py,sha256=e_RN8iKZHJbRd6Zt91faw2GKqU-B4tSakH30oEyWdwc,1420
+texttalk-0.0.6.dist-info/LICENSE,sha256=XFMMUN8iXirfMpW6HZ5CnEAvRuGHUfOqjrLMAxSo3mc,1073
+texttalk-0.0.6.dist-info/METADATA,sha256=WVTVlMBVjFv045F9HsYoz4Q3rxkj6lAHmL0vRCY5bJg,4229
+texttalk-0.0.6.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+texttalk-0.0.6.dist-info/RECORD,,
