@@ -1,0 +1,85 @@
+Metadata-Version: 2.4
+Name: tumcommon-x
+Version: 0.1.1
+Summary: A Django package providing common functionality for TUM projects
+Home-page: https://github.com/yourusername/tum-common-x
+Author: TUM Common X Team
+Author-email: burak.sen@tum.de
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Framework :: Django
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django>=5.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# TUM Common X
+
+A Django package providing common functionality for TUM projects.
+
+## Installation
+
+```bash
+pip install tum-common-x
+```
+
+## Usage
+
+Add `tum_common_x` to your `INSTALLED_APPS` in your Django settings:
+
+```python
+INSTALLED_APPS = [
+    ...
+    'tum_common_x',
+    ...
+]
+```
+
+Include the URLs in your project's `urls.py`:
+
+```python
+from django.urls import path, include
+
+urlpatterns = [
+    ...
+    path('', include('tum_common_x.urls')),
+    ...
+]
+```
+
+## Features
+
+- Predefined Django apps and URLs
+- Common functionality for TUM projects
+- Easy integration with existing Django projects
+
+## Development
+
+To set up the development environment:
+
+1. Clone the repository
+2. Create a virtual environment
+3. Install development dependencies:
+   ```bash
+   pip install -e ".[dev]"
+   ```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 

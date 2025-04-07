@@ -1,0 +1,12 @@
+tum_common_x/__init__.py,sha256=yZMtvWN6sSV2hNM403xCgZOqg1YFWHxxOz6YApOKCUU,171
+tum_common_x/apps.py,sha256=K6mjC-raRXokvHg4vRDnyW-b0SLYcVnBZK-Nh_LtL-o,394
+tum_common_x/asgi.py,sha256=rXfT23fDDF1rktnWuIc01eg12_fRPf8fv8n1E0DnvMQ,401
+tum_common_x/settings.py,sha256=5lRkIUTbk6qEtMujk3gfYDtrqSV7Xc5a3yv1cBGLoJE,3177
+tum_common_x/signals.py,sha256=9LR1kpKItoHptNM8ax0yCljczOpzmsJSNgp-NheI4Qo,42
+tum_common_x/urls.py,sha256=GnAMz3V__d3MZ0mJcj29Sqxsx4k_c1HycSZexLSESb4,804
+tum_common_x/wsgi.py,sha256=oxSuBLdZ1iuiPvI-yqzpiPfHLe7oFyXYylTE6rNg7YU,401
+tumcommon_x-0.1.1.dist-info/licenses/LICENSE,sha256=wsPy7bNwq41uywmcECrv78YLB6qZpN2XJlxAjUHU5P8,1074
+tumcommon_x-0.1.1.dist-info/METADATA,sha256=e-rLypEPLY2zy5yg3PHcJG72RwjIdVMgG7a6P1G4a-E,1892
+tumcommon_x-0.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+tumcommon_x-0.1.1.dist-info/top_level.txt,sha256=R82ffYUaWwuQ6t-pkIpGMRb-xb9jQXmuUSwM-6LWQJo,13
+tumcommon_x-0.1.1.dist-info/RECORD,,
