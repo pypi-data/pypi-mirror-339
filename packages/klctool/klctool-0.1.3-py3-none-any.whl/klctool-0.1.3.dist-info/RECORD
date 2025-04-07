@@ -1,0 +1,17 @@
+klctool/__init__.py,sha256=qXyyGMY08EtNXB-qfQV792iGS_7xHhCN8DEao1S2Vvk,61
+klctool/adjustimage.py,sha256=R6TheYERPLiiFah2E4HWWoVE-V2MPgmaBvf91LBIzdY,11702
+klctool/common.py,sha256=Z-kkpf-QRiSaWJmkoLO_GNgE3pUAGRHGEIRmGrmY7jE,3150
+klctool/convert2odt.py,sha256=epDCgH2g7s1Ksqr-pCT2s8FhrN0jzTt8q4ReVXkEnOs,5752
+klctool/hiragana.py,sha256=bZouRB_aouDfpjF_nRNS_uGyw3oH0H3yp-p2yR7D8bs,8898
+klctool/main.py,sha256=7hKRKCqc-dwd0KNrFDFNpKmNiy35W3N2Z5GSwC5I19U,5079
+config/klctool/config.toml,sha256=zWcgJqhMDR_HH-hpduqnMYqfFU8gZM6lKUnr-DkfmPk,764
+config/klctool/gemini-2.0-flash-exp.api_key.toml,sha256=okvaQXWVngWYuE0KyIdnMX4iohScUng2d3TVlim-XVg,56
+config/klctool/gemini-2.0-flash-exp.prompt.toml,sha256=zZ2hj7zv3jXaRVKX9xPA74E5eXsL_0l2SEoQyhMcZrI,500
+config/klctool/klctool-edit.lua,sha256=HqCGIY3ql6S2IgxYF67XJHHAcP23P710KHNm_VvOxaM,208
+config/klctool/klctool.odt,sha256=OeAfMFduvltqmRTR0Isvt23WtBxUziVDWq4Kn5VGtWg,12840
+config/klctool/paper-size.toml,sha256=ZniQPbk8avbNTDj4IEyxD15d128QxI_C6MhU-vxDWgE,2001
+klctool-0.1.3.dist-info/METADATA,sha256=seKzrbJYLJsN1hItTbHcc2ZluGiCRH5TKdnKaB_iEmY,2352
+klctool-0.1.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+klctool-0.1.3.dist-info/entry_points.txt,sha256=tSOPyActfavFHJDXwrlosytiH5vx8ivFVNVTC5HBCfk,46
+klctool-0.1.3.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+klctool-0.1.3.dist-info/RECORD,,
