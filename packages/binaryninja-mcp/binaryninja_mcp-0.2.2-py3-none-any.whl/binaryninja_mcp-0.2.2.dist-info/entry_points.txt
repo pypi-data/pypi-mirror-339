@@ -1,0 +1,2 @@
+[console_scripts]
+binaryninja-mcp = binaryninja_mcp.cli:cli
