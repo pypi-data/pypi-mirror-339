@@ -1,0 +1,2 @@
+[console_scripts]
+musiccli = daa_music.cli:main
