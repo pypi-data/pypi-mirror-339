@@ -1,0 +1,3 @@
+[console_scripts]
+illufly-upload=illufly_upload.__main__:main
+
