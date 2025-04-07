@@ -1,0 +1,36 @@
+Metadata-Version: 2.2
+Name: daudio
+Version: 1.0.6
+Summary: Speaker Embedding/Diarization, ASVSpoof, VAD, ASR, and more.
+Home-page: 
+Author: Sheng Zhao
+Author-email: zhaosheng@nuaa.edu.cn
+License: BSD
+Keywords: speaker diarization,asvspoof,vad,asr,speaker         embedding,speaker verification,speaker identification
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: BSD License
+Requires-Dist: torch==2.3.1
+Requires-Dist: torchaudio==2.3.1
+Requires-Dist: torchelastic==0.2.2
+Requires-Dist: torchvision==0.18.1
+Requires-Dist: triton==2.3.1
+Requires-Dist: scikit-learn==1.6.1
+Requires-Dist: scipy==1.13.1
+Requires-Dist: sentencepiece==0.2.0
+Requires-Dist: soundfile==0.13.1
+Requires-Dist: protobuf==6.30.2
+Requires-Dist: omegaconf==2.3.0
+Requires-Dist: onnxruntime-gpu==1.18.1
+Requires-Dist: librosa==0.8.1
+Requires-Dist: llvmlite==0.43.0dev0
+Requires-Dist: kaldiio==2.18.0
+Requires-Dist: numba==0.60.0
+Requires-Dist: numpy==1.22.4
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
