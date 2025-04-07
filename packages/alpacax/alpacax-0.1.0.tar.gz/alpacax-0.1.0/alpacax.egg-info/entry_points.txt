@@ -1,0 +1,2 @@
+[console_scripts]
+alpacax = alpacax.cli:run_chat

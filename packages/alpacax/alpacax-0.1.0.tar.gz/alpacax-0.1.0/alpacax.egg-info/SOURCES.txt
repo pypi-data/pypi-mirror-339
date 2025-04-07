@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+alpacax/__init__.py
+alpacax/cli.py
+alpacax.egg-info/PKG-INFO
+alpacax.egg-info/SOURCES.txt
+alpacax.egg-info/dependency_links.txt
+alpacax.egg-info/entry_points.txt
+alpacax.egg-info/requires.txt
+alpacax.egg-info/top_level.txt
