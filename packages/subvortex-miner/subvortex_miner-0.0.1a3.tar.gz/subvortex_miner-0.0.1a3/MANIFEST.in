@@ -1,0 +1,3 @@
+recursive-include subvortex_miner.core *
+recursive-include subvortex_miner.subnet *
+recursive-include subvortex_miner.neuron *
