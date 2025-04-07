@@ -1,0 +1,4 @@
+[console_scripts]
+2pngs=2pngs:main
+pngs2=pngs2:main
+
