@@ -1,0 +1,105 @@
+Metadata-Version: 2.4
+Name: claudebook
+Version: 0.1.0.dev0
+Summary: Claudebook
+Author-email: Joshua Cannon <joshdcannon@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: cyclopts>=3.12.0
+Requires-Dist: pyyaml>=6.0.2
+Description-Content-Type: text/markdown
+
+# Claudebook
+
+A runbook run by Claude (specifically by [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview))!
+
+## Example
+
+```markdown
+## #! /usr/bin/env uvx claudebook
+
+mcp:
+slack:
+command: npx
+args: - -y - "@modelcontextprotocol/server-slack"
+
+---
+
+# Start my Slack Day
+
+For the following channels, summarize all the activity yesterday, which @joshcannon didn't respond:
+
+- #project-1
+- #project-2
+- #thing-five-support
+
+Rank them from what seems like highest priority to lowest priority.
+```
+
+## How does it work?
+
+Under the hood, `claudebook`:
+
+- Takes the runbook given by the positional argument
+- Tries to parse YAML frontmatter for Claudebook settings
+- Calls `claude`
+
+## Ways of running a Claudebook
+
+There are a few ways of running Claudebooks:
+
+### Running the code
+
+There are two ways of running the code:
+
+#### Using `uvx` and the Python Package
+
+`uvx -q claudebook <claudebook>` leverages the `claudebook` Python package to run a Claudebook.
+
+This allows for very fast execution and also allows for controlling the version of `claudebook` and its dependencies.
+
+More information about `uvx` can be found here: https://docs.astral.sh/uv/guides/tools/.
+
+#### Using `uv run` and the GitHub URL
+
+`uv run -q https://raw.githubusercontent.com/thejcannon/claudebook/refs/heads/main/claudebook.py` allows you to run the latest version of `claudebook`, by having `uv` fetch the latest code from GitHub.
+
+It requires a network request (less than a few KB) and `uv` will construct a temporary virtual environment to run the Claudebook, but it also means you get the latest and greatest features.
+
+## Running the markdown
+
+There are also two ways of running the markdown:
+
+### Making the runbook executable
+
+1. Add a shebang at the top: `#! /usr/bin/env <invocation>`
+2. Make the file executable: `chmod +x <runbook>`
+3. Run the file: `<runbook>` or `./<runbook>`
+
+### Use the CLI
+
+Alternatively, you can just pass the path to the runbook to the CLI:
+
+```sh
+<invocation> <runbook>
+# Such as:
+uvx run <runbook>
+uv run <GH URL> <runbook>
+```
+
+## Configuration
+
+Claudebooks support a few configuration options, which are specified as YAML frontmatter in the runbook.
+
+### Claude Code pass-through
+
+Claudebooks support a few options which get passed through to `claude`:
+
+- `-p`/`--print`: Print the response and exit
+- `--json`: Output JSON
+
+### MCP
+
+Claudebooks support MCP (Model Context Protocol) by allowing you to specify a mapping of MCP servers to use.
+
+These get forwarded to Claude Code to be loaded before the runbook is executed.
