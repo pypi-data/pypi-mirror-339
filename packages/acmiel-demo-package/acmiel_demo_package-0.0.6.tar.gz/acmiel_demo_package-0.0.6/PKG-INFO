@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: acmiel-demo-package
+Version: 0.0.6
+Description-Content-Type: text/x-rst
+Dynamic: description
+Dynamic: description-content-type
+
+Demo package to show why setup.py is scary.
