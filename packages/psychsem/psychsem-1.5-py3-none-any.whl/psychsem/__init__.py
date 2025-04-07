@@ -1,0 +1,1 @@
+from .main import quantile,histbar,irisbin,irisdtreecsv,irisdtreeds,giniindex,ginitree,entropy,naive,gaus,r_iris_dataa,rdtree,rnb,svm,rsvm,kmeans,rkmean
