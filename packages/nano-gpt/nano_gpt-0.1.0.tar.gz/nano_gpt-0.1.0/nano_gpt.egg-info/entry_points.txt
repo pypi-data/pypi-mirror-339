@@ -1,0 +1,2 @@
+[console_scripts]
+nano-gpt = nano_gpt.tool.__main__:main
