@@ -1,0 +1,11 @@
+typing_extensions
+matplotlib
+sympy
+cobra
+numpy
+pydantic
+pandas
+PyYAML
+
+[dfba]
+dfba==0.1.8
