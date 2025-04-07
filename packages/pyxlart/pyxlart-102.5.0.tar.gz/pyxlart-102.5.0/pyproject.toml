@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyxlart"
+version = "102.5.0"
+authors = [
+  { name="TAKAHASHI Satoshi (Handle Name:むずでょ)", email="muzudho1@gmail.com" },
+]
+description = "Renderer for Excel."
+readme = "README.md"
+dependencies = [
+  "openpyxl>=3.1.5",
+]
+maintainers = [
+  { name="TAKAHASHI Satoshi (Handle Name:むずでょ)", email="muzudho1@gmail.com" },
+]
+license = {file = "LICENSE"}
+keywords = ["excel"]
+classifiers = [
+  "Programming Language :: Python"
+]
+
+[project.urls]
+Repository = "https://github.com/muzudho/pyxlart.git"
+
+# ビルドツールの設定
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/docs_dev",      # Documents exclude package. It for developer.
+  "/examples",      # README.md で紹介されているスクリプト
+  "/private",       # 個人設定
+  "/tests",         # 設定しなくても最初から機能するという話しもある
+  "*.log",          # Logging
+  "*.bak",          # WinMerge
+  "*- コピー*",     # Copy file
+]
