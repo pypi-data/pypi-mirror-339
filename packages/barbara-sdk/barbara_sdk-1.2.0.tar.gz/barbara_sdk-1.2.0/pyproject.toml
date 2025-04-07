@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools<66", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "barbara_sdk"
+version = "1.2.0"
+authors = [
+  { name="Barbara", email="support@barbara.tech" },
+]
+description = "Python SDK for Barbara Edge Computing Platform"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.8"
+dependencies = [
+  "pandas",
+  "requests",
+  "python-dotenv"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
