@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/whatsapp_manager/__init__.py
+src/whatsapp_manager.egg-info/PKG-INFO
+src/whatsapp_manager.egg-info/SOURCES.txt
+src/whatsapp_manager.egg-info/dependency_links.txt
+src/whatsapp_manager.egg-info/requires.txt
+src/whatsapp_manager.egg-info/top_level.txt

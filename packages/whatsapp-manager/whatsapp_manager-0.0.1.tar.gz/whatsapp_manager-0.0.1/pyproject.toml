@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "whatsapp-manager"
+version = "0.0.1"
+authors = [
+  { name="Francisco", email="francisco@maxilarlabs.com" },
+]
+description = "A Python wrapper for Facebook and WhatsApp API useful endpoints"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "certifi==2024.12.14",
+    "charset-normalizer==3.4.1",
+    "idna==3.10",
+    "python-dotenv==1.0.1",
+    "requests==2.32.3",
+    "urllib3==2.3.0"
+]
+classifiers=[
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+
+[project.urls]
+Homepage = "https://github.com/doasfrancisco/whatsapp-api"
+Issues = "https://github.com/doasfrancisco/whatsapp-api/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
