@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=65.5.1", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-flight-search"
+version = "0.2.1"
+description = "Flight search service implementing  Model Context Protocol (MCP) tools"
+readme = "README.md"
+authors = [
+    {name = "Arjun Prabhulal", email = "code.aicloudlab@gmail.com"}
+]
+license = "MIT"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "fastmcp",
+    "google-search-results",
+    "rich",
+    "pydantic",
+    "python-dotenv",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/arjunprabhulal/mcp-flight-search"
+"Bug Tracker" = "https://github.com/arjunprabhulal/mcp-flight-search/issues"
+
+[project.scripts]
+mcp-flight-search = "mcp_flight_search.server:main"
+
+[tool.setuptools]
+packages = ["mcp_flight_search", 
+            "mcp_flight_search.models", 
+            "mcp_flight_search.services", 
+            "mcp_flight_search.utils"] 
