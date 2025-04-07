@@ -1,0 +1,4 @@
+[console_scripts]
+dora-reachy1=dora_reachy1.main:main
+dora-reachy1-vision=dora_reachy1_vision.main:main
+
