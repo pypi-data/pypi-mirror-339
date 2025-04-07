@@ -1,0 +1,12 @@
+ffrec/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ffrec/_version.py,sha256=l5eo51MdCumDFCp44TFT1JH8yCDo1krag-GJubLxnVo,511
+ffrec/main.py,sha256=9MdoCtSDDqqDrP22-FisJYILJsy_Dpk3yjbhDf9nfwQ,1658
+ffrec/lib/parse_args.py,sha256=ccXX6AzLP0v5coorCpZUwJqnARt6qFd1wx98oCyYDFU,3221
+ffrec/lib/record_screen.py,sha256=f6DV1d9HrwRpytb6NvOyFVvinyrhEdRIORIvPio5JSs,1539
+ffrec-0.4.0.dist-info/licenses/LICENSE-CC.txt,sha256=8l9xX1LiqkzUrBB6u3RKJFG1ins5l2Psbi6jxvCMpI4,18109
+ffrec-0.4.0.dist-info/licenses/LICENSE-apache.txt,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+ffrec-0.4.0.dist-info/METADATA,sha256=ZDUvXjExihbqNME8VGZonMby7J3qxZFkrtkNaWMXztI,3635
+ffrec-0.4.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+ffrec-0.4.0.dist-info/entry_points.txt,sha256=wX4FgKkih9kZMYM6CbXhpsUoKJbMCAQ5YJVF_m8u2nY,50
+ffrec-0.4.0.dist-info/top_level.txt,sha256=6v1Qs7Kx6SHRU-qgu9OdzqEbSqZ6FpA6BUylVEkbI0Y,6
+ffrec-0.4.0.dist-info/RECORD,,
