@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: lamar-unused-assets-report
+Version: 1.0.0
+Summary: Generate a CSV report for unused CMS assets from Lamar's API.
+Home-page: https://github.com/yourusername/lamar-unused-assets-report
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# lamar-unused-assets-report
+
+A CLI tool to generate a report of unused files or pages in Lamar University's CMS.
+
+## Installation
+
+pip install lamar-unused-assets-report
+
+lamar-unused-assets-report <FOLDER_ID> --api-key <YOUR_API_KEY>
