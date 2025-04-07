@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: mcp-server-pe
+Version: 0.0.1
+Summary: MCP Server for PE
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1.8
+Requires-Dist: httpx-sse>=0.4.0
+Requires-Dist: mcp>=1.6.0

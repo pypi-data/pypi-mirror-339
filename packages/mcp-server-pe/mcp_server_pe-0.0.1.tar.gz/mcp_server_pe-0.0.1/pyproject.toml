@@ -1,0 +1,15 @@
+[project]
+name = "mcp-server-pe"
+version = "0.0.1"
+description = "MCP Server for PE"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.1.8",
+    "httpx-sse>=0.4.0",
+    "mcp>=1.6.0",
+]
+
+
+[project.scripts]
+mcp-server-pe = "mcp_server_pe:main"
