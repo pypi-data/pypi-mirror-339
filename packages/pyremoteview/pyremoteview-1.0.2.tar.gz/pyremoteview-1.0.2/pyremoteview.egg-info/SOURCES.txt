@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+pyremoteview/__init__.py
+pyremoteview/remote_gallery.py
+pyremoteview.egg-info/PKG-INFO
+pyremoteview.egg-info/SOURCES.txt
+pyremoteview.egg-info/dependency_links.txt
+pyremoteview.egg-info/entry_points.txt
+pyremoteview.egg-info/not-zip-safe
+pyremoteview.egg-info/requires.txt
+pyremoteview.egg-info/top_level.txt
+pyremoteview/templates/gallery.html
