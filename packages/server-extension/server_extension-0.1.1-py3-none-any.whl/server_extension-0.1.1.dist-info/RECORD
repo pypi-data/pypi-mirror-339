@@ -1,0 +1,17 @@
+server_extension/__init__.py,sha256=vag6Gk1dd7Or7tLjbp1b02YR93y05qu6tYQTv2WapyY,1232
+server_extension/_version.py,sha256=Ck6paNhex73Kx1qHGdOLqJ47XDpP7RpqmrOvdUNUfo0,175
+server_extension/handlers.py,sha256=SjO7mAUSGNfEVMrkqdpmh4akYGp_d3hqewdUrHWi9Ds,17871
+server_extension/tests/__init__.py,sha256=HF9tUDt40I6WXyBRvPYEl_hSNapfAMU7jJ8Cz_4_-F4,47
+server_extension/tests/test_handlers.py,sha256=22-8aHVqJqcAfo_Y9v4_qpHsUxL6qYxyJERUjrEDTAc,319
+server_extension-0.1.1.data/data/etc/jupyter/jupyter_server_config.d/server_extension.json,sha256=bNdT6G_2IT4wscivPUlieuC7OY8xyXMTFtorxbQPHc0,98
+server_extension-0.1.1.data/data/share/jupyter/labextensions/server-extension/package.json,sha256=N4pWjR0nzBOqpCfUzrD-2E82ePNRGu0xJYuxCCqopHk,5127
+server_extension-0.1.1.data/data/share/jupyter/labextensions/server-extension/static/509.6880f1d198dec6fb848e.js,sha256=aIDx0ZjexvuEjspsry6bWL5Sh-BUgSf-LwHlcQqEMEo,20139
+server_extension-0.1.1.data/data/share/jupyter/labextensions/server-extension/static/631.e720c98242b895ba90d8.js,sha256=5yDJgkK4lbqQ2CsfKWK5LIvv7v_uJ30dSYAeBzql-xo,12229
+server_extension-0.1.1.data/data/share/jupyter/labextensions/server-extension/static/remoteEntry.2c30079d3cf776608cb5.js,sha256=LDAHnTz3dmCMtURBeU5y9AdJN334DytonxiFNGby8KI,6940
+server_extension-0.1.1.data/data/share/jupyter/labextensions/server-extension/static/style.js,sha256=ZgnENNFJ3qJ9w0ob6oZXryLySiFOrjoWbsrTyETRTvo,159
+server_extension-0.1.1.data/data/share/jupyter/labextensions/server-extension/static/third-party-licenses.json,sha256=W6N2sSD7tQihMqQk64F9xMd1Flfr2KO97esAiHUOYdM,2453
+server_extension-0.1.1.data/data/share/jupyter/labextensions/server-extension/install.json,sha256=jdVt7n6gLjtEm3-cjOZZ8-ICFKdPnzNyitQajqNA_yQ,181
+server_extension-0.1.1.dist-info/METADATA,sha256=s4q40MasDa_BT-iMwSVddu7TjLpErp3JHA6iHCBkHMw,6985
+server_extension-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+server_extension-0.1.1.dist-info/licenses/LICENSE,sha256=s2TGdCQQtnwsORy2gEe0PjJZtGL2eFiovO9VJ9cle0A,1546
+server_extension-0.1.1.dist-info/RECORD,,
