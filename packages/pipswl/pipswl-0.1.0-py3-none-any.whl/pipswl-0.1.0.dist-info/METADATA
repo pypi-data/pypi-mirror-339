@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: pipswl
+Version: 0.1.0
+Summary: Steam Workshop Download List
+Author: lesUchiha
+Project-URL: GitHub, https://github.com/lesUchiha/pip-swl
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# pip-swl
+
+Cliente Python simple para descargar mods de Steam Workshop usando una API personalizada.
+
+## Instalación
+
+```bash
+pip install pip-swl
