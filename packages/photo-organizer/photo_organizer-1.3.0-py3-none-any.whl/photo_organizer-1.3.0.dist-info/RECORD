@@ -1,0 +1,15 @@
+photo_organizer/__init__.py,sha256=1w1fV6jdFBOjWSZKdvTJJsxe-QEHOElZXYfnW_KIujs,20
+photo_organizer/main.py,sha256=VVFH0agdKd5K_Zx68-hVqz8utNGYGAjRPvSYvhlWTL8,7218
+photo_organizer-1.3.0.dist-info/licenses/LICENSE,sha256=c-7I9azNVP4sflxxewvvLhJuceZToemfx46O_qWId6s,1061
+tests/__init__.py,sha256=1w1fV6jdFBOjWSZKdvTJJsxe-QEHOElZXYfnW_KIujs,20
+tests/test_get_creation_date.py,sha256=w1gqEPqUGdtPd3vwYjC9WN9ddY5g1t24AYJdnfvq8-c,1808
+tests/test_list_files.py,sha256=iB94WQ-hDK8-v638f08EzPEHNBtM4Nv5E2wknrlMeBo,3337
+tests/test_main.py,sha256=kTeFw3GqwVlJs84NGXvW0IY_SUX48BTT6B7TlGLNr0U,8050
+tests/test_main_integration.py,sha256=T_aTGif8gxT3cjjz-sio0smukHZ6YzV6sX6Pp1cJiTQ,3493
+tests/test_main_unit.py,sha256=JKt7SANNSPIu3z4-W53Qrr0qtB4wlj5OUA-Bj9RSyXU,2414
+tests/test_organize_files.py,sha256=flaylJ2DYfEsCMlEvBPHAJrSLaGPcMyQKu3y0ghcri4,5380
+photo_organizer-1.3.0.dist-info/METADATA,sha256=TYmnUuYb41VmdqIU-E4oSnUmMQgvdE12E3nZhpvlMTI,4495
+photo_organizer-1.3.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+photo_organizer-1.3.0.dist-info/entry_points.txt,sha256=mVEsLNmnQm5UVsn6I_IBbpgqAiXIi1Qx6XnJfqFy2gs,62
+photo_organizer-1.3.0.dist-info/top_level.txt,sha256=fEkHF4zRXWYwo3Y9wk0pgFsVibUFeI0RIzrgBW3OPqk,22
+photo_organizer-1.3.0.dist-info/RECORD,,
