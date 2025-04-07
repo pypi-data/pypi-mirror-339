@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fdc_sdk"
+version = "0.0.2"
+requires-python = ">=3.7"
+readme = "README_pypi.md"
+description = "sdk for factweavers datacloud"
+authors = [
+  {name="Ansar cs", email="ansar.cs@dbizsolution.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools]
+packages = { find = { where = ["."] } }

@@ -1,0 +1,10 @@
+README.md
+README_pypi.md
+pyproject.toml
+fdc_sdk/__init__.py
+fdc_sdk/fw_client.py
+fdc_sdk/test.py
+fdc_sdk.egg-info/PKG-INFO
+fdc_sdk.egg-info/SOURCES.txt
+fdc_sdk.egg-info/dependency_links.txt
+fdc_sdk.egg-info/top_level.txt
