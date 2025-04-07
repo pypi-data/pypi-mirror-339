@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/trpl_m/__init__.py
+src/trpl_m/main.py
+src/trpl_m.egg-info/PKG-INFO
+src/trpl_m.egg-info/SOURCES.txt
+src/trpl_m.egg-info/dependency_links.txt
+src/trpl_m.egg-info/entry_points.txt
+src/trpl_m.egg-info/top_level.txt
+tests/test.py

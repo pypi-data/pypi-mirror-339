@@ -1,0 +1,23 @@
+[project]
+name = "trpl-m"
+version = "1.0.5"
+authors = [{name = "Grant Achuzia", email = "achuziaduby@gmail.com"}]
+description = "Mental math game in your terminal"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/GAchuzia/trpl-m"
+Issues = "https://github.com/GAchuzia/trpl-m/issues"
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+trpl_m = "trpl_m.main:main"
