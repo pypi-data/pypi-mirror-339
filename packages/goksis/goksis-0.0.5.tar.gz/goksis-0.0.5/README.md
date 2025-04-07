@@ -1,0 +1,2 @@
+# goksis
+Gözlemevi Kontrol Sistemi
