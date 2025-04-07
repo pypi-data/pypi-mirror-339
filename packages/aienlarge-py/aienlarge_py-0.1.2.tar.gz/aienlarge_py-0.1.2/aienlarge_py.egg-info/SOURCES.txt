@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+aienlarge/__init__.py
+aienlarge/aienlarger.py
+aienlarge_py.egg-info/PKG-INFO
+aienlarge_py.egg-info/SOURCES.txt
+aienlarge_py.egg-info/dependency_links.txt
+aienlarge_py.egg-info/requires.txt
+aienlarge_py.egg-info/top_level.txt
