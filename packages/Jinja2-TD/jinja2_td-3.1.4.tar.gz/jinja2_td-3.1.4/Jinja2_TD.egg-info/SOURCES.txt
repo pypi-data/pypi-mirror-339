@@ -1,0 +1,13 @@
+LICENSE_JINJA2
+MANIFEST.in
+README.md
+setup.py
+Jinja2_TD.egg-info/PKG-INFO
+Jinja2_TD.egg-info/SOURCES.txt
+Jinja2_TD.egg-info/dependency_links.txt
+Jinja2_TD.egg-info/requires.txt
+Jinja2_TD.egg-info/top_level.txt
+jinja2td/__init__.py
+jinja2td/dependencies.py
+jinja2td/introspection.py
+jinja2td/overrides.py
