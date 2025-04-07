@@ -1,0 +1,11 @@
+README.md
+setup.py
+auto_tools/__init__.py
+auto_tools/core.py
+auto_tools_isee.egg-info/PKG-INFO
+auto_tools_isee.egg-info/SOURCES.txt
+auto_tools_isee.egg-info/dependency_links.txt
+auto_tools_isee.egg-info/entry_points.txt
+auto_tools_isee.egg-info/requires.txt
+auto_tools_isee.egg-info/top_level.txt
+tests/test_core.py
