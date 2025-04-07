@@ -1,0 +1,133 @@
+{% extends "orders/Order/base.weasy.html" %}
+{%- block pagesize %}portrait{%- endblock %}
+{%- set site_operator = settings.SITE.site_config.site_company -%}
+
+{%- block main %}
+{{ super() }}
+
+<h1>Allgemeine Bedingungen bei der Inanspruchnahme einer Dienstleistung</h1>
+<div class="footer_div">{{obj}}</div>
+
+<p>Zwischen einerseits der {{site_operator.name}}, {{site_operator.address_location(', ')}},
+{% for signer in site_operator.get_signers()%}vertreten durch <b>{{signer}}</b>{% endfor %},
+im Nachfolgenden als <b>Dienstleister</b> bezeichnet,
+
+<p>und andererseits <b>{{obj.project.get_full_name()}}</b>
+(Kunde Nr: {{obj.project.pk}}, Kat: {{obj.project.income}},
+wohnhaft {{obj.project.address_location(', ')}},
+Telefon: {{obj.project.phone}},
+Lastschrift:
+Anfragedatum), im Nachfolgenden als <b>Kunde</b> bezeichnet,
+
+<p>wird folgendes ausdrücklich vereinbart:
+
+<h3>1. Art und Umfang der Dienstleistungen</h3>
+
+Der Dienstleister verpflichtet sich, die folgenden zu erbringenden Leistungen fachgerecht
+auszuführen:
+
+<p>{{obj.description}}</p>
+
+[ ] Ein Kostenvoranschlag wurde unterbreitet und detailliert die anfallenden Kosten für
+die zu erbringenden Leistungen (anzukreuzen, falls zutreffend).
+
+<h3>2. Weisungsfreiheit</h3>
+
+Der Dienstleister unterliegt, soweit dies nicht durch die Natur des Auftrages
+vorgegeben ist, bei der Erfüllung der Dienstleistung bzw. bei der Durchführung
+der von ihm übernommenen Tätigkeit hinsichtlich  Zeiteinteilung und Gestaltung
+des Tätigkeitsablaufes keinerlei Weisungen des Kunden.
+
+<h3>3. Auftragserfüllung</h3>
+
+Die Leistungen des Auftragnehmers gelten als erfüllt und abgenommen, wenn der
+Kunde nicht spätestens binnen 2 Tagen ab Fertigstellung des Auftrages Einwände
+erhebt. Hierbei müssen Ort, Art und Umfang des Mangels genau beschrieben werden.
+Werden vom Kunden bei der vertraglich festgelegten Dienstleistung berechtigt
+Mängel beanstandet, so ist der Dienstleister zur Nachbesserung verpflichtet und
+berechtigt.
+
+<h3>4.  Haftung und Ausschluss</h3>
+
+Für Schäden, die der Dienstleister nachweislich aufgrund einer vorsätzlichen
+Handlung oder grober Fahrlässigkeit zuvertreten hat, haftet er im Rahmen, der
+von ihm abgeschlossenen Betriebshaftpflichtversicherung.
+
+<p>Dies gilt ebenfalls für Schäden, die beim Abbau, Verlegen oder Versetzen von
+Gegenständen oder Materialien entstehen.
+
+<p>Im Falle des Einsatzes von Material, das nicht durch den Dienstleister zur
+Verfügung gestellt wurde, sondern zur Verarbeitung vom Kunden bereitgestellt
+wurde, wird keine Haftung für Qualitätsmängel gewährt, dies weder vor noch nach
+der Verarbeitung des Materials. Das Material unterliegt ausschließlich der
+Verantwortung des Kunden.
+
+<h3>5. Sonstige Bestimmungen</h3>
+
+Der vorliegende Vertrag stellt das volle inhaltliche Übereinkommen der
+Vertragsparteien dar. Stillschweigende, mündliche oder schriftliche Nebenabreden
+wurden nicht getroffen. Änderungen oder Ergänzungendieses
+Dienstleistungsvertrages sind nur wirksam, wenn sie schriftlich vereinbart
+werden. Der Vertrag wird in zwei Ausführungen angefertigt. Jeder der
+Vertragspartner hat ein Vertragsexemplar erhalten.
+
+
+<h3>6. Datenverarbeitung und Datenschutz (EU- Datenschutz-Grundverordnung)</h3>
+
+Wir verwenden personenbezogene Daten zum Zweck der Dienstleistungen, die die
+{{site_operator}} Ihnen als Kunden gewährt und zur Erfüllung der gesetzlichen
+Vorschriften, denen wir unterliegen (insbesondere im Rahmen der Anerkennung und
+Finanzierung durch die Regierung der Deutschsprachigen Gemeinschaft). Bei diesen
+Daten handelt es sich  um Name, Adresse,  Telefonnummer,  E-Mail-Adresse,
+Geburtsdatum,  Anzahl der Mitglieder im Haushalt, Kontonummer, wenn zutreffend
+Angaben zu Ihrer Krankenkasse bzw. zum ÖSHZ, Art der in Anspruch genommenen
+Dienstleistungen. Die Erhebung dieser Daten ist für die Gewährleistung unserer
+Dienstleistungen erforderlich. Die Löschung der Daten erfolgt nach Beendigung
+der Dienstleistungen bzw. Ablauf der gesetzlich festgelegten
+Aufbewahrungsfristen. In letzterem Fall werden die Daten von uns lediglich für
+diese gesetzlichen Zwecke weitergespeichert, aber nicht anderweitig verarbeitet
+und nach Ablauf der gesetzlichen Aufbewahrungsfrist gelöscht. Ihre Daten werden
+ohne Ihr ausdrückliches Einverständnis nicht an Dritte weitergeleitet.
+
+Sie haben jederzeit und kostenlos das Recht auf eine übersichtliche Auskunft
+über die Verarbeitung Ihrer personenbezogenen Daten.
+
+Sie haben das Recht, von uns die Berichtigung und ggf. auch Vervollständigung
+Sie betreffender personenbezogener Daten zu verlangen.
+
+Sie haben im Sinne des Rechtes auf „Vergessenwerden“ das Recht, von uns zu
+verlangen, dass Sie betreffende Datenunverzüglich gelöscht werden. (Nutzen Sie
+dieses Recht während der Ausführung einer Dienstleistung durch die
+{{site_operator}} sehen wir uns gezwungen unsere Dienstleistungen unverzüglich zu
+beenden, da wir nicht mehr in der Lage sind unseren Anerkennungs- und
+Finanzierungsbedingungen durch die Deutschsprachige Gemeinschaft gerecht zu
+werden.) Dazu richten Sie bitte Ihre Anfrage an die Geschäftsführung der
+{{site_operator}}.
+
+Wir sind um die Sicherheit Ihrer Daten im Rahmen der geltenden
+Datenschutzgesetze und technischen Möglichkeitenmaximal bemüht.
+
+Durch die Unterzeichnung des Dienstleistungsvertrages stimmen Sie gleichermaßen
+den oben angeführten Datenschutzbestimmungen zu.
+
+{%- endblock %}
+
+
+<p>Ausgestellt zu {{site_operator.city}}, den {{fdm(dd.today())}}
+
+
+<table with="100%" border="0">
+  <tr>
+    <td>
+<p>Unterschrift des Kunden
+<p>__________________________
+<br>{{obj.project.get_full_name(nominative=True)}}
+</td>
+<td>
+<p>Unterschrift des Dienstleisters
+
+<p>__________________________
+<p>{% for signer in site_operator.get_signers() %}{{signer}}{% endfor %}
+</td>
+</tr>
+</table>

@@ -1,0 +1,18 @@
+{% extends "orders/Order/base.weasy.html" %}
+{%- block pagesize %}portrait{%- endblock %}
+
+{%- block main %}
+{{ super() }}
+
+<h1>Auftragsblatt</h1>
+<div class="footer_div">{{obj}}</div>
+
+<p>Kunde:  <b>{{obj.project.get_full_name()}}</b>
+(Kunde Nr: {{obj.project.pk}}, Kat: {{obj.project.income}},
+wohnhaft {{obj.project.address_location(', ')}},
+Telefon: {{obj.project.phone}},
+
+<p>{{obj.description}}</p>
+
+<p>Ausgestellt am {{fdm(dd.today())}}
+{%- endblock %}

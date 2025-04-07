@@ -1,0 +1,81 @@
+{% extends "weasyprint/base.weasy.html" %}
+{% set apv =  ar.action_param_values %}
+{% set entries = obj.cal_entries_by_guest().order_by('start_date', 'start_time') %}
+{% set entries = rt.models.system.PeriodEvents.started.add_filter(entries, apv)%}
+{% set orders = rt.models.orders.Order.objects.filter(id__in=entries.values_list('owner_id', flat=True)).order_by('id') %}
+
+{%- block header %}
+<h1>{{_("Roster")}} {{fds(apv.start_date)}}...{{fds(apv.end_date)}}
+<br>{{obj}}
+</h1>
+{%- endblock %}
+
+
+{%- block main %}
+
+<div class="footer_div">{{obj}} ({{fds(apv.start_date)}}...{{fds(apv.end_date)}})</div>
+
+{% if apv.overview %}
+
+<table border="1" width="100%"><thead>
+<tr>
+<td>{{_("Order")}}</td>
+{% for day in weekdays(apv.start_date) %}
+<td>{{fdf(day)[:2]}} {{fds(day)}}</td>
+{% endfor %}
+</tr>
+</thead><tbody>
+{% for o in orders %}
+<tr class="avoid">
+<td>{{o}} {{o.project}}</td>
+{% for day in weekdays(apv.start_date) %}
+<td>
+{% for e in entries.filter(start_date=day, owner_id=o.id) %}
+    {{str(e.start_time)[:5]}}
+    {{e.summary}}
+    ({{_("with")}} {% for g in e.guest_set.exclude(partner=obj) %}{{str(g.partner)}} {% endfor %})
+{% endfor %}
+</td>
+{% endfor %}
+{% endfor %}
+</tbody></table>
+
+{% else %}
+
+<table border="1" width="100%">
+<thead>
+<tr>
+<td>{{_("Time")}}</td>
+<td>{{_("Duration")}}</td>
+<td>{{_("Address")}}</td>
+<td>{{_("Client")}}</td>
+<td>{{_("Duration")}}</td>
+<td>{{_("Signature")}}</td>
+{% if apv.show_remarks %}
+<td>{{_("Remark")}}</td>
+{% endif %}
+</tr>
+</thead><tbody>
+{% for g in entries|groupby('start_date') %}
+<tr class="avoid">
+    <td colspan="6"><b>{{fdf(g.grouper)}}</b></td>
+</tr>
+{% for e in g.list %}
+<tr class="avoid">
+<td>{{str(e.start_time)[:5]}}</td>
+<td>{{e.get_duration()}}</td>
+<td>{{e.owner.project.address_location(", ")}}</td>
+<td>{{e.owner.project.id}} {{e.owner.project}}</td>
+<td>{{str(e.get_duration)}}</td>
+<td>{{"\xa0"*20}}</td>
+{% if apv.show_remarks %}
+<td>{{e.subject}}</td>
+{% endif %}
+</tr>
+{% endfor %}
+<tr><td colspan="6"></td></tr>
+{% endfor %}
+</tbody></table>
+
+{% endif %}
+{%- endblock %}

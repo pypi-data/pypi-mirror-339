@@ -1,0 +1,38 @@
+{%- set page_size = 'portrait' -%}
+{%- extends "trading/VatProductInvoice/default.weasy.html" -%}
+
+
+{%- block main %}
+{{ super() }}
+
+<h1>{{_("Service report")}}</h1>
+<p>{{fds(obj.invoicing_min_date)}} - {{fds(obj.invoicing_max_date)}}</p>
+
+<div>
+{% block report %}
+
+{% for project, entries in dd.plugins.presto.walk_invoice_entries(obj) %}
+
+<h2>{{project}}</h2>
+<table border="1" width="100%">
+<tr>
+<td>{{_("Date")}}</td>
+<td>{{_("Team")}}</td>
+<td>{{_("Duration")}}</td>
+</tr>
+{% for entry in entries %}
+<tr>
+<td>{{fds(entry.start_date)}} {{str(entry.start_time)[:5]}}-{{str(entry.end_time)[:5]}}</td>
+<td>{{entry.room or ''}}</td>
+<td align="right">
+{{entry.get_duration()}}
+</td>
+{% endfor %}
+</table>
+{% endfor %}
+
+{% endblock %}
+
+</div>
+
+{%- endblock main %}
