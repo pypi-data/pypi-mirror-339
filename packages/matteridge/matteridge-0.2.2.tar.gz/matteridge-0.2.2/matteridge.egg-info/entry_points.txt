@@ -1,0 +1,2 @@
+[console_scripts]
+matteridge = matteridge:main
