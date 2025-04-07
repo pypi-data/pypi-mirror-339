@@ -1,0 +1,2 @@
+[console_scripts]
+miner = neuron.src.main:main
