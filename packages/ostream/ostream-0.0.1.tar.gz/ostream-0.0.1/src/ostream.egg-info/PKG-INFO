@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: ostream
+Version: 0.0.1
+Summary: Object storage streams for python
+Author-email: Alex Kwiatkowski <alex+pypi@fremantle.io>
+License: MIT License
+Project-URL: Homepage, https://github.com/rupurt/ostream
+Project-URL: Issues, https://github.com/rupurt/ostream/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: obstore>=0.5.0
+
+# ostream
+![pypi](https://img.shields.io/pypi/v/ostream.svg)
+![versions](https://img.shields.io/pypi/pyversions/ostream.svg)
+
+Object storage streams for python
+
+## Usage
+
+```console
+> pip install economy
+```
+
+## Getting Started
+
+- [Development](./docs/DEVELOPMENT.md)
+  - [setup](./docs/DEVELOPMENT.md#setup)
+  - [check](./docs/DEVELOPMENT.md#check)
+  - [dream2nix](./docs/DEVELOPMENT.md#dream2nix)
+  - [pypi](./docs/DEVELOPMENT.md#pypi)
+
+## License
+
+`ostream` is released under the [MIT license](./LICENSE)
