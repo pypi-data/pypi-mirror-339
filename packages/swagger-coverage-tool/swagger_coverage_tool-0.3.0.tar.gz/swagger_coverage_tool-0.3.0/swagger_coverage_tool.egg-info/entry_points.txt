@@ -1,0 +1,2 @@
+[console_scripts]
+swagger-coverage-tool = cli.main:cli
