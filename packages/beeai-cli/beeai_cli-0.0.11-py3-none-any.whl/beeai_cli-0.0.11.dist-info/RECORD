@@ -1,0 +1,16 @@
+beeai_cli/__init__.py,sha256=OD_ANRFpny3LZidEge7WqjdCM5ZOIOqACEl2dZB-Ork,2298
+beeai_cli/api.py,sha256=dmHs9jwlHKeX08mx5cqMqw34IMZCGL6mHIPjQYCkAnM,8055
+beeai_cli/async_typer.py,sha256=yVk4-0WWGK5tT81Yf0keZjQP6OYucLgqdpoF3Tt4xV0,4061
+beeai_cli/configuration.py,sha256=gWpLq9G4y6N48y4ETu-LMq6VZaY5oHf-eW3HMSqFoK4,965
+beeai_cli/console.py,sha256=10VAEBU0eFZ5YNM5ZfuT9npfR98UfFNOSDLiAp3kY7o,663
+beeai_cli/utils.py,sha256=sT_C_vl5NC9MCtfOZlPQZRhLedFJ3nabnaeMAHhVJh8,5278
+beeai_cli/commands/__init__.py,sha256=hr8yZXzjVEX3rNyL_i5LsItDWOzymCsIaJp7Yci2Zr8,574
+beeai_cli/commands/agent.py,sha256=4vaLyaOlSmSNXubKjYmlPFUQnPD7utP5ExuqIAiSL6I,26583
+beeai_cli/commands/compose.py,sha256=TpRRS9vfnC77Pbnzr-LjbAftPUdMqFgIHmJmZTh5tig,1150
+beeai_cli/commands/env.py,sha256=4skSnuNjX9_q3vPmw2EMGmuQY96Ln3YCwx56sZmzYfw,14267
+beeai_cli/commands/telemetry.py,sha256=KaMYdiczV3VPgoNHeBWcPoKDBN0dYxqE5QDSuSuZwcc,1057
+beeai_cli/commands/tool.py,sha256=-moJFGkM5gEZddTKmIzT11RMOpOJf-BBROcHy5-aLsY,2240
+beeai_cli-0.0.11.dist-info/METADATA,sha256=zFFDqDpyl4NMOvc0YUvlEIYe7akejo7WaT03WxwSydg,648
+beeai_cli-0.0.11.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+beeai_cli-0.0.11.dist-info/entry_points.txt,sha256=rXVGta1RsSjP93CodUKYZkVxDObBo8tSMxxxtaPZ8MU,40
+beeai_cli-0.0.11.dist-info/RECORD,,
