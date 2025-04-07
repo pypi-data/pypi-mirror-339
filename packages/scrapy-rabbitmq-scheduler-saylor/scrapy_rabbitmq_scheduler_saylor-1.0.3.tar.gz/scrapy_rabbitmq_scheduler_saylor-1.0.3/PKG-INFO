@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: scrapy-rabbitmq-scheduler-saylor
+Version: 1.0.3
+Summary: Rabbitmq for Distributed scraping
+Home-page: https://github.com/SaylorZhu/scrapy-rabbitmq-scheduler.git
+Author: saylorzhu
+Author-email: 531301071@qq.com
+License: MIT
+Requires-Dist: pika
+Requires-Dist: Scrapy
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary

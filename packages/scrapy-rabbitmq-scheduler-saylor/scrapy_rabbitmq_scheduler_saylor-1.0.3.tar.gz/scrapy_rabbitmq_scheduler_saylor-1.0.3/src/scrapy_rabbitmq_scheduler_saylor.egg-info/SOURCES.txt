@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+src/scrapy_rabbitmq_scheduler_saylor/__init__.py
+src/scrapy_rabbitmq_scheduler_saylor/connection.py
+src/scrapy_rabbitmq_scheduler_saylor/middleware.py
+src/scrapy_rabbitmq_scheduler_saylor/picklecompat.py
+src/scrapy_rabbitmq_scheduler_saylor/pipelines.py
+src/scrapy_rabbitmq_scheduler_saylor/queue.py
+src/scrapy_rabbitmq_scheduler_saylor/scheduler.py
+src/scrapy_rabbitmq_scheduler_saylor/spiders.py
+src/scrapy_rabbitmq_scheduler_saylor.egg-info/PKG-INFO
+src/scrapy_rabbitmq_scheduler_saylor.egg-info/SOURCES.txt
+src/scrapy_rabbitmq_scheduler_saylor.egg-info/dependency_links.txt
+src/scrapy_rabbitmq_scheduler_saylor.egg-info/requires.txt
+src/scrapy_rabbitmq_scheduler_saylor.egg-info/top_level.txt
