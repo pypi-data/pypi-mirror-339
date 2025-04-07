@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: mkdocstrings-graphql
+Version: 0.2.0rc1
+Summary: A GraphQL handler for mkdocstrings.
+Author: mmb L
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Project-URL: Repository, https://github.com/mammothb/mkdocstrings-graphql
+Project-URL: Issues, https://github.com/mammothb/mkdocstrings-graphql/issues
+Project-URL: Funding, https://github.com/sponsors/mammothb
+Requires-Python: >=3.9
+Requires-Dist: backports-strenum>=1.3.1; python_full_version < "3.11"
+Requires-Dist: graphql-core~=3.2.0
+Requires-Dist: griffe>=1.6.0
+Requires-Dist: mkdocs-autorefs~=1.4.0
+Requires-Dist: mkdocstrings>=0.18
+Requires-Dist: typing-extensions~=4.13.0
+Description-Content-Type: text/markdown
+
+# mkdocstrings-graphql
+
+[![ci](https://github.com/mammothb/mkdocstrings-graphql/workflows/ci/badge.svg)](https://github.com/mammothb/mkdocstrings-graphql/actions?query=workflow%3Aci)
+[![documentation](https://img.shields.io/badge/docs-mkdocs-708FCC.svg?style=flat)](https://mammothb.github.io/mkdocstrings-graphql/)
+[![pypi version](https://img.shields.io/pypi/v/mkdocstrings-graphql.svg)](https://pypi.org/project/mkdocstrings-graphql/)
+
+A GraphQL handler for mkdocstrings.
+
+## Installation
+
+```bash
+pip install mkdocstrings-graphql
+```
+
+

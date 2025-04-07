@@ -1,0 +1,32 @@
+{#- Template for docstrings.
+
+Renders GraphQL docstrings.
+
+Context:
+    docstring_sections (list[DocstringSection]): The list of docstring
+        sections.
+    config (dict): The configuration dictionary.
+    heading_level (int): The heading level to use for Markdown conversion.
+    html_id (str): The HTML ID to use for Markdown conversion.
+-#}
+
+{% if docstring_sections %}
+    {% block logs scoped %}
+        {#- Logging block. -#}
+        {{ log.debug("Rendering docstring") }}
+    {% endblock logs %}
+
+    {% for section in docstring_sections %}
+        {% if section.kind.value == "text" %}
+            {{ section.value|convert_markdown(heading_level, html_id) }}
+        {% elif section.kind.value == "arguments" %}
+            {% include "docstring/arguments.html.jinja" %}
+        {% elif section.kind.value == "enum_values" %}
+            {% include "docstring/enum_values.html.jinja" %}
+        {% elif section.kind.value == "fields" %}
+            {% include "docstring/fields.html.jinja" %}
+        {% elif section.kind.value == "returns" %}
+            {% include "docstring/returns.html.jinja" %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
