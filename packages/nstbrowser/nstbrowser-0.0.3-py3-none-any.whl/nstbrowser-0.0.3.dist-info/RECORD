@@ -1,0 +1,16 @@
+nstbrowser/__init__.py,sha256=2hPp_URqqdU8ksMWMPFWVW3I_RErMBRvCs6MtNyeNJE,177
+nstbrowser/_version.py,sha256=j-gVw3xh1KYVZG1ZbQPDJwSjon1VkEuUR3Ut-PoERos,47
+nstbrowser/client.py,sha256=8mW_JVKQYX_aRlShyVBdquRegk_JwlXeMcx_ByyFltg,2578
+nstbrowser/services/__init__.py,sha256=nnooE75M3w9o_42MWVdgjUaMsZiTEPH7h_pwJvreQH4,247
+nstbrowser/services/_base.py,sha256=5ywgwmaAoYNDJYHnt44zh1sFyobulxbUWaW0GNUZ3EQ,199
+nstbrowser/services/browsers.py,sha256=lUy_crxpi6jO7s0mMTxbRQc0gPCrFgb3EVoS2EcJWtE,988
+nstbrowser/services/cdp_endpoints.py,sha256=QoJmWbIx8J-cLJDSLT2MxNVKyYl6xhInyFZ6OUeVzYk,421
+nstbrowser/services/locals.py,sha256=nRcZlKxQ4WJOAvSy6jClr03PWK0yWaKTlNpidD9S47Q,321
+nstbrowser/services/profiles.py,sha256=t3hKK-qD593f2YFMkdjVW0OHoDIwt9Y39pWOEl5Q52E,2315
+nstbrowser-0.0.3.dist-info/licenses/LICENSE,sha256=5FSVbq1ydRoDaSepwQHg6WU2IwcQOF74iyONNcMGG3w,1067
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_client.py,sha256=zKqu8GkFbuC1a-G0PQnvW1c_FFjM-2mgB8oHlkbkjqI,6509
+nstbrowser-0.0.3.dist-info/METADATA,sha256=Gqeunyn2-ghc137Z5AlmgJw0jsae9bcxqWbx8V8uSDw,9737
+nstbrowser-0.0.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+nstbrowser-0.0.3.dist-info/top_level.txt,sha256=NmNm4_4-qt-t4WDD_4s3BBUkGo3-1U-ef4I3U_2UOm0,17
+nstbrowser-0.0.3.dist-info/RECORD,,
