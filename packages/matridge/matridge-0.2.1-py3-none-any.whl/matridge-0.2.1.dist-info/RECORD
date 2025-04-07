@@ -1,0 +1,17 @@
+matridge/__init__.py,sha256=T4U6KdhjZEOO7TJE5g-76kXIUoXwt76pn7Iil_ccvfA,769
+matridge/__main__.py,sha256=5QtHvJxA9ab863RXXRfxslo_nbMTxM3i6GwLxt9_-Rs,86
+matridge/command.py,sha256=J3fuBAMdz_7gMmEoa3znmlLT64U9AzgdLokv2uUD4Y8,6190
+matridge/config.py,sha256=vPo4E0Y5kegveL_nByZK4rXxYDPcaqxNhhnqyYIRiv8,1019
+matridge/contact.py,sha256=FammaYuAGFOeo6hX6N6oD8i63TyPL5vZBS2Y72aGBMU,2370
+matridge/gateway.py,sha256=nehLUHD-El_axa8pzidR3Ghd1ql3OcSQsoAJONxqPeE,3117
+matridge/group.py,sha256=wbzrHAgev65SDcmQcrUiw2lKg3fAPb9pxRx6FhRr1Hw,5765
+matridge/matrix.py,sha256=vna_SipPLD3dkeVhGi3nzE3YpeYnGchkK6j5okFp40M,21067
+matridge/reactions.py,sha256=hrVh92Vm4ljeJj2qdNy4py0_nQL1fAjvhF_h6CVX2bA,7594
+matridge/session.py,sha256=jepe6y4Hr8o4injuiEhgkq6ubuJZWd_8yv0nK_QPRuk,10982
+matridge/util.py,sha256=Lwqz3PAXjcOkyez4h1Zd4j6VErH859--1gcdgBbVV9Q,7481
+matridge-0.2.1.dist-info/licenses/LICENSE,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+matridge-0.2.1.dist-info/METADATA,sha256=mjAPrvau2rF9YX8XfYp2Q9fA6fPH4sS4R5IRbe4FYw8,2625
+matridge-0.2.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+matridge-0.2.1.dist-info/entry_points.txt,sha256=ACWJdQjxWiHahuAxbHImS88YI6X0Fp6tAs6FaYlUxrs,43
+matridge-0.2.1.dist-info/top_level.txt,sha256=K1OkbiIUAphG05J9a-wtY_PtpMRA_5m_j0K3hPw4rw8,9
+matridge-0.2.1.dist-info/RECORD,,
