@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: summing_lixelv
+Version: 0.0.1
+Summary: collection of biblical humans and their family relations
+Project-URL: Homepage, https://github.com/lixelv/pypi-package-template
+Project-URL: Issues, https://github.com/lixelv/pypi-package-template
+Author-email: lixelv <simonefremenko@gmail.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+
+# Hello
