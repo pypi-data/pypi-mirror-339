@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: subtitle-renamer
+Version: 0.1.0
+Summary: A utility to rename subtitle files to match video files based on episode numbers
+License: MIT
+Author: iBakuman
+Author-email: 67883044+ibakuman@users.noreply.github.com
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+
+
