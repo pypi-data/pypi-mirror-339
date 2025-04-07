@@ -1,0 +1,9 @@
+calibre/__init__.py,sha256=uI1Olw7Ly_IG7dz3tgK8JlwAjrsJOo2zTDNLPqGp1wQ,755
+calibre/calibration.py,sha256=OYxXowue9IO-TiOx0so5MqU1Xi1ZzWR_UeXP5bX9HNU,18613
+calibre/metrics.py,sha256=AjfiNgjwcGprRbUA1cIxDRKqbfz4iF-8f2qAkTHulkk,4566
+calibre/utils.py,sha256=Jlq75tA0t1FrdZn7idWMilbKtE3grqU20FXjgVf3KdY,1113
+calibre_ml-0.1.1.dist-info/licenses/LICENSE,sha256=9vFQ7IesB0PIsHbqsP3NFa2Hoq1dzbavqbN7rpF-RcE,1062
+calibre_ml-0.1.1.dist-info/METADATA,sha256=RwjobtM1OalaagdpQOFO6WRU4VYxCNM7QkybRWsCAIg,9137
+calibre_ml-0.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+calibre_ml-0.1.1.dist-info/top_level.txt,sha256=bBOeiKVyz5ScVZpOTPRwZluW-n14AKu-v0KTd-yeaQ4,8
+calibre_ml-0.1.1.dist-info/RECORD,,
