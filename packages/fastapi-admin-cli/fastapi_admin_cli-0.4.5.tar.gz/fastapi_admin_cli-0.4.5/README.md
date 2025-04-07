@@ -1,0 +1,258 @@
+# FastAPI Admin CLI
+
+A Django-inspired CLI tool for FastAPI applications that simplifies project scaffolding and application management.
+
+## Features
+
+- **Django-like Command Structure**: Familiar commands for Python developers
+- **Project Templates**: Create well-structured FastAPI projects with best practices
+- **Application Templates**: Generate modular application components
+- **Git-based Templates**: Templates are maintained in a separate repository for easy updates
+- **Authentication Ready**: Pre-configured with FastAPI Users for JWT authentication
+- **Admin Panel**: Integrated SQLAdmin dashboard
+- **Docker Support**: Production-ready Docker configurations with Traefik
+- **Database Migrations**: Alembic integration for database versioning
+- **Type Safety**: Built with SQLModel for enhanced type safety
+
+## Installation
+
+Install the package from PyPI:
+
+```bash
+pip install fastapi-admin-cli
+```
+
+For development version, clone the repository and install it in development mode:
+
+```bash
+git clone https://github.com/amal-babu-git/fastapi-admin-cli.git
+cd fastapi-admin-cli
+pip install -e .
+```
+
+## Quick Start
+
+### Create a new project
+
+```bash
+# Create a new project in the current directory
+fastapi-admin startproject myproject
+```
+
+### Set up the project
+
+```bash
+# Navigate to the project directory
+cd myproject
+
+# Create and activate a virtual environment
+# Using venv
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Or using uv (recommended for faster dependency resolution)
+uv venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install the project in development mode
+pip install -e .
+# Or with uv
+uv pip install -e .
+```
+
+### Create a new app
+
+```bash
+# Inside your project directory
+fastapi-admin startapp blog
+```
+
+This will create a new app with models, schemas, routes, and services.
+
+### Run the development server
+
+```bash
+# Run with the CLI command
+fastapi-admin runserver
+
+# Specify host and port
+fastapi-admin runserver --host 0.0.0.0 --port 8080
+
+# Or use uvicorn directly
+uvicorn app.main:app --reload
+```
+
+### Database migrations
+
+```bash
+# Create new migrations
+fastapi-admin makemigrations --message "Initial migration"
+
+# Apply migrations
+fastapi-admin migrate
+```
+
+## Docker Development
+
+The project template includes Docker Compose configurations for both development and production:
+
+### Development Setup
+
+```bash
+# Start the development containers
+cd docker/compose
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+```
+
+### Production Deployment
+
+```bash
+# Deploy with production settings
+cd docker/compose
+docker-compose -f docker-compose.prod.yml up -d
+```
+
+## Project Structure
+
+The generated project follows a modular structure inspired by Django:
+
+```
+myproject/
+├── alembic.ini                 # Alembic configuration
+├── app/                        # Main application package
+│   ├── auth/                   # Authentication module
+│   │   ├── admin.py           # Admin panel configuration
+│   │   ├── auth.py            # Authentication logic
+│   │   ├── email.py           # Email utilities
+│   │   ├── models.py          # User models
+│   │   ├── routes.py          # API endpoints
+│   │   └── schemas.py         # Pydantic schemas
+│   ├── core/                   # Core application components
+│   │   ├── db.py              # Database configuration
+│   │   ├── main_admin.py      # Admin setup
+│   │   ├── main_models.py     # Model registry
+│   │   ├── main_routes.py     # Route registry
+│   │   └── settings.py        # Application settings
+│   └── main.py                 # Application entry point
+├── docker/                     # Docker configurations
+│   ├── compose/                # Docker compose files
+│   │   ├── docker-compose.yml         # Development
+│   │   └── docker-compose.prod.yml    # Production
+│   ├── Dockerfile              # Application container
+│   └── traefik/                # Traefik configurations
+│       └── traefik.yml
+├── manage.py                   # Project management script
+├── migrations/                 # Database migrations
+│   └── versions/               # Migration versions
+└── pyproject.toml              # Project metadata and dependencies
+```
+
+## Authentication
+
+The project comes with a fully configured authentication system using FastAPI Users:
+
+- JWT authentication
+- Email verification
+- Password reset
+- User management API
+- Admin interface for users
+
+## Admin Panel
+
+An admin panel is automatically configured using SQLAdmin with:
+
+- User-friendly interface for data management
+- Automatic CRUD operations
+- Custom admin views for each model
+- Authentication integration
+
+## Creating Apps
+
+When you create a new app with `fastapi-admin startapp`, it generates:
+
+- **models.py**: SQLModel database models
+- **schemas.py**: Pydantic schemas for request/response
+- **routes.py**: FastAPI routes with CRUD operations
+- **services.py**: Business logic layer
+- **admin.py**: Admin panel registration
+
+The app is automatically registered in main_routes.py and main_models.py.
+
+## Available Commands
+
+Currently, the CLI supports these commands:
+
+- `startproject`: Create a new FastAPI project
+- `startapp`: Create a new application module
+- `runserver`: Run the development server
+- `makemigrations`: Create new migration files
+- `migrate`: Apply migrations to the database
+
+For other database migration features, use Alembic commands directly:
+
+```bash
+# Show migration history
+alembic history
+
+# Downgrade to a specific revision
+alembic downgrade <revision>
+```
+
+## Template System
+
+FastAPI Admin CLI uses a Git-based template system. Templates are stored in a separate repository 
+and are cloned/updated as needed. You can update templates with:
+
+```bash
+# Update templates from the default repository
+fastapi-admin update-templates
+```
+
+By default, templates are stored in `~/.fastapi-admin-templates` and are pulled from
+https://github.com/amal-babu-git/fastapi-admin-cli-template.
+
+## Environment Variables
+
+The project uses a .env file for configuration. Create one based on the template below:
+
+```
+# API Settings
+API_TITLE=My FastAPI App
+API_VERSION=0.1.0
+API_DESCRIPTION=My FastAPI application
+DEBUG=true
+
+# Database Settings
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=app_db
+POSTGRES_PORT=5432
+POSTGRES_HOST=postgres
+
+# JWT Settings
+SECRET_KEY=your-secret-key-change-in-production
+JWT_SECRET=your-jwt-secret-change-in-production
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+# Email Settings (if using email features)
+MAIL_USERNAME=
+MAIL_PASSWORD=
+MAIL_FROM=noreply@example.com
+MAIL_PORT=587
+MAIL_SERVER=smtp.example.com
+MAIL_FROM_NAME=MyApp
+MAIL_TLS=true
+MAIL_SSL=false
+FRONTEND_URL=http://localhost:3000
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
