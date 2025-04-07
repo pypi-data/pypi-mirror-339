@@ -1,0 +1,3 @@
+[console_scripts]
+bolor = bolor.cli:app
+
