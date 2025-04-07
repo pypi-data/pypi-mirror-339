@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "lds_pipelines"
+version = "0.3.0"
+description = "A tool to analyze the leakage in an pipeline using modified SPRT technique"
+authors = ["Aman Sharma"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "^2.2.4"
+pandas = "^2.2.3"
+plotly = "^6.0.1"
+matplotlib = "^3.10.1"
+streamlit = "^1.44.0"
+requests = "^2.32.3"
+st-autorefresh = "^0.1.0"
+streamlit-autorefresh = "^1.0.1"
+pyarrow = "^19.0.1"
+setuptools = "^78.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+dashboard = "lds_pipelines.dashboard.app:run"
+
