@@ -1,0 +1,13 @@
+nmalign/__init__.py,sha256=ZbVigrKZwDjuy_8wxIdr5cBfCOfkTYRs7iFvBTYWKGs,118
+nmalign/lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nmalign/lib/align.py,sha256=EUIlVPTyGuZuxZ5mlRbQ0muF999MTvCWkRA4Hw5W_dg,12263
+nmalign/ocrd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nmalign/ocrd/cli.py,sha256=MuHuxhYj8M8LyW9zzHsa7dV2qb82_3AnSSAGxUrH8e8,23057
+nmalign/ocrd/ocrd-tool.json,sha256=9zyWcktpoCBJSkHNuIS-B-IXX9OiRpwbtzFpNfhYW4Q,1082
+nmalign/scripts/__init__.py,sha256=9aiMXNkfkRBw_PkXCOSKqO4Ac9ifFIm8YsQBpX2WB40,1439
+nmalign/scripts/cli.py,sha256=6JLBCR7hYk6VIUOGGD60GCxxzImKTAF7JNQa_0bis-E,5681
+nmalign-0.0.5.dist-info/METADATA,sha256=T5UC9eJOclzXLQlgIZElGEnaWe5mJVvhZ0ujXeAt50Q,28490
+nmalign-0.0.5.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+nmalign-0.0.5.dist-info/entry_points.txt,sha256=P1w23JzPpI3JwH8S75zGLz611dT12UfU4L5CL_hoHC8,109
+nmalign-0.0.5.dist-info/top_level.txt,sha256=ouPhZKV3BaXDgYMqx8sXfbjlDF6YIwX92mQXjKMC738,8
+nmalign-0.0.5.dist-info/RECORD,,
