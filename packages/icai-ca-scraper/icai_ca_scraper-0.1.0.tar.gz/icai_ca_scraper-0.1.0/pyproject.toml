@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["icai_ca_scraper"]
+
+[project]
+name = "icai-ca-scraper"
+version = "0.1.0"
+authors = [
+    { name="Shrey Baheti", email="sbshrey@gmaill.com" },
+]
+description = "A Python package to fetch CA member details from ICAI website"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "requests>=2.25.0",
+    "beautifulsoup4>=4.9.0",
+    "urllib3>=1.26.0",
+]
+keywords = ["icai", "ca", "chartered-accountant", "india", "scraper", "api"]
+
+[project.urls]
+"Homepage" = "https://github.com/ShreyBaheti/icai-ca-scraper"
+"Bug Tracker" = "https://github.com/ShreyBaheti/icai-ca-scraper/issues" 

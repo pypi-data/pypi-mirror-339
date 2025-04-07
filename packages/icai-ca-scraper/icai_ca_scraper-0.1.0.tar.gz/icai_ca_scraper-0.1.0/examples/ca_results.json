@@ -1,0 +1,24 @@
+{
+  "100003": {
+    "name": "BARTAKKE NITIN SUHAS",
+    "gender": "M",
+    "qualification": "BCOM",
+    "cop_status": "FULL TIME",
+    "associate_year": "A1995",
+    "fellow_year": "",
+    "address": "FLAT NO 101 FIRST FLOOR, SHRIYASH APARTMENT, SHIVAJI NAGAR, RATNAGIRI, 415612",
+    "membership_no": "100003",
+    "last_updated": "2025-04-07 12:03:15"
+  },
+  "100004": {
+    "name": "VEERA HITESH SHIVJI",
+    "gender": "M",
+    "qualification": "BCOM",
+    "cop_status": "NOT HOLDIN",
+    "associate_year": "A1995",
+    "fellow_year": "",
+    "address": "2303 ANMOL PRIDE, OPP PATEL AUTO, S V ROAD, MUMBAI, 400062",
+    "membership_no": "100004",
+    "last_updated": "2025-04-07 12:03:16"
+  }
+}

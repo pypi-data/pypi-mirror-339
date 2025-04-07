@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+examples/ca_results.json
+examples/example.py
+icai_ca_scraper/__init__.py
+icai_ca_scraper/scraper.py
+icai_ca_scraper.egg-info/PKG-INFO
+icai_ca_scraper.egg-info/SOURCES.txt
+icai_ca_scraper.egg-info/dependency_links.txt
+icai_ca_scraper.egg-info/requires.txt
+icai_ca_scraper.egg-info/top_level.txt
