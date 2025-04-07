@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+calculadora/__init__.py
+calculadora/operacoes.py
+diego_calculadora_2025.egg-info/PKG-INFO
+diego_calculadora_2025.egg-info/SOURCES.txt
+diego_calculadora_2025.egg-info/dependency_links.txt
+diego_calculadora_2025.egg-info/top_level.txt
+tests/__init__.py
+tests/test_operacoes.py

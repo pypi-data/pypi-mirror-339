@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: diego-calculadora-2025
+Version: 0.1.0
+Summary: Uma calculadora simples em Python
+Home-page: https://github.com/seu_usuario/diego-calculadora-2025
+Author: Diego
+Author-email: diegoivanmendes@gmail.com
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# diego-calculadora-2025
+Um pacote Python simples para operaÃ§Ãµes matemÃ¡ticas.
+
+## InstalaÃ§Ã£o
+```bash
+pip install diego-calculadora-2025
+```
+
+## Uso
+```python
+from diego_calculadora_2025 import soma, subtracao
+print(soma(2, 3))       # SaÃ­da: 5
+print(subtracao(5, 2))  # SaÃ­da: 3
+```
+
+## Testes
+Para rodar os testes, instale o pytest e execute:
+```bash
+pip install pytest
+pytest tests/
+```
