@@ -1,0 +1,3 @@
+[console_scripts]
+feetech-client=feetech_client.main:main
+
