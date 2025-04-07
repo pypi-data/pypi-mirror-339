@@ -1,0 +1,13 @@
+__pycache__
+/.coverage
+/.pyre
+/bin
+/build
+/dist
+/fiblat.egg-info
+/lib
+/lib64
+/out
+/pyvenv.cfg
+/share
+/share
