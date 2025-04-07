@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: akm
+Version: 1.3.5
+Summary: Gmail-Temp API By: t.me/goldenxpris.
+Author: Golden
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# akm - Gmail Temporary API Client
+
+This Python library allows you to generate temporary Gmail addresses and check for new messages .
+
+## Installation
+
+To install this package, simply run :
+```bash
+pip install akm```
+
+## Dev
+Tele : t.me/goldenxpris
