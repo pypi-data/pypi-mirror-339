@@ -1,0 +1,2 @@
+[console_scripts]
+oratools = oratools.cli:main

@@ -1,0 +1,15 @@
+oratools/__init__.py,sha256=uoZc80HtOjRi2nBtKNW5Qneu4y-Kjp1oazOQMTTmWsk,107
+oratools/cli.py,sha256=BRShkiy7y6jPlbv_wFntxSbqejYkcXqAQheoUYNZNAc,8287
+oratools/tools/__init__.py,sha256=H_2A43zrPEOP-JHBExB2UI12Ih9uHU20fXyCoBdIzRU,33
+oratools/tools/dev_tools.py,sha256=CmKVfLtjwqVDUPK_R0h-vChzFzDtKvsOceV_KrR3cTI,4140
+oratools/tools/file_tools.py,sha256=bP3lRpP4a3M4zZNZ5YSj9yOTGWtRm0ecLc-xraHlXdY,994
+oratools/tools/image_tools.py,sha256=A_UKjHVkllCDzMWzPixWa_t2o4DtyAW6NpdvYsFcEIk,651
+oratools/tools/network_tools.py,sha256=tRusAwXED41a84ftSExNwOorDDAR5-NbnqQQpJRKnhc,2683
+oratools/tools/system_tools.py,sha256=D8TCfG8sKUbu_Keojo4c3DwHRq5-PfGc0CxyneHOSSI,2484
+oratools/tools/youtube_downloader.py,sha256=Wlr5NoCSs9fmNYjGONR8-MMLV2XPOliHAOGyvz4xkFI,957
+oratools-0.1.0.dist-info/licenses/LICENSE,sha256=_VDi9_iX9_UoHVTUKl3vE9n2mzs3M0nNhhY_OfL3cQA,1061
+oratools-0.1.0.dist-info/METADATA,sha256=Rh1c7973OKjjvT3NyFG8s1w2wW-4kdeL9dm0AzE8lT0,3022
+oratools-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+oratools-0.1.0.dist-info/entry_points.txt,sha256=Q7TFWq33aop_Dsr6FZiTQQOYOXBfM_rIzIv7eFx3Tow,47
+oratools-0.1.0.dist-info/top_level.txt,sha256=uShphZ3wjyPxzxz8zNDcvAlCLQXbK7poODDm--lAmig,9
+oratools-0.1.0.dist-info/RECORD,,
