@@ -1,0 +1,77 @@
+project:
+  name: "{{ project_name }}"
+  description: "AMAUTA Project"
+  repository: null
+  coding_standards:
+    python:
+      style_guide: "PEP 8"
+      type_hints: true
+      docstrings: true
+      linters: ["black", "mypy", "ruff"]
+
+analyzer:
+  ignored_paths:
+    - "node_modules"
+    - "venv"
+    - ".venv"
+    - "dist"
+    - "build"
+    - "__pycache__"
+    - ".git"
+  languages:
+    - "python"
+    - "javascript"
+    - "typescript"
+  max_file_size_kb: 1024
+
+ai:
+  anthropic:
+    provider: "anthropic"
+    default_model: "claude-3-opus-20240229"
+    api_key_env_var: "ANTHROPIC_API_KEY"
+    capabilities:
+      - "general"
+      - "research"
+      - "code"
+      - "task"
+      - "analysis"
+      - "streaming"
+      - "tool_calls"
+      - "function_calling"
+      - "long_context"
+    timeout_seconds: 60
+    retry_attempts: 2
+
+  perplexipy:
+    provider: "perplexipy"
+    default_model: "pplx-70b-online"
+    api_key_env_var: "PERPLEXITY_API_KEY"
+    capabilities:
+      - "general"
+      - "research"
+      - "code"
+      - "task"
+      - "analysis"
+      - "long_context"
+      - "rag"
+    timeout_seconds: 60
+    retry_attempts: 2
+
+provider_preferences:
+  general: ["anthropic", "perplexipy"]
+  research: ["perplexipy", "anthropic"]
+  code: ["anthropic", "perplexipy"]
+  analysis: ["anthropic", "perplexipy"]
+  task: ["anthropic", "perplexipy"]
+
+research_mode:
+  enabled_by_default: false
+  preferred_providers: ["perplexipy", "anthropic"]
+  context_boost: true
+  required_capabilities:
+    - "research"
+    - "long_context"
+  prompt_templates: {}
+
+log_level: "INFO"
+custom_rules: {} 
