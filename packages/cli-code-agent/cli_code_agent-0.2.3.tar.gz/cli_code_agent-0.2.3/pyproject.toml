@@ -1,0 +1,132 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cli-code-agent" 
+version = "0.2.3"  
+authors = [
+  { name="James Nguyen", email="git@nocentre.net" }
+]
+description = "An AI coding assistant CLI using Google's Gemini models with function calling."
+readme = "README.md"
+requires-python = ">=3.9" # Gemini library might require newer Python
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "google-generativeai>=0.5.0", # <<< ADDED/UPDATED GEMINI LIBRARY
+    "click>=8.0",              # For CLI framework
+    "rich>=13.0",             # For nice terminal output
+    "PyYAML>=6.0",            # For config handling
+    "tiktoken>=0.6.0",          # <-- ADDED TIKTOKEN DEPENDENCY
+    "questionary>=2.0.0",     # <-- ADDED QUESTIONARY DEPENDENCY BACK
+    "openai>=1.0.0", # Add openai library dependency
+    "protobuf>=4.0.0", # Add protobuf for schema conversion
+    # Add any other direct dependencies your tools might have (e.g., requests for web_tools)
+]
+
+# Add optional dependencies for development
+[project.optional-dependencies]
+dev = [
+    "build>=1.0.0",   # For building the package
+    "pytest>=7.0.0",  # For running tests
+    "pytest-timeout>=2.2.0",  # For test timeouts
+    "ruff>=0.1.0",    # For linting and formatting
+    "protobuf>=4.0.0", # Also add to dev dependencies
+    # Add other dev tools like coverage, mypy etc. here if needed
+]
+
+[project.urls]
+"Homepage" = "https://github.com/BlueCentre/cli-code"
+"Bug Tracker" = "https://github.com/BlueCentre/cli-code/issues"
+
+# This makes the `cli-code` command run the `cli` function in `main.py`
+[project.scripts]
+cli-code-agent = "cli_code.main:cli"
+
+# Remove the automatic package finding
+# [tool.setuptools.packages.find]
+# where = ["src"]  # look for packages in src/
+
+# Explicitly list packages
+[tool.setuptools]
+packages = ["cli_code", "cli_code.models", "cli_code.tools"]
+package-dir = {"" = "src"}
+
+# Add Ruff configuration
+[tool.ruff]
+exclude = [
+    ".git",
+    ".env",
+    "env",
+    ".venv",
+    "venv",
+    ".vscode",
+    ".rules",
+    "docs",
+    "__pycache__",
+]
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint]
+# Enable a set of rules
+select = ["E", "F", "I", "B"]
+# Ignore certain errors that are difficult to fix in this codebase
+ignore = ["E701", "E702", "E501", "F401", "F541", "E402", "E721", "F841", "F403", "E203", "F405", "F821"]
+
+# Allow autofix for all enabled rules (when `--fix`) is used.
+fixable = ["ALL"]
+unfixable = []
+
+# Ignore 'import' errors for pytest in test files
+[tool.ruff.lint.per-file-ignores]
+"test_dir/*" = ["F401", "F811", "E402", "F811", "F403", "F405", "E711", "E712", "F821"]
+
+# Add pytest and pytest-cov configuration
+[tool.pytest.ini_options]
+testpaths = ["test_dir"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+
+[tool.coverage.run]
+source = ["cli_code"]
+omit = [
+    "*/.rules/*",
+    "*/.venv/*",
+    "*/docs/*",
+    "*/test_*",
+    "*/__pycache__/*",
+    "*/venv/*",
+    "*/.pytest_cache/*",
+    "*/site-packages/*",
+]
+
+# Add these new sections for better coverage configuration
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "pass",
+    "raise ImportError",
+]
+precision = 2
+show_missing = true
+fail_under = 60  # Minimum coverage percentage required
+
+[tool.coverage.html]
+directory = "coverage_html"
+
+[tool.coverage.xml]
+output = "coverage.xml"

@@ -1,0 +1,2 @@
+[console_scripts]
+cli-code-agent = cli_code.main:cli
