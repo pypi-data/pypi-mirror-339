@@ -1,0 +1,9 @@
+LICENCE
+setup.py
+PocInfo/__init__.py
+PocInfo/core.py
+PocInfo.egg-info/PKG-INFO
+PocInfo.egg-info/SOURCES.txt
+PocInfo.egg-info/dependency_links.txt
+PocInfo.egg-info/requires.txt
+PocInfo.egg-info/top_level.txt
