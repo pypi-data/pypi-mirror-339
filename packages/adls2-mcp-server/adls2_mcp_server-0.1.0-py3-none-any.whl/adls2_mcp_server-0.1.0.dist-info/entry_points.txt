@@ -1,0 +1,2 @@
+[console_scripts]
+adls2-mcp-server = adls2_mcp_server.server:main
