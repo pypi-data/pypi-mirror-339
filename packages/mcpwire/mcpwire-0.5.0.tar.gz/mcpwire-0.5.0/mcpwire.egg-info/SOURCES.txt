@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+mcpwire/__init__.py
+mcpwire/client.py
+mcpwire/exceptions.py
+mcpwire/models.py
+mcpwire/utils.py
+mcpwire.egg-info/PKG-INFO
+mcpwire.egg-info/SOURCES.txt
+mcpwire.egg-info/dependency_links.txt
+mcpwire.egg-info/requires.txt
+mcpwire.egg-info/top_level.txt
+tests/test_client.py
