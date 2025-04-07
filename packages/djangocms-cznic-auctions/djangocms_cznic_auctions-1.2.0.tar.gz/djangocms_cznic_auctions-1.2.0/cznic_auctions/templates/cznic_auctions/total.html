@@ -1,0 +1,8 @@
+{% load i18n %}
+<span class="auctions-total {{ instance.status }}{% if auctions_total is None %} data-not-available{% endif %}" title="{% if auctions_total is None %}{% translate "Data not currently available." %}{% if auctions_total_error %} {{ auctions_total_error }}{% endif %}{% else %}{{ instance }}. {% blocktranslate with stamp=auctions_total.current_now|date:"SHORT_DATETIME_FORMAT" %}Data as of {{ stamp }}.{% endblocktranslate %}{% endif %}">
+    {% if auctions_total %}
+        {{ auctions_total.total|default_if_none:"?" }}
+    {% else %}
+        ?
+    {% endif %}
+</span>

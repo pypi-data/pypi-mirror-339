@@ -1,0 +1,7 @@
+__pycache__
+djangocms_cznic_auctions.egg-info
+.coverage*
+.tox
+dist
+*.bak
+*.mo

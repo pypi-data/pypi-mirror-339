@@ -1,0 +1,39 @@
+{% load i18n l10n static %}
+<div class="auctions auctions-list-bids-prices">
+    <div class="auctions-list {{ instance.status }}">
+        {% if auctions %}
+            {% for rec in auctions.items %}
+                <div class="row">
+                    <div><span>{{ forloop.counter }}</span></div>
+                    <div>
+                        <a href="https://www.domenovyprohlizec.cz/" target="_blank" title="{% translate "Go to Domain browser." %}">{{ rec.item_title }}</a>
+                    </div>
+                    <div><span>{{ rec.num_bids }}</span></div>
+                    <div><span>{% if rec.current_price %}{{ rec.current_price }} {% translate "CZK" %}{% else %}&ndash;{% endif %}</span></div>
+                </div>
+            {% empty %}
+                <div class="row">
+                    <div>
+                        <div class="no-items">{% translate "No items." %}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="row">
+                <div class="data-not-available">{% translate "Data not currently available." %}</div>
+                {% if auctions_list_error %}
+                    <ul class="messagelist">
+                        <li class="error">{{ auctions_list_error }}</li>
+                    </ul>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+    {% if auctions.current_now %}
+        <div class="data-stamp">
+            {% blocktranslate with stamp=auctions.current_now|date:"SHORT_DATETIME_FORMAT" trimmed %}
+                Data as of {{ stamp }}.
+            {% endblocktranslate %}
+        </div>
+    {% endif %}
+</div>
