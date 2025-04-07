@@ -1,0 +1,152 @@
+Metadata-Version: 2.3
+Name: modelq
+Version: 0.1.28
+Summary: Celery-like task queue for ML inference.
+Author: Tanmaypatil123
+Author-email: tanmay@modelslab.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: click (>=8.0.0,<9.0.0)
+Requires-Dist: redis (>=4.0.0,<5.0.0)
+Description-Content-Type: text/markdown
+
+# ModelQ
+
+![ModelQ Logo](assets/logo.PNG)
+
+[![PyPI version](https://img.shields.io/pypi/v/modelq.svg)](https://pypi.org/project/modelq/)
+
+ModelQ is a lightweight Python library for scheduling and queuing machine learning inference tasks. It's designed as a faster and simpler alternative to Celery for ML workloads, using Redis and threading to efficiently run background tasks.
+
+ModelQ is developed and maintained by the team at [Modelslab](https://modelslab.com/).
+
+> **About Modelslab**: Modelslab provides powerful APIs for AI-native applications including:
+> - Image generation
+> - Uncensored chat
+> - Video generation
+> - Audio generation
+> - And much more
+
+## 🚀 Features
+
+- ✅ Retry support (automatic and manual)
+- ⏱ Timeout handling for long-running tasks
+- 🔁 Manual retry using `RetryTaskException`
+- 🛄 Streaming results from tasks in real-time
+- 🧹 Middleware hooks for task lifecycle events
+- ⚡ Fast, non-blocking concurrency using threads
+- 🧵 Built-in decorators to register tasks quickly
+- 🗃 Redis-based task queueing
+
+---
+
+## 📦 Installation
+
+```bash
+pip install modelq
+```
+
+---
+
+## 🧠 Basic Usage
+
+```python
+from modelq import ModelQ
+from modelq.exceptions import RetryTaskException
+from redis import Redis
+import time
+
+imagine_db = Redis(host="localhost", port=6379, db=0)
+q = ModelQ(redis_client=imagine_db)
+
+@q.task(timeout=10, retries=2)
+def add(a, b):
+    return a + b
+
+@q.task(stream=True)
+def stream_multiples(x):
+    for i in range(5):
+        time.sleep(1)
+        yield f"{i+1} * {x} = {(i+1) * x}"
+
+@q.task()
+def fragile(x):
+    if x < 5:
+        raise RetryTaskException("Try again.")
+    return x
+
+q.start_workers()
+
+task = add(2, 3)
+print(task.get_result(q.redis_client))
+```
+
+---
+
+## ⚙️ Middleware Support
+
+ModelQ allows you to plug in custom middleware to hook into events:
+
+### Supported Events
+- `before_worker_boot`
+- `after_worker_boot`
+- `before_worker_shutdown`
+- `after_worker_shutdown`
+- `before_enqueue`
+- `after_enqueue`
+- `on_error`
+
+### Example
+
+```python
+from modelq.app.middleware import Middleware
+
+class LoggingMiddleware(Middleware):
+    def before_enqueue(self, *args, **kwargs):
+        print("Task about to be enqueued")
+
+    def on_error(self, task, error):
+        print(f"Error in task {task.task_id}: {error}")
+```
+
+Attach to ModelQ instance:
+
+```python
+q.middleware = LoggingMiddleware()
+```
+
+---
+
+## 🛠 Configuration
+
+Connect to Redis using custom config:
+
+```python
+from redis import Redis
+
+imagine_db = Redis(host="localhost", port=6379, db=0)
+modelq = ModelQ(
+    redis_client=imagine_db,
+    delay_seconds=10,  # delay between retries
+    webhook_url="https://your.error.receiver/discord-or-slack"
+)
+```
+
+---
+
+## 📜 License
+
+ModelQ is released under the MIT License.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Open an issue or submit a PR at [github.com/modelslab/modelq](https://github.com/modelslab/modelq).
+
+
