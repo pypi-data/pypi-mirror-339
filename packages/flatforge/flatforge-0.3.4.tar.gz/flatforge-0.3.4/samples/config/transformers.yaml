@@ -1,0 +1,23 @@
+transformers:
+  # Luhn transformer example
+  - name: "card_number_luhn"
+    type: "luhn"
+    input_field: "card_number"
+    output_field: "card_number_with_check"
+    description: "Appends Luhn check digit to card number"
+
+  # Other transformer examples
+  - name: "uppercase"
+    type: "case"
+    input_field: "name"
+    output_field: "name_upper"
+    case: "upper"
+    description: "Converts name to uppercase"
+
+  - name: "date_format"
+    type: "date"
+    input_field: "transaction_date"
+    output_field: "formatted_date"
+    input_format: "%Y%m%d"
+    output_format: "%Y-%m-%d"
+    description: "Reformats date from YYYYMMDD to YYYY-MM-DD" 

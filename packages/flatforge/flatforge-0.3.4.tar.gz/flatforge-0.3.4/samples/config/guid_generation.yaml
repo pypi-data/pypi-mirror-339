@@ -1,0 +1,102 @@
+name: GUID Generation Example
+type: delimited
+description: A format demonstrating GUID generation
+delimiter: ","
+quote_char: "\""
+escape_char: "\\"
+newline: "\n"
+encoding: utf-8
+skip_blank_lines: true
+
+file_settings:
+  input_encoding: UTF-8
+  output_encoding: UTF-8
+
+sections:
+  - name: header
+    type: header
+    min_records: 1
+    max_records: 1
+    description: Header section
+    record:
+      name: header_record
+      description: Header record format
+      fields:
+        - name: record_type
+          position: 0
+          description: Record type indicator (H for header)
+          rules:
+            - type: choice
+              params:
+                choices: ["H"]
+        - name: file_id
+          position: 1
+          description: File identifier
+          rules:
+            - type: required
+            - type: string_length
+              params:
+                min_length: 1
+                max_length: 20
+        - name: timestamp
+          position: 2
+          description: File timestamp
+          rules:
+            - type: required
+            - type: date
+              params:
+                format: "%Y%m%d%H%M%S"
+
+  - name: body
+    type: body
+    min_records: 0
+    description: Body section containing data records
+    identifier:
+      field: record_type
+      value: "D"
+    record:
+      name: data_record
+      description: Data record format
+      fields:
+        - name: record_type
+          position: 0
+          description: Record type indicator (D for data)
+          rules:
+            - type: choice
+              params:
+                choices: ["D"]
+        - name: name
+          position: 1
+          description: Person name
+          rules:
+            - type: required
+            - type: string_length
+              params:
+                max_length: 50
+        - name: email
+          position: 2
+          description: Email address
+          rules:
+            - type: required
+            - type: string_length
+              params:
+                max_length: 100
+        - name: transaction_id
+          position: 3
+          description: Transaction ID
+          rules:
+            - type: generate_guid
+              params:
+                version: 4
+
+    transformation_rules:
+      - rule: generate_guid
+        target_field: transaction_id
+        version: 4
+
+    validation_rules:
+      - rule: required
+        column: name
+      
+      - rule: required
+        column: email 

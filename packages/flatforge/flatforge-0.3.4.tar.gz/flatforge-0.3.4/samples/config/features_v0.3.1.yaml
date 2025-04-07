@@ -1,0 +1,50 @@
+file_settings:
+  input_file: data/input.csv
+  output_file: data/output.csv
+  input_encoding: iso-8859-1
+  output_encoding: utf-8
+  delimiter: ","
+  has_header: true
+
+sections:
+  - name: header
+    start_line: 1
+    end_line: 1
+    rules:
+      - type: checksum
+        column: header_checksum
+        algorithm: md5
+        columns:
+          - record_count
+          - total_amount
+          - timestamp
+
+  - name: transactions
+    start_line: 2
+    end_line: -1
+    rules:
+      - type: luhn
+        column: card_number
+        strip_spaces: true
+        strip_hyphens: true
+        error_message: Invalid credit card number
+      - type: guid
+        column: transaction_id
+        strip_spaces: true
+        strip_hyphens: true
+        error_message: Invalid transaction ID
+    transformations:
+      - type: value_resolver
+        source_field: status
+        target_field: status_code
+        mapping_file: config/status_mapping.json
+        default_value: UNKNOWN
+
+global_rules:
+  - type: checksum
+    algorithm: sha256
+    columns:
+      - transaction_id
+      - card_number
+      - amount
+    target_column: record_checksum 

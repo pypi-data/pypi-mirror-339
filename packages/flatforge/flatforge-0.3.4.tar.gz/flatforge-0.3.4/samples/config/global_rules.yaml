@@ -1,0 +1,49 @@
+global_rules:
+  # Checksum rules
+  - name: "transaction_checksum"
+    type: "checksum"
+    mode: "validate"
+    validation_type: "multi_column"
+    columns: ["transaction_id", "card_number", "amount"]
+    algorithm: "SHA256"
+    expected_checksum: "abc123..."  # Example checksum
+
+  - name: "record_checksum"
+    type: "checksum"
+    mode: "populate"
+    validation_type: "multi_column"
+    columns: ["field1", "field2"]
+    type: "mod5"  # Using mod5 checksum
+    target_field: "checksum"
+
+  - name: "numeric_checksum"
+    type: "checksum"
+    mode: "validate"
+    validation_type: "row"
+    type: "mod10"  # Using mod10 checksum
+    expected_checksum: "5"
+
+  # Count rules
+  - name: "record_count"
+    type: "count"
+    min_count: 1
+    max_count: 1000
+    section: "body"
+
+  # Sum rules
+  - name: "total_amount"
+    type: "sum"
+    field: "amount"
+    expected_sum: 10000
+    section: "body"
+
+  # Uniqueness rules
+  - name: "unique_transaction_ids"
+    type: "uniqueness"
+    fields: ["transaction_id"]
+    section: "body"
+
+  - name: "unique_composite_key"
+    type: "uniqueness"
+    fields: ["customer_id", "order_date"]
+    section: "body" 

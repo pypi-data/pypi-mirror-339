@@ -1,0 +1,47 @@
+
+name: Single Column Checksum Test
+type: delimited
+description: Test for single column checksum validation using global rules
+delimiter: ","
+quote_char: "\"" 
+encoding: utf-8
+skip_blank_lines: true
+
+global_rules:
+  - name: data_checksum
+    type: checksum
+    params:
+      field: data
+      type: md5
+      section: body
+
+sections:
+  - name: header
+    type: header
+    min_records: 1
+    max_records: 1
+    description: Header section
+    record:
+      name: header_record
+      description: Header record format
+      fields:
+        - name: data
+          position: 0
+          description: Data field
+        - name: checksum
+          position: 1
+          description: MD5 checksum of data field
+
+  - name: body
+    type: body
+    min_records: 0
+    record:
+      name: data_record
+      description: Data record format
+      fields:
+        - name: data
+          position: 0
+          description: Data field
+        - name: checksum
+          position: 1
+          description: MD5 checksum of data field

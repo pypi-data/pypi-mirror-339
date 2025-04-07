@@ -1,0 +1,4 @@
+name,email,age,checksum
+John Doe,john@example.com,30,bd3f9edf70b0dcc34b17adbee1ab0707263876e9472a808d141e48911e4ea672
+Jane Smith,jane@example.com,25,30e31a68b28dd842741d8f4ced13e91ae2fc75d181d0224a1e4c5220f3d658e9
+Bob Johnson,bob@example.com,40,invalid_checksum

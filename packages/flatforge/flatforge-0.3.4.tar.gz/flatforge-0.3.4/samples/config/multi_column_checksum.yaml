@@ -1,0 +1,111 @@
+name: Multi-Column Checksum Example
+type: delimited
+description: A format demonstrating multi-column checksum validation
+delimiter: ","
+quote_char: "\""
+escape_char: "\\"
+newline: "\n"
+encoding: utf-8
+skip_blank_lines: true
+
+file_settings:
+  input_encoding: UTF-8
+  output_encoding: UTF-8
+
+# Global rules applied across all records
+global_rules:
+  - name: order_checksum
+    type: checksum
+    params:
+      validation_type: multi_column
+      columns:
+        - customer_id
+        - order_id
+        - amount
+      target_field: checksum
+      algorithm: SHA256
+      section: body
+
+sections:
+  - name: header
+    type: header
+    min_records: 1
+    max_records: 1
+    description: Header section
+    record:
+      name: header_record
+      description: Header record format
+      fields:
+        - name: record_type
+          position: 0
+          description: Record type indicator (H for header)
+          rules:
+            - type: choice
+              params:
+                choices: ["H"]
+        - name: file_id
+          position: 1
+          description: File identifier
+          rules:
+            - type: required
+            - type: string_length
+              params:
+                min_length: 1
+                max_length: 20
+        - name: row_count
+          position: 2
+          description: Number of data rows
+          rules:
+            - type: required
+            - type: numeric
+              params:
+                min_value: 0
+
+  - name: body
+    type: body
+    min_records: 0
+    description: Body section containing data records
+    identifier:
+      field: record_type
+      value: "D"
+    record:
+      name: data_record
+      description: Data record format
+      fields:
+        - name: record_type
+          position: 0
+          description: Record type indicator (D for data)
+          rules:
+            - type: choice
+              params:
+                choices: ["D"]
+        - name: customer_id
+          position: 1
+          description: Customer identifier
+          rules:
+            - type: required
+            - type: string_length
+              params:
+                min_length: 1
+                max_length: 20
+        - name: order_id
+          position: 2
+          description: Order identifier
+          rules:
+            - type: required
+            - type: string_length
+              params:
+                min_length: 1
+                max_length: 20
+        - name: amount
+          position: 3
+          description: Order amount
+          rules:
+            - type: required
+            - type: numeric
+              params:
+                min_value: 0.01
+                decimal_precision: 2
+        - name: checksum
+          position: 4
+          description: SHA256 checksum of other fields 

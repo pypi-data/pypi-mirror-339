@@ -1,0 +1,12 @@
+{
+    "ACTIVE": "A",
+    "PENDING": "P",
+    "COMPLETED": "C",
+    "FAILED": "F",
+    "CANCELLED": "X",
+    "REFUNDED": "R",
+    "VOID": "V",
+    "DECLINED": "D",
+    "EXPIRED": "E",
+    "PROCESSING": "PR"
+} 

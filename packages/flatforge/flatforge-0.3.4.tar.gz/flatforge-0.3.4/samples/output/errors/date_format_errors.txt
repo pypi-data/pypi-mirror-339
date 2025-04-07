@@ -1,0 +1,20 @@
+Record 2 in section body:
+Raw data: D,1001,John Smith,30-Feb-2023,US,75000.00,1000,Jane Doe
+Error: Field 'date_of_birth': Invalid date format. Expected format: %Y%m%d (value: '30-Feb-2023') [rule: date]
+
+Record 3 in section body:
+Raw data: D,1002,Alice Johnson,2023/02/15,CA,80000.00,1000,Jane Doe
+Error: Field 'date_of_birth': Invalid date format. Expected format: %Y%m%d (value: '2023/02/15') [rule: date]
+
+Record 5 in section body:
+Raw data: D,1004,Carol Brown,04-25-1995,AU,60000.00,1001,John Smith
+Error: Field 'date_of_birth': Invalid date format. Expected format: %Y%m%d (value: '04-25-1995') [rule: date]
+
+Record 6 in section body:
+Raw data: D,1005,David Miller,31-11-1988,DE,70000.00,1002,Alice Johnson
+Error: Field 'date_of_birth': Invalid date format. Expected format: %Y%m%d (value: '31-11-1988') [rule: date]
+
+Record 7 in section body:
+Raw data: D,1006,Eve Wilson,20231301,FR,72000.00,1002,Alice Johnson
+Error: Field 'date_of_birth': Invalid date format. Expected format: %Y%m%d (value: '20231301') [rule: date]
+

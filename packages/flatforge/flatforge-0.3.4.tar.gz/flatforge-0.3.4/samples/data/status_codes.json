@@ -1,0 +1,14 @@
+{
+    "AP": "Approved",
+    "IP": "In Process",
+    "PD": "Pending",
+    "RJ": "Rejected",
+    "VD": "Voided",
+    "RF": "Refunded",
+    "CA": "Cancelled",
+    "ER": "Error",
+    "UN": "Unknown",
+    "WA": "Waiting",
+    "PR": "Processing",
+    "CP": "Complete"
+} 

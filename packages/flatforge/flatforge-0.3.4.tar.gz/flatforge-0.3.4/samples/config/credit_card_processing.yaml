@@ -1,0 +1,136 @@
+name: Credit Card Processing
+type: delimited
+description: A format for credit card transaction data
+delimiter: ","
+quote_char: "\""
+escape_char: "\\"
+newline: "\n"
+encoding: utf-8
+skip_blank_lines: true
+
+file_settings:
+  input_encoding: UTF-8
+  output_encoding: UTF-8
+
+sections:
+  - name: header
+    type: header
+    min_records: 1
+    max_records: 1
+    description: Header section containing batch information
+    record:
+      name: header_record
+      description: Header record format
+      fields:
+        - name: record_type
+          position: 0
+          description: Record type indicator (H for header)
+          rules:
+            - type: choice
+              params:
+                choices: ["H"]
+        - name: batch_id
+          position: 1
+          description: Batch ID
+          rules:
+            - type: required
+            - type: string_length
+              params:
+                min_length: 1
+                max_length: 20
+        - name: timestamp
+          position: 2
+          description: Batch timestamp (YYYYMMDDHHmmss)
+          rules:
+            - type: required
+            - type: date
+              params:
+                format: "%Y%m%d%H%M%S"
+
+  - name: body
+    type: body
+    min_records: 0
+    description: Body section containing transaction records
+    identifier:
+      field: record_type
+      value: "T"
+    record:
+      name: transaction_record
+      description: Transaction record format
+      fields:
+        - name: record_type
+          position: 0
+          description: Record type indicator (T for transaction)
+          rules:
+            - type: choice
+              params:
+                choices: ["T"]
+        - name: card_number
+          position: 1
+          description: Credit card number
+          rules:
+            - type: required
+            - type: luhn
+              params:
+                strip_spaces: true
+                strip_hyphens: true
+                error_message: "Invalid credit card number"
+        - name: expiry_date
+          position: 2
+          description: Card expiry date (MMYY)
+          rules:
+            - type: required
+            - type: date
+              params:
+                format: "%m%y"
+        - name: cardholder_name
+          position: 3
+          description: Cardholder name
+          rules:
+            - type: required
+            - type: string_length
+              params:
+                max_length: 50
+        - name: transaction_id
+          position: 4
+          description: Transaction ID (GUID)
+          rules:
+            - type: guid
+        - name: amount
+          position: 5
+          description: Transaction amount
+          rules:
+            - type: required
+            - type: numeric
+              params:
+                min_value: 0.01
+                decimal_precision: 2
+        - name: status_code
+          position: 6
+          description: Transaction status code
+          rules:
+            - type: required
+            - type: string_length
+              params:
+                min_length: 1
+                max_length: 2
+        - name: status_description
+          position: 7
+          description: Transaction status description (derived from status_code)
+          rules:
+            - type: value_resolver
+              params:
+                source_field: status_code
+                target_field: status_description
+                mapping_file: ./samples/data/status_codes.json
+                default_value: "Unknown Status"
+        - name: masked_card
+          position: 8
+          description: Masked card number
+          rules:
+            - type: mask
+              params:
+                source_field: card_number
+                keep_first: 6
+                keep_last: 4
+                mask_char: "*" 

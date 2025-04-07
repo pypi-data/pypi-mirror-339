@@ -1,0 +1,60 @@
+
+name: Row Checksum Test
+type: delimited
+description: Test for row-based checksum validation
+delimiter: ","
+quote_char: "\"" 
+encoding: utf-8
+skip_blank_lines: true
+
+global_rules:
+  - name: row_checksum
+    type: checksum
+    params:
+      validation_type: row
+      target_field: checksum
+      algorithm: SHA256
+      section: body
+
+sections:
+  - name: header
+    type: header
+    min_records: 1
+    max_records: 1
+    description: Header section
+    record:
+      name: header_record
+      description: Header record format
+      fields:
+        - name: name
+          position: 0
+          description: Name field header
+        - name: email
+          position: 1
+          description: Email field header
+        - name: age
+          position: 2
+          description: Age field header
+        - name: checksum
+          position: 3
+          description: Checksum field header
+
+  - name: body
+    type: body
+    min_records: 0
+    record:
+      name: data_record
+      description: Data record format
+      fields:
+        - name: name
+          position: 0
+          description: Person's name
+        - name: email
+          position: 1
+          description: Email address
+        - name: age
+          position: 2
+          description: Age
+        - name: checksum
+          position: 3
+          description: SHA256 checksum of the entire row
