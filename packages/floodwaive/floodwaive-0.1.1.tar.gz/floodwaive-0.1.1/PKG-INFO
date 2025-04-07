@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: floodwaive
+Version: 0.1.1
+Summary: Library provision for development of FloodWaive products
+Home-page: https://github.com/floodwaive/floodwaive-library
+Author: FloodWaive Predictive Intelligence GmbH
+Author-email: welten@floodwaive.de
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
