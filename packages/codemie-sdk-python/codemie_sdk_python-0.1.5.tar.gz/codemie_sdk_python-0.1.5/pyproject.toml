@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "codemie-sdk-python"
+version = "0.1.5"
+description = "CodeMie SDK for Python"
+authors = [
+    "Vadym Vlasenko <vadym_vlasenko@epam.com>",
+]
+readme = "README.md"
+packages = [
+    { include = "codemie_sdk", from="src"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.31.0"
+pydantic = "^2.11.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.11.3"
+pytest-cov = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
