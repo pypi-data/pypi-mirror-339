@@ -1,0 +1,9 @@
+LICENSE
+setup.py
+GetLatestGamePrices/ExtractPriceData.py
+GetLatestGamePrices/__init__.py
+GetLatestGamePrices.egg-info/PKG-INFO
+GetLatestGamePrices.egg-info/SOURCES.txt
+GetLatestGamePrices.egg-info/dependency_links.txt
+GetLatestGamePrices.egg-info/requires.txt
+GetLatestGamePrices.egg-info/top_level.txt
