@@ -1,0 +1,7 @@
+requests
+platformdirs
+sentence-transformers
+faiss-cpu
+numpy
+transformers
+accelerate

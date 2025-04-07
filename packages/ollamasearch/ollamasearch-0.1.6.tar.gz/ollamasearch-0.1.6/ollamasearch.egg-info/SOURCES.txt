@@ -1,0 +1,14 @@
+README.md
+setup.py
+ollamasearch/__init__.py
+ollamasearch/app.py
+ollamasearch/functions.py
+ollamasearch/importdocs.py
+ollamasearch/search.py
+ollamasearch/simplesearch.py
+ollamasearch.egg-info/PKG-INFO
+ollamasearch.egg-info/SOURCES.txt
+ollamasearch.egg-info/dependency_links.txt
+ollamasearch.egg-info/entry_points.txt
+ollamasearch.egg-info/requires.txt
+ollamasearch.egg-info/top_level.txt

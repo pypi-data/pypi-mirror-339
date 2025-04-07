@@ -1,0 +1,2 @@
+[console_scripts]
+ollamasearch = ollamasearch.app:main
