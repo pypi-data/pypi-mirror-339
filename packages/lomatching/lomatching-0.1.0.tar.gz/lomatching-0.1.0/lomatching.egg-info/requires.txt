@@ -1,0 +1,14 @@
+numpy
+stim
+pymatching
+matplotlib
+
+[dev]
+pip-tools
+pytest
+black
+pytest-black
+flake8
+flake8-print
+pytest-flake8
+surface-sim

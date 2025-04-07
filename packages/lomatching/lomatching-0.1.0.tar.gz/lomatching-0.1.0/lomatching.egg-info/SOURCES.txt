@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+lomatching/__init__.py
+lomatching/decoder.py
+lomatching/greedy_algorithm.py
+lomatching.egg-info/PKG-INFO
+lomatching.egg-info/SOURCES.txt
+lomatching.egg-info/dependency_links.txt
+lomatching.egg-info/requires.txt
+lomatching.egg-info/top_level.txt
+tests/test_decoder.py
+tests/test_greedy_algorithm.py
+tests/test_tests.py
