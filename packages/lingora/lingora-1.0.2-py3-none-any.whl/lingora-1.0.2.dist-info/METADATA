@@ -1,0 +1,205 @@
+Metadata-Version: 2.4
+Name: lingora
+Version: 1.0.2
+Summary: A utility automating performing language transformations
+Author-email: Isaak Engineer <isaak@schloosser.com>
+License-Expression: AGPL-3.0-only
+Project-URL: Homepage, https://git.schloosser.net/lingora/lingora
+Project-URL: Issues, https://git.schloosser.net/lingora/lingora/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Localization
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer
+Requires-Dist: rich
+Requires-Dist: sanic
+Requires-Dist: openai
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+Requires-Dist: aiohttp
+Requires-Dist: jinja2
+Requires-Dist: websockets
+Requires-Dist: cyrtranslit>=1.1.1
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Dynamic: license-file
+
+# Lingora
+
+**Lingora** is an open source utility to automate language transformation tasks via plugins;
+
+## Overview
+
+Transformations currently supported:
+
+- **Translation**: a few basic AI access plugins, and you can write your own plugins.
+- **Transliteration**: transliterate between Cyrillic and Latin scripts; depends on the [cyrtranslit](https://github.com/isaak/cyrtranslit) library.
+
+Formats currently supported:
+
+- **JSON**: for UI string files based on [i18next](https://www.i18next.com/) standard.
+- **LaTeX**: content files [excluding all the preamble and the rest of additional data].
+
+## Features
+
+- Translate JSON UI string files to any supported language
+- Plugin-based architecture for different AI translation services
+- Currently supports OpenAI's GPT models and includes a simulator plugin for testing
+- Preserves JSON structure and folder hierarchy
+- Progress tracking during translation
+- Web-based reviewer interface for comparing and editing translations
+- Supports recursive directory scanning for JSON files
+- LaTeX file transliteration between Latin and Cyrillic scripts
+
+## Installation
+
+1. Clone this repository
+2. Install with pipx:
+```bash
+pipx install .
+```
+
+Or install directly from PyPI (once published):
+```bash
+pipx install lingora
+```
+
+## Configuration
+
+For the OpenAI plugin, create a `.env` file in the project root with:
+```
+OPENAI_API_KEY=your_api_key_here
+OPENAI_MODEL=gpt-3.5-turbo  # Optional, defaults to gpt-3.5-turbo
+```
+
+## Usage
+
+### UI String Translation
+
+```bash
+# Translate UI strings from English to German
+lingora ui translate en de --input-dir ./locales/en --plugin-name simulator
+```
+
+This will:
+1. Read all JSON files from the input directory
+2. Generate an intermediate XML representation
+3. Translate the content to German
+4. Save the translated files in the target language directory maintaining the original structure
+
+### LaTeX Transliteration
+
+```bash
+# Transliterate a LaTeX file from Latin to Cyrillic script
+lingora latex transliterate -l sr-Latn input.tex output.tex
+```
+
+This will:
+1. Read the input LaTeX file
+2. Transliterate the content between Latin and Cyrillic scripts
+3. Save the transliterated content to the output file
+
+### Launch Translation Reviewer
+
+```bash
+lingora reviewer ./locales/en ./output/de
+```
+
+This launches a web-based interface for:
+- Comparing source and translated strings
+- Editing translations
+- Saving changes directly to the target files
+
+### List Available Plugins
+
+```bash
+lingora list-plugins
+```
+
+## Plugin System
+
+The tool uses a plugin architecture to support different AI translation services. Each plugin must implement the `TranslationPlugin` interface defined in `plugins/base.py`.
+
+### Creating a New Plugin
+
+1. Create a new file in the `plugins` directory
+2. Implement the `TranslationPlugin` interface
+3. Register your plugin in `plugins/__init__.py`
+
+Example plugin structure:
+```python
+from .base import TranslationPlugin
+
+class MyTranslationPlugin(TranslationPlugin):
+    def translate(self, text: str, target_lang: str) -> str:
+        # Implement translation logic
+        pass
+    
+    def get_name(self) -> str:
+        return "my_plugin"
+    
+    def get_description(self) -> str:
+        return "Description of my plugin"
+    
+    def is_configured(self) -> bool:
+        return True  # Check if plugin is properly configured
+```
+
+## Contributing
+
+Contributions are welcome!
+
+### Future Plans
+
+- #Feature: logic for handling language codes
+- #Housekeeping: extensive documentation and usecase scenarios
+- #Architecture: improvements regarding modularity and extensibility of the code base
+- #Features: adding support for specific file types
+  - CSV
+  - TOML
+  - XML (HTML)
+  - Markdown
+- #Ideas: Suggestion for additional language transformation services?!
+
+## Declarations
+
+### Credits
+
+#### Artificial Intelligence
+
+- Python code for translation motor regarding _i811_ JavaScript library was almost entirely done by [Cursor](https://www.cursor.com/en) via extremely descriptive prompts [as an experiment].
+- The name was chosen among recommendations in a brainstorming session by [DeepSeek](https://www.deepseek.com/) [as an experiment]. 
+- The merger between the version zero of this code base and the project [LaTexTranslit](https://git.schloosser.net/studiwerkzeuge/latextranslit) was carried out by heavily relying on [Windsurf Editor](https://codeium.com/windsurf), a project by [Codeium](https://codeium.com/), as an experiment to compare _Cursor_ with _Codium_.
+
+### License
+
+    Lingora, an open source utility automating performing language 
+    transformations on documents though artificial intellegience  
+    Copyright (C) 2025 Isaak Engineer
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published
+    by the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
