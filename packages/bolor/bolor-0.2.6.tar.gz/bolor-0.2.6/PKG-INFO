@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: bolor
+Version: 0.2.6
+Summary: Local LLM-based code repair tool with self-healing capabilities
+Home-page: UNKNOWN
+Author: Bolorerdene Bundgaa
+Author-email: hi@photoxpedia.studio
+License: MIT
+Keywords: code-fix,debugging,llm,phi-2,repair,bug-fix
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Debuggers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+    Bolor is a local LLM-based code repair tool with self-healing capabilities.
+    It can scan codebases for issues, fix detected problems, and generate code from natural language descriptions.
+    The tool is designed to work locally without requiring an internet connection.
+
+    ## Key Features
+
+    - **Code Scanning**: Scan your code for issues and get suggestions for improvements
+    - **Code Generation**: Generate code from natural language prompts
+    - **Local Operation**: Works offline with local models
+
+    ## Commands
+
+    - `bolor update` - Download or update local GGUF models
+    - `bolor check <file>` - Analyze a file and suggest fixes
+    - `bolor explain <file>` - Explain what the code does using LLM
+    - `bolor optimize <file>` - Optimize code for better performance or readability
+    - `bolor document <file>` - Add or improve documentation in code
+    - `bolor config` - Configure Bolor settings
+    
+
