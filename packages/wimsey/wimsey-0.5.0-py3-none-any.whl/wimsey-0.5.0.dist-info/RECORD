@@ -1,0 +1,12 @@
+wimsey/__init__.py,sha256=EnT3YOmjwlXOGfyaX4tJuzW0COyrAlqXOKnlCo39v0I,125
+wimsey/_version.py,sha256=LBK46heutvn3KmsCrKIYu8RQikbfnjZaj2xFrXaeCzQ,22
+wimsey/config.py,sha256=HLnoezbJIJvcvv8nsIlMw_bpenlTgTfhMyLbsEF_dGA,2609
+wimsey/dataframe.py,sha256=G32nUppVa_cVjRbGXPb74wDNv_2Wtxx3TQNAk50cPpg,3661
+wimsey/execution.py,sha256=TW4u4o8oRa9l8Ma4BbazY1h0MpzE-FTfp-eH8G3Sos4,2703
+wimsey/profile.py,sha256=RYiyoR2TOdFPtuaPeEHYm4zxuf6OTMTgytvM79ku9NU,7711
+wimsey/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wimsey/tests.py,sha256=M8hsnwv32uyh7u1_JevnRnYWR6_bYZyYwXirpIPc628,15559
+wimsey-0.5.0.dist-info/METADATA,sha256=FbqDyTjbG2eEhPUIuFe3IU2tQYbI3zgYp9NSIPkemZY,4068
+wimsey-0.5.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+wimsey-0.5.0.dist-info/licenses/LICENSE,sha256=E2SZQ-S4Rzwhj-mjzNTsnEuuvFQl3McLN-TDTdAfzp0,1060
+wimsey-0.5.0.dist-info/RECORD,,
