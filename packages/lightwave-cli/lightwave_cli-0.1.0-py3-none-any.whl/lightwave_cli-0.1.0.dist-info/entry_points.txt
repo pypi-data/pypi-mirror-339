@@ -1,0 +1,2 @@
+[console_scripts]
+lightwave = lightwave_cli.cli.main:cli
