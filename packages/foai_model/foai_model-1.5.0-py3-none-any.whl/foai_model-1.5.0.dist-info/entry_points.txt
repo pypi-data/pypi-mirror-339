@@ -1,0 +1,4 @@
+[console_scripts]
+lint=scripts.scripts:run_linter
+train=foai_model.train.train:main
+
