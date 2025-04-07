@@ -1,0 +1,8 @@
+webpack_pages/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+webpack_pages/jinja2ext.py,sha256=tmMQggbICg3pZ4ist8h7aQ084c3-whtR2Q4drpuuVSg,810
+webpack_pages/pageassetfinder.py,sha256=OELlJSAnJknm3k-CEjkXChmJ0ES7rD-b86NRYrqlCuE,3100
+webpack_pages/templatetags.py,sha256=kAMEnGDowo-KLYC-ZdcELHFbDnVIa-0rqUPVdgU_xEE,5906
+webpack_pages/utils.py,sha256=3z6jyBnZwkEYjhZObutmtlkkT7WXG5H5lRZ1P9PGUOc,724
+django_webpack_pages-0.1.9.dist-info/METADATA,sha256=esP04qowjI5gUlkSJMte1wLcbjORgYBzOSbE_90zx2o,3029
+django_webpack_pages-0.1.9.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+django_webpack_pages-0.1.9.dist-info/RECORD,,
