@@ -1,0 +1,14 @@
+py_magister/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py_magister/access_manager.py,sha256=l4_-QxKFEPuZ1BifgpdZTHxB0J91O4Whn5jukTbPk9c,17009
+py_magister/apps.py,sha256=2f55Igke22S3fBs0cTX-Q_t4hEaUjMfwmEgPqk8vmsM,153
+py_magister/models.py,sha256=u_wXj-ZUjamKh-Ar28CAu5LiCUhZAwt9ffUbjbmjuG8,1355
+py_magister/core/__init__.py,sha256=bs4huXAqCZrL1eKMTuFLlgzAFRF9X7B10jtptRODZds,897
+py_magister/core/exceptions.py,sha256=v-nXC-xku91sn50bCUrZkuIf4SF6SEwJiyuryPbj-jI,467
+py_magister/core/models.py,sha256=OEgKfV-llrZfA0naCrFCyoI9OfOhVP1vaLDiJRoVXzU,400
+py_magister/core/schema_access.py,sha256=vANb1w4UtsiiMor6r2jYccpaUFLE1whj-1w74TPQHW4,1596
+py_magister/core/utils.py,sha256=EJA4X9pCkX1_V-a49Kn9UkkBYhqwdmqKeReC7wGlpgM,6827
+py_magister-0.0.21.dist-info/licenses/LICENSE,sha256=BjhlWqvFy00uKpH9Bi9PkXYkmXCFD6JQFtAtBJHa2CM,1064
+py_magister-0.0.21.dist-info/METADATA,sha256=m4HzK_zVj1Ip8Cq5AR6GYgGyXthIUaMaYBWq1PUICgE,10203
+py_magister-0.0.21.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+py_magister-0.0.21.dist-info/top_level.txt,sha256=fvhdAgpfBASYQJU4M_TkfKpmPFQKUSjJP38apnDT5y0,12
+py_magister-0.0.21.dist-info/RECORD,,
