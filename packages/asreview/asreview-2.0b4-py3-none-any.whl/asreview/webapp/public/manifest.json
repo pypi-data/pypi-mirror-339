@@ -1,0 +1,31 @@
+{
+  "short_name": "ASReview LAB",
+  "name": "ASReview LAB",
+  "description": "ASReview LAB accelerates systematic reviews by using machine learning to prioritize records for screening.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#7a6958",
+  "background_color": "#fffcf7",
+  "theme_color_dark": "#a69c8b",
+  "background_color_dark": "#16130b",
+  "lang": "en",
+  "categories": ["productivity", "education", "science"],
+  "shortcuts": [
+    {
+      "name": "Start New Review",
+      "short_name": "New Review",
+      "description": "Start a new systematic review",
+      "url": "/reviews",
+      "icons": [
+        { "src": "shortcut-icon.png", "sizes": "192x192", "type": "image/png" }
+      ]
+    }
+  ]
+}
