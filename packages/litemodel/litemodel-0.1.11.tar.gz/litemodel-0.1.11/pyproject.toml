@@ -1,0 +1,31 @@
+[project]
+name = "litemodel"
+version = "0.1.11"
+description = "Lightweight extensible ORM for SQLite"
+readme = "README.md"
+authors = [
+    { name = "Joe Pasquantonio", email = "joe.pasquantonio@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "aiosqlite>=0.20.0",
+    "jinja2>=3.1.4",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+    "aiosqlite>=0.17",
+    "pytest-cov>=4.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"  # Enables async testing
+pythonpath = ["src"]   # Ensures src/litemodel is importable
+testpaths = ["tests"]  # Where to find tests
+addopts = "--cov=src/litemodel --cov-report=html"
