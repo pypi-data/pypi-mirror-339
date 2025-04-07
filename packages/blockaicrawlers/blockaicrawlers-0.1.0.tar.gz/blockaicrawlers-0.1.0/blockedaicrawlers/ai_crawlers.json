@@ -1,0 +1,26 @@
+{
+    "blacklist": {
+        "AI2Bot": "AI2Bot",
+        "Anthropic AI": "anthropic-ai",
+        "Applebot": "Applebot",
+        "Applebot Extended": "Applebot-Extended",
+        "BingBot": "BingBot",
+        "Bytespider": "Bytespider",
+        "CCBot": "CCBot",
+        "ChatGPT-User": "ChatGPT-User",
+        "Claude Web": "claude-web",
+        "ClaudeBot": "ClaudeBot",
+        "Cohere AI": "cohere-ai",
+        "DuckAssistBot": "DuckAssistBot",
+        "GPTBot": "GPTBot",
+        "Google Extended": "Google-Extended",
+        "OAI-SearchBot": "OAI-SearchBot",
+        "PerplexityBot": "PerplexityBot",
+        "YouBot": "YouBot"
+},
+    "whitelist": {
+      "GoogleBot": "Googlebot",
+      "BingPreview": "BingPreview"
+    }
+  }
+  

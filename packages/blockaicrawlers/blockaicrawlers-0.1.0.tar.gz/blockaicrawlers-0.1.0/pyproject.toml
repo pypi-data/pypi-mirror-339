@@ -1,0 +1,25 @@
+[project]
+name = "blockaicrawlers"
+version = "0.1.0"
+description = "A Flask extension to detect and block AI crawlers based on User-Agent headers."
+authors = [{ name="Shreyan Basu Ray", email="basurayshreyan@gmail.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = [
+    "flask>=2.0",
+    "flask-limiter>=3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "rich",
+]
+
+[project.urls]
+Homepage = "https://github.com/Shreyan1/Block-AICrawlers"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

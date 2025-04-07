@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+pyproject.toml
+blockaicrawlers.egg-info/PKG-INFO
+blockaicrawlers.egg-info/SOURCES.txt
+blockaicrawlers.egg-info/dependency_links.txt
+blockaicrawlers.egg-info/requires.txt
+blockaicrawlers.egg-info/top_level.txt
+blockedaicrawlers/__init__.py
+blockedaicrawlers/ai_crawlers.json
+blockedaicrawlers/blocker.py
+tests/test_blocker.py
