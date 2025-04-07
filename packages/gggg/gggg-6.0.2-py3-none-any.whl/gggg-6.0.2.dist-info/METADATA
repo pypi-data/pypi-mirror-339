@@ -1,0 +1,6 @@
+Metadata-Version: 2.2
+Name: gggg
+Version: 6.0.2
+Requires-Dist: requests
+Requires-Dist: rich
+Dynamic: requires-dist
