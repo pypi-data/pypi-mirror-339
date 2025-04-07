@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bedrock-bio"
+version = "0.0"
+description = "Coming soon"
+readme = "README.md"
+authors = [ { name = "Liam Abbott", email = "liam.e.abbott@gmail.com" } ]
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "torch",
+  "torchvision",
+  "torchaudio"
+]
+
+[project.optional-dependencies] 
+dev = [
+  "build",
+  "twine"
+]
+
+[project.scripts]
+bb = "bedrock_bio.main:main"
+

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/bedrock_bio/__init__.py
+src/bedrock_bio/main.py
+src/bedrock_bio.egg-info/PKG-INFO
+src/bedrock_bio.egg-info/SOURCES.txt
+src/bedrock_bio.egg-info/dependency_links.txt
+src/bedrock_bio.egg-info/entry_points.txt
+src/bedrock_bio.egg-info/requires.txt
+src/bedrock_bio.egg-info/top_level.txt
