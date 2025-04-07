@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: distributed_tools_bonc
+Version: 0.1.2b1
+Summary: 基于Redis的分布式工具包
+Requires-Dist: redis==5.2.1
+Dynamic: requires-dist
+Dynamic: summary
