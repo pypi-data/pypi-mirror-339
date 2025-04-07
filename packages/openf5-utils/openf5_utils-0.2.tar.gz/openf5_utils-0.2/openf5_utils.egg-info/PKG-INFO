@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: openf5-utils
+Version: 0.2
+Summary: Utilities for OpenF5 TTS
+Home-page: https://github.com/fakerybakery/openf5-utils
+Author: mrfakename
+Author-email: me@mrfake.name
+Description-Content-Type: text/markdown
+Requires-Dist: gruut
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+# OpenF5 Utils
+
+Not designed to be used as a standalone library.
+
+```bash
+pip install openf5-utils
+```
