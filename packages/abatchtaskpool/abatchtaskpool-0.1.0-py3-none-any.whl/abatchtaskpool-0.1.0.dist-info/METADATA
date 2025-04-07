@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: abatchtaskpool
+Version: 0.1.0
+Summary: Python batch task pool with asyncio support
+Home-page: https://github.com/weedge/abatchtaskpool
+Author: weedge
+Author-email: weege007@gmail.com
+License: BSD 3-Clause
+Project-URL: Changes, https://github.com/weedge/abatchtaskpool/releases
+Project-URL: Code, https://github.com/weedge/abatchtaskpool
+Project-URL: Issue tracker, https://github.com/weedge/abatchtaskpool/issues
+Keywords: batch,task,pool,asyncio
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Async Batch Engine
+
+An asynchronous batch processing engine for Python.
+
+## Installation
+
+```shell
+pip install abatchtaskpool
+```
+
+## Usage
+```python
+from typing import Any, List
+import asyncio
+
+from abatchtaskpool.async_batch_engine import AsyncBatchEngine
+
+async def example_processing_function(inputs: List[Any]) -> List[Any]:
+    """示例批处理函数"""
+    await asyncio.sleep(1)  # 模拟处理耗时
+    return [f"Processed_{item}" for item in inputs]
+
+async def main():
+    # 创建引擎实例
+    engine = AsyncBatchEngine(
+        processing_function=example_processing_function,
+        batch_size=5,
+        wait_timeout=0.5,
+        num_workers=2
+    )
+
+    # 提交任务并获取结果
+    tasks = [
+        engine.add_request(f"task_{i}", f"req_{i}")
+        for i in range(10)
+    ]
+    results = await asyncio.gather(*tasks)
+    
+    # 输出结果
+    for result in results:
+        print(f"Result: {result}")
+
+    # 停止引擎
+    await engine.stop()
+
+if __name__ == "__main__":
+    asyncio.run(main())
+
+```

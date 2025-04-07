@@ -1,0 +1,8 @@
+abatchtaskpool/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+abatchtaskpool/async_batch_engine.py,sha256=T_9vNILHCtOgGFBmInkHeYiWu0SHLkhWqCVE7JXuYX4,4890
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_async_batch_engine.py,sha256=XQGynJ2_mSUnWHRl6SYt55Zs5KehfB9hWdaABuOr5II,1670
+abatchtaskpool-0.1.0.dist-info/METADATA,sha256=wKK2tP58GJULJpq7N4mYztq60N7EYcJnuxiRnQtV3zw,1577
+abatchtaskpool-0.1.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+abatchtaskpool-0.1.0.dist-info/top_level.txt,sha256=HwGX9qljETWywOyg7JznUQyFMzC9CJEAu30B_RGSQJU,20
+abatchtaskpool-0.1.0.dist-info/RECORD,,
