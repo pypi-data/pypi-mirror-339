@@ -1,0 +1,16 @@
+pint
+numpy
+scipy
+pypardiso
+casadi
+pyyaml
+
+[dev]
+Sphinx
+sphinxcontrib-bibtex
+sphinx-copybutton
+pytest
+pytest-doctestplus
+matplotlib
+build
+twine
