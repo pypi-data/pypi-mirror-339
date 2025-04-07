@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: spectoml
+Version: 0.1.0
+Summary: Create specifications for validating TOML files
+Project-URL: Homepage, https://sr.ht/~chrisbouchard/spectoml/
+Project-URL: Repository, https://git.sr.ht/~chrisbouchard/spectoml
+Author-email: Chris Bouchard <chris@upliftinglemma.net>
+License-Expression: LGPL-3.0-or-later
+License-File: COPYING.md
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+# `spectoml`
+
+Create specifications for validating TOML files
+
+---
+
+*This project is still very much a work in progress. Proper documentation to follow.*

@@ -1,0 +1,17 @@
+spectoml/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spectoml/_util.py,sha256=BBITEx2PQ0LtoiMx_zJTUNxUuFAOTNAB2h6GRsVeHKQ,108
+spectoml/base.py,sha256=YSejy3X52dUbRpM-pXE4DPibq3EcMLHmoddU_yU5olc,5415
+spectoml/callable.py,sha256=hfnjRKggAZjji1D005FR2LxgIF9__-VJEaHPphlEcdg,2079
+spectoml/errors.py,sha256=tMfmNoBbdQA8GzS4JhBj0JsYrcc2rgU6kka-WtT2l0o,437
+spectoml/keyed.py,sha256=_WXaOMN8dlf_zfiGqg9y9LGv1Ak2p5mEhr3fMrLIP14,2567
+spectoml/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spectoml/source.py,sha256=2-5MbQvvP7EiaohbxrPQrE9Ay4Ho1U5Eul3a_4QlAlc,3080
+spectoml/value.py,sha256=2h07tsptID1Vt0B8jsyB7xJZDFmQUR3966bAp--i-6s,1138
+spectoml/specs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spectoml/specs/arrays.py,sha256=PXy7XWPW7aUR_TiI6sUn_hWz27l0gfyA3afu-p9WTVE,3855
+spectoml/specs/tables.py,sha256=Rnpje2FUKy4h_-CrOqDGIAM9zyz5qdB8zMSZ50N3t_s,1464
+spectoml/specs/values.py,sha256=Dz7ZmOeiN7X6Qo7NoY6DqK07jssvErBK6yUQkKt-p5Y,3104
+spectoml-0.1.0.dist-info/METADATA,sha256=jH7LrBP78W1Y9DD7zHxHrFyeaE0NZ5gujUbWfi51htY,576
+spectoml-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+spectoml-0.1.0.dist-info/licenses/COPYING.md,sha256=zfXyi_cMnW2CRuY9eAQyCiSvFLG3n8OpQEnsj7x2Eyk,7626
+spectoml-0.1.0.dist-info/RECORD,,
