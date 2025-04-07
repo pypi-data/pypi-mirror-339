@@ -1,0 +1,7 @@
+python_simhash-0.1.0.dist-info/METADATA,sha256=Zs3ztTE3_MfhRcucjzRjjr7dH7nJUQjoiA3ZZcUR2Ho,1560
+python_simhash-0.1.0.dist-info/WHEEL,sha256=aeE5G8ggYi_EBv6yuvByZute-TRqdm323tp2mfizEXM,106
+simhash/__init__.py,sha256=KGvZJKhpDC-_hLEzubadKHtVFE6D3aOhRxxKyB96c0A,106
+simhash/_simhash.pyi,sha256=OAFq31F2zL9g-7AJoNcIsCr4pRobFefyRLH79wDRH40,2114
+simhash/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simhash/_simhash.abi3.so,sha256=P3-6qeR4s7Lhmfj9ccFamp2zV5wA5F3MhjiQoBd8Zvc,917080
+python_simhash-0.1.0.dist-info/RECORD,,
