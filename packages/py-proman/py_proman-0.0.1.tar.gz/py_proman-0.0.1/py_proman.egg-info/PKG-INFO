@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: py-proman
+Version: 0.0.1
+Summary: A programmer-friendly python process manager
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: fastapi>=0.70.0
+Requires-Dist: uvicorn>=0.15.0
+Requires-Dist: pyyaml>=6.0
+Provides-Extra: dev
+Requires-Dist: ipython>=8.15.0; extra == "dev"
+Requires-Dist: pytest>=8.2.2; extra == "dev"
+Requires-Dist: coverage>=7.3.2; extra == "dev"
+Requires-Dist: black>=23.3.0; extra == "dev"
+Dynamic: license-file
