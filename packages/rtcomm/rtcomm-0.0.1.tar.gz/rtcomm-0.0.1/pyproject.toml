@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rtcomm"
+version = "0.0.1"
+authors = [
+  { name="MusaddiqueHussain Jahagirdar", email="musaddiquehussainlabs@gmail.com" },
+]
+maintainers = [
+  {name = "MusaddiqueHussain Jahagirdar", email = "musaddiquehussainlabs@gmail.com"}
+]
+description = "A scalable, distributed real-time communication hub using WebSockets and JSON encoding, inspired by SignalR."
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+requires-python = ">=3.9"
+keywords = ["WebSocket", "SignalR", "real-time", "FastAPI", "RTComm", "pubsub"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Communications :: Chat",
+    "Topic :: Internet :: WWW/HTTP :: WSGI :: Server",
+    "Framework :: AsyncIO",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11"
+]
+
+dependencies = [
+    "fastapi>=0.100.0",
+    "websockets>=11.0.0",
+    "pydantic>=2.0",
+    "uvicorn[standard]>=0.23.0"
+]
+
+
+[project.urls]
+Homepage = "https://github.com/MusaddiqueHussainLabs/rtcomm_package"
+Documentation = "https://github.com/MusaddiqueHussainLabs/rtcomm_package/wiki"
+Source = "https://github.com/MusaddiqueHussainLabs/rtcomm_package"
+Issues = "https://github.com/MusaddiqueHussainLabs/rtcomm_package/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
