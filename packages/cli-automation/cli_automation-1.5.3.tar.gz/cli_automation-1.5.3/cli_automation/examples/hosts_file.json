@@ -1,0 +1,12 @@
+{
+   "devices": [
+      {
+         "host": "X.X.X.X",
+         "username": "user",
+         "password": "password",
+         "secret": "secret",
+         "device_type": "type",
+         "global_delay_factor": "null"
+      }
+   ]
+}
