@@ -1,0 +1,2 @@
+[console_scripts]
+dora-mujoco-husky = dora_mujoco_husky.main:main
