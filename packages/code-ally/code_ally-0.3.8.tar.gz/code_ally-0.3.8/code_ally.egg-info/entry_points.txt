@@ -1,0 +1,2 @@
+[console_scripts]
+ally = code_ally.main:main
