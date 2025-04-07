@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: arcticapi
+Version: 0.0.1
+Summary: A Python wrapper for arcticapi.com, an API used by public transport operators across the UK.
+Author-email: Dan Raper <git@danr.uk>
+License: MIT
+Project-URL: Homepage, https://github.com/dan-r/arcticapipy
+Project-URL: Bug Tracker, https://github.com/dan-r/arcticapipy/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp>=3.0.0
+Dynamic: license-file
+
+# arcticapipy
+
+A Python wrapper for arcticapi.com, an API used by public transport operators across the UK.
+
+## Known operators
+- Bluestar
+- Nottingham City Transport
+- Brighton & Hove Buses

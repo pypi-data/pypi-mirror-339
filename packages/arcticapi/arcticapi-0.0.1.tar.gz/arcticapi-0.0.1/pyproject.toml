@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arcticapi"
+version = "0.0.1"
+authors = [
+  { name="Dan Raper", email="git@danr.uk" },
+]
+description = "A Python wrapper for arcticapi.com, an API used by public transport operators across the UK."
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License"
+]
+dependencies = [
+    "aiohttp >= 3.0.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/dan-r/arcticapipy"
+"Bug Tracker" = "https://github.com/dan-r/arcticapipy/issues"
