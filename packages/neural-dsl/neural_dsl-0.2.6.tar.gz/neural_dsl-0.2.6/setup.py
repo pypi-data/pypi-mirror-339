@@ -1,0 +1,56 @@
+# setup.py
+from setuptools import setup, find_packages
+
+setup(
+    name="neural-dsl",
+    version="0.2.6",
+    packages=find_packages(where="."),
+    package_dir={"": "."},
+    install_requires=[
+        "click",
+        "dash",
+        "dash-bootstrap-components",
+        "flask",
+        "flask-socketio",
+        "graphviz",
+        "lark",
+        "matplotlib",
+        "networkx",
+        "numpy",
+        "plotly",
+        "psutil",
+        "pytest",
+        "torch",
+        "pygithub",
+        "pyyaml",
+        "selenium",
+        "optuna",
+        "fastapi",
+        "python-dotenv",
+        "webdriver-manager",
+        "tensorflow",
+        "huggingface_hub",
+        "transformers",
+        "torchvision",
+        "multiprocess",
+        "pysnooper",
+        "onnx",
+        "flask-cors",
+        "flask-httpauth"
+    ],
+    entry_points={
+        "console_scripts": ["neural=neural.cli:cli"]
+    },
+    author="Lemniscate-SHA-256/SENOUVO Jacques-Charles Gad",
+    author_email="Lemniscate_zero@proton.me",
+    description="A domain-specific language and debugger for neural networks",
+    long_description=open("README.md").read() + "\n\n**Note**: See v0.2.6 release notes for latest fixes and improvements!",
+    long_description_content_type="text/markdown",
+    url="https://github.com/Lemniscate-SHA-256/Neural",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires=">=3.8",
+)
