@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2025 Stefan Helmert <stefan@entroserv.de>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+[tool.poetry]
+name = "stl2step"
+version = "v0.1.2"
+description = "Non-trivial conversion of STL files into STEP files."
+authors = ["Stefan Helmert <stefan@entroserv.de>"]
+license = "AGPLv3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "^1.23.5"
+numpy-stl = "^3.1.1"
+cadquery = "^2.4.0"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.2.6"
+black = "^24.4.2"
+isort = "^5.13.2"
+pytest = "^8.3.2"
+reuse = "^5.0.2"
+
+[tool.isort]
+line_length = 79
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
