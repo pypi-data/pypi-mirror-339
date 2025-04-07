@@ -1,0 +1,14 @@
+elinor/__init__.py,sha256=WafUP2BpY9omZPEysLxMpYDiXdyK393CJVMJNNm8GfA,146
+elinor/ai/__init__.py,sha256=0J8s_P0LstCvOhoS2pPCO8dpUExZqZfH3E0rtZvSIHk,35
+elinor/ai/model_summary.py,sha256=4bOI_J2Ph-Uc8tywnJdtGSgdJhLI_pI4O19yrMzhqEo,2539
+elinor/cv/__init__.py,sha256=Nn-CxUxL02-90HWj2IrLW_b55kZRjMYknAnGrckOD_g,58
+elinor/cv/pil_str.py,sha256=oSGTzIk3wxhxr4NFBtnkD6-7n6EWOIZzG29a6tJcn0c,524
+elinor/data/__init__.py,sha256=dFW4a2vzN-TgmrJjbPqZZDNK_ndqrkM5XYc7mnj1x1Y,44
+elinor/data/count_files.py,sha256=IhCcoPoZBgZXKksb2iVFgzoVY7GWYCJY4wMDN7gxzb0,1918
+elinor/dataset/PHOENIX_2014_T.py,sha256=Rwn52nN-J-VozX6Sldh8ywaBiIhVs_Ldxt_5rqhYW9I,3003
+elinor/dataset/__init__.py,sha256=bg7Ec47rFFXwDQoQlRH0S6Felsk124YlTBRLnwkK3vQ,52
+elinor-0.0.4.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+elinor-0.0.4.dist-info/METADATA,sha256=vAdMYsyZ4gfaii1C46swgZMCcbAS8k9sv-PK1w9gmSc,371
+elinor-0.0.4.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+elinor-0.0.4.dist-info/top_level.txt,sha256=Q98s2wJNEnD3IhMbq9CuaWam2ECveTAJffGCo3qOLBc,7
+elinor-0.0.4.dist-info/RECORD,,
