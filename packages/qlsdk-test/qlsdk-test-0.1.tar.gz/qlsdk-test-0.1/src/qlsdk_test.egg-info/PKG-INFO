@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: qlsdk-test
+Version: 0.1
+Provides-Extra: ar4m
+Provides-Extra: c64r
+Provides-Extra: x8
