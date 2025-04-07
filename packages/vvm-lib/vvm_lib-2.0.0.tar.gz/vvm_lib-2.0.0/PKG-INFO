@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: vvm_lib
+Version: 2.0.0
+Summary: my frequently used functions
+Home-page: https://github.com/VazhikVM/vvm_lib
+Author: vvazhinskiy
+Author-email: v.vazhinskiy@yandex.ru
+Requires-Dist: pandas
