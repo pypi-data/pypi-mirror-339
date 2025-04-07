@@ -1,0 +1,22 @@
+[project]
+name = "puke3615-weather-cli"
+version = "0.1.0"
+description = "一个简单的天气查询命令行工具"
+authors = [
+    { name = "Your Name", email = "your.email@example.com" }
+]
+dependencies = [
+    "requests>=2.31.0",
+    "python-dotenv>=1.0.0",
+]
+requires-python = ">=3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+weather = "weather_cli.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/weather_cli"]
