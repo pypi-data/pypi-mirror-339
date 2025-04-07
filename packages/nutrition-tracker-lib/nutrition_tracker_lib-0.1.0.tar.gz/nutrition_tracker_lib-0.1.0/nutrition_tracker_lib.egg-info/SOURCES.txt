@@ -1,0 +1,8 @@
+setup.py
+nutrition_tracker_lib/__init__.py
+nutrition_tracker_lib/tracker.py
+nutrition_tracker_lib.egg-info/PKG-INFO
+nutrition_tracker_lib.egg-info/SOURCES.txt
+nutrition_tracker_lib.egg-info/dependency_links.txt
+nutrition_tracker_lib.egg-info/requires.txt
+nutrition_tracker_lib.egg-info/top_level.txt
