@@ -1,0 +1,2198 @@
+{
+  "structure": {
+    "conventions": {
+      "Base URL Pattern": "`https://api.{domain}.{tld}/v1/`",
+      "Authentication": "JWT tokens via Bearer authentication",
+      "Content Type": "JSON for request and response bodies",
+      "Versioning": "URL-based versioning with `v1`, `v2`, etc.",
+      "Error Format": "Standardized error responses with code, message, and details",
+      "Response Envelope": "All responses include status, data, and meta fields",
+      "Documentation": "OpenAPI/Swagger documentation available at `/docs`"
+    }
+  },
+  "authentication": {
+    "Public Endpoints": [],
+    "User Authentication": [],
+    "Service Authentication": [],
+    "Webhook Authentication": []
+  },
+  "endpoints": {
+    "Central Authentication (createos.io)": {
+      "base_url": "https://auth.createos.io/v1/",
+      "endpoints": [
+        {
+          "method": "POST",
+          "endpoint": "`/login/`",
+          "description": "Authenticate user credentials",
+          "authentication": "None",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/logout/`",
+          "description": "Invalidate user session",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/refresh/`",
+          "description": "Refresh authentication token",
+          "authentication": "Refresh Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/verify/`",
+          "description": "Verify token validity",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/register/`",
+          "description": "Register new user",
+          "authentication": "None",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/password/reset/`",
+          "description": "Request password reset",
+          "authentication": "None",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/password/change/`",
+          "description": "Change password",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/password/forgot/`",
+          "description": "Forgot password flow",
+          "authentication": "None",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/password/validate/`",
+          "description": "Validate password strength",
+          "authentication": "None",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/2fa/enable/`",
+          "description": "Enable two-factor auth",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/2fa/disable/`",
+          "description": "Disable two-factor auth",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/2fa/verify/`",
+          "description": "Verify 2FA code",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/2fa/backup/`",
+          "description": "Generate backup codes",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/2fa/recovery/`",
+          "description": "Recovery options",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/sessions/list/`",
+          "description": "List active sessions",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/sessions/revoke/`",
+          "description": "Revoke specific session",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/sessions/revoke-all/`",
+          "description": "Revoke all sessions",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/sessions/info/`",
+          "description": "Get session information",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/oauth/providers/`",
+          "description": "List OAuth providers",
+          "authentication": "None",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/oauth/{provider}/login/`",
+          "description": "Initialize OAuth flow",
+          "authentication": "None",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/oauth/{provider}/callback/`",
+          "description": "OAuth callback",
+          "authentication": "None",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/oauth/{provider}/revoke/`",
+          "description": "Revoke OAuth access",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/oauth/{provider}/refresh/`",
+          "description": "Refresh OAuth token",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/oauth/{provider}/profile/`",
+          "description": "Get OAuth profile data",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/sso/initiate/`",
+          "description": "Initiate SSO flow",
+          "authentication": "None",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/sso/callback/`",
+          "description": "SSO callback",
+          "authentication": "None",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/sso/metadata/`",
+          "description": "SSO metadata",
+          "authentication": "None",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/sso/logout/`",
+          "description": "SSO logout",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        }
+      ]
+    },
+    "Photography OS Authentication": {
+      "base_url": "https://auth.photographyos.io/v1/",
+      "description": "Same endpoints as CreateOS authentication, with application-specific business logic."
+    },
+    "Cinematography OS Authentication": {
+      "base_url": "https://auth.cineos.io/v1/",
+      "description": "Same endpoints as CreateOS authentication, with application-specific business logic."
+    },
+    "Photo Workflows Authentication": {
+      "base_url": "https://auth.photo-workflows.com/v1/",
+      "description": "Same endpoints as CreateOS authentication, with application-specific business logic.\n\n## Core Service Endpoints"
+    },
+    "API Gateway": {
+      "base_url": "https://api.gateway.lightwave-media.site/v1/",
+      "endpoints": [
+        {
+          "method": "GET",
+          "endpoint": "`/status/`",
+          "description": "Gateway status",
+          "authentication": "None",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/routes/`",
+          "description": "List available routes",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/services/`",
+          "description": "List running services",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/metrics/`",
+          "description": "Retrieve gateway metrics",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/cache/flush/`",
+          "description": "Flush gateway cache",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/ratelimit/status/`",
+          "description": "Rate limiting status",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        }
+      ]
+    },
+    "Monitoring Service": {
+      "base_url": "https://api.monitoring.lightwave-media.site/v1/",
+      "endpoints": [
+        {
+          "method": "GET",
+          "endpoint": "`/status/`",
+          "description": "System status overview",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/alerts/`",
+          "description": "Active alerts",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/metrics/`",
+          "description": "System metrics",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/logs/`",
+          "description": "System logs",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/services/`",
+          "description": "Service health",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/uptime/`",
+          "description": "Service uptime",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/alerts/acknowledge/`",
+          "description": "Acknowledge alert",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/alerts/resolve/`",
+          "description": "Resolve alert",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/alerts/silence/`",
+          "description": "Silence alert",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        }
+      ]
+    },
+    "Shared Core Services": {
+      "base_url": "https://api.shared.lightwave-media.site/v1/",
+      "endpoints": [
+        {
+          "method": "GET",
+          "endpoint": "`/health/`",
+          "description": "Health check",
+          "authentication": "None",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/config/`",
+          "description": "Shared configuration",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/feature-flags/`",
+          "description": "Feature flags",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/countries/`",
+          "description": "Countries list",
+          "authentication": "None",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/currencies/`",
+          "description": "Currencies list",
+          "authentication": "None",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/timezones/`",
+          "description": "Timezones list",
+          "authentication": "None",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/languages/`",
+          "description": "Languages list",
+          "authentication": "None",
+          "status": "Live"
+        }
+      ]
+    },
+    "AI Services": {
+      "base_url": "https://api.ai.lightwave-media.site/v1/",
+      "endpoints": [
+        {
+          "method": "POST",
+          "endpoint": "`/text/generate/`",
+          "description": "Generate text",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/image/generate/`",
+          "description": "Generate image",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/image/edit/`",
+          "description": "Edit image",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/image/analyze/`",
+          "description": "Analyze image",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/video/analyze/`",
+          "description": "Analyze video",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/content/moderate/`",
+          "description": "Content moderation",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/speech/transcribe/`",
+          "description": "Speech to text",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/text/translate/`",
+          "description": "Translate text",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        }
+      ]
+    },
+    "CreateOS.io": {
+      "base_url": "https://api.createos.io/v1/",
+      "endpoints": [
+        {
+          "method": "GET",
+          "endpoint": "`/users/me/`",
+          "description": "Current user details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/users/{id}/`",
+          "description": "User details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/users/{id}/profile/`",
+          "description": "User profile",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/users/{id}/profile/`",
+          "description": "Update user profile",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/users/{id}/preferences/`",
+          "description": "User preferences",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/users/{id}/preferences/`",
+          "description": "Update preferences",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/users/{id}/activity/`",
+          "description": "User activity",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/users/{id}/devices/`",
+          "description": "User devices",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/clients/`",
+          "description": "Create client",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/clients/`",
+          "description": "List clients",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/clients/{id}/`",
+          "description": "Client details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/clients/{id}/`",
+          "description": "Update client",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/clients/{id}/`",
+          "description": "Delete client",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/clients/{id}/projects/`",
+          "description": "Client's projects",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/clients/{id}/invoices/`",
+          "description": "Client's invoices",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/clients/{id}/documents/`",
+          "description": "Client documents",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/clients/{id}/history/`",
+          "description": "Client history",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/projects/`",
+          "description": "Create project",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/projects/`",
+          "description": "List projects",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/projects/{id}/`",
+          "description": "Project details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/projects/{id}/`",
+          "description": "Update project",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/projects/{id}/`",
+          "description": "Delete project",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/projects/{id}/tasks/`",
+          "description": "Project tasks",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/projects/{id}/tasks/`",
+          "description": "Create task",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/projects/{id}/files/`",
+          "description": "Project files",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/projects/{id}/files/`",
+          "description": "Upload file",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/projects/{id}/team/`",
+          "description": "Project team",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/projects/{id}/team/`",
+          "description": "Update team",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/projects/{id}/timeline/`",
+          "description": "Project timeline",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/projects/{id}/budget/`",
+          "description": "Project budget",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/projects/{id}/budget/`",
+          "description": "Update budget",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/analytics/revenue/`",
+          "description": "Revenue metrics",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/analytics/performance/`",
+          "description": "Performance metrics",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/analytics/usage/`",
+          "description": "Usage statistics",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/analytics/audience/`",
+          "description": "Audience analytics",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/analytics/engagement/`",
+          "description": "Engagement metrics",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/integrations/{provider}/connect/`",
+          "description": "Connect integration",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/integrations/{provider}/disconnect/`",
+          "description": "Disconnect integration",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/integrations/{provider}/sync/`",
+          "description": "Sync data",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/integrations/{provider}/webhook/`",
+          "description": "Webhook endpoint",
+          "authentication": "Webhook Secret",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/integrations/{provider}/status/`",
+          "description": "Integration status",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/media/upload/`",
+          "description": "Media upload",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/media/download/{id}/`",
+          "description": "Media download",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/media/process/{id}/`",
+          "description": "Media processing",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/media/transform/{id}/`",
+          "description": "Media transformation",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/media/optimize/{id}/`",
+          "description": "Media optimization",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/notifications/channels/`",
+          "description": "Notification channels",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/notifications/templates/`",
+          "description": "Notification templates",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/notifications/preferences/`",
+          "description": "Notification preferences",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/notifications/preferences/`",
+          "description": "Update preferences",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/notifications/history/`",
+          "description": "Notification history",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/search/index/`",
+          "description": "Search index",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/search/query/`",
+          "description": "Search query",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/search/suggest/`",
+          "description": "Search suggestions",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/search/filters/`",
+          "description": "Search filters",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/reports/generate/`",
+          "description": "Generate reports",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/reports/templates/`",
+          "description": "Report templates",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/reports/schedule/`",
+          "description": "Report scheduling",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/reports/export/{id}/`",
+          "description": "Report export",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        }
+      ]
+    },
+    "PhotographyOS.io": {
+      "base_url": "https://api.photographyos.io/v1/",
+      "endpoints": [
+        {
+          "method": "POST",
+          "endpoint": "`/sessions/`",
+          "description": "Create photo session",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/sessions/`",
+          "description": "List photo sessions",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/sessions/{id}/`",
+          "description": "Session details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/sessions/{id}/`",
+          "description": "Update session",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/sessions/{id}/`",
+          "description": "Delete session",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/sessions/{id}/photos/`",
+          "description": "Session photos",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/sessions/{id}/photos/`",
+          "description": "Upload photos",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/photos/`",
+          "description": "Create photo",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/photos/`",
+          "description": "List photos",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/photos/{id}/`",
+          "description": "Photo details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/photos/{id}/`",
+          "description": "Update photo",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/photos/{id}/`",
+          "description": "Delete photo",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/photos/{id}/edit/`",
+          "description": "Edit photo",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/photos/{id}/tags/`",
+          "description": "Add tags",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/photos/{id}/tags/{tag_id}/`",
+          "description": "Remove tag",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/galleries/`",
+          "description": "Create gallery",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/galleries/`",
+          "description": "List galleries",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/galleries/{id}/`",
+          "description": "Gallery details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/galleries/{id}/`",
+          "description": "Update gallery",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/galleries/{id}/`",
+          "description": "Delete gallery",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/galleries/{id}/photos/`",
+          "description": "Add photos to gallery",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/galleries/{id}/photos/{photo_id}/`",
+          "description": "Remove photo from gallery",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/albums/`",
+          "description": "Create album",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/albums/`",
+          "description": "List albums",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/albums/{id}/`",
+          "description": "Album details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/albums/{id}/`",
+          "description": "Update album",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/albums/{id}/`",
+          "description": "Delete album",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/image-processing/resize/`",
+          "description": "Resize image",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/image-processing/crop/`",
+          "description": "Crop image",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/image-processing/filter/`",
+          "description": "Apply filter",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/image-processing/adjust/`",
+          "description": "Adjust image",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/image-processing/batch/`",
+          "description": "Batch processing",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/clients/{id}/galleries/`",
+          "description": "Client galleries",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/clients/{id}/galleries/`",
+          "description": "Create client gallery",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/invoices/`",
+          "description": "Create invoice",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/invoices/`",
+          "description": "List invoices",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/invoices/{id}/`",
+          "description": "Invoice details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/invoices/{id}/`",
+          "description": "Update invoice",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/invoices/{id}/`",
+          "description": "Delete invoice",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/invoices/{id}/send/`",
+          "description": "Send invoice",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/contracts/`",
+          "description": "List contracts",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/contracts/`",
+          "description": "Create contract",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/contracts/{id}/`",
+          "description": "Contract details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/contracts/{id}/send/`",
+          "description": "Send contract",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/analytics/sessions/`",
+          "description": "Session analytics",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/analytics/revenue/`",
+          "description": "Revenue analytics",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/analytics/photos/`",
+          "description": "Photo analytics",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        }
+      ]
+    },
+    "CineOS.io": {
+      "base_url": "https://api.cineos.io/v1/",
+      "endpoints": [
+        {
+          "method": "POST",
+          "endpoint": "`/productions/`",
+          "description": "Create production",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/productions/`",
+          "description": "List productions",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/productions/{id}/`",
+          "description": "Production details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/productions/{id}/`",
+          "description": "Update production",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/productions/{id}/`",
+          "description": "Delete production",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/shots/`",
+          "description": "Create shot",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/shots/`",
+          "description": "List shots",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/shots/{id}/`",
+          "description": "Shot details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/shots/{id}/`",
+          "description": "Update shot",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/shots/{id}/`",
+          "description": "Delete shot",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/shots/{id}/metadata/`",
+          "description": "Update shot metadata",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/shots/{id}/upload/`",
+          "description": "Upload shot file",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/scenes/`",
+          "description": "Create scene",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/scenes/`",
+          "description": "List scenes",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/scenes/{id}/`",
+          "description": "Scene details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/scenes/{id}/`",
+          "description": "Update scene",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/scenes/{id}/`",
+          "description": "Delete scene",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/scenes/{id}/shots/`",
+          "description": "Scene shots",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/equipment/`",
+          "description": "Create equipment",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/equipment/`",
+          "description": "List equipment",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/equipment/{id}/`",
+          "description": "Equipment details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/equipment/{id}/`",
+          "description": "Update equipment",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/equipment/{id}/`",
+          "description": "Delete equipment",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/equipment/{id}/maintenance/`",
+          "description": "Record maintenance",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/call-sheets/`",
+          "description": "Create call sheet",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/call-sheets/`",
+          "description": "List call sheets",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/call-sheets/{id}/`",
+          "description": "Call sheet details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/call-sheets/{id}/`",
+          "description": "Update call sheet",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/call-sheets/{id}/`",
+          "description": "Delete call sheet",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/call-sheets/{id}/send/`",
+          "description": "Send call sheet",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/shot-lists/`",
+          "description": "Create shot list",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/shot-lists/`",
+          "description": "List shot lists",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/shot-lists/{id}/`",
+          "description": "Shot list details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/shot-lists/{id}/`",
+          "description": "Update shot list",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/shot-lists/{id}/`",
+          "description": "Delete shot list",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/budgets/`",
+          "description": "Create budget",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/budgets/`",
+          "description": "List budgets",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/budgets/{id}/`",
+          "description": "Budget details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/budgets/{id}/`",
+          "description": "Update budget",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/budgets/{id}/`",
+          "description": "Delete budget",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/budgets/{id}/line-items/`",
+          "description": "Budget line items",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/budgets/{id}/line-items/`",
+          "description": "Add line item",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/storyboards/`",
+          "description": "Create storyboard",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/storyboards/`",
+          "description": "List storyboards",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/storyboards/{id}/`",
+          "description": "Storyboard details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/storyboards/{id}/`",
+          "description": "Update storyboard",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/storyboards/{id}/`",
+          "description": "Delete storyboard",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/storyboards/{id}/frames/`",
+          "description": "Add storyboard frame",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/analytics/productions/`",
+          "description": "Production analytics",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/analytics/equipment/`",
+          "description": "Equipment analytics",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        }
+      ]
+    },
+    "Photo Workflows": {
+      "base_url": "https://api.photo-workflows.com/v1/",
+      "endpoints": [
+        {
+          "method": "POST",
+          "endpoint": "`/workflows/`",
+          "description": "Create workflow",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/workflows/`",
+          "description": "List workflows",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/workflows/{id}/`",
+          "description": "Workflow details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/workflows/{id}/`",
+          "description": "Update workflow",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/workflows/{id}/`",
+          "description": "Delete workflow",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/workflows/{id}/execute/`",
+          "description": "Execute workflow",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/workflows/{id}/executions/`",
+          "description": "List executions",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/workflows/{id}/duplicate/`",
+          "description": "Duplicate workflow",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/workflows/{id}/actions/`",
+          "description": "Add workflow action",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/workflows/{id}/actions/{action_id}/`",
+          "description": "Remove workflow action",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/actions/`",
+          "description": "Create action",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/actions/`",
+          "description": "List actions",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/actions/{id}/`",
+          "description": "Action details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/actions/{id}/`",
+          "description": "Update action",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/actions/{id}/`",
+          "description": "Delete action",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/batches/`",
+          "description": "Create batch",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/batches/`",
+          "description": "List batches",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/batches/{id}/`",
+          "description": "Batch details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/batches/{id}/`",
+          "description": "Update batch",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/batches/{id}/`",
+          "description": "Delete batch",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/batches/{id}/photos/`",
+          "description": "Add photos to batch",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/batches/{id}/photos/{photo_id}/`",
+          "description": "Remove photo from batch",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/batches/{id}/workflow/`",
+          "description": "Assign workflow to batch",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/batches/{id}/execute/`",
+          "description": "Execute batch",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/batches/{id}/status/`",
+          "description": "Batch status",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/presets/`",
+          "description": "Create preset",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/presets/`",
+          "description": "List presets",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/presets/{id}/`",
+          "description": "Preset details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/presets/{id}/`",
+          "description": "Update preset",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/presets/{id}/`",
+          "description": "Delete preset",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/presets/{id}/duplicate/`",
+          "description": "Duplicate preset",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/imports/`",
+          "description": "Create import",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/imports/`",
+          "description": "List imports",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/imports/{id}/`",
+          "description": "Import details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/imports/{id}/`",
+          "description": "Delete import",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/imports/{id}/status/`",
+          "description": "Import status",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/exports/`",
+          "description": "Create export",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/exports/`",
+          "description": "List exports",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/exports/{id}/`",
+          "description": "Export details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/exports/{id}/`",
+          "description": "Delete export",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/exports/{id}/status/`",
+          "description": "Export status",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/analytics/workflows/`",
+          "description": "Workflow analytics",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/analytics/actions/`",
+          "description": "Action analytics",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/analytics/batches/`",
+          "description": "Batch analytics",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        }
+      ]
+    },
+    "Payment Processing": {
+      "base_url": "https://api.payments.lightwave-media.site/v1/",
+      "endpoints": [
+        {
+          "method": "POST",
+          "endpoint": "`/payment-methods/`",
+          "description": "Create payment method",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/payment-methods/`",
+          "description": "List payment methods",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/payment-methods/{id}/`",
+          "description": "Delete payment method",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/charges/`",
+          "description": "Create charge",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/charges/{id}/`",
+          "description": "Charge details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/refunds/`",
+          "description": "Create refund",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/refunds/{id}/`",
+          "description": "Refund details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/subscriptions/`",
+          "description": "Create subscription",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/subscriptions/`",
+          "description": "List subscriptions",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/subscriptions/{id}/`",
+          "description": "Subscription details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/subscriptions/{id}/`",
+          "description": "Update subscription",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/subscriptions/{id}/`",
+          "description": "Cancel subscription",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/webhooks/stripe/`",
+          "description": "Stripe webhook",
+          "authentication": "Webhook Secret",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/webhooks/paypal/`",
+          "description": "PayPal webhook",
+          "authentication": "Webhook Secret",
+          "status": "Live"
+        }
+      ]
+    },
+    "Email Service": {
+      "base_url": "https://api.email.lightwave-media.site/v1/",
+      "endpoints": [
+        {
+          "method": "POST",
+          "endpoint": "`/send/`",
+          "description": "Send email",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/send-template/`",
+          "description": "Send template email",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/templates/`",
+          "description": "Create template",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/templates/`",
+          "description": "List templates",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/templates/{id}/`",
+          "description": "Template details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/templates/{id}/`",
+          "description": "Update template",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/templates/{id}/`",
+          "description": "Delete template",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/deliveries/`",
+          "description": "Email delivery stats",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/analytics/`",
+          "description": "Email analytics",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/webhooks/sendgrid/`",
+          "description": "SendGrid webhook",
+          "authentication": "Webhook Secret",
+          "status": "Live"
+        }
+      ]
+    },
+    "Storage Service": {
+      "base_url": "https://api.storage.lightwave-media.site/v1/",
+      "endpoints": [
+        {
+          "method": "POST",
+          "endpoint": "`/files/upload/`",
+          "description": "Upload file",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/files/`",
+          "description": "List files",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/files/{id}/`",
+          "description": "File details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/files/{id}/`",
+          "description": "Delete file",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/files/{id}/copy/`",
+          "description": "Copy file",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/files/{id}/move/`",
+          "description": "Move file",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/files/{id}/download/`",
+          "description": "Download file",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/folders/`",
+          "description": "Create folder",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/folders/`",
+          "description": "List folders",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/folders/{id}/`",
+          "description": "Folder details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/folders/{id}/`",
+          "description": "Update folder",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/folders/{id}/`",
+          "description": "Delete folder",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/folders/{id}/contents/`",
+          "description": "Folder contents",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "POST",
+          "endpoint": "`/shares/`",
+          "description": "Create share",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/shares/`",
+          "description": "List shares",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "GET",
+          "endpoint": "`/shares/{id}/`",
+          "description": "Share details",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "`/shares/{id}/`",
+          "description": "Update share",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "`/shares/{id}/`",
+          "description": "Delete share",
+          "authentication": "Bearer Token",
+          "status": "Live"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "title": "LightWave Ecosystem API Endpoints Index",
+    "source_file": "api-endpoints-index.md",
+    "generation_time": "2025-03-17T21:28:48.178727"
+  }
+}

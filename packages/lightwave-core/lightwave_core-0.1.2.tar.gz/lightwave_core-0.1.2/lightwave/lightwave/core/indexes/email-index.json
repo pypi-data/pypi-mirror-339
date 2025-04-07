@@ -1,0 +1,183 @@
+{
+  "email_addresses": {
+    "core": [
+      {
+        "email": "info@lightwave-media.ltd",
+        "purpose": "General inquiries about LightWave Media",
+        "managed_by": "Marketing Team",
+        "response_time": "24-48 hours",
+        "used_by": "All Products"
+      },
+      {
+        "email": "hello@lightwave-media.ltd",
+        "purpose": "Friendly contact point for initial outreach",
+        "managed_by": "Marketing Team",
+        "response_time": "24-48 hours",
+        "used_by": "All Products"
+      },
+      {
+        "email": "support@lightwave-media.ltd",
+        "purpose": "Technical support and customer assistance",
+        "managed_by": "Support Team",
+        "response_time": "24 hours",
+        "used_by": "All Products"
+      },
+      {
+        "email": "admin@lightwave-media.ltd",
+        "purpose": "Administrative communications",
+        "managed_by": "Admin Team",
+        "response_time": "48 hours",
+        "used_by": "Internal Only"
+      }
+    ],
+    "business": [
+      {
+        "email": "accounts@lightwave-media.ltd",
+        "purpose": "Account management and user access",
+        "managed_by": "Accounts Team",
+        "response_time": "48 hours",
+        "used_by": "All Products"
+      },
+      {
+        "email": "sales@lightwave-media.ltd",
+        "purpose": "Sales inquiries and commercial opportunities",
+        "managed_by": "Sales Team",
+        "response_time": "24 hours",
+        "used_by": "All Products"
+      },
+      {
+        "email": "billing@lightwave-media.ltd",
+        "purpose": "Billing issues, invoices, and payment questions",
+        "managed_by": "Finance Team",
+        "response_time": "48 hours",
+        "used_by": "All Products"
+      },
+      {
+        "email": "legal@lightwave-media.ltd",
+        "purpose": "Legal matters, compliance, and formal communications",
+        "managed_by": "Legal Department",
+        "response_time": "72 hours",
+        "used_by": "All Products"
+      }
+    ],
+    "technical": [
+      {
+        "email": "api@lightwave-media.ltd",
+        "purpose": "API access, documentation, and support",
+        "managed_by": "API Team",
+        "response_time": "48 hours",
+        "used_by": "Developer Platform"
+      },
+      {
+        "email": "developers@lightwave-media.ltd",
+        "purpose": "Developer relations and technical partnerships",
+        "managed_by": "Developer Relations",
+        "response_time": "48 hours",
+        "used_by": "Developer Platform"
+      },
+      {
+        "email": "security@lightwave-media.ltd",
+        "purpose": "Security concerns, vulnerability reports",
+        "managed_by": "Security Team",
+        "response_time": "24 hours",
+        "used_by": "All Products"
+      }
+    ],
+    "system": [
+      {
+        "email": "noreply@lightwave-media.ltd",
+        "purpose": "Automated system notifications",
+        "response_expected": "No (Do not reply)",
+        "used_by": "All Products"
+      },
+      {
+        "email": "alerts@lightwave-media.ltd",
+        "purpose": "System alerts and monitoring notifications",
+        "response_expected": "No (Contact support)",
+        "used_by": "Internal Only"
+      },
+      {
+        "email": "notifications@lightwave-media.ltd",
+        "purpose": "User notifications and updates",
+        "response_expected": "No (Contact support)",
+        "used_by": "All Products"
+      }
+    ],
+    "feedback": [
+      {
+        "email": "feedback@lightwave-media.ltd",
+        "purpose": "User feedback and suggestions",
+        "managed_by": "Product Team",
+        "response_time": "72 hours",
+        "used_by": "All Products"
+      },
+      {
+        "email": "marketing@lightwave-media.ltd",
+        "purpose": "Marketing inquiries, press, and partnerships",
+        "managed_by": "Marketing Team",
+        "response_time": "48 hours",
+        "used_by": "All Products"
+      }
+    ]
+  },
+  "product_specific_aliases": {
+    "CreateOS": {
+      "general": "hello@createos.io",
+      "support": "support@createos.io",
+      "sales": "sales@createos.io"
+    },
+    "PhotographyOS": {
+      "general": "hello@photographyos.io",
+      "support": "support@photographyos.io",
+      "sales": "sales@photographyos.io"
+    },
+    "CineOS": {
+      "general": "hello@cineos.io",
+      "support": "support@cineos.io",
+      "sales": "sales@cineos.io"
+    },
+    "PhotoWorkflows": {
+      "general": "hello@photo-workflows.com",
+      "support": "support@photo-workflows.com",
+      "sales": "sales@photo-workflows.com"
+    },
+    "JoelSchaeffer": {
+      "general": "hello@joelschaeffer.com",
+      "support": "support@joelschaeffer.com",
+      "sales": "shop@joelschaeffer.com"
+    }
+  },
+  "implementation_guidelines": {
+    "email_access_management": [
+      "Team email addresses should be configured as groups in Google Workspace",
+      "Individual account permissions should follow the principle of least privilege",
+      "Regular access audits should be conducted quarterly"
+    ],
+    "response_time_expectations": [
+      "All customer-facing emails should have auto-responders stating expected response time",
+      "The listed response times are maximum targets - teams should strive to respond sooner",
+      "Establish escalation paths for urgent inquiries"
+    ],
+    "email_templates": [
+      "Standard templates should be used for common responses",
+      "Templates are maintained in the Email Templates Repository",
+      "All templates should be version-controlled and follow the LightWave brand guidelines"
+    ],
+    "monitoring_and_analytics": [
+      "Email metrics should be tracked and reported monthly",
+      "Response time compliance should be included in team KPIs",
+      "Customer satisfaction scores should be collected after support interactions"
+    ],
+    "security_practices": [
+      "Use strong, unique passwords for all email accounts",
+      "Enable two-factor authentication where available",
+      "Regular security training for all staff with email access",
+      "Email signing and encryption for sensitive communications"
+    ],
+    "archiving_policy": [
+      "All business communications must be retained for 7 years",
+      "Email archiving is managed through Google Vault",
+      "Legal hold procedures must be followed when required"
+    ]
+  }
+}
