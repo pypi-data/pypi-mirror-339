@@ -1,0 +1,2 @@
+[console_scripts]
+copilot-toolkit = copilot_toolkit:main
