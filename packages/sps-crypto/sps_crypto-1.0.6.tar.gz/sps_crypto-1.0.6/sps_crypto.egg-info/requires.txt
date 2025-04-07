@@ -1,0 +1,11 @@
+cryptography>=3.4
+
+[dev]
+pytest>=6.0
+pytest-cov>=2.0
+mypy>=0.910
+flake8>=3.9
+
+[docs]
+sphinx>=4.0
+sphinx-rtd-theme>=0.5

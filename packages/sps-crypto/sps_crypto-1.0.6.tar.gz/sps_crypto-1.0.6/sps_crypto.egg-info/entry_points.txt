@@ -1,0 +1,2 @@
+[console_scripts]
+sps-crypto-demo = sps_crypto.cli:demo
