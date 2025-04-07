@@ -1,0 +1,2 @@
+[console_scripts]
+mdslides = mdslides.cli:main
