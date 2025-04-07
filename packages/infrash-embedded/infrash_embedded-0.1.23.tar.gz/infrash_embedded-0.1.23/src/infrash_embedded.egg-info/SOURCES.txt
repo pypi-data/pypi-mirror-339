@@ -1,0 +1,11 @@
+AUTHORS.txt
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/infrash_embedded/__init__.py
+src/infrash_embedded/_version.py
+src/infrash_embedded.egg-info/PKG-INFO
+src/infrash_embedded.egg-info/SOURCES.txt
+src/infrash_embedded.egg-info/dependency_links.txt
+src/infrash_embedded.egg-info/top_level.txt

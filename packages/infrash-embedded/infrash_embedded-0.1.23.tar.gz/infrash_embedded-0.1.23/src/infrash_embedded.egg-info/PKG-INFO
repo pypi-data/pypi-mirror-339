@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: infrash_embedded
+Version: 0.1.23
+Summary: Print from html to pdf, zpl, image, printer: html to print, htmlinfrash_embedded, html to pdf,html2pdf, pdf to print, pdfinfrash_embedded, zpl to print,zplinfrash_embedded, image to print,  imageinfrash_embedded, 
+Home-page: https://github.com/infrash_embedded/infrash_embedded
+Author: Tom Softreck
+Author-email: info@softreck.dev
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+License-File: LICENSE
+License-File: AUTHORS.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
