@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: osrs_net
+Version: 0.2.0
+Summary: Simple OSRS API Wrapper
+Home-page: https://github.com/SuperRonJon/osrs-net
+Author: Patrick Seute
+Author-email: patrick.seute@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
