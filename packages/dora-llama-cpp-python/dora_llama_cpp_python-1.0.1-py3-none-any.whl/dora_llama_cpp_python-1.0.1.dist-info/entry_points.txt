@@ -1,0 +1,2 @@
+[console_scripts]
+dora-llama-cpp-python = dora_llama_cpp_python.main:main
