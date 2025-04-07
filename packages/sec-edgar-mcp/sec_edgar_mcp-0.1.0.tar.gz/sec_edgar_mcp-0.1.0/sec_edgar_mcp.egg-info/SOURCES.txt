@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+./sec_edgar_mcp/config.py
+./sec_edgar_mcp/server.py
+sec_edgar_mcp/config.py
+sec_edgar_mcp/server.py
+sec_edgar_mcp.egg-info/PKG-INFO
+sec_edgar_mcp.egg-info/SOURCES.txt
+sec_edgar_mcp.egg-info/dependency_links.txt
+sec_edgar_mcp.egg-info/top_level.txt
