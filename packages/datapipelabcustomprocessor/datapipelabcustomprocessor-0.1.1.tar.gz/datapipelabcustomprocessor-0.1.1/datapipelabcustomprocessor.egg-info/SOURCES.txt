@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+datapipelabcustomprocessor.egg-info/PKG-INFO
+datapipelabcustomprocessor.egg-info/SOURCES.txt
+datapipelabcustomprocessor.egg-info/dependency_links.txt
+datapipelabcustomprocessor.egg-info/requires.txt
+datapipelabcustomprocessor.egg-info/top_level.txt
