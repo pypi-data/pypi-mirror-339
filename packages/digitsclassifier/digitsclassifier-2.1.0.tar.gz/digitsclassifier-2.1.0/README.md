@@ -1,0 +1,57 @@
+# digitsclassifier
+Das Projekt dient zur Erkennung einer gedrukten Ziffer (0-9) in einem Bild. 
+
+[![Build](https://github.com/pgnApp/digitsclassifier/actions/workflows/publish.yaml/badge.svg)](https://github.com/pgnApp/digitsclassifier/actions/workflows/publish.yaml)
+
+## Inferenz
+Die Library erwaretet Bilder mit einem einzigen Zeichen. Das Bild muss Schwarz auf Weis sein. Es wird ein Graustufenbild erwartet. Die Library übernimmt die Binarisierung und auch das restliche aufbereiten / skalieren der Bilder. 
+
+Für optimale Ergebnisse sollte ein quadratisches Bild übergeben werden, und es sollte idealerweise mindestens 28x28 Pixel haben.
+
+Das folgende Beispiel zeigt die Verwendung der ```predict_digits``` Methode:
+
+```python
+from digitsclassifier import predict_digits
+import cv2
+
+img = cv2.imread("drei.png", cv2.IMREAD_GRAYSCALE)
+
+chars, probs = predict_digits([img], 1)
+
+print(f'Zeichen "{chars[0][0]} " mit Wahrscheinlichkeit {round((100.0*probs)[0][0], 2)}% erkannt'.)
+```
+
+## Neuronales Netz
+Das Training des Neuronalen Netz ist nicht Bestandteil dieses Projekts, sondern muss getrennt trainiert werden und dann als [src/models/digit_classifier_model.keras](/src/models/digit_classifier_model.keras) abgelegt sein. 
+
+Das darunterliegende Keras-Netzwerk erwartet die Bilder im Format 28x28 Pixel, wobel das Zeichen selbst nur die inneren 24x24 Pixel belegen darf, der Rest ist Rand. 
+
+Das Netz erwartet die Bilder Weiß auf Schwarz.
+
+## Entwicklungsumgebung einrichten
+Zum Erzeugen des Paketes wird [pdm](https://pdm-project.org/en/latest/) verwendet.
+
+## Library paketieren (lokal)
+``` bash
+pdm build
+```
+
+## Library Veröffentlichen (PyPi)
+
+### Manuell
+Zur Veröffentlichung des Projekts einfach
+```bash
+pdm publish -u __token__ -P <Hier dein PyPi-API-Token>
+```
+
+ausführen. 
+
+### Über Github Actions
+Durch das Tagging der Version kann das Publishing auch von Github automatisch durchgeführt werden. 
+
+```bash
+git tag v2.1.0
+git push origin v2.1.0
+```
+
+Hierfür muss am Repository aber das API-Token deines Users für das entprechende Paket unter dem Namen ```PYPI_TOKEN``` hinterlegt sein. 
