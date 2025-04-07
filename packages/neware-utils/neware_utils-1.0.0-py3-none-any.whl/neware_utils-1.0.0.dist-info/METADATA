@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: neware-utils
+Version: 1.0.0
+Summary: Utilities for creating Neware battery cycling protocols
+Author-email: Benjamin Nowacki <benjamin.nowacki@uconn.edu>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/ben-nowacki/neware-utils
+Project-URL: Repository, https://github.com/ben-nowacki/neware-utils
+Project-URL: Issues, https://github.com/ben-nowacki/neware-utils/issues
+Keywords: neware,neware utilities,battery test management,protocol automation
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Dynamic: license-file
+
+# neware-utils
+Utility functions for Neware-specific tasks such as XML protocol parsing and construction.
