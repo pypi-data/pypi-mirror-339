@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: git-multi-status
+Version: 0.0.1
+Summary: Python port of multi-git-status
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: rich>=14.0.0
+Requires-Dist: typer>=0.15.2
+
+# Git Multi Status
+
+List the status of multiple Git repositories in a directory.
