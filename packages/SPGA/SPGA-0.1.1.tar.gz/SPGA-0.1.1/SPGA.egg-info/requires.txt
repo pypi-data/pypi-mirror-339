@@ -1,0 +1,12 @@
+IPython>=7.0.0
+Pillow>=8.0.0
+matplotlib>=3.0.0
+numpy>=1.18.0
+
+[dev]
+ipython>=7.0
+myst-parser
+numpydoc
+pytest>=6.0
+sphinx
+sphinx-rtd-theme
