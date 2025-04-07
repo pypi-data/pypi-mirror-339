@@ -1,0 +1,2 @@
+[console_scripts]
+trpl_m = trpl_m.main:main
