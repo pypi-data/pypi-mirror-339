@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: smith-family-analytics
+Version: 0.1.1
+Summary: 
+Author: Hayden Smith
+Author-email: hayden.smith@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: flake8 (>=7.2.0,<8.0.0)
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
