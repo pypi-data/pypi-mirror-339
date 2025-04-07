@@ -1,0 +1,13 @@
+streamdaq/CustomReducers.py,sha256=GjZDpUUngcUl9geZDFaQYdlIieFkXoB1QtvfhedAzfI,4026
+streamdaq/DaQMeasures.py,sha256=T3kria2cJDeYb4ZPlpv-6lafnY0EE4oAkKDf71-7Tto,47051
+streamdaq/StreamDaQ.py,sha256=cCHooOE2bBhgvRZOVYnSPPNbOXAMmRA0nXk66buljCU,6172
+streamdaq/Windows.py,sha256=ZVBDuRyRUfSXwvStsI0HTXMVAGtKVxENuWNCu6OnYFM,2112
+streamdaq/__init__.py,sha256=26RH4nsSFpjJ9D-Uth5XSV_WRObQ69tRB3i-2O86N_U,109
+streamdaq/artificial_stream_generators.py,sha256=EmihxBPrf3i_QkONbzsGw3QW9zoS-IN9C2s6oUspiAg,4584
+streamdaq/main.py,sha256=Evaz9irdEtE1gPc1EsI0w4KJR2a0VipXNFgGR2GvEuA,923
+streamdaq/utils.py,sha256=2Jz32zwlOpDtfk3YFY8v4frNePN0K9883xa-1hvkKjw,16429
+streamdaq-0.1.4.dist-info/licenses/LICENSE,sha256=q1Fw4dMJX5x7WUffRo8uLbZLJR1gUS_8LwXezF-j8Co,1077
+streamdaq-0.1.4.dist-info/METADATA,sha256=gvn2C_jMYKGXRG69e75klefnPRCva5K_1hqVhDdNeUY,8587
+streamdaq-0.1.4.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+streamdaq-0.1.4.dist-info/top_level.txt,sha256=Mp5TKOrDwkYCJQBt0Q6Rft2mAakgz5PzOA4vnTPm-Wg,10
+streamdaq-0.1.4.dist-info/RECORD,,
