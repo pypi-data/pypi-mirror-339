@@ -1,0 +1,997 @@
+# Lightwave PyPI Rules
+# This file contains Python package development and PyPI publishing guidelines.
+
+sections:
+  - name: PYTHON_WORKFLOW
+    description: "Guide for Python package development workflow using best practices"
+    globs: "**/*.py"
+    filesToApplyRule: "**/*.py"
+    alwaysApply: true
+    content:
+      - heading: "Project Setup and Dependencies"
+        items:
+          - "Use uv for dependency management and packaging"
+          - "Initialize new projects with `uv project new <package-name>`"
+          - "Define dependencies in pyproject.toml, not requirements.txt"
+          - "Manage dependencies with `uv project add` and uv project remove`"
+          - "Handle development dependencies with `uv project add --dev <package>`"
+          - "Use virtual environments with `uv run` or `uv project --venv sync`"
+          - "Pin dependency versions for reproducible builds"
+          - "Example pyproject.toml:"
+          - code: |
+              [project]
+              name = "lightwave-package"
+              version = "0.1.0"
+              description = "Lightwave package for XYZ functionality"
+              authors = [
+                  {name = "Your Name", email = "your.email@example.com"}
+              ]
+              readme = "README.md"
+              requires-python = ">=3.8"
+              dependencies = [
+                  "requests>=2.28.1",
+                  "pydantic>=2.0.0",
+              ]
+
+              [project.optional-dependencies]
+              dev = [
+                  "pytest>=7.0.0",
+                  "black>=23.1.0",
+                  "mypy>=1.0.0",
+                  "isort>=5.12.0",
+              ]
+              
+              [build-system]
+              requires = ["hatchling"]
+              build-backend = "hatchling.build"
+
+      - heading: "Code Structure and Organization"
+        items:
+          - "Follow the package structure:"
+          - code: |
+              lightwave_package/
+              │
+              ├── __init__.py            # Package version, exports
+              ├── core.py                # Core functionality
+              ├── models/                # Data models
+              │   ├── __init__.py
+              │   └── base.py
+              ├── utils/                 # Utilities and helpers
+              │   ├── __init__.py
+              │   └── helpers.py
+              ├── cli/                   # Command-line interface
+              │   ├── __init__.py
+              │   └── commands.py
+              │
+              ├── tests/                 # Test directory
+              │   ├── __init__.py
+              │   ├── test_core.py
+              │   └── conftest.py
+              │
+              ├── pyproject.toml         # Project metadata, dependencies
+              ├── README.md              # Documentation
+              └── LICENSE                # License file
+          - "Use `__init__.py` files to expose public API"
+          - "Document version in `__init__.py` with `__version__ = \"0.1.0\"`"
+          - "Keep modules focused on single responsibility"
+          - "Use relative imports within package: `from ..utils import helpers`"
+          - "Example `__init__.py`:"
+          - code: |
+              """Lightwave package for XYZ functionality."""
+
+              __version__ = "0.1.0"
+
+              from .core import main_function, secondary_function
+              from .models.base import BaseModel
+
+              __all__ = ["main_function", "secondary_function", "BaseModel"]
+
+      - heading: "Code Style and Formatting"
+        items:
+          - "Use Black for code formatting with 88 character line length"
+          - "Run formatting with `uvx black .`"
+          - "Configure with pyproject.toml:"
+          - code: |
+              [tool.black]
+              line-length = 88
+              target-version = ["py38"]
+              include = '\.pyi?$'
+          - "Use isort for import sorting:"
+          - code: |
+              [tool.isort]
+              profile = "black"
+              line_length = 88
+          - "Run import sorting with `uvx isort .`"
+          - "Use type hints for all function signatures"
+          - "Use docstrings for all public functions, classes, and modules"
+          - "Follow Google style docstrings:"
+          - code: |
+              def function(param1: str, param2: int) -> bool:
+                  """Short description of function.
+
+                  Longer description explaining details.
+
+                  Args:
+                      param1: Description of param1
+                      param2: Description of param2
+
+                  Returns:
+                      Description of return value
+
+                  Raises:
+                      ValueError: When param1 is invalid
+                  """
+
+      - heading: "Testing Framework"
+        items:
+          - "Use pytest for all tests"
+          - "Organize tests to mirror package structure"
+          - "Name test files with `test_` prefix"
+          - "Name test functions with `test_` prefix"
+          - "Use fixtures in conftest.py for shared setup"
+          - "Aim for 90%+ code coverage"
+          - "Run tests with `uv run pytest`"
+          - "Configure with pyproject.toml:"
+          - code: |
+              [tool.pytest.ini_options]
+              testpaths = ["tests"]
+              python_files = "test_*.py"
+              python_functions = "test_*"
+
+      - heading: "Type Checking"
+        items:
+          - "Use mypy for static type checking"
+          - "Run with `uvx mypy lightwave_package`"
+          - "Configure with pyproject.toml:"
+          - code: |
+              [tool.mypy]
+              python_version = "3.8"
+              warn_return_any = true
+              warn_unused_configs = true
+              disallow_untyped_defs = true
+              disallow_incomplete_defs = true
+
+              [[tool.mypy.overrides]]
+              module = "tests.*"
+              disallow_untyped_defs = false
+
+      - heading: "Documentation"
+        items:
+          - "Use Sphinx for API documentation"
+          - "Include README.md with:"
+          - "  - Package description"
+          - "  - Installation instructions"
+          - "  - Basic usage examples"
+          - "  - Requirements/dependencies"
+          - "  - Link to full documentation"
+          - "Document all public interfaces with docstrings"
+          - "Keep documentation updated with each release"
+
+      - heading: "Pre-commit Hooks"
+        items:
+          - "Use pre-commit to enforce code quality"
+          - "Create .pre-commit-config.yaml:"
+          - code: |
+              repos:
+                - repo: https://github.com/pre-commit/pre-commit-hooks
+                  rev: v4.4.0
+                  hooks:
+                    - id: trailing-whitespace
+                    - id: end-of-file-fixer
+                    - id: check-yaml
+                    - id: check-added-large-files
+
+                - repo: https://github.com/psf/black
+                  rev: 23.1.0
+                  hooks:
+                    - id: black
+
+                - repo: https://github.com/pycqa/isort
+                  rev: 5.12.0
+                  hooks:
+                    - id: isort
+
+                - repo: https://github.com/pre-commit/mirrors-mypy
+                  rev: v1.0.0
+                  hooks:
+                    - id: mypy
+                      additional_dependencies: [types-requests]
+          - "Install with `pre-commit install`"
+
+  - name: PYPI_PUBLISHING
+    description: "Guidelines for building, versioning, and publishing packages to PyPI"
+    globs: "pyproject.toml"
+    filesToApplyRule: "pyproject.toml"
+    alwaysApply: true
+    content:
+      - heading: "Versioning Strategy"
+        items:
+          - "Use Semantic Versioning (SemVer):"
+          - "  - MAJOR.MINOR.PATCH (e.g., 1.2.3)"
+          - "  - Increment MAJOR for incompatible API changes"
+          - "  - Increment MINOR for backward-compatible new features"
+          - "  - Increment PATCH for backward-compatible bug fixes"
+          - "Store version in single location in `__init__.py`"
+          - "Update CHANGELOG.md with every version change"
+          - "Tag releases in Git: `git tag v1.2.3`"
+
+      - heading: "Build Process"
+        items:
+          - "Build package with uv: `uv project build`"
+          - "Generates both .tar.gz (sdist) and .whl (wheel) files"
+          - "Check distribution files with `uvx twine check dist/*`"
+          - "Test install from dist with `uv pip install dist/*.whl`"
+
+      - heading: "Testing Before Release"
+        items:
+          - "Run full test suite with coverage: `uv run pytest --cov`"
+          - "Run type checking: `uvx mypy`"
+          - "Run linters: `uvx black --check` and `uvx isort --check`"
+          - "Test docs generation: `uv run sphinx-build -b html docs docs/_build`"
+          - "Verify package installs in clean environment with `uv project clean && uv project sync`"
+
+      - heading: "Publishing to PyPI"
+        items:
+          - "Create PyPI API token at https://pypi.org/manage/account/token/"
+          - "Store token securely in CI/CD"
+          - "Configure API token in your system with `uv pip config set keyring.password.pypi YOUR_API_TOKEN`"
+          - "Publish with uv: `uv project publish`"
+          - "Alternatively, use twine: `uvx twine upload dist/*`"
+          - "Always publish to Test PyPI first: `uv project publish --repository testpypi`"
+
+      - heading: "Release Checklist"
+        items:
+          - "Update version in __init__.py"
+          - "Update CHANGELOG.md"
+          - "Create or update release notes"
+          - "Run all tests and checks"
+          - "Build distribution packages"
+          - "Check distribution with twine"
+          - "Publish to Test PyPI"
+          - "Test installation from Test PyPI"
+          - "Publish to production PyPI"
+          - "Tag release in Git"
+          - "Create GitHub release (if applicable)"
+
+      - heading: "Continuous Integration/Deployment"
+        items:
+          - "Set up GitHub Actions workflow for CI/CD:"
+          - code: |
+              name: Python package
+
+              on:
+                push:
+                  branches: [ main ]
+                  tags: [ 'v*' ]
+                pull_request:
+                  branches: [ main ]
+
+              jobs:
+                test:
+                  runs-on: ubuntu-latest
+                  strategy:
+                    matrix:
+                      python-version: [3.8, 3.9, "3.10"]
+
+                  steps:
+                  - uses: actions/checkout@v3
+                  - name: Set up Python ${{ matrix.python-version }}
+                    uses: actions/setup-python@v4
+                    with:
+                      python-version: ${{ matrix.python-version }}
+                  - name: Install uv
+                    run: pip install uv
+                  - name: Install dependencies
+                    run: uv project --venv sync
+                  - name: Run tests
+                    run: uv run pytest --cov
+                  - name: Type checking
+                    run: uvx mypy lightwave_package
+                  - name: Check formatting
+                    run: uvx black --check .
+
+                publish:
+                  needs: test
+                  runs-on: ubuntu-latest
+                  if: startsWith(github.ref, 'refs/tags/v')
+                  steps:
+                  - uses: actions/checkout@v3
+                  - name: Set up Python
+                    uses: actions/setup-python@v4
+                    with:
+                      python-version: '3.8'
+                  - name: Install uv
+                    run: pip install uv
+                  - name: Build package
+                    run: uv project build
+                  - name: Publish package
+                    env:
+                      TWINE_USERNAME: __token__
+                      TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+                    run: uvx twine upload dist/*
+
+  - name: PYTHON_BEST_PRACTICES
+    description: "Best practices for writing clean, maintainable Python code"
+    globs: "**/*.py"
+    filesToApplyRule: "**/*.py"
+    alwaysApply: true
+    content:
+      - heading: "General Principles"
+        items:
+          - "Follow the Zen of Python (`import this`)"
+          - "Write readable code over clever code"
+          - "\"Explicit is better than implicit\""
+          - "Use meaningful variable and function names"
+          - "Limit function complexity (≤ 25 lines)"
+          - "Follow SOLID principles where applicable"
+
+      - heading: "Function Design"
+        items:
+          - "Write functions that do one thing well"
+          - "Use type hints consistently:"
+          - code: |
+              def process_data(input_data: list[str], threshold: float = 0.5) -> dict[str, float]:
+                  # Implementation
+          - "Return early for edge cases:"
+          - code: |
+              def complex_function(data: dict) -> Optional[int]:
+                  if not data:
+                      return None
+                  
+                  if "key" not in data:
+                      return 0
+                      
+                  # Main function logic below
+          - "Use keyword arguments for clarity:"
+          - code: |
+              # Call with explicit parameters
+              result = create_user(name="John", email="john@example.com", active=True)
+
+      - heading: "Error Handling"
+        items:
+          - "Use specific exception types over generic ones"
+          - "Create custom exceptions for domain-specific errors:"
+          - code: |
+              class ConfigurationError(Exception):
+                  """Raised when configuration is invalid."""
+                  pass
+          - "Use context managers for resource cleanup:"
+          - code: |
+              with open("file.txt", "r") as file:
+                  content = file.read()
+              # File is automatically closed
+          - "Prefer try/except over checking conditions:"
+          - code: |
+              # Preferred
+              try:
+                  value = dictionary["key"]
+              except KeyError:
+                  value = default_value
+                  
+              # Less preferred
+              if "key" in dictionary:
+                  value = dictionary["key"]
+              else:
+                  value = default_value
+
+      - heading: "Class Design"
+        items:
+          - "Use dataclasses for data containers:"
+          - code: |
+              from dataclasses import dataclass
+              
+              @dataclass
+              class User:
+                  name: str
+                  email: str
+                  active: bool = True
+          - "Use properties for computed attributes:"
+          - code: |
+              class Rectangle:
+                  def __init__(self, width: float, height: float):
+                      self.width = width
+                      self.height = height
+                      
+                  @property
+                  def area(self) -> float:
+                      return self.width * self.height
+          - "Implement dunder methods for standard behavior:"
+          - code: |
+              def __str__(self) -> str:
+                  return f"Rectangle({self.width} × {self.height})"
+                  
+              def __eq__(self, other: object) -> bool:
+                  if not isinstance(other, Rectangle):
+                      return NotImplemented
+                  return self.width == other.width and self.height == other.height
+
+      - heading: "Concurrency Patterns"
+        items:
+          - "Prefer asyncio for I/O-bound operations:"
+          - code: |
+              import asyncio
+              import aiohttp
+              
+              async def fetch_data(url: str) -> dict:
+                  async with aiohttp.ClientSession() as session:
+                      async with session.get(url) as response:
+                          return await response.json()
+                          
+              async def main():
+                  urls = ["https://api.example.com/data/1", "https://api.example.com/data/2"]
+                  tasks = [fetch_data(url) for url in urls]
+                  results = await asyncio.gather(*tasks)
+                  
+              if __name__ == "__main__":
+                  asyncio.run(main())
+          - "Use concurrent.futures for CPU-bound tasks:"
+          - code: |
+              from concurrent.futures import ProcessPoolExecutor
+              
+              def process_chunk(data_chunk):
+                  # CPU-intensive work
+                  return result
+                  
+              def main():
+                  chunks = split_data(large_dataset)
+                  with ProcessPoolExecutor() as executor:
+                      results = list(executor.map(process_chunk, chunks))
+
+      - heading: "Performance Considerations"
+        items:
+          - "Profile before optimizing: `python -m cProfile -o profile.stats script.py`"
+          - "Use generators for large data processing:"
+          - code: |
+              def process_large_file(filename: str):
+                  with open(filename, "r") as file:
+                      # Generator expression - processes one line at a time
+                      return (line.strip().upper() for line in file if line.strip())
+          - "Use sets for membership testing:"
+          - code: |
+              # Fast membership testing
+              valid_codes = {"A1", "B2", "C3", "D4"}
+              if user_code in valid_codes:
+                  # Process code
+
+  - name: PACKAGE_PUBLISHING_TIPS
+    description: "Tips for successful PyPI package publishing and maintenance"
+    globs: "pyproject.toml"
+    filesToApplyRule: "pyproject.toml"
+    alwaysApply: true
+    content:
+      - heading: "README Best Practices"
+        items:
+          - "Include badges for:"
+          - "  - PyPI version"
+          - "  - Build status"
+          - "  - Test coverage"
+          - "  - Documentation status"
+          - "  - Python versions"
+          - "Structure with sections:"
+          - "  - Overview/purpose"
+          - "  - Installation"
+          - "  - Quick start example"
+          - "  - Features"
+          - "  - Documentation links"
+          - "  - Contributing guide"
+          - "  - License info"
+          - "Use executable examples when possible"
+          - "Include project logo if available"
+
+      - heading: "Dependency Management"
+        items:
+          - "Specify minimum version, not exact: `requests>=2.28.1`"
+          - "Add upper bounds for critical dependencies"
+          - "Document Python version requirements explicitly with `requires-python = \">=3.8\"`"
+          - "Use optional dependencies for flexibility:"
+          - code: |
+              [project.optional-dependencies]
+              web = [
+                  "flask>=2.0.0",
+                  "jinja2>=3.0.0",
+              ]
+              data = [
+                  "pandas>=1.4.0",
+                  "numpy>=1.20.0",
+              ]
+          - "Add dev dependencies for testing and development tools"
+          - "Use `uv project add --optional web` to add optional dependencies to a project"
+          - "Use `uv pip install .[web]` to install optional dependencies"
+
+      - heading: "Project Metadata"
+        items:
+          - "Include all required PyPI metadata:"
+          - "  - Name (unique on PyPI)"
+          - "  - Version"
+          - "  - Description"
+          - "  - Author info"
+          - "  - License"
+          - "  - Homepage/repository URL"
+          - "  - Keywords"
+          - "  - Classifiers"
+          - "Example:"
+          - code: |
+              [project]
+              name = "lightwave-package"
+              version = "0.1.0"
+              description = "Lightwave package for XYZ functionality"
+              authors = [
+                  {name = "Your Name", email = "your.email@example.com"}
+              ]
+              license = {text = "MIT"}
+              readme = "README.md"
+              requires-python = ">=3.8"
+              keywords = ["lightwave", "utilities", "data-processing"]
+              classifiers = [
+                  "Development Status :: 4 - Beta",
+                  "Intended Audience :: Developers",
+                  "License :: OSI Approved :: MIT License",
+                  "Programming Language :: Python :: 3",
+                  "Programming Language :: Python :: 3.8",
+                  "Programming Language :: Python :: 3.9",
+                  "Programming Language :: Python :: 3.10",
+              ]
+              
+              [project.urls]
+              Homepage = "https://github.com/yourusername/lightwave-package"
+              Documentation = "https://lightwave-package.readthedocs.io"
+              "Bug Tracker" = "https://github.com/yourusername/lightwave-package/issues"
+
+      - heading: "Command-Line Interface"
+        items:
+          - "Define entrypoints in pyproject.toml:"
+          - code: |
+              [project.scripts]
+              lightwave = "lightwave_package.cli:main"
+          - "Use argparse or click for argument parsing"
+          - "Include --help documentation"
+          - "Support configuration files"
+          - "Add shell completion if useful"
+
+      - heading: "Documentation Hosting"
+        items:
+          - "Set up Read the Docs for documentation hosting"
+          - "Create docs/requirements.txt for doc dependencies"
+          - "Configure proper doc build in .readthedocs.yml"
+          - "Include API reference and user guides"
+          - "Add examples directory with sample code"
+
+      - heading: "Maintenance Considerations"
+        items:
+          - "Define project status: alpha, beta, stable"
+          - "Set expectations for support/maintenance"
+          - "Create CONTRIBUTING.md guide"
+          - "Add issue templates for GitHub"
+          - "Establish process for accepting PRs"
+          - "Set up Dependabot for dependency updates"
+          - "Use `uv project check` to audit dependencies for vulnerabilities"
+
+  - name: COMMIT_STANDARDS
+    description: "Guidelines for writing clean, descriptive commit messages and maintaining code organization"
+    globs: "**/*"
+    filesToApplyRule: "**/*"
+    alwaysApply: true
+    content:
+      - heading: "Commit Message Format"
+        items:
+          - "Use the format `type(scope): subject` for all commit messages"
+          - "Types include:"
+          - "  - `feat`: New feature"
+          - "  - `fix`: Bug fix"
+          - "  - `docs`: Documentation changes"
+          - "  - `style`: Code style/formatting changes (no functional change)"
+          - "  - `refactor`: Code refactoring (no functional change)"
+          - "  - `perf`: Performance improvements"
+          - "  - `test`: Adding or updating tests"
+          - "  - `chore`: Build process, dependency updates, etc."
+          - "Scope should indicate the module or component affected (e.g., `api`, `models`, `cli`)"
+          - "Subject should be concise (< 50 characters) and in present tense"
+          - "Example: `feat(api): implement rate limiting for public endpoints`"
+
+      - heading: "Commit Message Body"
+        items:
+          - "Separate subject from body with a blank line"
+          - "Use body to explain what and why vs. how"
+          - "Wrap text at 72 characters"
+          - "Use bullet points for multiple items"
+          - "Example:"
+          - code: |
+              fix(auth): resolve token refresh issues
+              
+              - Update JWT expiration handling
+              - Add refresh token rotation
+              - Fix race condition in concurrent refreshes
+
+      - heading: "Code Organization in Commits"
+        items:
+          - "Keep commits small and focused on a single change"
+          - "Separate logical changes into distinct commits"
+          - "Avoid mixing refactoring with feature changes"
+          - "Group related file changes in a single commit"
+          - "Consider readability of the commit history"
+
+      - heading: "Referencing Issues"
+        items:
+          - "Use `#issue-number` to reference related issues"
+          - "Use keywords like `Fixes #123` or `Resolves #456` to auto-close issues"
+          - "For multiple issues: `Fixes #123, #456`"
+          - "Example: `feat(auth): add OAuth provider (Fixes #789)`"
+
+      - heading: "Branch and PR Standards"
+        items:
+          - "Branch naming: `type/description` (e.g., `feat/oauth-integration`)"
+          - "Create PRs with clear titles following commit message format"
+          - "Include issue references in PR description"
+          - "Add test coverage information in PR"
+          - "Request reviews from appropriate team members"
+          - "Ensure CI passes before merging"
+
+      - heading: "ClickUp Task References"
+        items:
+          - "Include ClickUp task ID in commit messages when available"
+          - "Format: `[CU-ABC123]` at the beginning of the commit message"
+          - "Example: `[CU-ABC123] feat(api): implement pagination`"
+          - "For multiple tasks: `[CU-ABC123][CU-DEF456] fix: resolve API timeout issues`"
+          - "Can be combined with issue references: `[CU-ABC123] feat: add feature (Fixes #123)`"
+
+  - name: PYPI_RULES
+    description: "Guidelines for creating and maintaining PyPI rules to ensure consistency and effectiveness."
+    globs: ".pypi-rules"
+    filesToApplyRule: ".pypi-rules"
+    alwaysApply: true
+    content:
+      - note: "The below describes how you should be structuring new rule sections in this document."
+      
+      - heading: "Required Rule Structure"
+        code: |
+          ---
+          description: Clear, one-line description of what the rule enforces
+          globs: path/to/files/*.ext, other/path/**/*
+          alwaysApply: boolean
+          ---
+
+          - **Main Points in Bold**
+            - Sub-points with details
+            - Examples and explanations
+
+      - heading: "Section References"
+        items:
+          - "Use `ALL_CAPS_SECTION` to reference files"
+          - "Example: `PYTHON_WORKFLOW`"
+
+      - heading: "Code Examples"
+        items:
+          - "Use language-specific code blocks"
+          - code: |
+              # ✅ DO: Show good examples
+              def good_example():
+                  """Function with proper documentation."""
+                  return True
+              
+              # ❌ DON'T: Show anti-patterns
+              def bad_example(): return False
+
+      - heading: "Rule Content Guidelines"
+        items:
+          - "Start with high-level overview"
+          - "Include specific, actionable requirements"
+          - "Show examples of correct implementation"
+          - "Reference existing code when possible"
+          - "Keep rules DRY by referencing other rules"
+
+      - heading: "Rule Maintenance"
+        items:
+          - "Update rules when new patterns emerge"
+          - "Add examples from actual codebase"
+          - "Remove outdated patterns"
+          - "Cross-reference related rules"
+
+      - heading: "Best Practices"
+        items:
+          - "Use bullet points for clarity"
+          - "Keep descriptions concise"
+          - "Include both DO and DON'T examples"
+          - "Reference actual code over theoretical examples"
+          - "Use consistent formatting across rules"
+
+  - name: SELF_IMPROVE
+    description: "Guidelines for continuously improving this rules document based on emerging code patterns and best practices."
+    globs: "**/*"
+    filesToApplyRule: "**/*"
+    alwaysApply: true
+    content:
+      - heading: "Rule Improvement Triggers"
+        items:
+          - "New code patterns not covered by existing rules"
+          - "Repeated similar implementations across files"
+          - "Common error patterns that could be prevented"
+          - "New libraries or tools being used consistently"
+          - "Emerging best practices in the codebase"
+
+      - heading: "Analysis Process"
+        items:
+          - "Compare new code with existing rules"
+          - "Identify patterns that should be standardized"
+          - "Look for references to external documentation"
+          - "Check for consistent error handling patterns"
+          - "Monitor test patterns and coverage"
+
+      - heading: "Rule Updates"
+        items:
+          - "**Add New Rules When:**"
+          - "  - A new technology/pattern is used in 3+ files"
+          - "  - Common bugs could be prevented by a rule"
+          - "  - Code reviews repeatedly mention the same feedback"
+          - "  - New security or performance patterns emerge"
+          - " "
+          - "**Modify Existing Rules When:**"
+          - "  - Better examples exist in the codebase"
+          - "  - Additional edge cases are discovered"
+          - "  - Related rules have been updated"
+          - "  - Implementation details have changed"
+
+      - heading: "Example Pattern Recognition"
+        code: |
+          # If you see repeated patterns like:
+          try:
+              data = function_that_might_fail()
+          except Exception as e:
+              logger.error(f"Operation failed: {e}")
+              return None
+          
+          # Consider adding a ERROR_HANDLING section in the .pypi-rules:
+          # - Structured error patterns
+          # - Appropriate exception types to catch
+          # - Error logging standards
+
+      - heading: "Rule Quality Checks"
+        items:
+          - "Rules should be actionable and specific"
+          - "Examples should come from actual code"
+          - "References should be up to date"
+          - "Patterns should be consistently enforced"
+
+      - heading: "Continuous Improvement"
+        items:
+          - "Monitor code review comments"
+          - "Track common development questions"
+          - "Update rules after major refactors"
+          - "Add links to relevant documentation"
+          - "Cross-reference related rules"
+
+      - heading: "Rule Deprecation"
+        items:
+          - "Mark outdated patterns as deprecated"
+          - "Remove rules that no longer apply"
+          - "Update references to deprecated rules"
+          - "Document migration paths for old patterns"
+
+      - heading: "Documentation Updates"
+        items:
+          - "Keep examples synchronized with code"
+          - "Update references to external docs"
+          - "Maintain links between related rules"
+          - "Document breaking changes"
+
+      - footer: "Follow PYPI_RULES for proper rule formatting and structure of PyPI rule sections."
+
+  - name: UV_TOOLS
+    description: "Guide for using the uv tool interface for Python development tools"
+    globs: "**/*.py"
+    filesToApplyRule: "**/*.py"
+    alwaysApply: true
+    content:
+      - heading: "UV Tool Interface"
+        items:
+          - "Use the `uvx` command for running Python tools without installation"
+          - "The `uvx` command is an alias for `uv tool run`"
+          - "Tools run with `uvx` are isolated from your project environment"
+          - "For tools that need project awareness, use `uv run` instead"
+          - "Example: `uvx black .` for formatting or `uv run pytest` for testing"
+
+      - heading: "Tool Execution vs Installation"
+        items:
+          - "Prefer executing tools with `uvx` over installing them when possible"
+          - "Install tools only when they need to be available system-wide"
+          - "Execute one-off tools with `uvx <tool> [arguments]`"
+          - "Install persistent tools with `uv tool install <tool>`"
+          - "Examples:"
+          - code: |
+              # Execute without installing
+              uvx black .
+              uvx mypy my_package
+              uvx ruff check .
+              
+              # Install system-wide tools
+              uv tool install black
+              uv tool install ruff
+
+      - heading: "Tool Versioning"
+        items: 
+          - "Specify tool versions with `@` syntax: `uvx black@23.1.0 .`"
+          - "Use `@latest` to ensure the most recent version: `uvx black@latest .`"
+          - "Version-pin tools in CI/CD workflows for consistency"
+          - "For installed tools, use version constraints: `uv tool install black>=23.1.0,<24`"
+          - "Upgrade installed tools with `uv tool upgrade <tool>`"
+
+      - heading: "Including Additional Dependencies"
+        items:
+          - "Add extra packages with the `--with` flag:"
+          - code: |
+              # Add type stubs when running mypy
+              uvx --with types-requests mypy my_package
+              
+              # Add multiple extras
+              uvx --with pandas --with matplotlib jupyter
+          - "Use version constraints with extra dependencies: `--with pandas>=2.0.0`"
+          - "For installed tools, use the same flag: `uv tool install --with types-requests mypy`"
+
+      - heading: "Common Python Tools with UV"
+        items:
+          - "**Code Formatting:**"
+          - "  - Format code with `uvx black .`"
+          - "  - Sort imports with `uvx isort .`"
+          - "  - Run comprehensive linting with `uvx ruff check --fix .`"
+          - "**Type Checking:**"
+          - "  - Check types with `uvx mypy my_package`"
+          - "  - Add type stubs with `uvx --with types-requests mypy my_package`"
+          - "**Testing:**"
+          - "  - Run tests with `uv run pytest`"
+          - "  - Check coverage with `uv run pytest --cov=my_package`"
+          - "  - Generate coverage report with `uv run pytest --cov=my_package --cov-report=html`"
+          - "**Documentation:**"
+          - "  - Build docs with `uv run sphinx-build -b html docs docs/_build`"
+          - "  - Generate API docs with `uvx sphinx-apidoc -o docs/api my_package`"
+
+      - heading: "Best Practices for CI/CD"
+        items:
+          - "Install uv at the start of CI workflows with `pip install uv`"
+          - "Use consistent versioning in CI to ensure reproducibility"
+          - "Cache uv installation between CI runs for performance"
+          - "Example CI step:"
+          - code: |
+              - name: Lint code
+                run: |
+                  uvx black@23.1.0 --check .
+                  uvx isort@5.12.0 --check .
+                  uvx ruff@0.0.267 check .
+          - "For complex environments, create environment.yaml and use with `uv project sync`"
+
+  - name: UV_PROJECTS
+    description: "Guide for working with uv projects for Python package development"
+    globs: "**/*.py"
+    filesToApplyRule: "**/*.py"
+    alwaysApply: true
+    content:
+      - heading: "Project Structure"
+        items:
+          - "Project configuration is defined in `pyproject.toml` following PEP 621"
+          - "Dependencies are locked in `requirements.txt` or `requirements.lock`"
+          - "Development dependencies can be separated in `requirements-dev.txt`"
+          - "Virtual environments are managed by uv but should not be committed to version control"
+          - "Example project structure:"
+          - code: |
+              my_project/
+              ├── pyproject.toml          # Project configuration
+              ├── requirements.lock       # Locked dependencies
+              ├── requirements-dev.lock   # Locked dev dependencies
+              ├── my_package/             # Source code
+              │   ├── __init__.py
+              │   └── ...
+              ├── tests/                  # Test files
+              │   ├── __init__.py
+              │   └── ...
+              ├── docs/                   # Documentation
+              │   ├── conf.py
+              │   └── ...
+              └── README.md               # Project documentation
+
+      - heading: "Creating Projects"
+        items:
+          - "Start a new project with `uv project new my_project`"
+          - "For existing projects, ensure you have a valid `pyproject.toml`"
+          - "Set basic project metadata following PEP 621 format:"
+          - code: |
+              [project]
+              name = "my-project"
+              version = "0.1.0"
+              description = "My project description"
+              requires-python = ">=3.8"
+              
+              [build-system]
+              requires = ["hatchling"]
+              build-backend = "hatchling.build"
+          - "Initialize git repository: `git init && git add pyproject.toml && git commit -m \"Initial commit\"`"
+
+      - heading: "Managing Dependencies"
+        items:
+          - "Add dependencies to a project with `uv project add <package>`"
+          - "Add development dependencies with `uv project add --dev <package>`"
+          - "Remove dependencies with `uv project remove <package>`"
+          - "Update dependencies with `uv project update <package>`"
+          - "View installed dependencies with `uv project dependencies`"
+          - "Example dependency management:"
+          - code: |
+              # Add runtime dependencies
+              uv project add requests pydantic
+              
+              # Add development dependencies
+              uv project add --dev pytest black mypy
+              
+              # Update a specific package
+              uv project update requests
+              
+              # Remove a package
+              uv project remove deprecated-package
+
+      - heading: "Locking and Syncing"
+        items:
+          - "Lock dependencies to ensure reproducible environments with `uv project lock`"
+          - "Sync project environment with locked dependencies using `uv project sync`"
+          - "Regenerate lock files when dependencies change with `uv project lock --refresh`"
+          - "Lock development dependencies separately with `uv project lock --dev`"
+          - "Create a clean environment with `uv project sync --recreate`"
+          - "Best practice workflow:"
+          - code: |
+              # After adding or updating dependencies
+              uv project lock
+              
+              # Commit the lock file
+              git add requirements.lock requirements-dev.lock
+              git commit -m "Update dependencies"
+              
+              # On a fresh clone or after pulling changes
+              uv project sync
+
+      - heading: "Running Commands"
+        items:
+          - "Execute commands in project environment with `uv run <command> [args]`"
+          - "Run Python scripts with `uv run python script.py`"
+          - "Run tests with `uv run pytest`"
+          - "Use package modules with `uv run python -m my_package.module`"
+          - "Run shell in environment with `uv run --shell`"
+          - "Examples:"
+          - code: |
+              # Run tests
+              uv run pytest
+              
+              # Run a specific script
+              uv run python scripts/process_data.py
+              
+              # Start an interactive shell
+              uv run --shell
+
+      - heading: "Multiple Python Versions"
+        items:
+          - "Specify Python version for project with `uv project --python=3.11`"
+          - "Test against multiple Python versions by creating separate environments"
+          - "Use `uv project sync --python=3.9` to create an environment with Python 3.9"
+          - "For CI/CD, test with matrix strategy to cover multiple versions"
+          - "Ensure `requires-python` in `pyproject.toml` correctly specifies supported versions"
+
+      - heading: "Sharing Projects"
+        items:
+          - "Always commit lock files to version control"
+          - "Include clear setup instructions in README.md"
+          - "Add a `.gitignore` for virtual environments and build artifacts"
+          - "Document the minimum required uv version"
+          - "Example README instructions:"
+          - code: |
+              ## Development Setup
+              
+              This project uses uv for dependency management.
+              
+              ```bash
+              # Install uv if you don't have it
+              pip install uv
+              
+              # Clone the repository
+              git clone https://github.com/username/my-project.git
+              cd my-project
+              
+              # Set up the development environment
+              uv project sync
+              
+              # Run tests to verify setup
+              uv run pytest
+              ``` 

@@ -1,0 +1,89 @@
+{
+  "schemas": {
+    "Overview\n\nThe LightWave ecosystem uses standardized JSON schemas to ensure data consistency, validation, and interoperability across services. This registry provides the authoritative definitions for all data structures used in the ecosystem.\n\nAll schemas follow JSON": {
+      "fields": [],
+      "examples": []
+    },
+    "Schema Standards\n\nAll schemas in the LightWave ecosystem adhere to these standards:\n\n- JSON": {
+      "fields": [],
+      "examples": []
+    },
+    "BaseEntity": {
+      "fields": [],
+      "examples": []
+    },
+    "Fields\n\n| Field | Type | Description | Required |\n|-------|------|-------------|----------|\n| id | string (uuid) | Unique identifier | Yes |\n| createdAt | string (date-time) | Creation timestamp | Yes |\n| updatedAt | string (date-time) | Last update timestamp | Yes |\n| version | integer |": {
+      "fields": [],
+      "examples": []
+    },
+    "Error": {
+      "fields": [],
+      "examples": []
+    },
+    "Pagination": {
+      "fields": [],
+      "examples": []
+    },
+    "User": {
+      "fields": [],
+      "examples": []
+    },
+    "UserProfile": {
+      "fields": [],
+      "examples": []
+    },
+    "Project": {
+      "fields": [],
+      "examples": []
+    },
+    "Task": {
+      "fields": [],
+      "examples": []
+    },
+    "Media": {
+      "fields": [],
+      "examples": []
+    },
+    "Collection": {
+      "fields": [],
+      "examples": []
+    },
+    "Webhook": {
+      "fields": [],
+      "examples": []
+    },
+    "OAuth2Connection": {
+      "fields": [],
+      "examples": []
+    }
+  },
+  "version_strategy": {
+    "rules": [
+      "Schemas use explicit version fields to track schema versions",
+      "Backward compatibility is maintained whenever possible",
+      "New optional fields can be added without changing the version",
+      "When breaking changes are needed, a new version is created",
+      "Old versions remain supported for a deprecation period",
+      "Deprecation notices are provided through API responses",
+      "Migration guides are provided for all schema version changes",
+      "Version history is documented for all schemas"
+    ]
+  },
+  "guidelines": [
+    "Always validate data against the appropriate schema",
+    "Handle unknown properties gracefully (don't break on extra fields)",
+    "Include schema versions in all data objects",
+    "Use appropriate data formats (ISO dates, proper UUIDs, etc.)",
+    "When upgrading, test against all schema versions still in use",
+    "For critical data, maintain schema validation on both client and server",
+    "Be aware of required vs. optional fields in your implementation",
+    "Implement fallbacks for missing optional fields",
+    "Use enums only for the specified values",
+    "Maintain proper nesting structure for complex objects"
+  ],
+  "metadata": {
+    "title": "LightWave Ecosystem Schema Registry",
+    "source_file": "schema-registry.md",
+    "generation_time": "2025-03-17T21:28:48.158769"
+  }
+}
