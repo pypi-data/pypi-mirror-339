@@ -1,0 +1,17 @@
+pyimager/__init__.py,sha256=MjM_fv2OuJwvL7Or01uRhR8IXqcJp9kViQYrXL_CC_Q,162
+pyimager/__vars__.py,sha256=aKk-5e1BX1Kksh1qeO-fGjUPxAQTjcd8HdmRubW4NmA,849
+pyimager/calculs.py,sha256=-8-Tkb8I6qrpQTu3jKENlAY-ChZkCYb6UEZ2WGTtUSo,2910
+pyimager/chars.py,sha256=SChoH8nIytnpB6HVYph-7HuATxM3N5QHt1BM2RRHpo0,53240
+pyimager/colors.py,sha256=XLCK88KKYvK3nuOD0TdqULnXpwKgHdwp1tK16RSP8-Q,5195
+pyimager/fonts.py,sha256=FA9Hg9tk60RpGbQMTCT8JOGyflLlYM2Va0pF134Suuk,731
+pyimager/main.py,sha256=opuJapYYL3A1-qg1AeJVZY8ingOV9HYN3m2sI1_U_5I,13930
+pyimager/resolution.py,sha256=2LDaDiynGXxLmzMjPh_YnH7AjZZJNK09_cEDxlP1dKs,835
+pyimager/terminal_colors.py,sha256=H7t814BamJ9lRLi_TyPzV1kTyEVcToJCirtaX8oYeFs,668
+pyimager/test.py,sha256=SJV8U8e35kVpOy19b-p6a_RR8nG7MMTGLJHt6XR7cHs,96
+pyimager/text.py,sha256=6lmAGSRqdNrAEXMk4PfzHGXdQQz69kdYFU6FBCQ4HKs,13394
+pyimager/text_conv.py,sha256=1WeLEfBgdgddpVZJJmqIlTetAbQPO41I-x9jbIbCHBs,9017
+python_imager-1.2.31.dist-info/licenses/LICENCE,sha256=kgU7KjM-lvyEzI25B1Mh5INx4Ksl-VapBcDIsdGF0IA,1064
+python_imager-1.2.31.dist-info/METADATA,sha256=ufcKwBPXUgqu4NZaBclRS9QJHUDvigkX5qy46dnVfLo,3523
+python_imager-1.2.31.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+python_imager-1.2.31.dist-info/top_level.txt,sha256=qfFMnRUdwcA01YZLX9FJ35DYUwmS2S_XmX3lOqdHgWY,9
+python_imager-1.2.31.dist-info/RECORD,,
