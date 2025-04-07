@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/git_multi_status/__main__.py
+src/git_multi_status.egg-info/PKG-INFO
+src/git_multi_status.egg-info/SOURCES.txt
+src/git_multi_status.egg-info/dependency_links.txt
+src/git_multi_status.egg-info/entry_points.txt
+src/git_multi_status.egg-info/requires.txt
+src/git_multi_status.egg-info/top_level.txt
