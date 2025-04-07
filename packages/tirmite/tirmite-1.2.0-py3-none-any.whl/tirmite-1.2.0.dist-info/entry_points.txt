@@ -1,0 +1,2 @@
+[console_scripts]
+tirmite = tirmite.cmd_tirmite:main
