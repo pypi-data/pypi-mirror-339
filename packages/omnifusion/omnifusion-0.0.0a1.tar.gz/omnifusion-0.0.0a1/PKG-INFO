@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: omnifusion
+Version: 0.0.0a1
+Summary: Placeholder package to reserve the omnifusion namespace.
+License: BSD-3-Clause
+Author: Prodigal AI
+Author-email: info@prodigal.ai
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# Omnifusion
+
+*Reserved namespace for Prodigal AI’s upcoming omni‑modal ML toolkit.*
+
+This placeholder release exists only to secure the **omnifusion** package name on PyPI.  
+The first functional release will replace this stub once the project reaches public‑alpha.
