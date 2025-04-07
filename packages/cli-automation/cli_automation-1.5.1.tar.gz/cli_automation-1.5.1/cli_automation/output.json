@@ -1,0 +1,90 @@
+[
+  {
+    "Device": "10.2.0.102",
+    "Output": [
+      {
+        "type": "textfsm",
+        "show ip inter brief": [
+          {
+            "interface": "GigabitEthernet0/0",
+            "ip_address": "10.2.0.102",
+            "status": "up",
+            "proto": "up"
+          },
+          {
+            "interface": "GigabitEthernet0/1",
+            "ip_address": "unassigned",
+            "status": "up",
+            "proto": "up"
+          },
+          {
+            "interface": "GigabitEthernet0/2",
+            "ip_address": "unassigned",
+            "status": "up",
+            "proto": "up"
+          },
+          {
+            "interface": "GigabitEthernet0/3",
+            "ip_address": "unassigned",
+            "status": "up",
+            "proto": "up"
+          },
+          {
+            "interface": "GigabitEthernet1/0",
+            "ip_address": "unassigned",
+            "status": "up",
+            "proto": "up"
+          },
+          {
+            "interface": "GigabitEthernet1/1",
+            "ip_address": "unassigned",
+            "status": "up",
+            "proto": "up"
+          },
+          {
+            "interface": "GigabitEthernet1/2",
+            "ip_address": "unassigned",
+            "status": "down",
+            "proto": "down"
+          },
+          {
+            "interface": "GigabitEthernet1/3",
+            "ip_address": "192.168.1.4",
+            "status": "up",
+            "proto": "up"
+          },
+          {
+            "interface": "Port-channel1",
+            "ip_address": "unassigned",
+            "status": "up",
+            "proto": "up"
+          },
+          {
+            "interface": "Vlan10",
+            "ip_address": "172.16.10.253",
+            "status": "up",
+            "proto": "up"
+          },
+          {
+            "interface": "Vlan20",
+            "ip_address": "172.16.20.253",
+            "status": "up",
+            "proto": "up"
+          },
+          {
+            "interface": "Vlan30",
+            "ip_address": "172.16.30.253",
+            "status": "up",
+            "proto": "up"
+          },
+          {
+            "interface": "Vlan100",
+            "ip_address": "172.16.100.253",
+            "status": "up",
+            "proto": "up"
+          }
+        ]
+      }
+    ]
+  }
+]
