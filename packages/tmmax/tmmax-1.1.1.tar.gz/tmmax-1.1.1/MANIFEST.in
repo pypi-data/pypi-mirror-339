@@ -1,0 +1,3 @@
+include param2geometry/data/drc/template_drc.lydrc
+include param2geometry/data/model/size_mapping_equal_ratio.npy
+include param2geometry/data/model/weights/*
