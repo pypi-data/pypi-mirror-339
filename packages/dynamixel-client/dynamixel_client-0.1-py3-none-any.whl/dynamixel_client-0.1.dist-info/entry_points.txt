@@ -1,0 +1,3 @@
+[console_scripts]
+dynamixel-client=dynamixel_client.main:main
+
