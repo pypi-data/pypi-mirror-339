@@ -1,0 +1,83 @@
+Metadata-Version: 2.4
+Name: tutor-deck
+Version: 19.0.0
+Summary: Awesome administration dashboard and plugin marketplace for Tutor
+Project-URL: Homepage, https://github.com/overhangio/tutor-deck
+Project-URL: Code, https://github.com/overhangio/tutor-deck
+Project-URL: Issues, https://github.com/overhangio/tutor-deck/issues
+Author: Edly
+Author-email: hello@edly.io
+Maintainer: Muhammad Labeeb
+Maintainer-email: muhammad.labeeb@arbisoft.com
+License: AGPL-3.0-only
+License-File: LICENSE.txt
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Requires-Dist: aiofiles
+Requires-Dist: click
+Requires-Dist: click-repl
+Requires-Dist: markdown
+Requires-Dist: quart
+Requires-Dist: tutor<20.0.0,>=19.0.0
+Provides-Extra: dev
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: pylint; extra == 'dev'
+Requires-Dist: tutor[dev]<20.0.0,>=19.0.0; extra == 'dev'
+Requires-Dist: types-aiofiles; extra == 'dev'
+Requires-Dist: types-markdown; extra == 'dev'
+Description-Content-Type: text/x-rst
+
+deck plugin for `Tutor <https://docs.tutor.edly.io>`__
+######################################################
+
+Awesome administration dashboard and plugin marketplace for Tutor
+
+
+Installation
+************
+
+.. code-block:: bash
+
+    pip install git+https://github.com/overhangio/tutor-deck
+
+.. TODO how to package css files?
+
+Usage
+*****
+
+.. code-block:: bash
+
+    tutor plugins enable deck
+
+Development
+***********
+
+Install locally::
+
+    pip install -e .[dev]
+
+Install npm requirements::
+
+    npm clean-install
+
+Compile SCSS files::
+
+    make scss       # compile once
+    make scss-watch # compile and watch for changes
+
+Run a development server::
+
+    make runserver
+
+License
+*******
+
+This software is licensed under the terms of the AGPLv3.
