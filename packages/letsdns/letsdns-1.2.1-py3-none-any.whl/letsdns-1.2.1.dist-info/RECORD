@@ -1,0 +1,17 @@
+letsdns/__init__.py,sha256=gh6bivwsgZJJQcesaM5CYFxuVVzi_hA2XOUYHDe144o,752
+letsdns/__main__.py,sha256=goQQ5Xf_UAm061RhykAVC2D842Mm5dJNc68z3o52dUQ,1665
+letsdns/action.py,sha256=QpTKuHAjf9UcOpLYbDC26AcedXd48rtcpd5PvIuYobU,3536
+letsdns/configuration.py,sha256=7I8IOxREnnxebV5vTPF3SkAVgOoBx3xDm2FwEo9xNe0,3882
+letsdns/core.py,sha256=yikDmoJRZP3iR0vbJirHIwmkGfM1nDTyLuAvnKsdqXw,2283
+letsdns/crypto.py,sha256=uocJxWwtm8Waeln2m7Un5izP9ZGlCyte18MngzXPyuE,2097
+letsdns/hetznerapi.py,sha256=hHukx5FBZGuqbx177d3PrruAyL7GePz9vi7cVWrz7jk,5536
+letsdns/liveupdate.py,sha256=HqJFAKUAHlQvxvVPEr6z10EvdVWde-_4nPR9CFze37U,2567
+letsdns/nsupdate.py,sha256=MLfAiS0OuPOsIYURHXbLNJZSWiBrD1i-dxF9bjyLMWo,1641
+letsdns/tlsa.py,sha256=7YpABiYjdROj_hy4GcTI3v-UmkertAro16Sx_p94l5k,2465
+letsdns/util.py,sha256=ZA7LlCzXD1yGcytqzgm_UJfRhDM6wt7ZXioht8qCPE8,2384
+letsdns-1.2.1.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+letsdns-1.2.1.dist-info/METADATA,sha256=D1-u2lOCicPcOfcIlknzLLJAsQo4PeqJtFHdbpIg_xw,1345
+letsdns-1.2.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+letsdns-1.2.1.dist-info/entry_points.txt,sha256=e2LRRLa3FGtqh-e6kW5h3BR-RwizlNw5frv6-uXkQMo,50
+letsdns-1.2.1.dist-info/top_level.txt,sha256=xh6foxej_y88tMOmIcvpnBYHYiP23otkXvqynQjVDJM,8
+letsdns-1.2.1.dist-info/RECORD,,
