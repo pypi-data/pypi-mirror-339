@@ -1,0 +1,16 @@
+[code2_backend]
+litellm = code2.backends.litellm:LiteLLMBackend
+
+[code2_jinja2]
+read = code2.jinja2:read
+
+[code2_parser]
+wholefile = code2.parser:Wholefile
+
+[code2_workflow]
+analyze = code2.workflows.analyze:AnalyzeWorkflow
+cmd = code2.workflows.cmd:CmdWorkflow
+edit = code2.workflows.edit:EditWorkflow
+
+[console_scripts]
+code2 = code2.cli:cli.entry_point
