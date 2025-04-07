@@ -1,0 +1,10 @@
+setup.py
+gggg/__init__.py
+gggg/cli.py
+gggg/gggg.py
+gggg.egg-info/PKG-INFO
+gggg.egg-info/SOURCES.txt
+gggg.egg-info/dependency_links.txt
+gggg.egg-info/entry_points.txt
+gggg.egg-info/requires.txt
+gggg.egg-info/top_level.txt
