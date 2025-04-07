@@ -1,0 +1,14 @@
+gits/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gits/main.py,sha256=FJeznCb7VNE6SDWLSbuN7KhH6XnEZRfrGkI4ctBEbzE,616
+gits/.system/imports.py,sha256=2HEHHnwFPJlX1trToZapxn0EfV5Fvm0wiMQXZTix4uk,235
+gits/.system/index.py,sha256=9zCPxeuTaiAxhvaUiYXwRHkpDnvm9NRgc5YGheHYqFE,1703
+gits/.system/modules/gitssh.py,sha256=jqMSRfkepd5D6t1obZe7oC4aLH02id2ko-vTXSajQFw,9271
+gits/.system/sources/clight.json,sha256=AUAF3R_3CxpLaCNHDbidgUBZwDZUY4owKH2DebRJe50,689
+gits/.system/sources/logo.ico,sha256=oSwpsudp2bWNxz8F70SzkUSGfNhCcVV6tlTIEEqyZIc,63315
+gits/.system/sources/sshconfig,sha256=QuP8-KIPZ6B704WFAIy3KPSaodbG8YphyJ7bp5GvhxY,205
+gits-1.0.3.dist-info/licenses/LICENSE,sha256=3U_CaMRQisXoQHsc9kJrlUBUKI6_M5KcJvzkURHBRmU,1096
+gits-1.0.3.dist-info/METADATA,sha256=yyaIHxS2vj-kJSK9QBdlw1261wuumgkk56rKGTcLlAQ,2609
+gits-1.0.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+gits-1.0.3.dist-info/entry_points.txt,sha256=jys3XKFxTXkZqajLb80DHjr8biEi9QKG1-GBllFhUNw,40
+gits-1.0.3.dist-info/top_level.txt,sha256=DMCRff6_R6PB6UnpaFwaHN5NHwoh38RUIHFlEr2871s,5
+gits-1.0.3.dist-info/RECORD,,
