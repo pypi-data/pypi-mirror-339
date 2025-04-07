@@ -1,0 +1,8 @@
+genpdf_butler/GenPDF.py,sha256=-jxvsF5vGxVNAY4Ga-DGrT0J5OQOLT1RRE1Mkah3NKk,1418
+genpdf_butler/PatchTextColor.py,sha256=ZL_IlHquW_6_ZuEm66tdl5BFWhyGLmEuA9NKHDqwH6A,1131
+genpdf_butler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+genpdf_butler/__main__.py,sha256=zQmG0fzeE3Vk5NdA-BAKuptYMHUxjwUbX3sQJzSmCpM,831
+genpdf_butler-0.0.14.dist-info/METADATA,sha256=MSF9YTdL90h55ag6UR1kP5rdmhY1OhhVNRSfHgQYh6w,468
+genpdf_butler-0.0.14.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+genpdf_butler-0.0.14.dist-info/entry_points.txt,sha256=Us7R1BQTMf7BE43HsRh2oOOCLmh8QneuxTaFaGQR2eY,55
+genpdf_butler-0.0.14.dist-info/RECORD,,
