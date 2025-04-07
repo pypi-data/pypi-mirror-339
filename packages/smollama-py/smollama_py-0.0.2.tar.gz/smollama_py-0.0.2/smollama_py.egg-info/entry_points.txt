@@ -1,0 +1,2 @@
+[console_scripts]
+smollama-py = smollama_py.cli:cli
