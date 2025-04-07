@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: onezot
+Version: 0.0.1
+Summary: Python SDK for OneZot services
+Home-page: https://github.com/onezot-python-sdk
+Author: OneZot Team
+Author-email: info@onezot.com
+License-Expression: Apache-2.0
+Project-URL: Documentation, https://docs.onezot.io
+Project-URL: Source, https://github.com/onezot-python-sdk
+Project-URL: Bug Tracker, https://github.com/onezot-python-sdk/issues
+Project-URL: Changelog, https://github.com/onezot-python-sdk/blob/main/CHANGELOG.md
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: livekit
+Requires-Dist: livekit-api
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+
+SDK to be used along with agents that run on python
