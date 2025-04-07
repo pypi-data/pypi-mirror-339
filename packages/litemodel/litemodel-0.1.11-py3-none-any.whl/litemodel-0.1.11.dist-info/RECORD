@@ -1,0 +1,10 @@
+litemodel/__init__.py,sha256=MgxizTHVlGl8mOGwSOjiP3HNkdRqJGqgkdC8ve48Wh8,44
+litemodel/async_core.py,sha256=Fdbz7od6egERpIawcGrIFGEIV6lMyvm6HWWj_HDHs2c,12061
+litemodel/constants.py,sha256=CvkcZBHVzrSCZJsUXb1E8vqrCkOSL-g1Z_HOGnsecXM,453
+litemodel/core.py,sha256=zgnA2T2YwCyfSNpKn0hY7XehdmMoaz74_zaEpjrZC4U,9508
+litemodel/pool.py,sha256=NwwHudXQ8P5zggMenXs05HT0sb-4FTeYev-b_jOisx4,2172
+litemodel/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+litemodel/sql_templates.py,sha256=b4Sy7Mp81r81OjH8By7GZcwGi_Q4wUkr_vwYQ80gomY,962
+litemodel-0.1.11.dist-info/METADATA,sha256=Mn_bSjqlqyZkfRIV9nGnzFPpSIjNuiHjHD1w1hh8j9M,1970
+litemodel-0.1.11.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+litemodel-0.1.11.dist-info/RECORD,,
