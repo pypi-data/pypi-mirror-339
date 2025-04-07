@@ -1,0 +1,28 @@
+Metadata-Version: 2.2
+Name: dexhandpy
+Version: 0.1.13
+Summary: Fourier dexhand general SDK
+Home-page: https://github.com/yourusername/dexhandpy
+Author: Afer Liu
+Author-email: fei.liu@fftai.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pybind11>=2.6.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Pybind11 DexHand lib
+
