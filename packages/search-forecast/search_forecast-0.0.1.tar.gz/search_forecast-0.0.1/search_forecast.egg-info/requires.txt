@@ -1,0 +1,14 @@
+pymc
+jax
+numba
+numpyro
+nutpie
+pandas
+numpy
+dowhy
+pymc-marketing
+tensorflow_probability
+tueplots
+plotly
+
+[dev]
