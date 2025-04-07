@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+sybsc/__init__.py
+sybsc/data.txt
+sybsc.egg-info/PKG-INFO
+sybsc.egg-info/SOURCES.txt
+sybsc.egg-info/dependency_links.txt
+sybsc.egg-info/top_level.txt
