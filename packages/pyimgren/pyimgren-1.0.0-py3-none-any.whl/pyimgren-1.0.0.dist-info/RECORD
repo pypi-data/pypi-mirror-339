@@ -1,0 +1,12 @@
+pyimgren/__init__.py,sha256=hMdmCvVdYu3EtXQ00ENFrfwzP5c36oJHOEIjycPom8I,180
+pyimgren/__main__.py,sha256=dd4bah6v8LgDOK_PJEGHUkeLdmLzbi5LECqcCGW_1_4,196
+pyimgren/cmdline.py,sha256=VCll3lUAR6j_a-haWySENi8AvJAz_8KzbDHpq1ZZLSQ,3699
+pyimgren/renamer.py,sha256=DB_GrK8M3mgUiVQ5WUGTbE9nFAJ0B-J5tgF5njkHBfI,19821
+pyimgren/version.py,sha256=FpH1i3EEN8xtgA6uFfYfoVe2FU5nBGmWrZf1xXnN2lQ,532
+pyimgren/locale/fr/LC_MESSAGES/cmdline.mo,sha256=7tvmVMHKPkgHInVM7VIDh8rCmS1lMxp7reWCmDhNqhU,1961
+pyimgren/locale/fr/LC_MESSAGES/pyimgren.mo,sha256=EBrfubxB4T2O1wILF9qsa-awYClnM1i_H1h0ZHwMpDo,1015
+pyimgren-1.0.0.dist-info/METADATA,sha256=Ue06iqS5SjQlEmLD6ziEGAJDPl5t5P2Y70oMc6xLvaM,9556
+pyimgren-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pyimgren-1.0.0.dist-info/entry_points.txt,sha256=3_k_T8IZeKz8zLtv1dqP4ZyACDFGYW-3W2AJVivg2Ho,57
+pyimgren-1.0.0.dist-info/licenses/LICENSE.txt,sha256=L5CMGAbhZs-5Fye1Ye7gR5DdwV-GrrHwo4JSRulerB0,1092
+pyimgren-1.0.0.dist-info/RECORD,,
