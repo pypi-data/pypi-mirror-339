@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: pyhub-mcp-tools
+Version: 0.2.0
+Summary: Python library for automating applications through MCP protocol
+Project-URL: Homepage, https://github.com/pyhub-kr/pyhub-mcp-tools
+Project-URL: Documentation, https://pyhub-kr.github.io/pyhub-mcp-tools
+Project-URL: Bug Tracker, https://github.com/pyhub-kr/pyhub-mcp-tools/issues
+Project-URL: Source Code, https://github.com/pyhub-kr/pyhub-mcp-tools
+Author-email: Your Name <your.email@example.com>
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Office/Business :: Office Suites
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Requires-Dist: django-environ
+Requires-Dist: django>=5.2
+Requires-Dist: mcp
+Requires-Dist: typer
+Requires-Dist: tzlocal
+Provides-Extra: all
+Requires-Dist: bs4; extra == 'all'
+Requires-Dist: httpx; extra == 'all'
+Requires-Dist: playwright; extra == 'all'
+Requires-Dist: xlwings; extra == 'all'
+Provides-Extra: browser
+Requires-Dist: bs4; extra == 'browser'
+Requires-Dist: httpx; extra == 'browser'
+Requires-Dist: playwright; extra == 'browser'
+Provides-Extra: build
+Requires-Dist: build; extra == 'build'
+Requires-Dist: setuptools; extra == 'build'
+Requires-Dist: twine; extra == 'build'
+Requires-Dist: wheel; extra == 'build'
+Provides-Extra: dev
+Requires-Dist: black>=23.0.0; extra == 'dev'
+Requires-Dist: djlint>=1.36.4; extra == 'dev'
+Requires-Dist: isort>=5.12.0; extra == 'dev'
+Requires-Dist: mypy>=1.0.0; extra == 'dev'
+Requires-Dist: pytest-asyncio>=0.21.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'dev'
+Requires-Dist: pytest-httpx>=0.35.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Requires-Dist: ruff>=0.0.40; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: mkdocs-material>=9.1.0; extra == 'docs'
+Requires-Dist: mkdocs>=1.4.0; extra == 'docs'
+Requires-Dist: mkdocstrings-python>=1.0.0; extra == 'docs'
+Requires-Dist: mkdocstrings>=0.20.0; extra == 'docs'
+Provides-Extra: excel
+Requires-Dist: xlwings; extra == 'excel'
+Description-Content-Type: text/markdown
+
+# pyhub-mcp-tools
+
+## Features
+
+- **엑셀 자동화**: Easily interact with Excel spreadsheets
+- **워드 자동화**: Create and modify Word documents
+- **브라우저 자동화**: Control web browsers for data collection or testing
