@@ -1,0 +1,2 @@
+[console_scripts]
+sncloud = sncloud.cli:cli
