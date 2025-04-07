@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+sphera/__init__.py
+sphera/find_rainbow_clique.py
+sphera/process_graph.py
+sphera.egg-info/PKG-INFO
+sphera.egg-info/SOURCES.txt
+sphera.egg-info/dependency_links.txt
+sphera.egg-info/requires.txt
+sphera.egg-info/top_level.txt
