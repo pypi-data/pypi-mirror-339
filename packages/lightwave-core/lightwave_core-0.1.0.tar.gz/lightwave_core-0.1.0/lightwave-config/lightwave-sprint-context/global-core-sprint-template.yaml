@@ -1,0 +1,215 @@
+# Lightwave Shared Core Sprint Template
+version: "1.0.0"
+description: "Boilerplate template for Lightwave Shared Core sprint context"
+updated: '{{ formatDate "2006-01-02" now }}'
+module: "sprint"
+
+variables:
+  - name: ProjectName
+    description: "The name of the project (e.g., lightwave-shared-core)"
+    default: "lightwave-shared-core"
+  
+  - name: SprintName
+    description: "The name of the sprint (e.g., core-sprint-01)"
+    default: "core-sprint-01"
+  
+  - name: SprintGoal
+    description: "The main goal for this sprint"
+    default: "Implement foundational shared components"
+  
+  - name: MinPythonVersion
+    description: "Minimum Python version required"
+    default: "3.11"
+  
+  - name: PackageStructure
+    description: "Whether to show the package structure section"
+    default: true
+    type: bool
+
+template:
+  content: |
+    {{ .ProjectName }}. Remember the core principle: This is an installable Python library, NOT a runnable Django project. Its purpose is to provide stable, generic, reusable code and definitions that multiple other services/apps in your LightWave ecosystem will depend on. Think of it like a well-maintained internal toolkit.
+
+    # Lightwave Sprint Process Integration: {{ .SprintName }}
+
+    Sprint Goal: {{ .SprintGoal }}
+
+    Before diving into the technical details, it's important to understand how work on {{ .ProjectName }} fits into the broader Lightwave sprint process workflow.
+
+    ## Sprint Workflow Overview
+
+    The development of {{ .ProjectName }} follows the standard Lightwave Scrum workflow:
+
+    1. **Product Request Flow**
+       - Project Ideas related to lightwave products and their dev_workflow are submitted through the established Product Request Form
+       - These requests are evaluated based on technical feasibility and strategic alignment with the shared library goals
+
+    2. **Development Flow**
+       - **Open → Considering → Scoping → Prioritized → Add to Sprint**: During this planning phase, we carefully evaluate if changes belong in the shared library (using the criteria below)
+       - **In Design → In Development → In Review → Ready for Deployment**: Implementation follows strict quality standards for shared code
+       - **Release Notes → Closed**: Documentation is especially important for shared library changes
+
+    3. **Task List Organization**
+       - Tasks for {{ .ProjectName }} are tagged with the 'shared-core' label in ClickUp
+       - Each task must include clear acceptance criteria that verifies it meets the standards for shared code
+       - When evaluating a product idea, always reference the "What SHOULD/NOT Go In {{ .ProjectName }}" sections below
+
+    4. **Cross-Project Dependencies**
+       - Changes to {{ .ProjectName }} impact dependent projects, so version updates are carefully tracked
+       - Tasks must consider backward compatibility or provide clear migration paths
+       - Version bumps follow SemVer principles: MAJOR for breaking changes, MINOR for new features, PATCH for fixes
+
+    5. **Continuous Updates**
+       - Updates to status are provided throughout development by managing the Release Status column and Comments
+       - Other teams depending on {{ .ProjectName }} should be notified of upcoming changes during daily stand-ups
+
+    ## Bug Handling for Shared Code
+
+    1. Bugs in {{ .ProjectName }} are submitted through the Bug Submission form with the 'shared-core' tag
+    2. Triage evaluates reproducibility and impact across all consuming projects
+    3. High-priority bugs are fast-tracked to "Awaiting Prioritization" and considered for immediate fixes
+    4. Bug fixes include regression tests to prevent recurrence
+
+    # Technical Implementation Details
+
+    Here's a detailed breakdown of what should (and shouldn't) go into {{ .ProjectName }}, keeping uv and pyproject.toml in mind:
+
+    {{ .ProjectName }} Detailed Overview:
+
+    1. Core Philosophy & Structure:
+
+    Role: Installable library (uv pip install {{ .ProjectName }}).
+
+    Goal: DRY (Don't Repeat Yourself) for truly common code, enforce consistency.
+
+    {{ if .PackageStructure }}
+    Structure: Standard Python package layout:
+
+    {{ .ProjectName }}/
+    ├── src/
+    │   └── {{ .ProjectName }}/
+    │       ├── __init__.py
+    │       ├── models/             # Abstract models, base classes
+    │       │   ├── __init__.py
+    │       │   └── base.py
+    │       ├── utils/              # Generic utility functions
+    │       │   ├── __init__.py
+    │       │   └── datetime.py
+    │       │   └── strings.py
+    │       ├── constants/          # Shared enums, choices
+    │       │   ├── __init__.py
+    │       │   └── general.py
+    │       ├── exceptions/         # Custom shared exception classes
+    │       │   └── __init__.py
+    │       ├── auth/               # Auth helpers (validation, interfaces)
+    │       │   └── __init__.py
+    │       │   └── validation.py
+    │       ├── api/                # Base API components (DRF/GraphQL)
+    │       │   ├── __init__.py
+    │       │   └── serializers.py
+    │       │   └── exceptions.py
+    │       ├── settings/           # Settings helper functions/structure
+    │       │   └── __init__.py
+    │       │   └── loaders.py
+    │       └── fields/             # Custom Django/DRF fields
+    │           └── __init__.py
+    ├── tests/                      # Rigorous tests for everything in src/.   1:1 match tests to code,  e.g. "src/{{ .ProjectName }}/models/base.py = tests/unit/models/test_base.py"
+    │   └── 
+    ├── pyproject.toml              # Project metadata, dependencies (managed by uv)
+    ├── README.md
+    └── ... (other config files like .gitignore)
+    {{ end }}
+
+    Versioning: Use Semantic Versioning (SemVer - MAJOR.MINOR.PATCH). Be disciplined about bumping versions, especially MAJOR for breaking changes.
+
+    Publishing: Publish versioned packages to a private artifact repository (like private PyPI, Gemfury, GitHub Packages, AWS CodeArtifact). Your other projects will install it from there using uv.
+
+    2. What SHOULD Go In {{ .ProjectName }}:
+
+    Abstract Base Models:
+
+    Example: TimestampedModel (with created_at, updated_at), UUIDPrimaryKeyModel, ArchivableModel (with is_archived, archived_at).
+
+    Why: Enforces consistent fields and behaviour across different concrete models in various services.
+
+    Caution: Avoid concrete models unless they are genuinely universal concepts with stable schemas (very rare and often better handled by a dedicated service + API). A base abstract User might seem like a good idea, but often diverges; consider putting user management in a dedicated service.
+
+    Generic Utility Functions (utils/):
+
+    Pure Python functions with minimal dependencies.
+
+    Examples: Date/time formatting, timezone helpers, string manipulation (slugify variants), data validation helpers (that don't need Django models/settings), common data structure manipulation.
+
+    Shared Constants & Enums (constants/):
+
+    Python Enum classes for choices used in multiple services (e.g., StatusEnum, RoleEnum, standard country codes).
+
+    Why: Prevents magic strings/numbers and ensures consistency.
+
+    Custom Shared Exception Classes (exceptions/):
+
+    Define a hierarchy of custom exceptions (e.g., LightwaveBaseError, AuthenticationError, ValidationError, IntegrationError).
+
+    Why: Allows consistent error handling and reporting across services. API Gateway or DRF exception handlers can map these to standard HTTP responses.
+
+    Authentication/Authorization Helpers (auth/):
+
+    Interfaces or helper functions, not the full auth system.
+
+    Examples: Functions to decode/validate JWTs (using settings provided by the consumer), base permission classes (if using DRF and logic is generic), functions to check scopes.
+
+    Base API Components (api/): (If using DRF/FastAPI/GraphQL consistently)
+
+    Base serializer classes (e.g., a base ModelSerializer that includes standard fields).
+
+    Standard API exception classes mapped from your shared exceptions.
+
+    Maybe standard pagination classes (if customized).
+
+    Base schema components for GraphQL if applicable.
+
+    Settings Helpers (settings/):
+
+    Functions to load settings from environment variables or config files consistently (e.g., get_env_var, load_db_url).
+
+    Maybe define a recommended structure/base class for settings that consuming projects can inherit from (but the values live in the consumer).
+
+    Custom Model & Serializer Fields (fields/):
+
+    Reusable custom Django model fields (UppercaseCharField) or DRF serializer fields (TimestampField).
+
+    Logging Configuration Helpers:
+
+    Functions to help services configure logging consistently (e.g., setting up a standard JSON formatter).
+
+    3. What Should NOT Go In {{ .ProjectName }}:
+
+    Runnable Code: No manage.py, Celery tasks, management commands, web views, URLs, templates.
+
+    Concrete Django Models: Especially those tied to a specific business domain (e.g., Product, Project, Invoice). These belong in the service/app that owns that domain.
+
+    Views, ViewSets, URLs, Templates: These define the UI or API endpoints of a specific runnable service.
+
+    Specific Business Logic: Logic tied to a single application or service (e.g., calculating shipping costs for the e-commerce app).
+
+    Heavy Dependencies: Avoid adding dependencies on large libraries (like pandas or specific ML libs) unless absolutely essential and used by many consumers. Keep it lean.
+
+    External Service Clients (Mostly): Client code for specific external APIs (like ClickUp, Stripe concrete implementation) usually belongs in the service that directly interacts with them or in a dedicated integration service. shared-core could define an abstract base class or interface for such clients if multiple services need different implementations of the same type of service (e.g., BasePaymentGateway).
+
+    Secrets, API Keys, Environment-Specific Configuration: Never commit these. Consumers provide configuration.
+
+    Database Migrations: Since there should be few/no concrete models, migrations shouldn't be needed here. Migrations belong with the apps/services that define the concrete models.
+
+    4. pyproject.toml and uv:
+
+    Project Definition: pyproject.toml will define the package name ({{ .ProjectName }}), version, author, description, etc.
+
+    Dependencies: List its minimal dependencies under [project.dependencies]. Only include things absolutely needed by the shared code itself (e.g., python = ">={{ .MinPythonVersion }}", maybe pytz for timezone utils, pyjwt if doing JWT validation helpers). Do not include Django, DRF, Celery etc., unless a helper requires it (and even then, consider if the helper truly belongs here). Mark Django/DRF as optional dependencies ([project.optional-dependencies]) if some utilities need them but others don't.
+
+    Development: Use uv to manage the virtual environment for developing shared-core itself (uv venv, uv pip install -e .[dev]). Use [project.optional-dependencies] or [tool.uv.dev-dependencies] for dev tools like pytest, ruff, black.
+
+    Consumption: Other projects (createos-io, automation-service, etc.) will add {{ .ProjectName }} = "==X.Y.Z" to their pyproject.toml under [project.dependencies] and run uv pip sync requirements.txt (if using compiled requirements) or uv pip install -r requirements.txt / uv pip install .
+
+    In Summary:
+
+    Treat {{ .ProjectName }} like a dependency you'd install from PyPI, but it's your own internal one. Keep it lean, generic, stable, well-tested, and strictly versioned. This discipline is key to preventing it from becoming a "shared monolith" and ensuring it supports, rather than hinders, the scalability of your ecosystem. Using uv will make managing dependencies within this structure much faster and more pleasant. 
