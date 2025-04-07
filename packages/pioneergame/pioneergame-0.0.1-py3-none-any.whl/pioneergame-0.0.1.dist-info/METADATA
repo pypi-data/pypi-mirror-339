@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: pioneergame
+Version: 0.0.1
+Summary: Simple Pygame plugin for small kids
+Home-page: https://github.com/chebur5581/pioneergame
+Author: chebur5581
+Author-email: chebur5581@gmail.com
+Project-URL: GitHub, https://github.com/chebur5581/pioneergame
+Keywords: Games Pygame kis Learning
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pygame>=2.6.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+simple pygame plugin for kids.
