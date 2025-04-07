@@ -1,0 +1,2 @@
+[console_scripts]
+youtube-assistant = youtube_assistant.main:main_cli
