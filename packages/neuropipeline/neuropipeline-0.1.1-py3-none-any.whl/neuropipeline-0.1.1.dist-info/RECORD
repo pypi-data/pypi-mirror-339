@@ -1,0 +1,10 @@
+neuropipeline/__init__.py,sha256=a99mtb8qROZYvqLuhmlasVCgbmAL9nzVzOJFrVSWLGE,3
+neuropipeline/base.py,sha256=-bdshSpD-SP5vc4GPM0N1S64h04OmwgxUtl4DomDU6Y,117
+neuropipeline/eeg.py,sha256=-rbClNADF83xXpCa4Pztbt5gUyBL1ReFvuyYmth6T1c,168
+neuropipeline/fnirs.py,sha256=I-k_m5Ux2jRmAr7oh_PLTcq_wv7VxcKQZ9_QBlTN2_k,4204
+neuropipeline/test.py,sha256=6_Ju2ury78USba5wgWdC9rqMJPQ_JLYS3ru88CY2BgI,38
+neuropipeline/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+neuropipeline-0.1.1.dist-info/METADATA,sha256=c5Wa3Cz6P5MoHZTpj-9CBfWzTxJaVv1AD6T98Zy6MQk,544
+neuropipeline-0.1.1.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+neuropipeline-0.1.1.dist-info/top_level.txt,sha256=b9iwQ8wUKfzKwpJeyLW1RDdFvhsZIuOlgkggm7IqP3Q,14
+neuropipeline-0.1.1.dist-info/RECORD,,
