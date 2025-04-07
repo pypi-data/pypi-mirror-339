@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: projeto1-package
+Version: 1.0.0
+Summary: Descricao da sua lib projeto1
+Home-page: https://github.com/ordepzero/projeto1
+Author: Pedro Ulisses
+Author-email: ulissesph@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: summary
+
+# Projeto1
+
+A simple example library.
+
+## Installation
+
+```sh
+pip install projeto1
+```
+
+## Usage
+
+```python
+from projeto1 import hello_world
+
+print(hello_world())
+```

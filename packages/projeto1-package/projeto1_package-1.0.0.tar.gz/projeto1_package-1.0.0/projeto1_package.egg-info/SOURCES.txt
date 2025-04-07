@@ -1,0 +1,9 @@
+README.md
+setup.py
+projeto1/__init__.py
+projeto1/core.py
+projeto1_package.egg-info/PKG-INFO
+projeto1_package.egg-info/SOURCES.txt
+projeto1_package.egg-info/dependency_links.txt
+projeto1_package.egg-info/top_level.txt
+tests/test_core.py
