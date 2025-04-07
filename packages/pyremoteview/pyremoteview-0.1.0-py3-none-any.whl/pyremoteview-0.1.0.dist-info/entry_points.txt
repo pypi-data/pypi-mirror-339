@@ -1,0 +1,2 @@
+[console_scripts]
+pyremoteview = pyremoteview.remote_gallery:main
