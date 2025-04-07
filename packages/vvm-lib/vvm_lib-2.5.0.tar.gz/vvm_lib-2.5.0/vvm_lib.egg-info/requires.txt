@@ -1,0 +1,13 @@
+pandas
+gspread
+google-auth-oauthlib
+google-auth
+xlsxwriter
+oauth2client
+psycopg2-binary
+pymssql
+openpyxl
+requests-ntlm
+clickhouse-connecttzlocal
+mysql-connector-python
+polars
