@@ -1,0 +1,64 @@
+Metadata-Version: 2.3
+Name: brseclabcripto
+Version: 2.0.2
+Summary: Biblioteca de criptografia para o projeto brSecLab
+Author: Rafael Perazzo
+Author-email: pypi.quilt004@passmail.net
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: argon2-cffi (>=23.1.0,<24.0.0)
+Requires-Dist: cryptography (>=44.0.2,<45.0.0)
+Requires-Dist: pytest (>=8.3.5,<9.0.0)
+Requires-Dist: python-gnupg (>=0.5.4,<0.6.0)
+Description-Content-Type: text/markdown
+
+# Pacote Poetry brseclabcripto
+
+## Instalação
+
+```console
+pip install brseclabcripto
+```
+
+## Uso
+
+### Importar biblioteca
+
+```console
+from brseclabcripto import cripto2
+```
+
+### Gerar chave
+
+```python
+key = cripto2.generate_aes_key()
+```
+
+### Criptografar string
+
+```python
+ciphertext = cripto2.aes_gcm_encrypt(key,"TEXTO")
+```
+
+### Decriptar
+
+```python
+decriptado = cripto2.aes_gcm_decrypt(key,ciphertext)
+```
+
+### Gerar hash com argon2id
+
+```python
+hash_argon = hash_argon2id(key,password)
+```
+
+### Verificar hash argon2id
+
+```python
+hash_argon2id_verify(hash_argon, key,password)
+```
+
