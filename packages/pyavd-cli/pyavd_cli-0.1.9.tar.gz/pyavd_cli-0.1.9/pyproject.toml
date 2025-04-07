@@ -1,0 +1,50 @@
+[project]
+name = "pyavd-cli"
+dynamic = []
+description = "A collection of cli scripts to use pyavd"
+authors = [{ name = "Arista Networks", email = "ps-sw-dev-team@arista.com" }]
+readme = "README.md"
+include = ["CHANGELOG.md", "LICENSE"]
+dependencies = [
+    "pyavd[ansible]>=4.9.0",
+]
+requires-python = ">=3.11,<4"
+version = "0.1.9"
+
+[project.optional-dependencies]
+dev = [
+    "mypy~=1.15.0",
+    "pre-commit~=3.8.0",
+    "ruff~=0.9.4",
+    "build~=1.2.0",
+    "types-pyyaml~=6.0.12.20241230",
+]
+
+[tool.poetry]
+
+[tool.poetry-dynamic-versioning]
+enable = false
+metadata = false
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.ruff]
+line-length = 130
+
+[tool.ruff.lint]
+select = [
+    # isort
+    "I",
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # flake8-simplify
+    "SIM"
+]
+
+[project.scripts]
+pyavd-build = "pyavd_cli.build:main"
