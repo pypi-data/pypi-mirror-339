@@ -1,0 +1,7 @@
+llm_integration/__init__.py,sha256=jS35HkXOFirmJjChPA_3QHnAHXGAy5mdqKhLQBnUBlA,100
+llm_integration/base.py,sha256=svh1rkGhsTyD9J7oaSrgG7BNdcsqYXqF5bSX80nF--4,3582
+llm_integration/clients.py,sha256=_yhkqYAiHH2fkzrmPGWqh1FTfy9lM_qATPEMUw5tEWU,2102
+llm_integration-0.1.0.dist-info/METADATA,sha256=91Shgb3JAsCrlq54M3VgCl1S9nIymJHMiP1wcdJPH8s,232
+llm_integration-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+llm_integration-0.1.0.dist-info/top_level.txt,sha256=vp7GmLcbUFW7BevgU1qNC6NC-tJVVmS7CI59eu87lP4,16
+llm_integration-0.1.0.dist-info/RECORD,,
