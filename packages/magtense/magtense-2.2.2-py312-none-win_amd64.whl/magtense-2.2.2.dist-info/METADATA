@@ -1,0 +1,203 @@
+Metadata-Version: 2.4
+Name: magtense
+Version: 2.2.2
+Summary: MagTense - a micromagnetism and magnetostatic framework
+Author-email: Stefan Pollok <spol@dtu.dk>
+License-Expression: GPL-3.0-or-later
+Project-URL: Homepage, https://www.magtense.org/
+Project-URL: Source, https://github.com/cmt-dtu-energy/MagTense
+Project-URL: Documentation, https://cmt-dtu-energy.github.io/MagTense/
+Keywords: Micromagnetism,Magnetostatics,Demagnetization tensor
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: anyio==4.8.0
+Requires-Dist: argon2-cffi==23.1.0
+Requires-Dist: argon2-cffi-bindings==21.2.0
+Requires-Dist: arrow==1.3.0
+Requires-Dist: asttokens==3.0.0
+Requires-Dist: async-lru==2.0.4
+Requires-Dist: attrs==25.3.0
+Requires-Dist: babel==2.17.0
+Requires-Dist: beautifulsoup4==4.13.3
+Requires-Dist: bleach==6.2.0
+Requires-Dist: certifi==2025.1.31
+Requires-Dist: cffi==1.17.1
+Requires-Dist: charset-normalizer==3.4.1
+Requires-Dist: comm==0.2.2
+Requires-Dist: contourpy==1.3.1
+Requires-Dist: cycler==0.12.1
+Requires-Dist: debugpy==1.8.13
+Requires-Dist: decorator==5.2.1
+Requires-Dist: defusedxml==0.7.1
+Requires-Dist: executing==2.2.0
+Requires-Dist: fastjsonschema==2.21.1
+Requires-Dist: fonttools==4.56.0
+Requires-Dist: fqdn==1.5.1
+Requires-Dist: h11==0.14.0
+Requires-Dist: h5py==3.13.0
+Requires-Dist: httpcore==1.0.7
+Requires-Dist: httpx==0.28.1
+Requires-Dist: idna==3.10
+Requires-Dist: impi-rt==2021.14.2
+Requires-Dist: importlib_resources==6.5.2
+Requires-Dist: intel-cmplr-lib-rt==2025.0.5
+Requires-Dist: intel-cmplr-lib-ur==2025.0.5
+Requires-Dist: intel-cmplr-lic-rt==2025.0.5
+Requires-Dist: intel-fortran-rt==2025.0.5
+Requires-Dist: intel-openmp==2025.0.5
+Requires-Dist: ipykernel==6.29.5
+Requires-Dist: ipython==9.0.2
+Requires-Dist: ipython_pygments_lexers==1.1.1
+Requires-Dist: isoduration==20.11.0
+Requires-Dist: jedi==0.19.2
+Requires-Dist: Jinja2==3.1.6
+Requires-Dist: json5==0.10.0
+Requires-Dist: jsonpointer==3.0.0
+Requires-Dist: jsonschema==4.23.0
+Requires-Dist: jsonschema-specifications==2024.10.1
+Requires-Dist: jupyter-events==0.12.0
+Requires-Dist: jupyter-lsp==2.2.5
+Requires-Dist: jupyter_client==8.6.3
+Requires-Dist: jupyter_core==5.7.2
+Requires-Dist: jupyter_server==2.15.0
+Requires-Dist: jupyter_server_terminals==0.5.3
+Requires-Dist: jupyterlab==4.3.5
+Requires-Dist: jupyterlab_pygments==0.3.0
+Requires-Dist: jupyterlab_server==2.27.3
+Requires-Dist: kiwisolver==1.4.8
+Requires-Dist: MarkupSafe==3.0.2
+Requires-Dist: matplotlib==3.10.1
+Requires-Dist: matplotlib-inline==0.1.7
+Requires-Dist: mistune==3.1.2
+Requires-Dist: mkl==2025.0.1
+Requires-Dist: nbclient==0.10.2
+Requires-Dist: nbconvert==7.16.6
+Requires-Dist: nbformat==5.10.4
+Requires-Dist: nest-asyncio==1.6.0
+Requires-Dist: notebook==7.3.2
+Requires-Dist: notebook_shim==0.2.4
+Requires-Dist: numpy==2.2.3
+Requires-Dist: nvidia-cublas-cu12==12.*
+Requires-Dist: nvidia-cuda-runtime-cu12==12.*
+Requires-Dist: nvidia-cusparse-cu12==12.*
+Requires-Dist: nvidia-nvjitlink-cu12==12.*
+Requires-Dist: overrides==7.7.0
+Requires-Dist: packaging==24.2
+Requires-Dist: pandocfilters==1.5.1
+Requires-Dist: parso==0.8.4
+Requires-Dist: pexpect==4.9.0
+Requires-Dist: pillow==11.1.0
+Requires-Dist: platformdirs==4.3.6
+Requires-Dist: prometheus_client==0.21.1
+Requires-Dist: prompt_toolkit==3.0.50
+Requires-Dist: psutil==7.0.0
+Requires-Dist: ptyprocess==0.7.0
+Requires-Dist: pure_eval==0.2.3
+Requires-Dist: pycparser==2.22
+Requires-Dist: Pygments==2.19.1
+Requires-Dist: pyparsing==3.2.1
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: python-json-logger==3.3.0
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: pyzmq==26.3.0
+Requires-Dist: referencing==0.36.2
+Requires-Dist: requests==2.32.3
+Requires-Dist: rfc3339-validator==0.1.4
+Requires-Dist: rfc3986-validator==0.1.1
+Requires-Dist: rpds-py==0.23.1
+Requires-Dist: Send2Trash==1.8.3
+Requires-Dist: setuptools==76.0.0
+Requires-Dist: six==1.17.0
+Requires-Dist: sniffio==1.3.1
+Requires-Dist: soupsieve==2.6
+Requires-Dist: stack-data==0.6.3
+Requires-Dist: tbb==2022.0.0
+Requires-Dist: tcmlib==1.2.0
+Requires-Dist: terminado==0.18.1
+Requires-Dist: tinycss2==1.4.0
+Requires-Dist: tornado==6.4.2
+Requires-Dist: tqdm==4.67.1
+Requires-Dist: traitlets==5.14.3
+Requires-Dist: types-python-dateutil==2.9.0.20241206
+Requires-Dist: typing_extensions==4.12.2
+Requires-Dist: umf==0.9.1
+Requires-Dist: uri-template==1.3.0
+Requires-Dist: urllib3==2.3.0
+Requires-Dist: wcwidth==0.2.13
+Requires-Dist: webcolors==24.11.1
+Requires-Dist: webencodings==0.5.1
+Requires-Dist: websocket-client==1.8.0
+Dynamic: license-file
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cmt-dtu-energy/MagTense/refs/heads/master/docs/source/static/MagTenseLogo_White.svg" height=250>
+    <img alt="MagTense Logo" src="https://raw.githubusercontent.com/cmt-dtu-energy/MagTense/refs/heads/master/docs/source/static/MagTense_logo.png" height=250>
+  </picture>
+  <br>
+</div>
+
+# MagTense
+
+MagTense is a framework for magnetostatic and micromagnetic calculations.
+
+## Features
+
+- Interfaces for MATLAB and Python, with the core implemented in Fortran for speed;
+- Fully analytical calculation of demagnetization tensor for cylinders, pieces of cylinders, prisms, circular pieces and tetrahedrons;
+- Micromagnetic solutions of the Landau-Lifshitz equations, using the analytical demagnetization tensor described above;
+- GPU-accelerated code with [CUDA®](https://developer.nvidia.com/cuda-zone) (requires NVIDIA graphics card).
+- Uses Intel MKL for the micromagnetic simlations and can also utilize [CVODE](https://computing.llnl.gov/projects/sundials/cvode).
+- Tested in Linux and Windows 11+ (macOS not supported at the moment).
+
+## Installation and usage with the Python interface
+
+Installation is recommended via `pip` (requires >=**Python 3.12**):
+
+```
+pip install magtense
+```
+
+Examples of how to calculate magnetostatic and micromagnetic problems using the Python interface can be found [python/examples/](./python/examples/).
+
+### Building from source
+
+If you want to build MagTense yourself, you can find detailed instructions for building the Python interface with the Fortran core [here](/python/README.md).
+
+## Installation and usage with the Matlab interface
+
+MagTense is directly useable in Matlab on Windows by downloading the MEX-files in [Releases](https://github.com/cmt-dtu-energy/MagTense/releases). Only Matlab 2020b or greater is required.
+
+Examples of how to calculate magnetostatic and micromagnetic problems using the Matlab interface can be found in [matlab/examples](./matlab/examples).
+
+### Building from source
+
+If you want to compile MagTense on Windows, we provide a Visual Studio project file, [MagTense.sln](MagTense.sln), while for Linux we provide a Makefile. To build the MEX-files, we provide a Matlab function called [buildMagTenseMEX.m](matlab/buildMagTenseMEX.m) that works on both OS. You can find more information [here](/matlab/README.md).
+
+## Further documentation
+
+The webpage of the code is available at https://www.magtense.org.
+
+The TechManual on the code is available at https://cmt-dtu-energy.github.io/MagTense.
+
+## Citation
+If you use this package in a publication, or simply want to refer to it, please cite the paper below:
+
+```bibtex
+@article{BJORK2021168057,
+title = {MagTense: A micromagnetic framework using the analytical demagnetization tensor},
+journal = {Journal of Magnetism and Magnetic Materials},
+volume = {535},
+pages = {168057},
+year = {2021},
+issn = {0304-8853},
+doi = {https://doi.org/10.1016/j.jmmm.2021.168057},
+url = {https://www.sciencedirect.com/science/article/pii/S0304885321003334},
+author = {R. Bj{\o}rk and E. B. Poulsen and K. K. Nielsen and A. R. Insinga},
+}
