@@ -1,0 +1,129 @@
+Date : 2025-03-05 22:33:58
+Directory : c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri
+Total : 78 files,  48687 codes, 1105 comments, 5007 blanks, all 54799 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Python   |         59 |     41,753 |      1,105 |      4,897 |     47,755 |
+| JSON     |         10 |      4,714 |          0 |         10 |      4,724 |
+| toml     |          2 |      1,241 |          0 |         57 |      1,298 |
+| XML      |          5 |        921 |          0 |          4 |        925 |
+| Markdown |          1 |         53 |          0 |         34 |         87 |
+| Log      |          1 |          5 |          0 |          5 |         10 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                              | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                 |         78 |     48,687 |      1,105 |      5,007 |     54,799 |
+| . (Files)                                                                                         |          5 |      2,049 |          0 |         97 |      2,146 |
+| docs                                                                                              |          3 |      1,246 |          0 |          3 |      1,249 |
+| gallery                                                                                           |          3 |        857 |          0 |          3 |        860 |
+| images                                                                                            |          5 |        921 |          0 |          4 |        925 |
+| src                                                                                               |         62 |     43,614 |      1,105 |      4,900 |     49,619 |
+| src\simetri                                                                                       |         62 |     43,614 |      1,105 |      4,900 |     49,619 |
+| src\simetri (Files)                                                                               |          1 |          0 |          0 |          1 |          1 |
+| src\simetri\canvas                                                                                |          4 |      2,651 |        287 |        537 |      3,475 |
+| src\simetri\colors                                                                                |          4 |     19,651 |        146 |        318 |     20,115 |
+| src\simetri\curves                                                                                |          1 |      1,552 |          0 |          1 |      1,553 |
+| src\simetri\extensions                                                                            |          4 |      1,116 |         58 |        223 |      1,397 |
+| src\simetri\frieze                                                                                |          2 |        207 |          0 |         49 |        256 |
+| src\simetri\geometry                                                                              |          5 |      4,727 |        130 |      1,084 |      5,941 |
+| src\simetri\graphics                                                                              |         16 |      5,572 |         93 |      1,114 |      6,779 |
+| src\simetri\helpers                                                                               |          8 |      2,598 |        105 |        642 |      3,345 |
+| src\simetri\lace                                                                                  |          2 |      1,942 |        164 |        299 |      2,405 |
+| src\simetri\notebook                                                                              |          1 |         21 |          1 |          8 |         30 |
+| src\simetri\settings                                                                              |          2 |      1,163 |         43 |        108 |      1,314 |
+| src\simetri\stars                                                                                 |          2 |        254 |          0 |         50 |        304 |
+| src\simetri\tests                                                                                 |          6 |        130 |          6 |         42 |        178 |
+| src\simetri\tikz                                                                                  |          2 |      1,347 |         38 |        290 |      1,675 |
+| src\simetri\wallpaper                                                                             |          2 |        683 |         34 |        134 |        851 |
++---------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                          | language | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\README.md                                | Markdown |         53 |          0 |         34 |         87 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\docs\brief_overview.ipynb                | JSON     |        358 |          0 |          1 |        359 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\docs\working_with_batches.ipynb          | JSON     |        395 |          0 |          1 |        396 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\docs\working_with_batches2.ipynb         | JSON     |        493 |          0 |          1 |        494 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\gallery.ipynb                            | JSON     |        750 |          0 |          1 |        751 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\gallery\examples.ipynb                   | JSON     |        719 |          0 |          1 |        720 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\gallery\logo_frieze.ipynb                | JSON     |         74 |          0 |          1 |         75 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\gallery\segment1.ipynb                   | JSON     |         64 |          0 |          1 |         65 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\images\example.svg                       | XML      |        714 |          0 |          1 |        715 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\images\gallery.svg                       | XML      |          1 |          0 |          0 |          1 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\images\logo.svg                          | XML      |          4 |          0 |          1 |          5 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\images\logo4.svg                         | XML      |          6 |          0 |          1 |          7 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\images\star_example.svg                  | XML      |        196 |          0 |          1 |        197 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\mfput.log                                | Log      |          5 |          0 |          5 |         10 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\pyproject.toml                           | toml     |         38 |          0 |          6 |         44 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\__init__.py                  | Python   |          0 |          0 |          1 |          1 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\canvas\canvas.py             | Python   |        860 |          2 |        147 |      1,009 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\canvas\draw.py               | Python   |        911 |          6 |        151 |      1,068 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\canvas\grids.py              | Python   |         76 |          7 |         36 |        119 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\canvas\style_map.py          | Python   |        804 |        272 |        203 |      1,279 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\colors\__init__.py           | Python   |          3 |          1 |          2 |          6 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\colors\colors.py             | Python   |      1,198 |         10 |         95 |      1,303 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\colors\palettes.py           | Python   |     17,513 |        135 |        213 |     17,861 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\colors\swatches.py           | Python   |        937 |          0 |          8 |        945 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\curves\bezier.ipynb          | JSON     |      1,552 |          0 |          1 |      1,553 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\extensions\l_system.py       | Python   |         64 |         54 |         31 |        149 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\extensions\rekurjon2.py      | Python   |        316 |          1 |         57 |        374 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\extensions\svg.py            | Python   |        491 |          1 |         68 |        560 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\extensions\turtle_sg.py      | Python   |        245 |          2 |         67 |        314 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\frieze\__init__.py           | Python   |          1 |          0 |          1 |          2 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\frieze\frieze.py             | Python   |        206 |          0 |         48 |        254 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\geometry\bezier.py           | Python   |        528 |          5 |        124 |        657 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\geometry\circle.py           | Python   |        382 |          4 |         67 |        453 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\geometry\ellipse.py          | Python   |        325 |          4 |         80 |        409 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\geometry\geometry.py         | Python   |      3,153 |         99 |        757 |      4,009 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\geometry\hobby.py            | Python   |        339 |         18 |         56 |        413 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\graphics\__init__.py         | Python   |         84 |          5 |         19 |        108 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\graphics\affine.py           | Python   |        342 |         21 |        114 |        477 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\graphics\all_enums.py        | Python   |        721 |         45 |        154 |        920 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\graphics\batch.py            | Python   |        631 |          2 |        116 |        749 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\graphics\bbox.py             | Python   |        397 |          4 |         82 |        483 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\graphics\common.py           | Python   |        109 |          3 |         27 |        139 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\graphics\core.py             | Python   |        261 |          2 |         48 |        311 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\graphics\dots.py             | Python   |         99 |          0 |         26 |        125 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\graphics\merge.py            | Python   |        242 |          3 |         28 |        273 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\graphics\path.py             | Python   |        447 |          4 |         82 |        533 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\graphics\points.py           | Python   |        211 |          1 |         53 |        265 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\graphics\rosette.ipynb       | JSON     |        133 |          0 |          1 |        134 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\graphics\rosette2.ipynb      | JSON     |        176 |          0 |          1 |        177 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\graphics\shape.py            | Python   |        662 |          0 |        132 |        794 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\graphics\shapes.py           | Python   |        702 |          3 |        159 |        864 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\graphics\sketch.py           | Python   |        355 |          0 |         72 |        427 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\helpers\__init__.py          | Python   |          0 |          0 |          1 |          1 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\helpers\constraint_solver.py | Python   |        204 |         63 |        102 |        369 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\helpers\graph.py             | Python   |        267 |          1 |         69 |        337 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\helpers\illustration.py      | Python   |        923 |         18 |        118 |      1,059 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\helpers\modifiers.py         | Python   |        146 |          0 |         26 |        172 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\helpers\utilities.py         | Python   |        657 |         19 |        206 |        882 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\helpers\validation.py        | Python   |        302 |          4 |         84 |        390 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\helpers\vector.py            | Python   |         99 |          0 |         36 |        135 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\lace\__init__.py             | Python   |          1 |          0 |          1 |          2 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\lace\lace.py                 | Python   |      1,941 |        164 |        298 |      2,403 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\notebook\__init__.py         | Python   |         21 |          1 |          8 |         30 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\settings\settings.py         | Python   |        995 |         34 |         51 |      1,080 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\settings\sg_config.py        | Python   |        168 |          9 |         57 |        234 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\stars\__init__.py            | Python   |          1 |          0 |          1 |          2 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\stars\stars.py               | Python   |        253 |          0 |         49 |        302 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\tests\broug_pg205_test.py    | Python   |         13 |          0 |          3 |         16 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\tests\shape_test_.py         | Python   |         29 |          0 |          9 |         38 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\tests\shape_test_fb.py       | Python   |         29 |          3 |          7 |         39 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\tests\simple_test1.py        | Python   |         35 |          2 |         14 |         51 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\tests\tag_template.py        | Python   |          4 |          1 |          3 |          8 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\tests\tag_tests.py           | Python   |         20 |          0 |          6 |         26 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\tikz\__init__.py             | Python   |          1 |          0 |          1 |          2 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\tikz\tikz.py                 | Python   |      1,346 |         38 |        289 |      1,673 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\wallpaper\__init__.py        | Python   |          1 |          0 |          1 |          2 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\src\simetri\wallpaper\wallpaper.py       | Python   |        682 |         34 |        133 |        849 |
+| c:\Users\manga\OneDrive\Documents\uv_simetri_3.9\simetri\uv.lock                                  | toml     |      1,203 |          0 |         51 |      1,254 |
+| Total                                                                                             |          |     48,687 |      1,105 |      5,007 |     54,799 |
++---------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
