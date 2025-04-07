@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+youtube_assistant/.env
+youtube_assistant/__init__.py
+youtube_assistant/main.py
+youtube_assistant.egg-info/PKG-INFO
+youtube_assistant.egg-info/SOURCES.txt
+youtube_assistant.egg-info/dependency_links.txt
+youtube_assistant.egg-info/entry_points.txt
+youtube_assistant.egg-info/requires.txt
+youtube_assistant.egg-info/top_level.txt
+youtube_assistant/__pycache__/__init__.cpython-312.pyc
+youtube_assistant/__pycache__/main.cpython-312.pyc
+youtube_assistant/templates/default.txt
