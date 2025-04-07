@@ -1,0 +1,12 @@
+uvinit/__init__.py,sha256=PyAGHy7dzbVQOHtdRN6lvzdQBzZ5j64J3Dnp5mIwS9M,77
+uvinit/copier_workflow.py,sha256=7PuJ1BA7oLURoMdpgpbSePktNt5UFRwv9YxPtUGVR3c,3185
+uvinit/github_workflow.py,sha256=AQ4MowANiifKvt2_73c_ftODBJN52IhRqqYTYaL9mzU,5313
+uvinit/main_workflow.py,sha256=zZE2dF0mrCrwg6CxJKoNOOvnlsqvHAI-lrK6KWhq6Tw,3220
+uvinit/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uvinit/shell_utils.py,sha256=J97ZaniBF3QioMcnPFarVLtQlEGn5g-jW69gPfS57ig,3125
+uvinit/uvinit.py,sha256=gct7hv2BUX-PKS2TsM0zJGRISDke8Px7uGia0mqY5MM,3909
+uvinit-0.1.5.dist-info/METADATA,sha256=lQHQiQC_Esa9AnnQBHc9RzSe66RC6Ks6aiWU-iUS-tM,3795
+uvinit-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+uvinit-0.1.5.dist-info/entry_points.txt,sha256=zmjnGWffv0lZNAeOYdZgcOD29TlCCTe1n54kHsN2tNY,39
+uvinit-0.1.5.dist-info/licenses/LICENSE,sha256=oCW22_lYEX_tdvPKTgUzg-vieznTgvjTiMTif2Dn4-Q,1062
+uvinit-0.1.5.dist-info/RECORD,,
