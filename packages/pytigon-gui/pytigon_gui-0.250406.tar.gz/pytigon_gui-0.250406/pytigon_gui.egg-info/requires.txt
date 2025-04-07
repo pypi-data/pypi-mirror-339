@@ -1,0 +1,9 @@
+pytigon-batteries[all]
+wxpython
+wxasync
+PyDispatcher
+pyshortcuts
+libsass
+black
+pytest
+pytest-django
