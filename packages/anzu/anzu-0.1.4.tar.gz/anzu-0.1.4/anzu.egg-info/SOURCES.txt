@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+anzu/__init__.py
+anzu.egg-info/PKG-INFO
+anzu.egg-info/SOURCES.txt
+anzu.egg-info/dependency_links.txt
+anzu.egg-info/requires.txt
+anzu.egg-info/top_level.txt
