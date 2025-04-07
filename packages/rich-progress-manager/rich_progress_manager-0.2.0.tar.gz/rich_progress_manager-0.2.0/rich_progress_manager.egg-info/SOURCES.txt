@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+rich_progress/__init__.py
+rich_progress/color_logger.py
+rich_progress/progress_manager.py
+rich_progress_manager.egg-info/PKG-INFO
+rich_progress_manager.egg-info/SOURCES.txt
+rich_progress_manager.egg-info/dependency_links.txt
+rich_progress_manager.egg-info/requires.txt
+rich_progress_manager.egg-info/top_level.txt
