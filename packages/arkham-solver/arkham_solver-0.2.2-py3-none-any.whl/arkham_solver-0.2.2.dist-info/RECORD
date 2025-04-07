@@ -1,0 +1,10 @@
+arkham_solver/__init__.py,sha256=MzaJ-d9YZEWa1ziIQ45oVNnJOF7loY1lL8rpwwPG6jM,529
+arkham_solver/client.py,sha256=pg5U3PYQY68y_7jJ7USLIbebag3wIw_UQb4QgR0MBQc,5465
+arkham_solver/constants.py,sha256=62tK0OkevZHkVGdzbm1PiKWSIQXGipLOWqrthoKixv0,52
+arkham_solver/exceptions.py,sha256=89Fb4-rl3Gbf7E0lqFBLvpPNar1JxLoYAQBG-hb5Lnc,452
+arkham_solver/models.py,sha256=oBgJAofHMfcNMztkGuFQ-EuM0IKGTwfvri4GYoXaWac,687
+arkham_solver/presets.py,sha256=gHaQ594xJsklhNfvWvU9eSpJXmQeEpSsHiGLfODxdpw,236
+arkham_solver-0.2.2.dist-info/METADATA,sha256=EAgvNsaw4ZH-QYJkgNCpxz2qsbPLs1wvSHawxz1SzPg,1509
+arkham_solver-0.2.2.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+arkham_solver-0.2.2.dist-info/top_level.txt,sha256=8M5t87DGZRv2GP0hL-eVdwCv-zMvtxebt2JVzRsGstw,14
+arkham_solver-0.2.2.dist-info/RECORD,,
