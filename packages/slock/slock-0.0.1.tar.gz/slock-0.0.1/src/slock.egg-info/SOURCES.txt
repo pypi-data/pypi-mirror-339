@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/slock/__init__.py
+src/slock/slock.py
+src/slock.egg-info/PKG-INFO
+src/slock.egg-info/SOURCES.txt
+src/slock.egg-info/dependency_links.txt
+src/slock.egg-info/top_level.txt
