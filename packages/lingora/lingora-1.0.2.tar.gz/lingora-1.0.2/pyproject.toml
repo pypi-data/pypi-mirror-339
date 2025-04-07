@@ -1,0 +1,63 @@
+[project]
+name = "lingora"
+version = "1.0.2"
+authors = [
+  { name="Isaak Engineer", email="isaak@schloosser.com" },
+]
+description = "A utility automating performing language transformations"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "AGPL-3.0-only"
+license-files = ["LICEN[CS]E*"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development :: Localization",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "typer",
+    "rich",
+    "sanic",
+    "openai",
+    "python-dotenv",
+    "requests",
+    "aiohttp",
+    "jinja2",
+    "websockets",
+    "cyrtranslit>=1.1.1",
+]
+
+[project.urls]
+Homepage = "https://git.schloosser.net/lingora/lingora"
+Issues = "https://git.schloosser.net/lingora/lingora/issues"
+
+[project.scripts]
+lingora = "lingora.cli:app"
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["lingora"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+lingora = ["templates/reviewer/*"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+    "mypy",
+    "isort"
+]

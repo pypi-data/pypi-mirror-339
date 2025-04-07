@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+lingora/__init__.py
+lingora/cli.py
+lingora/sanic_app.py
+lingora.egg-info/PKG-INFO
+lingora.egg-info/SOURCES.txt
+lingora.egg-info/dependency_links.txt
+lingora.egg-info/entry_points.txt
+lingora.egg-info/requires.txt
+lingora.egg-info/top_level.txt
+tests/test_commands.py
+tests/test_formats.py

@@ -1,0 +1,17 @@
+typer
+rich
+sanic
+openai
+python-dotenv
+requests
+aiohttp
+jinja2
+websockets
+cyrtranslit>=1.1.1
+
+[dev]
+pytest
+black
+flake8
+mypy
+isort
