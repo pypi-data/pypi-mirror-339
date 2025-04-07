@@ -1,0 +1,95 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ibisgraph"
+version = "0.0.2"
+description = "The portable graph processing and algorithms library"
+readme = "README.md"
+requires-python = ">=3.11"
+license-files = ["LICENSE"]
+authors = [
+  { name = "Sem Sinchenko", email = "ssinchenko@apache.org" },
+]
+maintainers = [
+  { name = "Sem Sinchenko", email = "ssinchenko@apache.org" },
+]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Financial and Insurance Industry",
+  "Intended Audience :: Telecommunications Industry",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python",
+  "Programming Language :: SQL",
+  "Topic :: Database :: Front-Ends",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Software Development :: Code Generators",
+  "Topic :: Software Development :: User Interfaces",
+  "License :: OSI Approved :: Apache Software License",
+]
+keywords = [
+  "sql",
+  "database",
+  "graph",
+  "network-analysis",
+  "pagerank",
+  "mysql",
+  "bigquery",
+  "clickhouse",
+  "sqlite",
+  "impala",
+  "postgresql",
+  "snowflake",
+  "pandas",
+  "pyspark",
+  "mssql",
+  "trino",
+  "pyarrow",
+  "datafusion",
+  "duckdb",
+  "polars",
+]
+
+dependencies = [
+    "loguru>=0.7",
+    "ibis-framework"
+]
+
+[dependency-groups]
+dev = [
+  "ibis-framework[duckdb]",
+  "pytest",
+  "ruff",
+]
+docs = [
+    "mkdocs",
+    "mkdocs-material-extensions",
+    "mkdocs-material",
+    "mkdocs-literate-nav",
+    "mkdocs-gen-files",
+    "mkdocstrings-python",
+    "mkdocs-section-index",
+    "mkdocs-macros-plugin",
+    "markdown-include",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.version.raw-options]
+version_scheme = "no-guess-dev"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "ibisgraph",
+    "README.md",
+    "LICENSE",
+]
