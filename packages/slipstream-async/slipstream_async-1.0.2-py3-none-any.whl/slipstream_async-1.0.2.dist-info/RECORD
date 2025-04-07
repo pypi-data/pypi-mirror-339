@@ -1,0 +1,14 @@
+slipstream/__init__.py,sha256=iqP5mHbxT3PZm-DUyXMvlPw_euXoI2aL3r4eNcbfLPo,414
+slipstream/__version__.py,sha256=Rn4t5LlVFKDfUt3S5ljaE22I0LrIQ9Q8eZjNf1V7NHA,107
+slipstream/caching.py,sha256=mLXu6o3d2we2n1x97NpG1j0yrIFEEGzAi78pBAQX6Zg,11996
+slipstream/checkpointing.py,sha256=9xbVdMfad9zFARNmDwtEb0KI913YuWC_qb_1tfxdxIM,14039
+slipstream/codecs.py,sha256=sWvecnHJcpwB9nesyGgXkPJnm0IORWg8q38RCKsH1jw,615
+slipstream/core.py,sha256=v0gbhI_PNPyK_2y7gil185-epdYwLGzkghcCW6DI4lI,20586
+slipstream/interfaces.py,sha256=D3XCH8Lw6APz4cthNDkZ_RrOtO-3asoLLaONYfCiTqc,3026
+slipstream/utils.py,sha256=50Jm4USAf1ykM7pXkjItUAszdEC2nHlVsfSUpwYLM70,2935
+slipstream_async-1.0.2.dist-info/licenses/LICENSE,sha256=aX0SnrOo5nWJXVyTybs2ZSNuWO9y1gvOCsu1Pia0Uvg,11338
+slipstream_async-1.0.2.dist-info/METADATA,sha256=mZpXypUR83d5kX1g_ojhIG17nnbseug8KBpX56_ZH2E,4440
+slipstream_async-1.0.2.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+slipstream_async-1.0.2.dist-info/entry_points.txt,sha256=LNZVY10Io-61fY0fo_R_oHW3oiAwg5FLQz1jiz5hVhw,56
+slipstream_async-1.0.2.dist-info/top_level.txt,sha256=KTQNyCcrjCMaYG1hCyNjT3GU34U-NVsJlhQ1BRZAsjQ,11
+slipstream_async-1.0.2.dist-info/RECORD,,
