@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: tabpro
+Version: 0.5.9
+Summary: A table data processor
+Home-page: https://github.com/akivajp/tabpro
+License: MIT
+Author: Akiva Miura
+Author-email: akiva.miura@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: icecream (>=2.1.3,<3.0.0)
+Requires-Dist: logzero (>=1.7.0,<2.0.0)
+Requires-Dist: openpyxl (>=3.1.5,<4.0.0)
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: pytest (>=8.3.5,<9.0.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Requires-Dist: rich (>=13.9.4,<14.0.0)
+Requires-Dist: tqdm (>=4.67.0,<5.0.0)
+Requires-Dist: xlsxwriter (>=3.2.0,<4.0.0)
+Project-URL: Repository, https://github.com/akivajp/tabpro
+Description-Content-Type: text/markdown
+
+# TabPro - Table Data Converter
+
+TabPro is a Python-based tool for efficient processing of tabular data.
+
+## Main Features
+
+### Data Format Conversion
+- Supported Formats:
+  - CSV
+  - TSV
+  - Excel
+  - JSON
+  - JSON Lines
+- Bidirectional conversion between all supported formats
+
+### Table Operations
+1. **Table Conversion** (`convert_tables.py`)
+   - Convert table data between different formats
+   - Customize output format settings
+
+2. **Table Merging** (`merge_tables.py`)
+   - Merge tables based on common columns
+   - Efficient handling of multiple table merging
+
+3. **Table Aggregation** (`aggregate_tables.py`)
+   - Data aggregation based on grouping
+   - Statistical calculations
+
+4. **Table Sorting** (`sort_tables.py`)
+   - Sort data based on specified columns
+   - Multi-column sorting with custom order
+
+5. **Table Comparison** (`compare_tables.py`)
+   - Detect differences between multiple tables
+   - Data consistency checking
+
+## Features
+- Simple and user-friendly command-line interface
+- Flexible data processing options
+- Handles large datasets efficiently
+- Extensible design
+
