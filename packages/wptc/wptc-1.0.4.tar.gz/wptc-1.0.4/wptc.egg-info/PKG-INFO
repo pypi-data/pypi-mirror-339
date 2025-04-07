@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: wptc
+Version: 1.0.4
+Summary: A simple tool by Warped Pinball for flashing MicroPython firmware to Warped Pinball hardware.
+Author-email: Warped Pinball <mullinmax@gmail.com>
+License: CC BY-NC 4.0
+Project-URL: Homepage, https://github.com/warped-pinball/trench-coat
+Project-URL: Bug Tracker, https://github.com/warped-pinball/trench-coat/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Embedded Systems
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyserial==3.5
+Requires-Dist: simple-term-menu==1.6.6
+Requires-Dist: InquirerPy==0.3.3
+Requires-Dist: requests==2.32.3
+Requires-Dist: rsa==4.9
+Dynamic: license-file
