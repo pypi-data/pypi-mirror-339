@@ -1,0 +1,26 @@
+######################
+Changes in glymur 0.14
+######################
+
+**********************
+Changes in 0.14.1post1
+**********************
+
+    * Fix pyproject.toml for pillow requirement
+
+*****************
+Changes in 0.14.1
+*****************
+
+    * Fix doc builds for API
+    * Add additional API examples for Jp2k, Jp2kr
+    * Fix tilesize reporting
+    * Refactor all of setup.cfg into pyproject.toml
+
+*****************
+Changes in 0.14.0
+*****************
+
+    * Add description of raw IFD for geojp2 UUIDs
+    * Add feature to convert JPEGs to JP2
+    * Remove support for python 3.10
