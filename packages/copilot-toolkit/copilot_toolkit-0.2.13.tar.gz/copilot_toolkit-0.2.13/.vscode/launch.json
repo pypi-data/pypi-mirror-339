@@ -1,0 +1,76 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+    
+        {
+            "name": "Debug specs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/copilot_toolkit/main.py",
+            "console": "integratedTerminal",
+            "args": [
+              "--specs",
+              "--input",
+              "src/copilot_toolkit/",
+              "--prompts",
+              "src/copilot_toolkit/prompts",
+            ]
+          },
+          {
+            "name": "Debug app",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/copilot_toolkit/main.py",
+            "console": "integratedTerminal",
+            "args": [
+              "--app",
+              "--input",
+              "local_registry.json",
+              "--prompts",
+              "src/copilot_toolkit/prompts",
+              "--output",
+              ".app/",
+              "--user_instructions",
+              "conversation consists of markdown and code. render markdown as beautiful markdown, code as beautiful code and so on."
+            ]
+          },
+          {
+            "name": "Debug project",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/copilot_toolkit/main.py",
+            "console": "integratedTerminal",
+            "args": [
+              "--project",
+              "--user_instructions",
+              "Please generate a python project that renders a 3d scene with six spheres. Be creative with lightning and placing of the spheres",
+              "--output",
+              "sphere_renderer.json"
+            ]
+          },
+          {
+            "name": "Debug collect",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/copilot_toolkit/main.py",
+            "console": "integratedTerminal",
+            "args": [
+              "--collect"
+            ]
+          }
+          ,
+          {
+            "name": "Debug interactive",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/copilot_toolkit/main.py",
+            "console": "integratedTerminal",
+            "args": [
+              "--interactive"
+            ]
+          }
+    ]
+}
