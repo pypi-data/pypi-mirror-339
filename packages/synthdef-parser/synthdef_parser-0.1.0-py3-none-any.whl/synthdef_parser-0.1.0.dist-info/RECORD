@@ -1,0 +1,9 @@
+synthdef_parser/__init__.py,sha256=n_Lgl2bGjixtNPEOkSxCs4SFGkpaUClFOvubZxT0OrU,320
+synthdef_parser/parser.py,sha256=6C8Q_UIVdLde_3TINXtNlUHaZim9HoL01ng8cqJgSFQ,8455
+synthdef_parser-0.1.0.dist-info/licenses/LICENSE,sha256=ACwmltkrXIz5VsEQcrqljq-fat6ZXAMepjXGoe40KtE,1069
+tests/__init__.py,sha256=j3MCg-6Ll8Kld4SkpzbqKKHZi1X1rItf2OpfGjcvyAM,26
+tests/test_parser.py,sha256=QFaKu7OllkCWR8S_lXgnWv4V03-MaWdrTfoPmzBkkUc,1634
+synthdef_parser-0.1.0.dist-info/METADATA,sha256=HcCISmK0-6vMcq_BH5030bvaSQPBw9O6rvdefZbnCfI,1034
+synthdef_parser-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+synthdef_parser-0.1.0.dist-info/top_level.txt,sha256=pG-t_2vBUAC04RNKx-0R3xvtDC0F_TbhnskPdusf-9o,22
+synthdef_parser-0.1.0.dist-info/RECORD,,
