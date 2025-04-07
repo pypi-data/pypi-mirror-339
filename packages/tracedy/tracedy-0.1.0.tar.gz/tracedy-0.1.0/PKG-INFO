@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: tracedy
+Version: 0.1.0
+Summary: A simple Python package for tracing
+Project-URL: Homepage, https://github.com
+Project-URL: Bug Tracker, https://github.com
+Author-email: Author <author@example.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Tracedy
+
+A simple Python package for tracing.
+
+## Installation
+
+```bash
+pip install tracedy
+```
+
+## Usage
+
+```python
+import tracedy
+
+# Your code here
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 
