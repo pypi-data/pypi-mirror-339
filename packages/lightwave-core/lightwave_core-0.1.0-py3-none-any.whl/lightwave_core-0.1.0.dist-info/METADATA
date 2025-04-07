@@ -1,0 +1,110 @@
+Metadata-Version: 2.4
+Name: lightwave-core
+Version: 0.1.0
+Summary: Core library for the LightWave ecosystem.
+Project-URL: Homepage, https://github.com/kiwi-dev-la/lightwave-core
+Project-URL: Repository, https://github.com/kiwi-dev-la/lightwave-core
+Author-email: joelschaeffer <joel.schaeffer@lightwave-media.ltd>
+License: Proprietary
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: pytest-bdd>=8.1.0
+Requires-Dist: pytest-cov>=6.1.1
+Requires-Dist: pytest>=8.3.5
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: typing-extensions>=4.5.0
+Provides-Extra: all-dev
+Requires-Dist: black; extra == 'all-dev'
+Requires-Dist: build; extra == 'all-dev'
+Requires-Dist: freezegun; extra == 'all-dev'
+Requires-Dist: isort; extra == 'all-dev'
+Requires-Dist: mkdocs; extra == 'all-dev'
+Requires-Dist: mkdocs-material; extra == 'all-dev'
+Requires-Dist: mkdocstrings[python]; extra == 'all-dev'
+Requires-Dist: mypy>=1.0.0; extra == 'all-dev'
+Requires-Dist: pre-commit; extra == 'all-dev'
+Requires-Dist: pytest; extra == 'all-dev'
+Requires-Dist: pytest-cov; extra == 'all-dev'
+Requires-Dist: pytest-mock; extra == 'all-dev'
+Requires-Dist: ruff; extra == 'all-dev'
+Requires-Dist: twine; extra == 'all-dev'
+Provides-Extra: dev
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: build; extra == 'dev'
+Requires-Dist: isort; extra == 'dev'
+Requires-Dist: mypy>=1.0.0; extra == 'dev'
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Requires-Dist: twine; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: mkdocs; extra == 'docs'
+Requires-Dist: mkdocs-material; extra == 'docs'
+Requires-Dist: mkdocstrings[python]; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: freezegun; extra == 'test'
+Requires-Dist: pytest-mock; extra == 'test'
+Description-Content-Type: text/markdown
+
+# LightWave Core
+
+Core library for the LightWave ecosystem, providing common utilities, models, and services.
+
+## Installation
+
+```bash
+# Using uv (recommended)
+uv install lightwave-core
+
+## Development Setup
+
+# open repo in the gh desktop app then open in cursor ide
+
+# Set up a virtual environment (with uv)
+uv venv
+
+# Activate the virtual environment
+source .venv/bin/activate  # Linux/macOS
+# or
+.venv\Scripts\activate  # Windows
+
+# Install in development mode with all dev dependencies
+uv pip install -e ".[all-dev]"
+
+# Run pre-commit install to set up the git hooks
+pre-commit install
+```
+
+## Usage
+
+```python
+from lightwave.core import utils
+
+# Use the library components
+```
+
+## Structure
+
+```txt
+src/
+└── lightwave/
+    ├── __init__.py
+    └── core/
+        ├── __init__.py
+        ├── models/      # Shared data models
+        ├── utils/       # Utility functions
+        └── services/    # Common services
+```
+
+## License
+
+Proprietary - All rights reserved
