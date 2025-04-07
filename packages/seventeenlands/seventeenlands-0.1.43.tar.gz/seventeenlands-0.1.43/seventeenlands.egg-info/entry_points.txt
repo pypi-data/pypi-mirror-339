@@ -1,0 +1,2 @@
+[console_scripts]
+seventeenlands = seventeenlands.mtga_follower:main
