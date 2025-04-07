@@ -1,0 +1,17 @@
+CHANGES.rst
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+src/rotating_proxies/__init__.py
+src/rotating_proxies/expire.py
+src/rotating_proxies/middlewares.py
+src/rotating_proxies/policy.py
+src/rotating_proxies/utils.py
+src/scrapy_rotating_proxies_ng.egg-info/PKG-INFO
+src/scrapy_rotating_proxies_ng.egg-info/SOURCES.txt
+src/scrapy_rotating_proxies_ng.egg-info/dependency_links.txt
+src/scrapy_rotating_proxies_ng.egg-info/requires.txt
+src/scrapy_rotating_proxies_ng.egg-info/top_level.txt
+tests/test_expire.py
+tests/test_policy.py
