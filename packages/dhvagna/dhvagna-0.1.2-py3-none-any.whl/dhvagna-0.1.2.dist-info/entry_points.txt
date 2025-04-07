@@ -1,0 +1,3 @@
+[console_scripts]
+dhvagna = dhvagna.cli:main
+
