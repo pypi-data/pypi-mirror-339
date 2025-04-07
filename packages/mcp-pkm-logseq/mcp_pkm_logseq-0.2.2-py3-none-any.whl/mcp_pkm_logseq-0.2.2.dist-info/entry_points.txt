@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-pkm-logseq = mcp_pkm_logseq:main
