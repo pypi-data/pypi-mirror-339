@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: scidata_lab
+Version: 0.1.1
+Summary: A demo package with machine learning exercises
+Home-page: https://example.com
+Author: Daniel
+Author-email: your@email.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: mlxtend
+
+# scidata_lab
+
+A Python package containing multiple machine learning exercises for demonstration and educational purposes.
+
+This includes examples using:
+- Decision Trees
+- Find-S algorithm
+- Candidate Elimination
+- Apriori Association Rule Mining
+- Linear & Logistic Regression
