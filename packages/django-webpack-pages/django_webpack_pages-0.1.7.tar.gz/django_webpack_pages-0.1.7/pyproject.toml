@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "django-webpack-pages"
+version = "0.1.7"
+description = "Use webpack with your multi-page, multi-lingual django webapp"
+authors = ["MrP01 <peter@waldert.at>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/MrP01/django-webpack-pages"
+keywords = ["django", "webpack", "assets"]
+packages = [{ include = "webpack_pages" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django-webpack-loader = "^3.1.1"
+Django = "^5.2"
+Jinja2 = "^3.1.6"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.3.6"
+
+[tool.nitpick]
+style = ["github://MrP01/lint-me-now/nitpick-base-style.toml", "github://MrP01/lint-me-now/nitpick-python-style.toml"]
+
+[tool.ruff]
+line-length = 120
+exclude = [".git", "**/__pycache__"]
+lint.select = ["ALL"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
