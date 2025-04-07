@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: branchconflicts
+Version: 0.1.5
+Summary: Find conflicted files between two branches.
+Author: 39matt
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# Merge base conflicts
+## Information
+- This is a python library that helps you find files that were changed in both **branchA** and **branchB**.
+
+## Usage
