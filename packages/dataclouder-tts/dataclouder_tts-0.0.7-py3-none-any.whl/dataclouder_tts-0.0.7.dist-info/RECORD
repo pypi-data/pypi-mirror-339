@@ -1,0 +1,12 @@
+dataclouder_tts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dataclouder_tts/google_tts_service.py,sha256=q16NkkVdHeqMGh4ruAAVPEQ6kEkX9a3dOviS3fmsR60,4281
+dataclouder_tts/models/tts_models.py,sha256=8EgAMJT6fEe6JNhKP_CDTFybtObjeOgHOwGHkiJKobw,1721
+dataclouder_tts/models.py,sha256=yr3ILCj06AG7s5KytZzPouPZwNLCrLg0aqGCOsY1oJM,10162
+dataclouder_tts/speech.py,sha256=qWXSQhoentF1KB84xskmx6bmr2qMC6MzajZ5r52TJhw,1082
+dataclouder_tts/tts_controller.py,sha256=tMr7YXYIgtd8aXX4kEzBhT2gWjoqCLixnUn0yLQ_C2U,1832
+dataclouder_tts/tts_service_base.py,sha256=1OIn17GgiDSlXc0I7_UpeBwRqWa5s1HV-mHbT9R4O54,831
+dataclouder_tts/whisper/whisper_groq.py,sha256=eHdZCyefUm3qEKsynEiFkeJeG3O33DyKiavMvWFAINM,9041
+dataclouder_tts/whisper_controller.py,sha256=oRL0ejrlFVmXRkOj1ToIXDSHp_QkRbQkYL2b9o8to-I,1371
+dataclouder_tts-0.0.7.dist-info/METADATA,sha256=wvdVco_fr-aT9jP4yfxdaUiAlhuHw88jFaPekUAjULE,913
+dataclouder_tts-0.0.7.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+dataclouder_tts-0.0.7.dist-info/RECORD,,
