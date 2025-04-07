@@ -1,0 +1,13 @@
+pyenvelop/__init__.py,sha256=kWHDkfss8clhyO8UAJKj3lruSTeh8pj6fG9CPc4KC-s,320
+pyenvelop/core.py,sha256=qzOSe97QAqqBXtNYpLLPD1YaqRu2QP8of025uzNVW9I,39916
+pyenvelop/exceptions.py,sha256=rGvybo3DcsXtQ9Ek1XTpUZgd2DY61RU_5lYgxF3r508,1963
+pyenvelop/__pycache__/__init__.cpython-311.pyc,sha256=XjswlPKUS4Op2dhiLatU9T9Ds-YsCfu4C67tsODqBPk,572
+pyenvelop/__pycache__/__init__.cpython-312.pyc,sha256=tUk2iDU4FuHHDCtSSiHS_qCHlew5z7gUVWb0TfyDLDc,436
+pyenvelop/__pycache__/core.cpython-311.pyc,sha256=525DtIOzyFGiTYl-3YkRSxPrkGnJDqU_uS41afIKO64,15918
+pyenvelop/__pycache__/core.cpython-312.pyc,sha256=PkH5YksWhVrc6A4gj2VlQt7gUsT2cvVQFnTdDk-6X88,52484
+pyenvelop/__pycache__/exceptions.cpython-312.pyc,sha256=1mw5tKQYsLIP3V2jwG5R1ybb-JCEHr2WwbKtI5HUURI,3311
+pyenvelop-2.0.3.3.dist-info/LICENSE,sha256=KU7RQRTfOc0k1eKhkLUFKGYhVyH6jbV9OuujJeV170w,1417
+pyenvelop-2.0.3.3.dist-info/METADATA,sha256=3twGkll3-Qs4YvvsIHL3P_74HxSSO1yitW84cYu3Suk,7592
+pyenvelop-2.0.3.3.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+pyenvelop-2.0.3.3.dist-info/top_level.txt,sha256=euGxthsojibhclyetMK-zJd-2Ar3lIqeL0gso_fjPBg,10
+pyenvelop-2.0.3.3.dist-info/RECORD,,
