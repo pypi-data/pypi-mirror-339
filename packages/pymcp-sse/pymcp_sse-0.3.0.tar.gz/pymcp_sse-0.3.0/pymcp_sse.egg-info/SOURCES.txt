@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+pymcp_sse/__init__.py
+pymcp_sse.egg-info/PKG-INFO
+pymcp_sse.egg-info/SOURCES.txt
+pymcp_sse.egg-info/dependency_links.txt
+pymcp_sse.egg-info/requires.txt
+pymcp_sse.egg-info/top_level.txt
