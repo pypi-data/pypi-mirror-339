@@ -1,0 +1,13 @@
+librosa
+numpy
+tokenizers>=0.19.0
+torch
+transformers>=4.45.0
+
+[funcodec]
+huggingface-hub
+funcodec
+
+[xcodec2]
+xcodec2
+transformers<4.49.0,>=4.45.0
