@@ -1,0 +1,15 @@
+sps_c/DES.py,sha256=LmqWo1i4hHJQQZG8p1sjbneB4DtjLT0HNo1ZxLTyOgc,5557
+sps_c/S_DES.py,sha256=_Nr93UIdupmYP725N3igkr4mA8hxB-ZQ0SAFvyPcqK4,2727
+sps_c/__init__.py,sha256=-zMY6_bnwT6RXCQhSCcWjSWd1UWcerXckZYqOPXfxh8,1507
+sps_c/aes_mc.py,sha256=Ppr40RnozK1UBbLkkH9kMUTtNhz-eqckviY3gZ55er4,2033
+sps_c/ciphers.py,sha256=jhMNqyyXg6H6CoO6lmHmykFh9860PszaQdn0-x1dUHA,3629
+sps_c/dh_mitm.py,sha256=_hE_I28clf65_KoV6JV22X4rDn6OIOaBT5Im4r5ukz0,11395
+sps_c/ds.py,sha256=c09PL30uQzwIwURv5I5IvqQplcGI_mIA5uamSbA4Fl8,5413
+sps_c/elgamal.py,sha256=5p4Rxn4FehBvMBveW3L6N3xZ7Xjwff6xqUwo4H8VIsw,4259
+sps_c/rsa.py,sha256=O39MPQoCUP7d7Ww87Idc127aePeNjkwvnVygHT2B_Yo,1747
+sps_c/socketing.py,sha256=IKbIOumW7HCA5QgKac67Nqjuzw8jDv0qYH2tU52o1xM,1089
+sps_crypto-1.0.6a0.dist-info/LICENSE,sha256=ah2b2KK6FZ1_Qf4cjkaWNG1DJsDCnKXKONlsm8ZygNw,1073
+sps_crypto-1.0.6a0.dist-info/METADATA,sha256=2Gua2SibGwHThX-HlijycndhZS5yHrzcVdpWUHjQy7Y,1152
+sps_crypto-1.0.6a0.dist-info/WHEEL,sha256=bFJAMchF8aTQGUgMZzHJyDDMPTO3ToJ7x23SLJa1SVo,92
+sps_crypto-1.0.6a0.dist-info/top_level.txt,sha256=3Cqsy4lc647jJtq2uoShb1W7W5UuzRVOpQBAA49Wsvo,6
+sps_crypto-1.0.6a0.dist-info/RECORD,,
