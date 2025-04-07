@@ -1,0 +1,51 @@
+[project]
+name = "webtemplate-dbca"
+version = "1.8.0"
+description = "Base HTML templates for DBCA Django projects"
+authors = [{ name = "Ashley Felton", email = "ashley.felton@dbca.wa.gov.au" }]
+readme = "README.md"
+classifiers = [
+  "Framework :: Django",
+  "Framework :: Django :: 3.2",
+  "Framework :: Django :: 4.0",
+  "Framework :: Django :: 4.2",
+  "Framework :: Django :: 5.0",
+  "Framework :: Django :: 5.2",
+  "Environment :: Web Environment",
+  "Intended Audience :: Developers",
+  "Development Status :: 5 - Production/Stable",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.9,<4.0"
+dependencies = ["django>=3.2,<6"]
+
+[project.urls]
+Homepage = "https://github.com/dbca-wa/webtemplate"
+Repository = "https://github.com/dbca-wa/webtemplate.git"
+Changelog = "https://github.com/dbca-wa/webtemplate/blob/master/CHANGELOG.md"
+GitHub = "https://github.com/dbca-wa/webtemplate"
+
+[dependency-groups]
+dev = [
+  "pytest-django>=4.11.0",
+  "pytest-sugar>=1.0.0",
+  "tox>=4.25.0",
+  "tox-uv>=1.25.0",
+]
+
+[tool.pytest.ini_options]
+# https://pytest-django.readthedocs.io/en/latest/configuring_django.html#pyproject-toml-settings
+DJANGO_SETTINGS_MODULE = "tests.settings"
+# https://pytest-django.readthedocs.io/en/latest/managing_python_path.html#using-pytest-s-pythonpath-option
+pythonpath = ". src"
+# https://pytest-django.readthedocs.io/en/latest/faq.html#my-tests-are-not-being-found-why
+python_files = "tests.py test_*.py"

@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/webtemplate_dbca/__init__.py
+src/webtemplate_dbca.egg-info/PKG-INFO
+src/webtemplate_dbca.egg-info/SOURCES.txt
+src/webtemplate_dbca.egg-info/dependency_links.txt
+src/webtemplate_dbca.egg-info/requires.txt
+src/webtemplate_dbca.egg-info/top_level.txt
+tests/tests.py
