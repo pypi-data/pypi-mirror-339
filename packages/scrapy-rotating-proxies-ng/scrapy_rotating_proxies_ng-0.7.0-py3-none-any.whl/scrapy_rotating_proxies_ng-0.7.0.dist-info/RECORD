@@ -1,0 +1,10 @@
+rotating_proxies/__init__.py,sha256=RaANGbRu5e-vehwXI1-Qe2ggPPfs1TQaZj072JdbLk4,22
+rotating_proxies/expire.py,sha256=FqTRjfwVrJqCJ1HRNltAXJcfhX4nJiv3nmXeBjZoxlk,5759
+rotating_proxies/middlewares.py,sha256=R96c-IdnlNXntrqRU7hsxwAsKh45lVVBlDzTQ1HMF6E,13467
+rotating_proxies/policy.py,sha256=8US_Zvs-ZXcHX9GVvckZUN0XXEyLRZQ8EU2A3YxClUU,828
+rotating_proxies/utils.py,sha256=gBE9ozRLF_dyMhuANrfuyD12RsjMHN-e0AyD2lCM0JQ,669
+scrapy_rotating_proxies_ng-0.7.0.dist-info/licenses/LICENSE.txt,sha256=4E1NtqqF2jwUPB0FFTpknF6ph9FJaFJdm9N1kkARVAw,1074
+scrapy_rotating_proxies_ng-0.7.0.dist-info/METADATA,sha256=QxTp1vs4dRBUHmbtylFlf5-a__luV8FssNPsKPhhRy0,8226
+scrapy_rotating_proxies_ng-0.7.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+scrapy_rotating_proxies_ng-0.7.0.dist-info/top_level.txt,sha256=pNnoh4AeI8AgFfvp6jNmZKPE-1NDW7E_jI5S6yAVTns,17
+scrapy_rotating_proxies_ng-0.7.0.dist-info/RECORD,,
