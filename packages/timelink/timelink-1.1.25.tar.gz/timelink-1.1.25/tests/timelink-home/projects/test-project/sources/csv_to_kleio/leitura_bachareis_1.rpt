@@ -1,0 +1,99 @@
+KleioTranslator - server version 12.8 - build 593 2025-03-16 21:55:53
+6-4-2025 12-56
+
+Processing data file leitura_bachareis_1.cli
+-------------------------------------------
+Generic Act translation module with geoentities (XML).
+     Joaquim Ramos de Carvalho (joaquim@uc.pt) 
+** New document: kleio
+=========================
+kleio translation started
+=========================
+Structure: gacto2.str
+Prefix: 
+Autorel: 
+Translation count: 
+Obs: 
+Translation count not set or invalid, counting as zero: 
+** Processing source fonte$leitura_bachareis_1
+
+ERROR: leitura_bachareis_1.cli line 2 ** Error: missing element(s) in lista(leitura_bachareis_l1) must have: ano mes
+Near lines: 2    lista$leitura_bachareis_l1/1730:1831
+Near lines: 3    lista$leitura_bachareis_l1/1730:1831
+
+4: lista$leitura_bachareis_l1
+
+ERROR: leitura_bachareis_1.cli line 2 *** Current group bacharel cannot be linked with previous group lista(leitura_bachareis_l1)
+Near lines: 2    lista$leitura_bachareis_l1/1730:1831
+Near lines: 3    lista$leitura_bachareis_l1/1730:1831
+
+
+ERROR: leitura_bachareis_1.cli line 2 ***bacharel group not stored.
+Near lines: 2    lista$leitura_bachareis_l1/1730:1831
+Near lines: 3    lista$leitura_bachareis_l1/1730:1831
+
+
+ERROR: leitura_bachareis_1.cli line 2 ** Failure. Could not process group bacharel
+Near lines: 2    lista$leitura_bachareis_l1/1730:1831
+Near lines: 3    lista$leitura_bachareis_l1/1730:1831
+
+
+ERROR: leitura_bachareis_1.cli line 2 ** ID already used in this file: leitura_bachareis_l1
+Near lines: 2       bacharel$Acúrsio José de Magalhães/m/id=letbach-1
+Near lines: 3    lista$leitura_bachareis_l1/1730:1831
+
+5: lista$leitura_bachareis_l1
+
+ERROR: leitura_bachareis_1.cli line 2 *** Current group ls cannot be linked with previous group lista(leitura_bachareis_l1)
+Near lines: 2       bacharel$Acúrsio José de Magalhães/m/id=letbach-1
+Near lines: 3    lista$leitura_bachareis_l1/1730:1831
+
+
+ERROR: leitura_bachareis_1.cli line 2 ***ls group not stored.
+Near lines: 2       bacharel$Acúrsio José de Magalhães/m/id=letbach-1
+Near lines: 3    lista$leitura_bachareis_l1/1730:1831
+
+
+ERROR: leitura_bachareis_1.cli line 2 ** Failure. Could not process group ls
+Near lines: 2       bacharel$Acúrsio José de Magalhães/m/id=letbach-1
+Near lines: 3    lista$leitura_bachareis_l1/1730:1831
+
+
+ERROR: leitura_bachareis_1.cli line 2 ** Failure: undefined element. leitura-bacharel.data
+
+Near lines: 2       bacharel$Acúrsio José de Magalhães/m/id=letbach-1
+Near lines: 3    lista$leitura_bachareis_l1/1730:1831
+
+
+ERROR: leitura_bachareis_1.cli line 2 ** Failure: undefined element. "PT/TT/DP/A-A/5-3-1/12/14"
+
+Near lines: 2       bacharel$Acúrsio José de Magalhães/m/id=letbach-1
+Near lines: 3    lista$leitura_bachareis_l1/1730:1831
+
+*** ERROR: MAXIMUM NUMBER OF ERRORS REACHED. TRANSLATION ABORTED.
+
+ERROR: leitura_bachareis_1.cli line 2 ** Failure: undefined element. 1730
+
+Near lines: 2           ls$leitura-bacharel.data/"PT/TT/DP/A-A/5-3-1/12/14"/1730
+Near lines: 3    lista$leitura_bachareis_l1/1730:1831
+
+
+ERROR: leitura_bachareis_1.cli line 2 ** ID already used in this file: leitura_bachareis_l1
+Near lines: 2           ls$leitura-bacharel.data/"PT/TT/DP/A-A/5-3-1/12/14"/1730
+Near lines: 3    lista$leitura_bachareis_l1/1730:1831
+
+5: lista$leitura_bachareis_l1
+*** End of File
+
+
+Structure file: /kleio-home/structures/sources.str
+Structure processing report: /kleio-home/structures/sources.srpt
+Structure in JSON: /kleio-home/structures/sources.str.json
+
+Kleio file: /kleio-home/sources/csv_to_kleio/leitura_bachareis_1.cli
+Original file: /kleio-home/sources/csv_to_kleio/leitura_bachareis_1.org
+Previous version: /kleio-home/sources/csv_to_kleio/leitura_bachareis_1.old
+12  errors. 
+0  warnings.
+Groups in this file:[lista,fonte,kleio]
+Translation finished.

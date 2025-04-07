@@ -1,0 +1,34 @@
+KleioTranslator - server version 12.8 - build 593 2025-03-16 21:55:53
+6-4-2025 12-56
+
+Processing data file eiras-rol2.cli
+-------------------------------------------
+Generic Act translation module with geoentities (XML).
+     Joaquim Ramos de Carvalho (joaquim@uc.pt) 
+** New document: kleio
+=========================
+kleio translation started
+=========================
+Structure: gacto.str
+Prefix: 
+Autorel: 
+Translation count: 30
+Obs: 
+** Processing source fonte$eiras-rol2
+6: rol$r1776
+*** End of File
+
+
+Structure file: /kleio-home/structures/sources.str
+Structure processing report: /kleio-home/structures/sources.srpt
+Structure in JSON: /kleio-home/structures/sources.str.json
+
+Kleio file: /kleio-home/sources/reference_sources/roisdeconfessados/eiras-rol2.cli
+Original file: /kleio-home/sources/reference_sources/roisdeconfessados/eiras-rol2.org
+Previous version: /kleio-home/sources/reference_sources/roisdeconfessados/eiras-rol2.old
+Temp file with ids: /kleio-home/sources/reference_sources/roisdeconfessados/eiras-rol2.ids
+** - /kleio-home/sources/reference_sources/roisdeconfessados/eiras-rol2.cli-renamed to- /kleio-home/sources/reference_sources/roisdeconfessados/eiras-rol2.old
+0  errors. 
+0  warnings.
+Groups in this file:[escrava,escravo,engeitado,mae,mmulher,pai,engeitada,referida,criado,criada,rel,referido,filha,filho,mulher,ls,n,fogo,rol,fonte,kleio]
+Translation finished.

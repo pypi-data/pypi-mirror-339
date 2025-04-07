@@ -1,0 +1,11 @@
+{
+  "errors":12,
+  "kleio_file":"/kleio-home/sources/csv_to_kleio/leitura_bachareis_2.cli",
+  "kleio_original":"/kleio-home/sources/csv_to_kleio/leitura_bachareis_2.org",
+  "kleio_previous":"/kleio-home/sources/csv_to_kleio/leitura_bachareis_2.old",
+  "kleio_rpt":"/kleio-home/sources/csv_to_kleio/leitura_bachareis_2.rpt",
+  "stru":"/kleio-home/structures/sources.str",
+  "stru_json":"/kleio-home/structures/sources.str.json",
+  "stru_rpt":"/kleio-home/structures/sources.srpt",
+  "warnings":0
+}
