@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: wiz-mcp
+Version: 0.0.2a0
+Summary: A sample mcp server
+Author-email: Gentleelephant <moon0hello@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: aiohttp>=3.11.14
+Requires-Dist: hatchling>=1.27.0
+Requires-Dist: mcp[cli]>=1.5.0
+Requires-Dist: setuptools>=78.1.0
+Description-Content-Type: text/markdown
+
+# wiz-mcp
+
+A sample mcp server for KubeSphere Wizard.
+
+## Prerequisites
+
+- uv and uvx
+
+## Configuration
+
+Configure claude_desktop_config.json file
+```json
+{
+  "mcpServers": {
+    "wiz": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "wiz-mcp",
+        "wiz"
+      ],
+      "env": {
+        "KS_USER": "admin",
+        "KS_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOi8va3MtY29uc29sZS5rdWJlc3BoZXJlLXN5c3RlbS5zdmM6MzA4ODAiLCJzdWIiOiJhZG1pbiIsImV4cCI6MTc0MzM4OTE3OSwiaWF0IjoxNzQzMzgxOTc5LCJ0b2tlbl90eXBlIjoiYWNjZXNzX3Rva2VuIiwidXNlcm5hbWUiOiJhZG1pbiJ9.ZMNnh-UvnhXvVcqolkNb_aehBmCk7atul4jtc8r6TYM",
+        "KS_APISERVER_ENDPOINT": "http://172.31.17.47:30881"
+      }
+    }
+  }
+}
+```
