@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2a93dcd3-6154-4555-bba7-fdbe03036c6f" name="Changes" comment="feat: added defaults processing" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="f" />
+        <option name="rewordedMessage" value="feat: added readme" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="41b5620278d41b0ad002b9ab3ff67feee56e5a61" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2udW54D6fR2P9XzpyGJt5DPLLSA" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Igor/PycharmProjects/python-utilz/python_utilz/tests&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Igor\PycharmProjects\python-utilz\python_utilz\tests" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Igor\PycharmProjects\python-utilz\python_utilz" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests in tests">
+    <configuration name="Python tests for test_config_related.test_base_config_alias_bad" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python-utilz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_utilz/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_config_related.test_base_config_alias_bad&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_config_related.test_base_config_alias_good" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python-utilz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_utilz/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_config_related.test_base_config_alias_good&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_config_related.test_base_config_default" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python-utilz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_utilz/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_config_related.test_base_config_default&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_config_related.test_base_config_wrong_type" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python-utilz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_utilz/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_config_related.test_base_config_wrong_type&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_config_related.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python-utilz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_utilz/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/python_utilz/tests/test_config_related.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in tests" type="tests" factoryName="Autodetect" nameIsGenerated="true">
+      <module name="python-utilz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_utilz/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/python_utilz/tests&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python tests.Python tests in tests" />
+      <item itemvalue="Python tests.Python tests for test_config_related.test_base_config_default" />
+      <item itemvalue="Python tests.Python tests for test_config_related.test_base_config_wrong_type" />
+      <item itemvalue="Python tests.Python tests for test_config_related.test_base_config_alias_bad" />
+      <item itemvalue="Python tests.Python tests for test_config_related.test_base_config_alias_good" />
+      <item itemvalue="Python tests.Python tests in test_config_related.py" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for test_config_related.test_base_config_wrong_type" />
+        <item itemvalue="Python tests.Python tests for test_config_related.test_base_config_default" />
+        <item itemvalue="Python tests.Python tests for test_config_related.test_base_config_alias_bad" />
+        <item itemvalue="Python tests.Python tests for test_config_related.test_base_config_alias_good" />
+        <item itemvalue="Python tests.Python tests in test_config_related.py" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2a93dcd3-6154-4555-bba7-fdbe03036c6f" name="Changes" comment="" />
+      <created>1742578744169</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742578744169</updated>
+      <workItem from="1742578745359" duration="7163000" />
+      <workItem from="1742586192111" duration="634000" />
+      <workItem from="1742661677512" duration="5000" />
+      <workItem from="1742737258228" duration="27000" />
+      <workItem from="1742737607788" duration="554000" />
+      <workItem from="1743184473763" duration="9275000" />
+      <workItem from="1743530698846" duration="2299000" />
+      <workItem from="1743533349316" duration="118000" />
+      <workItem from="1743941182796" duration="2612000" />
+      <workItem from="1743943838428" duration="3000" />
+      <workItem from="1743946513279" duration="702000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: setup">
+      <created>1742582675575</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742582675575</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: added code">
+      <created>1742582698995</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742582698995</updated>
+    </task>
+    <task id="LOCAL-00003" summary="f">
+      <created>1742585681644</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1742585681644</updated>
+    </task>
+    <task id="LOCAL-00004" summary="f">
+      <created>1742585684235</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1742585684235</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: added py.typed">
+      <created>1742737999679</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742737999679</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: added py.typed">
+      <created>1742738117761</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742738117761</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: added config utilities">
+      <created>1743532803191</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743532803191</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: added config utilities">
+      <created>1743532946690</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743532946690</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix: ruff">
+      <created>1743533411531</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743533411531</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix: typo">
+      <created>1743941234074</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743941234074</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: better config error handling">
+      <created>1743941474678</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1743941474678</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: aliases for config">
+      <created>1743943211037</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1743943211037</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix: mypy">
+      <created>1743943363873</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1743943363873</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fix: mypy">
+      <created>1743943432925</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1743943432925</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix: version">
+      <created>1743943709861</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1743943709861</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat: added defaults processing">
+      <created>1743947162085</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1743947162086</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: added defaults processing">
+      <created>1743947205179</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1743947205179</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="feat: setup" />
+    <MESSAGE value="feat: added code" />
+    <MESSAGE value="f" />
+    <MESSAGE value="feat: added py.typed" />
+    <MESSAGE value="feat: added config utilities" />
+    <MESSAGE value="fix: ruff" />
+    <MESSAGE value="fix: typo" />
+    <MESSAGE value="feat: better config error handling" />
+    <MESSAGE value="feat: aliases for config" />
+    <MESSAGE value="fix: mypy" />
+    <MESSAGE value="fix: version" />
+    <MESSAGE value="feat: added defaults processing" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added defaults processing" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/python_utilz$1.coverage" NAME="1 Coverage Results" MODIFIED="1743532698154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python_utilz$Doctests_in_strings_related.coverage" NAME="Doctests in strings_related Coverage Results" MODIFIED="1742583369323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_utilz" />
+    <SUITE FILE_PATH="coverage/python_utilz$config_related.coverage" NAME="config_related Coverage Results" MODIFIED="1743191855607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_utilz" />
+    <SUITE FILE_PATH="coverage/python_utilz$time_related.coverage" NAME="time related Coverage Results" MODIFIED="1742580814922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_utilz" />
+    <SUITE FILE_PATH="coverage/python_utilz$.coverage" NAME=" Coverage Results" MODIFIED="1743947104664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_utilz/tests" />
+  </component>
+</project>
