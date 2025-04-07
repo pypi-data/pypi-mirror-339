@@ -1,0 +1,26 @@
+[project]
+name = "digitsclassifier"
+version = "2.0.1"
+description = "Library to detect single digits (0-9) in black/white images"
+authors = [
+    { name = "Knopf", email = "webmaster@pgn-app.com" },
+]
+dependencies = [
+    "pillow>=11.1.0",
+    "tensorflow>=2.19.0",
+    "keras>=3.9.2",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
