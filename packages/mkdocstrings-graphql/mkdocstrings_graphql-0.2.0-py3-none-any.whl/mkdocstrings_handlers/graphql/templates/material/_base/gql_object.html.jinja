@@ -1,0 +1,73 @@
+{#- Template for GraphQL objects.
+
+Renders a GraphQL object.
+
+Context:
+    gql_object (InputObjectTypeNode | ObjectTypeNode): The object to render.
+    root (bool): Whether this is the root object, injected with `:::` in a
+        Markdown page.
+    heading_level (int): The HTML heading level to use.
+    config (dict): The configuration options.
+-#}
+
+{% block logs scoped %}
+    {#- Logging block. -#}
+    {{ log.debug("Rendering " + gql_object.path) }}
+{% endblock logs %}
+
+<div class="doc doc-node doc-gql-object">
+    {% with obj = gql_object, html_id = gql_object.path, all_fields = gql_object.fields %}
+        {% if root %}
+            {% set show_full_path = config.show_root_full_path %}
+        {% else %}
+            {% set show_full_path = config.show_node_full_path %}
+        {% endif %}
+
+        {% set gql_object_name = gql_object.path if show_full_path else gql_object.name %}
+
+        {% filter heading(
+                heading_level,
+                role="gql_object",
+                id=html_id,
+                class="doc doc-heading",
+                toc_label=gql_object.name,
+            ) %}
+            {% block heading scoped %}
+                {#- Heading block. -#}
+                <span class="doc doc-gql-object-name">{{ config.heading if config.heading and root else gql_object_name }}</span>
+            {% endblock heading %}
+        {% endfilter %}
+
+        <div class="doc doc-contents {% if root %}first{% endif %}">
+            {% block contents scoped %}
+                {#- Contents block.
+
+                Renders the contents of the object. It contains other blocks
+                that the user can override. Override the contents block allows
+                to rearrange the order of the blocks.
+                -#}
+                {% block interfaces scoped %}
+                    {#- Implemented interfaces block. -#}
+                    {% if gql_object.interfaces is defined and gql_object.interfaces|length > 0%}
+                        <p class="doc doc-object-interfaces">
+                            Interfaces: {% for expression in gql_object.interfaces -%}
+                                <code>
+                                    {%- with backlink_type = "subclassed-by" -%}
+                                        {%- include "expression.html.jinja" -%}
+                                    {%- endwith -%}
+                                </code>{% if not loop.last %}, {% endif %}
+                            {% endfor -%}
+                        </p>
+                    {% endif %}
+                {% endblock interfaces %}
+
+                {% block docstring scoped %}
+                    {#- Docstring block. -#}
+                    {% with docstring_sections = gql_object.docstring %}
+                        {% include "docstring.html.jinja" %}
+                    {% endwith %}
+                {% endblock %}
+            {% endblock contents %}
+        </div>
+    {% endwith %}
+</div>
