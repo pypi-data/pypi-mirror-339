@@ -1,0 +1,9 @@
+README.md
+setup.py
+qexec-ai/__init__.py
+qexec-ai/main.py
+qexec_ai.egg-info/PKG-INFO
+qexec_ai.egg-info/SOURCES.txt
+qexec_ai.egg-info/dependency_links.txt
+qexec_ai.egg-info/requires.txt
+qexec_ai.egg-info/top_level.txt
