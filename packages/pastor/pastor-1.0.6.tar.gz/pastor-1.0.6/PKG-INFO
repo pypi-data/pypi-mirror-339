@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: pastor
+Version: 1.0.6
+Summary: ui and api autotest
+Author: chliang
+Requires-Python: >=3.7
