@@ -1,0 +1,8 @@
+requests
+
+[dev]
+pytest>=6.0
+pytest-cov>=2.12
+pytest-mock>=3.10.0
+python-dotenv>=1.0.0
+ruff>=0.1.1
