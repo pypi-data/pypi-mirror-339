@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/tokdu/__init__.py
+src/tokdu/tokdu.py
+src/tokdu.egg-info/PKG-INFO
+src/tokdu.egg-info/SOURCES.txt
+src/tokdu.egg-info/dependency_links.txt
+src/tokdu.egg-info/entry_points.txt
+src/tokdu.egg-info/requires.txt
+src/tokdu.egg-info/top_level.txt
