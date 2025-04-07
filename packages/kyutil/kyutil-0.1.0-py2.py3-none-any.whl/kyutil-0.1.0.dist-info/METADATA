@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: kyutil
+Version: 0.1.0
+Summary: Python utils for kylin python application
+Home-page: https://server.kylinos.cn/
+Author: xuyonghui
+Author-email: xuyonghui@126.com
+Maintainer: bill steve
+Maintainer-email: xuyonghui@126.com
+License: MIT License
+Platform: all
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: platform
+Dynamic: summary
+
+
+    Changelog:
+        ### 0.1.0
+            - initial release    
+    
