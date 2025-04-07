@@ -1,0 +1,17 @@
+[project]
+name = "algo_trading_data_creator"
+version = "0.1.0"
+description = "A small utility for fetching and formatting data from SQL Server using GetKlineData2 db function."
+authors = [
+    { name="Okan Uregen", email="okanuregen@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "pymssql",
+    "pandas"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

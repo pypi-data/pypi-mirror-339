@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: algo_trading_data_creator
+Version: 0.1.0
+Summary: A small utility for fetching and formatting data from SQL Server using GetKlineData2 db function.
+Author-email: Okan Uregen <okanuregen@gmail.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pymssql
+Requires-Dist: pandas
+
+# algo_trading_data_creator
+
+A utility to connect to SQL Server, retrieve financial Kline data, and prepare it for analysis using Pandas.
