@@ -1,0 +1,159 @@
+{
+  "schema": "1.0.0",
+  "algorithm": {
+    "nach01": {
+      "supported_regions": {
+        "us-east-1": "211125694248"
+      },
+      "training_instance_type": ["ml.g5.2xlarge", "ml.g6.2xlarge", "ml.g6e.2xlarge"],
+      "inference_instance_type": ["ml.p3.2xlarge", "ml.p3.8xlarge"],
+      "training_max_run_hours": 140,
+      "training_volume_size_gb": 30,
+      "training_data_required": ["molecule", "task_description", "target"],
+      "training_parameters": [
+        {
+          "Name": "TRAIN_BATCH_SIZE",
+          "Type": "Integer",
+          "DefaultValue": "1",
+          "Description": "Batch size for training",
+          "IsRequired": true,
+          "IsTunable": false,
+          "Range": {
+            "IntegerParameterRangeSpecification": {
+              "MinValue": "1",
+              "MaxValue": "16"
+            }
+          }
+        },
+        {
+          "Name": "MAX_STEPS",
+          "Type": "Integer",
+          "DefaultValue": "1000",
+          "Description": "Maximum number of training steps",
+          "IsRequired": true,
+          "IsTunable": false,
+          "Range": {
+            "IntegerParameterRangeSpecification": {
+              "MinValue": "50",
+              "MaxValue": "1000000"
+            }
+          }
+        },
+        {
+          "Name": "GRAD_ACCUMULATION_STEPS",
+          "Type": "Integer",
+          "DefaultValue": "4",
+          "Description": "Number of gradient accumulation steps",
+          "IsRequired": true,
+          "IsTunable": false,
+          "Range": {
+            "IntegerParameterRangeSpecification": {
+              "MinValue": "1",
+              "MaxValue": "32"
+            }
+          }
+        },
+        {
+          "Name": "LR",
+          "Type": "Continuous",
+          "DefaultValue": "0.0002",
+          "Description": "Learning rate",
+          "IsRequired": true,
+          "IsTunable": false,
+          "Range": {
+            "ContinuousParameterRangeSpecification": {
+              "MinValue": "0.00001",
+              "MaxValue": "0.01"
+            }
+          }
+        },
+        {
+          "Name": "WEIGHT_DECAY",
+          "Type": "Continuous",
+          "DefaultValue": "0.01",
+          "Description": "Weight decay for optimizer",
+          "IsRequired": true,
+          "IsTunable": false,
+          "Range": {
+            "ContinuousParameterRangeSpecification": {
+              "MinValue": "0.0",
+              "MaxValue": "0.1"
+            }
+          }
+        },
+        {
+          "Name": "WARMUP_STEPS",
+          "Type": "Integer",
+          "DefaultValue": "50",
+          "Description": "Number of warmup steps",
+          "IsRequired": true,
+          "IsTunable": false,
+          "Range": {
+            "IntegerParameterRangeSpecification": {
+              "MinValue": "0",
+              "MaxValue": "10000"
+            }
+          }
+        },
+        {
+          "Name": "MOL_AUGMENTATION",
+          "Type": "Categorical",
+          "DefaultValue": "true",
+          "Description": "Flag to enable molecular augmentation",
+          "IsRequired": false,
+          "IsTunable": false,
+          "Range": {
+            "CategoricalParameterRangeSpecification": {
+              "Values": ["true", "false"]
+            }
+          }
+        }
+      ],
+      "inference_parameters": [
+        {
+          "Name": "TOP_P",
+          "Type": "Continuous",
+          "Range": {
+            "ContinuousParameterRangeSpecification": {
+              "MinValue": "0.0",
+              "MaxValue": "1.0"
+            }
+          }
+        },
+        {
+          "Name": "TOP_K",
+          "Type": "Integer",
+          "Range": {
+            "IntegerParameterRangeSpecification": {
+              "MinValue": "0",
+              "MaxValue": "32000"
+            }
+          }
+        },
+        {
+          "Name": "MAX_LENGTH",
+          "Type": "Integer",
+          "Range": {
+            "IntegerParameterRangeSpecification": {
+              "MinValue": "0",
+              "MaxValue": "1024"
+            }
+          }
+        },
+        {
+          "Name": "AGGREGATING_STRATEGY",
+          "Type": "Categorical",
+          "DefaultValue": "average",
+          "Description": "Aggregating strategy for top_k > 1",
+          "IsRequired": false,
+          "IsTunable": false,
+          "Range": {
+            "CategoricalParameterRangeSpecification": {
+              "Values": ["average", "vote"]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

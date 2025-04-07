@@ -1,0 +1,14 @@
+insilico_aws/__init__.py,sha256=UzOK1c6h4rtV0j8PMteFFmrL52S91yCaT1VcWX_t-LU,169
+insilico_aws/client.py,sha256=Gk5xxl0diMw5VXBOyG8RgB2Z96MLyvNnWCbQto5ADC4,13048
+insilico_aws/resources.json,sha256=wP5UeEXw5D03NTh0BmWqeISFZuU4cGy8cQfWLoKlD3Q,4448
+insilico_aws/resources.py,sha256=0d5w3P7hWvXb0lpyDQXPFnCkYExL1pYqJTNimODL6fs,1197
+insilico_aws/utils.py,sha256=srLvSvQ0gccJdFqLDsJriBXL64qFwMM7J63B0IZ-XJo,1432
+insilico_aws/examples/nach01/nach01-Algorithm.ipynb,sha256=IKN3T2AiYShjwBl-Lvax4IsMOA-DVARMKr4SwHQ1dwQ,14693
+insilico_aws/examples/nach01/bbbp/request.csv,sha256=xUGpw5ZAzhnFPu_OtlUACmZr3zq5t-w4dZf3TRBM_KU,18172
+insilico_aws/examples/nach01/bbbp/test.csv,sha256=H9raDcbjJJI9Sg_XJOTCFBH6jafFXRP06tWSMgoymTI,28120
+insilico_aws/examples/nach01/bbbp/train.csv,sha256=RLtojAQ2__VPHlw_Fv6JwjkcY_Wy4xxSCtPStB8xcx0,209816
+insilico_aws-1.2.1.dist-info/licenses/LICENSE,sha256=w0I1MUFUBZtL7azAvufTBUTP5xKJmmXDwz6ZxhLMNag,1074
+insilico_aws-1.2.1.dist-info/METADATA,sha256=YxHzjnzt4PJbNKTVkjbKNY4sekD-qowwIg7LxWJCoNw,1818
+insilico_aws-1.2.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+insilico_aws-1.2.1.dist-info/top_level.txt,sha256=s9j82oXDSaqSTxFG72ram25SdUSwIvA11zkYWCUoV0k,13
+insilico_aws-1.2.1.dist-info/RECORD,,
