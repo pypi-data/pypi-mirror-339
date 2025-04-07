@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+german_transliterate/core.py
+german_transliterate.egg-info/PKG-INFO
+german_transliterate.egg-info/SOURCES.txt
+german_transliterate.egg-info/dependency_links.txt
+german_transliterate.egg-info/requires.txt
+german_transliterate.egg-info/top_level.txt

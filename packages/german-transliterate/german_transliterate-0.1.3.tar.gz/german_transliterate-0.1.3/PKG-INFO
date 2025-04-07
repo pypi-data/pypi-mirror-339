@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: german_transliterate
+Version: 0.1.3
+Summary: german_transliterate can clean and transliterate (i.e. normalize) German text including abbreviations, numbers, timestamps etc. (fork of https://github.com/repodiac/german_transliterate)
+Home-page: http://github.com/MattePalte/german_transliterate
+Author: Matteo Paltenghi
+Author-email: mattepalte@live.it
+License: CC-BY-4.0 License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: num2words
+
+german_transliterate is a Python module to clean and transliterate (i.e. normalize) German text.
+
+Features:
+- Clean messy text (e.g., map peculiar Unicode encodings to ASCII).
+- Replace common abbreviations in text.
+
+It can be used in combination with various text mining tasks.
