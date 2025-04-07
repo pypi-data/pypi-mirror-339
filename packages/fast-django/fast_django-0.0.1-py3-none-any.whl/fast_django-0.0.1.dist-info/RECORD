@@ -1,0 +1,11 @@
+fast_django/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fast_django/fast_django.py,sha256=oVG71dF-B2pYUC7jzVzbAET8zKpvLaORoEiA6wNXKbE,6614
+fast_django/settings_modifier.py,sha256=S6Rz6Ux8wF-U38TTtVwFvMOIlJnDpfpdpjIqe6RjRkM,8407
+fast_django/templates.py,sha256=KO2OwHGjz4uBD_Rc4xZu-ZIJoZkNoMbr4IdUOgSWzb0,2950
+fast_django/utils.py,sha256=AUkWVqa3mMwfTJHtJO3skoHVz9_aVkPMaVJOm8mntew,1141
+fast_django/resources/base.html,sha256=HErHc2CC6_nS0heoXFMhZFKmpmJxxUwCAXKhNkXu8ag,289
+fast_django-0.0.1.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fast_django-0.0.1.dist-info/METADATA,sha256=YFAXJLn6KsN5t56K3HPHFcgdCqalnaxVuo61W1QkyHY,904
+fast_django-0.0.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+fast_django-0.0.1.dist-info/top_level.txt,sha256=bgXa2JIN22p-_Qum6y9AXYXTEJaqcvEX15WC_yRGJ-I,12
+fast_django-0.0.1.dist-info/RECORD,,
