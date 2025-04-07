@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-pe = mcp_server_pe:main
