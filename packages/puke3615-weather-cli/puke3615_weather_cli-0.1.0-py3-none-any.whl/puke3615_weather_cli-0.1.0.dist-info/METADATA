@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: puke3615-weather-cli
+Version: 0.1.0
+Summary: 一个简单的天气查询命令行工具
+Author-email: Your Name <your.email@example.com>
+Requires-Python: >=3.8
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: requests>=2.31.0
