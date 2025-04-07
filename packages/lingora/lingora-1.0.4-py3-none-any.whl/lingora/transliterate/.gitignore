@@ -1,0 +1,10 @@
+_.md
+
+lib/
+lib64/
+bin/
+__pycache__/
+
+demo/
+latextranslit/lib64
+lib64
