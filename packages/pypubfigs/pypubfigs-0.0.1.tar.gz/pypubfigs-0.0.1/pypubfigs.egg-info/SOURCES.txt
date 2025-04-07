@@ -1,0 +1,13 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.py
+pypubfigs/__init__.py
+pypubfigs/palettes.py
+pypubfigs/themes.py
+pypubfigs/version.py
+pypubfigs.egg-info/PKG-INFO
+pypubfigs.egg-info/SOURCES.txt
+pypubfigs.egg-info/dependency_links.txt
+pypubfigs.egg-info/requires.txt
+pypubfigs.egg-info/top_level.txt
