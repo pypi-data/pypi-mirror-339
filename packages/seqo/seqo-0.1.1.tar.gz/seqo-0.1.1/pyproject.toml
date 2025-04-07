@@ -1,0 +1,28 @@
+[project]
+name = "seqo"
+description = "Map strings sequencially"
+authors = [
+    {name = "Enzo Conejero", email = "enzoconejero0@gmail.com"},
+]
+dependencies = []
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "GNU"}
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.5",
+    "twine>=6.1.0",
+    "build>=1.2.2.post1",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic.version]
+attr = 'seqo.__version__'
+
+[tool.pdm]
+distribution = true

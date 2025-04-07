@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/seqo/__init__.py
+src/seqo.egg-info/PKG-INFO
+src/seqo.egg-info/SOURCES.txt
+src/seqo.egg-info/dependency_links.txt
+src/seqo.egg-info/requires.txt
+src/seqo.egg-info/top_level.txt
+tests/test_seqs.py
