@@ -1,0 +1,11 @@
+phreeqcrm.libs/libgcc_s-493bcbf3.so.1,sha256=tAAN5ajqbmdGiiwJ2HgUD8eRUYmjx1O-Yrl86x6eGDU,200345
+phreeqcrm.libs/libstdc++-62bfff6d.so.6.0.32,sha256=1C4fUqLtpaTP6wDAErLN94_ESKB1LjID1VU3LxMCP64,4174113
+phreeqcrm.libs/libgomp-e207caef.so.1.0.0,sha256=hwklut9OzHiWLh9Elf73zjcNgbkPHZD5Q29QoQXUN1U,476017
+phreeqcrm-0.0.16.dist-info/WHEEL,sha256=WC_2Ct1nzQtgK0P50tD58aK7_-QdE2ZF4XvQYlkY-WU,118
+phreeqcrm-0.0.16.dist-info/RECORD,,
+phreeqcrm-0.0.16.dist-info/METADATA,sha256=HE0VbzTsf6VnuBjaPKe896mUvkw537QrFDT_my31VPA,2130
+phreeqcrm-0.0.16.dist-info/licenses/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+phreeqcrm/yamlphreeqcrm.py,sha256=Z6Wfm6N1Ln8H0RBxkxM6xfdBfzNYNe4iKhRUST_4RJA,77839
+phreeqcrm/_phreeqcrm.cpython-311-powerpc64le-linux-musl.so,sha256=F9msXcFPK-OJL6i0BLLN_ef-oq8aN4M_GuQLrQ95fno,7033873
+phreeqcrm/__init__.py,sha256=U1vVjJnO8vvyOuIIgT04QmkJiYzMYTPPC_51Hw0_enI,326
+phreeqcrm/phreeqcrm.py,sha256=33qNdW5_RSQZiWswIrWfX3As34L3pB4W19WlYZ9XKFc,201817
