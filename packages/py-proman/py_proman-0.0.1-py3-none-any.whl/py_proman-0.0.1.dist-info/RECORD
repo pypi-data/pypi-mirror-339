@@ -1,0 +1,17 @@
+proman/cli.py,sha256=2DUBfMAGq-vdnSmpzq6fbyoEeEMW-MxY__KNgo3K1Gw,2459
+proman/config.py,sha256=y1B2bU8JO1W-cvbBAiWrWtXyZKw67XSpjVYnQGN66DE,4234
+proman/environment.py,sha256=SVYaQrEdkitk1h-ZnwHtunbI9Rv_HIdJPaHDnzMk0e8,367
+proman/manager.py,sha256=OO3HDUmxHHte0DihvJOamiknsu8VHpXnVfx8y4TlNAY,1264
+proman/paths.py,sha256=nUAN_PuxgZr2b76P0Su6R9w4MHvD3oTEZjt_aiLv5BE,109
+proman/processes.py,sha256=5b1N8WeZB6hM46_r2WrIU6bFq9tVzgB5gbiAD_624ng,4879
+proman/server.py,sha256=4gaZvt1ScaaUZbkgKHgGQDVbmvCBG_ETEhwJGxCnvZc,6773
+proman/frontend/buttons.css,sha256=-wCSZDn0taLhZ7l2ZdhefVgalcfTcaarSyPHaF9zUkQ,1316
+proman/frontend/chota.min.css,sha256=ANRzGx4gMNe0VEhE1P8YiKSfSvy30XIKjwMPk2B0xHw,18088
+proman/frontend/index.html,sha256=I4SaB8XcU7Uolp4raJjFT8P4P2NX-xYLzzvMghpyGZ0,5710
+proman/frontend/logo.svg,sha256=AyWd-CA3wJSKFR4Ojvlf2d5W_s-iP1n63t9h9jpb3OE,73108
+py_proman-0.0.1.dist-info/licenses/LICENSE,sha256=casMLXyfHkz18dtJshhTM4cpAqqr5ACN2uXOhXQx7qA,1073
+py_proman-0.0.1.dist-info/METADATA,sha256=s0N80eFydBNmlKDgccmjmnprRbjOtfip7RWEjDFn6nM,467
+py_proman-0.0.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+py_proman-0.0.1.dist-info/entry_points.txt,sha256=Ne5snImGlGD3JXs_bwbKuob6oBLZW7saMr7MQVYNXq4,43
+py_proman-0.0.1.dist-info/top_level.txt,sha256=mDaMgtkfsFT2pQGP5jLBOeTVYEyF8qyNQGONLXCpR7A,7
+py_proman-0.0.1.dist-info/RECORD,,
