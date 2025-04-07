@@ -1,0 +1,15 @@
+git_commit_generator/__init__.py,sha256=hYzHs6dc42n3VuDDkTlCIReC36TA2GkiM3hEkVqHzr8,709
+git_commit_generator/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+git_commit_generator/cli/main.py,sha256=f-hHYkEGJdr4yudE7KijDX55pk7zgFI4W3JqZiQ40mE,21072
+git_commit_generator/config.py,sha256=2lN0eJdd3xOPzRIcJvujm0_wyd7xF_x34WCCRYSLKz0,11525
+git_commit_generator/core.py,sha256=Q5GuP3qq3kLfuV0yq3bE-01_VWWoCtvx6cceuFfNpWQ,8288
+git_commit_generator/models/.provider.json,sha256=8BLS7_njIWj8GTFLcXHn7dgw3LY0bAPB1gRBXJZh7z4,1857
+git_commit_generator/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+git_commit_generator/models/adapter.py,sha256=AMkvga1VPZj0Zac6orIclw3CeGpGMolLJziftgycM3M,1226
+git_commit_generator/models/provider.py,sha256=mnTwwqTiS-pgXvmvxXg2Mr7phiWgUuKI5fIzYoBB0FQ,7708
+git_commit_generator/validators.py,sha256=dH2r8WIgndzY_x7ZL444mtaBN0NwncJUaHCnKmnCRsU,2469
+quick_auto_git-0.1.2.dist-info/METADATA,sha256=fby6RADV4lw2ibMKa7aqxVRqJ2ZULZ1COVTXSsl1kgk,6224
+quick_auto_git-0.1.2.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+quick_auto_git-0.1.2.dist-info/entry_points.txt,sha256=vvyYzrjUP0u7SDg1CRQ-M3Z8qI_WIDnnnugRXtqkr5k,77
+quick_auto_git-0.1.2.dist-info/licenses/LICENSE,sha256=htiX7W6RbT8DV66x6uANigUYfOw9Q_x4HnZJvOOkAlo,1087
+quick_auto_git-0.1.2.dist-info/RECORD,,
