@@ -1,0 +1,17 @@
+osrs_net/__init__.py,sha256=m_xlNrryq3h_haUY0-H8WXvWanWygYlVvylG7w6Ky6w,40
+osrs_net/grandexchange.py,sha256=d7nklQLSJKUT_9oVr33ZSjQIxjg1hbWuAexjHFyvKn0,1418
+osrs_net/item.py,sha256=QoldAgC1Tjir9hd3nzK0qEzgxnA4FH5Z0xkTypAPWJ0,1163
+osrs_net/hiscores/__init__.py,sha256=yMp6-P76TscQgHbbzth1lUO8uQtuqXSpE0gh7Ac5A5s,35
+osrs_net/hiscores/account.py,sha256=aIvpT-DjiweXrWe8wNsiJKwoEv5hiOieRA86v191nMQ,882
+osrs_net/hiscores/lookup.py,sha256=0TIY6kMOGMCYkyN7TvIDtbmGPf9coeY4IKBcjJoWMjk,767
+osrs_net/hiscores/skill.py,sha256=_tMZhRJ9E042UxX5rgLk-eI2ib3mKCbZEQcn3vM-6Mg,1227
+osrs_net/hiscores/stat.py,sha256=4qshND8dLuLKnkyJP-zAbVwJewnfOm4bljm0-E94rEA,174
+osrs_net/resources/items.json,sha256=FgAzZ7iBCtiVPz6QJOAKVZo-_y4xrTZc3hxcg66W7u0,116919
+osrs_net/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+osrs_net/util/file_io.py,sha256=C6IWoc0lduMyboH0UHuOInwUKH5IPmKaRDjacA2BU6Q,906
+osrs_net/util/item_scrape.py,sha256=dEQNWeOPHyB7sUkZZsslvRB1NnZFCVf-hZHX7ViHzPs,1173
+osrs_net-0.2.0.dist-info/licenses/LICENSE,sha256=KvrBpjUewa9LIXOkzjZj_4oWQYX9eE1ZSJ7f2SOaxbM,1099
+osrs_net-0.2.0.dist-info/METADATA,sha256=cJ7U5EhvCDy1m4SgRRrkm5N-UWIHyqtC_vbiZdVbT_w,546
+osrs_net-0.2.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+osrs_net-0.2.0.dist-info/top_level.txt,sha256=9b0afzRQM9cjiew4A60b5ovT1CfRf7PDPeUWunkYbYM,9
+osrs_net-0.2.0.dist-info/RECORD,,
