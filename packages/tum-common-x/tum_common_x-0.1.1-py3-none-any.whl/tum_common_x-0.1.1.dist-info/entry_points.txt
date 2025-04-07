@@ -1,0 +1,2 @@
+[console_scripts]
+django-base-tool = my_django_base.cli:main

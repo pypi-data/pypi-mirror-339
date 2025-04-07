@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: tum-common-x
+Version: 0.1.1
+Summary: A reusable tum-common-x application base
+Author: Burak Şen
+Author-email: burak.sen@tum.de
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+License-File: LICENCE
+Requires-Dist: Django>=3.2
+Requires-Dist: djangorestframework>=3.12.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
