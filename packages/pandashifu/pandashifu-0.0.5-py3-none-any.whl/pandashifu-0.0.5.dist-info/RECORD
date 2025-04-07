@@ -1,0 +1,16 @@
+pandashifu/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pandashifu/about.py,sha256=ZzqA9TJTuHCAAVnx9eu22OnMKq8ZqN3RETshLJgBrg4,2978
+pandashifu/ingredients.py,sha256=TeECtWZxn4-V2xNJSMqxGpnpEK1VWIWM-MHFfA2Eonw,6739
+pandashifu/jade.py,sha256=fvA41eNojSy-TxeRQQoyjAOOcgBoWHz4a6LlUO_cPnI,3725
+pandashifu/master.py,sha256=rZuMMXEK0iezTpNUy_XomZPK7JTTQNrBy9Ldk0V4Wmk,175603
+pandashifu/plan.py,sha256=fmQ4P1mCEtRFuir5sk-y-jNY7a4pH3ugyxF-Gl5s_YE,11603
+pandashifu/scroll.py,sha256=U1KZKPV5v4hlXRflcluwDsVXYs_QaJ1m5_Qfl57nGcI,29646
+pandashifu/styles.py,sha256=Z9rZOivq_X6oo7cg2twF8P_f5tYTb_Dj1JdlMCwEyqc,2040
+pandashifu/assets/ag-grid-community.min.js,sha256=t4eDYf1VvXVwEWtfrlvY7kc4AxRxLJgkNE2xeDf-niI,1721613
+pandashifu/assets/ag-grid.min.css,sha256=2EdZFCU4dZVTmixQGfH7ysXHcpfElIQdQkSr342_Cv4,161691
+pandashifu/assets/bootstrap.min.css,sha256=LA89z-k9fjgMKQ_kq4OO2Mrf8VltYml_VES-Rg0fh20,144877
+pandashifu/assets/plotly-3.0.1.min.js,sha256=oy6Be7Eh6eiQFs5M7oXuPxxm9qbJXEtTpfSI93dW16Q,4653932
+pandashifu-0.0.5.dist-info/METADATA,sha256=GZuvEVDyNgYdOrw77NhJQokhn_dOctQafcKsLyWfFxc,3979
+pandashifu-0.0.5.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+pandashifu-0.0.5.dist-info/top_level.txt,sha256=t0H6UG2qdmFXNbZr9gg4scXxdUm5eMYa5-Y2SU_WyQY,11
+pandashifu-0.0.5.dist-info/RECORD,,
