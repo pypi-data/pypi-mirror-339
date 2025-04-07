@@ -1,0 +1,11 @@
+numpy
+matplotlib
+seaborn
+pandas
+openpyxl
+odfpy
+scipy
+streamlit
+toml
+# --extra-index-url https://test.pypi.org/simple
+owlplanner >= 2025.04.07
