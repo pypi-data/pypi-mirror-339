@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: profidata
+Version: 0.1
+Author: ark4dev
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: polars
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-dist

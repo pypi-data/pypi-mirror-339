@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+profidata/__init__.py
+profidata/main.py
+profidata.egg-info/PKG-INFO
+profidata.egg-info/SOURCES.txt
+profidata.egg-info/dependency_links.txt
+profidata.egg-info/requires.txt
+profidata.egg-info/top_level.txt
