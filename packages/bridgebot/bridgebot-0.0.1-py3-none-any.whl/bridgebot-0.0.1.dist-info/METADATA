@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: bridgebot
+Version: 0.0.1
+Summary: bridgebot is a python package for building floating bridge bot!
+Home-page: https://github.com/papillonbee/bridgebot
+Author: Papan Yongmalwong
+Author-email: papillonbee@gmail.com
+Keywords: reinforcement learning,floating bridge,singaporean bridge
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Games/Entertainment
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: gymnasium==1.0.0
+Requires-Dist: bridgepy==0.0.13
+
+# bridgebot
+bridgebot is a Python package for building floating bridge bot!
+
+[Visit repository on Github](https://github.com/papillonbee/bridgebot)
+
+## Dependencies
+1. [`gym`](https://github.com/Farama-Foundation/Gymnasium)
+2. [`bridgepy`](https://github.com/papillonbee/bridgepy)
