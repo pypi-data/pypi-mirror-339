@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/pytics/__init__.py
+src/pytics/profiler.py
+src/pytics/visualizations.py
+src/pytics.egg-info/PKG-INFO
+src/pytics.egg-info/SOURCES.txt
+src/pytics.egg-info/dependency_links.txt
+src/pytics.egg-info/requires.txt
+src/pytics.egg-info/top_level.txt
+src/pytics/templates/base_template.html.j2
+src/pytics/templates/compare_report_template.html.j2
+src/pytics/templates/report_template.html.j2
+tests/test_profiler.py
