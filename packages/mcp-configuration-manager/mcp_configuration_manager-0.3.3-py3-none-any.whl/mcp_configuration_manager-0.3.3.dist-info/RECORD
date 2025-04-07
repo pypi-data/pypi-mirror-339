@@ -1,0 +1,10 @@
+mcp_configuration_manager-0.3.3.dist-info/licenses/LICENSE,sha256=mMVU0PIlPzeLZbycwtsY8gM-QybIElnbeMDMsjqqckU,1070
+windsurf_mcp_config_manager/__init__.py,sha256=QtH4j30Ym0QMXXwas0YNNkE3IG2wa-rbnbRINFuhCIE,153
+windsurf_mcp_config_manager/api.py,sha256=CHkGgmSj-zADHjKT8vmhq41_9Ib-6PDulakbhgaKkGk,10107
+windsurf_mcp_config_manager/cli.py,sha256=xrvZWaeOwYB8B3Ixpq824uUVcfqmCUUQNFs6oSyQtmk,17179
+windsurf_mcp_config_manager/ui_server.py,sha256=RMAm9nzoJXw9HZt1tVOLvcGk5tMBpSunOwkWNIpcckE,17385
+mcp_configuration_manager-0.3.3.dist-info/METADATA,sha256=o6UemOUBvc-OckmSujHjiS_I0EEAzgXoJG8CvaGv0tc,5122
+mcp_configuration_manager-0.3.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+mcp_configuration_manager-0.3.3.dist-info/entry_points.txt,sha256=f7FNBotDqbIyZ690nTWuPll077KJoSmdBNhpIuItiA4,61
+mcp_configuration_manager-0.3.3.dist-info/top_level.txt,sha256=DRgqPmmtATdbw4ZbuuuZ9Vz9KogJuOL5Q883D38F8Xo,28
+mcp_configuration_manager-0.3.3.dist-info/RECORD,,
