@@ -1,0 +1,2 @@
+[console_scripts]
+litepolis-cli = litepolis.core:main

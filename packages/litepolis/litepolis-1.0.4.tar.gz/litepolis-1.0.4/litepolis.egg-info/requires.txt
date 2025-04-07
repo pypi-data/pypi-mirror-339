@@ -1,0 +1,10 @@
+fastapi
+ray[serve]
+GitPython
+click
+
+[demo]
+litepolis-router-database
+litepolis-router-example
+litepolis-middleware-example
+litepolis-ui-example
