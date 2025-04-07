@@ -1,0 +1,3 @@
+[console_scripts]
+age_estimation_client=phonexia_age_estimation_client:main
+
