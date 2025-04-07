@@ -1,0 +1,11 @@
+phreeqcrm.libs/libstdc++-0530927c.so.6.0.32,sha256=h2p2et0WB0CYcMcUEViWjYXOe8uir-_tHJJZui-6GRc,3537509
+phreeqcrm.libs/libgomp-2a14883a.so.1.0.0,sha256=pqIb98O-4cFXScdgoqpu-aTrZD8RqA62TRZhUKOWMc8,353201
+phreeqcrm.libs/libgcc_s-1257a076.so.1,sha256=wbXWo2Qh33OuE7spB8-mVbZoEiUkvZu6ZH78pUNr9X8,168321
+phreeqcrm-0.0.16.dist-info/WHEEL,sha256=dzrh7Vw4jlB-YEvXxXwOOpXiCRmJS0l_5g7j-tFM0Bs,115
+phreeqcrm-0.0.16.dist-info/RECORD,,
+phreeqcrm-0.0.16.dist-info/METADATA,sha256=HE0VbzTsf6VnuBjaPKe896mUvkw537QrFDT_my31VPA,2130
+phreeqcrm-0.0.16.dist-info/licenses/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+phreeqcrm/_phreeqcrm.cpython-310-i386-linux-gnu.so,sha256=fc7b74of5gUYrcFwGaeuKl1pAGa0TabHAZ24v2M0EWE,6462857
+phreeqcrm/yamlphreeqcrm.py,sha256=Z6Wfm6N1Ln8H0RBxkxM6xfdBfzNYNe4iKhRUST_4RJA,77839
+phreeqcrm/__init__.py,sha256=U1vVjJnO8vvyOuIIgT04QmkJiYzMYTPPC_51Hw0_enI,326
+phreeqcrm/phreeqcrm.py,sha256=33qNdW5_RSQZiWswIrWfX3As34L3pB4W19WlYZ9XKFc,201817
