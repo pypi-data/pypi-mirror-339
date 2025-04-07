@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: digup
+Version: 0.0.1
+Summary: Your cli buddy to dig up knowledge from legacy code
+Author: Alexandre Petit
+License-Expression: MIT
+License-File: LICENSE.md
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+
+```
+python -m venv ../venvs/archibald312
+source ../venvs/archibald312
+python -m ensurepip --upgrade
+python -m pip install setuptools --upgrade
+python -m pip install -r requirements.txt
+```
