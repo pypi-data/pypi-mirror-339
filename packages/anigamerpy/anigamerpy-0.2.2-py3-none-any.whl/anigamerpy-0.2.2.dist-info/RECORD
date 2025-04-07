@@ -1,0 +1,12 @@
+anigamerpy/__init__.py,sha256=EZpAQuOl4pNF7M7K0kW4DRyDLCidmpf6sAOreLrbLYo,49
+anigamerpy/anime.py,sha256=ZWwlfSc_lGbPegExJYXxqzIt3k26Zgdr46dnzVrgRMs,1096
+anigamerpy/response/__init__.py,sha256=3I7MsvMJLvZWrysKOt4tk09yLUiEEN_EfWhz82mh0Lk,177
+anigamerpy/response/allanime.py,sha256=Xk4mCqaBbQqW627saUYtOunT0IVmRF-gyM3tWtoYPz8,4908
+anigamerpy/response/error.py,sha256=gkuPQEsL0p-jnxqGrY1zuxxqGv6NPki-1kBO03Srxuo,507
+anigamerpy/response/newanime.py,sha256=09bMTfPH_EN1HoXnO6qifryZK34hMl-bKtEZRXVDSss,1871
+anigamerpy/response/searchanime.py,sha256=ZxWb0YAJLz_RmTip8YtK-Cd9RHORnsTbStphjfMDvPk,2851
+anigamerpy-0.2.2.dist-info/LICENSE,sha256=mRC7CwFuvOsTeol9-y915qUPh9sOcIG3daJ6BfU_hV0,1086
+anigamerpy-0.2.2.dist-info/METADATA,sha256=zbh_K3IECPHFjj3T4yTs0aY5Q6VyxA4Bc7KUxdmKkQw,3270
+anigamerpy-0.2.2.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+anigamerpy-0.2.2.dist-info/top_level.txt,sha256=n5xsPUjziHYHI5F8MsY8Od71wFS0SyQeNqRrwTgAVSI,11
+anigamerpy-0.2.2.dist-info/RECORD,,
