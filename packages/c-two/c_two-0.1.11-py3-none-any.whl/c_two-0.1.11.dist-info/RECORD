@@ -1,0 +1,15 @@
+c_two/__init__.py,sha256=MKTYjHWDy3q_cA6IRoeQCx1R3aEyhkkOAopNBfwHs_k,181
+c_two/compo/__init__.py,sha256=dv6HSoTkYcOVQ9GXzP3YVYdhhyLSW_Ly1HYMlP4MJLE,74
+c_two/compo/grpc_server.py,sha256=KcDrnT2ytZcXIf0GkdbIfUIWhCGXVe6UXh52nsxw3fA,1529
+c_two/compo/runtime_connect.py,sha256=pUaz11Er6iF7qfWfx2hxlcA0KmMfpz2QNXbfp1Xw3v0,5121
+c_two/crm/__init__.py,sha256=gcUsO3xNLEd74HJ-bxhh50-_C2I3wDR77LMCrRdKFDo,26
+c_two/crm/meta.py,sha256=e4GtlxUOJjpK_-6Tce7AaAEBYZdX6uZoQhV18FRAXO0,3457
+c_two/message/__init__.py,sha256=p3m9IHmg6sPExSXwwX6oUgfWqvA8Jm0OVU0xaEFC8jY,184
+c_two/message/client.py,sha256=lP4P-o7_Z3w6L2k4WaFx9hHgSofIuxJXXVNUCIFKhFQ,2700
+c_two/message/globals.py,sha256=O_AEG7m_B5lWKEmzu4U1ePKMpVaQ2uR9W4VEG9juEVg,217
+c_two/message/server.py,sha256=pyssLMwg1VpL3y5jSR2DjGl8zNdNDu0nohSGBJOdjnA,3208
+c_two/message/transferable.py,sha256=hoJvNwTyWv-uxNhaXR9OWV8lvdnoOY8SMegoM8FqTBo,13506
+c_two-0.1.11.dist-info/LICENSE,sha256=Z3ztcWEfJfFAc1ewKPtCsBX90cCc27d5ezqszUPAnCQ,1074
+c_two-0.1.11.dist-info/METADATA,sha256=-BY7djBHqEBwnN7lLmA4mrlRVFvk-6OnpfTx10_qaKQ,1335
+c_two-0.1.11.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+c_two-0.1.11.dist-info/RECORD,,
