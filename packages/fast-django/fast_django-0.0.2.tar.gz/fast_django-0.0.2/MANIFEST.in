@@ -1,0 +1,4 @@
+# This file was generated from template, any changes to this file will be lost.
+recursive-include fast_django *
+recursive-exclude **/__pycache__ *
+recursive-exclude tests *
