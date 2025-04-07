@@ -1,0 +1,6 @@
+- `claudebook mcp <runbook>` should have a similar CLI to `claude mcp` but operates on the runbook
+- Figure out (non-MCP) tools and how to configure them
+- Add argument support (e.g. args for the claudebook itself)
+- Add self-improvement commands / other "meta" commands
+
+

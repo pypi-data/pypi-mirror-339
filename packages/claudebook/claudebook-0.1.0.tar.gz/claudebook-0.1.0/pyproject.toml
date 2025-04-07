@@ -1,0 +1,71 @@
+[project]
+name = "claudebook"
+version = "0.1.0"
+description = "Claudebook"
+readme = "README.md"
+authors = [
+    { name = "Joshua Cannon", email = "joshdcannon@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "cyclopts>=3.12.0",
+    "pyyaml>=6.0.2",
+]
+
+[project.scripts]
+claudebook = "claudebook:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "lefthook>=1.11.6",
+    "pyright>=1.1.398",
+]
+fmt = [
+    "ruff>=0.11.4",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint]
+preview = true
+explicit-preview-rules = true
+select = ["ALL"]
+# NB: Copied from `attrs`: https://github.com/python-attrs/attrs/blob/3dca08ce5bbe673d7df25f44f3dda92505d1043d/pyproject.toml#L199
+ignore = [
+  "A001",
+  "A002",
+  "A003",
+  "ANN",
+  "ARG",
+  "C901",
+  "COM",
+  "D",
+  "E501",
+  "ERA001",
+  "FBT",
+  "FIX",
+  "ISC001",
+  "N",
+  "PD",
+  "PLR0912",
+  "PLR0913",
+  "PLR0915",
+  "PLR2004",
+  "PLW0603",
+  "S101",
+  "S307",
+  "SLF001",
+  "TC",
+  "TD",
+  "TRY301",
+  "UP031",
+]
