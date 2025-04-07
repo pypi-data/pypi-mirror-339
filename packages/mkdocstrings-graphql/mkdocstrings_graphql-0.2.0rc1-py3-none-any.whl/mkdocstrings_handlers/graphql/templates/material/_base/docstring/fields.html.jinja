@@ -1,0 +1,38 @@
+{#- Template for "Fields" sections in docstrings.
+
+Renders a list of documents fields.
+
+Context:
+    section (DocstringSectionFields): The section to rend}.
+-#}
+
+{% block logs scoped %}
+    {#- Logging block. -#}
+    {{ log.debug("Rendering fields section.") }}
+{% endblock logs %}
+
+{% block table_style scoped %}
+    <p><span class="doc-section-title">{{ section.title or "Fields:" }}</span></p>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for field in section.value %}
+                <tr class="doc-section-item">
+                    <td>{{ field.name }}</td>
+                    <td>
+                        {% with expression = field.annotation, backlink_type = "used-by" %}
+                            <code>{% include "expression.html.jinja" with context %}</code>
+                        {% endwith %}
+                    </td>
+                    <td>{{ field.description }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock table_style %}
