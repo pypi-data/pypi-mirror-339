@@ -1,0 +1,2 @@
+[console_scripts]
+sprintcore = sprintcore.main:main
