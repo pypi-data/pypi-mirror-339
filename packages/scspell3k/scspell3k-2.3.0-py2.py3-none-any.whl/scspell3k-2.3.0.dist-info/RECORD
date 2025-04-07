@@ -1,0 +1,12 @@
+scspell/__init__.py,sha256=25NQDPlmdQqOZFpn4e5c7JVkFgTSrSLd2-xggYhVX1E,34993
+scspell/__main__.py,sha256=qFGosm6j7WmXu0i_WJF-_TAlUngq67ZgwFS2lU74wB4,81
+scspell/_corpus.py,sha256=ormaTOPZINt_buBWEFokGpx94tGY2fyiwsngyYLOFdM,33790
+scspell/_portable.py,sha256=Gp7p4GEzWhVTFsG-0GO5zZK4x3KGyEfNt0jQyXEbmNk,2104
+scspell/_util.py,sha256=YohcXTEry595MkoPxDeK7tTUkGmdAC75H8dLi-PaDD8,2900
+scspell/data/dictionary.txt,sha256=oEMprTcWSstOr7WAXL-bOmBk5VLMKQpESN44qEW1hjg,856605
+scspell3k-2.3.0.dist-info/licenses/COPYING.txt,sha256=wNAm4Buxf1sLY-DDA2bXy2o8mf5KMGqtH_ObaSVdpgs,18002
+scspell3k-2.3.0.dist-info/METADATA,sha256=EbHOFnfln1_UaiaEq1oDdPH1OrbHAwMBOTcbCkTV4Rs,12068
+scspell3k-2.3.0.dist-info/WHEEL,sha256=MAQBAzGbXNI3bUmkDsiV_duv8i-gcdnLzw7cfUFwqhU,109
+scspell3k-2.3.0.dist-info/entry_points.txt,sha256=JdvkrMWlnGOowAxz8qymn6o8_xNbL-7WtV38yxAwNiQ,41
+scspell3k-2.3.0.dist-info/top_level.txt,sha256=1evA8Iznfq14YuJnlTwQFnR9feDihxPDZoi2_7tWs1U,8
+scspell3k-2.3.0.dist-info/RECORD,,
