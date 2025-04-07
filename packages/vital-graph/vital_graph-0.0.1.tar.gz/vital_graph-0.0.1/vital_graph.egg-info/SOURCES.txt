@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+vital_graph.egg-info/PKG-INFO
+vital_graph.egg-info/SOURCES.txt
+vital_graph.egg-info/dependency_links.txt
+vital_graph.egg-info/requires.txt
+vital_graph.egg-info/top_level.txt
+vitalgraph/__init__.py
+vitalgraph/store/__init__.py
