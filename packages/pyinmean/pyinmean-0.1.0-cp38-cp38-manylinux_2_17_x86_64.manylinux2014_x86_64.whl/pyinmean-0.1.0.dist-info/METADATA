@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: pyinmean
+Version: 0.1.0
+Summary: Python bindings for IMA rhythm analysis
+Author: Efraim Dahl, Peter van Kranenburg
+Author-email: Efraim Dahl <efraimcdahl@gmail.com>
+Maintainer-email: Efraim Dahl <efraimcdahl@gmail.com>
+License: GNU General Public License v3.0
+Project-URL: Homepage, https://github.com/efraimdahl/pyinmean
+Project-URL: Repository, https://github.com/efraimdahl/pyinmean
+Project-URL: Issues, https://github.com/efraimdahl/pyinmean/issues
+Keywords: IMA,rhythm,music,symbolic music,inner metric weight,spectral weight
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pyinmean
+Python - **In**er**Me**tric**An**alysis
+Python wrapper for c++ implementation of inner metric weight analysis for symbolic music.
+
+Based on [imacpp](https://github.com/pvankranenburg/imacpp/tree/master) a
+C++ library to perform Inner Metric Analysis [1] on a series on onsets. By Peter van Kranenburg and Chris Dyer.
+
+
+# Usage
+
+```python
+import pyinmean
+
+
+#For inner metric weight
+print(pyinmean.get_normalized_ima([0,1,4,5,6,7,10,14,20],False))
+#For spectral weight 
+print(pyinmean.get_normalized_ima([0,1,4,5,6,7,10,14,20],True))
+
+```
+
+[1] Nestke, A. and Noll, T. (2001). Inner Metric Analysis. In Haluska, J. (ed.), Music and Mathematics, pp. 91–111. Bratislava: Tatra Mountains Publications.
