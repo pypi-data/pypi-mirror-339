@@ -1,0 +1,12 @@
+accelerate
+gradio==5.23.2
+json-repair
+loguru
+mdpd
+pandas
+python-dotenv
+requests
+setuptools
+tabulate
+types-requests
+vllm==v0.8.2
