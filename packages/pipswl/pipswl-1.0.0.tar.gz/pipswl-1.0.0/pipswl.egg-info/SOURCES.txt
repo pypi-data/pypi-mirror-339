@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+pipswl/__init__.py
+pipswl/downloader.py
+pipswl.egg-info/PKG-INFO
+pipswl.egg-info/SOURCES.txt
+pipswl.egg-info/dependency_links.txt
+pipswl.egg-info/requires.txt
+pipswl.egg-info/top_level.txt
