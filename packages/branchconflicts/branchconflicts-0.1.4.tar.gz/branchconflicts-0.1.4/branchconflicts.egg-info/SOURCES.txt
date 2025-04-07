@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+branchconflicts/Branch.py
+branchconflicts/Commit.py
+branchconflicts/__init__.py
+branchconflicts/main.py
+branchconflicts.egg-info/PKG-INFO
+branchconflicts.egg-info/SOURCES.txt
+branchconflicts.egg-info/dependency_links.txt
+branchconflicts.egg-info/requires.txt
+branchconflicts.egg-info/top_level.txt
+tests/test_branchconflicts.py

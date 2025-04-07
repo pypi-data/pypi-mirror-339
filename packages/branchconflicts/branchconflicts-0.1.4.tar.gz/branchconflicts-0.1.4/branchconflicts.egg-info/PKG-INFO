@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: branchconflicts
+Version: 0.1.4
+Summary: Find conflicted files between two branches.
+Author: 39matt
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
