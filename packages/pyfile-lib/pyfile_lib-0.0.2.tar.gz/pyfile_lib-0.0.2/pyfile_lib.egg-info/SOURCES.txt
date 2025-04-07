@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pyfile/__init__.py
+pyfile/manager.py
+pyfile_lib.egg-info/PKG-INFO
+pyfile_lib.egg-info/SOURCES.txt
+pyfile_lib.egg-info/dependency_links.txt
+pyfile_lib.egg-info/requires.txt
+pyfile_lib.egg-info/top_level.txt
