@@ -1,0 +1,71 @@
+# pyproject.toml
+
+[build-system]
+requires = [
+    "setuptools>=45",
+    "wheel",
+    "setuptools_scm[toml]>=6.2",
+]
+
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ffrec"
+dynamic = ["version"]
+authors = [
+    {name = "Jeff Moe", email = "moe@spacecruft.org"},
+]
+description = "Records the screen, using Python"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = [
+    "ffmpeg",
+    "record",
+    "screencap",
+]
+license = {text = "Apache 2.0"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Environment :: GPU",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Graphics :: Capture :: Screen Capture",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Multimedia :: Video :: Capture",
+]
+
+
+dependencies = [
+    "asyncio",
+    "python-ffmpeg",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "ruff",
+    "setuptools-scm",
+    "twine",
+]
+
+[project.urls]
+Homepage = "https://spacecruft.org/deepcrayon/ffrec"
+Documentation = "https://spacecruft.org/deepcrayon/ffrec"
+Repository = "https://spacecruft.org/deepcrayon/ffrec"
+Issues = "https://spacecruft.org/deepcrayon/ffrec"
+Changelog = "https://spacecruft.org/deepcrayon/ffrec/raw/branch/main/CHANGELOG.txt"
+
+[tool.setuptools.packages.find]
+namespaces = true
+where = ["src"]
+
+[tool.setuptools_scm]
+write_to = "src/ffrec/_version.py"
+
+[project.scripts]
+ffrec = "ffrec.main:main_wrapper"

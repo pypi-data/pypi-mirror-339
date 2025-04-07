@@ -1,0 +1,8 @@
+asyncio
+python-ffmpeg
+
+[dev]
+black
+ruff
+setuptools-scm
+twine

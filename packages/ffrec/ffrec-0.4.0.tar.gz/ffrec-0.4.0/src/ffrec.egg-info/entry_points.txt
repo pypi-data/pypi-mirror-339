@@ -1,0 +1,2 @@
+[console_scripts]
+ffrec = ffrec.main:main_wrapper
