@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: HelpingAI-inferno
+Version: 0.1.0
+Summary: A professional, production-ready inference server for running any AI model with universal model compatibility and multi-hardware support
+Home-page: https://github.com/HelpingAI/inferno
+Author: HelpingAI
+Author-email: info@helpingai.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/plain
+Provides-Extra: tpu
+Provides-Extra: gguf
+License-File: LICENSE
+
+Inferno is a high-performance inference server that can run any AI model from Hugging Face, local files, or GGUF format. It features automatic memory management, hardware detection, and supports CPU, GPU, TPU, and Apple Silicon platforms.
