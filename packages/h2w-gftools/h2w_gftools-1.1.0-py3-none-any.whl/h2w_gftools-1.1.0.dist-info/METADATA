@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: h2w-gftools
+Version: 1.1.0
+Summary: Gurufocus.com Python API Tools
+Author: Harvey Wargo
+Project-URL: Homepage, https://github.com/harveywargo2/h2w-gftools
+Keywords: GuruFocus,Stock Data,Stock API
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pandas
+
+# h2w-gftools
+Gurufocus.com Python API Tools
