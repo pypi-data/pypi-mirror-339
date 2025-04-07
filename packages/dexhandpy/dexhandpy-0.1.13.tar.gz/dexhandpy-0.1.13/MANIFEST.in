@@ -1,0 +1,3 @@
+include README.md
+recursive-include fdexhand/include *.h
+include _ext/libFourierDexHand.so
