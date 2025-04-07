@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+py_magister/__init__.py
+py_magister/access_manager.py
+py_magister/apps.py
+py_magister/models.py
+py_magister.egg-info/PKG-INFO
+py_magister.egg-info/SOURCES.txt
+py_magister.egg-info/dependency_links.txt
+py_magister.egg-info/requires.txt
+py_magister.egg-info/top_level.txt
+tests/test_settings.py

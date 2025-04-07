@@ -1,0 +1,12 @@
+django
+
+[dev]
+build
+twine
+pytest
+pytest-django
+pre-commit
+black
+flake8
+mypy
+django-stubs
