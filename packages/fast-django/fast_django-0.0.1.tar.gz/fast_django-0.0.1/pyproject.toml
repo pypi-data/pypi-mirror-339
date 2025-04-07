@@ -1,0 +1,96 @@
+# This file was generated from template, any changes to this file will be lost.
+[build-system]
+requires = ["setuptools>=60.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "fast_django"
+version = "0.0.1"
+
+[[authors]]
+name = "sleeping-in-bed"
+email = "nyanyanyaworld@gmail.com"
+
+[[authors]]
+name = "sleeping-in-bed"
+email = "nyanyanyaworld@gmail.com"
+
+description = ""
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "channels_redis",
+    "djangorestframework",
+    "psycopg2-binary",
+    "types-psycopg2"
+]
+
+[project.scripts]
+
+[project.optional-dependencies]
+prod = [
+    "channels_redis",
+    "djangorestframework",
+    "psycopg2-binary",
+    "types-psycopg2"
+]
+dev = [
+    "channels_redis",
+    "djangorestframework",
+    "psycopg2-binary",
+    "types-psycopg2",
+    "build",
+    "twine",
+    "tox",
+    "pytest",
+    "coverage",
+    "sphinx",
+    "ruff",
+    "mypy",
+    "python-dotenv",
+    "jinja2"
+]
+
+[tool.setuptools]
+packages = ["fast_django"]
+include-package-data = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = ""
+testpaths = [
+    "tests"
+]
+
+[tool.ruff]
+extend-exclude = [
+    "fast_django/resources",
+    "tests/resources",
+    "tests/tmp",
+]
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+
+[tool.mypy]
+exclude = [
+    "fast_django/resources",
+    "tests/resources",
+    'tests/tmp',
+]

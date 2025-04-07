@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: fast_django
+Version: 0.0.1
+License-File: LICENSE
+Provides-Extra: prod
+Requires-Dist: channels_redis; extra == "prod"
+Requires-Dist: djangorestframework; extra == "prod"
+Requires-Dist: psycopg2-binary; extra == "prod"
+Requires-Dist: types-psycopg2; extra == "prod"
+Provides-Extra: dev
+Requires-Dist: channels_redis; extra == "dev"
+Requires-Dist: djangorestframework; extra == "dev"
+Requires-Dist: psycopg2-binary; extra == "dev"
+Requires-Dist: types-psycopg2; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: tox; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: sphinx; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: python-dotenv; extra == "dev"
+Requires-Dist: jinja2; extra == "dev"
+Dynamic: license-file

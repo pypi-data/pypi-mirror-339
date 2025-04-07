@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+fast_django/__init__.py
+fast_django/fast_django.py
+fast_django/settings_modifier.py
+fast_django/templates.py
+fast_django/utils.py
+fast_django.egg-info/PKG-INFO
+fast_django.egg-info/SOURCES.txt
+fast_django.egg-info/dependency_links.txt
+fast_django.egg-info/requires.txt
+fast_django.egg-info/top_level.txt
+fast_django/resources/base.html
