@@ -1,0 +1,11 @@
+[project]
+name = "sssabcd123"
+version = "0.2.0"
+description = "A simple package for SSS subject"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+readme = "README.md"
+requires-python = ">=3.7"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
