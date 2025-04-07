@@ -1,0 +1,9 @@
+pandas
+numpy
+openpyxl
+xlsxwriter
+jinja2
+rich
+
+[plotting]
+matplotlib
