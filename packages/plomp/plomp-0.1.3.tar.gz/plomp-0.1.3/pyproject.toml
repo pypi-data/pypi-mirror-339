@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plomp"
+version = "0.1.3"
+description = "Plomp Python Module"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Michael Giba", email = "michaelgiba@gmail.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "typeguard",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/michaelgiba/plomp"
+"Bug Tracker" = "https://github.com/michaelgiba/plomp/issues"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.12",
+    "ruff>=0.11.3",
+    "mypy>=0.950",
+]
+
+[tool.setuptools]
+include-package-data = true
+package-data = {"plomp" = ["resources/**/*"]}
+exclude-package-data = {"plomp" = ["**/node_modules", "**/frontend", "**/ts", "**/*.ts"]}
+packages = ["plomp"]
+
+
+[tool.poetry]
+name = "plomp"
+version = "0.1.3"
+description = "Plomp Python Module"
+authors = ["Michael Giba <michaelgiba@gmail.com>"]
+packages = [{include = "plomp"}]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+typeguard = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=6.0"
+pytest-cov = ">=2.12"
+ruff = ">=0.11.3"
+mypy = ">=0.950"
+
+[tool.poetry.build]
+script = "build_scripts/compile_frontend.py"
