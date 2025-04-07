@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: pyfile_lib
+Version: 0.0.3
+Summary: This is the simplest module for quick work with files.
+Author: the_space_prowler
+Author-email: sokolovgames42@gmail.com
+Keywords: pyfile file pyfile_lib
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
