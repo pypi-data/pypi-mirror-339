@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "speculative_decoding_metrics"
+version = "0.1.3"
+description = "A package that evaluates and plots results to test Throughput based on number of draft tokens"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+  { name="Mitul Garg", email="mitulgarg3@gmail.com" }
+]
+dependencies = [
+  "huggingface-hub==0.30.1",
+  "sentence-transformers==3.3.1",
+  "rouge-score==0.1.2",
+  "matplotlib==3.10.1",
+  "numpy==2.2.4",
+  "transformers==4.48.0",
+  "mlx-lm==0.22.3",
+  "torch==2.6.0",
+  "scikit-learn==1.6.1"
+]
+
+[project.urls]
+Homepage = "https://github.com/mitulgarg/Speculative-Decoding-DraftToken-Analysis"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
