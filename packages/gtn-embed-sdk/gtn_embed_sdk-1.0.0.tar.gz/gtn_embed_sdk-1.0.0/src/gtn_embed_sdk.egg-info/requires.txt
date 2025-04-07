@@ -1,0 +1,15 @@
+requests
+cryptography
+PyJWT
+websocket-client
+toml
+
+[docs]
+
+[optional]
+python-socks
+wsaccel
+
+[test]
+pytest
+websockets
