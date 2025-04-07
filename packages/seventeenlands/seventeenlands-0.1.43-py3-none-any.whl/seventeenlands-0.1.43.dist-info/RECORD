@@ -1,0 +1,11 @@
+seventeenlands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+seventeenlands/api_client.py,sha256=NkJ8kpr9krOFV_TOjq-7wseO_Y8Gqf-AvmlJmRch6UA,5907
+seventeenlands/logging_utils.py,sha256=kZmLA19zegjBKpwAPjzkgXCqAU87mAZK3xIPsf_IL90,1040
+seventeenlands/mtga_follower.py,sha256=vIoHbFvvcjepqpxULSVZ0_XUeMR6x3RV54BfwgdLf3M,58982
+seventeenlands/retry_utils.py,sha256=pyx2eXe-LD7BBUVR_KRUWDaQH0rAFEhb33IiCZoAWsI,2301
+seventeenlands-0.1.43.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+seventeenlands-0.1.43.dist-info/METADATA,sha256=uA8L8ZfVnseQ-1e2vEOAS6sIm_fcxIyuMtP6ixapeiM,1269
+seventeenlands-0.1.43.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+seventeenlands-0.1.43.dist-info/entry_points.txt,sha256=n0PKcRPLAMrlYiUIdCGFw4tPbK9RnvypBRUTk3ccPeQ,69
+seventeenlands-0.1.43.dist-info/top_level.txt,sha256=LYQXDgJuP3_bO1xvIYdqi-1G1VK63Xk6lNRMGQrDgJc,15
+seventeenlands-0.1.43.dist-info/RECORD,,
