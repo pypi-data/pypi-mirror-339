@@ -1,0 +1,45 @@
+# Do not edit manually!
+# Changes here will be overwritten by copier.
+# https://copier.readthedocs.io/
+_commit: 6fcd5f7
+_src_path: git+https://codeberg.org/slidge/legacy-module-template
+authors:
+-   email: nicoco@nicoco.fr
+    name: Nicolas Cedilnik
+ci_id: 14070
+container_build_files:
+- uv.lock
+- pyproject.toml
+container_build_native: false
+container_builder_deps:
+- git
+- make
+container_builder_deps_backports: []
+container_debian_version: bookworm
+container_dev_custom_hot_reload: ''
+container_dev_extra_lines: ''
+container_python_version: '3.11'
+container_requires_rustup: false
+container_runtime_deps: []
+custom_build_system: ''
+custom_readme_head: ''
+custom_readme_tail: ''
+dependencies:
+- steamio>=1.1,<2
+- slidge>=0.2.0a3,<0.3
+dev_dependencies: []
+intersphinx_mappings: []
+lint_excludes: []
+mypy_ignores: []
+native_builds: false
+pre_commit_custom_hooks: ''
+project_name: sleamdge
+requires_lottie: false
+silo:
+    lib:
+        name: steamio
+        url: https://steam-py.github.io/docs/latest/
+    name: Steam
+    url: https://steamcommunity.com/
+uv_sources: []
+wheels: false
