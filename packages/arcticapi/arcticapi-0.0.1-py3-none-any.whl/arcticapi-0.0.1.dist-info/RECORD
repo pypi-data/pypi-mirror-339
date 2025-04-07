@@ -1,0 +1,10 @@
+arcticapi/__init__.py,sha256=7tzQiYXrDPSG-5shuI8wJPqfOPzP6aSZoFPiaBXw-14,44
+arcticapi/arctic.py,sha256=UWxTiwkRSpYgnETRc-vqp2-ySXpMM4JVb-2STJH6y4U,7445
+arcticapi/const.py,sha256=HImJQRR3NCp4hkSY7cdGUPeIPXhTR2HcV94dCUyuKSY,90
+arcticapi/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arcticapi/utils.py,sha256=w8_5q1GtmJRwQNsiCZv1irvw2BrfWt_tzQmXLznTxHE,191
+arcticapi-0.0.1.dist-info/licenses/LICENSE,sha256=O2ZAkTj3Zp7ETq4Nc-6qGHHvvqrk1VAm7rsLn2k0Rvs,1070
+arcticapi-0.0.1.dist-info/METADATA,sha256=Nnoqx3eWUVNDPhgms7tEi5fF0rh-LR5QO7lrArS3gOk,811
+arcticapi-0.0.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+arcticapi-0.0.1.dist-info/top_level.txt,sha256=hLkl2bQdhwI1eUA6VglvWvNiZApKAfHvOmrx44DLp1o,10
+arcticapi-0.0.1.dist-info/RECORD,,
