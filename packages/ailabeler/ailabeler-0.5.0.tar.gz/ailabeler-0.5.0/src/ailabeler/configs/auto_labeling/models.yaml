@@ -1,0 +1,2 @@
+- model_name: "sam2_hiera_large_video-r20240901"
+  config_file: ":/sam2_hiera_large_video.yaml"

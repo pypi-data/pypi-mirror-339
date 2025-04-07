@@ -1,0 +1,2 @@
+[console_scripts]
+ailabeler = ailabeler.main:main
