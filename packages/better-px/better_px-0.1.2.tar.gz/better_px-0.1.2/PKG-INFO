@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: better-px
+Version: 0.1.2
+Summary: Add your description here
+Project-URL: Documentation, https://better-py.github.io/py-pkg/
+Project-URL: Repository, https://github.com/better-py/py-pkg/
+Project-URL: Tracker, https://github.com/better-py/py-pkg/issues
+Author-email: hhglory <hhglory@outlook.com>
+Keywords: better python extension,better-px,extension module,px,py-ext,pyext,python extension module
+Requires-Python: >=3.12
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: tsidpy>=1.1.5
+Description-Content-Type: text/markdown
+
+# better python extensions
+
+- ✅ 开箱即用的 python 扩展
+
+## Installation
+
+```ruby
+pip install better-px
+
+# or 
+uv add better-px
+```
+
+## Usage
+
+```python
+from better_px import *
+
+import px
+
+# or if conflict
+import better_px as px
+
+
+def main():
+    print(px.hello())
+```
+
+## References
+
+- <https://github.com/better-py/py-pkg>
