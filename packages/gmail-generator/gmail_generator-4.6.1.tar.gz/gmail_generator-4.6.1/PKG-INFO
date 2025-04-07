@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: gmail-generator
+Version: 4.6.1
+Summary: Tele : @B_Q_5
+Author: B_Q_5
+Requires-Dist: pyTelegramBotAPI>=4.12.0
+Requires-Dist: psutil>=5.9.0
+Requires-Dist: rich>=12.0.0
+Requires-Dist: colorama>=0.4.6
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary
