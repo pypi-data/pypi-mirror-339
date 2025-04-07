@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: bluer_sandbox
+Version: 5.5.1
+Summary: 🌀 A sandbox for ideas and experiments.
+Home-page: https://github.com/kamangir/bluer-sandbox
+Author: Arash Abadpour (Kamangir)
+Author-email: arash@kamangir.net
+License: Public Domain
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Unix Shell
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bluer_ai
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# 🌀 bluer-sandbox
+
+🌀 A sandbox for ideas and experiments.
+
+```bash
+pip install bluer-sandbox
+```
+
+
+---
+
+> 🌀 [`blue-sandbox`](https://github.com/kamangir/blue-sandbox) for the [Global South](https://github.com/kamangir/bluer-south).
+
+---
+
+
+[![pylint](https://github.com/kamangir/bluer-sandbox/actions/workflows/pylint.yml/badge.svg)](https://github.com/kamangir/bluer-sandbox/actions/workflows/pylint.yml) [![pytest](https://github.com/kamangir/bluer-sandbox/actions/workflows/pytest.yml/badge.svg)](https://github.com/kamangir/bluer-sandbox/actions/workflows/pytest.yml) [![bashtest](https://github.com/kamangir/bluer-sandbox/actions/workflows/bashtest.yml/badge.svg)](https://github.com/kamangir/bluer-sandbox/actions/workflows/bashtest.yml) [![PyPI version](https://img.shields.io/pypi/v/bluer-sandbox.svg)](https://pypi.org/project/bluer-sandbox/) [![PyPI - Downloads](https://img.shields.io/pypi/dd/bluer-sandbox)](https://pypistats.org/packages/bluer-sandbox)
+
+built by 🌀 [`bluer_options-5.44.1`](https://github.com/kamangir/awesome-bash-cli), based on 🌀 [`bluer_sandbox-5.5.1`](https://github.com/kamangir/bluer-sandbox).
+
+built by 🌀 [`blueness-3.96.1`](https://github.com/kamangir/blueness).
