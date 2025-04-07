@@ -1,0 +1,4 @@
+hiredis
+python-decouple
+python-dotenv
+redis
