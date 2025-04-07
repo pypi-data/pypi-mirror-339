@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: sinetstream-kafka
+Version: 1.9.2
+Summary: Apache Kafka plugin for SINETStream library
+Project-URL: Documentation, https://www.sinetstream.net/
+Project-URL: Repository, https://github.com/nii-gakunin-cloud/sinetstream.git
+License: Apache License, Version 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Requires-Dist: kafka-python-ng>=2.0.3
+Requires-Dist: promise
+Requires-Dist: sinetstream>=1.8.2
