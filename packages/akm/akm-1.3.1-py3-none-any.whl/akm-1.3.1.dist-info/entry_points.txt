@@ -1,0 +1,3 @@
+[console_scripts]
+check-gmail = akm.akm:check
+gen-gmail = akm.akm:gen
