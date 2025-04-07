@@ -1,0 +1,3 @@
+[console_scripts]
+dashboard=lds_pipelines.dashboard.app:run
+
