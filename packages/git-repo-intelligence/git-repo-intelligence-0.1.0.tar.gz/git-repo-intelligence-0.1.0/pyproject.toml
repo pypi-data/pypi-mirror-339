@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = "E203"
+exclude = ["venv", ".env", ".venv", "env", ".git", "__pycache__", "build", "dist"]
+
+[tool.pytest]
+testpaths = ["tests"] 

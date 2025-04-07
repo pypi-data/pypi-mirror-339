@@ -1,0 +1,17 @@
+include LICENSE
+include README.md
+include CHANGELOG.md
+include requirements.txt
+include git_analyzer/llm/templates/*.html
+include git_analyzer/llm/templates/*.md
+include git_analyzer/llm/templates/*.css
+include git_analyzer/llm/templates/*.js
+
+recursive-exclude tests *
+recursive-exclude __pycache__ *
+recursive-exclude * *.py[co]
+recursive-exclude * .DS_Store
+recursive-exclude data *
+recursive-exclude reports *
+
+global-exclude test_*.py 

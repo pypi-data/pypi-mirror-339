@@ -1,0 +1,3 @@
+[console_scripts]
+git-intelligence = git_repo_intelligence:main
+
