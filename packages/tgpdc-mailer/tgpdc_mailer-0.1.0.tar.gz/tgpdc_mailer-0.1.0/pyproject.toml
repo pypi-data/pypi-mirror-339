@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tgpdc-mailer"
+version = "0.1.0"
+authors = [
+    { name = "Simphiwe Yende", email = "simphiwe.yende@tgpdc.com" },
+]
+description = "A simple package for sending templated emails using Microsoft Graph API"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests>=2.28.0",
+    "python-dotenv>=0.19.0",
+]
