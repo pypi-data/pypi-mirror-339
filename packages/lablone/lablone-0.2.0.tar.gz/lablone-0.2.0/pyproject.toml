@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lablone"
+dynamic = ["version"]
+description = "A CLI to back up all your GitLab repositories."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "João Palmeiro", email = "joaopalmeiro@proton.me" }]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Topic :: Utilities",
+]
+dependencies = [
+  "click>=8.1.0",
+  "httpx>=0.28.0",
+  "platformdirs>=4.0.0",
+  "pydantic>=2.11.0",
+  "trio>=0.29.0",
+  "gaveta==0.6.0",
+]
+
+[project.urls]
+Issues = "https://gitlab.com/joaommpalmeiro/lablone/-/issues"
+Source = "https://gitlab.com/joaommpalmeiro/lablone"
+
+[project.scripts]
+lablone = "lablone.cli:main"
+
+[tool.hatch.version]
+path = "src/lablone/__init__.py"
+
+[tool.hatch.envs.default]
+detached = false
+dependencies = ["ruff==0.6.9", "mypy==1.12.0"]
+
+[tool.hatch.envs.default.scripts]
+lint = ["- ruff check .", "mypy"]
+format = ["- ruff check --fix .", "ruff format ."]
+
+[tool.hatch.build]
+packages = ["src/lablone"]
