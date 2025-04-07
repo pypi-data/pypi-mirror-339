@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: dora-rav1e
+Version: 0.3.11
+Requires-Dist: maturin>=1.8.2
+Summary: `dora` goal is to be a low latency, composable, and distributed data flow.
+License: MIT
+Requires-Python: >=3.8
+Project-URL: Source Code, https://github.com/dora-rs/dora/
