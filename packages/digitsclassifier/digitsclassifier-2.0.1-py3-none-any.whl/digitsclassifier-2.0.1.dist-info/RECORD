@@ -1,0 +1,7 @@
+digitsclassifier-2.0.1.dist-info/METADATA,sha256=hI4wb-hZoveI6l_ckqwWE7N3oZuuG4N0OTYq00fsH1k,2281
+digitsclassifier-2.0.1.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+digitsclassifier-2.0.1.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+digitsclassifier/__init__.py,sha256=6iS9PBhZPwxUrzIUD98oNB40n8xoaM1stfZ3fD7ViRo,37
+digitsclassifier/inference.py,sha256=GocHX-Nqwq6TGMlItp19_J3b74XLWRLJIvYDrLd44_I,2373
+digitsclassifier/models/digit_classifier_model.keras,sha256=-E5UJrxk7kIvwdn2RAFCWQYvz4VlbYvrezsMPdYKe-I,2735709
+digitsclassifier-2.0.1.dist-info/RECORD,,
