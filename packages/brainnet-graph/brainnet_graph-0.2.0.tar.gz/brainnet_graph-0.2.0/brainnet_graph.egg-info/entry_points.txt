@@ -1,0 +1,2 @@
+[console_scripts]
+construct-graph = brainnet_graph.construction:main
