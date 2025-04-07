@@ -1,0 +1,12 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.md
+setup.py
+CustomPyPongDX/Pong.py
+CustomPyPongDX/__init__.py
+CustomPyPongDX.egg-info/PKG-INFO
+CustomPyPongDX.egg-info/SOURCES.txt
+CustomPyPongDX.egg-info/dependency_links.txt
+CustomPyPongDX.egg-info/requires.txt
+CustomPyPongDX.egg-info/top_level.txt
