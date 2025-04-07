@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: fake-camera
+Version: 0.9.1a0
+Summary: A Camera Simulator. It creates a moving image in the screen.
+Home-page: https://github.com/fjolublar/fake_camera
+Download-URL: https://github.com/fjolublar/fake_camera/archive/v0.9.1-alpha.tar.gz
+Author: fjolublar
+License: MIT
+Keywords: Fake Camera,Moving Image,Camera Simulator
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+License-File: LICENSE
+Requires-Dist: Pillow
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+Code Example:
+
+>>> import time
+>>> import cv2 as cv
+>>> from fake_camera import Fake_Camera  # import the class
+>>> fake_cam_object = FakeCamera().add_foreground_image().add_background_image().build() # create an instance of the fake camera class
+>>> while True:
+       snapshot = fake_cam_object.get_snapshot()  # get the next fake snapshot from from the fake camera
+       cv.imshow("Moving Image", snapshot)
+       time.sleep(1/10)
+       if cv.waitKey(1) & 0xFF == ord("q"):
+           break
