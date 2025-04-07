@@ -1,0 +1,2 @@
+[console_scripts]
+dora-transformers = dora_transformers.main:main
