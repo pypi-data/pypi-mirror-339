@@ -1,0 +1,13 @@
+paper_search_mcp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+paper_search_mcp/paper.py,sha256=PltzqGOvdvXBDP71e-jSmJFwPXfC5BCvrddwjniQml4,2605
+paper_search_mcp/server.py,sha256=q2LC8SphPd86zfB45wFo-HiROJeivkMWCVsqKNv5NHc,5811
+paper_search_mcp/academic_platforms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+paper_search_mcp/academic_platforms/arxiv.py,sha256=p0DHufCI67ju7Ia0FxNEgXKfOatvAbDoKBEPQ48SjwM,4942
+paper_search_mcp/academic_platforms/biorxiv.py,sha256=OPNQeJBWLSCLfZ1CmNHuY_-uQe-eauhIqVema7dZ-VY,4517
+paper_search_mcp/academic_platforms/google_scholar.py,sha256=l4JsXDS1t9wDX1u5ovZRxIY-cddrUUVQOfUYqAkFAOE,6315
+paper_search_mcp/academic_platforms/hub.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+paper_search_mcp/academic_platforms/pubmed.py,sha256=zxndcFQLj0iAt1bQ3rJuK4Y8D7o9Owv9HpG1NYfwWt0,5612
+paper_search_mcp-0.1.2.dist-info/METADATA,sha256=P4todWAow63cfuX6N06eKtrELXOClvfUqzD17euP1xE,5312
+paper_search_mcp-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+paper_search_mcp-0.1.2.dist-info/licenses/LICENSE,sha256=mVNxtbAyZzkDByc_rQJ-hmcsSnG402SJeARwROnhUGU,1064
+paper_search_mcp-0.1.2.dist-info/RECORD,,
