@@ -1,0 +1,6 @@
+[console_scripts]
+har2case = pastor.cli:main_har2case_alias
+locusts = pastor.ext.locust:main_locusts
+pastor = pastor.cli:main
+pmake = pastor.cli:main_make_alias
+prun = pastor.cli:main_prun_alias
