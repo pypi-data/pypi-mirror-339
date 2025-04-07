@@ -1,0 +1,25 @@
+dist: bionic
+os: linux
+sudo: required
+language: python
+python:
+  - "3.7"
+
+before_install:
+  - sudo apt-get install -y swig  # needed for PyKCS11 (which is needed by some package we depend on)
+#   - sudo apt-get install tidy
+#   - sudo apt-get install -y libreoffice python3-uno
+#   - libreoffice '--accept=socket,host=127.0.0.1,port=8100;urp;' &
+
+install:
+  - pip install -U "setuptools"
+  - pip install -r requirements.txt
+  - # pip install lino-book  # just for intersphinx
+  - pip install -e .
+  - inv install  # runs manage.py install in every demo project
+  - pip freeze
+
+script:
+  - inv prep
+  - inv test
+  - inv bd

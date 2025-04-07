@@ -1,0 +1,81 @@
+.. include:: /../docs/shared/include/defs.rst
+.. _presto.19.5.0:
+
+=======================
+19.5.0 (2019-05-14)
+=======================
+
+Dies ist der erste Prototyp, der auf Basis des von Thierry erstellten
+Lastenhefts angefertigt wurde.
+
+Besichtiung geplant am Dienstag  14. Mai um 11 Uhr.
+Für die Besichtigung habe ich auch Slides vorbereitet.
+
+Eventuell gehen wir die :doc:`/basics/tour` durch.
+
+Notizen zum Lastenheft
+======================
+
+4. Datenübernahme : bis auf weiteres tu ich nichts. Falls wir
+Datenimport wollen, brauche ich csv-Dateien mit einer Struktur, die sich
+nicht mehr (unangefragt) ändert.
+
+5. Benutzer : ich schätze, dass die momentanen Benutzerarten das ist,
+was wir brauchen.  Siehe Auswahlliste im Feld `Benutzerart` eines Benutzers.  Ein
+
+7.1 Kontakte
+
+Ihr habt in eigenes Feld für einen **zweiten Namen** angefragt. Ist das der
+Mädchenname? Lino sucht auch in der Mitte des Namens, insofern ist dieses Feld
+weniger wichtig. Mädchenname kann mit Bindestrich im Familienname stehen.
+
+Der **Abgerechnete** einer Dienstleistung  ist derjenige, auf den die Rechnung
+ausgestellt wird und dessen Preisfaktoren die Tarife beeinflussen. --> Klient
+
+Der **Rechnungsempfänger** eines Auftrags ist der Partner, an den die Rechnungen
+auszustellen sind. das kann auch ein Haushalt oder eine Organisation sein.
+
+Der **Anspruchsnehmer** einer Dienstleistung ist derjenige, der die
+Dienstleistung empfängt und bestätigt.  --> Falls nötig tun wir noch ein
+weiteres Feld dafür rein.
+
+Familienbeziehungen:
+
+- Mutter, Vater, Sohn, Tochter, Ehepartner --> Reiter "Beziehungen"
+
+- Verwalter des Vermögens, Verwalter der Person, Delegierter Kontakt --> Klientenkontakte
+
+- Mitbewohner, Wohngemeinschaft, würde ich als Mitglieder des gleichen "Haushalts" erfassen.
+
+Diverse weitere Kontaktangaben:
+
+- VIPO und Krankenkasse werden in Lino über :mod:`lino.xl.healthcare` gehandhabt.
+
+- :mod:`lino.modlib.uploads` (Uploadarten müssen wir noch konfigurieren)
+
+- Statt nur zwischen "Aktiviert" und "Archiviert" eines Kontakts zu
+  unterscheiden, schlage ich ein Feld "Zustand" eines Klienten vor.
+  Bezeichnungen der Zustände noch zu klären.
+
+Fahrtkosten pro Km werden im Auftrag unter **Verbrauch pro Einsatz** erfasst.
+
+*7.7 Lagerverwaltung*
+
+Der Prototyp macht da noch nichts. (geplant: stocks.Item, stocks.Movement)
+
+7.8 Kalender
+
+Zu klären, was noch fehlt.
+
+Wieso ein Gantt chart? Gibt es denn Dependencies?
+
+Um **Verfügbarkeiten** zu verwalten, bräuchten wir ine Serie von Regeln, zu
+welchen Uhrzeiten und Wochentagen überhaupt Termine stattfinden können für
+einen bestimmten Arbeiter.
+
+7.9 Gemeindeabrechnungen : "Pro Quartal werden pro Gemeinde auf Basis der
+geleisteten Arbeitszeiten pro Kunde, Dienstleistung und Mitarbeiter
+Sammelrechnungen pro Gemeinde erstellt Eine Sammelrechnung mit Anzahl Stunden,
+Betrag pro Stunde und Gesamtbetrag" Ich habe die einfachste Lösung gemacht, die
+mir einfiel. Es gibt durchaus Raum für Verbesserungen.
+

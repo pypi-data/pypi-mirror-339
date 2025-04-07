@@ -1,0 +1,4 @@
+global-include *.weasy.html *.po *.mo
+prune **/media
+prune docs
+prune dedocs

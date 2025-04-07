@@ -1,0 +1,13 @@
+{% extends "weasy/base.weasy.html" %}
+{%- block pagesize %}portrait{%- endblock %}
+
+{%- block main %}
+{{ super() }}
+
+<h1>Wochenplaner</h1>
+<div class="footer_div">Wochenplaner {{obj}}</div>
+
+<p>Kunde:  <b>{{obj.get_full_name()}}</b>
+
+<p>Ausgestellt am {{fdm(dd.today())}}
+{%- endblock %}

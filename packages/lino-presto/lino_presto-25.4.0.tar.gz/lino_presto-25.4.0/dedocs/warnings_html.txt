@@ -1,0 +1,8 @@
+[31;01mWARNING: failed to reach any of the inventories with the following issues:[39;49;00m
+[31;01mWARNING: intersphinx inventory 'http://atelier.lino-framework.org' not readable due to ValueError: ('intersphinx inventory %r not readable due to %s: %s', 'http://atelier.lino-framework.org', 'ValueError', ValueError(...))[39;49;00m
+[31;01mWARNING: failed to reach any of the inventories with the following issues:[39;49;00m
+[31;01mWARNING: intersphinx inventory 'http://etgen.lino-framework.org' not readable due to ValueError: ('intersphinx inventory %r not readable due to %s: %s', 'http://etgen.lino-framework.org', 'ValueError', ValueError(...))[39;49;00m
+[31;01mWARNING: failed to reach any of the inventories with the following issues:[39;49;00m
+[31;01mWARNING: intersphinx inventory 'http://presto.lino-framework.org' not readable due to ValueError: ('intersphinx inventory %r not readable due to %s: %s', 'http://presto.lino-framework.org', 'ValueError', ValueError(...))[39;49;00m
+[31;01mWARNING: failed to reach any of the inventories with the following issues:[39;49;00m
+[31;01mWARNING: intersphinx inventory 'http://de.presto.lino-framework.org' not readable due to ValueError: ('intersphinx inventory %r not readable due to %s: %s', 'http://de.presto.lino-framework.org', 'ValueError', ValueError(...))[39;49;00m

@@ -1,0 +1,14 @@
+.. include:: /../docs/shared/include/defs.rst
+.. _presto.19.6.0:
+
+=======================
+19.6.0 (2019-06-06)
+=======================
+
+Erstes (dokumentiertes) Release nach Beginn der gemeinsamen Entwicklungsphase
+mit Margarete.
+
+- Erste Entwürfe für Einsatzpläne. Pro Arbeiter oder pro Team. Mit Übersicht
+  oder ohne.
+
+- Tel und GSM in insert_layout für Klienten, Arbeiter und Personen

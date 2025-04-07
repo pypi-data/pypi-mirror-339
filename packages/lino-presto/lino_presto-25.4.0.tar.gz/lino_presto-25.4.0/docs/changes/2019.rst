@@ -1,0 +1,27 @@
+.. include:: /../docs/shared/include/defs.rst
+.. _presto.changes.2019:
+
+===========================
+Changes 2019 in Lino Presto
+===========================
+
+.. contents::
+  :local:
+
+2019-05-10
+==========
+
+Released Lino PRESTO 19.5.1 to PyPI.
+
+2019-04-23
+==========
+
+room (i.e. team) is now configured per journal.
+
+
+
+2019-04-15
+==========
+
+First proof of concept of a calendar view.
+

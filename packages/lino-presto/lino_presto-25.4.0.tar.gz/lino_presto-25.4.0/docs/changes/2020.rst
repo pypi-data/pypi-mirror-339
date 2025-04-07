@@ -1,0 +1,14 @@
+.. include:: /../docs/shared/include/defs.rst
+.. _presto.changes.2020:
+
+===========================
+Changes 2020 in Lino Presto
+===========================
+
+.. contents::
+  :local:
+
+2020-05-12
+==========
+
+Released Lino Presto 20.5.0 to PyPI.
