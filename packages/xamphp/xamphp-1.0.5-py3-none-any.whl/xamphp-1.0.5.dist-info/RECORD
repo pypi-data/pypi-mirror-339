@@ -1,0 +1,15 @@
+xamphp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xamphp/main.py,sha256=FJeznCb7VNE6SDWLSbuN7KhH6XnEZRfrGkI4ctBEbzE,616
+xamphp/.system/imports.py,sha256=9nEJsqdghDit6FYaMD-lix3wnkuDIa3HbQPWEPZRO2E,257
+xamphp/.system/index.py,sha256=_KTAHqN8kXTBL9ruvBOYekvDNop1sU2K9Yz3dpqU5BI,1688
+xamphp/.system/modules/localhost.py,sha256=XbHOraIT-AXO3ARc4Fw6YaK1MHvububdYPpFe7U6Hco,7056
+xamphp/.system/sources/clight.json,sha256=-GQIlI0Y3CQFxRHutyPIvIkaNcMwsI9tEDrB7IiCfkU,459
+xamphp/.system/sources/hosts,sha256=NpEkpJsXDpHAguLeQ9FD_6dGP2C_VAIsrWP872glBew,64
+xamphp/.system/sources/logo.ico,sha256=MRq9de_DgQAK4gP7HIR6gA5BZj4gnGJd8uwuLGN_a7E,49843
+xamphp/.system/sources/vhosts.conf,sha256=kHEkNw44PfvMWW4iuckl1Isp1wK5morufn4PnN4sljs,219
+xamphp-1.0.5.dist-info/licenses/LICENSE,sha256=3U_CaMRQisXoQHsc9kJrlUBUKI6_M5KcJvzkURHBRmU,1096
+xamphp-1.0.5.dist-info/METADATA,sha256=ggxKlvfOMSslCDRAHrUxW3lbra4d5naD3gMcujV4xO4,2236
+xamphp-1.0.5.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+xamphp-1.0.5.dist-info/entry_points.txt,sha256=f7QWpgVbiF-Ka8nBkumTXVVO06ahCfBZ359X7fIGgsU,44
+xamphp-1.0.5.dist-info/top_level.txt,sha256=ytndgpY-GJTSDsBqlTIn_Twl6SOhGtkc4_4YJ_Q04II,7
+xamphp-1.0.5.dist-info/RECORD,,
