@@ -1,0 +1,12 @@
+addftool/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+addftool/addf_portal.py,sha256=U52TdNcwWOEvv_C5r-guWYxn3ntzwYI2eBzJIE7IdcY,493
+addftool/blob.py,sha256=NZOItDyFUIdV1tfhJZJJBEzGy296CE5NCictTzP4OPc,8282
+addftool/tool.py,sha256=EuKQ2t2InN7yB-_oYLcdsA7vRqzRGTunwIxplUSqEG0,2054
+addftool/util.py,sha256=Q3A68vJDxgfeNiEFmk54HuMuworVndocXpSbVpvGMfc,362
+addftool/process/__init__.py,sha256=OB-cZXP1jK7l8uN8nKfhg_bCX6Slz6DeeBpEodt-IK4,3515
+addftool/process/utils.py,sha256=me4HqMz5OgRcQMUJmVhKdTJh4SW5BB-pd_lq7g8-UwE,2252
+addftool-0.1.4.dist-info/METADATA,sha256=ohQCdQdVevHRzMRu7ByPhBGxqPlxmEKnDxNmfcy_WII,148
+addftool-0.1.4.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+addftool-0.1.4.dist-info/entry_points.txt,sha256=9lkmuWMInwUAtev8w8poNkNd7iML9Bjd5CBCFVxg2b8,111
+addftool-0.1.4.dist-info/top_level.txt,sha256=jqj56-plrBbyzY0tIxB6wPzjAA8kte4hUlajyyQygN4,9
+addftool-0.1.4.dist-info/RECORD,,
