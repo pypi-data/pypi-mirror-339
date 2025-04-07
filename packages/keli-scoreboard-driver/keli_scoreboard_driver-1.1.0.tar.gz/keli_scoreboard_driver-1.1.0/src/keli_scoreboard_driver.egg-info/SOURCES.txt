@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/keli_scoreboard/__init__.py
+src/keli_scoreboard/protocol.py
+src/keli_scoreboard_driver.egg-info/PKG-INFO
+src/keli_scoreboard_driver.egg-info/SOURCES.txt
+src/keli_scoreboard_driver.egg-info/dependency_links.txt
+src/keli_scoreboard_driver.egg-info/requires.txt
+src/keli_scoreboard_driver.egg-info/top_level.txt
