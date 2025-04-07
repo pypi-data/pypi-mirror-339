@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+aem_instance_manager/__init__.py
+aem_instance_manager/main.py
+aem_instance_manager.egg-info/PKG-INFO
+aem_instance_manager.egg-info/SOURCES.txt
+aem_instance_manager.egg-info/dependency_links.txt
+aem_instance_manager.egg-info/entry_points.txt
+aem_instance_manager.egg-info/requires.txt
+aem_instance_manager.egg-info/top_level.txt
