@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mypackage_tatusis"
+version = "0.1.0"
+description = "My Python package"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [
+    { name = "Rafael Ferreira", email = "rafaelsferreira@icloud.com" }
+]
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://github.com/tatusis/mypackage"
+"Bug Tracker" = "https://github.com/tatusis/mypackage/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
