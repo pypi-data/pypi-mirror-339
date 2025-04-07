@@ -1,0 +1,11 @@
+lbparticles/__about__.py,sha256=n3oM6B_EMz93NsTI18NNZd-jKFcUPzUkbIKj5VFK5ok,22
+lbparticles/__init__.py,sha256=V0to0sE3rtoM7MCKxYpg5rmno8ia4SI_cwq8HXMD12A,644
+lbparticles/lbparticles.py,sha256=-Q3p144-XcEYZx3Lf44lzNFd-ncGuXr9JbVGzuqAq6Q,45
+lbparticles/particle.py,sha256=Uz_RUUVmhUF2B2gV_NAv6AJjY5bG0WURh9B9Zhl5nzk,40283
+lbparticles/potentials.py,sha256=bSwRYkDWwDB53PCNfMLejj4s4yNzMcI1170Jmcej0WM,9947
+lbparticles/precomputer.py,sha256=zOPONSp__dvJ-yRolBvlXgf46mGa30Z_h-3dcJM2_N8,18321
+lbparticles/util.py,sha256=GGjITOEGd3USjQATBo3aNmGLMpIobHRxcO7yDK8zZsw,2406
+lbparticles-0.1.6.dist-info/METADATA,sha256=WgXfjCa1HOR_9ZEFu4FLzL_bkiCwqpjLu5-br93Ah4g,2097
+lbparticles-0.1.6.dist-info/WHEEL,sha256=C2FUgwZgiLbznR-k0b_5k3Ai_1aASOXDss3lzCUsUug,87
+lbparticles-0.1.6.dist-info/licenses/LICENSE.txt,sha256=ZNFIk5Qe_7OG4NhQyE39bdbcwUGmex5HyYc8n44FCeo,1076
+lbparticles-0.1.6.dist-info/RECORD,,
