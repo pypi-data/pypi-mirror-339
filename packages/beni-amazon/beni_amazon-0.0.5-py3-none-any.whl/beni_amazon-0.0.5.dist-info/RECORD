@@ -1,0 +1,14 @@
+bzon/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bzon/main.py,sha256=GP_60-6vImXqdMfC5vc4xlscWajx4OYmnlNXASWn19w,147
+bzon/common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bzon/common/func.py,sha256=IWzJ312CkyzDdGWqQN4zmtqBfPYgzdJXIdMlS4ka1Fs,508
+bzon/common/password.py,sha256=Zg_EoegR8BnfsCo3IRebw8sAI20IlmBu0hYPVhuXpeY,855
+bzon/tasks/__init__.py,sha256=o4fcaEgSBIoWHY5Kow5h7uxGMgEelhbvElN1DwSh1d4,82
+bzon/tasks/hello.py,sha256=f_jUrEsKe7bS6bXV51JzxGw5-NXhsEQFqfNDfUVxmSI,267
+bzon/tasks/make_markdown.py,sha256=f_vaza3rO6pbrD86tOfE6oGOUhUVpES5f0ZGu6zix2I,3008
+bzon/tasks/open.py,sha256=WwU0PobaLsgBROncPRudz3z7RLJOiN-uplKBaf8jKgs,720
+beni_amazon-0.0.5.dist-info/METADATA,sha256=_5DSGuPMzPqUhQcu4Jmqolk7RZxJn9hcyFwBQacxzsM,326
+beni_amazon-0.0.5.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+beni_amazon-0.0.5.dist-info/entry_points.txt,sha256=s19EbJ6e9GjCFjrQVIs2EvxLjEM_2pZZMLkoCfQ_vSY,39
+beni_amazon-0.0.5.dist-info/top_level.txt,sha256=943AipNfW8k0cn89IYGmihpwfj3ZVv4NeS7FYgpQuFM,5
+beni_amazon-0.0.5.dist-info/RECORD,,
