@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: cloudflarepy
+Version: 0.1.0
+Summary: Cloudflare API Python Wrapper
+Home-page: https://github.com/Pma10/Cloudflarepy
+Author: Pma10
+Author-email: pmavmak10@gmail.com
+Keywords: api,cloudflare,pma
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Requires-Dist: aiohttp
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
