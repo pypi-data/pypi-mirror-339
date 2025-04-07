@@ -1,0 +1,2 @@
+[console_scripts]
+inverse-code-cli = inverse_code.cli:main
