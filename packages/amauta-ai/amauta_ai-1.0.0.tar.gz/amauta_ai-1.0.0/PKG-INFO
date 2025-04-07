@@ -1,0 +1,914 @@
+Metadata-Version: 2.3
+Name: amauta-ai
+Version: 1.0.0
+Summary: AMAUTA Unified AI Development Command Center
+License: MIT
+Keywords: ai,development,code analysis,task management,cli,cursor,ide,productivity
+Author: AMAUTA Team
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Utilities
+Provides-Extra: ai
+Requires-Dist: aiohttp (>=3.10.11,<4.0.0)
+Requires-Dist: anthropic (>=0.49.0,<0.50.0) ; extra == "ai"
+Requires-Dist: jinja2 (>=3.1.6,<4.0.0)
+Requires-Dist: markdown-it-py (>=3.0.0,<4.0.0)
+Requires-Dist: pathspec (>=0.12.1,<0.13.0)
+Requires-Dist: pydantic (>=2.11.2,<3.0.0)
+Requires-Dist: pygments (>=2.19.1,<3.0.0)
+Requires-Dist: python-dateutil (>=2.9.0,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: rich (>=13.9.4,<14.0.0)
+Requires-Dist: shellingham (>=1.5.4,<2.0.0)
+Requires-Dist: tomli (>=2.0.1,<3.0.0)
+Requires-Dist: tqdm (>=4.66.4,<5.0.0)
+Requires-Dist: tree-sitter (>=0.20.2,<0.21.0)
+Requires-Dist: typer[all] (>=0.9.0)
+Requires-Dist: typing-extensions (>=4.13.0,<5.0.0)
+Project-URL: Bug Tracker, https://github.com/yourusername/amauta/issues
+Project-URL: Changelog, https://github.com/yourusername/amauta/blob/main/CHANGELOG.md
+Project-URL: Documentation, https://github.com/luiscmogrovejo/amauta
+Project-URL: Homepage, https://github.com/luiscmogrovejo/amauta
+Project-URL: Repository, https://github.com/luiscmogrovejo/amauta
+Description-Content-Type: text/markdown
+
+# AMAUTA: Autonomous Modular Agent for Unified Task Assistance
+
+<p align="center">
+  <img src="Logo.png" alt="AMAUTA Logo" width="300">
+</p>
+
+[![PyPI version](https://badge.fury.io/py/amauta.svg)](https://badge.fury.io/py/amauta)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Versions](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11-blue)](https://www.python.org/downloads/)
+
+**AMAUTA** is a powerful command-line interface designed to streamline AI-powered software development. It integrates task management, code analysis, AI assistance, and more into a unified workflow. AMAUTA helps you organize your projects, leverage AI for code generation and analysis, and enforce development standards.
+
+## 📋 Table of Contents
+
+- [Key Features](#-key-features)
+- [Research-Plan-Execute-Test-Document Workflow](#-research-plan-execute-test-document-workflow)
+- [Installation](#-installation)
+- [Quick Start](#-quick-start)
+- [AI Provider System](#-ai-provider-system)
+- [Complete Command Reference](#-complete-command-reference)
+  - [Core Commands](#core-commands)
+  - [Task Management Commands](#task-management-commands)
+  - [MCP Commands](#mcp-commands)
+  - [Configuration Commands](#configuration-commands)
+  - [Template Commands](#template-commands)
+  - [Global Options](#global-options)
+- [Documentation](#-documentation)
+- [Configuration](#-configuration)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+## ✨ Key Features
+
+- **Unified Command Center:** Access all development tools from a single CLI
+- **AI-Powered Intelligence:**
+  - **Multi-Provider AI Integration:** 
+    - Anthropic Claude for code generation and complex reasoning
+    - Perplexity for research and up-to-date information
+    - Intelligent provider selection based on operation type
+  - **Enhanced Research Mode:** Global `--research` flag prioritizes Perplexity for knowledge-intensive tasks
+- **Advanced Task Management:**
+  - Hierarchical organization (Epics, Tasks, Stories, Issues)
+  - AI-powered task creation, expansion, and complexity analysis
+  - Dependency tracking and cascading updates
+  - Dot notation for easy task referencing
+- **Comprehensive Code Analysis:**
+  - Codebase structure and complexity metrics
+  - Visualization generation
+  - Security scanning
+  - Architecture recommendations
+- **Cursor IDE Integration:**
+  - Generate custom rules files
+  - Model Control Protocol (MCP) server for enhanced context
+- **Offline-First Design:**
+  - All commands work in offline mode with basic functionality
+  - Enhanced features when AI providers are available
+
+## 🔄 Research-Plan-Execute-Test-Document Workflow
+
+AMAUTA's core philosophy is built around the comprehensive Research-Plan-Execute-Test-Document workflow that guides all development tasks:
+
+1. **Research:** Gather information, context, and best practices before beginning work
+   - Understand requirements and constraints
+   - Explore existing solutions and approaches
+   - Identify potential challenges and dependencies
+
+2. **Plan:** Create a detailed implementation strategy based on research
+   - Design the technical approach and architecture
+   - Create timeline and milestones
+   - Anticipate potential issues and prepare contingencies
+
+3. **Execute:** Implement the solution following established standards
+   - Write clean, maintainable code
+   - Follow project coding standards
+   - Address edge cases and error handling
+
+4. **Test:** Verify the implementation works as expected
+   - Create comprehensive test coverage
+   - Validate against requirements
+   - Ensure performance and security
+
+5. **Document:** Create clear documentation for users and developers
+   - Document implementation details
+   - Create user guides as needed
+   - Update project documentation
+
+This workflow is integrated throughout AMAUTA's task management, audit, and code generation features. When tasks are created or expanded, they automatically follow this workflow to ensure comprehensive, high-quality implementations.
+
+## 🚀 Installation
+
+AMAUTA requires Python 3.8 or higher. Install via pip:
+
+```bash
+pip install amauta-ai
+```
+
+### Virtual Environment (Recommended)
+
+```bash
+# Create and activate a virtual environment
+python -m venv amauta-env
+source amauta-env/bin/activate  # On Windows: amauta-env\Scripts\activate
+
+# Install AMAUTA
+pip install amauta-ai
+
+# Verify installation
+amauta --version
+```
+
+### AI Provider Configuration
+
+To enable AI-powered features, you'll need to configure API keys:
+
+1. **Create API Keys:**
+   - [Anthropic API Key](https://console.anthropic.com/) for Claude
+   - [Perplexity API Key](https://www.perplexity.ai/) for Perplexity
+
+2. **Set Environment Variables:**
+   - Create a `.env` file in your project root (or copy from `.env.example`)
+   - Add your API keys:
+   ```
+   ANTHROPIC_API_KEY=your_anthropic_key_here
+   PERPLEXITY_API_KEY=your_perplexity_key_here
+   ```
+
+> **Note:** AMAUTA operates in offline mode with reduced functionality if API keys are unavailable.
+
+For detailed installation options, see the [Installation Guide](./docs/ENHANCED_DOCUMENTATION.md#installation-guide).
+
+## 🚦 Quick Start
+
+```bash
+# Initialize AMAUTA in your project
+cd your-project
+amauta init
+
+# Configure API keys
+cp .env.example .env
+# Edit .env to add your API keys
+
+# Create a high-level task (Epic)
+amauta task add --type=Epic --prompt="Build authentication system with JWT and social login"
+
+# List tasks to find the Epic ID
+amauta task list
+
+# Expand the Epic into subtasks (with research)
+amauta task expand --id=EPIC-ID --research
+
+# Analyze your codebase
+amauta analyze --research
+
+# Get architectural recommendations
+amauta recommend-architecture --research
+
+# Get the next task to work on
+amauta task next
+```
+
+For a more comprehensive step-by-step guide, see our [Quick Start Guide](./docs/QUICKSTART.md).
+
+## 🧠 AI Provider System
+
+AMAUTA features an intelligent multi-provider AI system that selects the optimal AI service for each operation:
+
+### Provider Strengths
+
+- **Anthropic (Claude):** Excels at code generation, understanding existing codebases, complex reasoning, and task planning
+- **Perplexity:** Excels at research, up-to-date information, best practices recommendations, and technology evaluations
+
+### Provider Selection Logic
+
+AMAUTA intelligently selects providers with this priority:
+
+1. Explicit user selection via `--provider=NAME` flag
+2. Research mode selection via `--research` flag (prioritizes Perplexity)
+3. Task-specific mapping from configuration
+4. Default provider from configuration
+
+### Research Mode
+
+Use the global `--research` flag with any command to leverage Perplexity's research capabilities:
+
+```bash
+# Standard analysis (Anthropic/Claude)
+amauta analyze
+
+# Research-enhanced analysis (Perplexity)
+amauta analyze --research
+
+# Research-backed technology evaluation
+amauta tech-evaluation "GraphQL vs REST for mobile APIs" --research
+```
+
+For more details on AI provider configuration, see the [AI Provider Configuration](./docs/ENHANCED_DOCUMENTATION.md#ai-provider-configuration) documentation.
+
+## 📊 Complete Command Reference
+
+AMAUTA provides a rich set of commands with numerous options to streamline your development workflow. Here's a comprehensive reference of all available commands.
+
+### Global Options
+
+These options can be applied to any AMAUTA command:
+
+```bash
+--version, -v            Show version and exit
+--research               Use research-optimized provider (Perplexity) for AI operations
+--offline                Run in offline mode (limited AI capabilities)
+--debug                  Enable debug mode for more verbose error output
+--lazy-imports           Enable lazy imports for faster startup (experimental)
+--provider TEXT          Explicitly select AI provider (anthropic, perplexity)
+--install-completion     Install completion for the current shell
+--show-completion        Show completion for the current shell, to copy it or customize the installation
+--help                   Show this message and exit
+```
+
+### Core Commands
+
+#### `init`
+Initialize AMAUTA in the current project directory.
+
+```bash
+amauta init [OPTIONS]
+
+Options:
+  --force          Force overwrite of existing files
+  --help           Show this message and exit
+```
+
+#### `analyze`
+Analyze the codebase and generate reports.
+
+```bash
+amauta analyze [OPTIONS] [PATH]
+
+Arguments:
+  PATH             Path to analyze. Defaults to current directory
+
+Options:
+  --output-dir TEXT                      Directory to store output reports
+  --visualizations/--no-visualizations   Generate interactive visualizations [default: visualizations]
+  --offline/--no-offline                 Run analysis in offline mode (no AI API calls) [default: no-offline]
+  --no-cache/--no-no-cache               Disable caching of analysis results [default: no-no-cache]
+  --no-parallel/--no-no-parallel         Disable parallel processing of files [default: no-no-parallel]
+  --workers INTEGER                      Number of worker processes for parallel analysis
+  --research/--no-research               Use research-optimized provider (Perplexity) for enhanced analysis [default: no-research]
+  --provider TEXT                        Explicitly select AI provider (anthropic, perplexity)
+  --use-ai/--no-use-ai                   Use AI assistance for framework detection. If not specified, automatically detects if AI is available [default: no-use-ai]
+  --help                                 Show this message and exit
+```
+
+#### `parse-prd`
+Parse a PRD (Product Requirements Document) and generate tasks.
+
+```bash
+amauta parse-prd [OPTIONS] FILE
+
+Arguments:
+  FILE             Path to the PRD file [required]
+
+Options:
+  --num-tasks INTEGER                    Number of tasks to generate [default: 10]
+  --research/--no-research               Use research-optimized provider (Perplexity) for PRD analysis [default: no-research]
+  --provider TEXT                        Explicitly select AI provider (anthropic, perplexity)
+  --offline/--no-offline                 Use offline mode with limited AI capabilities [default: no-offline]
+  --help                                 Show this message and exit
+```
+
+#### `generate-rules`
+Generate .cursor rules based on analysis.
+
+```bash
+amauta generate-rules [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `report`
+Generate a comprehensive project report.
+
+```bash
+amauta report [OPTIONS]
+
+Options:
+  --format TEXT     Output format (md, html, json) [default: md]
+  --output TEXT     Output file path
+  --help            Show this message and exit
+```
+
+#### `summarize`
+Generate a comprehensive summary of the repository in a single file.
+
+```bash
+amauta summarize [OPTIONS]
+
+Options:
+  --output TEXT                          Output file path [default: amauta_summary.md]
+  --include-tasks/--no-include-tasks     Include tasks from tasks.json
+  --include-rules/--no-include-rules     Include rules from .cursorrules
+  --include-code/--no-include-code       Include core code structure
+  --max-files INTEGER                    Maximum number of files to include when summarizing code [default: 50]
+  --help                                 Show this message and exit
+```
+
+#### `cursor`
+Generate Cursor rules for AI-assisted development.
+
+```bash
+amauta cursor [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `audit`
+Run an AI-powered comprehensive project audit.
+
+```bash
+amauta audit [OPTIONS]
+
+Options:
+  --offline/--no-offline                 Run audit in offline mode (limited AI capabilities) [default: no-offline]
+  --verbose/--no-verbose                 Show detailed information [default: no-verbose]
+  --research/--no-research               Use research-optimized provider (Perplexity) for enhanced analysis [default: no-research]
+  --provider TEXT                        Explicitly select AI provider (anthropic, perplexity)
+  --focus TEXT                           Focus areas for audit (comma-separated: security,performance,maintainability,documentation)
+  --depth TEXT                           Depth of task generation (epics_tasks, epics_tasks_stories, or full) [default: full]
+  --help                                 Show this message and exit
+```
+
+#### `generate-code`
+Generate code for a specific task using AI.
+
+```bash
+amauta generate-code [OPTIONS] TASK_ID FILE_PATH
+
+Arguments:
+  TASK_ID         Task ID to generate code for [required]
+  FILE_PATH       Path where the code should be saved [required]
+
+Options:
+  --language TEXT                        Programming language to use
+  --force/--no-force                     Overwrite existing file if it exists
+  --provider TEXT                        AI provider (anthropic, openai, perplexity)
+  --help                                 Show this message and exit
+```
+
+#### `completion`
+Generate shell completion script for AMAUTA.
+
+```bash
+amauta completion [OPTIONS] SHELL_TYPE
+
+Arguments:
+  SHELL_TYPE      Type of shell (bash, zsh, fish)
+
+Options:
+  --install        Install completion script to the appropriate location
+  --help           Show this message and exit
+```
+
+#### `recommend-architecture`
+Analyze codebase and recommend architecture improvements.
+
+```bash
+amauta recommend-architecture [OPTIONS] [PATH]
+
+Arguments:
+  PATH            Path to analyze. Defaults to current directory
+
+Options:
+  --output TEXT                          Output file for recommendations (markdown or json)
+  --offline/--no-offline                 Run in offline mode (no AI API calls) [default: no-offline]
+  --research/--no-research               Use research-optimized provider (Perplexity) for enhanced analysis [default: no-research]
+  --provider TEXT                        Explicitly select AI provider (anthropic, perplexity)
+  --detailed/--no-detailed               Include detailed analysis in the output [default: no-detailed]
+  --help                                 Show this message and exit
+```
+
+### Task Management Commands
+
+#### `task add`
+Add a new task with AI assistance.
+
+```bash
+amauta task add [OPTIONS]
+
+Options:
+  --prompt, -p TEXT                      Description of the task to create [required]
+  --type TEXT                            Type of task to create (task, story, epic, issue) [default: task]
+  --parent TEXT                          Parent item ID to attach this task to
+  --priority TEXT                        Priority of the task (low, medium, high, critical) [default: medium]
+  --research/--no-research               Use research-optimized provider (Perplexity) for task creation [default: no-research]
+  --provider TEXT                        Explicitly select AI provider (anthropic, perplexity)
+  --offline/--no-offline                 Use offline mode with limited AI capabilities [default: no-offline]
+  --help                                 Show this message and exit
+```
+
+#### `task expand`
+Expand a task into more detailed subtasks with AI assistance.
+
+```bash
+amauta task expand [OPTIONS] ID
+
+Arguments:
+  ID              ID of the task to expand into subtasks [required]
+
+Options:
+  --num, -n INTEGER                      Number of subtasks to generate [default: 3]
+  --research/--no-research               Use research-optimized provider (Perplexity) for task expansion [default: no-research]
+  --provider TEXT                        Explicitly select AI provider (anthropic, perplexity)
+  --offline/--no-offline                 Use offline mode with limited AI capabilities [default: no-offline]
+  --help                                 Show this message and exit
+```
+
+#### `task list`
+List items (Epics, Tasks, Stories, Issues) with filtering, sorting, and grouping.
+
+```bash
+amauta task list [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `task show`
+Show detailed information about a specific item.
+
+```bash
+amauta task show [OPTIONS] ID
+
+Arguments:
+  ID              ID of the item to show [required]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `task next`
+Suggest the next task(s) to work on.
+
+```bash
+amauta task next [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `task set-status`
+Set the status of an item.
+
+```bash
+amauta task set-status [OPTIONS] ID STATUS
+
+Arguments:
+  ID              ID of the item to update [required]
+  STATUS          New status (todo, in_progress, review, done) [required]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `task add-dependency`
+Add a dependency between two items.
+
+```bash
+amauta task add-dependency [OPTIONS] TASK_ID DEPENDS_ON_ID
+
+Arguments:
+  TASK_ID         ID of the task that depends on another [required]
+  DEPENDS_ON_ID   ID of the task that must be completed first [required]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `task remove-dependency`
+Remove a dependency between two items.
+
+```bash
+amauta task remove-dependency [OPTIONS] TASK_ID DEPENDS_ON_ID
+
+Arguments:
+  TASK_ID         ID of the task that depends on another [required]
+  DEPENDS_ON_ID   ID of the task that must be completed first [required]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `task validate-dependencies`
+Validate all task dependencies in the system.
+
+```bash
+amauta task validate-dependencies [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `task fix-dependencies`
+Suggest and apply fixes for dependency issues.
+
+```bash
+amauta task fix-dependencies [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `task analyze-complexity`
+Analyze the complexity of tasks using AI.
+
+```bash
+amauta task analyze-complexity [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `task status-report`
+Generate a report of task statuses.
+
+```bash
+amauta task status-report [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `task update`
+Update a task with AI assistance.
+
+```bash
+amauta task update [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+### MCP Commands
+
+#### `mcp run`
+Run the MCP server for Cursor integration.
+
+```bash
+amauta mcp run [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `mcp version`
+Show the MCP protocol version supported by AMAUTA.
+
+```bash
+amauta mcp version [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+### Configuration Commands
+
+#### `config set`
+Set configuration value.
+
+```bash
+amauta config set [OPTIONS] KEY VALUE
+
+Arguments:
+  KEY             Configuration key to set [required]
+  VALUE           Value to set [required]
+
+Options:
+  --temp/--no-temp                       Set value temporarily (won't persist to config file) [default: no-temp]
+  --help                                 Show this message and exit
+```
+
+#### `config get`
+Get configuration value(s).
+
+```bash
+amauta config get [OPTIONS] [KEY]
+
+Arguments:
+  KEY             Configuration key to get
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `config init`
+Initialize a new configuration file.
+
+```bash
+amauta config init [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `config reset`
+Reset configuration to default values.
+
+```bash
+amauta config reset [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `config export`
+Export configuration to a file.
+
+```bash
+amauta config export [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `config import`
+Import configuration from a file.
+
+```bash
+amauta config import [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `config sources`
+Show all sources for a configuration value.
+
+```bash
+amauta config sources [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+### Template Commands
+
+#### `template list`
+List all available task templates.
+
+```bash
+amauta template list [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `template show`
+Show details of a specific template.
+
+```bash
+amauta template show [OPTIONS] ID
+
+Arguments:
+  ID              ID of the template to show [required]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `template create`
+Create a new task template.
+
+```bash
+amauta template create [OPTIONS]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `template apply`
+Apply a template to create new task items.
+
+```bash
+amauta template apply [OPTIONS] TEMPLATE_ID
+
+Arguments:
+  TEMPLATE_ID     ID of the template to apply [required]
+
+Options:
+  --help           Show this message and exit
+```
+
+#### `template delete`
+Delete a task template.
+
+```bash
+amauta template delete [OPTIONS] ID
+
+Arguments:
+  ID              ID of the template to delete [required]
+
+Options:
+  --help           Show this message and exit
+```
+
+## 📝 Task Management
+
+AMAUTA provides a comprehensive task management system:
+
+### Hierarchical Task Structure
+
+- **Epics:** High-level features or initiatives
+- **Tasks:** Individual development tasks
+- **Stories:** User-focused requirements
+- **Issues:** Bugs or technical debt
+
+### Task Management Workflow
+
+1. **Create high-level Epics**:
+   ```bash
+   # Create Epic for a major feature
+   amauta task add --type=Epic --prompt="Build user authentication system with social login options"
+   ```
+
+2. **Expand Epics into Tasks**:
+   ```bash
+   # Find the Epic ID first
+   amauta task list --type=Epic
+   
+   # Expand with research-enhanced capabilities (uses Perplexity + Anthropic)
+   amauta task expand --id=EPIC-ID --research
+   ```
+
+3. **Track task progress**:
+   ```bash
+   # Start working on a task
+   amauta task set-status TASK-ID "in-progress"
+   
+   # Complete a task
+   amauta task set-status TASK-ID "done"
+   
+   # Mark an Epic and all its children as complete
+   amauta task set-status EPIC-ID "done" --cascade
+   ```
+
+4. **Manage task relationships**:
+   ```bash
+   # Create a subtask
+   amauta task add --type=Task --parent=PARENT-ID --title="Implement password reset"
+   
+   # Add a dependency (TASK-A depends on TASK-B)
+   amauta task add-dependency TASK-A TASK-B
+   
+   # Validate the dependency graph
+   amauta task validate-dependencies
+   ```
+
+5. **Update task details**:
+   ```bash
+   # Update a single task
+   amauta task update TASK-ID --priority=high --description="Updated description"
+   
+   # Update a task and propagate changes to related tasks
+   amauta task update-cascade TASK-ID --prompt="Switch from JWT to session-based auth"
+   ```
+
+For more task management commands and examples, see the [Task Management documentation](./docs/ENHANCED_DOCUMENTATION.md#task-management).
+
+## 📚 Documentation
+
+AMAUTA provides comprehensive documentation:
+
+- [Quick Start Guide](./docs/QUICKSTART.md) - Get up and running in minutes
+- [Enhanced Documentation](./docs/ENHANCED_DOCUMENTATION.md) - Detailed guide to all features
+- [Best Practices](./docs/ENHANCED_DOCUMENTATION.md#best-practices) - Recommended usage patterns
+- [Workflow Patterns](./docs/ENHANCED_DOCUMENTATION.md#workflow-patterns) - Common workflows
+
+You can also access help directly from the command line:
+
+```bash
+# General help
+amauta --help
+
+# Command-specific help
+amauta analyze --help
+amauta task add --help
+```
+
+## ⚙️ Configuration
+
+AMAUTA is configured via several mechanisms:
+
+### Configuration Files
+
+- **`.amautarc.yaml`:** Main configuration file (created by `amauta init`)
+- **`.env`:** Environment variables file for API keys and secrets
+- **`tasks.json`:** Task storage file (managed by AMAUTA)
+
+### AI Provider Configuration
+
+The `.amautarc.yaml` file contains settings for AI providers:
+
+```yaml
+ai:
+  anthropic:
+    provider: "anthropic"
+    default_model: "claude-3-5-sonnet-latest"
+    api_key_env_var: "ANTHROPIC_API_KEY"
+    version: "0.49.0+"
+    capabilities:
+      - "general"
+      - "code"
+      - "task"
+      - "analysis"
+  
+  perplexipy:
+    provider: "perplexipy"
+    default_model: "sonar-medium-online"
+    api_key_env_var: "PERPLEXITY_API_KEY"
+    version: "1.2.0+"
+    capabilities:
+      - "research"
+      - "general"
+      - "code"
+
+provider_preferences:
+  general: ["anthropic", "perplexipy"]
+  research: ["perplexipy", "anthropic"]
+  code: ["anthropic", "perplexipy"]
+  analysis: ["anthropic", "perplexipy"]
+  task: ["anthropic", "perplexipy"]
+```
+
+### Configuration Commands
+
+```bash
+# List all configuration settings
+amauta config list
+
+# Get a specific setting
+amauta config get ai.anthropic.default_model
+
+# Update a setting
+amauta config set ai.perplexipy.default_model "sonar-medium-online"
+
+# Reset configuration
+amauta config reset
+```
+
+For detailed configuration options, see [AI Provider Configuration](./docs/ENHANCED_DOCUMENTATION.md#ai-provider-configuration).
+
+## 👥 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+For major changes, please open an issue first to discuss what you would like to change.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
