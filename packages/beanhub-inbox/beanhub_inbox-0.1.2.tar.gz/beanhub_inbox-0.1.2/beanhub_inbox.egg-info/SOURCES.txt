@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+beanhub_inbox/__init__.py
+beanhub_inbox/data_types.py
+beanhub_inbox/processor.py
+beanhub_inbox.egg-info/PKG-INFO
+beanhub_inbox.egg-info/SOURCES.txt
+beanhub_inbox.egg-info/dependency_links.txt
+beanhub_inbox.egg-info/requires.txt
+beanhub_inbox.egg-info/top_level.txt
+tests/test_processor.py
