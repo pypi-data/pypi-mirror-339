@@ -1,0 +1,8 @@
+setup.py
+myawesomepkg/__init__.py
+myawesomepkg/core.py
+myawesomepkg/d.py
+myawesomepkg.egg-info/PKG-INFO
+myawesomepkg.egg-info/SOURCES.txt
+myawesomepkg.egg-info/dependency_links.txt
+myawesomepkg.egg-info/top_level.txt
