@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+django_signal_handler.egg-info/PKG-INFO
+django_signal_handler.egg-info/SOURCES.txt
+django_signal_handler.egg-info/dependency_links.txt
+django_signal_handler.egg-info/requires.txt
+django_signal_handler.egg-info/top_level.txt
+signal_handler/__init__.py
+signal_handler/handlers.py
+tests/test_handlers.py
