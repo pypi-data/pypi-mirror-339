@@ -1,0 +1,13 @@
+mlchemy/__init__.py,sha256=OT8pn5oh9slpB_u5xsb1ICy4KRNesCWMIrfn_gSqASk,338
+mlchemy/config.py,sha256=IWKrc32eELkNsoLhFMAOleUJtWRPHSUi2_GvNptPM58,5862
+mlchemy/model.py,sha256=p2gHZT896Me0AwqEisC98XzPzMSIkVkkAX2JuJrRDL0,993
+mlchemy/preprocessing.py,sha256=pUkSH2YWnX7lmLd9mfeUZmGdqLhBghjqjUwgFPuyroA,770
+mlchemy/trainer.py,sha256=Cfx4jLbNxGuI-Rwbyu2W8NEDZ430el8hFTCh7Dw1yo0,18746
+mlchemy/utils.py,sha256=rPK0GSU5Awq9QMgm2Ot6mPkbuNaHvjABMQVWfE1zkFs,4069
+mlchemy/validation.py,sha256=XsjDVIjriO69-F5PIA1vLa-UtdBHzn4N0e5rhImbvAQ,195
+mlchemy-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+mlchemy-0.0.1.dist-info/METADATA,sha256=129IYcYsy5GtajqN-TV4pM8ROhCmnhXY-LnWG1h5F2g,1939
+mlchemy-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+mlchemy-0.0.1.dist-info/entry_points.txt,sha256=Q7Lku0WbYIoczU_b1-cE_MLJJEqlwTbXOJLpVlL4Czw,50
+mlchemy-0.0.1.dist-info/top_level.txt,sha256=p8Z0OVGm0H6TNervPDyVixMMkPJEhKes_1usGk-JoBc,8
+mlchemy-0.0.1.dist-info/RECORD,,
