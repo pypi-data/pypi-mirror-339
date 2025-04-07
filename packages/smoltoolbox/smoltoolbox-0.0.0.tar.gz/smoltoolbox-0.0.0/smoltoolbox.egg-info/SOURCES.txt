@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+smoltoolbox/__init__.py
+smoltoolbox.egg-info/PKG-INFO
+smoltoolbox.egg-info/SOURCES.txt
+smoltoolbox.egg-info/dependency_links.txt
+smoltoolbox.egg-info/top_level.txt
