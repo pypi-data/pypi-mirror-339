@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: notionary
+Version: 0.1.0
+Summary: A toolkit to convert between Markdown and Notion blocks
+Home-page: https://github.com/mathisarends/notionary
+Author: Mathis Arends
+Author-email: mathisarends27@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: notion-client>=2.0.0
+Requires-Dist: markdown-it-py>=3.0.0
+Requires-Dist: beautifulsoup4>=4.13.0
+Requires-Dist: httpx>=0.28.0
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: lxml>=5.3.0
+Requires-Dist: attrs>=25.3.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# ðŸ§  Notionary
+
+**Notionary** is a Python toolkit that enables seamless conversion between **Markdown** and **Notion blocks**, making it easier to build, edit, and format Notion pages programmatically.
+
+---
+
+## âœ¨ Features
+
+- Convert Markdown strings into Notion block structures
+- Convert Notion blocks back into Markdown
+- Register and manage custom Notion block elements
+- Generate LLM-ready prompts to explain your Markdown extensions
+- Support for rich text formatting, inline styles, and block-level elements
