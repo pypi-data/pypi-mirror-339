@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+mcscan.egg-info/PKG-INFO
+mcscan.egg-info/SOURCES.txt
+mcscan.egg-info/dependency_links.txt
+mcscan.egg-info/entry_points.txt
+mcscan.egg-info/requires.txt
+mcscan.egg-info/top_level.txt
