@@ -1,0 +1,170 @@
+Introducing AppLLM, AI-powered app developer.
+
+Create your AI application just with your natural language.
+
+And you are able to deploy directly from here.
+
+So here are some examples.
+
+So these are created by AppLLM.
+
+And these are really nice.
+
+You don't need to know coding.
+
+Here is an example where we are providing an instruction on what to build.
+
+So that is the landing page for a party event.
+
+So it automatically created the page for me.
+
+This is really nice.
+
+And you are able to deploy directly from the interface itself.
+
+And I'm going to show you step by step how you can do this
+
+and how easy it is to build application like this.
+
+All of these features included in chat LLM for teams just for $10 per month.
+
+That is really nice.
+
+Because you get all these features of accessing to state-of-the-art large-language models.
+
+These are top-performing models with Internet search, deep research, create image,
+
+create videos, chat with your documents and much more.
+
+AppLLM, CodeLLM and ChatLLM all included with this price.
+
+I'll put the link in the description for you to sign up.
+
+Now let's get started.
+
+So once after you sign up, you'll be presented with a screen like this.
+
+So here you got AppLLM, Operator, AI Engineer and CodeLLM.
+
+So for now I'm going to click AppLLM.
+
+And here is the interface.
+
+So I'm going to give this description.
+
+I want to build a simple calorie and macro tracking app for daily use.
+
+Allowing users to log their food intake and showing a dashboard with visual representation and mobile responsive.
+
+Now clicking Send.
+
+Now we took the instruction and it's now building the app for us.
+
+You should be able to track the progress here on the left hand side.
+
+So first it goes to Planning phase.
+
+Then it's creating all the required files, building the application and running the application.
+
+At the end you get a U order like this.
+
+So if you want to preview the window, you can just click the preview button and your app you can preview directly here.
+
+You are able to change the responsiveness.
+
+This is the mobile version, also PowerPoint version.
+
+So you can try all this responsiveness.
+
+You are able to download the code directly by clicking this icon at the top.
+
+You're able to preview a full screen like this.
+
+These are really nice.
+
+So let's try open this application.
+
+So I'm clicking this URL.
+
+So here is the application.
+
+This is really nice.
+
+You can see the daily progress, macro distribution, logging the foot.
+
+So I'm going to add calories, 100 protein grams and fat grams and add the food.
+
+As soon as you add you can see your daily progress is changing.
+
+I can add furthermore and as soon as you add that you can see the progress here.
+
+It changes.
+
+Now I want to make few modification.
+
+Add the list of few items which I'm adding here.
+
+So I'm going to say logging foot should contain the name of the food.
+
+Also the food need to be stored and displayed on screen and clicking send.
+
+Now it's again making the required modification.
+
+As you can see here, it automatically adding the extra code.
+
+Now I got the updated app.
+
+Let's preview this application.
+
+So I've got the option to enter food name here.
+
+Just adding the food name, calories, protein, carbs and fat, adding the food.
+
+And I can clearly see the food item getting stored as per our request.
+
+That is really nice.
+
+Let's try deleting it and I'm able to delete it.
+
+So this is all really nice.
+
+If you find any issues with this page, just right click inspect the element and in the console you should be able to see any error message.
+
+So if any error, just copy the error message which is shown here.
+
+Then you can paste that in this box.
+
+So it understands the real issue and fix the error.
+
+Similarly, if any of the buttons or icons doesn't work in this UI, you can just let the AI knows about that.
+
+And it goes and automatically fix those issues.
+
+And finally, one click deployment.
+
+So I'm going to click deploy.
+
+I got the deployed to production here.
+
+So I'm going to type calorie tracker and deploy.
+
+Seems like the host name already in use.
+
+Let me try calorie tracker too.
+
+So yeah, I've got the app deployed in this URL.
+
+So I'm going to open it.
+
+And now I can see that application in that URL as you can see here.
+
+This is really nice.
+
+Do let me know in the comments below what you think about this.
+
+Considering you already like chat LLM, I also created another video.
+
+It's about code LLM which I recently created, which I highly recommend for you to watch because this features is included in that $10.
+
+So do watch that and I will see you there.
+

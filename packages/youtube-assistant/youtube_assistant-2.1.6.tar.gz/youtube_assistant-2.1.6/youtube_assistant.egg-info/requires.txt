@@ -1,0 +1,7 @@
+yt-dlp
+openai-whisper
+requests
+python-dotenv
+torch
+ffmpeg-python
+tqdm
