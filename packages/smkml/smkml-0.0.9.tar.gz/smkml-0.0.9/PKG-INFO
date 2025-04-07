@@ -1,0 +1,75 @@
+Metadata-Version: 2.4
+Name: smkml
+Version: 0.0.9
+Summary: A unified machine learning toolkit for classification, clustering, distance metrics, and model analysis—optimized for both supervised and unsupervised tasks.
+Author: Vansh Gautam
+Author-email: vanshgautam2005@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# SMKML - Hybrid Machine Learning Algorithm
+
+🚀 SMK: Supervised + Unsupervised Machine Learning Toolkit
+SMK (smkml) is a unified Python library for seamlessly performing classification and clustering, with built-in support for SVM, KMeans, custom distance metrics, visualization, and limitations analysis. Ideal for learners, researchers, and rapid prototyping.
+
+
+
+## Features
+-> ✅ SVM Classification with optional Grid Search (hyperparameter tuning)
+
+-> 🔄 KMeans Clustering with PCA visualization
+
+-> 📐 Built-in Distance Metrics:
+
+    => Euclidean
+
+    => Manhattan
+
+    => Minkowski (configurable p)
+
+-> 📊 Visualization of clusters (2D PCA)
+
+-> ⚠️ Insights: Understand limitations of SVM and k-NN
+
+-> 💡 Unified API: Same interface for supervised & unsupervised learning
+
+## Installation
+```bash
+pip install smkml
+
+"Quick Start"
+
+from smkml import SMK
+from sklearn.datasets import make_classification
+from sklearn.model_selection import train_test_split
+
+# Create synthetic classification data
+X, y = make_classification(n_samples=300, n_features=10, n_informative=8, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+# Initialize SMK with Grid Search enabled
+model = SMK(enable_grid_search=True)
+
+# Train model
+model.fit(X_train, y_train)
+
+# Evaluate
+acc = model.score(X_test, y_test)
+print("✅ Accuracy:", acc)
+
+# Predict
+preds = model.predict(X_test)
+
