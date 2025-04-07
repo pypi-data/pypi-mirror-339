@@ -1,0 +1,11 @@
+- id: cmake-presets-exploder
+  name: cmake-presets-exploder
+  description: "Generate all combinations of CMake Presets from a template file"
+  entry: cmake-presets-exploder
+  args:
+    - --output=CMakePresets.json
+    - CMakePresetsMatrixTemplate.json
+  language: python
+  additional_dependencies: [".[yaml,jinja2,toml]"]
+  files: 'CMakePresets(MatrixTemplate)?\.json'
+  pass_filenames: false

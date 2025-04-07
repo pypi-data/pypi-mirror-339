@@ -1,0 +1,37 @@
+name: Tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  pre-commit:
+    name: Pre-commit checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Run pre-commit checks
+        uses: pre-commit/action@v3.0.1
+  test:
+    strategy:
+      matrix:
+        pyversion: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+    name: Test / Python ${{ matrix.pyversion }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.pyversion }}
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - name: Install dependencies
+        run: uv sync --all-extras --locked
+      - name: Type checking
+        run: uv run mypy .
+      - name: Run tests
+        run: uv run pytest -v
