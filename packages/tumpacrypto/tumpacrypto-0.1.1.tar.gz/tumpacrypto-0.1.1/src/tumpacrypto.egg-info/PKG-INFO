@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: tumpacrypto
+Version: 0.1.1
+Summary: Cryptography implementations
+Author: Bombolcat
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+License-File: LICENSE
+Dynamic: license-file
+
+# Cryptographer
+
+Cryptographer is a Python package that implements SDES, RSA, and ElGamal cryptographic algorithms.
+
+## Installation
+
+To install the package, use:
+
+```
+pip install cryptographer
+```
+
+## Usage
+
+Import specific modules like this:
+
+```python
+from cryptographer import rsa
+```
+
+## License
+
+This project is licensed under the MIT License.
