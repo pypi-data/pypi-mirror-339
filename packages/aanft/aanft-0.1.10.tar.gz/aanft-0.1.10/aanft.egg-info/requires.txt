@@ -1,0 +1,6 @@
+aiofiles
+aiohttp
+asyncio
+loguru
+typing
+typing_extensions
