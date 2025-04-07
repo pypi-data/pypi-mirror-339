@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+llama_index_supervisor/__init__.py
+llama_index_supervisor/agent_name.py
+llama_index_supervisor/events.py
+llama_index_supervisor/handoff.py
+llama_index_supervisor/supervisor.py
+llama_index_supervisor.egg-info/PKG-INFO
+llama_index_supervisor.egg-info/SOURCES.txt
+llama_index_supervisor.egg-info/dependency_links.txt
+llama_index_supervisor.egg-info/requires.txt
+llama_index_supervisor.egg-info/top_level.txt
