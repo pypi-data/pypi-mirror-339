@@ -1,0 +1,17 @@
+plomp/__init__.py,sha256=Cn550JiuOF5LYhOI0SPuhzUkwjMU9nYVqRSE9CF6RD0,6952
+plomp/_buffer_items.py,sha256=WS0-Wqa0A2zLq3UnGmAlYfsEEOUldI1X2dYnPdLW1co,3985
+plomp/_core.py,sha256=-e6Kc-8OmkYoPRGOTu7ZOG82vcXj2ZYrhgN0aIQ8sAc,4168
+plomp/_progress.py,sha256=R-ZjXDkgmn_h8b5XBEy3pAOje33vb0MMWt8qPFzC6s0,830
+plomp/_query.py,sha256=QIyWF9aqMld4QlVXvWw8E18FMZTNbY2nnjaekQ4Pm_Q,6534
+plomp/_types.py,sha256=97GT1GspPv6N8ItIZIBhp79CFhxtRVbgzRgK9_uk3P4,120
+plomp/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plomp/resources/__pycache__/__init__.cpython-310.pyc,sha256=NorPOU_szPDXDv9IkaBb_lxK782wylqsiP0--QD3BXE,156
+plomp/resources/__pycache__/__init__.cpython-311.pyc,sha256=OvTEMhMwfFiqOR84nomKvjGuN4ZqJJjg6Vk0LNOwJa0,172
+plomp/resources/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plomp/resources/templates/index.html,sha256=-7KaJgHcSeI_4NG2uk5dx3XiFnPify7c8dkeFCIgMes,43941
+plomp/resources/templates/__pycache__/__init__.cpython-310.pyc,sha256=zYUQ5F64_WHGyM7e4rf_3aIY0ddrbrv26lUNvfQ0miA,166
+plomp/resources/templates/__pycache__/__init__.cpython-311.pyc,sha256=ErMUVOGZFd63Wxrb734AjrL0Eul_s2qMU_Q6EvvfN4g,182
+plomp-0.1.3.dist-info/METADATA,sha256=PSw2fESIrWi_FWEOBUkF-hdgttI7ZzHK27Gk4oKIuao,3816
+plomp-0.1.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+plomp-0.1.3.dist-info/top_level.txt,sha256=dzo4j7vs6n8FBTsMVd1rXLduejMOdavaAf3PYie2Bgs,6
+plomp-0.1.3.dist-info/RECORD,,
