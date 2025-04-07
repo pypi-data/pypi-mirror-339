@@ -1,0 +1,22 @@
+[build-system]
+requires = ["maturin>=1.8,<1.9"]
+build-backend = "maturin"
+
+[project]
+name = "elo_calculator"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = ["version"]
+
+[dependencies]
+# maturin = "1.4.0" # Removed build dependency
+# rustimport = "1.4.0" # Removed build dependency
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = "elo_calculator"
+manifest-path = "python_bindings/Cargo.toml"
