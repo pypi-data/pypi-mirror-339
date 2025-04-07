@@ -1,0 +1,116 @@
+Metadata-Version: 2.4
+Name: sanic_sessions
+Version: 0.1.0
+Summary: Server-backed sessions for Sanic with Redis, Memcache, and MongoDB support
+Home-page: https://github.com/aime-labs/sanic-sessions
+Author: Khaled Abdel Moezz
+Author-email: khaled.a.moezz@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/aime-labs/sanic-sessions
+Project-URL: Tracker, https://github.com/aime-labs/sanic-sessions
+Keywords: sanic,sessions,async,redis,memcache,mongodb
+Classifier: Framework :: AsyncIO
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet :: WWW/HTTP :: Session
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sanic>=21.12.0
+Requires-Dist: ujson>=5.4.0
+Provides-Extra: aioredis
+Requires-Dist: aioredis>=2.0.0; extra == "aioredis"
+Provides-Extra: redis
+Requires-Dist: asyncio_redis>=0.16.0; extra == "redis"
+Provides-Extra: mongo
+Requires-Dist: sanic_motor>=2.1.0; extra == "mongo"
+Requires-Dist: pymongo>=4.0.0; extra == "mongo"
+Provides-Extra: memcache
+Requires-Dist: aiomcache>=0.7.0; extra == "memcache"
+Provides-Extra: full
+Requires-Dist: aioredis>=2.0.0; extra == "full"
+Requires-Dist: asyncio_redis>=0.16.0; extra == "full"
+Requires-Dist: sanic_motor>=2.1.0; extra == "full"
+Requires-Dist: pymongo>=4.0.0; extra == "full"
+Requires-Dist: aiomcache>=0.7.0; extra == "full"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.20.0; extra == "dev"
+Requires-Dist: pytest-cov>=3.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: isort>=5.10.0; extra == "dev"
+Requires-Dist: mypy>=0.950; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Requires-Dist: wheel>=0.37.0; extra == "dev"
+Requires-Dist: twine>=4.0.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=5.0.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.0.0; extra == "docs"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Sanic session management
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+
+`sanic_sessions` is session management extension for [Sanic](https://sanic.dev) that integrates server-backed sessions with most convenient API.
+
+`sanic_sessions` provides a number of *session interfaces* for you to store a client's session data. The interfaces available right now are:
+
+  * Redis (supports both drivers `aioredis` and `asyncio_redis`)
+  * Memcache (via `aiomcache`)
+  * Mongodb (via `sanic_motor` and `pymongo`)
+  * In-Memory (suitable for testing and development environments)
+
+## Installation
+
+Install with `pip` (there is other options for different drivers, check documentation):
+
+`pip install sanic_sessions`
+
+
+## Example
+
+A simple example uses the in-memory session interface.
+
+```python
+from sanic import Sanic
+from sanic.response import text
+from sanic_sessions import Session, InMemorySessionInterface
+
+app = Sanic(name="ExampleApp")
+session = Session(app, interface=InMemorySessionInterface())
+
+@app.route("/")
+async def index(request):
+    # interact with the session like a normal dict
+    if not request.ctx.session.get('foo'):
+        request.ctx.session['foo'] = 0
+
+    request.ctx.session['foo'] += 1
+
+    return text(str(request.ctx.session["foo"]))
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8000)
