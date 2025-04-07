@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: pyegm
+Version: 0.2.0
+Summary: Explosion Generation Model (EGM) classifier
+Author-email: CJiangqiu <17787153839@qq.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/CJiangqiu/PyEGM
+Project-URL: Documentation, https://github.com/CJiangqiu/PyEGM#readme
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: scikit-learn>=1.0.0
+Requires-Dist: typing-extensions>=4.0.0; python_version < "3.8"
+Dynamic: license-file
+
+# PyEGM: Explosive Generative Model for Classification
+
+PyEGM is an evolving geometric model (EGM) classifier designed for incremental learning. It generates new training points during each iteration and adapts its geometry based on the input data. This allows it to improve over time and make accurate predictions even as the data evolves.
+
+## 🌟 Key Features
+
+- **Dual Generation Modes**
+  - 🎯 **Hypersphere Generation**: Creates samples on dimensional spheres
+  - 🌌 **Gaussian Generation**: Produces samples through probabilistic dispersion
+
+- **Dynamic Adaptation**
+  - 🔍 Local/Global radius adjustment strategies
+  - ⚖️ Automatic sample pruning with decay mechanism
+  - 📈 Adaptive density-aware scaling
+
+- **Practical Advantages**
+  - 🚀 Built-in incremental learning capability
+  - 🛡️ Robust to class imbalance through proportional generation
+  - ⚡ Efficient neighbor search with NN indexing
+
+## Installation
+To install PyEGM, you can simply use pip:
+```python
+pip install pyegm
+```
