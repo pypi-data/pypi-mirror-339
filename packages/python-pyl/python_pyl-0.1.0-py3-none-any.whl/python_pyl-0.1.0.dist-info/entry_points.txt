@@ -1,0 +1,2 @@
+[console_scripts]
+pyl = pyl:main
