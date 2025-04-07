@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: xulantest
+Version: 0.1.1
+Summary: XuLan test
+License: MIT
+Keywords: test
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.32.3
+Dynamic: license-file
+
+## 这是XuLan的测试上传
