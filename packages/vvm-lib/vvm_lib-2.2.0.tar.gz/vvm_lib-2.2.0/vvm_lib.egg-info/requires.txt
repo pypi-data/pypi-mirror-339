@@ -1,0 +1,6 @@
+pandas
+gspread
+google-auth-oauthlib
+google-auth
+xlsxwriter
+oauth2client
