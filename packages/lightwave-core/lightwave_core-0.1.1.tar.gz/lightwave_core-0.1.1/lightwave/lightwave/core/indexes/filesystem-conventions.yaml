@@ -1,0 +1,107 @@
+conventions: {}
+structures:
+  Common Project: "text\nrepository-name/\n\u251C\u2500\u2500 README.md
+    \     # Project overview and quickstart\n\u251C\u2500\u2500 CONTRIBUTING.md
+    \       # Contribution guidelines\n\u251C\u2500\u2500 LICENSE
+    \ # Project license\n\u251C\u2500\u2500 CHANGELOG.md            # Version history
+    \ and changes\n\u251C\u2500\u2500 .github/                # GitHub specific files\n
+    \u2502   \u251C\u2500\u2500 workflows/          # GitHub Actions workflows\n\u2502
+    \   \u2514\u2500\u2500 ISSUE_TEMPLATE/     # Issue templates\n\u251C\u2500\u2500
+    \ docs/                   # Documentation\n\u251C\u2500\u2500 src/
+    \         # Source code\n\u2502   \u251C\u2500\u2500 backend/            # Backend
+    \ code\n\u2502   \u2514\u2500\u2500 frontend/           # Frontend code\n\u251C
+    \u2500\u2500 tests/                  # Test files\n\u251C\u2500\u2500 scripts/
+    \                # Utility scripts\n\u251C\u2500\u2500 config/
+    \  # Configuration files\n\u2514\u2500\u2500 .editorconfig           # Editor
+    \ configuration"
+  Django Application: "text\ndjango-application/\n\u251C\u2500\u2500 src/backend/\n
+    \u2502   \u251C\u2500\u2500 config/             # Project settings\n\u2502   \u2502
+    \   \u251C\u2500\u2500 settings/       # Environment-specific settings\n\u2502
+    \   \u2502   \u251C\u2500\u2500 urls.py         # URL routing\n\u2502   \u2502
+    \   \u2514\u2500\u2500 wsgi.py         # WSGI configuration\n\u2502   \u251C\u2500
+    \u2500 apps/               # Django applications\n\u2502   \u2502   \u251C\u2500
+    \u2500 users/          # User management app\n\u2502   \u2502   \u2502   \u251C
+    \u2500\u2500 __init__.py\n\u2502   \u2502   \u2502   \u251C\u2500\u2500 admin.py
+    \    # Admin interface\n\u2502   \u2502   \u2502   \u251C\u2500\u2500 apps.py
+    \     # App configuration\n\u2502   \u2502   \u2502   \u251C\u2500\u2500 models.py
+    \   # Data models\n\u2502   \u2502   \u2502   \u251C\u2500\u2500 serializers.py
+    \ # API serializers\n\u2502   \u2502   \u2502   \u251C\u2500\u2500 services.py
+    \ # Business logic\n\u2502   \u2502   \u2502   \u251C\u2500\u2500 urls.py
+    \ # URL patterns\n\u2502   \u2502   \u2502   \u2514\u2500\u2500 views.py    #
+    \ View controllers\n\u2502   \u2502   \u2514\u2500\u2500 # Other apps following
+    \ the same structure\n\u2502   \u251C\u2500\u2500 core/               # Core functionality\n
+    \u2502   \u2502   \u251C\u2500\u2500 __init__.py\n\u2502   \u2502   \u251C\u2500
+    \u2500 middleware.py   # Custom middleware\n\u2502   \u2502   \u251C\u2500\u2500
+    \ exceptions.py   # Custom exceptions\n\u2502   \u2502   \u2514\u2500\u2500 utils.py
+    \        # Utility functions\n\u2502   \u251C\u2500\u2500 templates/
+    \ # HTML templates\n\u2502   \u2502   \u251C\u2500\u2500 base.html       # Base
+    \ template\n\u2502   \u2502   \u2514\u2500\u2500 # App-specific templates\n\u2502
+    \   \u251C\u2500\u2500 static/             # Static files\n\u2502   \u2502   \u251C
+    \u2500\u2500 css/            # CSS files\n\u2502   \u2502   \u251C\u2500\u2500
+    \ js/             # JavaScript files\n\u2502   \u2502   \u2514\u2500\u2500 images/
+    \         # Image files\n\u2502   \u2514\u2500\u2500 manage.py           # Django
+    \ management script\n\u251C\u2500\u2500 tests/                  # Test files\n
+    \u2502   \u251C\u2500\u2500 conftest.py         # Test configuration\n\u2502
+    \  \u251C\u2500\u2500 factories.py        # Test factories\n\u2502   \u2514\u2500
+    \u2500 # Test modules\n\u2514\u2500\u2500 requirements/           # Dependency
+    \ files\n    \u251C\u2500\u2500 base.txt            # Base requirements\n    \u251C
+    \u2500\u2500 dev.txt             # Development requirements\n    \u2514\u2500\u2500
+    \ prod.txt            # Production requirements"
+  Frontend Application: "text\nfrontend-application/\n\u251C\u2500\u2500 src/frontend/\n
+    \u2502   \u251C\u2500\u2500 public/             # Public assets\n\u2502   \u2502
+    \   \u251C\u2500\u2500 index.html      # HTML entry point\n\u2502   \u2502   \u251C
+    \u2500\u2500 favicon.ico     # Favicon\n\u2502   \u2502   \u2514\u2500\u2500 robots.tx
+    \      # Robots file\n\u2502   \u251C\u2500\u2500 src/                # Source
+    \ code\n\u2502   \u2502   \u251C\u2500\u2500 components/     # UI components\n
+    \u2502   \u2502   \u2502   \u251C\u2500\u2500 common/     # Common components\n
+    \u2502   \u2502   \u2502   \u2502   \u251C\u2500\u2500 Button.tsx\n\u2502   \u2502
+    \   \u2502   \u2502   \u251C\u2500\u2500 Card.tsx\n\u2502   \u2502   \u2502
+    \ \u2502   \u2514\u2500\u2500 # Other common components\n\u2502   \u2502   \u2502
+    \   \u2514\u2500\u2500 # Feature-specific components\n\u2502   \u2502   \u251C
+    \u2500\u2500 pages/          # Page components\n\u2502   \u2502   \u2502   \u251C
+    \u2500\u2500 Home.tsx    # Home page\n\u2502   \u2502   \u2502   \u251C\u2500\u2500
+    \ Dashboard.tsx # Dashboard page\n\u2502   \u2502   \u2502   \u2514\u2500\u2500
+    \ # Other pages\n\u2502   \u2502   \u251C\u2500\u2500 hooks/          # Custom
+    \ hooks\n\u2502   \u2502   \u251C\u2500\u2500 contexts/       # React contexts\n
+    \u2502   \u2502   \u251C\u2500\u2500 services/       # API services\n\u2502
+    \ \u2502   \u2502   \u251C\u2500\u2500 api.ts      # API client\n\u2502   \u2502
+    \   \u2502   \u251C\u2500\u2500 auth.ts     # Authentication service\n\u2502
+    \  \u2502   \u2502   \u2514\u2500\u2500 # Other services\n\u2502   \u2502   \u251C
+    \u2500\u2500 utils/          # Utility functions\n\u2502   \u2502   \u251C\u2500
+    \u2500 types/          # TypeScript type definitions\n\u2502   \u2502   \u251C
+    \u2500\u2500 assets/         # Static assets\n\u2502   \u2502   \u2502   \u251C
+    \u2500\u2500 images/     # Image files\n\u2502   \u2502   \u2502   \u2514\u2500
+    \u2500 styles/     # Global styles\n\u2502   \u2502   \u251C\u2500\u2500 App.tsx
+    \         # Main application component\n\u2502   \u2502   \u251C\u2500\u2500 index.tsx
+    \       # Application entry point\n\u2502   \u2502   \u2514\u2500\u2500 routes.tsx
+    \      # Route definitions\n\u2502   \u251C\u2500\u2500 package.json        #
+    \ Dependencies and scripts\n\u2502   \u251C\u2500\u2500 tsconfig.json       #
+    \ TypeScript configuration\n\u2502   \u2514\u2500\u2500 .eslintrc.js        #
+    \ ESLint configuration\n\u2514\u2500\u2500 tests/                  # Test files\n
+    \    \u251C\u2500\u2500 setupTests.ts       # Test setup\n    \u2514\u2500\u2500
+    \ # Test files"
+  Infrastructure as Code: "text\nterraform/\n\u251C\u2500\u2500 modules/
+    \       # Reusable Terraform modules\n\u2502   \u251C\u2500\u2500 networking/
+    \         # Networking module\n\u2502   \u2502   \u251C\u2500\u2500 main.tf
+    \       # Main configuration\n\u2502   \u2502   \u251C\u2500\u2500 variables.tf
+    \    # Input variables\n\u2502   \u2502   \u251C\u2500\u2500 outputs.tf      #
+    \ Output values\n\u2502   \u2502   \u2514\u2500\u2500 README.md       # Module
+    \ documentation\n\u2502   \u251C\u2500\u2500 database/           # Database module\n
+    \u2502   \u2502   \u2514\u2500\u2500 # Similar structure\n\u2502   \u2514\u2500
+    \u2500 # Other modules\n\u251C\u2500\u2500 environments/           # Environment-specific
+    \ configurations\n\u2502   \u251C\u2500\u2500 dev/                # Developmen
+    \ environment\n\u2502   \u2502   \u251C\u2500\u2500 main.tf         # Main configuration\n
+    \u2502   \u2502   \u251C\u2500\u2500 variables.tf    # Environment variables\n
+    \u2502   \u2502   \u2514\u2500\u2500 terraform.tfvars # Variable values\n\u2502
+    \   \u251C\u2500\u2500 staging/            # Staging environment\n\u2502   \u2502
+    \   \u2514\u2500\u2500 # Similar structure\n\u2502   \u2514\u2500\u2500 production/
+    \         # Production environment\n\u2502       \u2514\u2500\u2500 # Similar
+    \ structure\n\u2514\u2500\u2500 scripts/                # Terraform scripts\n
+    \    \u251C\u2500\u2500 init.sh             # Initialization script\n    \u2514
+    \u2500\u2500 apply.sh            # Apply script"
+naming: {}
+guidelines: {}
+metadata:
+  title: LightWave Ecosystem Filesystem Conventions
+  source_file: filesystem-conventions.md
+  generation_time: '2025-03-17T21:28:48.161395'

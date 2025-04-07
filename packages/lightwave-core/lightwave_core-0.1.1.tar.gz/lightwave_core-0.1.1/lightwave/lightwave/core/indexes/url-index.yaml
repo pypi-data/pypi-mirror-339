@@ -1,0 +1,259 @@
+sections:
+  Table of Contents: '1. [Production URLs](#production-urls)
+
+    2. [URL Structure](#url-structure)
+
+    3. [GitHub Repositories](#github-repositories)
+
+    4. [Implementation Guidelines](#implementation-guidelines)
+    
+    5. [Mobile & Desktop Apps](#mobile-desktop-apps)
+    
+    6. [CDN & Asset URLs](#cdn-asset-urls)
+    
+    7. [Webhook Endpoints](#webhook-endpoints)
+    
+    8. [URL Redirects & Canonical URLs](#url-redirects-canonical-urls)
+    
+    9. [Internationalization Patterns](#internationalization-patterns)'
+  Production URLs: "> **Important**: All production URLs follow the pattern `{subdomain}.{domain}.{tld}`.
+    \ Each application maintains its own domain for complete isolation and security.\n
+    \n### Central Platform\n\n- **CreateOS**: <https://createos.io>
+    \     (Central business management platform)\n  - **Admin**: <https://admin.createos.io>
+    \              (System administration and CMS)\n  - **Auth**: <https://auth.createos.io>
+    \                (Centralized authentication service)\n  - **API**: <https://api.createos.io>
+    \                  (Core API endpoints)\n  - **App**: <https://app.createos.io>
+    \                  (Main web application)\n  - **CDN**: <https://cdn.createos.io>
+    \                  (Cloudflare R2 CDN for assets)\n\n### Professional Applications\n
+    \n- **CineOS**: <https://cineos.io>                       (Cinematography workflow
+    \ platform)\n  - **Admin**: <https://admin.cineos.io>                (System administration
+    \ and CMS)\n  - **Auth**: <https://auth.cineos.io>                  (Application-specific
+    \ auth)\n  - **API**: <https://api.cineos.io>                    (Application
+    \ API endpoints)\n  - **App**: <https://app.cineos.io>                    (Main
+    \ web application)\n  - **Mobile**: <https://mobile.cineos.io>              (Mobile
+    \ app API)\n  - **Desktop**: <https://desktop.cineos.io>            (Desktop app
+    \ API)\n  - **CDN**: <https://cdn.cineos.io>                    (Cloudflare R2
+    \ CDN for assets)\n\n- **PhotographyOS**: <https://photographyos.io>         (Photography
+    \ workflow platform)\n  - **Admin**: <https://admin.photographyos.io>
+    \ (System administration and CMS)\n  - **Auth**: <https://auth.photographyos.io>
+    \           (Application-specific auth)\n  - **API**: <https://api.photographyos.io>
+    \             (Application API endpoints)\n  - **App**: <https://app.photographyos.io>
+    \             (Main web application)\n  - **Mobile**: <https://mobile.photographyos.io>
+    \       (Mobile app API)\n  - **Desktop**: <https://desktop.photographyos.io>
+    \     (Desktop app API)\n  - **CDN**: <https://cdn.photographyos.io>
+    \    (Cloudflare R2 CDN for assets)\n\n- **Photo Workflows**: <https://photo-workflows.com>
+    \    (Photo processing automation)\n  - **Admin**: <https://admin.photo-workflows.com>
+    \      (System administration and CMS)\n  - **Auth**: <https://auth.photo-workflows.com>
+    \        (Application-specific auth)\n  - **API**: <https://api.photo-workflows.com>
+    \          (Application API endpoints)\n  - **App**: <https://app.photo-workflows.com>
+    \          (Main web application)\n  - **Mobile**: <https://mobile.photo-workflows.com>
+    \    (Mobile app API)\n  - **Desktop**: <https://desktop.photo-workflows.com>
+    \  (Desktop app API)\n  - **CDN**: <https://cdn.photo-workflows.com>
+    \ (Cloudflare R2 CDN for assets)\n\n### Marketing Sites\n\n- **Portfolio**: <https://joelschaeffer.com>
+    \            (Portfolio, Blog & shop)\n  - **Admin**: <https://admin.joelschaeffer.com>
+    \        (Content management)\n  - **Auth**: <https://auth.joelschaeffer.com>
+    \          (Customer authentication)\n  - **API**: <https://api.joelschaeffer.com>
+    \            (Shop and portfolio API)\n  - **App**: <https://shop.joelschaeffer.com>
+    \           (E-commerce platform)\n  - **Mobile**: <https://mobile.joelschaeffer.com>
+    \      (Mobile app API)\n  - **Desktop**: <https://desktop.joelschaeffer.com>
+    \    (Desktop app API)\n  - **CDN**: <https://cdn.joelschaeffer.com>
+    \   (Cloudflare R2 CDN for assets)\n\n- **Corporate**: <https://lightwave-media.site>
+    \         (Company information)\n  - **Admin**: <https://admin.lightwave-media.site>
+    \     (Content management)\n  - **Auth**: <https://auth.lightwave-media.site>
+    \       (Staff authentication)\n  - **CDN**: <https://cdn.lightwave-media.site>
+    \         (Cloudflare R2 CDN for assets)"
+  URL Structure: "> **Note**: The URL structure follows RESTful conventions and hierarchical
+    \ organization. All endpoints use versioning (v1) for future compatibility.\n\n
+    ### Common URL Patterns\n\n#### Marketing Pages (`www.domain.io` or `.com`)\n\n
+    > **Purpose**: Public-facing marketing and information pages for each application.\n
+    \n```markdown\n# Core Pages\n/                   # Home page (Landing page)\n
+    /about/            # About us/company information\n/team/             # Team members
+    \ and roles\n/careers/          # Career opportunities\n/contact/          # Contac
+    \ information\n  /sales/          # Sales team contact\n  /support/        # Suppor
+    \ team contact\n  /partners/       # Partner inquiries\n\n# Product Information\n
+    /products/         # Product listing\n/products/_id/     # Product detail page\n
+    /pricing/          # Pricing plans\n  /compare/        # Pricing comparison tool\n
+    /features/         # Feature overview\n  /_id/            # Feature detail page\n
+    /integrations/     # Integration partners\n  /_id/            # Integration detail\n
+    /releases/         # Release notes\n  /_id/            # Release detail\n\n# Customer
+    \ Resources\n/testimonials/     # Customer success stories\n/reviews/
+    \  # Product reviews\n/resources/        # Resource center\n  /guides/
+    \  # User guides\n  /tutorials/      # Video tutorials\n  /documentation/  # Technical
+    \ documentation\n  /api/            # API documentation\n  /faq/            #
+    \ Frequently asked questions\n  /blog/           # Blog posts\n    /_id/
+    \     # Blog post detail\n\n# Community & Support\n/community/        # Community
+    \ hub\n/forum/           # Discussion forum\n  /_id/           # Forum topic\n
+    /support/         # Support center\n  /help/          # Help articles\n    /_id/
+    \         # Help article detail\n  /tickets/       # Support tickets\n    /_id/
+    \         # Ticket detail\n  /status/        # System status\n  /maintenance/
+    \   # Maintenance schedule\n  /feedback/      # Feedback form\n\n# Legal & Compliance\n
+    /legal/           # Legal information\n  /privacy/       # Privacy policy\n  /terms/
+    \         # Terms of service\n  /cookies/       # Cookie policy\n  /gdpr/
+    \      # GDPR compliance\n  /ccpa/          # CCPA compliance\n  /accessibility/
+    \ # Accessibility statement\n  /sitemap/       # Site map\n  /disclaimer/    #
+    \ Legal disclaimer\n  /licenses/      # Software licenses\n  /trademarks/    #
+    \ Trademark information\n  /copyright/     # Copyright notice\n  /compliance/
+    \    # Compliance information\n  /security/      # Security policy\n  /data/
+    \         # Data handling\n  /transparency/  # Transparency report\n\n# International\n
+    /languages/       # Language selection\n/regions/         # Regional information\n
+    \  /_id/           # Region detail\n/currency/        # Currency selection\n/units/
+    \           # Unit system selection\n/timezone/        # Timezone selection\n\n
+    # System Pages\n/404/             # Not found page\n/500/             # Server
+    \ error page\n/maintenance/     # Maintenance page\n/coming-soon/     # Coming
+    \ soon page\n/thank-you/       # Thank you page\n/confirmation/    # Confirmation
+    \ page\n/error/           # Error page\n/offline/         # Offline page\n/redirect/
+    \        # Redirect page\n```\n\n#### Main Application (`app.domain.com`)\n\n
+    > **Purpose**: Core application interface and functionality.\n\n```markdown\n
+    # Global Navigation\n/home/            # Home dashboard (app overview)\n/notifications/
+    \   # Notifications center\n/help/           # Help center\n/settings/       #
+    \ User settings\n/profile/        # User profile\n\n# Project Management\n/projects/
+    \       # Project list\n/projects/_id/   # Project detail\n  /overview/     #
+    \ Project overview\n  /dashboard/    # Project dashboard\n  /files/        # Projec
+    \ files\n  /team/         # Project team\n  /settings/     # Project settings\n
+    \  /activity/     # Project activity\n  /analytics/    # Project analytics\n
+    \ /timeline/     # Project timeline\n  /budget/       # Project budget\n  /documents/
+    \    # Project documents\n  /notes/        # Project notes\n  /tasks/        #
+    \ Project tasks\n  /calendar/     # Project calendar\n  /reports/      # Projec
+    \ reports\n\n# Resource Management\n/resources/      # Resource list\n  /files/
+    \       # File library\n  /templates/   # Template library\n  /assets/      #
+    \ Asset library\n  /media/       # Media library\n  /documents/   # Document library\n
+    \  /archives/    # Archive library\n\n# Team Collaboration\n/team/          #
+    \ Team overview\n  /members/     # Team members\n  /roles/       # Team roles\n
+    \  /permissions/ # Team permissions\n  /schedule/    # Team schedule\n  /availability/#
+    \ Team availability\n  /chat/        # Team chat\n  /meetings/    # Team meetings\n
+    \  /announcements/# Team announcements\n\n# Communication\n/communication/ # Communication
+    \ hub\n  /messages/    # Direct messages\n  /channels/    # Communication channels\n
+    \  /threads/     # Message threads\n  /announcements/# Announcements\n  /notifications/#
+    \ Notification settings\n  /preferences/ # Communication preferences\n\n# Analytics
+    \ & Reporting\n/analytics/    # Analytics dashboard\n  /overview/   # Analytics
+    \ overview\n  /reports/    # Custom reports\n  /metrics/    # Key metrics\n  /insights/
+    \   # Data insights\n  /exports/    # Data exports\n  /schedules/  # Report schedules\n
+    \  /templates/  # Report templates\n\n# Settings & Configuration\n/settings/
+    \    # Settings center\n  /account/    # Account settings\n  /preferences/# User
+    \ preferences\n  /notifications/# Notification settings\n  /security/   # Security
+    \ settings\n  /integrations/# Integration settings\n  /billing/    # Billing settings\n
+    \  /api/        # API settings\n  /webhooks/   # Webhook settings\n  /backup/
+    \     # Backup settings\n  /audit/      # Audit logs\n\n# Help & Support\n/help/
+    \         # Help center\n  /guides/     # User guides\n  /tutorials/  # Tutorials\n
+    \  /faq/        # FAQ\n  /support/    # Support tickets\n  /feedback/   # Feedback\n
+    \  /documentation/# Documentation\n\n# User Profile\n/profile/      # Profile
+    \ overview\n  /info/       # Profile information\n  /activity/   # User activity\n
+    \  /preferences/# User preferences\n  /security/   # Security settings\n  /devices/
+    \    # Connected devices\n  /sessions/   # Active sessions\n  /history/    # Activity
+    \ history\n  /notifications/# Notification preferences\n\n# Search & Discovery\n
+    /search/       # Global search\n  /advanced/   # Advanced search\n  /filters/
+    \    # Search filters\n  /saved/      # Saved searches\n  /history/    # Search
+    \ history\n  /suggestions/# Search suggestions\n```\n\n#### Admin Subdomain (`admin.domain.com`)\n
+    \n> **Purpose**: System administration and management interface.\n\n```markdown\n
+    /                   # Admin dashboard\n/users/             # User management\n
+    /settings/          # System settings\n/logs/              # System logs\n/analytics/
+    \         # System analytics\n/backups/           # Backup management\n/security/
+    \          # Security settings\n/audit/             # Audit logs\n/roles/
+    \         # Role management\n/permissions/       # Permission management\n```\n
+    \n#### Auth Subdomain (`auth.domain.com`)\n\n> **Purpose**: Centralized authentication
+    \ and authorization service.\n\n```markdown\n/v1/\n  /login/           # Login
+    \ endpoint\n  /logout/          # Logout endpoint\n  /refresh/         # Token
+    \ refresh\n  /verify/          # Token verification\n  /register/        # User
+    \ registration\n  /password/        # Password management\n    /reset/
+    \  # Password reset request\n    /change/        # Password change\n    /forgot/
+    \        # Forgot password\n    /validate/      # Password validation\n  /2fa/
+    \             # Two-factor authentication\n    /enable/        # Enable 2FA\n
+    \    /disable/       # Disable 2FA\n    /verify/        # Verify 2FA code\n
+    \  /backup/        # Backup codes\n    /recovery/      # Recovery options\n  /sessions/
+    \        # Session management\n    /list/          # List active sessions\n
+    \  /revoke/        # Revoke session\n    /revoke-all/    # Revoke all sessions\n
+    \    /info/          # Session information\n  /oauth/           # OAuth endpoints\n
+    \    /providers/     # List OAuth providers\n    /_provider/     # Provider-specific
+    \ endpoints\n      /login/       # OAuth login\n      /callback/    # OAuth callback\n
+    \      /revoke/      # Revoke OAuth access\n      /refresh/     # Refresh OAuth
+    \ token\n      /profile/     # OAuth profile data\n  /sso/             # Single
+    \ Sign-On\n    /initiate/      # Initiate SSO\n    /callback/      # SSO callback\n
+    \    /metadata/      # SSO metadata\n    /logout/        # SSO logout\n```\n\n
+    #### API Subdomain (`api.domain.com`)\n\n> **Purpose**: RESTful API endpoints
+    \ for application functionality.\n\n```markdown\n/v1/\n  /users/           # User
+    \ management\n    /me/            # Current user\n    /_id/           # User details\n
+    \      /profile/     # User profile\n      /preferences/ # User preferences\n
+    \      /activity/    # User activity\n      /devices/     # User devices\n  /clients/
+    \         # Client management\n    /_id/           # Client details\n      /projects/
+    \    # Client's projects\n      /invoices/    # Client's invoices\n      /documents/
+    \   # Client documents\n      /history/     # Client history\n  /projects/
+    \     # Project management\n    /_id/           # Project details\n      /tasks/
+    \       # Project tasks\n      /files/       # Project files\n      /team/
+    \     # Project team\n      /timeline/    # Project timeline\n      /budget/
+    \     # Project budget\n  /analytics/       # Analytics data\n    /revenue/
+    \     # Revenue metrics\n    /performance/   # Performance metrics\n    /usage/
+    \         # Usage statistics\n    /audience/      # Audience analytics\n    /engagement/
+    \    # Engagement metrics\n  /integrations/    # Integration management\n    /_provider/
+    \     # Provider-specific endpoints\n      /connect/     # Connect integration\n
+    \      /disconnect/  # Disconnect integration\n      /sync/        # Sync data\n
+    \      /webhook/     # Webhook endpoints\n      /status/      # Integration status\n
+    \  /media/           # Media management\n    /upload/        # Media upload\n
+    \    /download/      # Media download\n    /process/       # Media processing\n
+    \    /transform/     # Media transformation\n    /optimize/      # Media optimization\n
+    \  /notifications/   # Notification system\n    /channels/      # Notification
+    \ channels\n    /templates/     # Notification templates\n    /preferences/
+    \ # Notification preferences\n    /history/       # Notification history\n  /search/
+    \          # Search functionality\n    /index/         # Search index\n    /query/
+    \         # Search query\n    /suggest/       # Search suggestions\n    /filters/
+    \       # Search filters\n  /reports/         # Reporting system\n    /generate/
+    \      # Generate reports\n    /templates/     # Report templates\n    /schedule/
+    \      # Report scheduling\n    /export/        # Report export\n```"
+  GitHub Repositories: "> **Note**: Repository organization follows a modular approach
+    \ with clear separation of concerns.\n\n### Core Infrastructure\n\n- **lightwave-infrastructure**:
+    \ <https://github.com/lightwave-media/lightwave-infrastructure>\n  - Infrastructure
+    \ as Code (IaC)\n  - Deployment configurations\n  - Environment management\n
+    \ - Monitoring setup\n\n- **lightwave-shared-core**: <https://github.com/lightwave-media/lightwave-shared-core>\n
+    \  - Shared libraries\n  - Common utilities\n  - Core functionality\n  - Base
+    \ components\n\n- **lightwave-design-system**: <https://github.com/lightwave-media/lightwave-design-system>\n
+    \  - UI components\n  - Design tokens\n  - Style guides\n  - Theme system\n\n
+    ### Applications\n\n- **createos.io**: <https://github.com/lightwave-media/createos.io>\n
+    \  - Central platform\n  - Business management\n  - Integration hub\n\n- **cineos.io**:
+    \ <https://github.com/lightwave-media/cineos.io>\n  - Cinematography workflow\n
+    \  - Production management\n  - Asset handling\n\n- **photographyos.io**: <https://github.com/lightwave-media/photographyos.io>\n
+    \  - Photography workflow\n  - Session management\n  - Gallery system\n\n- **photo-workflows**:
+    \ <https://github.com/lightwave-media/photo-workflows>\n  - Processing automation\n
+    \  - Workflow engine\n  - Output management\n\n- **joelschaeffer.com**: <https://github.com/lightwave-media/joelschaeffer.com>\n
+    \  - Portfolio site\n  - E-commerce\n  - Blog system\n\n- **lightwave-media.site**:
+    \ <https://github.com/lightwave-media/lightwave-media.site>\n  - Corporate website\n
+    \  - Company information\n  - Marketing content\n\n### Development Tools\n\n-
+    \ **lightwave-project-starter**: <https://github.com/lightwave-media/lightwave-project-starter>\n
+    \  - Project templates\n  - Development setup\n  - Best practices\n\n- **lightwave-dev-tools**:
+    \ <https://github.com/lightwave-media/lightwave-dev-tools>\n  - Development utilities\n
+    \  - Testing tools\n  - Debugging tools\n\n- **lightwave-ci-cd**: <https://github.com/lightwave-media/lightwave-ci-cd>\n
+    \  - CI/CD pipelines\n  - Deployment automation\n  - Quality gates\n\n### Documentation\n
+    \n- **lightwave-eco-system-docs**: <https://github.com/lightwave-media/lightwave-eco-system-docs>\n
+    \  - System documentation\n  - API references\n  - User guides"
+  Implementation Guidelines: "> **Important**: Follow these guidelines when implementing
+    \ new endpoints or modifying existing ones.\n\n### URL Structure Guidelines\n\n
+    1. **Consistency**\n   - Use consistent URL patterns across all applications\n
+    \   - Follow RESTful conventions\n   - Maintain hierarchical organization\n\n
+    2. **Versioning**\n   - All API endpoints must be versioned\n   - Use semantic
+    \ versioning for major changes\n   - Maintain backward compatibility\n\n3. **Security**\n
+    \   - Implement proper authentication\n   - Use HTTPS for all endpoints\n   -
+    \ Follow security best practices\n\n4. **Performance**\n   - Optimize for speed\n
+    \   - Implement caching\n   - Use compression\n\n5. **Documentation**\n   - Documen
+    \ all endpoints\n   - Include examples\n   - Maintain changelog\n\n### Best Practices\n
+    \n1. **Naming Conventions**\n   - Use lowercase for URLs\n   - Use hyphens for
+    \ word separation\n   - Keep URLs concise and meaningful\n\n2. **Resource Identification**\n
+    \   - Use UUIDs for resource IDs\n   - Implement proper error handling\n   - Include
+    \ resource metadata\n\n3. **API Design**\n   - Follow REST principles\n   - Use
+    \ proper HTTP methods\n   - Implement proper status codes\n\n4. **Error Handling**\n
+    \   - Use consistent error formats\n   - Provide meaningful error messages\n
+    \  - Include error codes\n\n5. **Rate Limiting**\n   - Implement rate limiting\n
+    \   - Use proper headers\n   - Document limits\n\n6. **Caching**\n   - Use cache
+    \ headers\n   - Implement ETags\n   - Consider CDN usage\n\n7. **Monitoring**\n
+    \   - Track endpoint usage\n   - Monitor performance\n   - Log errors\n\n8. **Testing**\n
+    \   - Write unit tests\n   - Implement integration tests\n   - Perform load testing\n
+    \n9. **Documentation**\n   - Keep documentation updated\n   - Include examples\n
+    \   - Document changes\n\n10. **Security**\n    - Follow security guidelines\n
+    \    - Implement proper authentication\n    - Use secure protocols"
+  Mobile & Desktop Apps: "> **Important**: Mobile and desktop applications follow specific URL patterns for API access and deep linking.\n\n### Mobile URL Patterns\n\n#### API Access (`mobile.domain.com`)\n\n```markdown\n/v1/\n  /auth/           # Mobile authentication\n    /login/        # Mobile login\n    /refresh/      # Token refresh\n    /verify/       # Verify device\n    /register/     # Register device\n  /sync/           # Data synchronization\n    /pull/         # Pull updates\n    /push/         # Push local changes\n    /conflict/     # Resolve conflicts\n    /status/       # Sync status\n  /offline/        # Offline functionality\n    /queue/        # Action queue\n    /cache/        # Cache management\n    /storage/      # Storage management\n  /notifications/  # Push notifications\n    /register/     # Register for notifications\n    /preferences/  # Notification preferences\n    /history/      # Notification history\n```\n\n#### Deep Linking\n\n```markdown\n# Universal Links (iOS) and App Links (Android)\n\n# Format: https://app.domain.com/deeplink/...\n/deeplink/\n  /projects/_id/   # Open specific project\n  /tasks/_id/      # Open specific task\n  /files/_id/      # Open specific file\n  /notifications/  # Open notifications\n  /settings/       # Open settings\n\n# Custom URL Scheme\n# Format: appscheme://...\nappscheme://\n  /projects/_id/   # Open specific project\n  /tasks/_id/      # Open specific task\n  /files/_id/      # Open specific file\n```\n\n### Desktop URL Patterns\n\n#### API Access (`desktop.domain.com`)\n\n```markdown\n/v1/\n  /auth/           # Desktop authentication\n    /login/        # Desktop login\n    /refresh/      # Token refresh\n    /verify/       # Verify device\n    /register/     # Register application\n  /sync/           # Data synchronization\n    /pull/         # Pull updates\n    /push/         # Push local changes\n    /conflict/     # Resolve conflicts\n    /status/       # Sync status\n  /local/          # Local functionality\n    /storage/      # Local storage\n    /cache/        # Cache management\n    /files/        # File system access\n  /notifications/  # System notifications\n    /register/     # Register for notifications\n    /preferences/  # Notification preferences\n    /history/      # Notification history\n```\n\n#### Application Protocol Handlers\n\n```markdown\n# Format: application://...\napplication://\n  /projects/_id/   # Open specific project\n  /tasks/_id/      # Open specific task\n  /files/_id/      # Open specific file\n```"
+  CDN & Asset URLs: "> **Important**: CDN and asset URLs follow specific patterns for optimal performance and caching.\n\n### CDN URL Structure (`cdn.domain.com`)\n\n```markdown\n# General Pattern\n/v1/\n  /{resource-type}/        # Type of resource\n    /{variant}/           # Resource variant or size\n      /{id}/{filename}    # Resource identifier and filename\n\n# Examples\n/v1/images/original/a1b2c3/photo.jpg     # Original image\n/v1/images/thumbnail/a1b2c3/photo.jpg    # Thumbnail image\n/v1/images/preview/a1b2c3/photo.jpg      # Preview image\n/v1/videos/hd/a1b2c3/video.mp4           # HD video\n/v1/videos/sd/a1b2c3/video.mp4           # SD video\n/v1/documents/preview/a1b2c3/doc.pdf     # Document preview\n/v1/documents/original/a1b2c3/doc.pdf    # Original document\n/v1/audio/high/a1b2c3/audio.mp3          # High quality audio\n/v1/audio/low/a1b2c3/audio.mp3           # Low quality audio\n```\n\n### Asset URL Query Parameters\n\n```markdown\n# Transformation Parameters\n?width=300            # Resize width to 300px\n?height=200           # Resize height to 200px\n?quality=80           # Set quality to 80%\n?format=webp          # Convert to WebP format\n?crop=true            # Enable cropping\n?fit=cover            # Fit mode (cover, contain, fill)\n?background=ffffff    # Background color for transparent images\n?rotate=90            # Rotate image by 90 degrees\n\n# Cache Control Parameters\n?v=123                # Version parameter for cache busting\n?max-age=3600         # Suggested cache time\n\n# Security Parameters\n?token=xyz            # Access token for private resources\n?expires=1672531200   # Token expiration timestamp\n?signature=abc        # Signature for token verification\n```\n\n### Dynamic Asset Generation\n\n```markdown\n# Dynamic Image Generation\n/v1/dynamic/\n  /image/             # Dynamic image generation\n    /text/            # Text overlay on image\n      /{template}/    # Template for text overlay\n    /composite/       # Composite multiple images\n      /{layout}/      # Layout for compositing\n    /transform/       # Complex image transformations\n      /{pipeline}/    # Transformation pipeline\n\n# Examples\n/v1/dynamic/image/text/quote/?text=Hello&background=blue\n/v1/dynamic/image/composite/collage/?images=1,2,3,4\n```"
+  Webhook Endpoints: "> **Important**: Webhook endpoints follow standard patterns for event notifications and integrations.\n\n### Webhook URL Structure\n\n```markdown\n# Format: https://api.domain.com/v1/webhooks/...\n/v1/webhooks/\n  /register/              # Register a new webhook\n  /unregister/            # Unregister a webhook\n  /test/                  # Test a webhook\n  /logs/                  # View webhook delivery logs\n  /events/                # Manage event subscriptions\n    /subscribe/           # Subscribe to events\n    /unsubscribe/         # Unsubscribe from events\n    /list/                # List available events\n```\n\n### Webhook Event Types\n\n```markdown\n# Event Types (used in request body when registering webhooks)\n\n# Resource Creation Events\nresource.created          # Any resource created\nuser.created              # User created\nproject.created           # Project created\ntask.created              # Task created\nfile.created              # File created\n\n# Resource Update Events\nresource.updated          # Any resource updated\nuser.updated              # User updated\nproject.updated           # Project updated\ntask.updated              # Task updated\nfile.updated              # File updated\n\n# Resource Deletion Events\nresource.deleted          # Any resource deleted\nuser.deleted              # User deleted\nproject.deleted           # Project deleted\ntask.deleted              # Task deleted\nfile.deleted              # File deleted\n\n# Status Change Events\ntask.status.changed       # Task status changed\nproject.status.changed    # Project status changed\nuser.status.changed       # User status changed\n\n# System Events\nsystem.maintenance        # System maintenance\nsystem.error              # System error\nsystem.security           # Security event\n```\n\n### Webhook Payload Structure\n\n```json\n{\n  \"event\": \"resource.created\",\n  \"timestamp\": \"2025-03-17T21:30:45Z\",\n  \"resource\": {\n    \"type\": \"project\",\n    \"id\": \"a1b2c3d4\",\n    \"url\": \"https://api.domain.com/v1/projects/a1b2c3d4\"\n  },\n  \"changes\": {\n    \"attribute\": \"status\",\n    \"from\": \"pending\",\n    \"to\": \"active\"\n  },\n  \"initiator\": {\n    \"type\": \"user\",\n    \"id\": \"u123456\"\n  },\n  \"signature\": \"abc123def456\"\n}\n```"
+  URL Redirects & Canonical URLs: "> **Important**: Consistent redirect and canonical URL strategies ensure proper SEO and user experience.\n\n### Redirect Types\n\n```markdown\n# 301 Permanent Redirects\n- Domain migrations\n- Deprecated endpoints\n- Renamed resources\n- Legacy paths\n\n# 302 Temporary Redirects\n- A/B testing\n- Maintenance pages\n- Temporary relocations\n- Login redirects\n\n# 307 Temporary Redirects (preserves method and body)\n- API version upgrades\n- Load balancing\n- Temporary service migrations\n\n# 308 Permanent Redirects (preserves method and body)\n- API endpoint consolidation\n- Resource restructuring\n```\n\n### Canonical URL Patterns\n\n```markdown\n# Canonical URL Format\n<link rel=\"canonical\" href=\"https://domain.com/canonical-path\" />\n\n# Common Canonical Scenarios\n- WWW vs. Non-WWW: Prefer https://domain.com over https://www.domain.com\n- Trailing Slashes: Consistent use (with or without)\n- Case Sensitivity: Lower case preferred\n- Query Parameters: Exclude sorting/filtering parameters\n- Pagination: First page is canonical for paginated content\n- Language/Region: Include in canonical when content differs\n```\n\n### URL Rewriting Rules\n\n```markdown\n# Common URL Rewriting Patterns\n\n# Legacy URL Support\n/legacy/products/view.php?id=123  →  /products/123\n\n# Clean URLs\n/blog/post/123/this-is-a-title     →  /blog/123-this-is-a-title\n\n# Version Handling\n/api/projects/123                  →  /api/v1/projects/123\n\n# Parameter Normalization\n/search?q=term&sort=name&order=asc  →  /search?q=term&sort=name-asc\n```"
+  Internationalization Patterns: "> **Important**: URL patterns for internationalization follow established conventions for language and region support.\n\n### Language Path Prefix\n\n```markdown\n# Format: domain.com/{language-code}/...\n/en/                  # English\n/fr/                  # French\n/de/                  # German\n/es/                  # Spanish\n/ja/                  # Japanese\n/zh/                  # Chinese\n\n# With country variants\n/en-us/               # English (US)\n/en-gb/               # English (UK)\n/fr-ca/               # French (Canada)\n/es-mx/               # Spanish (Mexico)\n```\n\n### Language Subdomains\n\n```markdown\n# Format: {language-code}.domain.com\nen.domain.com         # English\nfr.domain.com         # French\nde.domain.com         # German\nes.domain.com         # Spanish\nja.domain.com         # Japanese\nzh.domain.com         # Chinese\n```\n\n### Regional Content\n\n```markdown\n# Format: domain.com/regions/{region-code}/...\n/regions/na/          # North America\n/regions/eu/          # Europe\n/regions/asia/        # Asia\n/regions/latam/       # Latin America\n\n# Country-specific variations\n/regions/us/          # United States\n/regions/ca/          # Canada\n/regions/uk/          # United Kingdom\n/regions/au/          # Australia\n```\n\n### Internationalization URL Parameters\n\n```markdown\n# Optional parameters for overriding defaults\n?lang=en              # Language preference\n?region=us            # Region preference\n?currency=usd         # Currency preference\n?units=imperial       # Measurement unit preference\n?timezone=America/Los_Angeles  # Timezone preference\n```\n\n### Localized Content Patterns\n\n```markdown\n# Blog posts with language variants\n/blog/en/post-slug    # English version\n/blog/fr/post-slug    # French version\n\n# Documentation with language variants\n/docs/en/getting-started  # English documentation\n/docs/fr/getting-started  # French documentation\n\n# Products with regional variants\n/products/123/us      # US product variant\n/products/123/eu      # EU product variant\n```"
+metadata:
+  title: LightWave Ecosystem URL Index
+  source_file: url-index.md
+  generation_time: '2025-03-17T21:28:48.164961'
+  last_updated: '2025-06-15T14:42:15.000000'

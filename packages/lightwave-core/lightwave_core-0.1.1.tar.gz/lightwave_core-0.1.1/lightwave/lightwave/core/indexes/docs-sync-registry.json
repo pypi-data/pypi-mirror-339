@@ -1,0 +1,10 @@
+{
+  "main_repository": "https://github.com/kiwi-dev-la/lightwave-eco-system-docs.git",
+  "documentation_repositories": [
+    {
+      "name": "LightWave Developer Tools",
+      "url": "https://github.com/kiwi-dev-la/lightwave-dev-tools",
+      "submodule_path": "docs/lightwave-eco-system-docs"
+    }
+  ]
+} 

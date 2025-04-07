@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "metadata": "This index catalogs all ports used by services in the LightWave Ecosystem to ensure consistency and prevent port conflicts.",
+    "Overview": "Port allocation follows these rules:\n- Production services use standard ports (80, 443)\n- Development services use port ranges specific to each application\n- Test environments use separate port ranges to avoid conflicts with development",
+    "Web Application Ports": "| Service | Development Port | Test Port | Container Port | Description |\n|---------|-----------------|-----------|----------------|-------------|\n| createos.io | 8000 | 9000 | 8000 | Main CreateOS web application |\n| cineos.io | 8001 | 9001 | 8000 | Main CineOS web application |\n| photographyos.io | 8002 | 9002 | 8000 | Main PhotographyOS web application |\n| lightwave-media.site | 8010 | 9010 | 8000 | LightWave Media marketing site |\n| lightwave-design-system | 8080 | 9080 | 8080 | Design system documentation and storybook |",
+    "API Service Ports": "| Service | Development Port | Test Port | Container Port | Description |\n|---------|-----------------|-----------|----------------|-------------|\n| lightwave-api-gateway | 8100 | 9100 | 8100 | API Gateway service |\n| createos-api | 8101 | 9101 | 8101 | CreateOS backend API |\n| cineos-api | 8102 | 9102 | 8102 | CineOS backend API |\n| photographyos-api | 8103 | 9103 | 8103 | PhotographyOS backend API |\n| lightwave-ai-services | 8110 | 9110 | 8110 | AI inference service |",
+    "Infrastructure Ports": "| Service | Development Port | Test Port | Container Port | Description |\n|---------|-----------------|-----------|----------------|-------------|\n| redis | 6379 | 6380 | 6379 | Redis cache service |\n| postgres | 5432 | 5433 | 5432 | PostgreSQL database |\n| elasticsearch | 9200 | 9201 | 9200 | Elasticsearch service |\n| rabbitmq | 5672 | 5673 | 5672 | RabbitMQ message queue |\n| rabbitmq-management | 15672 | 15673 | 15672 | RabbitMQ management interface |",
+    "Monitoring Ports": "| Service | Development Port | Test Port | Container Port | Description |\n|---------|-----------------|-----------|----------------|-------------|\n| prometheus | 9090 | 9091 | 9090 | Prometheus metrics collector |\n| grafana | 3000 | 3001 | 3000 | Grafana dashboards |\n| loki | 3100 | 3101 | 3100 | Loki log aggregation |",
+    "Port Assignment Guidelines": "When adding new services to the ecosystem, follow these guidelines for port assignment:\n\n1. Web applications: Use the next available port in the 8000-8099 range\n2. API services: Use the next available port in the 8100-8199 range \n3. Background services: Use the next available port in the 8200-8299 range\n4. Infrastructure services: Use standard ports when possible\n5. Test environments: Add 1000 to the development port",
+    "Related Resources": "- [Docker Compose Configuration](../lightwave-dev-tools/docker/ecosystem-compose.md)\n- [Infrastructure Setup](../lightwave-infrastructure/overview.md)\n- [Development Environment](../guides/environment-management.md)"
+  },
+  "metadata": {
+    "title": "LightWave Ecosystem Ports Index",
+    "source_file": "ports-index.md",
+    "generation_time": "2025-03-17T21:28:48.208097"
+  }
+}

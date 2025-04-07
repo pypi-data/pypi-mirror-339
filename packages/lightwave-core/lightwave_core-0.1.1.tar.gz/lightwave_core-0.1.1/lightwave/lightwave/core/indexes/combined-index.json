@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "title": "LightWave Ecosystem Combined Index",
+    "description": "Combined index pointing to all individual index files in the LightWave ecosystem"
+  },
+  "indices": {
+    "component-registry": {
+      "title": "LightWave Design System Component Registry",
+      "file_path": "docs/index/component-registry.json",
+      "description": "Index of Component Registry"
+    },
+    "schema-registry": {
+      "title": "LightWave Ecosystem Schema Registry",
+      "file_path": "docs/index/schema-registry.json",
+      "description": "Index of Schema Registry"
+    },
+    "dependency-graph": {
+      "title": "LightWave Ecosystem Dependency Graph",
+      "file_path": "docs/index/dependency-graph.json",
+      "description": "Index of Dependency Graph"
+    },
+    "ports-index": {
+      "title": "LightWave Ecosystem Ports Index",
+      "file_path": "docs/index/ports-index.json",
+      "description": "Index of Ports Index"
+    },
+    "url-index": {
+      "title": "LightWave Ecosystem URL Index",
+      "file_path": "docs/index/url-index.json",
+      "description": "Index of Url Index"
+    },
+    "README": {
+      "title": "LightWave Ecosystem Index Files",
+      "file_path": "docs/index/README.json",
+      "description": "Index of Readme"
+    },
+    "api-endpoints-index": {
+      "title": "LightWave Ecosystem API Endpoints Index",
+      "file_path": "docs/index/api-endpoints-index.json",
+      "description": "Index of Api Endpoints Index"
+    },
+    "filesystem-conventions": {
+      "title": "LightWave Ecosystem Filesystem Conventions",
+      "file_path": "docs/index/filesystem-conventions.json",
+      "description": "Index of Filesystem Conventions"
+    },
+    "email-index": {
+      "title": "LightWave Ecosystem Email Index",
+      "file_path": "docs/index/email-index.json",
+      "description": "Index of Email Index"
+    },
+    "tools-index": {
+      "title": "LightWave Developer Tools Index",
+      "file_path": "docs/lightwave-dev-tools/mcp-tools/tools-index.json",
+      "description": "Comprehensive catalog of all development tools available in the LightWave ecosystem"
+    }
+  }
+}

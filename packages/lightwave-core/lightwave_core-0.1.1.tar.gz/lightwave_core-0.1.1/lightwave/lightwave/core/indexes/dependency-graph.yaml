@@ -1,0 +1,6 @@
+build_order: []
+dependencies: {}
+metadata:
+  title: LightWave Ecosystem Dependency Graph
+  source_file: dependency-graph.md
+  generation_time: '2025-03-17T21:28:48.176835'

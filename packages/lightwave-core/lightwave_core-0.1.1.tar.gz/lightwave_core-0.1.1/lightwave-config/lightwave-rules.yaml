@@ -1,0 +1,492 @@
+# Lightwave Rules
+# This file contains development workflow guidelines and coding standards.
+
+sections:
+  - name: SPRINT_WORKFLOW
+    description: "Guide for using lightwave to manage [sprints is a list-of-tasks] development workflows"
+    globs: "**/*"
+    filesToApplyRule: "**/*"
+    alwaysApply: true
+    content:
+      - heading: "Global CLI Commands"
+        items:
+          - "Lightwave provides a global CLI through the `lightwave` command"
+          - "All functionality from `scripts/dev.js` is available through this interface"
+          - "Install globally with `npm install -g lightwave` or use locally via `npx`"
+          - "Use `lightwave <command>` instead of `node scripts/dev.js <command>`"
+          - examples:
+              - "`lightwave list` instead of `node scripts/dev.js list`"
+              - "`lightwave next` instead of `node scripts/dev.js next`"
+              - "`lightwave expand --id=3` instead of `node scripts/dev.js expand --id=3`"
+          - "All commands accept the same options as their script equivalents"
+          - "The CLI provides additional commands like `lightwave dev init` for project setup"
+      
+      - heading: "Development Workflow Process"
+        items:
+          - "Start new projects by running `lightwave dev init` or `lightwave parse-sprint --input=<sprint-context.yaml>` to generate initial tasks_mcp.json"
+          - "Begin coding sessions with `lightwave list` to see current tasks, status, and IDs"
+          - "Analyze task complexity with `lightwave analyze-complexity --research` before breaking down tasks"
+          - "Select tasks based on dependencies (all marked 'done'), priority level, and ID order"
+          - "Clarify tasks by checking task files in tasks/ directory or asking for user input"
+          - "View specific task details using `lightwave show <id>` to understand implementation requirements"
+          - "Break down complex tasks using `lightwave expand --id=<id>` with appropriate flags"
+          - "Clear existing subtasks if needed using `lightwave clear-subtasks --id=<id>` before regenerating"
+          - "Implement code following task details, dependencies, and project standards"
+          - "Verify tasks according to test strategies before marking as complete"
+          - "Mark completed tasks with `lightwave set-status --id=<id> --status=done`"
+          - "Update dependent tasks when implementation differs from original plan"
+          - "Generate task files with `lightwave generate` after updating tasks.json"
+          - "Maintain valid dependency structure with `lightwave fix-dependencies` when needed"
+          - "Respect dependency chains and task priorities when selecting work"
+          - "Report progress regularly using the list command"
+
+      - heading: "Sprint Context Integration"
+        items:
+          - "Store sprint context files in the `context-for-sprint-manager/` directory"
+          - "Name files according to sprint focus (e.g., `core-sprint-01-context.txt`, `clickup-infra-sprint-context.txt`)"
+          - "Use ClickUp tasks as the basis for sprint planning and task organization"
+          - "Parse sprint context using `lightwave parse-sprint` to generate tasks.json"
+          - "Reference sprint context in task details for clearer traceability"
+
+      - heading: "Task Complexity Analysis"
+        items:
+          - "Run `lightwave analyze-complexity --research` for comprehensive analysis"
+          - "Review complexity report in scripts/task-complexity-report.json"
+          - "Or use `lightwave complexity-report` for a formatted, readable version of the report"
+          - "Focus on tasks with highest complexity scores (8-10) for detailed breakdown"
+          - "Use analysis results to determine appropriate subtask allocation"
+          - "Note that reports are automatically used by the expand command"
+
+      - heading: "Task Breakdown Process"
+        items:
+          - "For tasks with complexity analysis, use `lightwave expand --id=<id>`"
+          - "Otherwise use `lightwave expand --id=<id> --subtasks=<number>`"
+          - "Add `--research` flag to leverage Perplexity AI for research-backed expansion"
+          - "Use `--prompt=\"<context>\"` to provide additional context when needed"
+          - "Review and adjust generated subtasks as necessary"
+          - "Use `--all` flag to expand multiple pending tasks at once"
+          - "If subtasks need regeneration, clear them first with `clear-subtasks` command"
+
+      - heading: "Implementation Drift Handling"
+        items:
+          - "When implementation differs significantly from planned approach"
+          - "When future tasks need modification due to current implementation choices"
+          - "When new dependencies or requirements emerge"
+          - "Call `lightwave update --from=<futureTaskId> --prompt=\"<explanation>\"` to update tasks.json"
+
+      - heading: "Task Status Management"
+        items:
+          - "Use 'pending' for tasks ready to be worked on"
+          - "Use 'done' for completed and verified tasks"
+          - "Use 'deferred' for postponed tasks"
+          - "Add custom status values as needed for project-specific workflows"
+
+      - heading: "Task File Format Reference"
+        code: |
+          # Task ID: <id>
+          # Title: <title>
+          # Status: <status>
+          # Dependencies: <comma-separated list of dependency IDs>
+          # Priority: <priority>
+          # Description: <brief description>
+          # Details:
+          <detailed implementation notes>
+          
+          # Test Strategy:
+          <verification approach>
+
+      - heading: "Command Reference: parse-sprint"
+        items:
+          - "Syntax: `lightwave parse-sprint --input=<sprint-context.json>`"
+          - "Description: Parses a sprint context file and generates a tasks.json file with structured tasks from ClickUp"
+          - "Parameters:"
+          - "  - `--input=<file>`: Path to the sprint context file (default: context-for-sprint-manager/sprint-context.json)"
+          - "Example: `lightwave parse-sprint --input=context-for-sprint-manager/core-sprint-01-context.txt`"
+          - "Notes: Will overwrite existing tasks.json file. Use with caution."
+
+      - heading: "Command Reference: update"
+        items:
+          - "Syntax: `lightwave update --from=<id> --prompt=\"<prompt>\"`"
+          - "Description: Updates tasks with ID >= specified ID based on the provided prompt"
+          - "Parameters:"
+          - "  - `--from=<id>`: Task ID from which to start updating (required)"
+          - "  - `--prompt=\"<text>\"`: Explanation of changes or new context (required)"
+          - "Example: `lightwave update --from=4 --prompt=\"Now we are using Express instead of Fastify.\"`"
+          - "Notes: Only updates tasks not marked as 'done'. Completed tasks remain unchanged."
+
+      - heading: "Command Reference: generate"
+        items:
+          - "Syntax: `lightwave generate`"
+          - "Description: Generates individual task files in tasks/ directory based on tasks.json"
+          - "Parameters:"
+          - "  - `--file=<path>, -f`: Use alternative tasks.json file (default: 'tasks/tasks.json')"
+          - "  - `--output=<dir>, -o`: Output directory (default: 'tasks')"
+          - "Example: `lightwave generate`"
+          - "Notes: Overwrites existing task files. Creates tasks/ directory if needed."
+
+      - heading: "Command Reference: set-status"
+        items:
+          - "Syntax: `lightwave set-status --id=<id> --status=<status>`"
+          - "Description: Updates the status of a specific task in tasks.json"
+          - "Parameters:"
+          - "  - `--id=<id>`: ID of the task to update (required)"
+          - "  - `--status=<status>`: New status value (required)"
+          - "Example: `lightwave set-status --id=3 --status=done`"
+          - "Notes: Common values are 'done', 'pending', and 'deferred', but any string is accepted."
+
+      - heading: "Command Reference: list"
+        items:
+          - "Syntax: `lightwave list`"
+          - "Description: Lists all tasks in tasks.json with IDs, titles, and status"
+          - "Parameters:"
+          - "  - `--status=<status>, -s`: Filter by status"
+          - "  - `--with-subtasks`: Show subtasks for each task"
+          - "  - `--file=<path>, -f`: Use alternative tasks.json file (default: 'tasks/tasks.json')"
+          - "Example: `lightwave list`"
+          - "Notes: Provides quick overview of project progress. Use at start of sessions."
+
+      - heading: "Command Reference: expand"
+        items:
+          - "Syntax: `lightwave expand --id=<id> [--num=<number>] [--research] [--prompt=\"<context>\"]`"
+          - "Description: Expands a task with subtasks for detailed implementation"
+          - "Parameters:"
+          - "  - `--id=<id>`: ID of task to expand (required unless using --all)"
+          - "  - `--all`: Expand all pending tasks, prioritized by complexity"
+          - "  - `--num=<number>`: Number of subtasks to generate (default: from complexity report)"
+          - "  - `--research`: Use Perplexity AI for research-backed generation"
+          - "  - `--prompt=\"<text>\"`: Additional context for subtask generation"
+          - "  - `--force`: Regenerate subtasks even for tasks that already have them"
+          - "Example: `lightwave expand --id=3 --num=5 --research --prompt=\"Focus on security aspects\"`"
+          - "Notes: Uses complexity report recommendations if available."
+
+      - heading: "Command Reference: analyze-complexity"
+        items:
+          - "Syntax: `lightwave analyze-complexity [options]`"
+          - "Description: Analyzes task complexity and generates expansion recommendations"
+          - "Parameters:"
+          - "  - `--output=<file>, -o`: Output file path (default: scripts/task-complexity-report.json)"
+          - "  - `--model=<model>, -m`: Override LLM model to use"
+          - "  - `--threshold=<number>, -t`: Minimum score for expansion recommendation (default: 5)"
+          - "  - `--file=<path>, -f`: Use alternative tasks.json file"
+          - "  - `--research, -r`: Use Perplexity AI for research-backed analysis"
+          - "Example: `lightwave analyze-complexity --research`"
+          - "Notes: Report includes complexity scores, recommended subtasks, and tailored prompts."
+
+      - heading: "Command Reference: clear-subtasks"
+        items:
+          - "Syntax: `lightwave clear-subtasks --id=<id>`"
+          - "Description: Removes subtasks from specified tasks to allow regeneration"
+          - "Parameters:"
+          - "  - `--id=<id>`: ID or comma-separated IDs of tasks to clear subtasks from"
+          - "  - `--all`: Clear subtasks from all tasks"
+          - "Examples:"
+          - "  - `lightwave clear-subtasks --id=3`"
+          - "  - `lightwave clear-subtasks --id=1,2,3`"
+          - "  - `lightwave clear-subtasks --all`"
+          - "Notes:"
+          - "  - Task files are automatically regenerated after clearing subtasks"
+          - "  - Can be combined with expand command to immediately generate new subtasks"
+          - "  - Works with both parent tasks and individual subtasks"
+
+      - heading: "Task Structure Fields"
+        items:
+          - "**id**: Unique identifier for the task (Example: `1`)"
+          - "**title**: Brief, descriptive title (Example: `\"Initialize Repo\"`)"
+          - "**description**: Concise summary of what the task involves (Example: `\"Create a new repository, set up initial structure.\"`)"
+          - "**status**: Current state of the task (Example: `\"pending\"`, `\"done\"`, `\"deferred\"`)"
+          - "**dependencies**: IDs of prerequisite tasks (Example: `[1, 2]`)"
+          - "  - Dependencies are displayed with status indicators (✅ for completed, ⏱️ for pending)"
+          - "  - This helps quickly identify which prerequisite tasks are blocking work"
+          - "**priority**: Importance level (Example: `\"high\"`, `\"medium\"`, `\"low\"`)"
+          - "**details**: In-depth implementation instructions (Example: `\"Use GitHub client ID/secret, handle callback, set session token.\"`)"
+          - "**testStrategy**: Verification approach (Example: `\"Deploy and call endpoint to confirm 'Hello World' response.\"`)"
+          - "**subtasks**: List of smaller, more specific tasks (Example: `[{\"id\": 1, \"title\": \"Configure OAuth\", ...}]`)"
+          - "**clickUpId**: Reference to the original ClickUp task ID (Example: `\"2abc3d\"`)"
+          - "**sprint**: Sprint identifier this task belongs to (Example: `\"core-sprint-01\"`)"
+
+      - heading: "Environment Variables Configuration"
+        items:
+          - "**ANTHROPIC_API_KEY** (Required): Your Anthropic API key for Claude (Example: `ANTHROPIC_API_KEY=sk-ant-api03-...`)"
+          - "**MODEL** (Default: `\"claude-3-7-sonnet-20250219\"`): Claude model to use (Example: `MODEL=claude-3-opus-20240229`)"
+          - "**MAX_TOKENS** (Default: `\"4000\"`): Maximum tokens for responses (Example: `MAX_TOKENS=8000`)"
+          - "**TEMPERATURE** (Default: `\"0.7\"`): Temperature for model responses (Example: `TEMPERATURE=0.5`)"
+          - "**DEBUG** (Default: `\"false\"`): Enable debug logging (Example: `DEBUG=true`)"
+          - "**LOG_LEVEL** (Default: `\"info\"`): Console output level (Example: `LOG_LEVEL=debug`)"
+          - "**DEFAULT_SUBTASKS** (Default: `\"3\"`): Default subtask count (Example: `DEFAULT_SUBTASKS=5`)"
+          - "**DEFAULT_PRIORITY** (Default: `\"medium\"`): Default priority (Example: `DEFAULT_PRIORITY=high`)"
+          - "**PROJECT_NAME** (Default: `\"Lightwave Project\"`): Project name in metadata (Example: `PROJECT_NAME=My Awesome Project`)"
+          - "**PROJECT_VERSION** (Default: `\"1.0.0\"`): Version in metadata (Example: `PROJECT_VERSION=2.1.0`)"
+          - "**PERPLEXITY_API_KEY**: For research-backed features (Example: `PERPLEXITY_API_KEY=pplx-...`)"
+          - "**PERPLEXITY_MODEL** (Default: `\"sonar-medium-online\"`): Perplexity model (Example: `PERPLEXITY_MODEL=sonar-large-online`)"
+          - "**CLICKUP_API_KEY**: For ClickUp integration (Example: `CLICKUP_API_KEY=pk_123456_ABCDEF...`)"
+
+      - heading: "Code Analysis & Refactoring Techniques"
+        items:
+          - "**Top-Level Function Search**"
+          - "  - Use grep pattern matching to find all exported functions across the codebase"
+          - "  - Command: `grep -E \"export (function|const) \\w+|function \\w+\\(|const \\w+ = \\(|module\\.exports\" --include=\"*.js\" -r ./`"
+          - "  - Benefits:"
+          - "    - Quickly identify all public API functions without reading implementation details"
+          - "    - Compare functions between files during refactoring (e.g., monolithic to modular structure)"
+          - "    - Verify all expected functions exist in refactored modules"
+          - "    - Identify duplicate functionality or naming conflicts"
+          - "  - Usage examples:"
+          - "    - When migrating from monolithic to modular structure: `grep -E \"function \\w+\\(\" src/core/main.js`"
+          - "    - Check function exports in a directory: `grep -E \"export (function|const)\" src/modules/`"
+          - "    - Find potential naming conflicts: `grep -E \"function (get|set|create|update)\\w+\\(\" -r ./`"
+          - "  - Variations:"
+          - "    - Add `-n` flag to include line numbers"
+          - "    - Add `--include=\"*.ts\"` to filter by file extension"
+          - "    - Use with `| sort` to alphabetize results"
+          - "  - Integration with refactoring workflow:"
+          - "    - Start by mapping all functions in the source file"
+          - "    - Create target module files based on function grouping"
+          - "    - Verify all functions were properly migrated"
+          - "    - Check for any unintentional duplications or omissions"
+
+  - name: COMMIT_STANDARDS
+    description: "Guidelines for writing clean, descriptive commit messages and maintaining code organization"
+    globs: "**/*"
+    filesToApplyRule: "**/*"
+    alwaysApply: true
+    content:
+      - heading: "Commit Message Format"
+        items:
+          - "Use the format `type(scope): subject` for all commit messages"
+          - "Types include:"
+          - "  - `feat`: New feature"
+          - "  - `fix`: Bug fix"
+          - "  - `docs`: Documentation changes"
+          - "  - `style`: Code style/formatting changes (no functional change)"
+          - "  - `refactor`: Code refactoring (no functional change)"
+          - "  - `perf`: Performance improvements"
+          - "  - `test`: Adding or updating tests"
+          - "  - `chore`: Build process, dependency updates, etc."
+          - "Scope should indicate the module or component affected (e.g., `auth`, `config`, `api`)"
+          - "Subject should be concise (< 50 characters) and in present tense"
+          - "Example: `feat(auth): implement JWT token validation`"
+
+      - heading: "Commit Message Body"
+        items:
+          - "Separate subject from body with a blank line"
+          - "Use body to explain what and why vs. how"
+          - "Wrap text at 72 characters"
+          - "Use bullet points for multiple items"
+          - "Example:"
+          - code: |
+              fix(database): resolve connection timeout issue
+              
+              - Increase connection timeout to 30s
+              - Add retry logic for failed connections
+              - Log connection attempts for debugging
+
+      - heading: "Code Organization in Commits"
+        items:
+          - "Keep commits small and focused on a single change"
+          - "Separate logical changes into distinct commits"
+          - "Avoid mixing refactoring with feature changes"
+          - "Group related file changes in a single commit"
+          - "Consider readability of the commit history"
+
+      - heading: "Referencing Issues"
+        items:
+          - "Use `#issue-number` to reference related issues"
+          - "Use keywords like `Fixes #123` or `Resolves #456` to auto-close issues"
+          - "For multiple issues: `Fixes #123, #456`"
+          - "Example: `feat(ui): add dark mode toggle (Fixes #789)`"
+
+      - heading: "Branch and PR Standards"
+        items:
+          - "Branch naming: `type/description` (e.g., `feat/auth-system`)"
+          - "Create PRs with clear titles following commit message format"
+          - "Include issue references in PR description"
+          - "Request reviews from appropriate team members"
+          - "Ensure CI passes before merging"
+
+      - heading: "ClickUp Task References"
+        items:
+          - "Include ClickUp task ID in commit messages when available"
+          - "Format: `[CU-ABC123]` at the beginning of the commit message"
+          - "Example: `[CU-ABC123] feat(auth): implement JWT validation`"
+          - "For multiple tasks: `[CU-ABC123][CU-DEF456] fix: resolve API timeout issues`"
+          - "Can be combined with issue references: `[CU-ABC123] feat: add feature (Fixes #123)`"
+
+  - name: LIGHTWAVE_RULES
+    description: "Guidelines for creating and maintaining Lightwave rules to ensure consistency and effectiveness."
+    globs: ".lightwaverules"
+    filesToApplyRule: ".lightwaverules"
+    alwaysApply: true
+    content:
+      - note: "The below describes how you should be structuring new rule sections in this document."
+      
+      - heading: "Required Rule Structure"
+        code: |
+          ---
+          description: Clear, one-line description of what the rule enforces
+          globs: path/to/files/*.ext, other/path/**/*
+          alwaysApply: boolean
+          ---
+
+          - **Main Points in Bold**
+            - Sub-points with details
+            - Examples and explanations
+
+      - heading: "Section References"
+        items:
+          - "Use `ALL_CAPS_SECTION` to reference files"
+          - "Example: `LIGHTWAVE_RULES`"
+
+      - heading: "Code Examples"
+        items:
+          - "Use language-specific code blocks"
+          - code: |
+              // ✅ DO: Show good examples
+              const goodExample = true;
+              
+              // ❌ DON'T: Show anti-patterns
+              const badExample = false;
+
+      - heading: "Rule Content Guidelines"
+        items:
+          - "Start with high-level overview"
+          - "Include specific, actionable requirements"
+          - "Show examples of correct implementation"
+          - "Reference existing code when possible"
+          - "Keep rules DRY by referencing other rules"
+
+      - heading: "Rule Maintenance"
+        items:
+          - "Update rules when new patterns emerge"
+          - "Add examples from actual codebase"
+          - "Remove outdated patterns"
+          - "Cross-reference related rules"
+
+      - heading: "Best Practices"
+        items:
+          - "Use bullet points for clarity"
+          - "Keep descriptions concise"
+          - "Include both DO and DON'T examples"
+          - "Reference actual code over theoretical examples"
+          - "Use consistent formatting across rules"
+
+  - name: SELF_IMPROVE
+    description: "Guidelines for continuously improving this rules document based on emerging code patterns and best practices."
+    globs: "**/*"
+    filesToApplyRule: "**/*"
+    alwaysApply: true
+    content:
+      - heading: "Rule Improvement Triggers"
+        items:
+          - "New code patterns not covered by existing rules"
+          - "Repeated similar implementations across files"
+          - "Common error patterns that could be prevented"
+          - "New libraries or tools being used consistently"
+          - "Emerging best practices in the codebase"
+
+      - heading: "Analysis Process"
+        items:
+          - "Compare new code with existing rules"
+          - "Identify patterns that should be standardized"
+          - "Look for references to external documentation"
+          - "Check for consistent error handling patterns"
+          - "Monitor test patterns and coverage"
+
+      - heading: "Rule Updates"
+        items:
+          - "**Add New Rules When:**"
+          - "  - A new technology/pattern is used in 3+ files"
+          - "  - Common bugs could be prevented by a rule"
+          - "  - Code reviews repeatedly mention the same feedback"
+          - "  - New security or performance patterns emerge"
+          - " "
+          - "**Modify Existing Rules When:**"
+          - "  - Better examples exist in the codebase"
+          - "  - Additional edge cases are discovered"
+          - "  - Related rules have been updated"
+          - "  - Implementation details have changed"
+
+      - heading: "Example Pattern Recognition"
+        code: |
+          // If you see repeated patterns like:
+          const data = await prisma.user.findMany({
+            select: { id: true, email: true },
+            where: { status: 'ACTIVE' }
+          });
+          
+          // Consider adding a DATABASE section in the .lightwaverules:
+          // - Standard select fields
+          // - Common where conditions
+          // - Performance optimization patterns
+
+      - heading: "Rule Quality Checks"
+        items:
+          - "Rules should be actionable and specific"
+          - "Examples should come from actual code"
+          - "References should be up to date"
+          - "Patterns should be consistently enforced"
+
+      - heading: "Continuous Improvement"
+        items:
+          - "Monitor code review comments"
+          - "Track common development questions"
+          - "Update rules after major refactors"
+          - "Add links to relevant documentation"
+          - "Cross-reference related rules"
+
+      - heading: "Rule Deprecation"
+        items:
+          - "Mark outdated patterns as deprecated"
+          - "Remove rules that no longer apply"
+          - "Update references to deprecated rules"
+          - "Document migration paths for old patterns"
+
+      - heading: "Documentation Updates"
+        items:
+          - "Keep examples synchronized with code"
+          - "Update references to external docs"
+          - "Maintain links between related rules"
+          - "Document breaking changes"
+
+      - footer: "Follow LIGHTWAVE_RULES for proper rule formatting and structure of lightwave rule sections."
+
+  - name: SCRUM_WORKFLOW
+    description: "Guidelines for Lightwave Scrum process, ceremonies, and work item flow"
+    globs: "**/*"
+    filesToApplyRule: "**/*"
+    alwaysApply: true
+    content:
+      - heading: "Scrum Ceremonies"
+        items:
+          - "Backlog Grooming & Sprint Planning: Scrum Master and Product Owner groom backlog and plan with team"
+          - "Sprint & Daily Stand-up: Daily updates on progress, blockers, and planning"
+          - "Sprint Review & Retrospective: Demo features and review sprint outcomes"
+          - "Reference the detailed workflow in `lightwave-config/lightwave-sprint-context/scrum-workflow.md`"
+      
+      - heading: "Work Item States"
+        items:
+          - "Project Idea → Product Request: Initial feature/enhancement submission"
+          - "Open → Considering → Scoping → Prioritized → Add to Sprint: Planning workflow"
+          - "In Design → In Development → In Review → Ready for Deployment: Implementation workflow"
+          - "Release Notes → Closed: Completion workflow"
+          - "Bug workflow: Defect Detected → Bug Submission → Triage → Resolution"
+      
+      - heading: "Decision Points"
+        items:
+          - "Evaluate work items at key decision points: 'Do we want to do this?', 'Is this reproducible?', 'Is this important?'"
+          - "Route items to appropriate states: Not Doing, Awaiting Prioritization, Cannot Reproduce, Not a Bug"
+          - "Document decisions and reasoning in work item comments"
+      
+      - heading: "Sprint Structure"
+        items:
+          - "Maintain consistent sprint length (typically 2 weeks)"
+          - "Begin with Sprint Planning and conclude with Review & Retrospective"
+          - "Track work items in ClickUp with proper state transitions"
+          - "Use the `lightwave parse-sprint` command to generate tasks from sprint context"
+      
+      - heading: "ClickUp Integration"
+        items:
+          - "Track all work items in ClickUp following the established workflow"
+          - "Update work item status regularly to reflect current state"
+          - "Include detailed descriptions, acceptance criteria, and test plans in ClickUp tasks"
+          - "Link related work items using the Dependencies feature"
+          - "Use task templates for consistency in work item creation" 

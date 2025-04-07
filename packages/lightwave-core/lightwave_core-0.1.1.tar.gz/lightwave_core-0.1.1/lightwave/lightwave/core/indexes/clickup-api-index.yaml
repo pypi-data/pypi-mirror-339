@@ -1,0 +1,618 @@
+---
+title: ClickUp API Integration Index
+description: Documentation of ClickUp API endpoints, authentication methods, and integration patterns used in the LightWave ecosystem
+version: 1.0.0
+last_updated: 2024-03-20
+author: LightWave Media Infrastructure Team
+
+# Official ClickUp API reference
+official_reference:
+  description: Official ClickUp API v2 reference documentation
+  postman_collection: https://www.postman.com/clickup-api/clickup-public-api/collection/rekuqnj/clickup-api-v2-reference
+  developer_docs: https://developer.clickup.com/docs/
+  api_version: v2
+
+authentication:
+  method: Personal Token
+  token_prefix: pk_
+  location: Authorization Header
+  documentation: https://developer.clickup.com/docs/authentication
+  token_generation:
+    - "Log in to ClickUp"
+    - "Click your avatar in the upper-right corner"
+    - "Select Settings"
+    - "In the sidebar, click Apps"
+    - "Under API Token, click Generate or Regenerate"
+    - "Copy the personal token to your clipboard"
+  environment_variable: CLICKUP_API_KEY
+
+workspaces:
+  description: "Workspaces are the top-level organizational unit in ClickUp (formerly called 'Teams')"
+  environment_variable: CLICKUP_WORKSPACE_ID
+  endpoints:
+    get_workspaces:
+      method: GET
+      url: "https://api.clickup.com/api/v2/team"
+      description: "Get all workspaces accessible to the authenticated user"
+      params: {}
+      response:
+        teams: "Array of team/workspace objects"
+    get_workspace:
+      method: GET
+      url: "https://api.clickup.com/api/v2/team/{workspace_id}"
+      description: "Get details about a specific workspace"
+      params:
+        workspace_id: "ID of the workspace to retrieve"
+      response:
+        id: "Workspace ID"
+        name: "Workspace name"
+        members: "Array of members in the workspace"
+
+lists:
+  description: "Lists are containers for tasks in ClickUp, stored within spaces and folders"
+  endpoints:
+    get_lists:
+      method: GET
+      url: "https://api.clickup.com/api/v2/folder/{folder_id}/list"
+      description: "Get all lists in a folder"
+      params:
+        folder_id: "ID of the folder containing the lists"
+      response:
+        lists: "Array of list objects"
+    get_folderless_lists:
+      method: GET
+      url: "https://api.clickup.com/api/v2/space/{space_id}/list"
+      description: "Get all lists that are not within folders"
+      params:
+        space_id: "ID of the space containing the lists"
+      response:
+        lists: "Array of list objects"
+    create_list:
+      method: POST
+      url: "https://api.clickup.com/api/v2/folder/{folder_id}/list"
+      description: "Create a new list within a folder"
+      body:
+        name: "Name of the list"
+        content: "Description of the list (optional)"
+      response:
+        id: "ID of the created list"
+        name: "Name of the created list"
+    create_folderless_list:
+      method: POST
+      url: "https://api.clickup.com/api/v2/space/{space_id}/list"
+      description: "Create a new list not within any folder"
+      body:
+        name: "Name of the list"
+        content: "Description of the list (optional)"
+      response:
+        id: "ID of the created list"
+        name: "Name of the created list"
+
+tasks:
+  description: "Tasks are the core work units in ClickUp, representing actionable items or records"
+  environment_variables:
+    logs_list: CLICKUP_LOGS_LIST_ID
+    metrics_list: CLICKUP_METRICS_LIST_ID
+    incidents_list: CLICKUP_INCIDENTS_LIST_ID
+    feedback_list: CLICKUP_FEEDBACK_LIST_ID
+  endpoints:
+    get_tasks:
+      method: GET
+      url: "https://api.clickup.com/api/v2/list/{list_id}/task"
+      description: "Get all tasks in a list"
+      params:
+        list_id: "ID of the list containing the tasks"
+        page: "Page number for pagination (optional)"
+        subtasks: "Include subtasks (optional)"
+        include_closed: "Include closed tasks (optional)"
+      response:
+        tasks: "Array of task objects"
+    create_task:
+      method: POST
+      url: "https://api.clickup.com/api/v2/list/{list_id}/task"
+      description: "Create a new task in a list"
+      body:
+        name: "Task name/title"
+        description: "Task description (supports markdown)"
+        status: "Task status (custom to workspace)"
+        priority: "Task priority (1-4)"
+        due_date: "Timestamp for due date (optional)"
+        assignees: "Array of user IDs (optional)"
+        tags: "Array of tags (optional)"
+        custom_fields: "Array of custom field values (optional)"
+      response:
+        id: "ID of the created task"
+    get_task:
+      method: GET
+      url: "https://api.clickup.com/api/v2/task/{task_id}"
+      description: "Get details about a specific task"
+      params:
+        task_id: "ID of the task to retrieve"
+      response:
+        id: "Task ID"
+        name: "Task name"
+        description: "Task description"
+        status: "Task status"
+        priority: "Task priority"
+    update_task:
+      method: PUT
+      url: "https://api.clickup.com/api/v2/task/{task_id}"
+      description: "Update an existing task"
+      body:
+        name: "Task name/title (optional)"
+        description: "Task description (optional)"
+        status: "Task status (optional)"
+        priority: "Task priority (optional)"
+        due_date: "Timestamp for due date (optional)"
+        assignees: "Array of user IDs (optional)"
+        custom_fields: "Array of custom field values (optional)"
+      response:
+        id: "ID of the updated task"
+
+comments:
+  description: "Comments allow for discussion and additional information on tasks"
+  endpoints:
+    get_task_comments:
+      method: GET
+      url: "https://api.clickup.com/api/v2/task/{task_id}/comment"
+      description: "Get all comments on a task"
+      params:
+        task_id: "ID of the task"
+      response:
+        comments: "Array of comment objects"
+    create_task_comment:
+      method: POST
+      url: "https://api.clickup.com/api/v2/task/{task_id}/comment"
+      description: "Add a comment to a task"
+      body:
+        comment_text: "Content of the comment (supports markdown)"
+        assignee: "User ID to notify (optional)"
+        notify_all: "Boolean to notify all task members (optional)"
+      response:
+        id: "ID of the created comment"
+
+custom_fields:
+  description: "Custom fields allow for structured data in tasks"
+  endpoints:
+    get_available_fields:
+      method: GET
+      url: "https://api.clickup.com/api/v2/list/{list_id}/field"
+      description: "Get custom fields available for a list"
+      params:
+        list_id: "ID of the list"
+      response:
+        fields: "Array of field objects with types and options"
+    set_custom_field_value:
+      method: POST
+      url: "https://api.clickup.com/api/v2/task/{task_id}/field/{field_id}"
+      description: "Set a custom field value for a task"
+      params:
+        task_id: "ID of the task"
+        field_id: "ID of the custom field"
+      body:
+        value: "Field value (format depends on field type)"
+      response:
+        success: "Boolean indicating success"
+
+rate_limits:
+  description: "ClickUp API has rate limiting to prevent abuse"
+  default_limit: 100
+  period: "60 seconds (per minute)"
+  headers:
+    - "X-RateLimit-Limit: Maximum requests allowed in the current period"
+    - "X-RateLimit-Remaining: Remaining requests in the current period"
+    - "X-RateLimit-Reset: Unix timestamp when the rate limit will reset"
+  best_practices:
+    - "Implement exponential backoff for retries"
+    - "Cache frequently accessed data"
+    - "Batch operations where possible"
+    - "Monitor rate limit headers"
+
+integration_patterns:
+  log_sync:
+    description: "Pattern for syncing system logs to ClickUp tasks"
+    trigger: "New log entries with sync_status=PENDING"
+    destination: "CLICKUP_LOGS_LIST_ID"
+    task_format:
+      name: "Log: {source} - {timestamp}"
+      description: "Formatted log details with metadata"
+      status: "Based on log severity"
+      priority: "Based on log severity"
+      custom_fields:
+        log_type: "Type of log (SYSTEM, EMAIL, ERROR, etc.)"
+        severity: "Log severity level"
+        source: "Source system or component"
+    update_strategy: "Create new tasks only, do not update existing"
+  
+  email_metrics_sync:
+    description: "Pattern for syncing email metrics to ClickUp tasks"
+    trigger: "New email metric entries with sync_status=PENDING"
+    destination: "CLICKUP_METRICS_LIST_ID"
+    task_format:
+      name: "Email Metrics: {date}"
+      description: "Formatted email metrics with key performance indicators"
+      status: "Based on delivery rate thresholds"
+    update_strategy: "Create new tasks only, do not update existing"
+  
+  ai_feedback_sync:
+    description: "Pattern for syncing AI feedback to ClickUp tasks"
+    trigger: "New AI feedback entries with sync_status=PENDING"
+    destination: "CLICKUP_FEEDBACK_LIST_ID"
+    task_format:
+      name: "AI Feedback: {model_name} - Rating {quality_rating}"
+      description: "Formatted AI feedback with prompt and response"
+      status: "Based on quality rating"
+      custom_fields:
+        model: "AI model name"
+        rating: "Quality rating (1-5)"
+        submitted_by: "User who submitted feedback"
+    update_strategy: "Create new tasks only, do not update existing"
+  
+  weekly_summary:
+    description: "Pattern for creating weekly summary reports in ClickUp"
+    trigger: "Scheduled on Mondays or manually triggered"
+    destination: "CLICKUP_LOGS_LIST_ID or CLICKUP_SUMMARY_LIST_ID if set"
+    task_format:
+      name: "Weekly System Summary: {start_date} to {end_date}"
+      description: "Comprehensive summary of system activity, logs, metrics, and feedback"
+      status: "New"
+    data_included:
+      - "Count of logs by type and severity"
+      - "Email metrics averages and trends"
+      - "AI feedback summary and average rating"
+      - "Notable incidents or errors"
+      
+  webhook_integration:
+    description: "Pattern for real-time bidirectional integration using ClickUp webhooks"
+    trigger: "ClickUp webhook events"
+    destination: "Application API endpoint that receives webhook events"
+    webhook_setup:
+      endpoint: "https://api.yourdomain.com/clickup/webhook"
+      events:
+        - "taskCreated"
+        - "taskUpdated"
+        - "taskDeleted"
+        - "taskPriorityUpdated"
+        - "taskStatusUpdated"
+        - "taskAssigneeUpdated"
+        - "taskDueDateUpdated"
+        - "taskCommentPosted"
+        - "taskTagUpdated"
+    implementation_steps:
+      - "Create a secure endpoint in your application to receive webhook events"
+      - "Register the webhook with ClickUp using the create_webhook endpoint"
+      - "Implement webhook signature verification for security"
+      - "Process incoming webhook events and update local database"
+      - "Set up health check monitoring to ensure webhook reliability"
+    use_cases:
+      - "Real-time sync of ClickUp task updates to local database"
+      - "Trigger automated actions when critical tasks are updated"
+      - "Update task status in ClickUp when local processing is complete"
+      - "Create incident reports automatically when critical events occur"
+      - "Maintain bidirectional sync between ClickUp and your application"
+
+error_handling:
+  common_errors:
+    401:
+      description: "Unauthorized - Invalid or expired API token"
+      resolution: "Check CLICKUP_API_KEY environment variable or regenerate token"
+    403:
+      description: "Forbidden - Insufficient permissions"
+      resolution: "Ensure the API token has access to the requested resources"
+    404:
+      description: "Not Found - Resource doesn't exist"
+      resolution: "Verify workspace, list, and task IDs"
+    429:
+      description: "Too Many Requests - Rate limit exceeded"
+      resolution: "Implement backoff strategy and respect rate limits"
+    500:
+      description: "Server Error - ClickUp service issue"
+      resolution: "Implement retry mechanism with exponential backoff"
+  retry_strategy:
+    max_retries: 3
+    base_delay: 1000 # milliseconds
+    backoff_factor: 2 # exponential backoff multiplier
+
+implementation:
+  files:
+    clickup_sync: "src/lightwave-infrastructure/email-backend/log_db/clickup_sync.py"
+    cli: "src/lightwave-infrastructure/email-backend/log_db/cli.py"
+    scheduler: "src/lightwave-infrastructure/email-backend/log_db/scheduler.py"
+  environment:
+    file: ".env.example"
+    required_variables:
+      - "CLICKUP_API_KEY"
+      - "CLICKUP_WORKSPACE_ID"
+      - "CLICKUP_LOGS_LIST_ID"
+      - "CLICKUP_METRICS_LIST_ID"
+      - "CLICKUP_INCIDENTS_LIST_ID"
+      - "CLICKUP_FEEDBACK_LIST_ID"
+  setup:
+    - "Copy .env.example to .env"
+    - "Fill in required API credentials"
+    - "Run CLI setup command: python -m log_db.cli setup"
+  usage:
+    manual:
+      - "python -m log_db.cli sync-logs"
+      - "python -m log_db.cli sync-metrics"
+      - "python -m log_db.cli sync-feedback"
+      - "python -m log_db.cli sync-all"
+    automated:
+      - "Set up cron job: */15 * * * * python -m log_db.scheduler"
+      - "Or create systemd timer for regular synchronization"
+
+resources:
+  documentation:
+    - title: "ClickUp API Documentation"
+      url: "https://developer.clickup.com/docs"
+    - title: "ClickUp Authentication"
+      url: "https://developer.clickup.com/docs/authentication"
+    - title: "ClickUp API v2 Reference"
+      url: "https://clickup.com/api"
+  tools:
+    - title: "ClickUp API Explorer"
+      url: "https://clickup.com/api/explorer"
+    - title: "Postman Collection"
+      url: "https://documenter.getpostman.com/view/10429980/UVeKqQZV"
+  support:
+    - title: "ClickUp API Support"
+      url: "https://help.clickup.com/hc/en-us/articles/6303426241687-Getting-Started-with-the-ClickUp-API"
+
+users:
+  description: "Users are members of a workspace with specific roles and permissions"
+  endpoints:
+    invite_user_to_workspace:
+      method: POST
+      url: "https://api.clickup.com/api/v2/team/{team_id}/user"
+      description: "Invite someone to join your Workspace as a member (Enterprise Plan only)"
+      params:
+        team_id: "ID of the workspace to invite the user to"
+      body:
+        email: "Email address of the user to invite"
+        admin: "Boolean indicating if the user should be an admin (optional)"
+        user_type: "User type/role in the workspace (optional)"
+        can_see_time_spent: "Boolean indicating if user can see time tracking data (optional)"
+        can_see_time_estimated: "Boolean indicating if user can see time estimates (optional)"
+      response:
+        id: "User ID"
+        username: "Username"
+        email: "Email address"
+        role: "User role in workspace"
+    get_user:
+      method: GET
+      url: "https://api.clickup.com/api/v2/user/{user_id}"
+      description: "Get details about a specific user"
+      params:
+        user_id: "ID of the user to retrieve"
+      response:
+        id: "User ID"
+        username: "Username"
+        email: "Email address"
+        color: "User color"
+        profilePicture: "URL to profile picture"
+    edit_user_on_workspace:
+      method: PUT
+      url: "https://api.clickup.com/api/v2/team/{team_id}/user/{user_id}"
+      description: "Edit a user's permissions on a workspace"
+      params:
+        team_id: "ID of the workspace"
+        user_id: "ID of the user to edit"
+      body:
+        admin: "Boolean indicating if the user should be an admin (optional)"
+        user_type: "User type/role in the workspace (optional)"
+        can_see_time_spent: "Boolean indicating if user can see time tracking data (optional)"
+        can_see_time_estimated: "Boolean indicating if user can see time estimates (optional)"
+      response:
+        id: "User ID"
+        username: "Username"
+        email: "Email address"
+        role: "Updated user role in workspace"
+    remove_user_from_workspace:
+      method: DELETE
+      url: "https://api.clickup.com/api/v2/team/{team_id}/user/{user_id}"
+      description: "Remove a user from a workspace"
+      params:
+        team_id: "ID of the workspace"
+        user_id: "ID of the user to remove"
+      response:
+        success: "Boolean indicating success"
+
+views:
+  description: "Views are saved configurations for displaying tasks in different formats (like list, board, calendar, etc.)"
+  endpoints:
+    get_workspace_views:
+      method: GET
+      url: "https://api.clickup.com/api/v2/team/{team_id}/view"
+      description: "View the task and page views available at the Everything Level of a Workspace"
+      params:
+        team_id: "ID of the workspace to get views from"
+      response:
+        views: "Array of view objects"
+    create_workspace_view:
+      method: POST
+      url: "https://api.clickup.com/api/v2/team/{team_id}/view"
+      description: "Create a view at the workspace (Everything) level"
+      params:
+        team_id: "ID of the workspace"
+      body:
+        name: "Name of the view"
+        type: "Type of view (e.g., list, board, calendar, etc.)"
+        protected: "Boolean indicating if the view is protected (optional)"
+        filters: "Object containing filter criteria (optional)"
+        sort_options: "Array of sorting options (optional)"
+      response:
+        id: "ID of the created view"
+        name: "Name of the view"
+        type: "Type of view"
+    get_space_views:
+      method: GET
+      url: "https://api.clickup.com/api/v2/space/{space_id}/view"
+      description: "Get all views in a space"
+      params:
+        space_id: "ID of the space"
+      response:
+        views: "Array of view objects"
+    create_space_view:
+      method: POST
+      url: "https://api.clickup.com/api/v2/space/{space_id}/view"
+      description: "Create a view at the space level"
+      params:
+        space_id: "ID of the space"
+      body:
+        name: "Name of the view"
+        type: "Type of view (e.g., list, board, calendar, etc.)"
+        protected: "Boolean indicating if the view is protected (optional)"
+        filters: "Object containing filter criteria (optional)"
+        sort_options: "Array of sorting options (optional)"
+      response:
+        id: "ID of the created view"
+        name: "Name of the view"
+        type: "Type of view"
+    get_folder_views:
+      method: GET
+      url: "https://api.clickup.com/api/v2/folder/{folder_id}/view"
+      description: "Get all views in a folder"
+      params:
+        folder_id: "ID of the folder"
+      response:
+        views: "Array of view objects"
+    create_folder_view:
+      method: POST
+      url: "https://api.clickup.com/api/v2/folder/{folder_id}/view"
+      description: "Create a view at the folder level"
+      params:
+        folder_id: "ID of the folder"
+      body:
+        name: "Name of the view"
+        type: "Type of view (e.g., list, board, calendar, etc.)"
+        protected: "Boolean indicating if the view is protected (optional)"
+        filters: "Object containing filter criteria (optional)"
+        sort_options: "Array of sorting options (optional)"
+      response:
+        id: "ID of the created view"
+        name: "Name of the view"
+        type: "Type of view"
+    get_list_views:
+      method: GET
+      url: "https://api.clickup.com/api/v2/list/{list_id}/view"
+      description: "Get all views in a list"
+      params:
+        list_id: "ID of the list"
+      response:
+        views: "Array of view objects"
+    create_list_view:
+      method: POST
+      url: "https://api.clickup.com/api/v2/list/{list_id}/view"
+      description: "Create a view at the list level"
+      params:
+        list_id: "ID of the list"
+      body:
+        name: "Name of the view"
+        type: "Type of view (e.g., list, board, calendar, etc.)"
+        protected: "Boolean indicating if the view is protected (optional)"
+        filters: "Object containing filter criteria (optional)"
+        sort_options: "Array of sorting options (optional)"
+      response:
+        id: "ID of the created view"
+        name: "Name of the view"
+        type: "Type of view"
+    get_view:
+      method: GET
+      url: "https://api.clickup.com/api/v2/view/{view_id}"
+      description: "Get details about a specific view"
+      params:
+        view_id: "ID of the view to retrieve"
+      response:
+        id: "View ID"
+        name: "View name"
+        type: "View type"
+        parent: "Parent object (workspace, space, folder, or list)"
+        filters: "Applied filters"
+    update_view:
+      method: PUT
+      url: "https://api.clickup.com/api/v2/view/{view_id}"
+      description: "Update an existing view"
+      params:
+        view_id: "ID of the view to update"
+      body:
+        name: "Name of the view (optional)"
+        protected: "Boolean indicating if the view is protected (optional)"
+        filters: "Object containing filter criteria (optional)"
+        sort_options: "Array of sorting options (optional)"
+      response:
+        id: "View ID"
+        name: "Updated view name"
+    delete_view:
+      method: DELETE
+      url: "https://api.clickup.com/api/v2/view/{view_id}"
+      description: "Delete a view"
+      params:
+        view_id: "ID of the view to delete"
+      response:
+        success: "Boolean indicating success"
+    get_view_tasks:
+      method: GET
+      url: "https://api.clickup.com/api/v2/view/{view_id}/task"
+      description: "Get tasks filtered by a specific view"
+      params:
+        view_id: "ID of the view"
+        page: "Page number for pagination (optional)"
+        subtasks: "Include subtasks (optional)"
+        include_closed: "Include closed tasks (optional)"
+      response:
+        tasks: "Array of task objects filtered according to the view"
+
+webhooks:
+  description: "Webhooks allow for real-time notifications when changes occur in ClickUp, enabling automated workflows and integrations"
+  endpoints:
+    get_webhooks:
+      method: GET
+      url: "https://api.clickup.com/api/v2/team/{team_id}/webhook"
+      description: "View the webhooks created via the API for a Workspace (returns webhooks created by the authenticated user)"
+      params:
+        team_id: "ID of the workspace to get webhooks from"
+      response:
+        webhooks: "Array of webhook objects"
+    create_webhook:
+      method: POST
+      url: "https://api.clickup.com/api/v2/team/{team_id}/webhook"
+      description: "Create a new webhook in a workspace"
+      params:
+        team_id: "ID of the workspace"
+      body:
+        endpoint: "URL that will receive webhook events"
+        events: "Array of events to subscribe to (e.g., taskCreated, taskUpdated, etc.)"
+        health_check_enabled: "Boolean indicating if health checks are enabled (optional)"
+        space_id: "ID of the space to subscribe to (optional, omit for workspace-level webhook)"
+        folder_id: "ID of the folder to subscribe to (optional, requires space_id)"
+        list_id: "ID of the list to subscribe to (optional, requires space_id and folder_id)"
+        task_id: "ID of the task to subscribe to (optional)"
+      response:
+        id: "ID of the created webhook"
+        endpoint: "Webhook endpoint URL"
+        events: "Array of subscribed events"
+        client_id: "Client ID of the app that created the webhook"
+    update_webhook:
+      method: PUT
+      url: "https://api.clickup.com/api/v2/webhook/{webhook_id}"
+      description: "Update an existing webhook"
+      params:
+        webhook_id: "ID of the webhook to update"
+      body:
+        endpoint: "URL that will receive webhook events (optional)"
+        events: "Array of events to subscribe to (optional)"
+        health_check_enabled: "Boolean indicating if health checks are enabled (optional)"
+        status: "Webhook status (active or inactive) (optional)"
+      response:
+        id: "ID of the updated webhook"
+        endpoint: "Updated webhook endpoint URL"
+        events: "Array of subscribed events"
+        client_id: "Client ID of the app that created the webhook"
+    delete_webhook:
+      method: DELETE
+      url: "https://api.clickup.com/api/v2/webhook/{webhook_id}"
+      description: "Delete a webhook"
+      params:
+        webhook_id: "ID of the webhook to delete"
+      response:
+        success: "Boolean indicating success" 
