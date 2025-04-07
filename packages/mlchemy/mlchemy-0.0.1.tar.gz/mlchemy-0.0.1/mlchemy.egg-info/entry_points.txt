@@ -1,0 +1,2 @@
+[console_scripts]
+mlchemy = mlchemy.cli.main:main
