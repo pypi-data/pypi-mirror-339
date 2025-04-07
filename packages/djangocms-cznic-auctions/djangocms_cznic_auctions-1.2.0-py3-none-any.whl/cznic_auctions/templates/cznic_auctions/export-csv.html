@@ -1,0 +1,2 @@
+{% load i18n %}
+<a class="auctions-export {{ instance.status }}" href="{% url "auctions:auctions_export_csv" instance.status %}">{% translate "Export the whole list to csv" %}</a>
