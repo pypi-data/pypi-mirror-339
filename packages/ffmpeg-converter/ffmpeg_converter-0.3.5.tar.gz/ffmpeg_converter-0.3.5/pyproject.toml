@@ -1,0 +1,98 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ffmpeg-converter"
+dynamic = ["version"]
+description = "基于 FFmpeg 的音视频格式转换工具"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+license = "MIT"
+keywords = ["ffmpeg", "converter", "audio", "video"]
+authors = [{ name = "OSpoon", email = "zxin088@gmail.com" }]
+
+[tool.setuptools]
+package-dir = { "ffmpeg_converter" = "src" }
+packages = ["ffmpeg_converter"]
+
+[tool.setuptools.dynamic]
+version = { attr = "ffmpeg_converter.__version__" }
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle
+    "F",  # pyflakes
+    "I",  # isort
+    "N",  # pep8-naming
+    "UP", # pyupgrade
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+packages = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+pythonpath = [".", "src"]
+addopts = "--cov=src --cov-report=html --cov-report=xml"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.3.0",
+    "mypy>=1.9.0",
+    "pytest>=8.3.5",
+    "pytest-asyncio>=0.26.0",
+    "pytest-cov>=4.1.0",
+    "pre-commit>=3.6.2",
+    "python-semantic-release>=9.21.0",
+    "build>=1.1.1",
+]
+
+[tool.semantic_release]
+version_variables = ["src/__init__.py:__version__"]
+commit_message = "chore(release): {version} [skip ci]"
+branch = "main"
+build_command = "python -m build"
+dist_path = "dist/"
+upload_to_release = true
+
+[tool.semantic_release.commit_parser_options]
+allowed_tags = [
+    "feat",
+    "fix",
+    "perf",
+    "refactor",
+    "style",
+    "docs",
+    "test",
+    "build",
+    "ci",
+    "chore",
+]
+minor_tags = ["feat"]
+patch_tags = ["fix", "perf"]
+
+[tool.semantic_release.branches.main]
+match = "main"
+prerelease = false
