@@ -1,0 +1,11 @@
+basicmicro/__init__.py,sha256=8XRhs-zAMQgBdg2f1iFbSx8KaHa8IqVTN3WsCmGD6TY,663
+basicmicro/commands.py,sha256=J79uXwROn7fnJl1CqQk2I-sEY6Rq8-L9A6moM50q1Qo,3997
+basicmicro/controller.py,sha256=-zpEXmnlkMVBY5S3_n7cKdNqZ12HseeV88X31m1Jwz4,139974
+basicmicro/exceptions.py,sha256=lM0u8xFJCxBtqRkmvKItbWiBsV1pSpaHerVNcxlO5qM,814
+basicmicro/types.py,sha256=WEyJz_S8rp-c8WsLchti3OfO2PBUGv4J_uwvR7zGoPc,4792
+basicmicro/utils.py,sha256=K9F7XzjOwl3_KP9Y-M24XcBcaKjQcYjp51SKc1-AbLg,1915
+basicmicro-2.0.4.dist-info/licenses/LICENSE,sha256=A5Z-4LJhoAod0hMbXmrSAYhrGXWtQG9BhIVtHMnENeQ,1103
+basicmicro-2.0.4.dist-info/METADATA,sha256=Ci4XYXSt1IaXLYad6KqDq5TZo9koh7InhV59y7FAXKc,8458
+basicmicro-2.0.4.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+basicmicro-2.0.4.dist-info/top_level.txt,sha256=DO9H0hfecrscKl6sPiIEFakHu7XUb18ojMAAxuw2SgA,11
+basicmicro-2.0.4.dist-info/RECORD,,
