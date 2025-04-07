@@ -1,0 +1,16 @@
+matplotlib~=3.8
+matplotlib-scalebar
+numpy~=1.25
+pandas[parquet]~=2.0
+scikit-image>=0.18
+scikit-learn~=1.1
+scipy~=1.11
+tqdm~=4.65
+umap-learn~=0.5
+
+[docs]
+sphinx~=8.0
+sphinx-autoapi~=3.1
+sphinx-copybutton
+sphinx-rtd-theme
+myst-nb
