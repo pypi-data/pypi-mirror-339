@@ -1,0 +1,2 @@
+[console_scripts]
+xamphp = xamphp.main:main
