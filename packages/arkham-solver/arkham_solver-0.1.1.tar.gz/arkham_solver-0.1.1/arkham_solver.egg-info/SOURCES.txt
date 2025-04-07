@@ -1,0 +1,12 @@
+README.md
+setup.py
+./arkham_solver/__init__.py
+./arkham_solver/client.py
+./arkham_solver/exceptions.py
+./arkham_solver/models.py
+./arkham_solver/presets.py
+arkham_solver.egg-info/PKG-INFO
+arkham_solver.egg-info/SOURCES.txt
+arkham_solver.egg-info/dependency_links.txt
+arkham_solver.egg-info/requires.txt
+arkham_solver.egg-info/top_level.txt
