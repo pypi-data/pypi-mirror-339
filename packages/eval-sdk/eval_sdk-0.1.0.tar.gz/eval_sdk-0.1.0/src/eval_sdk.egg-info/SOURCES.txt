@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+src/eval_sdk/__init__.py
+src/eval_sdk/core.py
+src/eval_sdk/exceptions.py
+src/eval_sdk/utils.py
+src/eval_sdk/version.py
+src/eval_sdk.egg-info/PKG-INFO
+src/eval_sdk.egg-info/SOURCES.txt
+src/eval_sdk.egg-info/dependency_links.txt
+src/eval_sdk.egg-info/requires.txt
+src/eval_sdk.egg-info/top_level.txt
