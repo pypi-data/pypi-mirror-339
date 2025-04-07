@@ -1,0 +1,8 @@
+docopt
+mypy
+openpyxl
+openpyxl-stubs
+pandas
+pandas-stubs
+pytest
+xmltodict
