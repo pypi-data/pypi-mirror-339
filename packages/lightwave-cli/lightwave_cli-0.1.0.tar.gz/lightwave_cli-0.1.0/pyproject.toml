@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lightwave-cli"
+version = "0.1.0"
+description = "Command-line interface for LightWave development workflows"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "LightWave Media", email = "info@lightwave-media.site" }
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "typer>=0.9.0",
+    "rich>=13.7.0",
+    "gitpython>=3.1.40",
+    "pydantic>=2.6.1",
+    "pydantic-ai>=0.0.45",
+    "click>=8.1.7",
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "pytest-xdist>=3.3.1",
+    "pytest-mock>=3.11.1",
+    "pytest-timeout>=2.1.0",
+    "pytest-sugar>=0.9.7",
+    "pytest-html>=4.0.0",
+    "pytest-django>=4.5.2",
+    "pytest-asyncio>=0.21.1",
+    "httpx>=0.24.1",
+    "factory-boy>=3.2.1",
+    "lightwave-core>=0.1.1",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/joelschaeffer/lightwave-cli"
+"Bug Tracker" = "https://github.com/joelschaeffer/lightwave-cli/issues"
+"Documentation" = "https://github.com/joelschaeffer/lightwave-eco-system-docs"
+
+[project.scripts]
+lightwave = "lightwave_cli.cli.main:cli"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+markers = [
+    "unit: marks tests as unit tests",
+    "integration: marks tests as integration tests",
+    "e2e: marks tests as end-to-end tests",
+    "api: marks tests as API tests",
+    "slow: marks tests as slow running tests",
+    "dependency: marks tests that require external dependencies",
+]

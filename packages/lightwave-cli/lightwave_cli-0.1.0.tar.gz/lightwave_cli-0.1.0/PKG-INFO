@@ -1,0 +1,128 @@
+Metadata-Version: 2.4
+Name: lightwave-cli
+Version: 0.1.0
+Summary: Command-line interface for LightWave development workflows
+Project-URL: Homepage, https://github.com/joelschaeffer/lightwave-cli
+Project-URL: Bug Tracker, https://github.com/joelschaeffer/lightwave-cli/issues
+Project-URL: Documentation, https://github.com/joelschaeffer/lightwave-eco-system-docs
+Author-email: LightWave Media <info@lightwave-media.site>
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.11
+Requires-Dist: click>=8.1.7
+Requires-Dist: factory-boy>=3.2.1
+Requires-Dist: gitpython>=3.1.40
+Requires-Dist: httpx>=0.24.1
+Requires-Dist: lightwave-core>=0.1.1
+Requires-Dist: pydantic-ai>=0.0.45
+Requires-Dist: pydantic>=2.6.1
+Requires-Dist: pytest-asyncio>=0.21.1
+Requires-Dist: pytest-cov>=4.1.0
+Requires-Dist: pytest-django>=4.5.2
+Requires-Dist: pytest-html>=4.0.0
+Requires-Dist: pytest-mock>=3.11.1
+Requires-Dist: pytest-sugar>=0.9.7
+Requires-Dist: pytest-timeout>=2.1.0
+Requires-Dist: pytest-xdist>=3.3.1
+Requires-Dist: pytest>=7.4.0
+Requires-Dist: rich>=13.7.0
+Requires-Dist: typer>=0.9.0
+Description-Content-Type: text/markdown
+
+# LightWave CLI
+
+Command-line interface for LightWave ecosystem tools and utilities.
+
+## Features
+
+- **Documentation Sync**: Synchronize documentation from repositories
+- **AI Agents**: Run AI agents using pydantic-ai for various tasks
+- **UV Integration**: Wrapper for the fast UV package manager
+
+## Installation
+
+```bash
+# Clone the repository
+git clone git@github.com:kiwi-dev-la/lightwave-cli.git
+cd lightwave-cli
+
+# Install in development mode
+pip install -e .
+```
+
+## Usage
+
+### Documentation Sync
+
+Synchronize documentation from a GitHub repository:
+
+```bash
+# Using a remote repository
+lightwave docs sync --repo-url https://github.com/kiwi-dev-la/lightwave-eco-system-docs.git --branch main
+
+# Using a locally cloned repository
+lightwave docs sync --local-repo ./lightwave-eco-system-docs --branch main
+```
+
+### AI Agents
+
+Run an AI agent with a prompt:
+
+```bash
+# Set your API key
+export ANTHROPIC_API_KEY=your-api-key
+
+# Run the docs agent
+lightwave agent run docs "What are the main components of the LightWave ecosystem?"
+
+# Run with different model
+lightwave agent run docs "What's in the lightwave-cli?" --model claude-3-sonnet-20240229
+```
+
+### UV Package Manager
+
+UV is a much faster alternative to pip for Python package management. The lightwave CLI includes wrappers for common UV commands:
+
+```bash
+# Create a virtual environment
+lightwave uv venv myenv
+
+# Install a package
+lightwave uv install pydantic
+
+# Install a package in editable mode
+lightwave uv install -e /path/to/package
+
+# Run a UV command
+lightwave uv run pip list
+```
+
+## Available Agents
+
+- **docs**: Answer questions about LightWave documentation
+
+## Dependencies
+
+- Python 3.11+
+- typer
+- rich
+- gitpython
+- pydantic
+- pydantic-ai
+
+## Development
+
+To add a new agent:
+
+1. Create a new file in `src/lightwave_cli/agents/`
+2. Extend the `LightWaveAgent` class
+3. Implement the `run()` method
+4. Create a singleton instance named `agent`
+
+## License
+
+MIT
