@@ -1,0 +1,9 @@
+datapipelabcustomprocessor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datapipelabcustomprocessor/app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datapipelabcustomprocessor/app/node/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datapipelabcustomprocessor/app/node/processor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datapipelabcustomprocessor/app/node/processor/azure_synapse_gcp_transfer_node.py,sha256=_DZ38wVw-P5grjIozgk6C0NCfxX2sZ75TaaKIXJWPmE,4295
+datapipelabcustomprocessor-0.1.3.dist-info/METADATA,sha256=IZSxWauNSCwKo1E2x_q1wnmFCpz1uuejUbeEo5FmNhU,293
+datapipelabcustomprocessor-0.1.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+datapipelabcustomprocessor-0.1.3.dist-info/top_level.txt,sha256=DLdxvIPwc-yS61lA-UNNHpifSqxijq5--SHFq705uOs,27
+datapipelabcustomprocessor-0.1.3.dist-info/RECORD,,
