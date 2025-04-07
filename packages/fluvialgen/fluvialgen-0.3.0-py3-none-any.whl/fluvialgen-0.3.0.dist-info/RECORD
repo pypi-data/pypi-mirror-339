@@ -1,0 +1,11 @@
+fluvialgen/__init__.py,sha256=O6HJzY8YbY3yMnJn4_WxS3Z726ZF0J941-hA-XKda5k,45
+fluvialgen/base_generator.py,sha256=qOcOo8hTxJg3EfuY-7YeyCGv7OOOFVj-Yr7RHuqR3X8,1554
+fluvialgen/movingwindow_generator.py,sha256=TTjNpL-SU7ivAyOtDTnF7fjpFx7bQDmoJKKCCkZJ-wc,5234
+fluvialgen/river_dataset_generator.py,sha256=5HgwGaJBalOiDg8xBFMDlBU-aQkO5cG-3YomxmgWeUY,2221
+fluvialgen/tests/__init__.py,sha256=arzRcCKAke1Eex7dORudzbYo49_tWQr5NdgST_3Yjk4,35
+fluvialgen/tests/test_movingwindow_batcher.py,sha256=cN5xntjPQ6YBYHr19DrkMzW51jeyUstSxnu-hK0aCJs,1195
+fluvialgen/tests/test_movingwindow_generator.py,sha256=aCY0HSv_p97Jw-cRgi85JpJhcXK6QgWP_NWqAqhclew,1672
+fluvialgen-0.3.0.dist-info/METADATA,sha256=roZMzCF3Mq1qEKC3-tKdTNPv2ZOBB2g5zhpmgiDtVR0,2939
+fluvialgen-0.3.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+fluvialgen-0.3.0.dist-info/top_level.txt,sha256=ab7JnAqc_OeGk3UUvcCpS3t1iIamsoglO04vF-6Aa7U,11
+fluvialgen-0.3.0.dist-info/RECORD,,
