@@ -1,0 +1,127 @@
+Metadata-Version: 2.4
+Name: oratools
+Version: 0.1.0
+Summary: A collection of essential developer utilities in a single CLI tool
+Home-page: https://github.com/owenorcan/oratools
+Author: Owen Orcan
+Author-email: owenorcan@gmail.com
+Project-URL: Source Code, https://github.com/owenorcan/oratools
+Keywords: cli,developer-tools,youtube-downloader,system-info,network-tools,file-search,utilities
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pytube>=15.0.0
+Requires-Dist: rich>=14.0.0
+Requires-Dist: requests>=2.30.0
+Requires-Dist: pillow>=11.0.0
+Requires-Dist: pyfiglet>=1.0.2
+Requires-Dist: psutil>=5.9.5
+Requires-Dist: dnspython>=2.4.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.1.0; extra == "dev"
+Requires-Dist: responses>=0.23.0; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# ORATOOLS
+
+
+[![PyPI version](https://img.shields.io/pypi/v/oratools.svg)](https://pypi.org/project/oratools/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/oratools.svg)](https://pypi.org/project/oratools/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A command-line collection of essential developer tools I use a lot in a single cli tool.
+
+## Features
+
+- **Download Tools**
+  - YouTube video downloader
+  - YouTube audio extractor
+
+- **Media Tools**
+  - Image compression
+
+- **Network Tools**
+  - Website status checker
+  - Public IP lookup
+  - Ping/Latency checker
+  - Port scanner
+  - DNS record lookup
+
+- **System Tools**
+  - System information viewer
+  - Disk usage analyzer
+
+- **File Tools**
+  - Text search across files
+
+## Installation
+
+### From PyPI
+
+```bash
+pip install oratools
+```
+
+### From Homebrew
+
+```bash
+brew tap owenorcan/homebrew-oratools
+brew install oratools
+```
+
+### From Source
+
+```bash
+git clone https://github.com/owenorcan/homebrew-oratools.git
+cd oratools
+pip install -e .
+```
+
+## Usage
+
+Simply run:
+
+```bash
+oratools
+```
+
+This will launch an interactive menu where you can select the tool you want to use.
+
+
+## Development
+
+To set up for development:
+
+```bash
+git clone https://github.com/owenorcan/oratools.git
+cd oratools
+pip install -e ".[dev]"
+```
+
+## Contributing
+
+Contributions are welcome!  
+
