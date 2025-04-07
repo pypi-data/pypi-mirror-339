@@ -1,0 +1,82 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "inverse_code"
+version = "1.2"
+requires-python = ">=3.10"
+author = "Aniceto Jolela"
+author-email = "otecina500@gmail.com"
+maintainers = [{name="Aniceto Jolela", email="otecina500@gmail.com"}]
+description = "Reverse Code is a library created for Python to help developers encrypt and retrieve their data in a simple way."
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {text = "MIT"}
+keywords = ["inverse_code", "inverse-code", "code", "ascii", "convert","helpers","decode","encode","win1252","asciitable","binary","bin","dec","hex","oct","unittest","test","pylintrc","yield","readme","library"]
+classifiers = [
+# How mature is this project? Common values are
+#   3 - Alpha
+#   4 - Beta
+#   5 - Production/Stable
+"Development Status :: 5 - Production/Stable",
+
+# Indicate who your project is intended for
+"Intended Audience :: Developers",
+"License :: OSI Approved :: MIT License",
+
+# Specify the Python versions you support here.
+"Programming Language :: Python :: 3",
+"Programming Language :: Python :: 3.10",
+"Programming Language :: Python :: 3.11",
+"Programming Language :: Python :: 3.12",
+"Programming Language :: Python :: 3.13",
+"Topic :: Software Development :: Libraries :: Python Modules",
+"Topic :: Security :: Cryptography",
+"Operating System :: OS Independent",
+]
+
+dependencies = [
+    "requests",
+]
+
+[project.optional-dependencies]
+pdf = ["ReportLab>=1.2", "RXP"]
+rest = ["docutils>=0.3", "pack==1.1,==1.3"]
+dev = [
+    "pytest>=7.4.0",
+    "black>=23.7.0",
+    "isort>=5.12.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/aniceto-jolela/inverse_code"
+"Documentation" = "https://github.com/aniceto-jolela/inverse_code/blob/main/README.md"
+"Repository" = "https://github.com/aniceto-jolela/inverse_code"
+"Tests" = "https://github.com/aniceto-jolela/inverse_code/tree/main/tests"
+"ASCII Reference" = "https://www.ascii-code.com/"
+
+[project.scripts]
+inverse-code-cli = "inverse_code.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["inverse_code"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "inverse_code",
+    "README.md",
+    "INVERSE_CODE.md",
+    "HELPERS.md",
+    "ASCII.md",
+    "CONVERT.md",
+    "LICENSE",
+]
+
+[tool.hatch.build]
+packages = ["inverse_code"]
+include = [
+    "inverse_code/inverse_code/**/*.py",
+    "inverse_code/inverse_code/**/*.txt",
+    "inverse_code/inverse_code/**/*.md",
+]
+
