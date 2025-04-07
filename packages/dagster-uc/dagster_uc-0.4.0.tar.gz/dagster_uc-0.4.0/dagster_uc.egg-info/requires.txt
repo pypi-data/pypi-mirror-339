@@ -1,0 +1,6 @@
+kr8s<1.0,>=0.20.1
+pyhelm3>=0.3.3
+typer>=0.15.1
+tomli
+pyyaml
+pytz
