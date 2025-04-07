@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+frackture/__init__.py
+frackture.egg-info/PKG-INFO
+frackture.egg-info/SOURCES.txt
+frackture.egg-info/dependency_links.txt
+frackture.egg-info/requires.txt
+frackture.egg-info/top_level.txt
