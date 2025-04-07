@@ -1,0 +1,2 @@
+[console_scripts]
+sbcli-25 = simplyblock_cli.cli:main
