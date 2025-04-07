@@ -1,0 +1,8 @@
+Metadata-Version: 2.2
+Name: gggg
+Version: 1.0.8
+Author: Golden
+Requires-Dist: requests
+Requires-Dist: rich
+Dynamic: author
+Dynamic: requires-dist
