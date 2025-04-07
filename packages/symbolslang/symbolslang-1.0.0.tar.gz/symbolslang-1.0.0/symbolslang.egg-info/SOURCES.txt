@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+symbols/__init__.py
+symbols/c_executor.py
+symbolslang.egg-info/PKG-INFO
+symbolslang.egg-info/SOURCES.txt
+symbolslang.egg-info/dependency_links.txt
+symbolslang.egg-info/entry_points.txt
+symbolslang.egg-info/top_level.txt
