@@ -1,0 +1,12 @@
+backend/__init__.py,sha256=yZMtvWN6sSV2hNM403xCgZOqg1YFWHxxOz6YApOKCUU,171
+backend/apps.py,sha256=K6mjC-raRXokvHg4vRDnyW-b0SLYcVnBZK-Nh_LtL-o,394
+backend/asgi.py,sha256=rXfT23fDDF1rktnWuIc01eg12_fRPf8fv8n1E0DnvMQ,401
+backend/settings.py,sha256=5lRkIUTbk6qEtMujk3gfYDtrqSV7Xc5a3yv1cBGLoJE,3177
+backend/signals.py,sha256=9LR1kpKItoHptNM8ax0yCljczOpzmsJSNgp-NheI4Qo,42
+backend/urls.py,sha256=GnAMz3V__d3MZ0mJcj29Sqxsx4k_c1HycSZexLSESb4,804
+backend/wsgi.py,sha256=oxSuBLdZ1iuiPvI-yqzpiPfHLe7oFyXYylTE6rNg7YU,401
+tumcommon_x-0.1.0.dist-info/licenses/LICENSE,sha256=wsPy7bNwq41uywmcECrv78YLB6qZpN2XJlxAjUHU5P8,1074
+tumcommon_x-0.1.0.dist-info/METADATA,sha256=Yt9GQqM8ylkJUxOox8LINsG7kL3QQJ2uWBeC16vVIGo,1892
+tumcommon_x-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+tumcommon_x-0.1.0.dist-info/top_level.txt,sha256=o0r_qMzzBDDtK9APrv2QVcIw9oc00JRmCEsTE2-AFr0,8
+tumcommon_x-0.1.0.dist-info/RECORD,,
