@@ -1,0 +1,41 @@
+{
+    "10.2.3.101": {
+       "commands": [
+         "show lldp neighbors",
+         "show snmp notification-log"
+       ]
+    },
+    "10.2.3.103": {
+       "commands": [
+         "show lldp neighbors detail",
+         "show ip inter brief"
+       ]
+    },
+    "10.2.3.104": {
+      "commands": [
+        "show lldp neighbors",
+        "show configuration protocols"
+      ]
+   },
+   "10.2.3.105": {
+      "commands": [
+        "show lldp neighbors detail",
+        "show inter brief"
+      ]
+   },
+   "10.2.3.107": {
+      "commands": [
+        "display lldp neighbor brief"
+      ]
+   },
+   "10.2.3.108": {
+      "commands": [
+        "show interfaces"
+      ]
+   },
+   "10.2.3.109": {
+      "commands": [
+        "show vlan"
+      ]
+   }
+ }
