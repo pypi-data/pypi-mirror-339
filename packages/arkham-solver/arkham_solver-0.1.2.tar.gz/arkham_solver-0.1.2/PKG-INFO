@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: arkham-solver
+Version: 0.1.2
+Summary: Python client for Arkham Captcha Solver API
+Home-page: https://github.com/arkhamsolver/arkham-solver
+Author: Arkham Solver
+Author-email: admin@arkham-solver.com
+License: MIT
+Project-URL: Bug Reports, https://github.com/arkhamsolver/arkham-solver/issues
+Project-URL: Source, https://github.com/arkhamsolver/arkham-solver
+Keywords: captcha,solver,arkham,api-client
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Requires-Dist: pydantic>=1.8.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Arkham Captcha Solver Python Client
+
+A Python client for the Arkham Captcha Solver API.
+
+## Installation
+
+```bash
+pip install arkham-solver
