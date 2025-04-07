@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: upxd_functions
+Version: 0.3
+Summary: Funções baseadas no uso diário para teste de criação de biblioteca
+Author: Tork9023
+Author-email: Tork9023@gmail.com
+License: MIT License
+Keywords: UPX
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: google-generativeai
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+#Um projeto teste para criaÃ§Ã£o de biblioteca para python

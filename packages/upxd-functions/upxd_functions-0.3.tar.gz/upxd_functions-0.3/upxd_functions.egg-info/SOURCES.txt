@@ -1,0 +1,10 @@
+LICENCE
+README.md
+setup.py
+upxd/_init_.py
+upxd/function_upxd.py
+upxd_functions.egg-info/PKG-INFO
+upxd_functions.egg-info/SOURCES.txt
+upxd_functions.egg-info/dependency_links.txt
+upxd_functions.egg-info/requires.txt
+upxd_functions.egg-info/top_level.txt
