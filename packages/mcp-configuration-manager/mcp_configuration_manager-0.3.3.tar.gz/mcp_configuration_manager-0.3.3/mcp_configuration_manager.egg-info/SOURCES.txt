@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+mcp_configuration_manager.egg-info/PKG-INFO
+mcp_configuration_manager.egg-info/SOURCES.txt
+mcp_configuration_manager.egg-info/dependency_links.txt
+mcp_configuration_manager.egg-info/entry_points.txt
+mcp_configuration_manager.egg-info/requires.txt
+mcp_configuration_manager.egg-info/top_level.txt
+tests/test_cli.py
+windsurf_mcp_config_manager/__init__.py
+windsurf_mcp_config_manager/api.py
+windsurf_mcp_config_manager/cli.py
+windsurf_mcp_config_manager/ui_server.py

@@ -1,0 +1,213 @@
+Metadata-Version: 2.4
+Name: mcp-configuration-manager
+Version: 0.3.3
+Summary: A utility to manage Windsurf MCP server configurations
+Home-page: https://github.com/trilogy-group/trilogy-group-windsurf-mcp-config-manager
+Author: Trilogy
+Author-email: trilogy@trilogy.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: tabulate
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# MCP Config Manager
+
+A command-line utility to manage MCP server configurations for both Windsurf and Cursor platforms. This tool helps you easily add, update, delete, and list MCP server configurations.
+
+## Installation
+
+```bash
+pip install mcp-configuration-manager
+```
+
+## Quick Start
+
+The utility provides a command-line interface with the shortcut `mcm` and several subcommands:
+
+```bash
+# Add a new MCP server
+mcm add my-server --command python --args "server.py,--port=8080" --env DEBUG=true
+
+# List all configured servers
+mcm list
+
+# Update an existing server
+mcm update my-server --command node --args "app.js,--env=production"
+
+# Delete a server
+mcm delete my-server
+
+# Launch the UI
+mcm ui
+
+# Use with Cursor platform
+mcm --cursor add my-cursor-server --url https://example.com/mcp
+```
+
+## Configuration Files
+
+By default, the configurations are stored in:
+- Windsurf: `~/.codeium/mcm/mcp_config.json`
+- Cursor: `~/.cursor/mcp.json`
+
+The files are automatically created if they don't exist. A backup is always created before making any changes to the configuration files.
+
+## Detailed Usage
+
+### Global Options
+
+```
+--cursor        Use Cursor configuration instead of Windsurf
+--help          Show this message and exit
+```
+
+### Add Command
+
+Add a new MCP server configuration.
+
+```bash
+mcm add NAME --command COMMAND [--args ARGS] [--env KEY=VALUE]
+# Or for Cursor
+mcm --cursor add NAME --url URL
+# Or with package management
+mcm add NAME --pipx --package PACKAGE --url URL
+```
+
+Options:
+- `NAME`: Name of the MCP server (required)
+- `--command TEXT`: Command to run the MCP server (for proxy mode)
+- `--args TEXT`: Arguments for the command
+- `--env TEXT`: Environment variables in KEY=VALUE format
+- `--url TEXT`: URL of the MCP server
+- `--pipx`: Use pipx to run the package
+- `--npx`: Use npx to run the package
+- `--package TEXT`: Package name to use with pipx or npx
+
+Example:
+```bash
+mcm add my-server --command python --args "server.py --port=8080 --debug" --env DEBUG=true
+mcm --cursor add my-cursor-server --url https://example.com/mcp
+mcm add my-python-mcp --pipx --package my-package --url https://example.com
+```
+
+### Delete Command
+
+Delete an MCP server configuration.
+
+```bash
+mcm delete NAME
+# Or for Cursor
+mcm --cursor delete NAME
+```
+
+Options:
+- `NAME`: Name of the MCP server to delete (required)
+
+Example:
+```bash
+mcm delete my-server
+mcm --cursor delete my-cursor-server
+```
+
+### Update Command
+
+Update an existing MCP server configuration.
+
+```bash
+mcm update NAME [--command COMMAND] [--args ARGS] [--env KEY=VALUE]
+# Or for Cursor
+mcm --cursor update NAME --url NEW_URL
+```
+
+Options:
+- `NAME`: Name of the MCP server to update (required)
+- `--command TEXT`: New command to run the MCP server
+- `--args TEXT`: New arguments for the command
+- `--env TEXT`: Environment variables to add/update
+- `--url TEXT`: New URL for the MCP server
+
+Example:
+```bash
+mcm update my-server --command node --args "app.js --production" --env NODE_ENV=production
+mcm --cursor update my-cursor-server --url https://new-example.com/mcp
+```
+
+### List Command
+
+List all configured MCP servers.
+
+```bash
+mcm list
+# Or for Cursor
+mcm --cursor list
+```
+
+Options:
+- `--json`: Output in JSON format (useful for programmatic access)
+
+Example output:
+```
+Configured MCP servers:
+
+my-server:
+  Command: python
+  Args: server.py --port=8080
+  Environment variables:
+    DEBUG=true
+```
+
+### UI Command
+
+Launch a web-based user interface for managing MCP server configurations.
+
+```bash
+mcm ui
+```
+
+This command starts a local web server and opens a browser window with a graphical interface for managing your MCP server configurations. The UI provides the same functionality as the command-line interface but in a more user-friendly format.
+
+Features:
+- View all configured servers in a table format
+- Add new server configurations with a form
+- Edit existing server configurations
+- Delete server configurations
+- Real-time updates when changes are made
+- Support for both Windsurf and Cursor platforms
+
+## Development
+
+### Setup Development Environment
+
+```bash
+# Clone the repository
+git clone https://github.com/trilogy-group/trilogy-group-windsurf-mcp-config-manager.git
+cd trilogy-group-windsurf-mcp-config-manager
+
+# Install in development mode
+pip install -e .
+```
+
+### Running Tests
+
+```bash
+pytest
+```
+
+## License
+
+MIT
