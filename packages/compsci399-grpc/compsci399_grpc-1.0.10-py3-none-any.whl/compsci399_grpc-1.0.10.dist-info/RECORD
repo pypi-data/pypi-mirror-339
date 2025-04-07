@@ -1,0 +1,11 @@
+compsci399_grpc/__init__.py,sha256=OOhLK1qLd8RdCwGP_Yxt1ME0ld2iu7hxQ3-rIgkuzcs,111
+compsci399_grpc/greeter_pb2.py,sha256=eyrD3dYY5tm259DEi6JohkrCUrsYNrgWhutKt_sFRUg,1597
+compsci399_grpc/greeter_pb2_grpc.py,sha256=3f6QXzXl1mu7CSPfGBP3RqBoMQ3jEbl4CLRT6qWQXJk,3298
+compsci399_grpc/product_pb2.py,sha256=7-DyM-NcfEoHw7RcBqfUIuvB40olXEpGgfUkpeOINu0,2494
+compsci399_grpc/product_pb2_grpc.py,sha256=X4ho-HxAhOsdfJDN-rSYCVB60-csjQOh5UQ8StJvYN0,5018
+compsci399_grpc/user_pb2.py,sha256=irEMMIF-rCA9GbQMqvJEYGCsHVjDcoh6WLvvqxfsEYY,2335
+compsci399_grpc/user_pb2_grpc.py,sha256=Xy8nk4LehIyZylegvZjFNmnRYmMbHemTxOaAa18g9Gg,3396
+compsci399_grpc-1.0.10.dist-info/METADATA,sha256=8fnWg9Nrc8g1vKWuH0u8Lka1ioUAajmenA1t01bMqw4,214
+compsci399_grpc-1.0.10.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+compsci399_grpc-1.0.10.dist-info/top_level.txt,sha256=UFdfmNP_SSaTPAfzStdkffilg9vd3EVb2L-3MigxbMA,16
+compsci399_grpc-1.0.10.dist-info/RECORD,,
