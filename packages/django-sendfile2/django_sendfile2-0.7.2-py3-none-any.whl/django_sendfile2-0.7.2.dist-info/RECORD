@@ -1,0 +1,17 @@
+django_sendfile/__init__.py,sha256=tK7IvNOzQHcahDvDR5n9cpy1KMHtsK5l8TmaKlEoxtE,238
+django_sendfile/_version.py,sha256=mX2m3Z1ysek3E356YS-YkWTUJ1UH53c3TzUJnXLBwB4,497
+django_sendfile/test_settings.py,sha256=_v7pHC-wRTWavVMhNeSH9H4ZpLQvtM6SGLbmjEiJUFw,1117
+django_sendfile/tests.py,sha256=6VtfREyRlKWMjjY-y7dkiQZLvOtUsdhHsAVMGzAUTTY,12590
+django_sendfile/utils.py,sha256=iphO5L4naT9l1jH1jItSCcolSVAvzHSX0fZK_nswWMI,4398
+django_sendfile/backends/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_sendfile/backends/development.py,sha256=k-5ym8b8-eyAeKBrQ9Q3SWRaIuK3_ElnJU3lwqHVzRM,360
+django_sendfile/backends/mod_wsgi.py,sha256=4ymnCuOjrkDbhyt9_qP_-5HNrkk0KmjtMz3NPA0EA9U,519
+django_sendfile/backends/nginx.py,sha256=esS3aU_nEgNPs8CmTQrJBRyfVzm19kamGRJngH8kfqM,281
+django_sendfile/backends/simple.py,sha256=nOe_1SH1BUuXAc_8iDj80U8mmYzLrFFuJlEtvCGQvbo,865
+django_sendfile/backends/xsendfile.py,sha256=jnrfzichOQOwRIIY-nbCdA7fGNQgSlz5HMvOTwvC1pI,200
+django_sendfile2-0.7.2.dist-info/licenses/LICENSE,sha256=GbsjPjmTjyLC5rZSv2awXybPQABTle1N3kKaPxFXyns,1581
+django_sendfile2-0.7.2.dist-info/METADATA,sha256=tQ3VnJUAY7GX8x1jpbS-GYM1H6nDV3iDx6njvvpHGTU,3257
+django_sendfile2-0.7.2.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+django_sendfile2-0.7.2.dist-info/top_level.txt,sha256=r7L8rdadBDdQZ7R8uLi4q4vOiCcjBbU5sGpohU3OYx8,16
+django_sendfile2-0.7.2.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+django_sendfile2-0.7.2.dist-info/RECORD,,
