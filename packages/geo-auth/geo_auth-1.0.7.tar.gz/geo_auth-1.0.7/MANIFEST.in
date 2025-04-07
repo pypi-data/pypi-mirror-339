@@ -1,0 +1,3 @@
+include README.md
+include LICENSE
+include geo_auth/iplite_database/*

@@ -1,0 +1,12 @@
+APScheduler==3.11.0
+Django==5.1.6
+django-ipware==4.0.2
+djangorestframework==3.15.2
+IP2Location==8.10.5
+requests==2.32.3
+pycountry==24.6.1
+python-dotenv==1.0.0
+tzlocal==5.3.1
+timezonefinder==6.5.8
+user-agents==2.2.0
+iso3166==2.1.1
