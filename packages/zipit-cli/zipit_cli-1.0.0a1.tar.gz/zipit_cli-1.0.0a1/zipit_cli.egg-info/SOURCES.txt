@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+zipit/__init__.py
+zipit/cli.py
+zipit_cli.egg-info/PKG-INFO
+zipit_cli.egg-info/SOURCES.txt
+zipit_cli.egg-info/dependency_links.txt
+zipit_cli.egg-info/entry_points.txt
+zipit_cli.egg-info/top_level.txt
