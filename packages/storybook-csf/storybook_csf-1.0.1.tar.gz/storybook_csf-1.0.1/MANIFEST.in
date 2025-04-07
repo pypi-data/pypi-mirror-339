@@ -1,0 +1,7 @@
+# MANIFEST.in is defined so we can exclude non-Python (e.g. TS) files
+# from the built distribution.
+# See https://setuptools.pypa.io/en/latest/userguide/miscellaneous.html
+graft src/storybook_csf
+prune tests
+
+global-exclude *.ts
