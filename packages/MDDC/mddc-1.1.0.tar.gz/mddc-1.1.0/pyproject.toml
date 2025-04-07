@@ -1,0 +1,22 @@
+[build-system]
+requires = [
+    "setuptools>=51",
+    "pybind11>=2.9.0",
+    "peigen>=0.0.9"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.cibuildwheel]
+skip = "pp*"
+
+[tool.ruff]
+line-length = 88 # same as black
+
+[tool.ruff.lint]
+extend-select = [
+  "B",   # flake8-bugbear
+  "I",   # isort
+  "PGH", # pygrep-hooks
+  "RUF", # Ruff-specific
+  "UP",  # pyupgrade
+]
