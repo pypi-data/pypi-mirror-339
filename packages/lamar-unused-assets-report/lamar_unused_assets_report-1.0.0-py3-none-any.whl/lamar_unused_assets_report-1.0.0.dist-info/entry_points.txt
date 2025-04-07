@@ -1,0 +1,2 @@
+[console_scripts]
+lamar-unused-assets-report = lamar_unused_assets_report.main:main
