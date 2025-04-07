@@ -1,0 +1,13 @@
+ideal_genom_qc/AncestryQC.py,sha256=u_tlvqWIPA2VJAPNkEIuiqnHKWTCfyd8MSLSm72kv0U,62866
+ideal_genom_qc/Helpers.py,sha256=I6kFm5KnV31k4qnGvEwh58fIB1sQLGdVJxV7nR8FexY,3413
+ideal_genom_qc/SampleQC.py,sha256=g_DixOoduguhyNevnRls2WLvNoZmmeDF1pBtyoTJZ48,67955
+ideal_genom_qc/UMAPplot.py,sha256=oXiq_zwiSXu8gAUv_JbuVe6Bxkzsd0NqhynI6LaMroU,25443
+ideal_genom_qc/VariantQC.py,sha256=_sSQ31an4vtVD-f5gSI4CgxuafHJI_X0F8xsljlLLnw,16082
+ideal_genom_qc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ideal_genom_qc/__main__.py,sha256=n6gAWJdvoGywbAoPXYPBecWoaLP2ERGbJByjalsJ0wE,10353
+ideal_genom_qc/get_references.py,sha256=X6U9YveioU-cV4rvCuj4Ve5FcD5hTdgNZ6Z3Syf_tsc,9175
+ideal_genom_qc-0.1.0.dist-info/LICENSE,sha256=3VOnTtPsZ9wbK23ypkXu6RVFhMSEwNI9RpdWv2oFIrg,1088
+ideal_genom_qc-0.1.0.dist-info/METADATA,sha256=I1lc0JV0WlPTxwSxIpELEqzYii1r97KD3NUXFemSyBk,11744
+ideal_genom_qc-0.1.0.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+ideal_genom_qc-0.1.0.dist-info/entry_points.txt,sha256=YJUkJfPWlNBH1kgzrqXVqn7ZHkhXmK8939eaSaVU_K4,63
+ideal_genom_qc-0.1.0.dist-info/RECORD,,
