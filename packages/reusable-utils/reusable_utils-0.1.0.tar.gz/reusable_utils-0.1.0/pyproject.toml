@@ -1,0 +1,26 @@
+[project]
+name = "reusable-utils"
+version = "0.1.0"
+description = "A collection of reusable utility functions for Python projects."
+authors = [
+    {name = "Julio-M-Siqueira", email = "juliomartins1996@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+license = "MIT"
+keywords = ["utilities", "python", "reusable"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry]
+packages = [{include = "reusable_utils", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
