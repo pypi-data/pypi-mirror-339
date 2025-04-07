@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+crm_benchmark_lib/__init__.py
+crm_benchmark_lib/client.py
+crm_benchmark_lib.egg-info/PKG-INFO
+crm_benchmark_lib.egg-info/SOURCES.txt
+crm_benchmark_lib.egg-info/dependency_links.txt
+crm_benchmark_lib.egg-info/requires.txt
+crm_benchmark_lib.egg-info/top_level.txt
+crm_benchmark_lib/examples/__init__.py
+crm_benchmark_lib/examples/simple_agent.py
+crm_benchmark_lib/tests/__init__.py
+crm_benchmark_lib/tests/test_client.py
