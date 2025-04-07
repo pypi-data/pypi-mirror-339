@@ -1,0 +1,54 @@
+image:
+  - Visual Studio 2022
+  - Ubuntu2004
+
+environment:
+
+  matrix:
+
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2022
+      PYTHON: "C:\\Python39"
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2022
+      PYTHON: "C:\\Python310"
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2022
+      PYTHON: "C:\\Python311"
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2022
+      PYTHON: "C:\\Python312"
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2022
+      PYTHON: "C:\\Python313"
+    - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu2004
+      VENV: "venv3.9"
+    - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu2004
+      VENV: "venv3.10"
+    - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu2004
+      VENV: "venv3.11"
+    - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu2004
+      VENV: "venv3.12"
+    - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu2004
+      VENV: "venv3.13"
+
+install:
+  - sh: "source ${HOME}/${VENV}/bin/activate"
+  - cmd: "%PYTHON%\\python.exe -m venv venv"
+  - cmd: "venv\\Scripts\\activate"
+  # We need a test install and have build installed
+  - "python -m pip install --upgrade pip"
+  - "pip install .[test]"
+  - "pip install build"
+
+build: off
+
+test_script:
+  - "python -m unittest"
+
+after_test:
+  - "python -m build"
+
+artifacts:
+  # bdist_wheel puts your built wheel in the dist directory
+  - path: dist\*
+
+#on_success:
+#  You can use this step to upload your artifacts to a public website.
+#  See Appveyor's documentation for more details. Or you can simply
+#  access your wheel

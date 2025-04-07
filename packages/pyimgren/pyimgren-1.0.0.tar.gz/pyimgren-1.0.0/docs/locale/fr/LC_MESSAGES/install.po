@@ -1,0 +1,129 @@
+# French translation for pyimgren documentation
+# Copyright (C) 2018-current, s-ball
+# This file is distributed under the same license as the pyimgren package.
+# s-ball <s-ball@laposte.net>, 2018-current.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pyimgren 1.0\n"
+"Report-Msgid-Bugs-To: s-ball@laposte.net\n"
+"POT-Creation-Date: 2025-03-23 16:02+0100\n"
+"PO-Revision-Date: 2025-03-22 16:25+0100\n"
+"Last-Translator: s-ball < s-ball@laposte.net>\n"
+"Language-Team: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../install.rst:2
+msgid "Installation"
+msgstr "Installation"
+
+#: ../../install.rst:5
+msgid "End user installation"
+msgstr "Installation pour un utilisateur final"
+
+#: ../../install.rst:7
+msgid ":program:`pip` is your friend here!"
+msgstr "Vive :program:`pip` ici !"
+
+#: ../../install.rst:9
+msgid "If you have it in your path, you can simply use::"
+msgstr "S'il est dans le chemin de recherche (*path*), il suffit de faire ::"
+
+#: ../../install.rst:13
+msgid ""
+"It will take care of any required dependencies and will install the "
+"latest version of pyimgren. It will also install a :program:`pyimgren` "
+"command that will be directly callable from a shell (:ref:`ref. "
+"<cmd_line>`)."
+msgstr ""
+"Cela gèrera toute dépendance nécessaire et installera la dernière version"
+" de pyimgren. Cela installera aussi une commande :program:`pyimgren` qui "
+"peut être directement appelée depuis un shell (:ref:`ref. <cmd_line>`)."
+
+#: ../../install.rst:18
+msgid ""
+"If ``pip`` is not in your path (common on Windows), you are likely to "
+"have to use the :program:`py` launcher. In that case you use "
+":program:`pip` as::"
+msgstr ""
+"S'il n'est pas dans le chemin de recherche (courant sous Windows), il est"
+" probable que vous deviez utiliser le lanceur :program:`py`. Dans ce cas "
+"vous utiliserez :program:`pip` ainsi ::"
+
+#: ../../install.rst:24
+msgid ""
+"The installation is exactly the same as it is when launching directly "
+":program:`pip`. But you will have to still use the :program:`py` launcher"
+" to call pyimgren from a command line (:ref:`ref. <py_launch>`)."
+msgstr ""
+"L'installation se passe exactement de la même façon qu'en lançant "
+"directement :program:`pip`. Mais vous devrez encore utiliser le lanceur "
+":program:`py` pour appeler pyimgren depuis une ligne de commande "
+"(:ref:`ref. <py_launch>`)."
+
+#: ../../install.rst:29
+msgid "Developer installation"
+msgstr "Installation pour un développeur"
+
+#: ../../install.rst:31
+msgid ""
+"The source is of course available in the source package from `PyPI "
+"<https://pypi.org/project/pyimgren/#files>`_."
+msgstr ""
+"Les sources sont bien sur disponibles sur `PyPI "
+"<https://pypi.org/project/pyimgren/#files>`_."
+
+#: ../../install.rst:34
+msgid ""
+"Alternatively, you can download the full source for the relevant version "
+"as a :file:`.zip` file from GitHub, but the recommended way is to use "
+":program:git to clone the repository. It will give you all the versions "
+"in one single operation, as well as a nice environment if you want  to "
+"later send a pull request."
+msgstr ""
+"Là encore, vous pouvez télécharger l'ensemble des sources pour la version"
+" considérée depuis GitHub dans un fichier :file:`.zip`, mais il est "
+"préférable d'utiliser git pour cloner le dépôt. Cela vous donnera accès à"
+" l'ensemble des versions en une seule opération avec en plus tout "
+"l'environnement permettant d'envoyer plus tard une demande de "
+"modification (*pull request*)."
+
+#: ../../install.rst:40
+msgid "So simply do::"
+msgstr "Il suffit donc de faire ::"
+
+#: ../../install.rst:44
+msgid ""
+"In any case, you should then install the package in development mode and "
+"ask for the ``test`` extra dependencies::"
+msgstr ""
+"Dans tous les cas, vous devriez installer le paquet en mode développement "
+"et demander les dépendances supplémentaires ``test``::"
+
+#: ../../install.rst:49
+msgid ""
+"That way you will automatically get the `pyfakefs`_ package which is "
+"required for the integration tests."
+msgstr ""
+"De cette façon vous récupèrerez automatiquement le paquet `pyfakefs`_ "
+"qui est nécessaire pour les tests d'intégration."
+
+#: ../../install.rst:53
+msgid ""
+"The various untagged commits in the Git hierarchy are not guaranteed to "
+"be directly usable. At some points, some tests can fail and unexpected "
+"errors can occur. Use the master branch when you want to contribute. In "
+"any other cases, stick to a release, or be sure to pass all tests and be "
+"prepared to look into the source code if something goes wrong."
+msgstr ""
+"Rien ne garantit que les différents *commits* sans *tag* dans la "
+"hiérarchie Git soient directement utilisables. En certains endroits, "
+"certains test peuvent échouer, et des erreurs inattendues peuvent "
+"survenir. Utilisez la branche *master* quand vous voulez proposer des "
+"modifications. Dans tous les autres cas, contentez vous d'une version "
+"officielle, ou assurez vous de passer l'ensemble des test, et soyez prêt "
+"à consulter le code source si quelque chose se passe mal."
+
