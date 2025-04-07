@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: akm
+Version: 1.3.3
+Summary: - Gmail-Temp API By : t.me/goldenxpris .
+Author: Your Name
+Requires-Dist: requests
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary
