@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+SemiX/__init__.py
+SemiX/diode.py
+SemiX.egg-info/PKG-INFO
+SemiX.egg-info/SOURCES.txt
+SemiX.egg-info/dependency_links.txt
+SemiX.egg-info/requires.txt
+SemiX.egg-info/top_level.txt
