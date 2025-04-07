@@ -1,0 +1,4 @@
+llm>=0.24a1
+
+[test]
+pytest
