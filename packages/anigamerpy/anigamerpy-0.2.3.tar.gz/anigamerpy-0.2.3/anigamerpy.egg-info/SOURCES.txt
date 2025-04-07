@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+anigamerpy/__init__.py
+anigamerpy/anime.py
+anigamerpy.egg-info/PKG-INFO
+anigamerpy.egg-info/SOURCES.txt
+anigamerpy.egg-info/dependency_links.txt
+anigamerpy.egg-info/top_level.txt
+anigamerpy/response/__init__.py
+anigamerpy/response/allanime.py
+anigamerpy/response/error.py
+anigamerpy/response/newanime.py
+anigamerpy/response/searchanime.py
