@@ -1,0 +1,15 @@
+cloudnetpy_qc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloudnetpy_qc/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloudnetpy_qc/quality.py,sha256=I8MXdJFzSb2KBOZTfn57J_c4ZI2KLBhZgsGFGRft0yM,37492
+cloudnetpy_qc/utils.py,sha256=q_zD91g4eA4tBsW7M7y_UTKVkUZETDWT3NhAYPMOvcc,3909
+cloudnetpy_qc/variables.py,sha256=YrOw2qCdY8eTT3nlExpdtFU5YmVCC-yF9c0VQ-wWDzw,50851
+cloudnetpy_qc/version.py,sha256=_YYCCa5YSU7Oui-yhpWd4TrWI4myzaTtifSD4hJqKyw,102
+cloudnetpy_qc/data/area-type-table.xml,sha256=LQGp6rk8d-jZVjeFWPK_NjG2Kk1atvLlQXmV4UXggKI,17788
+cloudnetpy_qc/data/cf-standard-name-table.xml,sha256=NvW9oPvPwMR1YRIwxajTwvF83oarcwsxkUqnQgqPO3k,4406495
+cloudnetpy_qc/data/data_quality_config.ini,sha256=tQpbRQUlA3iz_8wCRMJfdKrP8ByWiM2SxtqszSoxQeA,1242
+cloudnetpy_qc/data/standardized-region-list.xml,sha256=gLRE2G7RQLD9hmvW5dTzyK7XPhORxWv2bfbrvAp5Uto,6426
+cloudnetpy_qc-1.24.3.dist-info/licenses/LICENSE,sha256=P0wszB7Cq2M390SKaqT4DGvECfwGOMdTTdxsWBpEUUc,1094
+cloudnetpy_qc-1.24.3.dist-info/METADATA,sha256=dCbtxH_zPAHo77DWxWwUPGX05FJOtUR4IkoVQl2eBIo,8168
+cloudnetpy_qc-1.24.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+cloudnetpy_qc-1.24.3.dist-info/top_level.txt,sha256=shrf8A1KyrrnhbHocc4gHmTl38YY-DHflgf-gXiKnKs,14
+cloudnetpy_qc-1.24.3.dist-info/RECORD,,
