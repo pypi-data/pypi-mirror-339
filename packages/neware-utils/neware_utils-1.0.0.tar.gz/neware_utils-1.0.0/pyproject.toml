@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=42", "setuptools-scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "neware-utils"
+dynamic = ["version"]
+description = "Utilities for creating Neware battery cycling protocols"
+readme = "README.md"
+license = "MIT"
+license-files = [
+    "LICENSE",
+]
+authors = [
+  {name = "Benjamin Nowacki", email = "benjamin.nowacki@uconn.edu"},
+]
+
+requires-python = ">=3.7"
+dependencies = [
+  "numpy"
+]
+
+keywords = ["neware", "neware utilities", "battery test management", "protocol automation"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering",
+  "Programming Language :: Python",
+]
+
+
+[project.urls]
+Homepage = "https://github.com/ben-nowacki/neware-utils"
+Repository = "https://github.com/ben-nowacki/neware-utils"
+Issues = "https://github.com/ben-nowacki/neware-utils/issues"
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["neware_utils"]
+
+[tool.setuptools_scm]
