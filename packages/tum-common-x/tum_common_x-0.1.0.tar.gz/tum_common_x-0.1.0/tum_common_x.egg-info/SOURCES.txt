@@ -1,0 +1,15 @@
+LICENCE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+api/__init__.py
+api/asgi.py
+api/settings.py
+api/urls.py
+api/wsgi.py
+tum_common_x.egg-info/PKG-INFO
+tum_common_x.egg-info/SOURCES.txt
+tum_common_x.egg-info/dependency_links.txt
+tum_common_x.egg-info/requires.txt
+tum_common_x.egg-info/top_level.txt
