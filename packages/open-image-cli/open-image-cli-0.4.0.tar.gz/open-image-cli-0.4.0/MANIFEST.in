@@ -1,0 +1,8 @@
+include requirements.txt
+include requirements.dev.txt
+
+graft imagecli
+prune imagecli/bin
+include imagecli/bin/macocr
+
+recursive-exclude * *.pyc *.pyo *.swo *.swp *.map *.DS_Store
