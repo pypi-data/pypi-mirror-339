@@ -1,0 +1,2 @@
+[console_scripts]
+kotlin = kotlin_creator.cli:main
