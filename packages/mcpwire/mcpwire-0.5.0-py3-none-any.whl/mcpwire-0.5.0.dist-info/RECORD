@@ -1,0 +1,10 @@
+mcpwire/__init__.py,sha256=MBWkKc8zkT_mij4-AiigwfcS_Pym1OxyEIxFHS2Dzsk,2380
+mcpwire/client.py,sha256=xmu-KXtBGN7ylfBNKXRC1yp9YW9EP1oMx_ZBWsTdJh0,29486
+mcpwire/exceptions.py,sha256=CH7JJuaKC3CivJwwzq6Ho2PjGRK1bvNQuKncyl_ZxW0,2010
+mcpwire/models.py,sha256=oECk3GCoKGm16H7gOBT8RqJTzZMlvsvmQS5RvG7DktU,8056
+mcpwire/utils.py,sha256=CkRPGmuCiFurVNemgSaOapZimKM_yF8GX4fSon4h6HQ,1265
+mcpwire-0.5.0.dist-info/licenses/LICENSE,sha256=NtmaqBxQp4w9NKSkztkOhRk_AucsymaVv62bSd86J0c,1132
+mcpwire-0.5.0.dist-info/METADATA,sha256=uzsu7zBf0SC-8_BrgKaPD15o3rLTTDm1qE-7wWc-TjQ,19228
+mcpwire-0.5.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+mcpwire-0.5.0.dist-info/top_level.txt,sha256=QJo5xSafnF97p8QCMjnsyR2fqZ6HU3p4c1Hg0uR5C1I,8
+mcpwire-0.5.0.dist-info/RECORD,,
