@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: chatbot-session-flow
+Version: 0.1.7
+Summary: A django Whatsapp chatbot session manager
+Home-page: https://github.com/DK-denno/whatsapp-chatbot.git
+Author: Dennis Kamau
+Author-email: kamadennis05@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+UNKNOWN
+
