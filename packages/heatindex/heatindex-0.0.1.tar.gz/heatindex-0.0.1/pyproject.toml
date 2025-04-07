@@ -1,0 +1,51 @@
+[build-system]
+requires = ["scikit-build-core", "pybind11"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "heatindex"
+version = "0.0.1"
+
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+]
+
+authors = [
+  { name="Yi-Chuan Lu", email="yclu@berkeley.edu"},
+  { name="David M. Romps", email="romps@berkeley.edu"}
+]
+maintainers = [
+  { name="David M. Romps", email="romps@berkeley.edu"},
+  { name="Yi-Chuan Lu", email="yclu@berkeley.edu"}
+]
+
+description = "Tools for Calculating Heat Stress"
+readme = "README.md"
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Programming Language :: C++",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+]
+
+[project.urls]
+Homepage = "https://heatindex.org"
+Documentation = "https://heatindex.org/docs"
+Repository = "https://github.com/romps/heatindex"

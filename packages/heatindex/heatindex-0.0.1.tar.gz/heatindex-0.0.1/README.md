@@ -1,0 +1,112 @@
+# Heatindex
+Tools for Calculating Heat Stress
+
+This package currently provides a single function, `heatindex`, which is an implementation of the simpler and faster heat index introduced by [Lu et al. (2025)](#lu2025). This simpler and faster implementation matches the values of the heat index from [Steadman (1979)](#steadman1979) and [Lu and Romps (2022)](#lu2022) for air temperatures above 300 K (27 C, 80 F) and with only minor differences at lower temperatures.
+
+
+## Installation
+
+The recommended way to install `heatindex` is by using `pip`, the Python package installer.
+
+### Recommended
+
+Open your terminal or command prompt and run the following command:
+
+```bash
+pip install heatindex
+```
+
+This will download and install the latest stable version of `heatindex` from the Python Package Index (PyPI).
+
+### Manual
+
+Alternatively, clone the repository and install it locally:
+
+```bash
+git clone https://github.com/romps/heatindex
+cd heatindex/python
+./prepare_package.sh
+pip install .
+```
+
+The source code for this package is located in `heatindex/cpp`. Running `prepare_package.sh` creates hard links in `heatindex/python/src` to the source files.
+
+
+
+## Usage and examples
+
+The `heatindex` function takes two arguments: air temperature (`Ta`) in Kelvin and relative humidity (`RH`) on a scale from 0 to 1, and returns the heat index in Kelvin. Note that the relative humidity is defined with respect to saturation over liquid water for air temperatures over 273.16 K and with respect to saturation over ice for air temperatures lower than 273.16 K.
+
+
+For example:
+
+```python
+>>> import heatindex as hi
+>>> hi.heatindex(310,0.5)
+318.62255317071686
+```
+
+Note: The precision of the underlying root solver is set to `1e-8`, so the output is reliable up to the seventh decimal place.
+
+The `heatindex` function is vectorized using NumPy, enabling efficient element-wise computations. For example, when `Ta` and `RH` are lists of three elements, the result is a Numpy array of length 3:
+
+```python
+>>> Ta = [310,311,312]
+>>> RH = [0,0.5,1]
+>>> hi.heatindex(Ta,RH)
+array([305.55495303, 324.54442932, 368.60533913])
+```
+
+If one argument is an array and the other a scalar, NumPy broadcasting applies:
+
+```python
+>>> Ta = [310,311,312]
+>>> RH = 1
+>>> hi.heatindex(Ta,RH)
+array([359.90632483, 364.20412564, 368.60533913])
+```
+
+When both `Ta` and `RH` are arrays (or matrices), they must have identical shapes:
+
+```python
+>>> Ta = [[310,311],[312,313]]
+>>> RH = [[0,1],[0,1]]
+>>> hi.heatindex(Ta,RH)
+array([[305.55495303, 364.20412564],
+       [307.05336139, 373.11024873]])
+```
+
+## Authors
+
+* **Yi-Chuan Lu** - *Creator* - [yclu@berkeley.edu](mailto:yclu@berkeley.edu) - [ORCID: 0000-0003-3659-1474](https://orcid.org/0000-0003-3659-1474)
+* **David M. Romps** - *Creator, Maintainer* - [romps@berkeley.edu](mailto:romps@berkeley.edu) - [ORCID: 0000-0001-7649-5175](https://orcid.org/0000-0001-7649-5175)
+
+
+
+## Citation
+
+To cite package `heatindex` in publications use:
+
+ Lu, Y.-C. and Romps, D.M., 2025. heatindex: Tools for Calculating Heat Stress.
+ <https://heatindex.org>.
+
+A BibTeX entry for LaTeX users is
+```bibtex
+ @Manual{heatindex2025,
+  title = {heatindex: Tools for Calculating Heat Stress},
+  author = {Yi-Chuan Lu and David M. Romps},
+  year = {2025},
+  note = {Python package version 0.0.1},
+  url = {https://heatindex.org},
+ }
+```
+
+
+## References
+
+<a id="lu2025"></a>
+1. Lu et al., "Simpler and faster: an improved heat index," in review (2025).
+<a id="steadman1979"></a>
+2. Steadman, R.G., 1979. The assessment of sultriness. Part I: A temperature-humidity index based on human physiology and clothing science. Journal of Applied Meteorology and Climatology, 18(7), pp.861-873.
+<a id="lu2022"></a>
+3. Lu, Y.-C. and Romps, D.M., 2022. Extending the heat index. Journal of Applied Meteorology and Climatology, 61(10), pp.1367-1383.

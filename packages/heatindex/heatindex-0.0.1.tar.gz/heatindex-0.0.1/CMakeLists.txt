@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.15)
+project(heatindex VERSION ${SKBUILD_PROJECT_VERSION} LANGUAGES CXX)
+set(PYBIND11_FINDPYTHON ON)
+find_package(pybind11 REQUIRED)
+pybind11_add_module(heatindex src/bindings.cpp src/heatindex.cpp)
+target_compile_features(heatindex PUBLIC cxx_std_17)
+target_compile_options(heatindex PRIVATE $<$<CONFIG:Release>:-O3;-march=native;-ffast-math>)
+install(TARGETS heatindex LIBRARY DESTINATION .)
