@@ -1,0 +1,8 @@
+bytewax_datadog/__init__.py,sha256=yLh4HGXJ9hMfUtzVUMfn7jRfd2Q33c9x-DrQgvSsBlU,208
+bytewax_datadog/inputs/__init__.py,sha256=LVcpCqML1UQo60ve-fPmELgofr_4iSWySQFbCtOamdM,100
+bytewax_datadog/inputs/logs.py,sha256=ALAICBfekLiUcqi-0p6ZdkhWKBSjYwytRJYMUllx4EE,5368
+bytewax_datadog/outputs/__init__.py,sha256=Is-TNHk6lfRaxHyfWu31OysuNueTt2YWRUnuYoGX0_c,92
+bytewax_datadog/outputs/logs.py,sha256=AyEYHKRWz7zjCt7RfNVpcUi7UMnb7Piw7QpfHmeqY0Y,3319
+bytewax_datadog-0.1.1.dist-info/METADATA,sha256=Y-sXT6gu-VbCOBXRV2YIHu1YVbBr-s3TZxMEYM5TSig,1936
+bytewax_datadog-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+bytewax_datadog-0.1.1.dist-info/RECORD,,
