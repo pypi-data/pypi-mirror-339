@@ -1,0 +1,12 @@
+turtlewave_hdEEG/__init__.py,sha256=zU-b3-KEO6fytS0k9wg7HpH2gCQAhtUcmLIbELFtdAE,365
+turtlewave_hdEEG/annotation.py,sha256=EmmRxSlzOrRQXfIbARTNnugvymPhMTzh88b0kVbHnSs,16238
+turtlewave_hdEEG/dataset.py,sha256=zBtZdyFZAxnyS60Hj1il-AkWJkc3aNTacJrne9-YffI,21620
+turtlewave_hdEEG/eventprocessor.py,sha256=5AmBG117d29oQdz3KmOqFv5VGojy0mRrnYLL_A8WPIM,59201
+turtlewave_hdEEG/extensions.py,sha256=eL5NYFvL67EVGzI2uQYhlEkWzSlY-R1OOms1ay3n-dk,2077
+turtlewave_hdEEG/json_to_annotations.py,sha256=24-tAAu-Za9KCeTtds7TkTxkQzrLyukotFLkCrk_tRY,3848
+turtlewave_hdEEG/utils.py,sha256=5CaMp8kwEtJHIlmdTyUUOYLTHxC5zzuQHC6Rdjrh-7U,3354
+turtlewave_hdEEG/visualization.py,sha256=tYITjyxoiw7Pq7USkbsWio115cAA12goa6UXIxnMYjk,5426
+turtlewave_hdeeg-0.1.0.dist-info/METADATA,sha256=UVobx1_4waYo_r55dI1d3BWDb2ZeVj4_m7tbY2pXUpg,1069
+turtlewave_hdeeg-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+turtlewave_hdeeg-0.1.0.dist-info/top_level.txt,sha256=p9cLxpH7DOEdxE-KTIgadrJ89YN00YwHsHRDhEh87N4,17
+turtlewave_hdeeg-0.1.0.dist-info/RECORD,,
