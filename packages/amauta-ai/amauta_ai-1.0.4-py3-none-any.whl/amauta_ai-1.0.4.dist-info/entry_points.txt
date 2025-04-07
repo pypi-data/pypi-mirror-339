@@ -1,0 +1,3 @@
+[console_scripts]
+amauta=amauta_ai.main:app
+
