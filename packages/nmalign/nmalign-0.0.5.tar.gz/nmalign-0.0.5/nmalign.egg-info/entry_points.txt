@@ -1,0 +1,3 @@
+[console_scripts]
+nmalign = nmalign.scripts.cli:cli
+ocrd-nmalign-merge = nmalign.ocrd.cli:ocrd_nmalign_merge
