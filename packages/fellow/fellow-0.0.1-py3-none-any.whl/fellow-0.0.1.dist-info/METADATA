@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: fellow
+Version: 0.0.1
+Summary: Fellow CLI tool is a command line development assistant
+Author-email: Manuel Zierl <manuel.zierl@web.de>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: openai>=1.69.0
+Requires-Dist: tiktoken>=0.9.0
+Requires-Dist: pexpect>=4.9.0
+Requires-Dist: pydantic~=2.11.0
+Requires-Dist: PyYAML~=6.0.2
+Dynamic: license-file
