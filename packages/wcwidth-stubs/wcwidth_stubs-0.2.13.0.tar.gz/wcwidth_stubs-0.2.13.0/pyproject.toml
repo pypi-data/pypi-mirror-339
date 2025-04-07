@@ -1,0 +1,29 @@
+[project]
+name = "wcwidth-stubs"
+version = "0.2.13.0"
+description = "typing stubs for wcwidth"
+requires-python = ">=3.6"
+authors = [
+    { name = "trim21", email = "trim21.me@gmail.com" },
+]
+dependencies = [
+    "wcwidth==0.2.13",
+]
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend==2.4.3",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.build]
+includes = [
+    "src/wcwidth-stubs/",
+]

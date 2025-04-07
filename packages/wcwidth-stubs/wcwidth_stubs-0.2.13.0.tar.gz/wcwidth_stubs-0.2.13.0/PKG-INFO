@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: wcwidth-stubs
+Version: 0.2.13.0
+Summary: typing stubs for wcwidth
+Author-Email: trim21 <trim21.me@gmail.com>
+License: MIT
+Requires-Python: >=3.6
+Requires-Dist: wcwidth==0.2.13
+Description-Content-Type: text/markdown
+
+# wcwidth-stubs
+
+typing stubs for wcwidth
