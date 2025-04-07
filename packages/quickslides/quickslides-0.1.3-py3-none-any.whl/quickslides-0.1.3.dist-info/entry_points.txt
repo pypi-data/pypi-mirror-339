@@ -1,0 +1,2 @@
+[console_scripts]
+quickslides = quickslides.cli:main

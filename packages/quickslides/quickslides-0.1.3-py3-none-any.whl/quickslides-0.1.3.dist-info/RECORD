@@ -1,0 +1,17 @@
+quickslides/__init__.py,sha256=ViA_61luKxzRHhZ5NTH8br54_WNzaoDCCBIjLk4xwfk,152
+quickslides/cli.py,sha256=HSBrutMkeoGYSusv7hXgmalfwsTCc3Gm3BLPDtiIikE,4876
+quickslides/converter.py,sha256=UxXVo2oEcwTNohxrLq_wSAG5Ynqdr8yhp2xMl1SvpIU,7487
+typslides/.git,sha256=YH3-zdtsdhART4r19JpwmyONzSMeuhfcGfrkIl0rDE4,34
+typslides/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+typslides/README.md,sha256=lZFMDiY_BgPZz5UmqANU4ofpmlQZdNrBachOdJuur0g,3196
+typslides/lib.typ,sha256=fiTAtSYJjWR4sRCQc3uiU26vbfGQxWBBikXei9faPuY,313
+typslides/thumbnail.png,sha256=nDI1TIkgPnCXtJkesDGVzB-hlN9Y_2UZ-TFcuD7Sj74,123411
+typslides/typslides.typ,sha256=YN9-XPMl9Oy8UNOeYGWGgRjT9yC18jPIHMi-nnWqhts,8913
+typslides/typst.toml,sha256=uXPHpsrImqgdY8U8V8xgYK1WKhsFRnAcLbaiZ8Frc6w,481
+typslides/utils.typ,sha256=XPlYJ_0tutCXdphBojDaMU75z9RxFHWlpHw1ndFfH00,2258
+typslides/template/bibliography.bib,sha256=eT1DZEJFqAckGM--cM_LvSwrU-LtpRJkukY4-mTco7U,181
+typslides/template/main.typ,sha256=NlqPSVjlBSzGt8w6L4VYlq4vcZNNRhvwMdy6TZSe70g,2090
+quickslides-0.1.3.dist-info/METADATA,sha256=bMnpsaYIc0PQZG-TZP-JmhfQTr-e2sPgR_di7lMOnbM,1625
+quickslides-0.1.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+quickslides-0.1.3.dist-info/entry_points.txt,sha256=TrDhaW7MGWFNbwqBA1DFbHyh8eUICcoAH5nypgbVd_k,53
+quickslides-0.1.3.dist-info/RECORD,,
