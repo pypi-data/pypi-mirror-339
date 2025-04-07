@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+tum_common_x/__init__.py
+tum_common_x/apps.py
+tum_common_x/asgi.py
+tum_common_x/settings.py
+tum_common_x/signals.py
+tum_common_x/urls.py
+tum_common_x/wsgi.py
+tumcommon_x.egg-info/PKG-INFO
+tumcommon_x.egg-info/SOURCES.txt
+tumcommon_x.egg-info/dependency_links.txt
+tumcommon_x.egg-info/requires.txt
+tumcommon_x.egg-info/top_level.txt
