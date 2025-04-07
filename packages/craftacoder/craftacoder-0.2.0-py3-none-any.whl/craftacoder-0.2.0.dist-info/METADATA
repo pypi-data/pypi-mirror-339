@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: craftacoder
+Version: 0.2.0
+Summary: An AI coding assistant from Craftapit powered by Aider.
+Author: Zoltán Csizmazia
+Author-email: Zoltán Csizmazia <info@craftapit.com>
+License: MIT
+Project-URL: Homepage, https://coder.craftapit.com
+Requires-Dist: aider-chat>=0.77.1
+Dynamic: author

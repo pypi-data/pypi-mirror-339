@@ -1,0 +1,10 @@
+cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli/main.py,sha256=5Dqqm8-LkbvbukFVYi9tYXPhgq0lQNZLj5T60HE_cVc,2913
+cli/router_config.py,sha256=y_gsSQ50OJj4QPQGrMvy_7xj5r7Eu6fMcA8Hv98MPxg,1292
+cli/subscription_reporter.py,sha256=SDLTbilV8zyJfzPUbUsc5rwOSfO0Vxd3xd5EyUOJyXQ,4557
+cli/utils.py,sha256=SA4dSTs8GIpD8BdDy0ru8s7e3bgg7WGhcCwBX4v7d_o,458
+craftacoder-0.2.0.dist-info/METADATA,sha256=c04FdbD2SFakPbiTWWaErqf4j5zyr6BiN3UB9qJKcmo,313
+craftacoder-0.2.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+craftacoder-0.2.0.dist-info/entry_points.txt,sha256=7TM44rAmDiWW9ABaLAEY38lanOdS5XGSLaDrmKJCpks,46
+craftacoder-0.2.0.dist-info/top_level.txt,sha256=2ImG917oaVHlm0nP9oJE-Qrgs-fq_fGWgba2H1f8fpE,4
+craftacoder-0.2.0.dist-info/RECORD,,
