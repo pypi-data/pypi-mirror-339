@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: iterative
+Version: 1.1.1
+Summary: The package to build iterative codebases with AI at the core.
+Author: Benjamin Garrard
+Author-email: ben@colorfull.ai
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: PyYAML (>=6.0,<7.0)
+Requires-Dist: fastapi (>=0.110.0,<0.111.0)
+Requires-Dist: omegaconf (>=2.3.0,<3.0.0)
+Requires-Dist: pydantic (>=1.8.2,<3.0.0)
+Requires-Dist: pyhumps (>=3.8.0,<4.0.0)
+Requires-Dist: typer (>=0.15.2,<0.16.0)
+Requires-Dist: uvicorn (>=0.29.0,<0.30.0)
