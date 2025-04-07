@@ -1,0 +1,12 @@
+brokolisql/cli.py,sha256=EOaVl0CMp9FMNpmb7ljVU8bYa8cab9UNPiYOnhobcXw,944
+brokolisql/output/output_writer.py,sha256=xCHhI5QkU4q7_5NbMGLyW5zDWQkLz6FzdpLIS9IrA-E,161
+brokolisql/services/normalizer.py,sha256=8jLQLUYbi7ALsyIJGE82lxvzmbz7F47kZeiVXoPVh1Y,234
+brokolisql/services/sql_generator.py,sha256=MyU1RbtOqjuej9o2e6rL0xjZnKfsKsIy0KaO-_RFoz0,566
+brokolisql/services/type_inference.py,sha256=-iod0hCyXBPQtQpTI0FtkQPB_mxss7MlMguK1Eoq5RU,681
+brokolisql/utils/file_loader.py,sha256=2puuOdQW5wBiu9-hWj07ZwZLRRivfWeUUUO03EVQ4r8,952
+brokolisql-0.1.4.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+brokolisql-0.1.4.dist-info/METADATA,sha256=wdGvvpSz1ZVYZBUdiodohwW6MzqxkKQxN8sJro9u_OY,4994
+brokolisql-0.1.4.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+brokolisql-0.1.4.dist-info/entry_points.txt,sha256=KK37YIDfdfkbnB63ueVnlCVnFLrF5NATmpew4PDsr28,51
+brokolisql-0.1.4.dist-info/top_level.txt,sha256=e5DNwK2MzsklS4EMPgNrtUsQL0Qf_MhqRu5P4vAUQUI,11
+brokolisql-0.1.4.dist-info/RECORD,,
