@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/pin_how_poem/__init__.py
+src/pin_how_poem/bank.txt
+src/pin_how_poem/roll.py
+src/pin_how_poem.egg-info/PKG-INFO
+src/pin_how_poem.egg-info/SOURCES.txt
+src/pin_how_poem.egg-info/dependency_links.txt
+src/pin_how_poem.egg-info/top_level.txt
