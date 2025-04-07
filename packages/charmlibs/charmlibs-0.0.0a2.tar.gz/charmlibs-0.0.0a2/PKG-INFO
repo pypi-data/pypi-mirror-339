@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: charmlibs
+Version: 0.0.0a2
+Summary: The charmlibs namespace. This package should not be installed.
+Author: The Charm Tech team at Canonical Ltd.
+Project-URL: Repository, https://github.com/canonical/charmtech-charmlibs
+Project-URL: Issues, https://github.com/canonical/charmtech-charmlibs/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Development Status :: 2 - Pre-Alpha
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# charmlibs
+
+This package should not be installed - it exists solely to reserve the `charmlibs` namespace.
+
+See the [charmlibs documentation site](https://canonical-charmlibs.readthedocs-hosted.com/) for more information.
