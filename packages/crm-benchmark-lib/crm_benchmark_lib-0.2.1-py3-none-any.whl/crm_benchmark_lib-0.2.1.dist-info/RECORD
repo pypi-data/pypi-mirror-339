@@ -1,0 +1,10 @@
+crm_benchmark_lib/__init__.py,sha256=Qrwll_9-zxAk2f4wRyS_EWHlY8GOYElSuwpOH2RRFA8,195
+crm_benchmark_lib/client.py,sha256=G56nVyAt0q4PN12ne0mSHiBlhJkY16Knw9S-gwQ_aq0,24468
+crm_benchmark_lib/examples/__init__.py,sha256=StlEuP6fTVkfKFljAXDSy7VhMK5XoAR1M_s9DlEI2Ug,54
+crm_benchmark_lib/examples/simple_agent.py,sha256=7T_P9YqZeVVmfcz3_zfjbr2VxsjluFe2v3hMYkvk5Xc,2593
+crm_benchmark_lib/tests/__init__.py,sha256=guFYrXhcUM9qCXihKWtsl_W9v5tNoPxiYXsuScqdrvk,50
+crm_benchmark_lib/tests/test_client.py,sha256=ZpO0u5tqXtPQlIF56YuxxZ8nevKs7YqSSux0ri6xcTI,2651
+crm_benchmark_lib-0.2.1.dist-info/METADATA,sha256=tHTY_I987R-DJQaNAnOkYBTfCpuu6huOhr6No9UbdIo,2184
+crm_benchmark_lib-0.2.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+crm_benchmark_lib-0.2.1.dist-info/top_level.txt,sha256=RnOddKdGIP6TJ3kBqAM1iVhxLjvJPlsSU4oECz44Kkc,18
+crm_benchmark_lib-0.2.1.dist-info/RECORD,,
