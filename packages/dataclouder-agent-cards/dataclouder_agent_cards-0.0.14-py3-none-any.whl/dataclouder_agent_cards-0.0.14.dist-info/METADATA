@@ -1,0 +1,42 @@
+Metadata-Version: 2.3
+Name: dataclouder-agent-cards
+Version: 0.0.14
+Summary: A library for managing AI conversations and character cards
+Author: adamo figueroa
+Author-email: adamo@dataclouder.com
+Requires-Python: >=3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: dataclouder-core (>=0.0.1)
+Requires-Dist: fastapi (>=0.100.0)
+Requires-Dist: pydantic-ai (>=0.0.19)
+Description-Content-Type: text/markdown
+
+# DC Conversations WIP
+
+Note: this is experimental project and not ready for production.
+
+
+### Description
+
+This library is used to manage AI conversations and character cards. is backend for UI interface.
+
+## Build
+
+if you have source code you can build the package with make command:
+```bash
+make build
+```
+
+
+## Publish a new version
+
+```bash
+make patch
+make build
+make publish
+```
+
+
