@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+smartifyLLM/__init__.py
+smartifyLLM/advanced_finance.py
+smartifyLLM/prompts.py
+smartifyLLM/quick_rag.py
+smartifyLLM/smart_llm.py
+smartifyLLM/text_splitter.py
+smartifyLLM/web_tools.py
+smartifyLLM.egg-info/PKG-INFO
+smartifyLLM.egg-info/SOURCES.txt
+smartifyLLM.egg-info/dependency_links.txt
+smartifyLLM.egg-info/requires.txt
+smartifyLLM.egg-info/top_level.txt
