@@ -1,0 +1,16 @@
+messlidger/__init__.py,sha256=lIC4fO93cF5y6MOsHEujhCIQUiMnefOZXmSQnJZRK28,915
+messlidger/__main__.py,sha256=bc5q_malhFfd7BnGeNT5RzIsVq6zxllff2PIplgPYLw,88
+messlidger/client.py,sha256=WhG2cGReNimfvDorW2Igax-K3ugTQGRp0ZxsogJAkJw,6864
+messlidger/command.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+messlidger/config.py,sha256=9bkyeYFD9237Y7NY4bMxhNt8BgtQjG5equ0ylJq7IwM,257
+messlidger/contact.py,sha256=jUmaDKSs1JeLgi7wdOUMQfa7dUctoP_n4i0x558Fts4,3837
+messlidger/gateway.py,sha256=QgbXfMIMYOWPK2_PWjo1EACMLu49i3x7gQvPDupQDYo,2616
+messlidger/group.py,sha256=PVNQ1UqTnbwBFDslXsfRNqcwkblDhxhLlLgTYcpCfJ0,4403
+messlidger/session.py,sha256=0KAlNuUOa6ZJiX-JX_IFaKViDbMxalBOnJnKDDOBFyc,7861
+messlidger/util.py,sha256=YCXwCfY9wR2ItgBVRxDIvyU-L42vOUNP5zM_76Q8i_Y,5118
+messlidger-0.2.1.dist-info/licenses/LICENSE,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+messlidger-0.2.1.dist-info/METADATA,sha256=KvjRujOBOe_-yED4oFpiSdAqB-sNBcHNhn2ffH8GVKU,2878
+messlidger-0.2.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+messlidger-0.2.1.dist-info/entry_points.txt,sha256=xVrzJ8O67LFJ6vpmetin1OOVAtDAt1DyEKk2yfOYTXo,47
+messlidger-0.2.1.dist-info/top_level.txt,sha256=EoLFkVg6HZVHUUjr-8-vbtPjaTAF3AATVuKv5g7NjnA,11
+messlidger-0.2.1.dist-info/RECORD,,
