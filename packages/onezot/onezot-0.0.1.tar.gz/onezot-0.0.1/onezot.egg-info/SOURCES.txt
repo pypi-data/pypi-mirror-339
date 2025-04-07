@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+onezot/__init__.py
+onezot/client.py
+onezot.egg-info/PKG-INFO
+onezot.egg-info/SOURCES.txt
+onezot.egg-info/dependency_links.txt
+onezot.egg-info/requires.txt
+onezot.egg-info/top_level.txt

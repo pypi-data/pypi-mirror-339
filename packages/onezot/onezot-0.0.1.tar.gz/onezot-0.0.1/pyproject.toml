@@ -1,0 +1,35 @@
+[project]
+name = "onezot"
+dynamic = ["version", "dependencies"]
+description = "Python SDK for OneZot services"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.8"
+license = "Apache-2.0"
+license-files = [
+    "LICENSE"
+]
+
+classifiers = [
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+
+[project.urls]
+Documentation = "https://docs.onezot.io"
+Source = "https://github.com/onezot-python-sdk"
+"Bug Tracker" = "https://github.com/onezot-python-sdk/issues"
+Changelog = "https://github.com/onezot-python-sdk/blob/main/CHANGELOG.md"
+
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
