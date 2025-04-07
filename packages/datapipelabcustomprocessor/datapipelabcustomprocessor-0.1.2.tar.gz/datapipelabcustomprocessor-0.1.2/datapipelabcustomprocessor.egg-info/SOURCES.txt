@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+datapipelabcustomprocessor/__init__.py
+datapipelabcustomprocessor.egg-info/PKG-INFO
+datapipelabcustomprocessor.egg-info/SOURCES.txt
+datapipelabcustomprocessor.egg-info/dependency_links.txt
+datapipelabcustomprocessor.egg-info/requires.txt
+datapipelabcustomprocessor.egg-info/top_level.txt
+datapipelabcustomprocessor/node/__init__.py
+datapipelabcustomprocessor/node/processor/__init__.py
+datapipelabcustomprocessor/node/processor/azure_synapse_gcp_transfer_node.py
