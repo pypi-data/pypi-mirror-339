@@ -1,0 +1,5 @@
+[console_scripts]
+WinIDS-attack-panel = WinIDS.attack_panel:main
+WinIDS-bridge = WinIDS.bridge:main
+WinIDS-dashboard = WinIDS.pro_dashboard:main
+WinIDS-monitor = WinIDS.monitor:main
