@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: dora-reachy1
+Version: 0.3.6
+Summary: Dora Node for controlling reachy1
+License: MIT
+Author: Haixuan Xavier Tao
+Author-email: <tao.xavier@outlook.com>
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: dora-rs (>=0.3.6)
+Requires-Dist: grpcio-tools (>=1.50.0)
+Requires-Dist: reachy-sdk (>=0.7.0)
+Description-Content-Type: text/markdown
+
+## Dora reachy client
+
