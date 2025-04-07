@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+fstack/__init__.py
+fstack/entrypoint.py
+fstack.egg-info/PKG-INFO
+fstack.egg-info/SOURCES.txt
+fstack.egg-info/dependency_links.txt
+fstack.egg-info/top_level.txt
+fstack/pipeline/api.py
+fstack/pipeline/docker_pipeline.py
+fstack/pipeline/git_pipeline.py
+fstack/pipeline/utils.py

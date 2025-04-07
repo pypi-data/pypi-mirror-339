@@ -1,0 +1,52 @@
+Aquí tienes una versión más profesional y estructurada del documento:  
+
+---
+
+# 📌 FastStack CLI (`fs-cli`)  
+
+FastStack CLI (`fs-cli`) es una herramienta de línea de comandos que permite la gestión y despliegue automatizado de aplicaciones en entornos de nube mediante FastStack.  
+
+## ⚙️ Requisitos Previos  
+
+Antes de utilizar `fs-cli`, asegúrate de cumplir con los siguientes requisitos:  
+
+- **Configuración de API Keys:** Debes tener tus API Keys registradas en la plataforma de FastStack.  
+- **Archivo de configuración (`fs-config.yml`)**: Se requiere un archivo de configuración en la raíz del proyecto con los siguientes parámetros:  
+
+### 📄 Ejemplo de `fs-config.yml`  
+
+```yaml
+nombre: "Mi Aplicación"
+keys: "Mis_APIs_Keys"
+espacio:
+  modo: "producción"
+  depuracion: false
+docker:
+  docker_image: "nombre_imagen_docker"
+  docker_provider: aws
+```
+
+## 🚀 Funcionamiento General  
+
+El flujo de operación de `fs-cli` se desarrolla en las siguientes etapas:  
+
+1. **Carga de credenciales:** Se autentica con FastStack mediante las API Keys.  
+2. **Gestión de código fuente:** Realiza un `push` del proyecto a un repositorio Git.  
+3. **Construcción de imagen Docker:** Se genera una imagen Docker con el nombre especificado en `fs-config.yml`, asignándole como `tag` el hash corto del commit actual en Git.  
+4. **Autenticación en el proveedor cloud:** Inicia sesión en el servicio de contenedores del proveedor de nube definido.  
+5. **Publicación de la imagen Docker:** Envía la imagen construida al repositorio de contenedores del proveedor cloud.  
+6. **Actualización de arquitectura en FastStack:** Integra la nueva imagen Docker en la infraestructura configurada en FastStack.  
+
+## 📌 Comandos  
+
+### `deploy`  
+
+Ejecuta el pipeline de despliegue basado en la configuración definida en `fs-config.yml`, utilizando las API Keys para autenticar y gestionar la infraestructura en FastStack.  
+
+## 🔹 Recomendaciones  
+
+- **No incluyas el archivo `fs-config.yml` en tu repositorio Git:** Agrégalo a `.gitignore` para evitar exponer credenciales sensibles.  
+- **Verifica la configuración antes de ejecutar `fs-cli`:** Asegúrate de que `fs-config.yml` esté correctamente definido y alineado con los parámetros de tu proveedor cloud.  
+
+
+
