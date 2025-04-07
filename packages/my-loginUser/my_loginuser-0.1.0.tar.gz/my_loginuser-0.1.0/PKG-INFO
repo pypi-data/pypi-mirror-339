@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: my_loginUser
+Version: 0.1.0
+Summary: A secure CLI login authentication package.
+Author: Darshil
+Keywords: login,authentication,cli,python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: classifier
+Dynamic: keywords
+Dynamic: requires-python
+Dynamic: summary
