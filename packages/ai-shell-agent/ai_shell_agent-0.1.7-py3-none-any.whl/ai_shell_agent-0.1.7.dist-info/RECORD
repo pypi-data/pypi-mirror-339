@@ -1,0 +1,15 @@
+ai_shell_agent/__init__.py,sha256=6LRZ68FuczzDutpO6HzDA04YAhEjEsCy0BuSZ44eWv0,759
+ai_shell_agent/ai.py,sha256=fPcOhLXjZxUJ1-MXVBZa5kM6nKJO-vCk2tmZpRgDqD0,7225
+ai_shell_agent/chat_manager.py,sha256=YjIyCT6tx3KsDYntxCW31sT7ci3th35JEPwqHFSW2tQ,23759
+ai_shell_agent/config_manager.py,sha256=XOxVNJZz7IDl9O5X80KHfFVoWE_HH1ssmPLf4QwK1eE,9282
+ai_shell_agent/prompts.py,sha256=qSn93E1of-HzhQRqoMA8Fxebhk4fkarHtwRCf9ElnYU,6846
+ai_shell_agent/tools.py,sha256=H06c_d_D8ZSajUonacE3vQTiDRwqCI4xrlSk0B_TXYk,3488
+ai_shell_agent-0.1.7.dist-info/licenses/LICENSE,sha256=ACwmltkrXIz5VsEQcrqljq-fat6ZXAMepjXGoe40KtE,1069
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_chat_manager.py,sha256=CH2G77F6F7I_OBM-nOpv_HocjZJFgPbkWWWFjTdDNNM,4332
+tests/test_interactive_shell.py,sha256=5UL2AXmcb_xzX-F9bdq8PQR1Bm8v9-ZMs9kaUTipW9s,1030
+ai_shell_agent-0.1.7.dist-info/METADATA,sha256=Ia-k7UBIHhrKvbEEF8WxGeGj0Soerty0v-eCulCLmPw,11558
+ai_shell_agent-0.1.7.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+ai_shell_agent-0.1.7.dist-info/entry_points.txt,sha256=xpxGpJaVvtfVkFgDoE10TjZxJi0ruw-2WuPawFHGjok,46
+ai_shell_agent-0.1.7.dist-info/top_level.txt,sha256=GOHuU0Gkm6mFzTnLQznxlNUmUPqO3i6u6R7etX7qNRA,21
+ai_shell_agent-0.1.7.dist-info/RECORD,,
