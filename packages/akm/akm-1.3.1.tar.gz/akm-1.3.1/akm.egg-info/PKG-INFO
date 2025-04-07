@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: akm
+Version: 1.3.1
+Summary: A library for generating and checking temporary Gmail emails.
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: requests
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: summary
