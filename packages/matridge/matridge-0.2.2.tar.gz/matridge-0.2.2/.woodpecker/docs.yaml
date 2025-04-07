@@ -1,0 +1,24 @@
+# DO NOT EDIT
+# Generated from .copier-answers.yml
+
+when:
+  event: [push, tag, pull_request]
+  path: ["matridge/**/*.py", "docs/**/*", "README.md"]
+
+steps:
+  build:
+    image: codeberg.org/${CI_REPO_OWNER}/matridge:ci
+    pull: true
+    commands:
+      - cp -r /venv .venv
+      - uv sync --all-groups --all-extras
+      - cd docs && make html
+
+  publish:
+    image: codeberg.org/slidge/woodpecker-publish-pages
+    pull: true
+    when:
+      event: [push, tag]
+    settings:
+      token:
+        from_secret: CODEBERG_TOKEN

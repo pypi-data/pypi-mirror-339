@@ -1,0 +1,5 @@
+matrix-nio[e2e]<0.26,>=0.25
+beautifulsoup4<5,>=4.12.2
+async-lru<3,>=2.0.3
+slidge-style-parser>=0.1.6
+slidge<0.3,>=0.2.5
