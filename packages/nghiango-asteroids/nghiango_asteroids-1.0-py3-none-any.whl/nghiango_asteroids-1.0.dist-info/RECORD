@@ -1,0 +1,14 @@
+asteroids/__init__.py,sha256=3Vi-Q2OrUa8SJ_HslZRhs7p5R-y-wvXlc-LLPYkowTM,32
+asteroids/__main__.py,sha256=u0NgEw38VOxQr-XjjsLesirgq6L2dGD9Za4h9o5oo74,71
+asteroids/asteroid.py,sha256=8g0G6JGhvNssBKRmVJBodk9tPERWq2HQvGgLI1tVGFE,1067
+asteroids/asteroidfield.py,sha256=Enbc7s9sUpRfx6cBWp3Y4c-XqeYWzaxA4DY2oxqCBuY,1727
+asteroids/circleshape.py,sha256=MxFGQf7_Pr3wKU2LMbCACMt6c2xJTQPlZ4sPhu1As4g,883
+asteroids/constants.py,sha256=ZCr063mAfbNjmHIvYHhsv43YOEwMbBDoM00PeQVfoE0,314
+asteroids/main.py,sha256=7DEVfjf9xL_0PD4FRvPC8e7MCQsk40I9yM5Q3w-R-AY,2176
+asteroids/player.py,sha256=O2bjc7U_oBXBpg91TxzNHrAnqcCHQBNtq0-tgk3cURY,1937
+asteroids/shot.py,sha256=p59rhWUMp9bXUBFQoE12jEJysI6o-E2xiWXoTkzJCLM,467
+nghiango_asteroids-1.0.dist-info/METADATA,sha256=j_T-JKz8KYr-1dVUX6ID1yLBDO0ASf6GFFZ_7NXKf2I,83
+nghiango_asteroids-1.0.dist-info/WHEEL,sha256=VyG4dJCdJcxE1baiVBm9NET3Nj7Wne1lZZq7UFNxRpg,97
+nghiango_asteroids-1.0.dist-info/entry_points.txt,sha256=GPKHr4nSXscX0appKaM7FT8nvy_wmdkFuiyf32NO5no,45
+nghiango_asteroids-1.0.dist-info/top_level.txt,sha256=9cLkDFErP5MCFVnu9g_qd_lejgd5ryu_lS0mmadiQvI,10
+nghiango_asteroids-1.0.dist-info/RECORD,,
