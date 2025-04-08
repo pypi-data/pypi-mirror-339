@@ -1,0 +1,5 @@
+textual
+rich
+httpx
+typer[all]
+prompt_toolkit
