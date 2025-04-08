@@ -1,0 +1,10 @@
+ypy_sqlite/__init__.py,sha256=PUMjT0Fg440SXDUZe6Ne30dtMfp4_DDX3mszFZtGOtA,75
+ypy_sqlite/persistence.py,sha256=JUrkI4fEKh-0dSIYYk7DOaPfuwMKpPYqE-C3EY-T5FE,6413
+ypy_sqlite/sqlite_adapter.py,sha256=NylRxcT6wEzJ4pBWGHmqsul0k3CpmhEjkK9rZRG1bb4,6887
+ypy_sqlite/utils.py,sha256=Fsq97aiUW_sLpHsF8Y2-9D5oBZ5q3eGkiGENtC7Jaa8,3908
+ypy_sqlite/tests/__init__.py,sha256=sNGbUOvaxQ62VeWuodJKqq0szvg92tKEOWuh_tQ3Fs8,15
+ypy_sqlite/tests/test_persistence.py,sha256=YD2ZhzuTX4tR31qKhZkEJH-Y2YWBmtxxZDLAM4PDnwk,3908
+ypy_sqlite-0.1.0.dist-info/METADATA,sha256=OqSDhxfAOpwdRNpIqG1ec3eNS5YqSDYUcY6OaR1Msmc,3177
+ypy_sqlite-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+ypy_sqlite-0.1.0.dist-info/top_level.txt,sha256=SqR8Zu7eKQZFCOBW_TtbtAmfFq4ITHDevWLBmwyaorE,11
+ypy_sqlite-0.1.0.dist-info/RECORD,,
