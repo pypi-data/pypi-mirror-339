@@ -1,0 +1,3 @@
+[console_scripts]
+cyclo=py_cyclo.main:check_complexity
+
