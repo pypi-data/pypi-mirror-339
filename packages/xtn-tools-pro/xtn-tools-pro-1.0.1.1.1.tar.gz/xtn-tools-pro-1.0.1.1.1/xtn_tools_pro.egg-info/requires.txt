@@ -1,0 +1,10 @@
+pymongo
+redis
+pymysql
+dbutils
+colorlog
+requests
+Faker
+PyJWT
+tqdm
+fabric
