@@ -1,0 +1,25 @@
+include README.md LICENSE
+recursive-include alcedo_pdbc *.py   # # 递归包含所有 .py 文件
+recursive-include images *
+
+
+# 强制排除所有 .py 文件（包括子目录）
+exclude *.pyd
+exclude *.so
+exclude *.c
+exclude *.dll
+exclude build/*
+global-exclude *.pyd
+global-exclude *.c
+
+
+
+
+
+# 排除构建残留目录
+prune build/*
+prune alcedo_pdbc.egg-info/
+prune dist/
+prune *.egg-info
+prune src/       # 备份目录
+prune tests/    # 测试目录

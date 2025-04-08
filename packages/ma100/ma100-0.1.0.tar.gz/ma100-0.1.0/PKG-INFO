@@ -1,0 +1,7 @@
+Metadata-Version: 2.2
+Name: ma100
+Version: 0.1.0
+License-File: LICENSE
+Requires-Dist: ma100-odbc>=0.1.0
+Requires-Dist: ma100-plot>=0.1.0
+Dynamic: requires-dist
