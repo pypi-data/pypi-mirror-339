@@ -1,0 +1,20 @@
+Metadata-Version: 2.2
+Name: causally
+Version: 0.1.0
+Summary: Generator of causal discovery data under realistic assumptions.
+Author-email: Francesco Montagna <francesco.montagna997@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/francescomontagna/causally
+Project-URL: Repository, https://github.com/francescomontagna/causally
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.25.2
+Requires-Dist: networkx>=3.1
+Requires-Dist: scikit-learn>=1.3.0
+Requires-Dist: torch>=2.0.1
+Requires-Dist: python-igraph>=0.11.2
+
+Code base for the `causally` python library for the generation of synthetic data in causal discovery. The code in this repository is part of the contributions of the paper "Assumption violations in causal discovery and the robustness of score matching", 2023, Montagna et al., NeurIPS 2023.
+
+For ``causally`` documentation,  visit [https://causally.readthedocs.io/en/latest/](https://causally.readthedocs.io/en/latest/).
