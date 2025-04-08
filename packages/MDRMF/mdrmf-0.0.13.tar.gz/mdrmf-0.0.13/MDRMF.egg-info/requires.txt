@@ -1,0 +1,10 @@
+joblib
+lightgbm
+matplotlib
+numpy
+pandas
+pykwalify
+pyyaml
+rdkit
+scipy
+scikit-learn
