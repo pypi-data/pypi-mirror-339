@@ -1,0 +1,2 @@
+[console_scripts]
+anzu = anzu:main
