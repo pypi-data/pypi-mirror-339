@@ -1,0 +1,13 @@
+{
+    "read_csg": {
+        "input_filename": "tests/csg_files/cylinder_box.xml",
+        "csg_format": "openmc_xml"
+    },
+    "cell_filter": {
+        "type": "all",
+        "cells": [1,2]
+    },
+    "export_cad": {
+        "output_filename": "cad_from_csg"
+    }
+}
