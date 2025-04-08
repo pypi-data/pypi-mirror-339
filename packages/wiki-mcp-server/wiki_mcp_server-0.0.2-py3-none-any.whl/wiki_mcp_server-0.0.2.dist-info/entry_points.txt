@@ -1,0 +1,2 @@
+[console_scripts]
+wiki-mcp-server = server:run_server
