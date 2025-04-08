@@ -1,0 +1,10 @@
+prettytable
+colorama
+grpcio
+protobuf
+requests
+transliterate
+psutil
+setuptools
+pycron
+zeroconf
