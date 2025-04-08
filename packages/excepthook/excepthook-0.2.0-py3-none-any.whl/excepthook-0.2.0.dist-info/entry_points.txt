@@ -1,0 +1,2 @@
+[console_scripts]
+install_hook = excepthook.install:write_sitecustomize
