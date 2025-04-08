@@ -1,0 +1,145 @@
+Metadata-Version: 2.4
+Name: sdhdf
+Version: 2025.4.2
+Summary: A collection of tools for interrogating Spectral-Domain Hierarchical Data Format (SDHDF) files
+Project-URL: Homepage, https://bitbucket.csiro.au/projects/CPDA/repos/sdhdf_tools/browse
+Project-URL: Bug Tracker, https://jira.csiro.au/projects/CPDA/
+Author: Lawrence Toomey, George Hobbs, Alec Thomson
+License: MIT License
+        
+        Copyright (c) 2025 CSIRO
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Requires-Dist: astropy>=5
+Requires-Dist: dask
+Requires-Dist: distributed
+Requires-Dist: h5py>=3.7
+Requires-Dist: matplotlib>=3.5
+Requires-Dist: numpy>=1.21
+Requires-Dist: pandas>=1.4
+Requires-Dist: tables>=3.7
+Requires-Dist: tabulate
+Requires-Dist: tqdm
+Requires-Dist: xarray>=2022
+Provides-Extra: dev
+Requires-Dist: furo; extra == 'dev'
+Requires-Dist: ipykernel; extra == 'dev'
+Requires-Dist: ipython; extra == 'dev'
+Requires-Dist: jupyter; extra == 'dev'
+Requires-Dist: myst-parser; extra == 'dev'
+Requires-Dist: nbconvert>=7.2; extra == 'dev'
+Requires-Dist: nbsphinx; extra == 'dev'
+Requires-Dist: nox; extra == 'dev'
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: pytest-cov>=3; extra == 'dev'
+Requires-Dist: pytest>=6; extra == 'dev'
+Requires-Dist: ruff>=0.9.9; extra == 'dev'
+Requires-Dist: sphinx-argparse; extra == 'dev'
+Requires-Dist: sphinx-autoapi>=2; extra == 'dev'
+Requires-Dist: sphinx-autodoc-typehints; extra == 'dev'
+Requires-Dist: sphinx-mdinclude>=0.5; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme>=1.1; extra == 'dev'
+Requires-Dist: sphinx>=4.2; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# pyINSPECTA
+
+[![Actions Status][actions-badge]][actions-link]
+[![Codecov Status][codecov-badge]][codecov-link]
+[![Documentation Status][rtd-badge]][rtd-link]
+
+[![PyPI version][pypi-version]][pypi-link]
+
+<!-- [![Conda-Forge][conda-badge]][conda-link] -->
+
+[![PyPI platforms][pypi-platforms]][pypi-link]
+
+<!-- [![GitHub Discussion][github-discussions-badge]][github-discussions-link] -->
+
+<!-- prettier-ignore-start -->
+[codecov-link]:             https://codecov.io/gh/AlecThomson/pyINSPECTA
+[codecov-badge]:            https://codecov.io/gh/AlecThomson/pyINSPECTA/graph/badge.svg?token=7EARBRN20D
+[actions-badge]:            https://github.com/AlecThomson/pyINSPECTA/actions/workflows/ci.yml/badge.svg
+[actions-link]:             https://github.com/AlecThomson/pyINSPECTA/actions
+[pypi-link]:                https://pypi.org/project/sdhdf/
+[pypi-platforms]:           https://img.shields.io/pypi/pyversions/sdhdf
+[pypi-version]:             https://img.shields.io/pypi/v/sdhdf
+[rtd-badge]:                https://readthedocs.org/projects/pyinspecta/badge/?version=latest
+[rtd-link]:                 https://pyinspecta.readthedocs.io/en/latest/?badge=latest
+
+
+<!-- prettier-ignore-end -->
+
+Python tooling for reading, interactive with, and writing SDHDF files.
+
+<!-- SPHINX-START -->
+## Installation
+
+Installing can be done with `pip` (we recommend using `uv`):
+
+Stable version from PyPI:
+
+```bash
+pip install sdhdf
+```
+
+Latest version from git:
+
+```bash
+pip install git+https://github.com/AlecThomson/pyINSPECTA.git
+```
+
+## Usage
+
+```python
+from sdhdf import SDHDF
+
+my_sdhdf = SDHDF("myfile.hdf")
+```
+
+Full documentation on [Read the Docs](https://pyinspecta.readthedocs.io/en/latest/).
+
+## Contributing
+
+Contributions are welcome! Please be sure to install the developer tools and pre-commit hooks:
+
+```bash
+git https://github.com/AlecThomson/pyINSPECTA.git
+cd pyINSPECTA
+pip install -e .[dev]
+pre-commit install
+```
