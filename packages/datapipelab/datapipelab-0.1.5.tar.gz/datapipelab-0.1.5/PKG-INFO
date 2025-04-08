@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: datapipelab
+Version: 0.1.5
+Summary: A data pipeline library with connectors, sources, processors, and sinks.
+Requires-Dist: json5
+Requires-Dist: loguru
+Requires-Dist: azure-storage-blob
+Requires-Dist: google-cloud-storage
+Requires-Dist: pandas
+Dynamic: requires-dist
+Dynamic: summary
