@@ -1,0 +1,2 @@
+[console_scripts]
+anime-quote = anime_quotes.__main__:main
