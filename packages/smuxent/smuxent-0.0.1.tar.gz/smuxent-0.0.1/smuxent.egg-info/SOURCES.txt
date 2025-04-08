@@ -1,0 +1,8 @@
+README.md
+setup.py
+smuxent/ThreadWin.pyi
+smuxent/__init__.py
+smuxent.egg-info/PKG-INFO
+smuxent.egg-info/SOURCES.txt
+smuxent.egg-info/dependency_links.txt
+smuxent.egg-info/top_level.txt
