@@ -1,0 +1,2 @@
+[console_scripts]
+graphql-utils = graphql_utils:main
