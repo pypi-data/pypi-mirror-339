@@ -1,0 +1,15 @@
+apn_dot2tex/__init__.py,sha256=r4M1atRJx8mOY5LF-bKARMy9Uijda1MKoRfZXj9SzxY,1972
+apn_dot2tex/__main__.py,sha256=2Pn4ml1J-jiueKsFMLASTij2zANk26u-Ho2AQOlWDbc,65
+apn_dot2tex/base.py,sha256=aJDPQlIEKW25ZJ6wJ1oJEnSZqz46wj3-oA7quWr7ogM,40369
+apn_dot2tex/dot2tex.py,sha256=xvdASLubH_ywRpB8cRvF1UsK1ZE5Qq8yILZvsdEZ63I,17975
+apn_dot2tex/dotparsing.py,sha256=Fg5DQWAEGC7ywOxo3r8BPfHhwKlCoxC5tVdR-I4GaAA,35529
+apn_dot2tex/pgfformat.py,sha256=kJpXGDlEn0EklN5AimrFH-wnFYwoXfA_ULUk5ZRU80k,34415
+apn_dot2tex/pstricksformat.py,sha256=keytAbsOIGmST3zb1kvC2LLdEl5C7UHND_wyVxsWW3g,14930
+apn_dot2tex/utils.py,sha256=cvkfyIePkuIwURgs859JCkg8FTJkfiQE_c_ilTJLg50,3207
+apn_dot2tex-2.12.dist-info/licenses/AUTHORS,sha256=3AxFLB73yCf12oZCSws6TZMcL8XvMcQmJGahAf2f5Yw,303
+apn_dot2tex-2.12.dist-info/licenses/LICENSE,sha256=a4wz2vaLtsG1i61WuOgpFwac-a00RR6Bds0jZBL07uA,1137
+apn_dot2tex-2.12.dist-info/METADATA,sha256=-VzJEfpca342K52PcVPDocB5uU8sxkRF62EhzKLyPLM,1713
+apn_dot2tex-2.12.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+apn_dot2tex-2.12.dist-info/entry_points.txt,sha256=52UeONz9ZDPqRyuJZ4XTZzfMtgsb3nDOfY88sVzoPag,49
+apn_dot2tex-2.12.dist-info/top_level.txt,sha256=kswPjDLwg5xs5kIytoS1xpEKR4XFZfVp8AQ47ZfXeIU,12
+apn_dot2tex-2.12.dist-info/RECORD,,
