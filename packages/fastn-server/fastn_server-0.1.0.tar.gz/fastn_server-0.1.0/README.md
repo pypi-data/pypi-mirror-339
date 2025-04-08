@@ -1,0 +1,176 @@
+# FastN Server
+
+[![PyPI version](https://img.shields.io/pypi/v/fastn-server.svg)](https://pypi.org/project/fastn-server/)
+[![Python versions](https://img.shields.io/pypi/pyversions/fastn-server.svg)](https://pypi.org/project/fastn-server/)
+[![License](https://img.shields.io/github/license/fastn/fastn-server-package.svg)](LICENSE)
+
+A Python package that provides a command-line interface for running a FastN MCP (Multi-modal Conversational Platform) server. This server enables seamless integration between AI assistants like Claude or Cursor and external tools and services.
+
+## What is FastN?
+
+FastN is a powerful platform that provides AI assistants with real-time access to external tools and services. This package enables running a local FastN server that acts as a bridge between AI assistants and various services including:
+
+- **Communication tools**: Slack, Gmail, Microsoft Teams
+- **Business platforms**: HubSpot, Notion, Salesforce
+- **Development tools**: GitHub, GitLab, Jira
+- **And many more**
+
+The FastN Server package enables AI systems to:
+- Send and retrieve emails
+- Create and update contacts in CRM systems
+- Post and retrieve messages from Slack
+- And perform many other operations across integrated services
+
+## Key Features
+
+- **Zero-configuration tools**: All tools are automatically registered based on your FastN workspace configuration
+- **Secure authentication**: API key-based authentication with your FastN account
+- **MCP Protocol support**: Works with any client that supports the MCP protocol
+- **Simple command-line interface**: Easy to use with minimal required parameters
+- **Clean installation via pipx**: Isolated from your system Python environment
+
+## Getting Started
+
+### 1. Install the package
+
+The recommended way to install the FastN server is using [pipx](https://pypa.github.io/pipx/):
+
+```bash
+pipx install fastn-server
+```
+
+Alternatively, you can use pip:
+
+```bash
+pip install fastn-server
+```
+
+### 2. Prepare your credentials
+
+Before using this package, you need:
+
+1. A FastN account (sign up at [fastn.ai](https://fastn.ai) if you don't have one)
+2. Your FastN API key (available in your account settings)
+3. Your FastN Space ID (available in your account dashboard)
+
+### 3. Integrate with your AI assistant
+
+First, find the path to your fastn-server command:
+
+**macOS/Linux:**
+```bash
+which fastn-server
+```
+
+**Windows:**
+```bash
+where fastn-server
+```
+
+The configuration JSON is the same for both Claude and Cursor. Replace the path with the actual path from the command above:
+
+**macOS/Linux example:**
+```json
+{
+    "mcpServers": {
+        "fastn": {
+            "command": "/Users/username/.local/bin/fastn-server",
+            "args": [
+                "--api_key",
+                "YOUR_API_KEY",
+                "--space_id",
+                "YOUR_WORKSPACE_ID"
+            ]
+        }
+    }
+}
+```
+
+**Windows example:**
+```json
+{
+    "mcpServers": {
+        "fastn": {
+            "command": "C:\\Users\\username\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\fastn-server.exe",
+            "args": [
+                "--api_key",
+                "YOUR_API_KEY",
+                "--space_id",
+                "YOUR_WORKSPACE_ID"
+            ]
+        }
+    }
+}
+```
+
+> **Important note for Windows users:** Make sure to use double backslashes (\\\\) in your path, as shown in the example above. Single backslashes will cause errors in JSON.
+
+#### Integration with Claude
+
+1. Open the Claude configuration file:
+
+**Windows:**
+```bash
+# Using Notepad
+notepad "%APPDATA%\Claude\claude_desktop_config.json"
+
+# Using VS Code
+code "%APPDATA%\Claude\claude_desktop_config.json"
+```
+
+**Mac:**
+```bash
+# Using TextEdit
+open -a TextEdit ~/Library/Application\ Support/Claude/claude_desktop_config.json
+
+# Using VS Code
+code ~/Library/Application\ Support/Claude/claude_desktop_config.json
+```
+
+2. Add the configuration JSON shown above.
+
+#### Integration with Cursor
+
+1. Open Cursor settings
+2. Click on "MCP" in the settings menu
+3. Click on "Add New"
+4. Add a name for your server (e.g., "fastn")
+5. Select "Command" as the type
+6. Use the same configuration as shown above for Claude
+
+That's it! Your AI assistant now has access to all the tools configured in your FastN workspace.
+
+## Manual Usage (Optional)
+
+If you need to run the server directly, use the following command:
+
+```bash
+fastn-server --api_key YOUR_API_KEY --space_id YOUR_SPACE_ID
+```
+
+### Required Arguments
+
+- `--api_key`: Your FastN API key for authentication
+- `--space_id`: Your FastN Space ID for the target environment
+
+### Example
+
+```bash
+fastn-server --api_key "fastn_key_123..." --space_id "space_456..."
+```
+
+## Security Considerations
+
+- Keep your API key and Space ID secure
+- Use environment variables or a secure configuration file for production deployments
+- Regularly rotate your API keys for enhanced security
+
+## License
+
+This project is licensed under the terms included in the [LICENSE](LICENSE) file.
+
+## Support
+
+For questions, issues, or feature requests, please visit:
+- Documentation: [https://docs.fastn.ai](https://docs.fastn.ai)
+- Community: [https://community.fastn.ai](https://community.fastn.ai)
