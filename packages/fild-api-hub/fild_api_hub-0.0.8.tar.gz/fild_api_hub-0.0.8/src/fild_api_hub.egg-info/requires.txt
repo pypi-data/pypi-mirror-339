@@ -1,0 +1,7 @@
+deepdiff>=6.5.1
+fild>=0.1.0
+fild-cfg>=0.0.1
+fild-compare>=0.0.3
+requests
+pyyaml
+waiting
