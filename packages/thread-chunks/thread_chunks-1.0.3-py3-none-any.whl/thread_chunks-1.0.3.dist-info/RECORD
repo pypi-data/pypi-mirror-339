@@ -1,0 +1,12 @@
+thread_chunks/__init__.py,sha256=nYJo4f3W-bephDZeeck0p0IMkoSjT726MCgw2fLiQKg,312
+thread_chunks/_actor.py,sha256=HjYUnqO6WGIBIgjxzX637O3MuwdgqyNZV9mSAC_PIRs,1545
+thread_chunks/_checkpoint.py,sha256=sfe6ifRsXBxTI-vvTNzlrviphicb_cJamVIy9qyMQwM,2763
+thread_chunks/_chunker.py,sha256=FF1vsfQ7AcTe1mSeO8XJL1bJGnIFl3WV24qMqwXVa7E,16481
+thread_chunks/_chunker.pyi,sha256=ZJwSI7O8CyrlnoL2U-EpiOd5wLJhMnl5CNLpGrp30R8,7950
+thread_chunks/_remote_actor.py,sha256=DarzFsarteLDuxCqxNaKnFIBxHkUlcbyfVV6rnqcTbQ,94
+thread_chunks/_remote_actor.pyi,sha256=CuNUA2vRYXm3r_FtjbudRbhUq9bqAXHb_P9UkcOoDYc,1036
+thread_chunks/config.py,sha256=DmoBNWAIqVHmgmpljikSqd_fYJf8MvO3iHpm80qet8Y,689
+thread_chunks-1.0.3.dist-info/METADATA,sha256=v-Ieg6kLNWbynvfok5H4xEkoQpLSjWAsVb6Vk8itm1A,2114
+thread_chunks-1.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+thread_chunks-1.0.3.dist-info/licenses/LICENSE,sha256=PWhL4efdgiM4bQ5k1_fqMgvGmd4gLkDqWiB_jPppG8k,11349
+thread_chunks-1.0.3.dist-info/RECORD,,
