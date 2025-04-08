@@ -1,0 +1,31 @@
+name: Validate pull request
+
+on:
+  pull_request:
+    types:
+      - edited
+      - opened
+      - reopened
+      - synchronize
+    
+jobs:
+  verify_base_branch:
+    name: Verify whether ${{ github.head_ref }} may be merged into ${{ github.base_ref }}
+    runs-on: ubuntu-latest
+    if: (github.base_ref == 'master') && (github.head_ref != 'release')
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Get touched files
+        id: get-touched-files
+        uses: ./.github/actions/touched-files
+        with:
+          pathspec: 'src/'
+
+      - name: Verify branch compatibility
+        run: |
+          if [[ -n '${{ steps.get-touched-files.outputs.touched }}' ]]; then
+            echo "ERROR: Merging code changes directly into master forbidden."
+            exit 1
+          fi
