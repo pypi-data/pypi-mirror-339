@@ -1,0 +1,2 @@
+[console_scripts]
+datavault-erd = datavault_erd.main:main
