@@ -1,0 +1,9 @@
+dlt_source_slack/__init__.py,sha256=Q_u1eF6K2xosFIgu3uKKN8gtY4sPSaMoxLNrdXn3O_w,2512
+dlt_source_slack/manifest.yml,sha256=d0bn7QZT4fCwbRqduthRyqGKK_V9ts1bdb2oZCgDib4,310
+dlt_source_slack/web_client.py,sha256=7coW9zWUs8zqbW0g21TqQk4jRlENfAs6FpN2Q0krOmk,870
+dlt_source_slack/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dlt_source_slack/tests/test_noop.py,sha256=-126gn7YdkGGKcml05Ci4f86B0okFKajjOWplvfBugk,26
+dlt_source_slack-0.0.1.dist-info/METADATA,sha256=R0CYTClaFRN4RrfIMEmq20RCcvKmemjEeOwrbaYceXE,2658
+dlt_source_slack-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dlt_source_slack-0.0.1.dist-info/licenses/LICENSE,sha256=dkb6af9giJCKFd6umYkvdOk3wqrja8M_FldeDhXJYCg,1065
+dlt_source_slack-0.0.1.dist-info/RECORD,,
