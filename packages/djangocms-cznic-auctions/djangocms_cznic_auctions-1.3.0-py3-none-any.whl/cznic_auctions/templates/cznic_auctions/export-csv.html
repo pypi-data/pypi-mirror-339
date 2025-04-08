@@ -1,0 +1,8 @@
+{% load i18n %}
+<a class="auctions-export {{ instance.status }}" href="{% url "auctions:auctions_export_csv" instance.status %}">{% spaceless %}
+    {% if instance.label %}
+        {{ instance.label }}
+    {% else %}
+        {% translate "Export the whole list to csv" %}
+    {% endif %}
+{% endspaceless %}</a>
