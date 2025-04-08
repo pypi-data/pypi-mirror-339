@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: py_cryptomus
+Version: 0.1.0
+Summary: Python wrapper for Cryptomus API
+Author: Tarius Blake
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+
+Cryptomus API library developed by a python addict who did not find any documentations on how to use the API using python.
