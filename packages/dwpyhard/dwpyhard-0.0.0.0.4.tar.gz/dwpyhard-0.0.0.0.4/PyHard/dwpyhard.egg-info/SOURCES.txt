@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+setup.py
+PyHard/.testfile.py
+PyHard/LICENSE
+PyHard/mmbConfig.json
+PyHard/PyHard/__init__.py
+PyHard/PyHard/core.py
+PyHard/PyHard/models.py
+PyHard/dwpyhard.egg-info/PKG-INFO
+PyHard/dwpyhard.egg-info/SOURCES.txt
+PyHard/dwpyhard.egg-info/dependency_links.txt
+PyHard/dwpyhard.egg-info/top_level.txt
