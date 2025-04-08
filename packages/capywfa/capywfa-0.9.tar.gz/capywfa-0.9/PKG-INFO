@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: capywfa
+Version: 0.9
+Summary: Clearing worflow automation for SW360
+License: MIT
+Author: Gernot Hillier
+Author-email: gernot.hillier@siemens.com
+Requires-Python: >=3.9.0,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Requires-Dist: capycli (>=2.7.0,<3.0)
+Requires-Dist: packageurl-python (>0.11,<1.0)
+Requires-Dist: requests (>=2.32.0,<3.0)
+Requires-Dist: sw360 (>=1.8.0,<2.0)
