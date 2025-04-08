@@ -1,0 +1,17 @@
+geollama/.api_token/.token,sha256=hRbQzV-eUxdaH2De3fcbnw1IbyfXRGXCfhY3oOz8Ri8,207
+geollama/__init__.py,sha256=CY4DF4ty68zoW0Qm_5HdyBye3kjSfRBFjOVIZmO-nlU,668
+geollama/calc_by_slice.py,sha256=LEmljTXraTb98crLAcnVuxi1fLXCObeHydqNdau7qbM,15851
+geollama/config.py,sha256=zrnL2OlObEMDbl7KUI1urmN_2nYxnzRTWbcsLhULpMU,7789
+geollama/evaluate.py,sha256=PUMfjb9MZTl6C8sM7_eY-lvVZH2aFrGE40QKuqqnLh8,16229
+geollama/io.py,sha256=b4nTFB7e0J4hmvFSorzqcOKca0r8uvEf2YU4WThWKus,1889
+geollama/main.py,sha256=9nsUMFyEyO6b1L6qBSWJt1kJ0aIhXQ3_sAP1hO_WKdc,14493
+geollama/objects.py,sha256=Da4zsFlNSvAlDtlHLr9EwZZW-H_P8bxbz5Q_xcLrfHM,2233
+geollama/prog_bar.py,sha256=we3l1td2v6LHANSlk-P0tptV0b6f9-lR37ckBBT0LPY,1127
+geollama/report.py,sha256=mgW_93UO9jlE70lgSmqkirAYB4ySjs4fN3a7mK8KdEQ,3591
+geollama/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geollama/templates/report_template.ipynb,sha256=UP-M2k4_qmLDKBzRFCWFCDfqvFh5WeI9Ig1K_rr1dK4,4450882
+geollama-1.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+geollama-1.0.1.dist-info/METADATA,sha256=o3kZ_3NQz8kjPrlX1T9Xyp4CythK2cCsxq7F48gO9GI,4833
+geollama-1.0.1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+geollama-1.0.1.dist-info/entry_points.txt,sha256=32FXUnZA0eRSgltNKlH5gZRP15ye_ucJqR-ENpT6m9Y,46
+geollama-1.0.1.dist-info/RECORD,,
