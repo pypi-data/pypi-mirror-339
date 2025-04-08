@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: DP4plus-solv
+Version: 0.1.10
+Summary: Solvent DP4+: Impact of solvent effects on DP4+ assignments
+Home-page: https://github.com/Sarotti-Lab/DP4plus_solv
+Author: Maria M. Zanardi & Ariel M. Sarotti
+Author-email: zanardi@rosario-conicet.gov.ar
+License: MIT
+Keywords: NMR structural elucidation
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: openpyxl
+Requires-Dist: pathlib
+Requires-Dist: pyqt5
+Requires-Dist: scikit-learn
+
+# DP4 PLus Solvent Dependence 
+
+## Impact of solvent effects on DP4+ assignment
+
+Authors: Ariel M. Sarotti & María M. Zanardi 
+
+
+>This repository contains all codes and data required to run DP4Plus calculations that let analized the effect of the solvent on DP4+ assignaments. 
+
+### Description
+>This is a Python program to compute DP4+ probabilities in the stereochemical assignament of new organic compounds in different solvents.
+
+
+### Installation Requirements
+
+**DP4plus_solv.py** needs python 3.8 or later to work. The module can be installed by console using:
+`pip3 install DP4plus_solv`
+
+Usage by console: `DP4plus_solv`
+
+
+    
+Detail information is given in UserGuide.pdf included in the package. (Direct acces from GUI)
+
+
+
+
+See the [project repository](https://github.com/Sarotti-Lab/DP4plus_solv) for more details.
+

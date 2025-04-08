@@ -1,0 +1,5 @@
+[console_scripts]
+DP4plus-solv-exe = DP4plus_solv.DP4plus_solv:create_exe
+
+[gui_scripts]
+DP4plus-solv = DP4plus_solv.DP4plus_solv:main
