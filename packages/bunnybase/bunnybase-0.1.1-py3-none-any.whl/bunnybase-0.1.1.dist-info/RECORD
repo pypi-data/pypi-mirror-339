@@ -1,0 +1,11 @@
+bunnybase/__init__.py,sha256=jytoSWtPL1_SxzTa0Q6R3UstBef_6rGyjdchzV7vh-8,139
+bunnybase/data.py,sha256=xKIo0e_ekCsI_WjBtnbsFQ7JhVm5IqSYKL262jqJEdQ,1013
+bunnybase/hub.py,sha256=qfKeegVBzmzvSzFbvpIQviB2H2NyKB2mRt5ta4MCZ-A,2629
+bunnybase/save.py,sha256=h2wiS8MJooOI7S8otRXXiunZhzdmbX-0-RNv1gzkrFE,4624
+bunnybase/utils.py,sha256=g2XznNiPbbaEVbf9G5zvbUtHMTig4XK4avhxa_EPHME,1737
+imgs/adding-data-to-hub.png,sha256=Oblf0_cEJG6cWd3hP-IFZf7CmVktd3dJf1a4wz3trwk,37729
+imgs/performance-saving-hub.png,sha256=95txlk16SlecnSQJGNqDg5r2WAtuPD_gG67dkspjALU,41676
+bunnybase-0.1.1.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+bunnybase-0.1.1.dist-info/METADATA,sha256=38SuDZtg1Jbspus655hshoDWRzplUQD2Bv5rQkz-CSY,1970
+bunnybase-0.1.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+bunnybase-0.1.1.dist-info/RECORD,,
