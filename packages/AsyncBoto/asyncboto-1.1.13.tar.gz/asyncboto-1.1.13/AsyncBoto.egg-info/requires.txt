@@ -1,0 +1,4 @@
+pydantic<3.0.0,>=2.0.0
+aiohttp<4.0.0,>=3.8.5
+tenacity
+boto3
