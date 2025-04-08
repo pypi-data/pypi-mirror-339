@@ -1,0 +1,60 @@
+[project]
+name = "openedu_ai_workspace"
+version = "0.1.18"
+description = "A package for ai workspace (project) features."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "bumpver>=2024.1130",
+    "langchain-openai>=0.3.11",
+    "langchain-qdrant>=0.2.0",
+    "pre-commit>=4.2.0",
+    "pydantic>=2.11.0",
+    "pymongo>=4.11.3",
+    "pytest>=8.3.5",
+    "python-dotenv>=1.1.0",
+    "qdrant-client>=1.13.3",
+    "sentence-transformers>=4.0.1",
+    "setuptools>=78.1.0",
+    "snowflake-id>=1.0.2",
+    "twine>=6.1.0",
+    "typing-extensions>=3.10.0",
+    "wheel>=0.45.1",
+]
+
+[project.optional-dependencies]
+dev = [
+]
+
+[build-system]
+requires = ["setuptools>=78.1.0", "wheel>=0.45.1"]
+build-backend = "setuptools.build_meta"
+
+
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = [
+    "ai_workspace",
+    "ai_workspace.database",
+    "ai_workspace.modules",
+    "ai_workspace.schemas"
+]
+
+
+[tool.bumpver]
+current_version = "0.1.18"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "bump version {old_version} -> {new_version}"
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'current_version = "{version}"',
+    'version = "{version}"'
+]
+"src/ai_workspace/__init__.py" = [
+    '__version__ = "{version}"'
+]
+
+[tool.pytest.ini_options]
+log_cli = true
