@@ -1,0 +1,3 @@
+[console_scripts]
+BPfold = BPfold.predict:main
+BPfold_eval = BPfold.evaluate:main
