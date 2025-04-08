@@ -1,0 +1,10 @@
+splipy_core/__init__.py,sha256=3hfuXYAgg1H48Ekq4ZbfrJatNH4dbGZMgHtQKgM9WOg,90
+splipy_core/__init__.pyi,sha256=kBzqnPLild-fH11yR-uWnJ8lWLBHE5wp8grwtX0LBSs,462
+splipy_core/_core.cpython-313-x86_64-linux-gnu.so,sha256=EhsZ2ECuWJ0rxrG499Aiy46i8zxx1Pl3HqUJcehgyqU,1649880
+splipy_core/core.c,sha256=T1u7T_NMXRBRYGY_iHj327LM8SQ10y4owndI0tJi6KM,1240164
+splipy_core/core.pyx,sha256=rorsbc4Ez92NObSKCT-ySDt46veKL1k_fFoPAj9d6YU,5787
+splipy_core/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+splipy_core-1.10.1.dist-info/METADATA,sha256=3Ml_lWkgmqpiIRXkY51P4EDqSVg8QyfAvV0HDoCY5aw,232
+splipy_core-1.10.1.dist-info/WHEEL,sha256=nblTQT1blkV4AqHweFiF9VczUBStdpro9HYesm10meU,151
+splipy_core-1.10.1.dist-info/top_level.txt,sha256=kBhLkjXVEb3wBI_IQlERVbkpOxDpEhiZ3MP16Lf1RAA,12
+splipy_core-1.10.1.dist-info/RECORD,,
