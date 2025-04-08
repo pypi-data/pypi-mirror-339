@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "aipackagewrapper"
+version = "0.2.0"
+description = "A package for OCR, XAI, data augmentation, and sentiment analyzer"
+authors = ["Abhay-Cerberus", "Priyanshi", "Madhav", "Ayushi"]
+license = "MIT"
+packages = [{ include = "modules" }]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+textblob = "0.19.0"
+numpy = "1.26.4"
+albumentations = "2.0.5"
+audiomentations = "0.40.0"
+nlpaug = "1.1.11"
+soundfile = "0.13.1"
+nltk = "3.9.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"

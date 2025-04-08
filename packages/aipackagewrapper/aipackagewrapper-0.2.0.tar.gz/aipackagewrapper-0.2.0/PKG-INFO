@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: aipackagewrapper
+Version: 0.2.0
+Summary: A package for OCR, XAI, data augmentation, and sentiment analyzer
+License: MIT
+Author: Abhay-Cerberus
+Requires-Python: >=3.10,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: albumentations (==2.0.5)
+Requires-Dist: audiomentations (==0.40.0)
+Requires-Dist: nlpaug (==1.1.11)
+Requires-Dist: nltk (==3.9.1)
+Requires-Dist: numpy (==1.26.4)
+Requires-Dist: soundfile (==0.13.1)
+Requires-Dist: textblob (==0.19.0)
