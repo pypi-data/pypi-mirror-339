@@ -1,0 +1,8 @@
+keystone>=24.0
+oslo.config
+oslo.log
+requests
+
+[test]
+pytest
+requests-mock
