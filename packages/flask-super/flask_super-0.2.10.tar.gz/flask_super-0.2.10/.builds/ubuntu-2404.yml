@@ -1,0 +1,34 @@
+image: ubuntu/24.04
+
+packages:
+  # Build tools
+  - software-properties-common
+  - build-essential
+  - make
+  - gcc
+  - g++
+  # Python 3.12
+  - python3-dev
+
+environment:
+  - PATH: /home/build/.local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+tasks:
+  - setup: |
+      pipx install uv nox
+
+  - make: |
+      cd flask-super
+      uv sync
+      uv run make test
+      uv run make lint
+
+  - lint-nox: |
+      cd flask-super
+      nox -e lint
+
+  - test-nox: |
+      cd flask-super
+      # Default Python version is python 3.12
+      # TODO: install other versions using rye or uv
+      nox -e pytest-3.12
