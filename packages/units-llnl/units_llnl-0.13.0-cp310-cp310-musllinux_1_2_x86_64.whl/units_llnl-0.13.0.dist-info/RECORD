@@ -1,0 +1,7 @@
+units_llnl/__init__.py,sha256=FFTEzkUqnYnvcC2n1KvBaBnemxal6GwqqxvhspDS9e4,436
+units_llnl/units_llnl_ext.cpython-310-x86_64-linux-gnu.so,sha256=F15uP_3RBDwErlJZvg3ks42QHN96vit9gP-KlRjim3o,2223728
+units_llnl-0.13.0.dist-info/METADATA,sha256=aPMLJeqcKh5gVQi0uOXzYfpAeeB9Mte8tPVsIH_wry4,12391
+units_llnl-0.13.0.dist-info/WHEEL,sha256=NDO7YPTJfFD9CKpUiWXK5wEfB39G7rPkkX9bRPRib48,117
+units_llnl-0.13.0.dist-info/RECORD,,
+units_llnl-0.13.0.dist-info/licenses/LICENSE,sha256=2PMhbYVRXrt9ddSNm4DnxHZ_TB3mP1IaM3fN3argHhc,1555
+units_llnl-0.13.0.dist-info/licenses/NOTICE,sha256=9CR93geVKl_4ZrJORbXN0fzkEM2y4DglWhY1hn9ZwQw,1167
