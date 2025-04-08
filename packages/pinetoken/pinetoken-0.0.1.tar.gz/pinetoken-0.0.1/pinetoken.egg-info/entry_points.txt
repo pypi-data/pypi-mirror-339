@@ -1,0 +1,2 @@
+[console_scripts]
+pinetoken = pinetoken.main:main
