@@ -1,0 +1,9 @@
+superpandas/__init__.py,sha256=PxKSV9VrKow-gfKCXGvTTdZx-CFrVhWYMQpp8S23A0U,650
+superpandas/config.py,sha256=za7qzUk7qX1zkuZnfWtOH5fLdGvhoez1C9oBnWt7Cvs,4255
+superpandas/llm_client.py,sha256=Pn_YY2KNvkyIOxQubVo491YegnEJiWYIKhgisjyLbT8,9044
+superpandas/superdataframe.py,sha256=px-xG34XYo6d9BhsH-6m7l0LHAJMc9JAQ73Fu4F9k94,30130
+superpandas/templates.py,sha256=CcQt_vIhPbBaYPtDj4dG3B_0_Qf0C3FvJQwpeN3C2-c,951
+superpandas-0.2.0.dist-info/METADATA,sha256=Xz8u02pj1sE6sa8e9ow2zDUlzEWjygSe1c7h0ZH7PtM,6510
+superpandas-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+superpandas-0.2.0.dist-info/licenses/LICENSE,sha256=3iSovDsad4Kn9PeOq6JSg3QPBJ2nWAvrX78eYpuOBms,1081
+superpandas-0.2.0.dist-info/RECORD,,
