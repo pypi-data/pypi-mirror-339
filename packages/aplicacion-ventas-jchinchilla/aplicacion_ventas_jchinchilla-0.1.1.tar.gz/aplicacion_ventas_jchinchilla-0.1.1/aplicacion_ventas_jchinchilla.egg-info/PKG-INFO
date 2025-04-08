@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: aplicacion_ventas_jchinchilla
+Version: 0.1.1
+Summary: Paquete para gestionar ventas , precios , impuestos y descuentos
+Home-page: https://github.com/curso_python_camara/gestor/aplicacionventas
+Author: Jorge Chinchilla Gómez
+Author-email: geochinchilla@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# Aplicación de ventas
+
+Este paquete proporciona funcionalidades para gestionar ventas , incluyendo cálculo de precios, impuestos y descuentos.
+
+## Instalación
+
+Puedes instalar el paquete usando:
+
+```bash 
+pip install .

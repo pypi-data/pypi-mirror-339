@@ -1,0 +1,15 @@
+LICENCE
+README.md
+setup.py
+aplicacion_ventas/__init__.py
+aplicacion_ventas/descuentos.py
+aplicacion_ventas/exceptions.py
+aplicacion_ventas/gestor_ventas.py
+aplicacion_ventas/impuestos.py
+aplicacion_ventas/precios.py
+aplicacion_ventas_jchinchilla.egg-info/PKG-INFO
+aplicacion_ventas_jchinchilla.egg-info/SOURCES.txt
+aplicacion_ventas_jchinchilla.egg-info/dependency_links.txt
+aplicacion_ventas_jchinchilla.egg-info/top_level.txt
+tests_/__init__.py
+tests_/test_aplicacion_ventas.py
