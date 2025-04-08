@@ -1,0 +1,30 @@
+site_name: material-site-with-notebooks
+site_description: mkdocs-jupyter test site
+
+nav:
+  - Home: index.md
+  - Main: remove_output.ipynb
+
+plugins:
+  - mkdocs-jupyter:
+      execute: true
+      remove_tag_config:
+        remove_all_outputs_tags:
+          - hide_output
+        remove_single_output_tags:
+          - remove_output
+
+markdown_extensions:
+  - codehilite:
+      guess_lang: false
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.arithmatex
+
+theme:
+  name: material
+  # custom_dir: overrides
+
+extra_css:
+  - extras/material.css
+  - extras/styles.css

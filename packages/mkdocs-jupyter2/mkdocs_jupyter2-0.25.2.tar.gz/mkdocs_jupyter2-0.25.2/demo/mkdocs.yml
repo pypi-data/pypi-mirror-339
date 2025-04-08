@@ -1,0 +1,61 @@
+site_name: mkdocs-jupyter demo
+site_description: mkdocs-jupyter demo website
+site_url: https://mkdocs-jupyter.danielfrg.com
+site_author: Daniel Rodriguez
+copyright: Copyright &copy; 2023 Daniel Rodrigue
+repo_url: https://github.com/danielfrg/mkdocs-jupyter
+edit_uri: ""
+site_dir: dist
+
+nav:
+  - Home: index.md
+  - Markdown Cheatsheet in .md file: demo-md.md
+  - Jupyter Notebook Markdown: demo-nb-md.ipynb
+  - Jupyter Notebook Cells: demo-nb.ipynb
+  - A .py file (jupytext): demo-script.py
+  - Demo - Ruby Notebook: ruby.ipynb
+  - Demo - Variational inference nb: variational-inference-nb.ipynb
+  - Demo - Variational inference script: variational-inference-script.py
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.tabbed
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - mkdocs-jupyter:
+      execute: false
+      include_requirejs: true
+      custom_mathjax_url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"
+extra:
+  analytics:
+    provider: google
+    property: G-3673QMK9C4
