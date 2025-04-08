@@ -1,0 +1,9 @@
+hugo_unifier/__init__.py,sha256=aOhbULQfgm2nYWM0n9sWO66TNd4zdz0qSJaUh21GczU,58
+hugo_unifier/helpers.py,sha256=L-EX5FdZlWKiBnaiFCAxYFIrYU7fAtNhfY0zjExWhG8,10657
+hugo_unifier/main.py,sha256=6-9qcAro7VuFE8o8lCr30Zshgq3Lljh13uyCDPStANs,1936
+hugo_unifier/rules.py,sha256=ylYtbMBf5yJKh8ClgtMqixk18d75wdRgnMJj4RTRU2s,584
+hugo_unifier/unify.py,sha256=0JOs_wjMhthIbmM33k0aJIB-NP_BDZD_yNTnZ5wca_s,1938
+hugo_unifier-0.1.1.dist-info/METADATA,sha256=UznvR-UnSZrV19h5m8LwQLIM3ctqD4DpNAgUVBxWYh0,2130
+hugo_unifier-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hugo_unifier-0.1.1.dist-info/entry_points.txt,sha256=LIDCep7Pt-7S9WTEV0T8SsAV4QL6CDIDqB5Bw9pGyBY,56
+hugo_unifier-0.1.1.dist-info/RECORD,,
