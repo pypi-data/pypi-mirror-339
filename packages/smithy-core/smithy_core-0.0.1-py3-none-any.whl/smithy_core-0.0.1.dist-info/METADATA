@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: smithy-core
+Version: 0.0.1
+Summary: Core components for implementing Smithy tooling in Python.
+License-File: NOTICE
+Requires-Python: >=3.12
