@@ -1,0 +1,17 @@
+# gamebyte.config.yaml - Example configuration file
+default_model: llama-maverick  # Using OpenRouter model alias
+
+execution_engine: asyncio
+logger:
+  type: file
+  level: info
+  truncate_tools: true
+
+mcp:
+  servers:
+    filesystem:
+      command: "npx"
+      args: ["-y", "@modelcontextprotocol/server-filesystem", "."]
+    fetch:
+      command: "uvx"
+      args: ["mcp-server-fetch"]
