@@ -1,0 +1,53 @@
+Metadata-Version: 2.4
+Name: acp-sdk
+Version: 1.0.0rc1
+Summary: Agent Communication Protocol SDK
+Requires-Python: <4.0,>=3.13
+Requires-Dist: opentelemetry-api>=1.31.1
+Requires-Dist: pydantic>=2.11.1
+Provides-Extra: client
+Requires-Dist: httpx-sse>=0.4.0; extra == 'client'
+Requires-Dist: httpx>=0.28.1; extra == 'client'
+Requires-Dist: opentelemetry-instrumentation-httpx>=0.52b1; extra == 'client'
+Provides-Extra: server
+Requires-Dist: fastapi[standard]>=0.115.8; extra == 'server'
+Requires-Dist: opentelemetry-exporter-otlp-proto-http>=1.31.1; extra == 'server'
+Requires-Dist: opentelemetry-instrumentation-fastapi>=0.52b1; extra == 'server'
+Requires-Dist: opentelemetry-sdk>=1.31.1; extra == 'server'
+Description-Content-Type: text/markdown
+
+# Agent Communication Protocol SDK for Python
+
+## Prerequisites
+
+✅ Python >= 3.13
+
+## Installation
+
+Install using pip:
+
+```shell
+pip install acp-sdk
+```
+
+## Example
+
+The SDK can be used to implement both clients and servers.
+
+### Server
+
+To run an example server use [FastAPI CLI](https://fastapi.tiangolo.com/fastapi-cli/) or other [deployment strategies](https://fastapi.tiangolo.com/deployment/):
+
+```shell
+fastapi dev examples/servers/echo.py
+```
+
+### Client
+
+To run an example client:
+
+```shell
+python examples/clients/simple.py
+```
+
+➡️ Explore more in our [examples library](/python/examples).
