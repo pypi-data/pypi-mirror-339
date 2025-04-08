@@ -1,0 +1,16 @@
+{
+   "X.X.X.X": {
+      "commands": [
+         "sysname Router-Huawei",
+         "interface GigabitEthernet0/0/1",
+         "ip address 192.168.10.1 255.255.255.0",
+         "description Conexion_LAN",
+         "quit",
+         "firewall zone trust",
+         "add interface GigabitEthernet0/0/1",
+         "quit",
+         "commit",
+         "save"
+      ]
+   }
+}

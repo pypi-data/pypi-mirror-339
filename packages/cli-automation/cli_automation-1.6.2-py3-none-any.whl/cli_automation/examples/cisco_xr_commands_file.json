@@ -1,0 +1,10 @@
+{
+   "X.X.X.X": {
+      "commands": [
+         "interface GigabitEthernet0/0/0/0",
+         "description Configurado desde Netmiko",
+         "ipv4 address 192.168.1.1 255.255.255.0",
+         "commit"
+      ]
+   }
+}
