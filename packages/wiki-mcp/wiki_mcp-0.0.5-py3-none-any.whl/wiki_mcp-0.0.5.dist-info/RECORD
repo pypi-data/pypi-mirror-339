@@ -1,0 +1,11 @@
+src/__init__.py,sha256=CljQtgdUzZh_fsRj9gtZFUDx65F9vU-KUheEmPwUPaY,82
+src/server.py,sha256=v5LbI3sZxrYmDxH4hed5WyT2iBDxkmhPs6eBqwbiN-0,6249
+src/model/request/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/model/request/wikipedia_search.py,sha256=pt-apzMFV2qYRxBq7EQMdHJBSgOCcn3308f_rGO1j7A,2072
+src/model/response/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/model/response/wikipedia_detail.py,sha256=LyvADYlIxp06VLmrSJtKAUGUxE0f8rOoH8CZj_Yoh0o,597
+src/model/response/wikipedia_search_result.py,sha256=_bCGmYwBhtimp21cwipdHtWb7ch0lRVUqsOP8wqwelM,650
+wiki_mcp-0.0.5.dist-info/METADATA,sha256=C9To55Xm2avP28W7NslKWW6rO2He5uM6AYpX8mcxsPI,2476
+wiki_mcp-0.0.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+wiki_mcp-0.0.5.dist-info/entry_points.txt,sha256=3NjlO4vimOXkQrLkoqLAWXOPYKyHqY4WMiVynfkMMjg,51
+wiki_mcp-0.0.5.dist-info/RECORD,,
