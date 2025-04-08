@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+smolbox/__init__.py
+smolbox.egg-info/PKG-INFO
+smolbox.egg-info/SOURCES.txt
+smolbox.egg-info/dependency_links.txt
+smolbox.egg-info/top_level.txt
