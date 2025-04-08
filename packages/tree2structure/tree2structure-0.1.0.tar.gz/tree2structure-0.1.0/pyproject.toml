@@ -1,0 +1,27 @@
+[project]
+name = "tree2structure"
+version = "0.1.0"
+description = "Convert tree-style folder structure into real files and folders with comments"
+homepage = "https://github.com/atvor/tree2structure.git"
+repository = "https://github.com/atvor/tree2structure.git"
+keywords = ["parser", "project scaffolding", "file generator"]
+authors = [
+    { name = "Anar Dzhafarov", email = "a@dzhfrv.com" }
+]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "tree2structure" }]
+requires-python = ">=3.8"
+dependencies = [
+    "pytest (>=8.3.5,<9.0.0)"
+]
+
+[tool.poetry]
+packages = [{ include = "tree2structure" }]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
