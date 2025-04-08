@@ -1,0 +1,2 @@
+[cldfbench.scaffold]
+glottography = pyglottography.scaffold:GlottographyTemplate
