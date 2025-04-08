@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: kuhl-haus-bedrock-api
+Version: 0.2.10
+Summary: OpenAI-compatible REST API using AWS Bedrock as a backend
+Author-Email: Tom Pounders <git@oldschool.engineer>
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Project-URL: Homepage, https://github.com/kuhl-haus
+Project-URL: Documentation, https://github.com/kuhl-haus/kuhl-haus-bedrock-api/wiki
+Project-URL: Source, https://github.com/kuhl-haus/kuhl-haus-bedrock-api.git
+Project-URL: Changelog, https://github.com/kuhl-haus/kuhl-haus-bedrock-api/commits
+Project-URL: Tracker, https://github.com/kuhl-haus/kuhl-haus-bedrock-api/issues
+Requires-Python: >=3.12
+Requires-Dist: kuhl-haus-bedrock-app
+Requires-Dist: kuhl-haus-metrics
+Requires-Dist: uvicorn
+Requires-Dist: fastapi
+Requires-Dist: mangum
+Requires-Dist: boto3
+Requires-Dist: botocore
+Requires-Dist: pydantic
+Requires-Dist: numpy
+Requires-Dist: requests
+Requires-Dist: tiktoken
+Requires-Dist: importlib-metadata
+Requires-Dist: wheel
+Provides-Extra: testing
+Requires-Dist: setuptools; extra == "testing"
+Requires-Dist: pdm-backend; extra == "testing"
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: pytest-cov; extra == "testing"
+Requires-Dist: pytest-asyncio; extra == "testing"
+Requires-Dist: httpx; extra == "testing"
+Requires-Dist: starlette; extra == "testing"
+Description-Content-Type: text/markdown
+
+<!-- These are examples of badges you might want to add to your README:
+   please update the URLs accordingly 
+
+[![ReadTheDocs](https://readthedocs.org/projects/kuhl-haus-bedrock-api/badge/?version=latest)](https://kuhl-haus-bedrock-api.readthedocs.io/en/stable/)
+[![Conda-Forge](https://img.shields.io/conda/vn/conda-forge/kuhl-haus-bedrock-api.svg)](https://anaconda.org/conda-forge/kuhl-haus-bedrock-api)
+-->
+
+
+[![License](https://img.shields.io/github/license/kuhl-haus/kuhl-haus-bedrock-api)](https://github.com/kuhl-haus/kuhl-haus-bedrock-api/blob/mainline/LICENSE.txt)
+[![PyPI](https://img.shields.io/pypi/v/kuhl-haus-bedrock-api.svg)](https://pypi.org/project/kuhl-haus-bedrock-api/)
+[![Downloads](https://static.pepy.tech/badge/kuhl-haus-bedrock-api/month)](https://pepy.tech/project/kuhl-haus-bedrock-api)
+[![Build Status](https://github.com/kuhl-haus/kuhl-haus-bedrock-api/actions/workflows/publish-to-pypi.yml/badge.svg)](https://github.com/kuhl-haus/kuhl-haus-bedrock-api/actions/workflows/publish-to-pypi.yml)
+[![CodeQL](https://github.com/kuhl-haus/kuhl-haus-bedrock-api/workflows/CodeQL/badge.svg)](https://github.com/kuhl-haus/kuhl-haus-bedrock-api/actions/workflows/github-code-scanning/codeql/)
+[![codecov](https://codecov.io/gh/kuhl-haus/kuhl-haus-bedrock-api/branch/mainline/graph/badge.svg)](https://codecov.io/gh/kuhl-haus/kuhl-haus-bedrock-api)
+[![GitHub issues](https://img.shields.io/github/issues/kuhl-haus/kuhl-haus-bedrock-api)](https://github.com/kuhl-haus/kuhl-haus-bedrock-api/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/kuhl-haus/kuhl-haus-bedrock-api)](https://github.com/kuhl-haus/kuhl-haus-bedrock-api/pulls)
+
+
+
+# kuhl-haus-bedrock-api
+
+OpenAI-compatible REST API using AWS Bedrock as a backend
+
+... more to come!
