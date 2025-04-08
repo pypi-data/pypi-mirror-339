@@ -1,0 +1,11 @@
+scematicsapp/__init__.py,sha256=j8OodIixtVAaaKh2CRA0fKi0KU0JAqfYfBP_YFlHxb8,181
+scematicsapp/cli.py,sha256=PGWb3GGZXUlgZFky0rUalo4qf04JLJoozgbGItdsCAY,61046
+scematicsapp/custom_upload.py,sha256=fM9NOJHsUzujyoOE6A2hi1M-RA6utYED6tjlA7pwkq0,40659
+scematicsapp/direct_upload.py,sha256=WAmJ8v1taZyFtc6ft_GTeRFGAUvGN3SEBu-vMIpciCs,40316
+scematicsapp/folder_uploads.py,sha256=JIrnfRMimzGnyJayZKHKl-Jbwe9d8TPg9D68erQkZWA,20533
+scematicsapp/tag_uploads.py,sha256=JmhkzH3v_9kclaiS-3PgY0Fk7MXUsw-uDMnlZMYKU4E,17249
+scematicsapp-0.1.0.dev1.dist-info/METADATA,sha256=pYi1tS1Tnb1rttfkvWUmj4C9nW0eg9VrmRfvSc6oB5Y,1588
+scematicsapp-0.1.0.dev1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+scematicsapp-0.1.0.dev1.dist-info/entry_points.txt,sha256=ML586AG5xdtbc_0C6z4ObsF9FyaBQqUw4gKSkWhGXes,55
+scematicsapp-0.1.0.dev1.dist-info/top_level.txt,sha256=4I6_BGa_BObBOUy_NBJ5lomRGX2auTW0aluLMMpRJn0,13
+scematicsapp-0.1.0.dev1.dist-info/RECORD,,
