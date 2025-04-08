@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/promptify/__init__.py
+src/promptify/cli.py
+src/promptify_cli.egg-info/PKG-INFO
+src/promptify_cli.egg-info/SOURCES.txt
+src/promptify_cli.egg-info/dependency_links.txt
+src/promptify_cli.egg-info/entry_points.txt
+src/promptify_cli.egg-info/requires.txt
+src/promptify_cli.egg-info/top_level.txt
