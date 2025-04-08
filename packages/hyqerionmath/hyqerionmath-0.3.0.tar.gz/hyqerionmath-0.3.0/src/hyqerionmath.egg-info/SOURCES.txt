@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/hyqerionmath/__init__.py
+src/hyqerionmath/primality.py
+src/hyqerionmath.egg-info/PKG-INFO
+src/hyqerionmath.egg-info/SOURCES.txt
+src/hyqerionmath.egg-info/dependency_links.txt
+src/hyqerionmath.egg-info/top_level.txt

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hyqerionmath"
+version = "0.3.0" # Match the version in __init__.py
+authors = [
+  { name="Hyqerion", email="hyqerion199@gmail.com" },
+]
+description = "A Python library with mathematical utility functions like isprime, get_nth_prime, and finding primes in ranges." # Updated description
+readme = "README.md"
+requires-python = ">=3.7"
+license = { file="LICENSE" } # Make sure you have a LICENSE file in your project root
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Development Status :: 3 - Alpha", # Keep as Alpha or Beta until more stable/tested
+]
+keywords = ["math", "prime", "primality", "primes", "nth prime", "hyqerion", "utilities", "number theory"] # Added more relevant keywords
+
+# Add dependencies here if needed in the future
+# dependencies = []
+
+# [project.urls]
+# "Homepage" = "https://github.com/Hyqerion/HyqerionMath" # Example URL - Replace with your actual URL
+# "Bug Tracker" = "https://github.com/Hyqerion/HyqerionMath/issues" # Example URL - Replace with your actual URL
