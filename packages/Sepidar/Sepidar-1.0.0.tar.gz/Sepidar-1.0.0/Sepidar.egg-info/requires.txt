@@ -1,0 +1,10 @@
+aiohttp>=3.8.1
+
+[dev]
+pytest
+black
+flake8
+
+[docs]
+mkdocs
+pdoc3
