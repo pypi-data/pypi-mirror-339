@@ -1,0 +1,11 @@
+histpy<2
+mhealpy
+scoords
+astromodels>=2.4.2
+threeml>=2.1.2
+matplotlib<=3.8.3
+numba
+astropy>5.0
+yayc
+awscli
+scipy<=1.13.0
