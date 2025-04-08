@@ -1,0 +1,13 @@
+h5ad_validate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+h5ad_validate/get_data.py,sha256=v7VYnNCTHLyngQt_a5KdBm6CSiJbUNvDwIErA0-vUg0,335
+h5ad_validate/validate.py,sha256=SWGCJekkZpAfOLWNAP4wtobOy0kirOZqOh5zmXPidGc,1797
+h5ad_validate/validator.py,sha256=MVd6OEP7M-2euAOk2ohTgHbfGXEEBOqgyb3RJsiaPTY,6112
+h5ad_validate/example/HTAN_h5ad_exemplar_2025_03_03.h5ad,sha256=drTECmv3u9WJhJzx78-BcKGFctKs6NBgx8bRyUpNfno,10619025
+h5ad_validate/reference/CL_codes_human.tsv,sha256=kXlT7Ts-FMOupk7ieY8_6ofXckWSvZiveTxjkhHyPs0,232144
+h5ad_validate/reference/README.md,sha256=_3Yz-8x_11tbOpItXUN0pEY7PqrfIVCBV1jDNOCPg6Y,410
+HTAN_h5ad_validate-0.1.7.dist-info/LICENSE,sha256=2nIcjUD0GtJUYRcYrlOHg7bv4709bjBxSYWfTQB3yMI,1093
+HTAN_h5ad_validate-0.1.7.dist-info/METADATA,sha256=azX7aAABH5z5Mc4bi3MrlVxqhqSZ9WXSB5BTA7EM_iY,8604
+HTAN_h5ad_validate-0.1.7.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+HTAN_h5ad_validate-0.1.7.dist-info/entry_points.txt,sha256=w_iOPRbl5QzhQtVYO4GHOnv1MdH-PzHD788YKVKOS_I,75
+HTAN_h5ad_validate-0.1.7.dist-info/top_level.txt,sha256=6EjDk85hDVtRM42uVqpnldidEvcslxTCKsYdsoNzLKw,14
+HTAN_h5ad_validate-0.1.7.dist-info/RECORD,,

@@ -1,0 +1,221 @@
+Metadata-Version: 2.1
+Name: HTAN-h5ad-validate
+Version: 0.1.7
+Summary: Validates AnnData h5ad files for adherence to HTAN sc/snRNA-seq requirements.
+License: MIT License
+        
+        Copyright (c) 2025 NCI Human Tumor Atlas Network (HTAN)
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Repository, https://github.com/ncihtan/h5ad
+Keywords: HTAN,HTAN sc/snRNA-seq,HTAN h5ad
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: anndata==0.10.8
+Requires-Dist: array-api-compat==1.11
+Requires-Dist: cellxgene-schema==5.2.3
+Requires-Dist: cellxgene-ontology-guide==1.2.0
+Requires-Dist: click==8.1.8
+Requires-Dist: contourpy==1.3.1
+Requires-Dist: cycler==0.12.1
+Requires-Dist: Cython==3.0.12
+Requires-Dist: fonttools==4.56.0
+Requires-Dist: h5py==3.13.0
+Requires-Dist: kiwisolver==1.4.8
+Requires-Dist: matplotlib==3.10.1
+Requires-Dist: natsort==8.4.0
+Requires-Dist: numpy==1.26.4
+Requires-Dist: packaging==24.2
+Requires-Dist: pandas==2.2.3
+Requires-Dist: pillow==11.1.0
+Requires-Dist: pyparsing==3.2.1
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: pytz==2025.1
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: scipy==1.14.1
+Requires-Dist: semantic-version==2.10.0
+Requires-Dist: semver==3.0.4
+Requires-Dist: six==1.17.0
+Requires-Dist: tzdata==2025.1
+Requires-Dist: xxhash==3.5.0
+Provides-Extra: dev
+Requires-Dist: pytest==8.3.5; extra == "dev"
+
+# HTAN h5ad Validator
+
+This is an (AnnData 0.10) h5ad validator for HTAN Phase 2 single cell/single nuclei RNA-sequencing data. It:
+1. Runs [cellxgene-schema validate](https://github.com/chanzuckerberg/single-cell-curation) to check if the h5ad file conforms to CELLxGENE's schema; and
+2. Runs additional scripts to validate HTAN-specific requirements.
+
+## Installation
+
+1. It is recommended that you create a virtual environment:
+
+```commandline
+python -m venv /path/to/new/virtual/environment
+```
+Then, activate the virtual environment:
+
+```commandline
+source /path/to/new/virtual/environment/bin/activate
+```
+
+2. Install the HTAN h5ad package using pip:
+
+```commandline
+pip install HTAN-h5ad-validate
+```
+
+3. To check your installation, run:
+
+```commandline
+HTAN-h5ad-validate example output_file.txt
+```
+You should see the following messages on your screen in green:
+
+```
+File:  example/HTAN_h5ad_exemplar_2025_03_03.h5ad
+Running cellxgene-schema
+Cellxgene run successful. Please check the output file to see if warnings exist.
+Running HTAN-specific validation
+Validation Passed!
+```
+You should also see a new file called "output_file.txt" with the following messages:
+
+```
+cellxgene-schema output: Starting validation...
+WARNING: Dataframe 'var' only has 12641 rows. Features SHOULD NOT be filtered from expression matrix.
+Validation complete in 0:00:03.421082 with status is_valid=True
+```
+
+Please note this is a test h5ad. Your h5ad should not have filtered features!
+
+## Use
+To validate an h5ad file, run the following from the command line:
+
+```commandline
+HTAN-h5ad-validate {path/to/your/h5ad} {output_filename}.txt
+```
+replacing {path/to/your/h5ad} and {output_filename} with appropriate text strings. (Please see Installation instructions for an example.)
+
+Information regarding whether the h5ad file passed or failed validation will be printed to the terminal window. Warnings and error messages will be printed to {output_filename}.txt.
+
+If the h5ad file fails validation, please resolve the errors noted and retry validation.
+
+## Information for Developers
+To further develop this code, please use Python >= 3.10.
+
+1. It is recommended that you create a virtual environment:
+
+```commandline
+python -m venv /path/to/new/virtual/environment
+```
+Then, activate the virtual environment:
+
+```commandline
+source /path/to/new/virtual/environment/bin/activate
+```
+
+2. Clone the github repository and move to its directory:
+
+```commandline
+git clone git@github.com:ncihtan/h5ad.git
+cd h5ad
+```
+
+3. Run pip install locally with optional developer dependencies:
+
+```commandline
+pip install -e ".[dev]"
+```
+
+4. To run the validator from the command line, run:
+
+- For successful validation:
+```commandline
+HTAN-h5ad-validate exemplars/HTAN_h5ad_exemplar_2025_03_03.h5ad output_file.txt
+```
+
+- For errors in both CELLxGENE validation and HTAN validations:
+```commandline
+HTAN-h5ad-validate exemplars/HTAN_h5ad_error_exemplar.h5ad output_file.txt
+```
+
+- For successful CELLxGENE, but HTAN validation errors, run:
+```commandline
+HTAN-h5ad-validate exemplars/HTAN_h5ad_exemplar_HTANonly_error.h5ad output_file.txt
+```
+
+5. To run the unit tests, run:
+
+```commandline
+pytest tests
+```
+Please see the README.md in the tests folder for information about the tests.
+
+### Validate.py
+
+Provided a valid h5ad file path and an output filename, Validate.py will: 
+1. Create a Validator object with:
+    - self.error_list: a list of errors from HTAN specific validations.
+    - self.pass_code: a two item list where 0 indicates pass and 1 indicates fail.
+        - [0,0] = pass both cellxgene-schema and HTAN-specific validation.
+        - [1,0] = fail cellxgene-schema, pass HTAN-specific validation.
+        - [0,1] = pass cellxgene-schema, fail HTAN-specific validation.
+        - [1,1] = fail both cellxgene-schema and HTAN-specific validation.
+    - Validation functions (see descriptions below):
+        - self.check_cell_x_gene(h5ad_path, output_file)
+        - self.check_donor_ids(adata.obs)
+        - self.check_sample_ids(adata.obs)
+        - self.check_cell_enrichment(adata.obs)
+        - self.check_intron_inclusion(adata.obs)
+2. Evaluate self.pass_code to produce a final message (Validation Passed or HTAN validation failure).
+3. Print all function warnings and errors to the provided output filename.
+
+### Specific Validation Functions (htan/validator.py)
+
+#### CELLxGENE Validation
+- self.check_cell_x_gene(h5ad_path, output_file)
+    - runs [cellxgene-schema](https://github.com/chanzuckerberg/single-cell-curation).
+    - writes warnings and error messages to output_file.
+    - writes cellxgene-schema pass or fail message to screen.
+    - if any errors, pass_code[0] is set to 1
+
+#### HTAN-specific Validation
+- self.check_donor_ids(adata.obs)
+    - checks for presence of obs.donor_id.
+    - checks all unique values in obs.donor_id match r"^(HTA20[0-9])(?:_0000)?(?:_\d+)?(?:_EXT\d+)?"
+    - if any errors, pass_code[1] is set to 1 and error strings added to error_list.
+ - self.check_sample_ids(adata.obs)
+    - checks for presence of obs.sample_id.
+    - checks all unique values in obs.sample_id match r"^(HTA20[0-9])(?:_0000)?(?:_\d+)?(?:_EXT\d+)?_(B|D)\d{1,50}$"
+    - if any errors, pass_code[1] is set to 1 and error strings added to error_list.
+- self.check_cell_enrichment(adata.obs)
+    - checks for presence of obs.cell_enrichment.
+    - checks that all unique values in obs.cell_enrichment match r"^CL:(00000000|[0-9]{7}[+-])$"
+    - strips + or - character from the cell_enrichment term to check if the CL term is valid.
+        - valid CL terms taken from file CL_codes_human.tsv (src/h5ad_validate/references)
+        - CL:00000000 (no enrichment) added to CL_codes_human.tsv before term checked.
+    - if any errors, pass_code[1] is set to 1 and error strings added to error_list.
+- self.check_intron_inclusion(adata.obs)
+    - checks for presence of obs.intron_inclusion.
+    - verifies all unique values in obs.intron_inclusion are in ['yes','no']
+    - if any errors, pass_code[1] is set to 1 and error strings added to error_list.

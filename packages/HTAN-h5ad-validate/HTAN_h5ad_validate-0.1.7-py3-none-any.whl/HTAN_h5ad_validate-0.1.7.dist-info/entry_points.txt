@@ -1,0 +1,2 @@
+[console_scripts]
+HTAN-h5ad-validate = h5ad_validate:validate.run_validate
