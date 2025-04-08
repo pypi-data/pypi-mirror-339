@@ -1,0 +1,2 @@
+[console_scripts]
+django-quickstart = django_project_setup.setup_django:main
