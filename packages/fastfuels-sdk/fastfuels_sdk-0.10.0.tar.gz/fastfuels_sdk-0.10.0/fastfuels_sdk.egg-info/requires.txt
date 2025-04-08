@@ -1,0 +1,7 @@
+geopandas
+numpy
+pandas
+pydantic>=2
+requests
+scipy
+zarr
