@@ -1,0 +1,17 @@
+[project]
+name = "hello_world_bluexiii"
+version = "0.2.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "flask>=3.1.0",
+    "requests>=2.32.3",
+]
+
+[project.scripts]
+hello_world_bluexiii = "main:main"
+
+[[tool.uv.index]]
+url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
+default = true
