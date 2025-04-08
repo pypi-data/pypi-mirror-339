@@ -1,0 +1,9 @@
+aiohttp<4,>=3.9.4
+cachetools<6,>=5.3
+fsspec>=2024.3.1
+aiowebdav>=0.1.0rc5
+
+[testing]
+pytest
+pytest-httpserver
+trustme
