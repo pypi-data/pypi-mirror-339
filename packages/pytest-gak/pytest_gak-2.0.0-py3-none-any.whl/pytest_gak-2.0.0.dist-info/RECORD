@@ -1,0 +1,9 @@
+gaktest/__init__.py,sha256=W522eBZ0ftsPnm0O5a-M-fbM4z-PEdpUHhL93Y3BNVg,1441
+gaktest/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_gak/__init__.py,sha256=IYoE_JI8zuBg8od-aB404fQJHB2MlrauO9jqi04OvXg,1105
+pytest_gak/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_gak-2.0.0.dist-info/METADATA,sha256=NDZcEKG2gppwxkbarJ9VkVjbho9bs5tRQ6pOvyvsIT0,4085
+pytest_gak-2.0.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+pytest_gak-2.0.0.dist-info/entry_points.txt,sha256=jbpYGBrNO9uoMGfoa9FR_s96qAEA4ql_RauTqrW7M5U,77
+pytest_gak-2.0.0.dist-info/top_level.txt,sha256=Wl_uJ_D-fGYRlaaMRToyNaC6OYQVhxJ0xWTjKkUF2zo,19
+pytest_gak-2.0.0.dist-info/RECORD,,

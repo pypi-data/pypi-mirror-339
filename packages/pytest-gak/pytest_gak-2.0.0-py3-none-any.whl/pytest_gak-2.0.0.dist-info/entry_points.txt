@@ -1,0 +1,5 @@
+[console_scripts]
+gaktest = gaktest:main
+
+[pytest11]
+pytest-gak = pytest_gak
