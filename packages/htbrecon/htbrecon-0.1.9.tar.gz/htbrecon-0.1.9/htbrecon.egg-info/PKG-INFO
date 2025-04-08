@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: htbrecon
+Version: 0.1.9
+Summary: Auto-recon CLI tool for HTB machines
+Author: l3str4nge
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: Console
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: InquirerPy
+Requires-Dist: colorama
+Requires-Dist: openai
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+test

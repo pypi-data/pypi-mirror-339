@@ -1,0 +1,2 @@
+[console_scripts]
+htbrecon = htbrecon.main:run
