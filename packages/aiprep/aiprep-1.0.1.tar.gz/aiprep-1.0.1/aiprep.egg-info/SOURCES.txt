@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+aiprep.egg-info/PKG-INFO
+aiprep.egg-info/SOURCES.txt
+aiprep.egg-info/dependency_links.txt
+aiprep.egg-info/entry_points.txt
+aiprep.egg-info/requires.txt
+aiprep.egg-info/top_level.txt
