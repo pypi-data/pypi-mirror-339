@@ -1,0 +1,2 @@
+[console_scripts]
+fnet_expression = fnet_expression.cli:main

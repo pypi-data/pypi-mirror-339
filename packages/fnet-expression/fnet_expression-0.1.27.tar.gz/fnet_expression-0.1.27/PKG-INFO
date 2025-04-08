@@ -1,0 +1,5 @@
+Metadata-Version: 2.2
+Name: fnet_expression
+Version: 0.1.27
+Requires-Python: >=3.12
+Dynamic: requires-python

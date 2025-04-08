@@ -1,0 +1,17 @@
+pyproject.toml
+setup.py
+./fnet_expression/__init__.py
+./fnet_expression/cli/__init__.py
+./fnet_expression/cli/index.py
+./fnet_expression/lib/__init__.py
+./fnet_expression/lib/index.py
+fnet_expression/__init__.py
+fnet_expression.egg-info/PKG-INFO
+fnet_expression.egg-info/SOURCES.txt
+fnet_expression.egg-info/dependency_links.txt
+fnet_expression.egg-info/entry_points.txt
+fnet_expression.egg-info/top_level.txt
+fnet_expression/cli/__init__.py
+fnet_expression/cli/index.py
+fnet_expression/lib/__init__.py
+fnet_expression/lib/index.py
