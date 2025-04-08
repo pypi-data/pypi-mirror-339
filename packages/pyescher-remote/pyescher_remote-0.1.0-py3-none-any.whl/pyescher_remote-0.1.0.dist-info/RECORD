@@ -1,0 +1,8 @@
+pyescher_remote/__init__.py,sha256=TpeBF2BY50TMxRBgH0fNOhOd7e5l2hzQvP8IQ203XPI,190
+pyescher_remote/communicator.py,sha256=hTRwrkbf3xKC4P0-kk17Q56OqV5stf85A9cv3QjbAzY,3580
+pyescher_remote/plotobject.py,sha256=A2cQo2N6Rz2rm1Zoyq4ubZei7fr8uv-Tjs_jF-LHfbU,5645
+pyescher_remote/remote_viewer.py,sha256=ZfxOOOGtRK_CigTWYo89_u-7ulBJAdWPK7JQ2pG4qL0,3018
+pyescher_remote-0.1.0.dist-info/METADATA,sha256=yLWM3L6qSUY5KGT3bm8JxxXcls96oZT0VCA7Q9_TSk8,669
+pyescher_remote-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pyescher_remote-0.1.0.dist-info/licenses/LICENSE,sha256=KUatPwBt_Sw1K62FCQ7jeRkVL6aWEqBGwAuTrpZWyjc,1070
+pyescher_remote-0.1.0.dist-info/RECORD,,
