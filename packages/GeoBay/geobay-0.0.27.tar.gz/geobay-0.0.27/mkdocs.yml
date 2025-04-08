@@ -1,0 +1,84 @@
+site_name: geobay
+site_description: A python package for geospatial analysis and mapping
+site_author: CaseyShea96
+site_url: https://caseyshea96.github.io/GeoBay/
+repo_url: https://github.com/Caseyshea96/GeoBay
+
+copyright: "Copyright &copy; 2024 - 2024 Casey Shea"
+
+theme:
+    palette:
+        - scheme: default
+          toggle:
+              icon: material/toggle-switch-off-outline
+              name: Switch to dark mode
+        - scheme: slate
+          primary: indigo
+          accent: indigo
+          toggle:
+              icon: material/toggle-switch
+              name: Switch to light mode
+    name: material
+    icon:
+        repo: fontawesome/brands/github
+    features:
+        - navigation.instant
+        - navigation.tracking
+        - navigation.top
+        - search.highlight
+        - search.share
+    custom_dir: "docs/overrides"
+    font:
+        text: Google Sans
+        code: Regular
+
+plugins:
+    - search
+    - mkdocstrings:
+        handlers:
+          python:
+            options:
+              members: true
+              show_signature: true
+    - git-revision-date
+    #- git-revision-date-localized:
+      #  enable_creation_date: true
+     #   type: timeago
+    - mkdocs-jupyter:
+        include_source: true
+        ignore_h1_titles: true
+        execute: true
+        allow_errors: false
+        ignore:
+          - conf.py
+        execute_ignore:
+          - "*ignore.ipynb"
+
+markdown_extensions:
+    - admonition
+    - abbr
+    - attr_list
+    - def_list
+    - footnotes
+    - meta
+    - md_in_html
+    - pymdownx.superfences
+    - pymdownx.highlight:
+        linenums: true
+    - toc:
+        permalink: true
+
+nav:
+    - Home: index.md
+    - Installation: installation.md
+    - Usage: usage.md
+    - Contributing: contributing.md
+    - FAQ: faq.md
+    - Changelog: changelog.md
+    - Report Issues: https://github.com/Caseyshea96/geobay/issues
+    - Examples:
+        - examples/intro.ipynb
+    - API Reference:
+        - geobay module: geobay.md
+        - Foliumap module: foliumap.md
+        - common module: common.md
