@@ -1,0 +1,17 @@
+c_two/__init__.py,sha256=MKTYjHWDy3q_cA6IRoeQCx1R3aEyhkkOAopNBfwHs_k,181
+c_two/compo/__init__.py,sha256=dv6HSoTkYcOVQ9GXzP3YVYdhhyLSW_Ly1HYMlP4MJLE,74
+c_two/compo/grpc_server.py,sha256=KcDrnT2ytZcXIf0GkdbIfUIWhCGXVe6UXh52nsxw3fA,1529
+c_two/compo/runtime_connect.py,sha256=pUaz11Er6iF7qfWfx2hxlcA0KmMfpz2QNXbfp1Xw3v0,5121
+c_two/crm/__init__.py,sha256=fnhAkbfwXOTvaUwLBwMOEUYyF_m7Ic5wQGkMZQ7RvNo,27
+c_two/crm/meta.py,sha256=e4GtlxUOJjpK_-6Tce7AaAEBYZdX6uZoQhV18FRAXO0,3457
+c_two/message/__init__.py,sha256=K8S0uQiee1p_dWViUzB7NV3CSh5Eq2pejF0btoVPFks,141
+c_two/message/client.py,sha256=lP4P-o7_Z3w6L2k4WaFx9hHgSofIuxJXXVNUCIFKhFQ,2700
+c_two/message/globals.py,sha256=O_AEG7m_B5lWKEmzu4U1ePKMpVaQ2uR9W4VEG9juEVg,217
+c_two/message/server.py,sha256=bWvZYJ84q0jw81zn4zWligy5bAESCPS-g3f_8666XQk,3209
+c_two/message/transferable.py,sha256=-X3mmAN1rehRa9V7PrxQH6Ug-QagZcZqMlEv5hmGM7A,12931
+c_two/message/util/__init__.py,sha256=kPHN95A0J51mfbHlS3Zbb90hpWpP5XGorap_bQdIrM8,24
+c_two/message/util/arrow.py,sha256=1Dm3tVdSJD1xnLQ5L3ZijhA2qKxGMQeFgH9FS24cwj0,847
+c_two-0.1.12.dist-info/LICENSE,sha256=Z3ztcWEfJfFAc1ewKPtCsBX90cCc27d5ezqszUPAnCQ,1074
+c_two-0.1.12.dist-info/METADATA,sha256=CRpdDaQia75KaXPPBy8_u_2InudfapaX0weQ0-RsAv4,1335
+c_two-0.1.12.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+c_two-0.1.12.dist-info/RECORD,,
