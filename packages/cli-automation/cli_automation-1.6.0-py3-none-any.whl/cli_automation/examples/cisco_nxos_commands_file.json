@@ -1,0 +1,11 @@
+{
+   "X.X.X.X": {
+      "commands": [
+         "interface Ethernet1/1",
+         "description Conectado a Servidor",
+         "switchport mode access",
+         "switchport access vlan 10",
+         "no shutdown"
+      ]
+   }
+}
