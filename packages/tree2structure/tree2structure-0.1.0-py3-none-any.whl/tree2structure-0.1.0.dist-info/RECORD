@@ -1,0 +1,6 @@
+tree2structure/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tree2structure/generator.py,sha256=ex8KpRgZDjeBFyTiav-jBepA_wW2BEa74nXZtpkt5vo,656
+tree2structure/parser.py,sha256=p5wylVKXZ5SVuYTLCn1cuyrb0K7_JZd41IW6P42G8GM,1787
+tree2structure-0.1.0.dist-info/METADATA,sha256=YokssIBGisb8PLnML7RbkYHllMETUUG9TvsqDCEx0Qs,1209
+tree2structure-0.1.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+tree2structure-0.1.0.dist-info/RECORD,,
