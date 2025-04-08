@@ -1,0 +1,15 @@
+django_enumerify2-0.5.2.dist-info/licenses/LICENCE,sha256=ZgaulpEQAiCVRa7liiGI4oWd2HWIUplu0N0iLlbd6rE,1518
+enumerify/__init__.py,sha256=VIZcNAWK3BVHDDv5KR_rFmke0Zuasnz_T6jDJXBmMAk,22
+enumerify/enum.py,sha256=9b82XF-JNwkRLk0TgVM7jpFcyJdRoO0XIlRpefAOmsM,4700
+enumerify/fields.py,sha256=MEYD_z2x7-ybteMBK6pDQwI7oALMQKBtHnihimaUCs0,1715
+testproject/__init__.py,sha256=VIZcNAWK3BVHDDv5KR_rFmke0Zuasnz_T6jDJXBmMAk,22
+testproject/runtests.py,sha256=N2UHpTPZLAybk5Uoj4s3PS-C3KU0rnG-jplla3hlA8o,811
+testproject/settings.py,sha256=MWq2Sgr7vbBFAsIldNHauTZ4i7_i0VikDn2jaSh1ovY,215
+testproject/testapp/__init__.py,sha256=VIZcNAWK3BVHDDv5KR_rFmke0Zuasnz_T6jDJXBmMAk,22
+testproject/testapp/enums.py,sha256=CMLDOUBTlRJD3xNJKY4qECwuswJGFeZtmcijZ3aDamo,215
+testproject/testapp/models.py,sha256=E2mhCwBUsbI1Tj1wJ61FsdDtNixA4OvQakMHnx3b5FM,600
+testproject/testapp/tests.py,sha256=YCz4OBjpfHBryIeMzbxxjphbD5d9fRHATn_IwmighUc,1295
+django_enumerify2-0.5.2.dist-info/METADATA,sha256=IXtoqFCYESyF1SPKbE9nP4n6nH29kZ34G367vkcY0sM,604
+django_enumerify2-0.5.2.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+django_enumerify2-0.5.2.dist-info/top_level.txt,sha256=eM-hu9bWKFxxYQdr0hJ0MOBMnNp8Y7BW5hYYGQAvXg8,22
+django_enumerify2-0.5.2.dist-info/RECORD,,

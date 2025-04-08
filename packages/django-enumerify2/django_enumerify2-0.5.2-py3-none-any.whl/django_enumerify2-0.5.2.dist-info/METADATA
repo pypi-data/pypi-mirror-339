@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: django-enumerify2
+Version: 0.5.2
+Summary: Simple Enums for Django when working with choices in model fields.
+Home-page: http://github.com/willandskill/django-enumerify2
+Author: Faisal Mahmud
+Author-email: faisal@willandskill.se
+License: BSD licence, see LICENCE.txt
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
+
+# Django Enumerify2
+
+## Installation ##
+
+```
+pip install django-enumerify2
+```
