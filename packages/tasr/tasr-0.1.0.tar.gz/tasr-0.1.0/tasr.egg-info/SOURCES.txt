@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+tasr/__init__.py
+tasr/cli.py
+tasr.egg-info/PKG-INFO
+tasr.egg-info/SOURCES.txt
+tasr.egg-info/dependency_links.txt
+tasr.egg-info/entry_points.txt
+tasr.egg-info/requires.txt
+tasr.egg-info/top_level.txt
