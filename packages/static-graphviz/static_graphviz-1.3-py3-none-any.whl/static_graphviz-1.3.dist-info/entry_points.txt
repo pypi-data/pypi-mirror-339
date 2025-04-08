@@ -1,0 +1,3 @@
+[console_scripts]
+dot = static_graphviz.run:main_static_dot
+static-dot = static_graphviz.run:main_static_dot
