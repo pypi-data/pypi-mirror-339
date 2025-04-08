@@ -1,0 +1,12 @@
+fild_api_hub-0.0.8.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+fildapi/__init__.py,sha256=L9CtiC2lk7fVnzAk5dpT7NsA9EqL_xccpNVIcitZZsY,128
+fildapi/caller.py,sha256=hqgYdgd1Lo-XiYo6xmLINXOZ1iWKtiup1UdApJ8Aryg,2695
+fildapi/method.py,sha256=ySEmKddwTFHdmMeSiDXS98ltBGbLNvFZ2KejGKHO9pI,5689
+fildapi/schema.py,sha256=MCpB77vaBvCR0ZvpA9MIsDRI3-Ziga6d6JPEbOBtecw,2105
+fildapi/mock/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fildapi/mock/data.py,sha256=EHkMf2bkkD4vQu92xEAaieKXyrbxfLKJ3W5BIgenyJM,2392
+fildapi/mock/service.py,sha256=T6XNn4sJitW4s5iTUfDtLqPnCq_xaaiT_6I2I1CU3tY,5681
+fild_api_hub-0.0.8.dist-info/METADATA,sha256=1i-vNoImoFY-E3sUa4fs4ecrNQDPpz0otcVWzqy1Sa0,2692
+fild_api_hub-0.0.8.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+fild_api_hub-0.0.8.dist-info/top_level.txt,sha256=tuq2JnPR5mUUtIK6yG0ema4eSGF1y6IE4m3Aqj8Rwyc,8
+fild_api_hub-0.0.8.dist-info/RECORD,,
