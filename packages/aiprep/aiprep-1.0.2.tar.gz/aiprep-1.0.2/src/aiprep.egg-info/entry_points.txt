@@ -1,0 +1,2 @@
+[console_scripts]
+aiprep = aiprep.__main__:main

@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/aiprep/__init__.py
+src/aiprep/__main__.py
+src/aiprep/cli.py
+src/aiprep/core.py
+src/aiprep.egg-info/PKG-INFO
+src/aiprep.egg-info/SOURCES.txt
+src/aiprep.egg-info/dependency_links.txt
+src/aiprep.egg-info/entry_points.txt
+src/aiprep.egg-info/requires.txt
+src/aiprep.egg-info/top_level.txt
