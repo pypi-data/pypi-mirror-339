@@ -1,0 +1,14 @@
+README.md
+setup.py
+scematics-cli/__init__.py
+scematics-cli/cli.py
+scematics-cli/custom_upload.py
+scematics-cli/direct_upload.py
+scematics-cli/folder_uploads.py
+scematics-cli/tag_uploads.py
+scematics_cli.egg-info/PKG-INFO
+scematics_cli.egg-info/SOURCES.txt
+scematics_cli.egg-info/dependency_links.txt
+scematics_cli.egg-info/entry_points.txt
+scematics_cli.egg-info/requires.txt
+scematics_cli.egg-info/top_level.txt
