@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AsyncBoto"
+version = "1.1.15"
+description = "Python package to asyncronous interact with AWS"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Christopher Müller", email = "christopher.m4120@gmail.com" },
+]
+dependencies = [
+    "pydantic>=2.0.0, <3.0.0",
+    "aiohttp>=3.8.5, <4.0.0",
+    "tenacity",
+    "boto3"
+]
+
+[project.urls]
+Homepage = "https://github.com/SpielerNogard/AsyncBoto"
+Documentation="https://spielernogard.github.io/AsyncBoto/"
+
+
+[tool.setuptools.packages.find]
+exclude = ["*.tests", "*.tests.*", "tests.*", "tests"]
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+target-version = "py311"
+builtins = ["id"]
+
+[tool.ruff.lint]
+# for more rules: https://docs.astral.sh/ruff/rules/
+select = [
+    "A", # prevent using keywords that clobber python builtins
+    "E", # pycodestyle
+    "F", # pyflakes
+    "UP", # alert you when better syntax is available in your python version
+    "I", # isort
+    "N", # PEP8 naming
+    "W"   # Warnings
+]
+fixable = ["ALL"]
+
+[tool.ruff.lint.pep8-naming]
+# Allow Pydantic's `@validator` decorator to trigger class method treatment.
+classmethod-decorators = ["classmethod", "pydantic.validator", "pydantic.root_validator"]
+
+[tool.ruff.lint.flake8-builtins]
+builtins-ignorelist = ["id"]
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+# Like Black, respect magic trailing commas.
+skip-magic-trailing-comma = false
+# Like Black, automatically detect the appropriate line ending.
+line-ending = "auto"
+# Enable reformatting of code snippets in docstrings.
+docstring-code-format = true
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver"
+version_provider = "pep621"
+update_changelog_on_bump = true
+bump_message = "bump: $current_version → $new_version [skip-ci]"
+version_files = [
+    "async_boto/__init__.py",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
