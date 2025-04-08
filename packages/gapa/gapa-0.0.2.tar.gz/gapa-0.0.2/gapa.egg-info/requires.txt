@@ -1,0 +1,22 @@
+numpy>=1.26.3
+pandas>=2.2.1
+matplotlib>=3.8.4
+scipy>=1.10.1
+networkx>=3.2.1
+igraph>=0.11.5
+tqdm>=4.48.2
+yacs>=0.1.8
+
+[cpu]
+
+[cpu:sys_platform == "darwin" or extra == "cpu"]
+torch>=2.3.0
+dgl>=2.2.1
+deeprobust>=0.2.10
+
+[cuda118]
+
+[cuda118:sys_platform == "darwin" and extra == "cuda"]
+torch>=2.3.0
+dgl-cu111>=0.6.1
+deeprobust>=0.2.10
