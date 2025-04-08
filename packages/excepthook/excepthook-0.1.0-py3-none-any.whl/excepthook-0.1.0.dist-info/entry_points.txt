@@ -1,0 +1,2 @@
+[console_scripts]
+install_hook = install:write_sitecustomize
