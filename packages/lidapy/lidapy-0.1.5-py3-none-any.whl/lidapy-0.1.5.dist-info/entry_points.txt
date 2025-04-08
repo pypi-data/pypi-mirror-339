@@ -1,0 +1,2 @@
+[console_scripts]
+LIDAPY-cli = LIDAPY.cli:main
