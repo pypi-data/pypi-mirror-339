@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+WADSeg/__init__.py
+WADSeg/wadseg.py
+wadseg.egg-info/PKG-INFO
+wadseg.egg-info/SOURCES.txt
+wadseg.egg-info/dependency_links.txt
+wadseg.egg-info/requires.txt
+wadseg.egg-info/top_level.txt
