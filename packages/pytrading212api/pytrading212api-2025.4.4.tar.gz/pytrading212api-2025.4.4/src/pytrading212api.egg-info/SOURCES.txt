@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/pytrading212api/__init__.py
+src/pytrading212api/api.py
+src/pytrading212api/exceptions.py
+src/pytrading212api/order.py
+src/pytrading212api/pie.py
+src/pytrading212api/position.py
+src/pytrading212api.egg-info/PKG-INFO
+src/pytrading212api.egg-info/SOURCES.txt
+src/pytrading212api.egg-info/dependency_links.txt
+src/pytrading212api.egg-info/requires.txt
+src/pytrading212api.egg-info/top_level.txt

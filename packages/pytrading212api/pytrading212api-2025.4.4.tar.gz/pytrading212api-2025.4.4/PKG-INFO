@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pytrading212api
+Version: 2025.4.4
+Summary: Trading 212 api wrapper
+Home-page: https://github.com/ryanbdclark/pytrading212api
+Author: Ryan Clark
+Keywords: trading,212,api,trading212
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+
+# pytrading212api
+Python API for trading212
