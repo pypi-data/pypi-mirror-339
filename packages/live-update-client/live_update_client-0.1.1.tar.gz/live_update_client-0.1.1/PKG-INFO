@@ -1,0 +1,134 @@
+Metadata-Version: 2.1
+Name: live-update-client
+Version: 0.1.1
+Summary: An asynchronous client for the Live Update Server API.
+Author: Sarper AVCI
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Framework :: AsyncIO
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: httpx>=0.20.0
+
+# Live Update Server Client
+
+[![PyPI version](https://badge.fury.io/py/live-update-client.svg)](https://badge.fury.io/py/live-update-client)
+
+An asynchronous Python client library for interacting with the Live Update Server API.
+
+This client allows your Python applications (e.g., tool wrappers) to easily send log messages and structured results to the server, and enables other applications (like a dashboard backend or monitoring tools) to poll for updates.
+
+## Features
+
+*   Asynchronous interface using `httpx`.
+*   Send updates (logs, results, status) associated with a `scan_uuid` and `tool_name`.
+*   Fetch updates for a specific `scan_uuid`, with options to poll for new updates since a specific ID or timestamp.
+*   Optional filtering of fetched updates by `tool_name`.
+*   Simple error handling.
+
+## Requirements
+
+*   Python 3.7+
+*   A running instance of the [Live Update Server](https://github.com/yourusername/live-update-server) that this client can connect to.
+
+## Installation
+
+Install the package directly from PyPI:
+
+```bash
+pip install live-update-client
+```
+
+## Usage
+
+Here's a basic example demonstrating how to send and fetch updates:
+
+```python
+import asyncio
+import datetime
+from live_update_client import UpdateServerClient, UpdateServerClientError
+
+# Replace with the actual URL of your running Live Update Server
+SERVER_URL = "http://localhost:5000"
+TEST_SCAN_ID = "scan-abc-789"
+TOOL_NAME = "example-scanner"
+
+async def run_example():
+    client = UpdateServerClient(base_url=SERVER_URL)
+    last_id = None
+
+    try:
+        # --- Sending Updates ---
+        print(f"Sending status update for {TEST_SCAN_ID}/{TOOL_NAME}...")
+        status_update_id = await client.send_update(
+            scan_uuid=TEST_SCAN_ID,
+            tool_name=TOOL_NAME,
+            log_type="status",
+            content="Scanner initialized."
+        )
+        print(f"-> Sent update with ID: {status_update_id}")
+        last_id = status_update_id # Keep track for polling
+
+        print(f"\nSending a log line for {TEST_SCAN_ID}/{TOOL_NAME}...")
+        log_update_id = await client.send_update(
+            scan_uuid=TEST_SCAN_ID,
+            tool_name=TOOL_NAME,
+            log_type="stdout",
+            content="[INFO] Target scanned: example.com"
+        )
+        print(f"-> Sent update with ID: {log_update_id}")
+        last_id = log_update_id
+
+        print(f"\nSending a result for {TEST_SCAN_ID}/{TOOL_NAME}...")
+        result_update_id = await client.send_update(
+            scan_uuid=TEST_SCAN_ID,
+            tool_name=TOOL_NAME,
+            log_type="result",
+            content={"vulnerability": "XSS", "severity": "Medium", "path": "/search"}
+        )
+        print(f"-> Sent update with ID: {result_update_id}")
+        last_id = result_update_id
+
+        # --- Fetching Updates ---
+        print(f"\nFetching all updates for {TEST_SCAN_ID}:")
+        all_updates = await client.get_updates(scan_uuid=TEST_SCAN_ID)
+        print(f"-> Received {len(all_updates)} total updates.")
+        for update in all_updates:
+             print(f"  - ID={update['id']}, Tool={update['tool_name']}, Type={update['log_type']}, Time={update['timestamp']}")
+             # In a real polling scenario, you'd update last_id here
+             # last_id = update['id']
+
+
+        print(f"\nFetching only new updates for {TEST_SCAN_ID} (since ID {last_id}):")
+        # Pass the ID of the last update you processed
+        new_updates = await client.get_updates(scan_uuid=TEST_SCAN_ID, since_id=last_id)
+        if new_updates:
+            print(f"-> Received {len(new_updates)} new updates:")
+            for update in new_updates:
+                 print(f"  - ID={update['id']}, Tool={update['tool_name']}, Type={update['log_type']}, Time={update['timestamp']}")
+                 last_id = update['id'] # Update last_id for next poll
+        else:
+            print("-> No new updates found.")
+
+    except UpdateServerClientError as e:
+        print(f"\nCLIENT ERROR: {e}")
+    except Exception as e:
+        print(f"\nUNEXPECTED ERROR: {e}")
+    finally:
+        # Close the client connection when done
+        print("\nClosing client...")
+        await client.close()
+        print("Client closed.")
+
+if __name__ == "__main__":
+    asyncio.run(run_example())
+
+```

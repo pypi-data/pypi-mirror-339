@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+update_client.py
+live_update_client.egg-info/PKG-INFO
+live_update_client.egg-info/SOURCES.txt
+live_update_client.egg-info/dependency_links.txt
+live_update_client.egg-info/requires.txt
+live_update_client.egg-info/top_level.txt
