@@ -1,0 +1,31 @@
+{
+  "name": "gpt-researcher-mcp",
+  "version": "0.1.3",
+  "description": "A MCP server project",
+  "main": "index.js",
+  "bin": {
+    "gpt-researcher-mcp": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "mcp",
+    "server",
+    "gpt-researcher"
+  ],
+  "author": "Mark Chiang",
+  "license": "MIT",
+  "dependencies": {
+    "cross-spawn": "^7.0.3",
+    "gpt-researcher-mcp": "^0.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markchiang/gpt-researcher-mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/markchiang/gpt-researcher-mcp/issues"
+  },
+  "homepage": "https://github.com/markchiang/gpt-researcher-mcp"
+}
