@@ -1,0 +1,10 @@
+kge/__init__.py,sha256=RsRK5EBOSSzaiga84QLY2qFyf5aP9g_crcfD5AOuUZ4,84
+kge/kubernetes.py,sha256=WezjNSejTc0Efu5s0HrBkq0f-jXKsOTHbbuEpXxy7Z0,2539
+kge/cli/__init__.py,sha256=_v8OofWBAZ_RxMy9to6yoBbgO6hdI51g7AQxW-S_qXY,51
+kge/cli/main.py,sha256=2OnmlOlatFjyynmduEtPattJEvKXk5Ct7YXmm2XMtvk,3109
+kge_kubectl_get_events-0.1.0.dist-info/licenses/LICENSE,sha256=dBRZqQgLbfjJ8uXmjIZvL6UcuGl-vUMBmZl7gCMYoqU,1070
+kge_kubectl_get_events-0.1.0.dist-info/METADATA,sha256=xTpDmzcnnIGeGmqzc_dU5qY50FO8jfbIkVLJFatLXr4,1743
+kge_kubectl_get_events-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+kge_kubectl_get_events-0.1.0.dist-info/entry_points.txt,sha256=S59olk_LOWNmkLHFSYpr32E14eZWknzdpvo1Rz5ahq4,37
+kge_kubectl_get_events-0.1.0.dist-info/top_level.txt,sha256=Tp6cC4x6RvOcxrlkzW6ULxdrB4lJmIDU-vv5_ye8-x8,4
+kge_kubectl_get_events-0.1.0.dist-info/RECORD,,
