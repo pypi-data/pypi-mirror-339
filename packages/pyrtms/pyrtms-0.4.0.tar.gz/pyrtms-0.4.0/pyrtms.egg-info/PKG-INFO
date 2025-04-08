@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: pyrtms
+Version: 0.4.0
+Summary: A partial python import of the R package rtms https://cran.r-project.org/web/packages/rtms/index.html
+Author-email: Weimin Liu <wliu@marum.de>
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: shiny
+Requires-Dist: pyopenms
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: tqdm
+
+# pyrtms

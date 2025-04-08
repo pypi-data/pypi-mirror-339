@@ -1,0 +1,2 @@
+[console_scripts]
+rtms = pyrtms.__main__:main

@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+pyrtms/__init__.py
+pyrtms/__main__.py
+pyrtms/rtmsBrukerMCFReader.py
+pyrtms/utils.py
+pyrtms.egg-info/PKG-INFO
+pyrtms.egg-info/SOURCES.txt
+pyrtms.egg-info/dependency_links.txt
+pyrtms.egg-info/entry_points.txt
+pyrtms.egg-info/requires.txt
+pyrtms.egg-info/top_level.txt
