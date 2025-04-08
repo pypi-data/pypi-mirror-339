@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: MATLAB2PYTHONLIB
+Version: 0.2.1
+Summary: Esta librería contiene funciones que permiten la conversión de fechas de formato MATLAB (datenum) al formato datetime de python. También contiene funciones para crear array de tiempo o convertir fácilmente fechas de formato datetime a datestr
+Home-page: https://github.com/Fernandojbf123/MATLAB2PYTHONLIB
+Author: BelloDev
+Author-email: BelloDev <fernandojbf123@gmail.com>
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+
+# Descripción de la librería
+
+# MATLAB2PYTHONLIB
+
+Esta es una librería de Python con funciones útiles.
+
+## Instalación
+
+```bash
+pip install mi_libreria
