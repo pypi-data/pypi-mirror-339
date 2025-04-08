@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+dumpdork/__init__.py
+dumpdork/main.py
+dumpdork.egg-info/PKG-INFO
+dumpdork.egg-info/SOURCES.txt
+dumpdork.egg-info/dependency_links.txt
+dumpdork.egg-info/entry_points.txt
+dumpdork.egg-info/requires.txt
+dumpdork.egg-info/top_level.txt
