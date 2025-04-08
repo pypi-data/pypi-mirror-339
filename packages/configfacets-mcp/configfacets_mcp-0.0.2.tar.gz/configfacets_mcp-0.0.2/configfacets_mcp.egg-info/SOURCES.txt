@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+configfacets/__init__.py
+configfacets/main.py
+configfacets/server.py
+configfacets_mcp.egg-info/PKG-INFO
+configfacets_mcp.egg-info/SOURCES.txt
+configfacets_mcp.egg-info/dependency_links.txt
+configfacets_mcp.egg-info/requires.txt
+configfacets_mcp.egg-info/top_level.txt
