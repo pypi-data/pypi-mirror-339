@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: dimclient-cli
+Version: 5.0.4.post1
+Summary: DNS and IP management Python CLI client
+Maintainer: zerimond
+Project-URL: Homepage, https://github.com/ionos-cloud/dim
+Project-URL: Issues, https://github.com/ionos-cloud/dim/issues
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: dimclient
+Requires-Dist: python-dateutil>=1.4.1
+Requires-Dist: dnspython!=2.2.0,>=1.12.0
+Provides-Extra: docs
+Requires-Dist: Sphinx~=4.4; extra == "docs"
+Requires-Dist: hypothesis~=5.6.0; extra == "docs"
+
+# ndcli
+
+`ndcli` is a Python CLI client to talk to DIM.
+
+## usage
+
+To use `ndcli`, install it in your Python environment.
+
+There are two options to do that:
+
+1. **Distribution packages**: Download and install a distribution-packaged package. There are packages for Linux distributions available at [openSUSE Build Service - home:zeromind:dim/ndcli](https://build.opensuse.org/package/show/home:zeromind:dim/ndcli) (provides bash completion and man page).
+2. **Python PIP**: [PyPI dimclient-cli](https://pypi.org/project/dimclient/) (does not provide bash completion or man page)
+
+    ```sh
+    pip install dimclient-cli
+    ```

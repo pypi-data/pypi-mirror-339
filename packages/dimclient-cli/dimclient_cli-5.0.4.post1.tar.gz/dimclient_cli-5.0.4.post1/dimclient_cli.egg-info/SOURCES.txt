@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+dimcli/__init__.py
+dimcli/cliparse.py
+dimcli/version.py
+dimcli/zonedelete.py
+dimcli/zoneimport.py
+dimclient_cli.egg-info/PKG-INFO
+dimclient_cli.egg-info/SOURCES.txt
+dimclient_cli.egg-info/dependency_links.txt
+dimclient_cli.egg-info/entry_points.txt
+dimclient_cli.egg-info/requires.txt
+dimclient_cli.egg-info/top_level.txt
