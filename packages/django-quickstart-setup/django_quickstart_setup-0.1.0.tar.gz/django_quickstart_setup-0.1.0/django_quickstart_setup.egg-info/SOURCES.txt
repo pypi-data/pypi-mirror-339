@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+django_project_setup/__init__.py
+django_project_setup/setup_django.py
+django_quickstart_setup.egg-info/PKG-INFO
+django_quickstart_setup.egg-info/SOURCES.txt
+django_quickstart_setup.egg-info/dependency_links.txt
+django_quickstart_setup.egg-info/entry_points.txt
+django_quickstart_setup.egg-info/requires.txt
+django_quickstart_setup.egg-info/top_level.txt
