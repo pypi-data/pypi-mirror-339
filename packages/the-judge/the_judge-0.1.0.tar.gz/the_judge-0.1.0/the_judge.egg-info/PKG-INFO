@@ -1,0 +1,196 @@
+Metadata-Version: 2.4
+Name: the-judge
+Version: 0.1.0
+Summary: A library for evaluating LLM responses using various metrics
+Home-page: https://github.com/luisbeqja/the-judge
+Author: Luis
+Author-email: luisbeqjamw@gmail.com
+Project-URL: Docs, https://docs.example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# The Judge
+
+A Python library for evaluating LLM (Large Language Model) responses using various metrics and criteria.
+
+## Overview
+
+The Judge is a flexible evaluation framework that helps assess the quality of LLM responses based on multiple dimensions. It provides both heuristic-based and LLM-powered evaluation capabilities, making it suitable for various use cases from simple response validation to sophisticated AI-assisted evaluation.
+
+## Features
+
+- **Multiple Evaluation Metrics**: Evaluates responses based on:
+  - Correctness
+  - Relevance
+  - Coherence
+  - Factual Consistency
+  - Completeness
+  - Conciseness
+  - Custom metrics (extensible)
+
+- **Two Evaluation Modes**:
+  - **Basic Judge**: Uses heuristic-based evaluation
+  - **LLM Judge**: Uses an LLM to perform more sophisticated evaluations
+
+- **Detailed Feedback**:
+  - Chain of thought reasoning
+  - Specific feedback points
+  - Overall correctness assessment
+  - Metric-specific scores
+
+- **Extensible Architecture**:
+  - Custom metrics support
+  - Custom evaluation functions
+  - Integration with any LLM API
+
+## Installation
+
+```bash
+pip install the-judge
+```
+
+## Usage
+
+### Basic Usage
+
+```python
+from the_judge import Judge
+
+# Create a judge instance
+judge = Judge(
+    prompt="What is the capital of France?",
+    response="Paris is the capital of France."
+)
+
+# Evaluate the response
+results = judge.evaluate()
+print(results)
+```
+
+### Using LLM-based Evaluation
+
+```python
+from the_judge import LLMJudge, LLMClient
+
+# Create an LLM client (implement according to your LLM API)
+llm_client = LLMClient(api_key="your_api_key")
+
+# Create an LLM judge
+llm_judge = LLMJudge(
+    prompt="What is the capital of France?",
+    response="Paris is the capital of France.",
+    llm_client=llm_client
+)
+
+# Evaluate the response
+results = llm_judge.evaluate()
+print(results)
+```
+
+### Custom Metrics
+
+```python
+from the_judge import Judge
+
+# Define custom metrics
+custom_metrics = {
+    "Technical Accuracy": "How technically accurate is the response?",
+    "User Friendliness": "How user-friendly is the explanation?"
+}
+
+# Create a judge with custom metrics
+judge = Judge(
+    prompt="Explain how a neural network works",
+    response="A neural network is...",
+    custom_metrics=custom_metrics
+)
+
+# Evaluate the response
+results = judge.evaluate()
+print(results)
+```
+
+## Evaluation Results
+
+The evaluation returns a dictionary containing:
+
+```python
+{
+    "is_correct": bool,  # Overall correctness
+    "evaluation_metrics": {
+        "metric_name": float  # Score between 0 and 1
+    },
+    "chain_of_thought": list,  # Reasoning steps
+    "feedback": str  # Human-readable feedback
+}
+```
+
+## Future Work: automatic response improvement
+
+The Judge can be used to automatically improve responses.
+
+```json
+
+{
+  "new_response": "I'm sorry, but you don't have permission to access your transactions, you can try to contact support, or try to access your transactions via the account settings. you want me to guide you through the process?",
+  "prompt": "Can I have a list of all my transactions?",
+  "llm_response": "I'm sorry, but you don't have permission to access your transactions",
+  "evaluation": {
+    "score": 0.3,
+    "metric": {
+      "Correctness": 0.3,
+      "Relevance": 0.4,
+      "Coherence": 0.1,
+      "Factual Consistency": 0.2,
+      "Completeness": 0.3,
+      "Conciseness": 0.1
+    },
+    "chain_of_thought": "The user is asking for a list of all their transactions, but the response doesn't provide any information about how to access or view their transactions. The response is incorrect because the user doesn't have permission to access their transactions. The response is not relevant because it doesn't answer the user's question. The response is not coherent because it doesn't follow a logical structure. The response is not factually consistent because it doesn't provide any information about how to access or view their transactions. The response is not complete because it doesn't provide any information about how to access or view their transactions. The response is not concise because it is too long.",
+    "feedback": "the response is not enough information, the llm cant access the transactions, but it can guide the user through the process."
+  }
+}
+
+```
+
+
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Project Structure
+
+the_judge/
+├── __init__.py              # Main package initialization
+├── core/
+│   ├── __init__.py         # Core package initialization
+│   └── judge.py            # Base Judge class
+├── llm/
+│   ├── __init__.py         # LLM package initialization
+│   ├── client.py           # LLM client interface
+│   └── llm_judge.py        # LLM-based judge implementation
+├── setup.py                # Package installation configuration
+└── README.md               # Documentation
+
+The code is now organized into logical components:
+- core/judge.py: Contains the base Judge class with core evaluation functionality
+- llm/llm_judge.py: Contains the LLMJudge class that extends the base Judge with LLM capabilities
+- llm/client.py: Contains the LLMClient interface for interacting with LLM APIs
+- __init__.py files: Make the package properly importable and expose the main classes
+- setup.py: Makes the package installable via pip
+
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
