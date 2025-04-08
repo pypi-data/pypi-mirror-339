@@ -1,0 +1,5 @@
+agentmake
+mesop
+
+[genai]
+google-genai>=1.1.0

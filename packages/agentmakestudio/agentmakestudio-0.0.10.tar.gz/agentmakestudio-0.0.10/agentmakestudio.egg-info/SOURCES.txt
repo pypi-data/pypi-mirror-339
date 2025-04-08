@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+agentmakestudio/README.md
+agentmakestudio/main.py
+agentmakestudio/requirements.txt
+agentmakestudio/version.txt
+agentmakestudio.egg-info/PKG-INFO
+agentmakestudio.egg-info/SOURCES.txt
+agentmakestudio.egg-info/dependency_links.txt
+agentmakestudio.egg-info/entry_points.txt
+agentmakestudio.egg-info/requires.txt
+agentmakestudio.egg-info/top_level.txt
