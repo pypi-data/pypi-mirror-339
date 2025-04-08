@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+ypy_sqlite/__init__.py
+ypy_sqlite/persistence.py
+ypy_sqlite/sqlite_adapter.py
+ypy_sqlite/utils.py
+ypy_sqlite.egg-info/PKG-INFO
+ypy_sqlite.egg-info/SOURCES.txt
+ypy_sqlite.egg-info/dependency_links.txt
+ypy_sqlite.egg-info/requires.txt
+ypy_sqlite.egg-info/top_level.txt
+ypy_sqlite/tests/__init__.py
+ypy_sqlite/tests/test_persistence.py
