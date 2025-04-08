@@ -1,0 +1,13 @@
+logseq_mcp/__init__.py,sha256=1K0pAX3PjSlZP0Iz4b1WoScWC588Ovqp-7YE6zT5KKw,535
+logseq_mcp/mcp.py,sha256=1uRlKaM1-CnHIf0bA3rJ5azwpSVKT2G6pN4IcNSXVYY,134
+logseq_mcp/client/__init__.py,sha256=BcI_gD6Z3QD87e67vb7H-JLLTTW8pJkl4g5Zwn8p9Uc,73
+logseq_mcp/client/logseq_client.py,sha256=KTglgM1OChOKbRALlGP2ucOizgowrYXp1Dh5nrq7h3o,8217
+logseq_mcp/tools/__init__.py,sha256=vxRCE0v5WUHJCfbdjK9k5UB0tgzqCv3GUKydweiWALg,451
+logseq_mcp/tools/blocks.py,sha256=Lx6qeSqaW_EHX_kgsYd-4ZJFRwJb7nIfDu8xfkHA54s,7734
+logseq_mcp/tools/pages.py,sha256=HlSsKXXE1hrYHQXdipX7HL8OFn4Nofnx-9KRLH62HCM,2675
+logseq_mcp/utils/__init__.py,sha256=vd4td_YVspG9rBRrwoZN36ykaiS_BnwVMJuR2hTA6W8,43
+logseq_mcp/utils/logging.py,sha256=GgT13gmoAUvsPnx1dIyM-EQkgLF9zPpI2nWa2jCkYto,241
+logseq_mcp-0.1.0.dist-info/METADATA,sha256=rjFybIf_AbHaWh1RVxAy63USFB9EjlOwGygdJVCHt-I,289
+logseq_mcp-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+logseq_mcp-0.1.0.dist-info/entry_points.txt,sha256=X8cTvhrH0j8Z3XSlSFappwg5YmYFtwqbiEiIy8g9fNw,47
+logseq_mcp-0.1.0.dist-info/RECORD,,

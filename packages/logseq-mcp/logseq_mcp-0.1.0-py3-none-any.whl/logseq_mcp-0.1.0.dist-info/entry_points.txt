@@ -1,0 +1,2 @@
+[console_scripts]
+logseq-mcp = logseq_mcp:main
