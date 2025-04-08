@@ -1,0 +1,74 @@
+Metadata-Version: 2.3
+Name: corsort
+Version: 0.1.4
+Summary: Comparison-Oriented Sort.
+License: GNU General Public License v3
+Author: Emma Caizergues
+Author-email: emma.caizergues@gmail.com
+Requires-Python: >=3.10
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: multiprocess (>=0.70.15,<0.71.0)
+Requires-Dist: networkx (>=3.2.1,<4.0.0)
+Requires-Dist: numba (>=0.61.0,<0.62.0)
+Requires-Dist: numpy (<2.0.0)
+Requires-Dist: scipy (>=1.11,<2.0)
+Requires-Dist: svvamp (>=0.10.0,<0.11.0)
+Requires-Dist: tqdm (>=4.66.1,<5.0.0)
+Description-Content-Type: text/x-rst
+
+=======
+Corsort
+=======
+
+.. image:: https://img.shields.io/pypi/v/corsort.svg
+        :target: https://pypi.python.org/pypi/corsort
+        :alt: PyPI Status
+
+.. image:: https://github.com/emczg/corsort/workflows/build/badge.svg?branch=main
+        :target: https://github.com/emczg/corsort/actions?query=workflow%3Abuild
+        :alt: Build Status
+
+.. image:: https://github.com/emczg/corsort/workflows/docs/badge.svg?branch=main
+        :target: https://github.com/emczg/corsort/actions?query=workflow%3Adocs
+        :alt: Documentation Status
+
+
+.. image:: https://codecov.io/gh/emczg/corsort/branch/main/graphs/badge.svg
+        :target: https://app.codecov.io/gh/emczg/corsort/tree/main/
+        :alt: Code Coverage
+
+|
+
+.. image:: https://github.com/emczg/corsort/raw/main/docs/logo/logo.png
+    :alt: Corsort logo
+    :target: https://emczg.github.io/corsort/
+
+
+Comparison-Oriented Sort.
+
+
+* Free software: GNU General Public License v3
+* Documentation: https://emczg.github.io/corsort/.
+
+
+--------
+Features
+--------
+
+* Implement Corsort and Multizip sort, some efficient anytime sorting algorithms.
+* Compare them with classical algorithms through Monte-Carlo simulations.
+
+-------
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `francois-durand/package_helper_2`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`francois-durand/package_helper_2`: https://github.com/francois-durand/package_helper_2
+
