@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: prismbot
+Version: 0.0.1
+Summary: Telegram bot platform coming soon
+Author: Danny Stewart
+Author-email: danny@stewart.cc
+Requires-Python: >=3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# prismbot
+
+Telegram bot platform coming soon.
+
