@@ -1,0 +1,7 @@
+include src/cfisher.pyx
+include README.rst
+include LICENSE
+include versioneer.py
+include fishersrc/_version.py
+include pyproject.toml
+include tests.py
