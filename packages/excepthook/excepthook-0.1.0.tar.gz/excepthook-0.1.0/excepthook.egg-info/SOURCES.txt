@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+excepthook.egg-info/PKG-INFO
+excepthook.egg-info/SOURCES.txt
+excepthook.egg-info/dependency_links.txt
+excepthook.egg-info/entry_points.txt
+excepthook.egg-info/requires.txt
+excepthook.egg-info/top_level.txt
