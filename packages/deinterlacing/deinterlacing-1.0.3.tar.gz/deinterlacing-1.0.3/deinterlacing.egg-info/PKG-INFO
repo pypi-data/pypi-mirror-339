@@ -1,0 +1,97 @@
+Metadata-Version: 2.4
+Name: deinterlacing
+Version: 1.0.3
+Summary: A python library for deinterlacing images collected using resonant-scanning microscopes.
+Author: Darik A. O'Neil
+Maintainer: Darik A. O'Neil
+License-Expression: MIT
+Project-URL: documentation, https://github.com/darikoneil/resonant_deinterlacing
+Project-URL: repository, https://github.com/darikoneil/resonant_deinterlacing
+Keywords: deinterlacing,resonant,microscopy,image-processing,neuroscience,two-photon,imaging,optics,multiphoton,scanning,calcium imaging,voltage imaging
+Classifier: Programming Language :: Python
+Requires-Python: <=4.0,>=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boltons
+Requires-Dist: numpy>=2.0.0
+Requires-Dist: pydantic>=2.11
+Requires-Dist: tqdm
+Provides-Extra: test
+Requires-Dist: importlib-metadata; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-sugar; extra == "test"
+Requires-Dist: pytest-clarity; extra == "test"
+Requires-Dist: toml; extra == "test"
+Requires-Dist: tomli-w; extra == "test"
+Provides-Extra: lint
+Requires-Dist: flake8; extra == "lint"
+Requires-Dist: flake8-annotations-complexity; extra == "lint"
+Requires-Dist: flake8-class-attributes-order; extra == "lint"
+Requires-Dist: flake8-dunder-all; extra == "lint"
+Requires-Dist: flake8-html; extra == "lint"
+Requires-Dist: ruff; extra == "lint"
+Provides-Extra: cov
+Requires-Dist: coverage[toml]; extra == "cov"
+Requires-Dist: coveralls; extra == "cov"
+Requires-Dist: toml; extra == "cov"
+Requires-Dist: tomli-w; extra == "cov"
+Provides-Extra: distri
+Requires-Dist: build; extra == "distri"
+Requires-Dist: twine; extra == "distri"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints; extra == "docs"
+Requires-Dist: sphinx-rtd-theme; extra == "docs"
+Provides-Extra: dev
+Requires-Dist: deinterlacing[test]; extra == "dev"
+Requires-Dist: deinterlacing[lint]; extra == "dev"
+Requires-Dist: deinterlacing[cov]; extra == "dev"
+Requires-Dist: deinterlacing[distrib]; extra == "dev"
+Requires-Dist: deinterlacing[docs]; extra == "dev"
+Dynamic: license-file
+
+# Deinterlace
+[![Coverage Status](https://coveralls.io/repos/github/darikoneil/deinterlacing/badge.svg?branch=main)](https://coveralls.io/github/darikoneil/deinterlacing?branch=main)
+
+
+This python module can be used to correct the misalignment between forward and 
+backward-scanned lines collected by resonance-scanning microscopes.
+
+## Features
+- **GPU Acceleration**: Optional CuPy backend for increased performance
+- **Batch Processing**: Supports block-wise processing to reduce memory constraints.
+- **Pooling Noisy Data**: Deinterlacing can be applied to pooled-pixels for improved performance on noisy or sparse images.
+- **Handles Instability**: Supports processing individual frames while autocorrection 
+  methods applied during acquisition stabilize
+- **Sub-Pixel**: Pixel & Sub-Pixel registration available
+
+## Installation
+The repository is available on PyPI and can be installed using your
+preferred package manager. For example:
+pip
+```bash
+pip install deinterlacing
+```
+uv
+```bash
+uv add deinterlacing
+```
+
+## Dependencies
+- Boltons
+- CuPy  (Optional)
+- NumPy
+- Pydantic
+- TQDM
+
+## Example
+```python
+from deinterlacing import deinterlace
+import numpy as np
+
+# Load your images
+images = np.load("my_images.npy")
+
+# Deinterlace the images
+deinterlace(images)
+```

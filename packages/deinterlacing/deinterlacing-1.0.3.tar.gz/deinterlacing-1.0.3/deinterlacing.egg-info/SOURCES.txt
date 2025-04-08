@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+deinterlacing/__init__.py
+deinterlacing/processing.py
+deinterlacing/tools.py
+deinterlacing.egg-info/PKG-INFO
+deinterlacing.egg-info/SOURCES.txt
+deinterlacing.egg-info/dependency_links.txt
+deinterlacing.egg-info/requires.txt
+deinterlacing.egg-info/top_level.txt
+tests/test_deinterlacing.py
+tests/test_parameters.py
+tests/test_tools.py
