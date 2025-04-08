@@ -1,0 +1,26 @@
+[project]
+name = "pxm-tools"
+version = "0.1.5"
+description = "A collection of tools to interact with Proxmox API."
+readme = "README.md"
+authors = [
+    { name = "Leonardo Almeida", email = "leonardoalmeida7777@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "python-dotenv>=1.1.0",
+    "requests>=2.32.3",
+    "rich>=14.0.0",
+]
+
+[project.scripts]
+pxm = "pxm_tools.cli.help:main"
+pxm-create = "pxm_tools.cli.create:main"
+pxm-edit = "pxm_tools.cli.edit:main"
+pxm-rm = "pxm_tools.cli.remove:main"
+pxm-start = "pxm_tools.cli.start:main"
+pxm-stop = "pxm_tools.cli.stop:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
