@@ -1,0 +1,5 @@
+kubernetes>=12.0.0
+
+[test]
+pytest>=6.0.0
+pytest-cov>=2.12.0
