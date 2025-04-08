@@ -1,0 +1,5 @@
+[console_scripts]
+git-ai = git_commit_generator.cli.main:app
+
+[gui_scripts]
+
