@@ -1,0 +1,9 @@
+LICENSE.txt
+setup.py
+tronclinet/__init__.py
+tronclinet/main.py
+tronclinet.egg-info/PKG-INFO
+tronclinet.egg-info/SOURCES.txt
+tronclinet.egg-info/dependency_links.txt
+tronclinet.egg-info/requires.txt
+tronclinet.egg-info/top_level.txt
