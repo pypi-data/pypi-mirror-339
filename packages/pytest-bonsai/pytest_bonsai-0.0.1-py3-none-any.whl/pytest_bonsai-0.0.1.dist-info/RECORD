@@ -1,0 +1,9 @@
+pytest_bonsai/__init__.py,sha256=JvLN69hUAO4g4vbdFOxpEDuP8o0ZSvx6XGiv1-ViiRg,123
+pytest_bonsai/conftest.py,sha256=DLPonRSHoxyJVdZDcuXQ0VEDu0TDxkWrZQsahsSbUDI,1052
+pytest_bonsai/parametrize.py,sha256=vO0keV2DZocN0wIQc2xgaJvKgZXhyfzdTEs7Tos3yvs,4585
+pytest_bonsai-0.0.1.dist-info/licenses/LICENSE,sha256=FDcUwb7ZsfXBJTIHdK5tNH8rA6hM2uCp9NHsaguZ7wU,1091
+pytest_bonsai-0.0.1.dist-info/METADATA,sha256=haq30dwCyX3X1sCUDtFBNj0rqjNB7ZAAbJQZAHeAi98,3309
+pytest_bonsai-0.0.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+pytest_bonsai-0.0.1.dist-info/entry_points.txt,sha256=TmBrAiRSrS0qrs8lKUizB5fdpkYbfL3gh4Si8DP_PR8,34
+pytest_bonsai-0.0.1.dist-info/top_level.txt,sha256=W9lRYTIynUFG42bKMMBiwLzl9Jmxv-2RdOce5-JcziU,14
+pytest_bonsai-0.0.1.dist-info/RECORD,,
