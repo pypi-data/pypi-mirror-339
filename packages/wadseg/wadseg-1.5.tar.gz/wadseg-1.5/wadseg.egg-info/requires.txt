@@ -1,0 +1,8 @@
+transformers
+torch
+matplotlib
+matplotlib
+numpy
+seaborn
+spacy
+ipython
