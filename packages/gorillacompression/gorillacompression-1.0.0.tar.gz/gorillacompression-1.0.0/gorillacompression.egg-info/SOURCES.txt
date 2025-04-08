@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+gorillacompression/__init__.py
+gorillacompression/decode.py
+gorillacompression/encode.py
+gorillacompression/result.py
+gorillacompression.egg-info/PKG-INFO
+gorillacompression.egg-info/SOURCES.txt
+gorillacompression.egg-info/dependency_links.txt
+gorillacompression.egg-info/requires.txt
+gorillacompression.egg-info/top_level.txt
+tests/test_main.py
