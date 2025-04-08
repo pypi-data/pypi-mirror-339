@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: aws-sigv4
+Version: 0.0.1
+Summary: AWS Signature Version 4 Artifacts
+Author-email: Laxminarayan Choudhury <choudhury.laxminarayan@gmail.com>
+Project-URL: Homepage, https://github.com/
+Project-URL: Issues, https://github.com/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
