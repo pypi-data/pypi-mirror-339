@@ -1,0 +1,202 @@
+Metadata-Version: 2.4
+Name: dinotool
+Version: 0.1.1
+Summary: Command-line tool for extracting DINO features from images and videos
+Project-URL: Homepage, https://github.com/mikkoim/dinotool
+Project-URL: Issues, https://github.com/mikkoim/dinotool/issues
+Author-email: Mikko Impiö <mikko.impio@gmail.com>
+License: Apache License (2.0)
+License-File: LICENSE
+Keywords: dino,feature extraction,image processing,machine learning,video processing
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: <3.13,>=3.11
+Requires-Dist: einops>=0.8.1
+Requires-Dist: h5py>=3.13.0
+Requires-Dist: numpy>=2.0.0
+Requires-Dist: opencv-python>=4.11.0.86
+Requires-Dist: pillow>=11.1.0
+Requires-Dist: pyarrow>=19.0.1
+Requires-Dist: scikit-learn>=1.6.1
+Requires-Dist: torch>=2.6.0
+Requires-Dist: torchvision>=0.21.0
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: xarray>=2025.3.1
+Requires-Dist: xformers>=0.0.29.post3; sys_platform == 'linux'
+Requires-Dist: zarr>=3.0.6
+Description-Content-Type: text/markdown
+
+![PyPI](https://img.shields.io/pypi/v/dinotool)
+![License](https://img.shields.io/github/license/mikkoim/dinotool)
+
+# 🦕 DINOtool
+
+**DINOtool** is a simple Python package that makes it easy to extract and visualize features from images and videos using [DINOv2](https://dinov2.metademolab.com/) models.
+**DINOtool** helps you generate frame and patch-level embeddings with a single command.
+
+## ✨ Features
+
+- 📷 Extract DINO features from:
+  - Single images
+  - Video files (`.mp4`, `.avi`, etc.)
+  - Folders containing image sequences
+- 🌈 Automatically generates PCA visualizations of the features
+- 🧠 Visuals include side-by-side view of the original frame and the feature map
+- 💾 Saves features for downstream tasks
+- ⚡ Command-line interface for easy, no-code operation
+
+Example:
+```bash
+dinotool input.mp4 -o output.mp4
+```
+produces output:
+
+[Video example](https://github.com/user-attachments/assets/0cc2e7ed-15b5-4f38-97f4-afee9b62e445)
+
+DINOtool also lets you save the raw features for downstream tasks.
+
+## 📦 Installation
+
+### Basic install (Linux/WSL2)
+
+Install via pip:
+
+```bash
+pip install dinotool
+```
+You'll also need to have ffmpeg installed:
+
+```bash
+sudo apt install ffmpeg
+```
+You can check that dinotool is properly installed by testing it on an image:
+
+```bash
+dinotool test.jpg -o out.jpg
+```
+
+### 🐍 Conda Environment (Recommended)
+If you want an isolated setup, especially useful for managing `ffmpeg` and dependencies:
+
+Install [Miniforge](https://conda-forge.org/download/).
+
+```bash
+conda create -n dinotool python=3.12
+conda activate dinotool
+conda install -c conda-forge ffmpeg
+pip install dinotool
+```
+
+### Windows notes:
+- Windows is supported only for CPU usage. If you want GPU support on Windows, we recommend using WSL2 + Ubuntu.
+- The conda method above is recommended for Windows CPU setups.
+
+## 🚀 Quickstart
+
+📸 Image:
+```bash
+dinotool input.jpg -o output.jpg
+```
+
+🎞️ Video
+```bash
+dinotool input.mp4 -o output.mp4
+```
+
+📁 Folder of Images (treated as video frames)
+```bash
+dinotool path/to/folder/ -o output.mp4
+```
+
+The output is a side-by-side visualization with PCA of the patch-level features.
+
+## 🧪 Advanced Options
+
+| Flag                | Description                                                           |
+|---------------------|------------------------------------------------------------------------|
+| `--model-name`      | Use a different DINO model (default: `dinov2_vits14_reg`)             |
+| `--input-size W H`  | Resize input before inference                                          |
+| `--batch-size`      | Batch size for processing (default: 1)                                 |
+| `--only-pca`        | Output *only* the PCA map, without side-by-side                        |
+| `--save-features`   | Save extracted features: `full`, `flat`, or `frame`                   |
+| `-o, --output`      | Output path (required)                                                 |
+
+## Tips:
+Increase `--batch-size` to the largest value your memory supports for faster processing. 
+
+```bash
+dinotool input.mp4 -o output.mp4 --batch-size 16
+```
+
+For large videos, reduce the input size with `--input-size`
+
+```bash
+# Processing a HD video faster:
+dinotool input.mp4 -o output.mp4 --input-size 920 540 --batch-size 16
+```
+
+
+## 💾 Feature extraction options
+
+Use `--save-features` to export DINO features for downstream tasks.
+
+| Mode     | Format                         | Output shape            |     Best for      |
+|----------|--------------------------------|-------------------------|---------------------------|
+| `full`   | `.nc` (image) / `.zarr` (video)| `(frames, height, width, feature)`|  Keeps spatial structure of patches.    |
+| `flat`   | partitioned `.parquet`         | `(frames * height * weight, feature)`|  Reliable long video processing. Faster patch-level analysis  |
+| `frame`  | `.parquet`                     | `(frames, feature)`| One feature vector per frame (global content representation) |
+
+### `full` - Spatial patch features
+- Saves full patch feature maps from the ViT (one vector per image patch).
+- Useful for reconstructing spatial attention maps or for downstream tasks like segmentation.
+- Stored as netCDF for single images, `.zarr` for video sequences.
+- `zarr` saving can be memory-intensive and might still fail for large videos.
+
+```bash
+dinotool input.mp4 -o output.mp4 --save-features full
+```
+
+### `flat` - Flattened patch features
+- Saves same vectors as above, but discards 2D spatial layout and saves output in `parquet` format.
+- More reliable for longer videos.
+- Useful for faster computations for statistics, patch-level similarity and clustering.
+
+```bash
+dinotool input.mp4 -o output.mp4 --save-features flat
+```
+
+### `frame` - Frame-level features
+- Saves one vector per frame using the `[CLS]` token from DINO.
+- Useful for temporal tasks, video summarization and classification.
+- For image input saves a `.txt` file with a single vector
+- For video input saves a `.parquet` file with one row per frame.
+
+```bash
+# For a video
+dinotool input.mp4 -o output.mp4 --save-features frame
+
+# For an image
+dinotool input.jpg -o output.jpg --save-features frame
+```
+
+## 🧑‍💻 Usage reference
+
+```text
+🦕 DINOtool: Extract and visualize DINO features from images and videos.
+
+Usage:
+  dinotool input_path -o output_path [options]
+
+Arguments:
+  input                   Path to image, video file, or folder of frames.
+  -o, --output            Path for the output (required).
+
+Options:
+  --model-name MODEL      DINO model to use (default: dinov2_vits14_reg)
+  --input-size W H        Resize input before processing
+  --batch-size N          Batch size for inference
+  --only-pca              Only visualize PCA features
+  --save-features MODE    Save extracted features: full, flat, or frame
+```
