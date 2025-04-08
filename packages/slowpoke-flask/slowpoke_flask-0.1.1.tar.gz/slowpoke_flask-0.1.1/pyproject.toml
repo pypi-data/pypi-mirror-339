@@ -1,0 +1,31 @@
+ 
+[project]
+name = "slowpoke-flask"
+version = "0.1.1"
+description = "Track slow Flask routes and monitor bottlenecks"
+authors = [{ name = "Vedangi", email = "vedangithokal@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "flask",
+    "click",
+    "tabulate"
+]
+
+[project.scripts]
+slowpoke = "slowpoke.cli:main"
+
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["slowpoke"]
+
+[tool.setuptools.package-dir]
+slowpoke = "slowpoke"
+
+
+[project.optional-dependencies]
+dev = ["pytest"]
