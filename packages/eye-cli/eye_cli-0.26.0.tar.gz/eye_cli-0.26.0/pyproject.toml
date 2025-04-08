@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "eye-cli"
+version = "0.26.0"
+description = "CLI for Kestrels"
+authors = ["Will Barley <will.barley@geckorobotics.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typer = "^0.12.5"
+inquirer = "^3.4.0"
+yaspin = "^3.0.2"
+pyperclip = "^1.9.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+eye = "eye_cli:cli"
+
+[tool.poetry_bumpversion.file."eye_cli/__init__.py"]

@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: eye-cli
+Version: 0.26.0
+Summary: CLI for Kestrels
+Author: Will Barley
+Author-email: will.barley@geckorobotics.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: inquirer (>=3.4.0,<4.0.0)
+Requires-Dist: pyperclip (>=1.9.0,<2.0.0)
+Requires-Dist: typer (>=0.12.5,<0.13.0)
+Requires-Dist: yaspin (>=3.0.2,<4.0.0)
+Description-Content-Type: text/markdown
+
+# eye
+
+The CLI for moving files and processing photogrammetry data. 
+
+## Install
+
+```shell
+pipx install eye-cli
+```
+
+open a new terminal
+
+```shell
+eye --install-completion
+```
+
+## Upgrade
+
+```shell
+pipx upgrade eye-cli
+eye --install-completion
+```
+
+
+---
+
+
+
+## Contributing to the CLI
+
+### Run latest code you have in your IDE
+
+Run the installed package:
+```bash
+eye
+```
+
+Run your latest code, not as an installed package
+```shell
+poetry run eye
+```
+
+### Commit + Publish a change
+
+- Write the updated code and test it
+- Run the appropriate Publish command, below
+- make the final commit after publish, which commits the version number updated by publish
+
+### Publish
+
+```shell
+poetry version major
+poetry publish --build
+```
+
+```shell
+poetry version minor
+poetry publish --build
+```
+
+```shell
+poetry version patch
+poetry publish --build
+```
+
+
