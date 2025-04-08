@@ -1,0 +1,12 @@
+bionemo-core
+lightning>=2.2.1
+megatron-core
+nemo_toolkit[nlp]>=2.2.1
+nemo-run
+hatchling
+
+[te]
+transformer_engine[pytorch]
+
+[test]
+bionemo-testing
