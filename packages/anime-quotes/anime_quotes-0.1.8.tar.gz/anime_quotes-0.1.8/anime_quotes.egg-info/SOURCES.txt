@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+anime_quotes/__init__.py
+anime_quotes/__main__.py
+anime_quotes/quotes.json
+anime_quotes/quotes.py
+anime_quotes.egg-info/PKG-INFO
+anime_quotes.egg-info/SOURCES.txt
+anime_quotes.egg-info/dependency_links.txt
+anime_quotes.egg-info/entry_points.txt
+anime_quotes.egg-info/top_level.txt
