@@ -1,0 +1,2 @@
+[console_scripts]
+voicestar = voicestar.cli:run_inference
