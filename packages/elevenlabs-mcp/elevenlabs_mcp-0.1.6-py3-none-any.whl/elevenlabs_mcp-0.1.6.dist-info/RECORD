@@ -1,0 +1,12 @@
+elevenlabs_mcp/__init__.py,sha256=ZDnH5Na_8HhFzNI8JQh6ojhfrCGObJPSl5XpU3v8MrA,61
+elevenlabs_mcp/__main__.py,sha256=Orryw_O91WrqA9OC1zY0RHJja0GtneCM4GOg3MgvsyM,2878
+elevenlabs_mcp/convai.py,sha256=jzITSNF44WGFBfzyjgxSIgSfoKTxEVlcxIDeGPXryNQ,3105
+elevenlabs_mcp/model.py,sha256=bMNJISNGkDpw3NzKLpm0RIh4wNBjBLeh9bGaaljTY8M,399
+elevenlabs_mcp/server.py,sha256=7iOw4ekHwEMIH9-JetuBm2lg6JWQekxwImH7gah7gG8,26646
+elevenlabs_mcp/utils.py,sha256=6iNjQ2J9baLf2z-eN8zICl0AabMexd2VPeL8LGz2Tko,4224
+elevenlabs_mcp-0.1.6.dist-info/licenses/LICENSE,sha256=rT9muFaJcNBn471HtpCtATlFph-XJVl0OUajplWNyCg,1073
+elevenlabs_mcp-0.1.6.dist-info/METADATA,sha256=tQb9wtnLn-7QvRSv7w7j82MfCsxhmDQw9ok-HryOZ1Y,8026
+elevenlabs_mcp-0.1.6.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+elevenlabs_mcp-0.1.6.dist-info/entry_points.txt,sha256=3_ccwF0WRm8Je2NJSMTGlnMh7QteCb-2xRal6ybEe18,56
+elevenlabs_mcp-0.1.6.dist-info/top_level.txt,sha256=D81mK5rIlZ9nX5ykPTUxX1fTeltdnXUyGsg0wX_6CS8,15
+elevenlabs_mcp-0.1.6.dist-info/RECORD,,
