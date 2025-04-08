@@ -1,0 +1,11 @@
+LICENSE
+README.md
+app.py
+codesnap.py
+setup.py
+codesnapper.egg-info/PKG-INFO
+codesnapper.egg-info/SOURCES.txt
+codesnapper.egg-info/dependency_links.txt
+codesnapper.egg-info/entry_points.txt
+codesnapper.egg-info/requires.txt
+codesnapper.egg-info/top_level.txt
