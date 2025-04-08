@@ -1,0 +1,13 @@
+
+[project]
+name = "mcons"
+version = "1.0.4"
+description = "a project building tool"
+dependencies = [
+  "PyYAML",
+  "watchact"
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License"
+]
