@@ -1,0 +1,9 @@
+*.pyc
+*.DS_Store
+build/
+dist/
+*.egg-info/
+*.txt
+/HeatMaps
+/NormalisedData
+/raw
