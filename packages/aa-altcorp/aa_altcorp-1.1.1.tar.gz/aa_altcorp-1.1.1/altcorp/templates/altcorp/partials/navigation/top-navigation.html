@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load navactive %}
+
+
+
+<li class="nav-item">
+    <a class="nav-link {% navactive request 'altcorp:create_requests' %}" href="{% url 'altcorp:create_requests' %}">
+        {% translate "My Requests" %}
+    </a>
+</li>
+
+{% if perms.altcorp.manage_requests %}
+    <li class="nav-item">
+        <a class="nav-link {% navactive request 'altcorp:manage' %}" href="{% url 'altcorp:manage' %}">
+            {% translate "Manage Requests" %}
+            {% if total_count.pending > 0 %}
+                <span class="badge bg-secondary">{{ total_count.pending}}</span>
+            {% endif %}
+            {% if total_count.danger > 0 %}
+                <span class="badge bg-warning">{{ total_count.danger}}</span>
+            {% endif %}
+            {% if total_count.revoke > 0 %}
+                <span class="badge bg-danger">{{ total_count.revoke}}</span>
+            {% endif %}
+        </a>
+    </li>
+{% endif %}
