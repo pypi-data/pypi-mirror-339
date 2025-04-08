@@ -1,0 +1,15 @@
+telepic/__init__.py,sha256=M7sWGSJGRrHqYvqqFNRnWTB1bgu1fNYNRCXCEH8kWDA,818
+telepic/config.py,sha256=JV_r8IO5u09YCbKxyTxP0dB3Rx17SQuskppZLueexn0,773
+telepic/constants.py,sha256=Bj6xu9MyShMoCNY8iQb8Fy44HnHBvU0JJ4aN-q4IEtc,382
+telepic/main.py,sha256=4mvvseobnDkSrbx0jnHb7EISX35Mwy3h7htms2rzthw,2568
+telepic/network.py,sha256=yTNOEhD9fKHXv7sP0HLTPa_L7ooYpN1V0Dyg5lan2vU,2343
+telepic/utils.py,sha256=BR9YMDtOebA4WrRIZkGXEjlvafqQuibvgp5hg_88dIo,1563
+telepic/web.py,sha256=dFrojLJbiZzGrU50hROKMoYRGz-I_el8gekpXOfZXHc,2775
+telepic/static/telepic.png,sha256=aBWNXdX56LaElG8gZhHiqAU4uDz4mFCUPop3PlRer88,152308
+telepic/templates/index.html,sha256=G_CII-Jf337efdj9jW8T1n_OIibpjM0j2oxz3-8eic0,9443
+telepic-0.1.11.dist-info/licenses/LICENSE,sha256=qtG00oBtAkjA5BpgSpGHdPo8eC6DauUA58PU-GAzux4,11021
+telepic-0.1.11.dist-info/METADATA,sha256=WMy9pbkWRJ9dolADsjXeu7UWz3gctaFlXHvtNOhJoI0,4630
+telepic-0.1.11.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+telepic-0.1.11.dist-info/entry_points.txt,sha256=v97yCh8b1E5pvB24NF9gqTUtqbUU9dUBdrclaop38jU,54
+telepic-0.1.11.dist-info/top_level.txt,sha256=LRVF43Ooe0RQTo8NbGJZug5jsuuVTGOEY83apkNgJKY,8
+telepic-0.1.11.dist-info/RECORD,,
