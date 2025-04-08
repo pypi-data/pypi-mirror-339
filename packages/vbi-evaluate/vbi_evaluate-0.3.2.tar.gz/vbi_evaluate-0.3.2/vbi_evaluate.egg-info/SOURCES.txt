@@ -1,0 +1,13 @@
+README.md
+setup.py
+vbi_evaluate.egg-info/PKG-INFO
+vbi_evaluate.egg-info/SOURCES.txt
+vbi_evaluate.egg-info/dependency_links.txt
+vbi_evaluate.egg-info/requires.txt
+vbi_evaluate.egg-info/top_level.txt
+vbi_evaluate_package/__init__.py
+vbi_evaluate_package/evaluate.py
+vbi_evaluate_package/extract.py
+vbi_evaluate_package/fact_check.py
+vbi_evaluate_package/image_check.py
+vbi_evaluate_package/text_check.py
