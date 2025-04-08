@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/majordome/__init__.py
+src/majordome/common.py
+src/majordome.egg-info/PKG-INFO
+src/majordome.egg-info/SOURCES.txt
+src/majordome.egg-info/dependency_links.txt
+src/majordome.egg-info/requires.txt
+src/majordome.egg-info/top_level.txt
+src/majordome/combustion/__init__.py
+src/majordome/combustion/analysis.py
+src/majordome/simulation/__init__.py
+src/majordome/simulation/fluent.py
