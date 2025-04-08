@@ -1,0 +1,22 @@
+[project]
+name = "character-extractor"
+version = "0.1.2"
+description = "An MCP server to extract and analyze story characters from text or PDF files"
+authors = [{ name = "Akash Shivling Savalgi", email = "asavalgi9@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "PyPDF2>=3.0.1",
+    "requests",
+]
+
+[project.scripts]
+character-extractor = "character_extractor.main:main"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]

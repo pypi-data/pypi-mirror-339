@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+character_extractor/__init__.py
+character_extractor/__main__.py
+character_extractor/main.py
+character_extractor.egg-info/PKG-INFO
+character_extractor.egg-info/SOURCES.txt
+character_extractor.egg-info/dependency_links.txt
+character_extractor.egg-info/entry_points.txt
+character_extractor.egg-info/requires.txt
+character_extractor.egg-info/top_level.txt
