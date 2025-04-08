@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+examples/basic_example.py
+tests/test_perftrack.py
+tikTrack.egg-info/PKG-INFO
+tikTrack.egg-info/SOURCES.txt
+tikTrack.egg-info/dependency_links.txt
+tikTrack.egg-info/requires.txt
+tikTrack.egg-info/top_level.txt
+tiktrack/__init__.py
+tiktrack/core.py
