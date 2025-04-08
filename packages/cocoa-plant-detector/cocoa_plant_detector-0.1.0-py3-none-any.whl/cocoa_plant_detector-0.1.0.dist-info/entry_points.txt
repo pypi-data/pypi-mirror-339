@@ -1,0 +1,2 @@
+[console_scripts]
+cocoa-detect = cocoa_detector.cocoa_cli_pipeline.main:cli
