@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+upset_enrich/__init__.py
+upset_enrich/upset_enrich.py
+upset_enrich.egg-info/PKG-INFO
+upset_enrich.egg-info/SOURCES.txt
+upset_enrich.egg-info/dependency_links.txt
+upset_enrich.egg-info/entry_points.txt
+upset_enrich.egg-info/requires.txt
+upset_enrich.egg-info/top_level.txt

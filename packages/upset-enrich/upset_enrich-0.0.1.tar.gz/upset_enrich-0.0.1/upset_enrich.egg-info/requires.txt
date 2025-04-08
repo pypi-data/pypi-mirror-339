@@ -1,0 +1,6 @@
+setuptools
+pandas
+numpy
+matplotlib
+scipy>=1.7.0
+upsetplot>=0.9.0

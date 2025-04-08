@@ -1,0 +1,27 @@
+[build-system]
+requires = ['setuptools', 'wheel']
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["upset_enrich"]
+
+[project]
+name = "upset_enrich"
+version = "0.0.1"
+description = """UpSet plots with upsetplot package, with added highlighting of sets \
+for which overlap between all pairs of component input sets is significant"""
+readme = "README.md"
+authors = [{ name = "Nathan Schaefer", email = "nathan.schaefer@ucsf.edu" }]
+license = {file = "LICENSE"}
+dependencies = [ 'setuptools', 'pandas', 'numpy', 'matplotlib', 'scipy>=1.7.0', 'upsetplot>=0.9.0' ]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3"
+]
+
+[project.urls]
+homepage = 'https://github.com/nkschaefer/upset_enrich'
+
+[project.scripts]
+upset_enrich = "upset_enrich.upset_enrich:upset_enrich"
