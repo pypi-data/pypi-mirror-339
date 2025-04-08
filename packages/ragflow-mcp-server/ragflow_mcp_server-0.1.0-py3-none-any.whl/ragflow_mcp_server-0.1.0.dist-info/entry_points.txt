@@ -1,0 +1,2 @@
+[console_scripts]
+ragflow-mcp-server = ragflow_mcp_server:main
