@@ -1,0 +1,10 @@
+vbi_evaluate_package/__init__.py,sha256=MlqNLNdOIhbQpKoBBb0GYligQB7N47gmDw8daffwOfs,129
+vbi_evaluate_package/evaluate.py,sha256=0jpKQO2T_8BHuX4b15ggC2L1xzzR9tX-aeiLcwubrdg,2128
+vbi_evaluate_package/extract.py,sha256=zsKZOmFyKvXkhSvN24z2g-lIAzAE6D5Pd5rt68C-ADI,4570
+vbi_evaluate_package/fact_check.py,sha256=LZRg7qKPdpMMOzQb5dWpC9aJSipWNqN-2rdEeYWZTQc,9612
+vbi_evaluate_package/image_check.py,sha256=GYvR0soSvudgYvrLgvjYln9qBlWS3zQO8tttu6lgCes,2683
+vbi_evaluate_package/text_check.py,sha256=n-wbIA4vyy0caJuJzRg45lNo7Txpf5ZwOfeO1hcOpsA,52298
+vbi_evaluate-0.3.3.dist-info/METADATA,sha256=cTwXMHm-ibho4YZ7Hl7f0URR2uzFdXQUe89Mvn-yGwA,5007
+vbi_evaluate-0.3.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+vbi_evaluate-0.3.3.dist-info/top_level.txt,sha256=ohDDgpy8C1MYcpx0VpuQ-orOOGoprWTO1qSDIjcDqwE,21
+vbi_evaluate-0.3.3.dist-info/RECORD,,
