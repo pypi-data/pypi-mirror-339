@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: whot
+Version: 0.0.1
+Summary: A whot! engine
+Author-email: Eteims <8teims@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/eteimz/whot
+Project-URL: Issues, https://github.com/eteimz/whot/issues
+Keywords: whot,card game,shedding game
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+License-File: LICENSE
+Dynamic: license-file
