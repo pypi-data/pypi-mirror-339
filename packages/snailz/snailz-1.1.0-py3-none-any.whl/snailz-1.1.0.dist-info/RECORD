@@ -1,0 +1,17 @@
+snailz/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+snailz/assays.py,sha256=Dfs9cvkQ6EcbsS2K6dBk-YlYaEze2AC3ZvUNpQq4YxY,6798
+snailz/clui.py,sha256=nMtXsYBGQaPkw2SdW7luNBC4543Kr2uxeAPey18d1qY,3025
+snailz/database.py,sha256=ST7IGcHCIffKWGV5XIVDxBF-WPANI8wu9p2fK81nNs0,4287
+snailz/grid.py,sha256=OeaBlqQOhGn7PMy9XER2U-A0N6rf7scd-kXDwKOgJ98,2104
+snailz/images.py,sha256=dhCUSpmjR5ApMDhd63214i1k8wQec3ARl_V0qmNCNsA,2592
+snailz/mangle.py,sha256=T6dE9Lj8_tF7rR989wtigvQ8wM3vRo_LuR9EfNtOREo,2123
+snailz/overall.py,sha256=An0ZPjrTsYyO_yvU7yXXbKODDdENvizdHXstfRmLiOc,1872
+snailz/persons.py,sha256=JWb5WlCTtMsec8O2DbKfuRwVY52To16iIlvJSxqTLDo,2542
+snailz/specimens.py,sha256=wacY9QOrJHUQTtusxKYB168UIp1GHqfeb9xxyki2FUU,8138
+snailz/surveys.py,sha256=rchvSCHEl9G08sIniqKFPfnno5nR7FO9lMuoGYQBEfQ,4062
+snailz/utils.py,sha256=qACiuLBtsvKX-hMcwtNHzMA1q64sjYOevdIbRGs-E6A,3731
+snailz-1.1.0.dist-info/METADATA,sha256=vxDAPj8OkgYeV3szwLB1hPIktU5WAewmtmxYEMpY4Fg,14551
+snailz-1.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+snailz-1.1.0.dist-info/entry_points.txt,sha256=bWu5_1BNOycZLmvqG7Dfsa3ccABMWJ09MkEuxoptbiY,43
+snailz-1.1.0.dist-info/licenses/LICENSE.md,sha256=1Aj4XnZkr7ca_uCw8tmpw6WSyNdrNXa76KeFj82O8xo,1067
+snailz-1.1.0.dist-info/RECORD,,
