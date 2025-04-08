@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+haiguitang_mcp/__init__.py
+haiguitang_mcp/__main__.py
+haiguitang_mcp/server.py
+haiguitang_mcp.egg-info/PKG-INFO
+haiguitang_mcp.egg-info/SOURCES.txt
+haiguitang_mcp.egg-info/dependency_links.txt
+haiguitang_mcp.egg-info/entry_points.txt
+haiguitang_mcp.egg-info/requires.txt
+haiguitang_mcp.egg-info/top_level.txt
+haiguitang_mcp/puzzles/忠诚的狗.md
