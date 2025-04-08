@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "cloelib"
+version = "0.0.1"
+description = "Name reserved for the libraty for the Cosmology Likelihood and Observables in Euclid."
+authors = ["Guadalupe Cañas-Herrera <guadalupe.canasherrera@esa.int>"]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
