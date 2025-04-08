@@ -1,0 +1,14 @@
+README.md
+setup.py
+scematicsapp/__init__.py
+scematicsapp/cli.py
+scematicsapp/custom_upload.py
+scematicsapp/direct_upload.py
+scematicsapp/folder_uploads.py
+scematicsapp/tag_uploads.py
+scematicsapp.egg-info/PKG-INFO
+scematicsapp.egg-info/SOURCES.txt
+scematicsapp.egg-info/dependency_links.txt
+scematicsapp.egg-info/entry_points.txt
+scematicsapp.egg-info/requires.txt
+scematicsapp.egg-info/top_level.txt

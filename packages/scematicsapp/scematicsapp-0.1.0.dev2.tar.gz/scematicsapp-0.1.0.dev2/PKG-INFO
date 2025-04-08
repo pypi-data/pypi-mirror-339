@@ -1,0 +1,61 @@
+Metadata-Version: 2.4
+Name: scematicsapp
+Version: 0.1.0.dev2
+Summary: A CLI tool for managing file uploads
+Home-page: https://github.com/scematicsapp
+Author: scematics.io
+Author-email: karthickeyan@scematics.xyz
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: typer
+Requires-Dist: requests
+Requires-Dist: rich
+Requires-Dist: pillow
+Requires-Dist: opencv-python
+Requires-Dist: pathlib
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+ScematicsApp
+A command-line interface (CLI) tool for accessing and managing Scematics API resources.
+This tool provides an interactive way to work with Scematics projects, uploads, annotations, and more.
+
+Installation
+pip install scematicsapp
+Features
+
+User Authentication: Login with credentials or API key
+Project Management: List and view project details
+Data Upload Options:
+
+Direct upload for images and videos
+Folder-wise project upload
+Tag-based upload
+Custom video folder upload
+
+
+Annotation Management:
+Export annotations with progress tracking
+Import annotations from files
+
+Interactive Interface: User-friendly CLI with menus and progress tracking
+
+Requirements
+
+Python 3.6+
+Internet connection for API access
+Scematics account credentials or API key
+
+Usage
+After installation, you can launch the tool with:
+scematicsapp
