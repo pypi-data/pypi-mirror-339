@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+tokenaligner/__init__.py
+tokenaligner/aligner.py
+tokenaligner.egg-info/PKG-INFO
+tokenaligner.egg-info/SOURCES.txt
+tokenaligner.egg-info/dependency_links.txt
+tokenaligner.egg-info/requires.txt
+tokenaligner.egg-info/top_level.txt
