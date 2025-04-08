@@ -1,0 +1,2 @@
+[console_scripts]
+sgb-executor = ExecutorService.__main__:start
