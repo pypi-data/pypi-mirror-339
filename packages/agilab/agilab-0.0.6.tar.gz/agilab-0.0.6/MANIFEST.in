@@ -1,0 +1,2 @@
+include src/agilab/apps/*/src/*.*
+exclude src/agilab/apps/*/build/
