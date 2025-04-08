@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: splipy-core
+Version: 1.9.2
+Summary: Add your description here
+Author-email: Eivind Fonn <evfonn@gmail.com>
+Requires-Python: <4.0,>=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.25
