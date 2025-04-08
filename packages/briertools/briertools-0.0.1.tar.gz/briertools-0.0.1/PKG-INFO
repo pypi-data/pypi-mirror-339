@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: briertools
+Version: 0.0.1
+Summary: Mixture of Thresholds based Consequentialist Binary Classifier Evaluation
+License: BSD-3-Clause
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: matplotcheck
+Requires-Dist: pandas
