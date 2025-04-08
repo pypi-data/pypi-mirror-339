@@ -1,0 +1,11 @@
+LICENSE.md
+README.md
+pyproject.toml
+tests/test_client.py
+walrus/__init__.py
+walrus/client.py
+walrus_python.egg-info/PKG-INFO
+walrus_python.egg-info/SOURCES.txt
+walrus_python.egg-info/dependency_links.txt
+walrus_python.egg-info/requires.txt
+walrus_python.egg-info/top_level.txt
