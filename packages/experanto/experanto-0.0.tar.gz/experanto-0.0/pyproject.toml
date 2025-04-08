@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "experanto"
+version = "0.0"
+authors = [
+  { name="Sinz Lab", email="software@sinzlab.net" }
+]
+description = "Python package to interpolate recordings and stimuli of neuroscience experiments"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE*"]
+dependencies = [
+  "numpy",
+  "hydra-core",
+  "opencv-python",
+]
+
+[project.urls]
+Homepage = "https://github.com/sensorium-competition/experanto"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["configs"]
+
+[tool.setuptools.package-data]
+"configs" = ["*.yaml"]
