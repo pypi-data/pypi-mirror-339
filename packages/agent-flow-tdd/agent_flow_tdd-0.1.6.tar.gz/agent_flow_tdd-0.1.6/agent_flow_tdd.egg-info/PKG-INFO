@@ -1,0 +1,133 @@
+Metadata-Version: 2.4
+Name: agent-flow-tdd
+Version: 0.1.6
+Summary: Framework para desenvolvimento orientado a testes com agentes de IA
+Home-page: https://github.com/seu-usuario/agent-flow-tdd
+Author: Seu Nome
+Author-email: seu.email@exemplo.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer>=0.9.0
+Requires-Dist: rich>=13.7.0
+Requires-Dist: openai>=1.12.0
+Requires-Dist: openrouter>=1.0.0
+Requires-Dist: google-generativeai>=0.8.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: pydantic>=2.6.0
+Requires-Dist: requests>=2.31.0
+Requires-Dist: tenacity>=8.2.0
+Requires-Dist: cachetools>=5.3.0
+Requires-Dist: anthropic>=0.18.0
+Requires-Dist: PyYAML>=6.0.1
+Requires-Dist: llama-cpp-python>=0.2.10
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.1.0; extra == "dev"
+Requires-Dist: pytest-mock>=3.12.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: isort>=5.12.0; extra == "dev"
+Requires-Dist: flake8>=6.1.0; extra == "dev"
+Requires-Dist: mypy>=1.5.0; extra == "dev"
+Requires-Dist: autoflake>=2.2.0; extra == "dev"
+Requires-Dist: build>=1.0.3; extra == "dev"
+Requires-Dist: twine>=4.0.2; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: mkdocs>=1.5.0; extra == "docs"
+Requires-Dist: mkdocs-material>=9.5.0; extra == "docs"
+Requires-Dist: mkdocstrings>=0.24.0; extra == "docs"
+Requires-Dist: mkdocstrings-python>=1.7.0; extra == "docs"
+Requires-Dist: mkdocs-gen-files>=0.5.0; extra == "docs"
+Requires-Dist: mkdocs-literate-nav>=0.6.0; extra == "docs"
+Provides-Extra: ml
+Requires-Dist: transformers>=4.34.0; extra == "ml"
+Requires-Dist: torch>=2.0.0; extra == "ml"
+Requires-Dist: accelerate>=0.20.0; extra == "ml"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Agent Flow TDD
+
+<p align="center">
+  <img src="assets/logo.png" alt="Agent Flow TDD Logo" width="400">
+</p>
+
+Framework para desenvolvimento orientado a testes usando agentes de IA.
+
+## 🔍 Visão Geral
+
+O Agent Flow TDD utiliza modelos de IA para auxiliar no desenvolvimento orientado a testes, gerando código, testes e documentação com base em prompts.
+
+## 🚀 Início Rápido
+
+```bash
+# Clone o repositório
+git clone https://github.com/Malnati/agent-flow-tdd.git
+cd agent-flow-tdd
+
+# Instale as dependências
+make install
+
+# Execute um exemplo
+make tdd prompt="Criar API REST em Python" format=json
+```
+
+## 📚 Documentação
+
+A documentação completa está disponível no diretório [docs/](docs/):
+
+- **[Visão Geral](docs/overview/README.md)** - Arquitetura e tecnologias
+- **[Instalação](docs/installation/README.md)** - Requisitos e configuração
+- **[Uso](docs/usage/README.md)** - Comandos e exemplos
+- **[Modelos](docs/examples/model-examples.md)** - Exemplos de uso com diferentes modelos
+- **[Troubleshooting](docs/troubleshooting/README.md)** - Solução de problemas
+
+## 🔧 Principais Comandos
+
+```bash
+# Gerar código/testes a partir de um prompt
+make tdd prompt="Criar sistema de login" format=json
+
+# Especificar modelo
+make tdd prompt="Implementar ordenação" model=deepseek_local format=python
+
+# Visualizar logs
+make logs
+
+# Executar testes
+make test
+```
+
+## 🤖 Modelos Suportados
+
+### Locais (Offline)
+- `tinyllama-1.1b` - TinyLLaMA (1.1B)
+- `phi1` - Microsoft Phi-1 (1.3B)
+- `deepseek_local` - DeepSeek Coder (6.7B)
+- `phi3` - Microsoft Phi-3 Mini
+
+### Remotos (API)
+- `gpt-3.5-turbo`, `gpt-4-turbo` - OpenAI
+- `claude-3-opus`, `claude-3-sonnet` - Anthropic
+- `gemini-pro` - Google
+
+## 📝 Licença
+
+Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
