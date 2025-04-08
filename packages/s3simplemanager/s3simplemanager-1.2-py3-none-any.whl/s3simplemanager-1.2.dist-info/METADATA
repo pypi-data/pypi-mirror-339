@@ -1,0 +1,66 @@
+Metadata-Version: 2.4
+Name: s3simplemanager
+Version: 1.2
+Summary: This package will allow an easier interaction with s3 buckets.
+Project-URL: Homepage, https://bitbucket.org/JoaoChamine/s3simplemanager/
+Project-URL: Issues, https://bitbucket.org/JoaoChamine/s3simplemanager/issues
+Author-email: Joao Chamine <jchamine@outlook.pt>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Requires-Dist: boto3
+Description-Content-Type: text/markdown
+
+# 1.2
+* Features
+    * Update functions documentations
+
+## Example of use:
+
+### Upload files
+```
+# imports
+import s3simplemanager
+
+
+s3 = S3SimpleManager(ssl_verification=False, bucket="s3_bucket_online", url="http://example.url.com/bucket", key_id="12345678", key_value="87654321")
+s3.upload_files("example_path_local_file", "example_path_bucket_file")
+for object in s3.list_files("example_path_bucket_file"):
+    print(object)
+```
+
+### List files when we have a know location
+```
+# imports
+import s3simplemanager
+
+
+s3 = S3SimpleManager(ssl_verification=False, bucket="s3_bucket_online", url="http://example.url.com/bucket", key_id="12345678", key_value="87654321")
+files = s3.list_files("main_folder/sub_folder")
+for file in files:
+    print(file)
+```
+
+### List files when we don't know the location
+```
+# imports
+import s3simplemanager
+
+
+s3 = S3SimpleManager(ssl_verification=False, bucket="s3_bucket_online", url="http://example.url.com/bucket", key_id="12345678", key_value="87654321")
+files = s3.list_files()
+for file in files:
+    print(file)
+```
+
+### Delete files
+```
+# imports
+import s3simplemanager
+
+
+s3 = S3SimpleManager(ssl_verification=False, bucket="s3_bucket_online", url="http://example.url.com/bucket", key_id="12345678", key_value="87654321")
+s3.delete_files(["main_folder_one/sub_folder_one/file_one.txt", "main_folder_two/sub_folder_two/file_two.txt"])
+```
