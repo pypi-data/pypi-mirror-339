@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llm_terminal"
+version = "0.1.0"
+description = "A terminal-based UI for LLMs with PydanticAI and MCP integration"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Ferdous", email = "ferdous@hey.com" },
+]
+dependencies = [
+    "textual",
+    "pydantic-ai-slim[mcp,openai]",
+    "openai",
+    "ruff",
+    "ipykernel>=6.29.5",
+    "twine>=6.1.0",
+]
+
+[project.scripts]
+llm-terminal = "llm_terminal.app:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["llm_terminal"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
