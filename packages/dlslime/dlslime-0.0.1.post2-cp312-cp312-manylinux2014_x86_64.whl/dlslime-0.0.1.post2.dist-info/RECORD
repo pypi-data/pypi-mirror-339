@@ -1,0 +1,12 @@
+dlslime/__init__.py,sha256=UDGE1fc-H88n5FcYxuCXxu-7oGjIPIEaBY6rYZlbr8c,86
+dlslime/_slime_c.cpython-312-x86_64-linux-gnu.so,sha256=q-HYfP_zjfxktCjKC0I5x8S7nSS9ZwPyflzxrZYFnYA,327584
+dlslime/lib_slime_ops.so,sha256=aJYO7yV16bQyZ79Nwp_zuuRLVyK1kr5RjDwL26c37B0,63872
+dlslime/lib_slime_rdma.so,sha256=ilFRfsjcRYq8oq32_zOfzwlwBHOOvSy7fNoCRBuYSDA,130336
+dlslime/lib_slime_utils.so,sha256=35t1RPQJFFkEs9A79c4o_Eqj3D-b8fzIpW74n3J9ZWo,18816
+dlslime/ops/sendrecv.py,sha256=vJgBnXogoz44BFa_RrYZYHj7Zll1UaeHXfTqiA2J8Jo,6685
+dlslime/transport/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dlslime/transport/rdma_endpoint.py,sha256=pJAV8ex0zP-w7XF_mhKouF13QuSU0AmH26ZACZ0-DH8,5369
+dlslime-0.0.1.post2.dist-info/METADATA,sha256=hCkSelUepcJrHrEk11mH4N44rAjrdF4x3m6Lij5H4Zo,4732
+dlslime-0.0.1.post2.dist-info/WHEEL,sha256=LDGS7-1-HjNx3_q5PfKqs36zTjHrkMvRHFo5yDrRAl8,109
+dlslime-0.0.1.post2.dist-info/licenses/LICENSE,sha256=YNu3sNv5Dn1m9wgzw5HOHJ9YZFh2Pp3HKBwpearEXcg,1494
+dlslime-0.0.1.post2.dist-info/RECORD,,
