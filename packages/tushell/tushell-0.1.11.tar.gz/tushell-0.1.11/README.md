@@ -1,0 +1,75 @@
+# tushell
+
+The Data Diver's best Intelligent and Narrative Command-Line Tooling you will have ever had.
+
+## Description
+
+`tushell` is a CLI-native, recursive DevOps & narrative command tooling package designed to provide intelligent and narrative libraries and command-line tooling for data divers.
+
+## Installation
+
+To install `tushell`, use pip:
+
+```bash
+pip install tushell
+```
+
+## Usage
+
+Here are some usage examples for each CLI command:
+
+* `scan-nodes`: Simulate scanning and listing nodes in the system.
+  ```bash
+  tushell scan-nodes
+  ```
+
+* `flex`: Demonstrate flexible orchestration of tasks.
+  ```bash
+  tushell flex
+  ```
+
+* `trace-orbit`: Trace and visualize the orbit of data or processes.
+  ```bash
+  tushell trace-orbit
+  ```
+
+* `echo-sync`: Synchronize data or processes across nodes.
+  ```bash
+  tushell echo-sync
+  ```
+
+## Upcoming Features
+
+The `EchoNexus` subpackage is an upcoming feature that will serve as an anchor for recursive orchestration modules. Stay tuned for more updates!
+
+For more information, please refer to the documentation.
+
+### 🧠 Narrative Lattices – Recursive CLI Tools
+
+#### `curating-red-stones`
+* **Command Name**: `curating-red-stones`
+* **Narrative Purpose**: Visualize and structure Red Stone metadata connections
+* **Usage**:  
+  ```bash
+  tushell curating-red-stones
+  ```
+* **Output**: Displays the structure and connections of Red Stone metadata.
+
+#### `activate-echonode-trace`
+* **Command Name**: `activate-echonode-trace`
+* **Narrative Purpose**: Activate and trace EchoNode sessions
+* **Usage**:  
+  ```bash
+  tushell activate-echonode-trace
+  ```
+* **Output**: Logs the activation and tracing of EchoNode sessions.
+
+#### `enrich-fractale-version`
+* **Command Name**: `enrich-fractale-version`
+* **Narrative Purpose**: Enhance and enrich the Fractale 001 version
+* **Usage**:  
+  ```bash
+  tushell enrich-fractale-version
+  ```
+* **Output**: Visualizes the enhancements and enrichments made to Fractale 001.
+
