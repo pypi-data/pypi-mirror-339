@@ -1,0 +1,13 @@
+devnotes/__init__.py,sha256=7bCdtTIrQXO_t-AvmO_Tq74eHexdSVyeZoxORc37G6Q,98
+devnotes/analyzer.py,sha256=_17zM2-tiH-9mjGU_3GJ-6FTcB6z2NC47Ko7yJZMKZA,19205
+devnotes/cli.py,sha256=2uALT4GRrVe4opxDbgPLJ29ZpIO5ySM3WbvnGT6PNsQ,11713
+devnotes/config.py,sha256=7OMNktqcxPAte4gf6ImPPMel3JmBeCp1-Vb4vndF-Dg,5206
+devnotes/diagrams.py,sha256=3nO8dmwxPPxSYa5tV7oSRYw9vT3mNt5Dmf0tAWGAk80,3129
+devnotes/tasks.py,sha256=Du12Jy5aF1raNsBG31uQqwAOyiMyanZjH1uDPO79sLc,12964
+devnotes/trello.py,sha256=jP6hSO2_yE5m-P5pfSiAmUcEIqTdq5QjeRm162rElmI,38034
+devnotes/utils.py,sha256=xC3SDIknBMabcCcqG31Qw1r-L432OtD0P6lfGPCmn5E,1629
+devnotes-0.1.4.dist-info/METADATA,sha256=F6rM1Vzfug-rjQmU9L7bHXgM9QWKWBmmN-70vphp26s,7262
+devnotes-0.1.4.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+devnotes-0.1.4.dist-info/entry_points.txt,sha256=mc6nX1IpzLWZu-Hqk3oTCD7rTnGlLdAZ2hvv1Pu1Meo,50
+devnotes-0.1.4.dist-info/top_level.txt,sha256=CdjPlelbDU3WSH4fzKtjsrzyiblPZ7lCWghsDN7P7hY,9
+devnotes-0.1.4.dist-info/RECORD,,
