@@ -1,0 +1,17 @@
+FasterKModes/BaseClusterer.py,sha256=kY8jB63kOy1XZ7nFrz4JXB3Vh6qMFKF43WLinbFDeMc,13199
+FasterKModes/FasterKModes.py,sha256=cgPd7T89hesMH5SvR5-16pCurepcGZuDqyYAE7fnueE,20493
+FasterKModes/FasterKPrototypes.py,sha256=ztAIhW5v56n5RzmEGz30-igImwly47LqN007eEUXrSU,34113
+FasterKModes/__init__.py,sha256=bWsuQldgVdAxHz5DatrQQ-Sm2x7CS5GEYRhuaD0SwCg,186
+FasterKModes/config.py,sha256=IoNuxEfAuEtvZYLq-2cHGlqT8775IvK5VZ2SvhjHlzg,152
+FasterKModes/delete_so.py,sha256=lpaL3663_MBHiYxuBaIfnC9iSJ_9a4pR4g2lVfSkY2E,1043
+FasterKModes/src/common_funcs.c,sha256=xAgPWGQQlDlixl0ZN2gqHruFgCUtf4lkBFViq06WfSo,5486
+FasterKModes/src/generate_code.py,sha256=Eb7c3oaFZ8HIqEBos4tALWjRWhKkSwycbyZb2l1I5SA,19122
+FasterKModes/src/generate_prediction_code.py,sha256=-YcvcjvIiuhogVEoLvyehrkRj7fa__dFygZTafF-ick,19176
+FasterKModes/src/get_nearest_hamming_dist_uint8.c,sha256=e0seY1SrLr6nxo5HQ3W80JdMrSxWAZI6SAqKnCKcdPI,1960
+FasterKModes/src/hamming_dist_mat_uint8.c,sha256=JihXQHrDi1aawNLq0vYX8_WYPq-4fC4u13ls9D4YKao,757
+FasterKModes/src/utils_kmodes.py,sha256=FEU8wBIXYAfkoC1jksoVUtW1jCSPnvJwNXRmE_7s5uY,6688
+FasterKModes-0.1.2.dist-info/LICENSE,sha256=CR2UbnS8gFXx744ODm3qZNrzapcmPHMhbJldSmA4enw,1086
+FasterKModes-0.1.2.dist-info/METADATA,sha256=lMDDVPiIQKuNfxlMYbPsnGwJfwsLmEyv5mN33M8MI4I,5774
+FasterKModes-0.1.2.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+FasterKModes-0.1.2.dist-info/top_level.txt,sha256=thnQ1a5YZkqf1vlhID5vgaTMu2QXwfB9qK0Bs6CMSnY,13
+FasterKModes-0.1.2.dist-info/RECORD,,
