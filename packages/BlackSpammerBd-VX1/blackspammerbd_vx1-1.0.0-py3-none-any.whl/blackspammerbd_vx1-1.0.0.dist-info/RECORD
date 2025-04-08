@@ -1,0 +1,11 @@
+blackspammerbd/__init__.py,sha256=9-wiLJwjlyssEXNoBRNKv8Gwv8BbBxZu6anGq_oTPc4,7
+blackspammerbd/cli.py,sha256=QPNpQog_sUyloB8vwIBVbgWVc74Tr6Wa2QKOUgf5NBU,255819
+blackspammerbd/core.py,sha256=2cVRZoPp4PN5K08LDBFdpHRA-Pg3jcupSceckOQQyzA,258984
+blackspammerbd/persistence.py,sha256=ieylNPSsWr1KBICuNdj8SnzF_99expvunJA2TE9dxd4,255633
+blackspammerbd/teligram.py,sha256=mHifli3JD5yaVjJ1za9r4Mtj2yjj6jys9XdLwn9goOU,251912
+blackspammerbd_vx1-1.0.0.dist-info/LICENSE,sha256=X4qzNS4rChqZJPRFPUoUBOKYzyn_4g-0h-GZ9fraieQ,1073
+blackspammerbd_vx1-1.0.0.dist-info/METADATA,sha256=LUqMTT0hfRYQGLNqT3F2uOj8loDjua2aYz_LZCbaafk,510
+blackspammerbd_vx1-1.0.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+blackspammerbd_vx1-1.0.0.dist-info/entry_points.txt,sha256=g9bHy3TiBEZ1Y-W7q66fGaoniAQjnOjV7Pq_h5grtOE,53
+blackspammerbd_vx1-1.0.0.dist-info/top_level.txt,sha256=sGWLKAkxGSNItACiptbE8qDUpdwzrC4q3b6w2NPDBjM,15
+blackspammerbd_vx1-1.0.0.dist-info/RECORD,,

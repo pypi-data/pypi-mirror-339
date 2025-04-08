@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: BlackSpammerBd-VX1
+Version: 1.0.0
+Summary: Telegram-connected auto backup tool for SMS, media, contacts and more.
+Author: BLACK SPAMMER BD
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: colorama
+Requires-Dist: watchdog
+Requires-Dist: pyTelegramBotAPI
+Requires-Dist: psutil
+Dynamic: author
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
