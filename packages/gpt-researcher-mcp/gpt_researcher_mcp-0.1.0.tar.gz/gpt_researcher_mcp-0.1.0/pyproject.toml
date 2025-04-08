@@ -1,0 +1,29 @@
+[project]
+name = "gpt-researcher-mcp"
+version = "0.1.0"
+description = "A MCP server project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+ "asyncio>=3.4.3",
+ "gpt-researcher>=0.12.19",
+ "langchain-google-genai>=2.1.2",
+ "mcp[cli]>=1.6.0",
+]
+license = { text = "MIT" }
+homepage = "https://github.com/markchiang/gpt-researcher-mcp" # Replace with your repo URL
+
+[[project.authors]]
+name = "Mark Chiang"
+email = "markchiang@gmail.com"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.scripts]
+gpt-researcher-mcp = "gpt_researcher_mcp:main"
+
+[project.urls]
+"Homepage" = "https://github.com/markchiang/gpt-researcher-mcp" # Replace with your repo URL
+"Bug Tracker" = "https://github.com/markchiang/gpt-researcher-mcp/issues" # Replace with your repo URL
