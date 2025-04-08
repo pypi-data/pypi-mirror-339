@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: astrosec
+Version: 0.0.1
+Summary: Security module for ASTRONAV on HorizonGate
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Security
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Dynamic: classifier
+Dynamic: requires-python
+Dynamic: summary
