@@ -1,0 +1,14 @@
+gooder_ai/__init__.py,sha256=mY1C4x3zxRym6zqM16_KSSBwGedtUHe03t16A17aBI0,12380
+gooder_ai/auth/__init__.py,sha256=P05Jip3M4NGb54KZPv-bV9sev0h5ouJU98PH29WxKYk,2188
+gooder_ai/auth/types.py,sha256=vH9NDPoE4S-2CBmtAraX-guZ7C8G4d9tAP66BdjVlow,181
+gooder_ai/globals.py,sha256=5Jbbgxw7usWPEsL5hRADJrFs5L39F-KLfpJCfBMVq4Y,2242
+gooder_ai/s3/__init__.py,sha256=Upz2r8mYJX9IkuwMep6BhJWm5TNwAnzdaG5WNOcKDP0,5715
+gooder_ai/s3/types.py,sha256=EleY0PKRqhPp5eq8Yvwr8CP52UiY-9FtMv6yzIH7-Ig,631
+gooder_ai/types.py,sha256=BFSEPg3CNtEYB36LMiyKz_qH4Oa31PkjMYYCdGqNRIE,1854
+gooder_ai/utils.py,sha256=sXAzkGQnZw8tY2qWg1QrAoGVjyX6UrIaprI4lmKgrA0,10013
+gooder_ai/view/__init__.py,sha256=AgUo34rsPnsAJKOfsnp9izMYtYsObSfH3xTub0tAkys,1661
+gooder_ai/view/types.py,sha256=lKpOLohXU9izZXcQY8d9Qau182y8lWewTAvFd6fm-qI,349
+gooder_ai-1.1.8.dist-info/entry_points.txt,sha256=XWWBRR6AzZGZGjKBV2fRvBMjP21yyFoqQdLmh3l0uVw,40
+gooder_ai-1.1.8.dist-info/METADATA,sha256=lXURqr5z9RKePEnAh-P9Mu9ci19weC39xJMHodp7JDc,12256
+gooder_ai-1.1.8.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+gooder_ai-1.1.8.dist-info/RECORD,,
