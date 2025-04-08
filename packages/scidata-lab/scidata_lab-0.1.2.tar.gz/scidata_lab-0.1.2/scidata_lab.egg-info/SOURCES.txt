@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+scidata_lab/__init__.py
+scidata_lab/exercises.py
+scidata_lab.egg-info/PKG-INFO
+scidata_lab.egg-info/SOURCES.txt
+scidata_lab.egg-info/dependency_links.txt
+scidata_lab.egg-info/requires.txt
+scidata_lab.egg-info/top_level.txt
