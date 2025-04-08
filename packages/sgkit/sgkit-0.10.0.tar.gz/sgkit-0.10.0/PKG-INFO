@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: sgkit
+Version: 0.10.0
+Summary: Statistical genetics toolkit
+Author-email: sgkit Developers <project@sgkit.dev>
+License: Apache
+Project-URL: Homepage, https://github.com/sgkit-dev/sgkit
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: numpy<2.2
+Requires-Dist: xarray<2025.03.1
+Requires-Dist: dask[array,dataframe]<=2024.8.0,>=2022.01.0
+Requires-Dist: distributed<=2024.8.0,>=2022.01.0
+Requires-Dist: scipy
+Requires-Dist: zarr!=2.11.0,!=2.11.1,!=2.11.2,<3,>=2.10.0
+Requires-Dist: numba
+Requires-Dist: typing-extensions
+Requires-Dist: fsspec!=2021.6.*
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+Requires-Dist: setuptools>=41.2
+Provides-Extra: plink
+Requires-Dist: partd; extra == "plink"
+Requires-Dist: bed-reader; extra == "plink"
+Provides-Extra: bgen
+Requires-Dist: rechunker; extra == "bgen"
+Requires-Dist: cbgen>1.0.5; extra == "bgen"
+Dynamic: license-file
+
+**sgkit** is an open source project for analyzing and manipulating genetic
+variation data.
