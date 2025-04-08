@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>WiFi Configuration Success</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .success-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        .countdown {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="success-container">
+        <h1>WiFi Configuration Successful</h1>
+        <p>Your device will now attempt to connect to the configured WiFi network.</p>
+        <p>The system will reboot in <span id="countdown">5</span> seconds to apply the new settings.</p>
+        <p>You can close this window and disconnect from the GenX Camera Panel hotspot.</p>
+    </div>
+
+    <script>
+        // Countdown timer
+        let seconds = 5;
+        const countdownElement = document.getElementById('countdown');
+
+        const interval = setInterval(function () {
+            seconds--;
+            countdownElement.textContent = seconds;
+
+            if (seconds <= 0) {
+                clearInterval(interval);
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
