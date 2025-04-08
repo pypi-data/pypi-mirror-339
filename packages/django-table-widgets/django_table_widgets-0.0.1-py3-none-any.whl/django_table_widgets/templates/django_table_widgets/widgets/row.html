@@ -1,0 +1,3 @@
+{% for widget in widget.subwidgets %}
+  <td data-column-index="{{ forloop.counter0 }}">{% include widget.template_name %}</td>
+{% endfor %}

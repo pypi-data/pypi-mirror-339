@@ -1,0 +1,4 @@
+{% for subwidget in widget.subwidgets %}
+  <td data-row-index="{{ widget.row_index }}" data-column-index="{{ forloop.counter0 }}">{% include subwidget.template_name with widget=subwidget %}</td>
+{% endfor %}
+<td id="id_table_row_{{ widget.name }}_sum" data-row-sum="{{ widget.row_index }}" class="row-sum"></td>

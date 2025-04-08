@@ -1,0 +1,10 @@
+django_table_widgets/fields.py,sha256=u6-5h9C1pqIeYc2HD5P_Yv6vOfjD0bJS0RfohImQd6E,2568
+django_table_widgets/static/django_table_widgets/js/TableFieldSum.js,sha256=GkupuFX1Ptzn5KkmvrBOof7hEcoNephs7_iurgb1g-g,2794
+django_table_widgets/templates/django_table_widgets/widgets/row.html,sha256=3WChX2Y8xR40kz5IsOnfunJJI5gHCe5KRZIzVG3HGQA,140
+django_table_widgets/templates/django_table_widgets/widgets/row_sum.html,sha256=0oNCWAr31zlXFZv-yLZk2JjQrH_8_ba2BtYuyOl_M6A,312
+django_table_widgets/templates/django_table_widgets/widgets/table.html,sha256=j2e13n36pMMmSctkGsyS-HoAYoO0K8S-AqAzLc1PBIQ,1660
+django_table_widgets/widgets.py,sha256=d8y1ajp5E3HnWJO_cSg50zmp420gaAhjzvnAdLlUObE,1912
+django_table_widgets-0.0.1.dist-info/LICENSE,sha256=ueE8ySZQg4pTWgX9ufy4jRyCmzwYPBztzQgZxwUYmYw,1501
+django_table_widgets-0.0.1.dist-info/METADATA,sha256=vU0e6q6V6tDrZxw7oSzVmRpF1P3kY71IQl9ujobSRnw,3179
+django_table_widgets-0.0.1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+django_table_widgets-0.0.1.dist-info/RECORD,,
