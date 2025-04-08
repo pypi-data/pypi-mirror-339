@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-tat = mcp_server_tat:main
