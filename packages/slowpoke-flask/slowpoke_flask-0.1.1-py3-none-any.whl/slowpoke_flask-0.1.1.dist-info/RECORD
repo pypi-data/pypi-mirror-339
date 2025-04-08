@@ -1,0 +1,11 @@
+slowpoke/__init__.py,sha256=8nmEmpjKP6_wu_K_9XlrToJThIQ6VAnWjKg6oRcvzss,54
+slowpoke/cli.py,sha256=FssXLzhlKE6lOFWr-xagllVNu4GduqsYv8CoVY0PRoQ,548
+slowpoke/config.py,sha256=FRXxTaryL4YjGOMJWw_qE-xh5X-6yDePIQH-rmG0w00,376
+slowpoke/core.py,sha256=OWnsrjR1fTOn_HoeCn5fz_VFhjiAn5Oau3GuYUx55D0,846
+slowpoke/logger.py,sha256=J5rlp7hj_Qj-a36scZprb2bhmdEzNFJwDhWoFx2yqkc,997
+slowpoke_flask-0.1.1.dist-info/licenses/LICENSE,sha256=a99mtb8qROZYvqLuhmlasVCgbmAL9nzVzOJFrVSWLGE,3
+slowpoke_flask-0.1.1.dist-info/METADATA,sha256=Z3m8Cv51qka8eJJJC8VE_emsaiwmzgUh7zRDZxk3BlY,2370
+slowpoke_flask-0.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+slowpoke_flask-0.1.1.dist-info/entry_points.txt,sha256=cYmd8c03wliSxT_ZgnH9QWPXrxgKdELbVmFi9COUD_I,47
+slowpoke_flask-0.1.1.dist-info/top_level.txt,sha256=L7v26OCSIHvMRhLl8QeDH5HPm--r1oFnjfhdZ2g7ql8,9
+slowpoke_flask-0.1.1.dist-info/RECORD,,
