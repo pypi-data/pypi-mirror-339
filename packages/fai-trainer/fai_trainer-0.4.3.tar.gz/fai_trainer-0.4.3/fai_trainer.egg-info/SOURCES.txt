@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+fai_trainer.egg-info/PKG-INFO
+fai_trainer.egg-info/SOURCES.txt
+fai_trainer.egg-info/dependency_links.txt
+fai_trainer.egg-info/entry_points.txt
+fai_trainer.egg-info/not-zip-safe
+fai_trainer.egg-info/requires.txt
+fai_trainer.egg-info/top_level.txt
+trainer/__init__.py
+trainer/confusion_matrix.py
+trainer/data_preparation.py
+trainer/main.py
+trainer/model_training.py
+trainer/utils.py

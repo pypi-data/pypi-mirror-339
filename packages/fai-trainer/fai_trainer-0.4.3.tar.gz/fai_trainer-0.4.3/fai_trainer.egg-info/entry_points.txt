@@ -1,0 +1,2 @@
+[console_scripts]
+fai-trainer = trainer.main:main
