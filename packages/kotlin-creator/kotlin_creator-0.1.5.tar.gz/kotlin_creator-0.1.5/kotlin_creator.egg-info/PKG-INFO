@@ -1,0 +1,69 @@
+Metadata-Version: 2.2
+Name: kotlin-creator
+Version: 0.1.5
+Summary: A command-line tool for Kotlin project management
+Home-page: https://github.com/yourusername/kotlin-cli
+Author: 9tech
+Author-email: your.email@example.com
+Keywords: kotlin,android,clean-architecture,project-management,cli,development
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click>=8.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Kotlin Creator
+
+A minimalist command-line tool for creating Kotlin projects with Clean Architecture and Flow-based templates.
+
+## Installation
+
+Install using pip:
+
+```bash
+pip install kotlin-creator
+```
+
+Or with uv:
+
+```bash
+uv pip install kotlin-creator
+```
+
+## Usage
+
+Create a Kotlin Clean Architecture project:
+
+```bash
+create kotlin <project_name>
+```
+
+Create a Kotlin Flow-based project:
+
+```bash
+create flow <project_name>
+```
+
+Replace `<project_name>` with your desired project name.
+
+## License
+
+MIT License

@@ -1,0 +1,7 @@
+# Add your package dependencies here
+# For example:
+# requests>=2.25.1
+# pandas>=1.2.0
+click>=8.0.0
+pyyaml>=6.0.1
+python-dotenv>=1.0.0 
