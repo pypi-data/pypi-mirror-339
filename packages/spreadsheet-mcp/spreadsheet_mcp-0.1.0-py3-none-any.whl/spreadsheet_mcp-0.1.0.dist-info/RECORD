@@ -1,0 +1,8 @@
+spreadsheet_mcp/__init__.py,sha256=s3IwdfhyOS9Op7aFon8tdkLrQ9Y81OrONdFZteozbfI,248
+spreadsheet_mcp/cli.py,sha256=3r_zjJN2F2ZFsSxV1tm_GkX7zP2FKA_pBsHDV5AO5Ho,427
+spreadsheet_mcp/server.py,sha256=AadFXrgItHij-6fJ4HPtSTUhZ6UIFlc0VEyMdaVNzUs,4669
+spreadsheet_mcp/sheet.py,sha256=YaJRI_CMbwy-0voqE7OJ0xV4ICFMM4NEQ1RvnwIbM7s,2804
+spreadsheet_mcp-0.1.0.dist-info/METADATA,sha256=HoJsE6jMbQMLLhNRNMvGLGfPQjvObP9ZRm3ZVjM9Jss,1533
+spreadsheet_mcp-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+spreadsheet_mcp-0.1.0.dist-info/entry_points.txt,sha256=l7iEo9MnXgs0k22ALkVvDkrMIkiwH4LVlPsKLMOfVXM,61
+spreadsheet_mcp-0.1.0.dist-info/RECORD,,

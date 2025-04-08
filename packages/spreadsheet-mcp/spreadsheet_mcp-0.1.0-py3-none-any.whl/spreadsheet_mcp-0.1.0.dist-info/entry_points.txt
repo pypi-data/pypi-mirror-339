@@ -1,0 +1,2 @@
+[console_scripts]
+spreadsheet-mcp = spreadsheet_mcp.cli:main
