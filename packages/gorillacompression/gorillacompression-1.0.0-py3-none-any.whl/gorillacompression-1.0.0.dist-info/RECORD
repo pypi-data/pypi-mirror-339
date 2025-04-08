@@ -1,0 +1,9 @@
+gorillacompression/__init__.py,sha256=vyTGbU3Zfqbp9hCOC9IXZfRc0sTQvy-NxanTogJYme4,256
+gorillacompression/decode.py,sha256=bpr4uX0Xz7pc4R5mXjGqmgtBIt9fwXbeWwhcbSzLqyE,1038
+gorillacompression/encode.py,sha256=OP9B7Oxnk0WKDkt_dQXwlVqvWC8Lz5Ip1MhDoguVLQM,2971
+gorillacompression/result.py,sha256=OSDKYP5V3iEAIoEChyg4e6wJemt-oWlzPy6ZYExmm5Q,162
+gorillacompression-1.0.0.dist-info/licenses/LICENSE,sha256=_uNkODtVoDZXI76968HByon9Vb7Iro4ep94ZOiCgQqQ,1092
+gorillacompression-1.0.0.dist-info/METADATA,sha256=sFJXRz30rhALbzQfSKhOocVl_5jdePr2T7BxKYRfgVk,10793
+gorillacompression-1.0.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+gorillacompression-1.0.0.dist-info/top_level.txt,sha256=RRj8yQBO8fbwS0-iQm_0_21Zfoe3wnzC69tbNdGjknw,19
+gorillacompression-1.0.0.dist-info/RECORD,,
