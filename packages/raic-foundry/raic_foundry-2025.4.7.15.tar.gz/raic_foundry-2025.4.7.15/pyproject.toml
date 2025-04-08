@@ -1,0 +1,57 @@
+[project]
+name = "raic-foundry"
+description = "raic-foundry"
+readme = {file = "readme.md", content-type = "text/markdown"}
+requires-python = ">=3.10"
+keywords = ["raic", "foundry"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12"
+]
+dependencies = [
+    "wheel==0.45.0",
+    "pyparsing==3.2.0",
+    "cython==3.0.11",
+    "tqdm==4.67.0",
+    "dill==0.3.9",
+    "opencv-contrib-python-headless==4.10.0.84",
+    "patool==3.0.3",
+    "pydantic==2.9.2",
+    "pandas==2.2.3",
+    "numpy==1.26.4",
+    "pillow==11.1.0",
+    "python-dotenv==1.0.1",
+    "seaborn==0.13.2",
+    "faiss-cpu==1.8.0",
+    "auth0-python==4.7.2",
+    "azure-storage-blob==12.24.0",
+    "gitpython==3.1.43",
+    "rasterio==1.4.2",
+    "rio-tiler==7.5.0",
+    "shapely==2.0.6",
+    "typer==0.13.1",
+    "pytest"
+]
+dynamic = ["version"]
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src/"]
+
+[tool.setuptools.dynamic]
+version = {attr = "version.__version__"}
+
+[project.scripts]
+export_overwatch_csv = "raic.foundry.cli:cli_export_overwatch_csv"
+export_overwatch_pickle = "raic.foundry.cli:cli_export_overwatch_pickle"
+raic-foundry = "raic.foundry.cli.raic_cli:raic_commands"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  ".", "src"
+]
