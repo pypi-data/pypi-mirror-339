@@ -1,0 +1,69 @@
+Metadata-Version: 2.4
+Name: sharepoint-rest-api
+Version: 0.19
+Summary: Provide REST API (DRF style) for SharePoint
+Author-email: Domenico Di Nicola <domdinicola@gmail.com>
+License-Expression: Apache-2.0 OR MIT
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Django :: 5.2
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: django
+Requires-Dist: django-filter
+Requires-Dist: django-model-utils
+Requires-Dist: djangorestframework
+Requires-Dist: office365-rest-python-client
+Description-Content-Type: text/markdown
+
+SharePoint Rest API
+===================
+
+| Menu                 | Link                                                                                                                                                                       |
+|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Coverage Development | [![codecov](https://codecov.io/gh/domdinicola/sharepoint-rest-api/branch/master/graph/badge.svg?token=hiBXw0smpH)](https://codecov.io/gh/domdinicola/sharepoint-rest-api)  |
+| Coverage Stable      | [![codecov](https://codecov.io/gh/domdinicola/sharepoint-rest-api/branch/develop/graph/badge.svg?token=hiBXw0smpH)](https://codecov.io/gh/domdinicola/sharepoint-rest-api) |
+| Source Code          | https://github.com/domdinicola/sharepoint-rest-api                                                                                                                         |
+| Issue tracker        | https://github.com/domdinicola/sharepoint-rest-api/issues                                                                                                                  |
+| Documentation        | https://sharepoint-rest-api.readthedocs.io/en/latest/                                                                                                                      |
+
+Installation
+------------
+
+    pip install sharepoint-rest-api
+
+
+Setup
+-----
+
+Add `sharepoint_rest_api` to ``INSTALLED_APPS`` in settings
+
+    INSTALLED_APPS = [
+        'sharepoint_rest_api',
+    ]
+
+
+Coding Standards
+----------------
+
+To run checks on the code to ensure code is in compliance
+
+    $ ruff check
+    $ ruff format
+
+
+Testing
+-------
+
+Testing is important and tests are located in `tests/` directory and can be run with;
+
+    $ uv run pytest test
+
+Coverage report is viewable in `build/coverage` directory, and can be generated with;
