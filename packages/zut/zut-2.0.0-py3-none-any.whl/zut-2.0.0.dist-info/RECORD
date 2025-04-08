@@ -1,0 +1,17 @@
+zut/__init__.py,sha256=sNxyzRI6I_v-WRYLyPdpi15W52saudsUDzSUOexrTLM,154161
+zut/_version.py,sha256=2thmcF9DS_Zp1zHI3N0kjBeMAuCP9mdDGnL0clqQpS8,511
+zut/excel.py,sha256=-ShDlN87ptardlMelXg7BoYxZ0UVZq63MaDCHgx_r10,35468
+zut/files.py,sha256=GQQ8ixBPin2Slw8khSnVeq7aB3g_DkGqkrkIP53hkZ0,18359
+zut/gpg.py,sha256=l2U1ZqwfPbpJjV82D0KWNWTNekA70aRGSwclxia2HjE,7897
+zut/db/__init__.py,sha256=kbZ4DFBnsJscDjxfv07I-I_n55CaKfDFBshsTf_oyNg,130780
+zut/db/mariadb.py,sha256=TbMI-rkkx8nxmegQeh_5aGWqZnDOwm6XThm-F2tXLK0,6282
+zut/db/postgresql.py,sha256=WantiM-NTNZT3aTIz24tG1TehJYM2C2wBHE_GH29V30,16951
+zut/db/postgresqlold.py,sha256=9hC-UnjxARQCnJxVqWQaT8vMJi0WYV2sa9YFqDyyajM,3767
+zut/db/sqlite.py,sha256=4iEH2d3jEwhrvku49BTlYuBHFSAVuQuuh-UGdS5NFV0,8278
+zut/db/sqlserver.py,sha256=Z3Ks1l2SKyX8w_ajspQgVeOA-mjE7bH76prBbBJEiq8,11521
+zut/db/sqlutils/postgresql.sql,sha256=j89v7Cjjy8I7zVSoileNoi2ijrj6bFSldO8XqKnkKP8,2054
+zut-2.0.0.dist-info/licenses/LICENSE.txt,sha256=uH41NH_zCwPMfDiae0IDhHgNt5ldMUH2_uzLMjRcveI,1084
+zut-2.0.0.dist-info/METADATA,sha256=zmjaMNlZb6G6DzgxKQDtEpmL3-H7dHvfQzjpLCJHz4s,7387
+zut-2.0.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+zut-2.0.0.dist-info/top_level.txt,sha256=0b5rfbMHLPzpcwBifEaAzzfyv1gZPGT7RXa2myDnXXs,4
+zut-2.0.0.dist-info/RECORD,,
