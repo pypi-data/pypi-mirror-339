@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: hlit_dev
+Version: 0.0.0.1
+Home-page: 
+Author: Orange community
+Author-email: 
+Keywords: orange3 add-on
+Requires-Dist: uvicorn
+Requires-Dist: fastapi
+Requires-Dist: psutil
+Requires-Dist: json
+Requires-Dist: socket
