@@ -1,0 +1,5 @@
+{
+  "glue_jupyter.bqplot.image.tests.test_visual.test_contour_units[chromium]": "9d7dfd5526006dd7fcd2aef6370c3b1f704568d79325a1ba6a20a297082ea5f1",
+  "glue_jupyter.bqplot.scatter.tests.test_visual.test_visual_scatter2d[chromium]": "fbdd9fe2649a0d72813c03e77af6233909df64207cb834f28da479f50b9e7a1d",
+  "glue_jupyter.bqplot.scatter.tests.test_visual.test_visual_scatter2d_density[chromium]": "d843a816a91e37cb0212c7caae913d7563f6c2eb42b49fa18345a5952e093b2f"
+}
