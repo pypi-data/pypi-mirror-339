@@ -1,0 +1,2 @@
+[console_scripts]
+yasc_script_runner = yasc_script_runner.main:main
