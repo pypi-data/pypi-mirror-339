@@ -1,0 +1,9 @@
+
+[dev]
+mypy
+pylint>=3.3.4
+pytest
+pytest-cov
+pytest-timeout
+testfixtures
+tox<5
