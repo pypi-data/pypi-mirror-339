@@ -1,0 +1,10 @@
+bunnybase/__init__.py,sha256=jytoSWtPL1_SxzTa0Q6R3UstBef_6rGyjdchzV7vh-8,139
+bunnybase/data.py,sha256=xKIo0e_ekCsI_WjBtnbsFQ7JhVm5IqSYKL262jqJEdQ,1013
+bunnybase/datalist.py,sha256=RSEFsS-arVsNK9vkEW7fw-IxALKwxiRnUp_OAetFsB0,1027
+bunnybase/hub.py,sha256=pznKBPehNlWKV1mDr7otzPT0OgY8sB6LRUdUPyLWdcg,2447
+bunnybase/save.py,sha256=h2wiS8MJooOI7S8otRXXiunZhzdmbX-0-RNv1gzkrFE,4624
+bunnybase/utils.py,sha256=tUqnjl1R_-6kzes5MxnzwPT3TMStiwg89uhQvCraiwI,1781
+bunnybase-0.1.4.dist-info/LICENSE,sha256=JVHni44_vuhWP2ZK8wOUNmD9xIsssmMY30p5fR1E3j0,18031
+bunnybase-0.1.4.dist-info/METADATA,sha256=_LhnEpKxq19kNC-bV9nO8FHvYGqyfn7e3eK0B__iYfk,2090
+bunnybase-0.1.4.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+bunnybase-0.1.4.dist-info/RECORD,,
