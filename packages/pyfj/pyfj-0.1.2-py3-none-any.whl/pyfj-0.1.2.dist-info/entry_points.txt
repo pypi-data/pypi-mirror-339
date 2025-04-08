@@ -1,0 +1,3 @@
+[console_scripts]
+pyfj=pyfj.cli:main
+
