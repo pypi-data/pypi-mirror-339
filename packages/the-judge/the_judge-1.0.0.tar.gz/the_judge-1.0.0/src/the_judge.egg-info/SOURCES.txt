@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+src/the_judge/__init__.py
+src/the_judge.egg-info/PKG-INFO
+src/the_judge.egg-info/SOURCES.txt
+src/the_judge.egg-info/dependency_links.txt
+src/the_judge.egg-info/top_level.txt
