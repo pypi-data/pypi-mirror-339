@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: netora
+Version: 0.2.0
+Summary: Quickly uncover details and geolocation for any IP address
+Author-email: nativevoid <0x4E56@proton.me>
+Maintainer-email: nativevoid <0x4E56@proton.me>
+Project-URL: Homepage, https://nativevoid.mintlify.app
+Project-URL: Repository, https://github.com/nativevoid/netora
+Project-URL: Bug Tracker, https://github.com/nativevoid/netora/issues
+Keywords: geolocation,IP,OSINT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Security
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: tzdata>=2025.2
+Requires-Dist: backports.zoneinfo>=0.2.1; python_version < "3.9"
+
+<p align=center>
+  <br>
+  <a href="https://github.com/nativevoid/netora" target="_blank"><img src="https://raw.githubusercontent.com/nativevoid/netora/refs/heads/main/docs/images/netora-banner.png" style="margin: 20px 0;"></img></a>
+  <br>
+  <span>Quickly uncover details and geolocation for <strong>any</strong> IP address</span>
+  <br><br>
+  <span>Additional documentation can be found at our <a href="https://github.com/nativevoid/netora">GitHub repository</a></span>
+  <br>
+</p>
+
+## Usage
+
+```console
+$ netora --help
+usage: netora [-h] [--version] [--folderoutput FOLDEROUTPUT]
+                [--output OUTPUT] [--no-color]
+                IP_ADDRESSES [IP_ADDRESS ...] 
+```
+
+To search for only one IP address:
+```bash
+$ netora 123.123.123.123
+```
+
+To search for more than one IP address:
+```bash
+$ netora 111.111.111.111 222.222.222.222 112.112.112.112
+```
+<br>
+
+___
+
+<br>
+<p align="center">
+</a>
+</p>
