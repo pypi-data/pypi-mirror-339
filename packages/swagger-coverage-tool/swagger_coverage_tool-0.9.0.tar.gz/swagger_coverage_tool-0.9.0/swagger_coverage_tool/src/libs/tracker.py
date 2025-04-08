@@ -1,0 +1,65 @@
+from typing import Callable
+
+import httpx
+import requests
+
+from swagger_coverage_tool.config import Settings
+from swagger_coverage_tool.src.libs.models import EndpointCoverage
+from swagger_coverage_tool.src.libs.storage import SwaggerCoverageTrackerStorage
+from swagger_coverage_tool.src.tools.http import HTTPMethod
+from swagger_coverage_tool.src.tools.types import EndpointName, ServiceKey, StatusCode
+
+
+class SwaggerCoverageTracker:
+    def __init__(self, service: str, settings: Settings):
+        self.service = service
+        self.settings = settings
+
+        services = [service_config.key for service_config in settings.services]
+        if service not in services:
+            raise ValueError(
+                f"Service with key '{service}' not found in settings.\n"
+                f"Available services: {', '.join(services) or []}"
+            )
+
+        self.storage = SwaggerCoverageTrackerStorage(settings)
+
+    def track_coverage_httpx(self, endpoint: str):
+        def wrapper(func: Callable[..., httpx.Response]):
+            def inner(*args, **kwargs):
+                response = func(*args, **kwargs)
+
+                self.storage.save(
+                    EndpointCoverage(
+                        name=EndpointName(endpoint),
+                        method=response.request.method,
+                        service=ServiceKey(self.service),
+                        status_code=StatusCode(response.status_code),
+                    )
+                )
+
+                return response
+
+            return inner
+
+        return wrapper
+
+    def track_coverage_requests(self, endpoint: str):
+        def wrapper(func: Callable[..., requests.Response]):
+            def inner(*args, **kwargs):
+                response = func(*args, **kwargs)
+
+                self.storage.save(
+                    EndpointCoverage(
+                        name=EndpointName(endpoint),
+                        method=response.request.method or HTTPMethod.GET,
+                        service=ServiceKey(self.service),
+                        status_code=StatusCode(response.status_code),
+                    )
+                )
+
+                return response
+
+            return inner
+
+        return wrapper
