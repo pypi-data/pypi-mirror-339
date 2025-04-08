@@ -1,0 +1,2 @@
+[console_scripts]
+lean-docker-mcp = lean_docker_mcp:main
