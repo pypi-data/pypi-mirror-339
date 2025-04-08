@@ -1,0 +1,3 @@
+toml
+pyserial
+pymodaq<5,>4.0.0
