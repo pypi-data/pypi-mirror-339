@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: taphealth-kafka
+Version: 0.1.1
+Summary: Kafka utilities for TapHealth Python services
+Author: Afif
+Author-email: afif@tap.health
+Keywords: kafka,taphealth
+Requires-Python: >=3.8
+Requires-Dist: kafka-python>=2.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
