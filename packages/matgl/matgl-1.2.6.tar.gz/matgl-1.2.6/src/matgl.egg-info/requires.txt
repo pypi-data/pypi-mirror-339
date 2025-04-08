@@ -1,0 +1,17 @@
+ase
+pymatgen
+lightning<=2.5.1
+pydantic
+boto3
+numpy<2.0
+fsspec
+
+[:sys_platform != "linux"]
+dgl<=2.2.0
+torch<=2.2.0
+torchdata<=0.7.1
+
+[:sys_platform == "linux"]
+dgl<=2.4
+torch<=2.4.0
+torchdata<=0.8.0
