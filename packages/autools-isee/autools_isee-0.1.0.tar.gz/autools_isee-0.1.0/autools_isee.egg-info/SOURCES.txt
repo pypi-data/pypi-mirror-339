@@ -1,0 +1,11 @@
+README.md
+setup.py
+autools/__init__.py
+autools/core.py
+autools_isee.egg-info/PKG-INFO
+autools_isee.egg-info/SOURCES.txt
+autools_isee.egg-info/dependency_links.txt
+autools_isee.egg-info/entry_points.txt
+autools_isee.egg-info/requires.txt
+autools_isee.egg-info/top_level.txt
+tests/test_core.py
