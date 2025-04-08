@@ -1,0 +1,17 @@
+pynepalgeo/__init__.py,sha256=qUBVzvqfxGBWHhioVOLsZdO3jAiKCPI70EbCYimmiYs,186
+pynepalgeo/nepal_districts.py,sha256=F47SmLpoe7RtnkpXZbzs5W0UnUYTLw63mscnd2T5Jg0,1773
+pynepalgeo/nepal_municipalities.py,sha256=gmmKWzIWT9C8MEVa04h3CXjWC-wui43qAYLU3qSQF0M,2285
+pynepalgeo/nepal_provinces.py,sha256=mROm6iqU9b52D3stNfc6ej8ZhGziVbLWgLDFFAKI5hU,1764
+pynepalgeo/overall_info.py,sha256=nYpwFfzmE1tfyyfcEjJG6x0zqLW46xTcJ29px2EQKis,2947
+pynepalgeo/utils.py,sha256=30MZQ7qJIlN8udZLHgXWjU8lqjeZSbA28tdW_DHtYmI,1913
+pynepalgeo/dataset/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pynepalgeo/dataset/alldataset/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pynepalgeo/dataset/districts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pynepalgeo/dataset/municipalities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pynepalgeo/dataset/provinces/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pynepalgeo-1.1.1.dist-info/LICENSE.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pynepalgeo-1.1.1.dist-info/METADATA,sha256=oRET0PHM-D2kQqTAQRWf7hadLYR-G2gc38WUvC25KCs,3775
+pynepalgeo-1.1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pynepalgeo-1.1.1.dist-info/entry_points.txt,sha256=-vGabkXB-70xEAXvC6zWZ63fzPuJuCgV4Ot1InrIzGU,46
+pynepalgeo-1.1.1.dist-info/top_level.txt,sha256=7cHjNKE5tR_sXycb28qBBoO2BpSynOyOIpGD3QxwKco,11
+pynepalgeo-1.1.1.dist-info/RECORD,,
