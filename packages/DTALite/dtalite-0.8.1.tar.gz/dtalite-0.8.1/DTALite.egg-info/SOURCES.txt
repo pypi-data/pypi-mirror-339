@@ -1,0 +1,12 @@
+README.md
+setup.py
+DTALite/DTALite.py
+DTALite/__init__.py
+DTALite.egg-info/PKG-INFO
+DTALite.egg-info/SOURCES.txt
+DTALite.egg-info/dependency_links.txt
+DTALite.egg-info/top_level.txt
+DTALite/bin/DTALite.dll
+DTALite/bin/DTALite.so
+DTALite/bin/DTALite_arm.dylib
+DTALite/bin/DTALite_x86.dylib
