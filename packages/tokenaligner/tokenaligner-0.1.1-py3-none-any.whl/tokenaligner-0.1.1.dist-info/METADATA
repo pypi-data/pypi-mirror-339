@@ -1,0 +1,140 @@
+Metadata-Version: 2.1
+Name: tokenaligner
+Version: 0.1.1
+Summary: A lightweight utility to align NER labels with tokenized input for HuggingFace models.
+Home-page: https://github.com/YatinChaudhary/tokenaligner
+Author: Yatin Chaudhary
+Author-email: yatinchaudhary91@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: datasets (>=2.0.0)
+Requires-Dist: transformers (>=4.0.0)
+
+# tokenaligner
+
+`tokenaligner` is a simple and lightweight Python package for aligning NER tags with tokenized subwords using Hugging Face tokenizers. It's especially useful when preparing datasets for training Named Entity Recognition (NER) models with Hugging Face Transformers.
+
+---
+
+## ✨ Features
+
+- Aligns word-level NER tags with subword tokenization
+- Handles padding and truncation options
+- Supports Hugging Face `Datasets` for training
+- Batch tokenization support for faster preprocessing
+
+---
+
+## 📦 Installation
+
+```bash
+pip install tokenaligner
+```
+
+---
+
+## 🚀 Quick Start
+
+### 1. Tokenize and Align NER Tags
+
+```python
+from tokenaligner import TokenAligner
+from transformers import AutoTokenizer
+
+# Sample data
+tokens = [["Hugging", "Face", "is", "based", "in", "New", "York", "."]]
+tags = [["B-ORG", "I-ORG", "O", "O", "O", "B-LOC", "I-LOC", "O"]]
+
+# Load a tokenizer
+tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
+
+# Tokenize and align
+aligner = TokenAligner()
+aligned = aligner.tokenize_and_align(
+    tokens_list=tokens,
+    tags_list=tags,
+    tokenizer=tokenizer,
+    label_all_tokens=True,
+    return_hf_dataset=False
+)
+
+print(aligned[0]["input_ids"])
+print(aligned[0]["labels"])
+```
+
+---
+
+### 2. Return a Hugging Face Dataset
+
+```python
+hf_dataset = aligner.tokenize_and_align(
+    tokens_list=tokens,
+    tags_list=tags,
+    tokenizer=tokenizer,
+    return_hf_dataset=True
+)
+
+print(hf_dataset[0])
+```
+
+---
+
+### 3. Use with a Trainer API
+
+```python
+from transformers import AutoModelForTokenClassification, Trainer, TrainingArguments
+
+model = AutoModelForTokenClassification.from_pretrained("bert-base-cased", num_labels=9)
+
+trainer = Trainer(
+    model=model,
+    args=TrainingArguments(output_dir="./results", evaluation_strategy="epoch"),
+    train_dataset=hf_dataset,
+    eval_dataset=hf_dataset
+)
+
+trainer.train()
+```
+
+---
+
+## ⚙️ Parameters
+
+### `TokenAligner.tokenize_and_align(...)`
+
+| Parameter          | Type     | Description                                               |
+|--------------------|----------|-----------------------------------------------------------|
+| `tokens_list`      | `List[List[str]]` | List of tokenized sentences                                |
+| `tags_list`        | `List[List[str]]` | Corresponding entity tags                                  |
+| `tokenizer`        | `PreTrainedTokenizer` | Hugging Face tokenizer                              |
+| `batch_size`       | `int`    | Batch size for tokenization (default: 1000)               |
+| `padding`          | `bool`   | Apply padding (default: `False`)                          |
+| `truncation`       | `bool`   | Apply truncation (default: `False`)                       |
+| `label_all_tokens` | `bool`   | Label all subtokens with the same label (default: `False`)|
+| `return_hf_dataset`| `bool`   | Return Hugging Face dataset object (default: `False`)     |
+
+
+---
+
+## 📬 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
+
+---
+
+## 📄 License
+
+[MIT](LICENSE)
+
+---
+
+## 🙌 Acknowledgements
+
+Built on top of [Hugging Face Transformers](https://github.com/huggingface/transformers) and [datasets](https://github.com/huggingface/datasets).
+```
+
