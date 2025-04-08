@@ -1,0 +1,3 @@
+[console_scripts]
+binaural-generate = binaural_generator.cli:main
+binaural-webapp = binaural_generator.webapp:main
