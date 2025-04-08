@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: pnne_search
+Version: 0.1.1
+Summary: A package for search model estimation
+Home-page: https://pnnehome.github.io/
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: tensorflow>=2.0.0
+Requires-Dist: numpy>=1.15
+Requires-Dist: scipy>=1.0.0
+Requires-Dist: pandas>=1.0.0
+Requires-Dist: joblib>=0.14.0
+Requires-Dist: absl-py>=0.13.0
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+This package `pnne_search` implements the pre-trained neural network estimator for sequential search model, as described by "Pre-Training Estimators for Structural Models: Application to Consumer Search"
+
+To see a simple demonstration of how to use `pnne_search`, check out the example.py file.

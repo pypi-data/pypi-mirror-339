@@ -1,0 +1,5 @@
+include pnne_search/*.json
+include pnne_search/*.keras
+include pnne_search/*.csv
+include pnne_search/*.npz
+include pnne_search/*.pkl
