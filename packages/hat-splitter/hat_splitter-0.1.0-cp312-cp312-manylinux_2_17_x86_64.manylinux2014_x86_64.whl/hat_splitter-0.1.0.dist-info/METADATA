@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: hat-splitter
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE
+Summary: HAT splitter
+Author: Michael Barlow <michael.barlow@aleph-alpha-ip.ai>
+Author-email: Michael Barlow <michael.barlow@aleph-alpha-ip.ai>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/Aleph-Alpha/hat-splitter
+
+# hat-splitter
+
+These are the Python bindings for the HAT splitting rule.
+
+## Development
+
+The Python development environment is managed with `uv`. Install it if you
+haven't already.
+
+1. Build the crate and install it as a Python module in the `uv`-managed venv:
+
+```bash
+uv run maturin develop
+```
+
+2. Run the tests:
+
+```bash
+uv run pytest
+```
+
