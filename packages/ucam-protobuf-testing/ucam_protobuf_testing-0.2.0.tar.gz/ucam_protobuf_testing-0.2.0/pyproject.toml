@@ -1,0 +1,88 @@
+[tool.poetry]
+name = "ucam-protobuf-testing"
+version = "0.2.0"
+description = "Testing support library for python protobuf projects"
+authors = [
+  "University of Cambridge Information Services <devops-wilson@uis.cam.ac.uk>"
+]
+readme = "README.md"
+license = "MIT"
+repository = "https://gitlab.developers.cam.ac.uk/uis/devops/lib/ucam-protobuf-testing-python"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+  [[tool.poetry.packages]]
+  include = "protobuf_testing"
+
+  [tool.poetry.dependencies]
+  python = "^3.10"
+  factory-boy = "^3.3.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^4.1.0"
+pre-commit = "^3.6.2"
+tox = "^4.14.2"
+
+[tool.poetry.group.typecheck.dependencies]
+mypy = "^1.15.0"
+
+[tool.poe.tasks.fix]
+help = "Run pre-commit checks to fix formatting errors"
+cmd = "pre-commit run --all-files"
+
+[tool.poe.tasks.tox]
+help = "Run the Python test suite via tox"
+cmd = "docker compose run --build --rm tox"
+
+[tool.poe.tasks.down]
+help = "Stop any running containers"
+cmd = "docker compose down"
+
+[tool.poe.tasks."compose:build"]
+help = "Build or rebuild all container images"
+cmd = "docker compose build"
+
+[tool.poe.tasks."compose:pull"]
+help = "Pull any upstream container images"
+cmd = "docker compose pull --ignore-buildable --ignore-pull-failures"
+
+[tool.poe.tasks."tox:local"]
+help = "Run the Python test suite via tox using the locally installed Python version"
+cmd = "tox"
+
+[tool.poe.tasks."pytest:local"]
+help = "Run the Python test suite via pytest using the locally installed Python version"
+cmd = "pytest"
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+
+[tool.black]
+line-length = 99
+
+[tool.coverage.run]
+omit = [
+  ".tox/*",
+  "setup.py",
+  "manage.py",
+  "example/*",
+  "*/test/*",
+  "*/tests/*"
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+testpaths = [ "**/tests/*.py", "**/test/*.py" ]
+
+[build-system]
+requires = [ "poetry-core" ]
+build-backend = "poetry.core.masonry.api"
