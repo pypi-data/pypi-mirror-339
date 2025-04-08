@@ -1,0 +1,2 @@
+[console_scripts]
+foundry-wrap = foundry_wrap.cli:main
