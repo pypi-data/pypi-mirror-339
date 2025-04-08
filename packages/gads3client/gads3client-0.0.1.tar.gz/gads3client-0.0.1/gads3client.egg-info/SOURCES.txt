@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+gads3client/__init__.py
+gads3client.egg-info/PKG-INFO
+gads3client.egg-info/SOURCES.txt
+gads3client.egg-info/dependency_links.txt
+gads3client.egg-info/requires.txt
+gads3client.egg-info/top_level.txt
+tests/__init__.py
+tests/test_init.py
