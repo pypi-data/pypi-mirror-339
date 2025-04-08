@@ -1,0 +1,6 @@
+[console_scripts]
+totalopenstation-cli-connector = totalopenstation.scripts.cli_connector:cli_connector
+totalopenstation-cli-parser = totalopenstation.scripts.cli_parser:cli_parser
+
+[gui_scripts]
+totalopenstation-gui = totalopenstation.scripts.gui:gui
