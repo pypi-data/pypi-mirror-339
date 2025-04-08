@@ -1,0 +1,18 @@
+[project]
+name = "classistant"
+version = "1.0.3"
+description = "Command Line AI Assistant"
+authors = [{ name = "Paulo Lira" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = [
+    "httpx"  # adicione mais se precisar
+]
+
+[project.scripts]
+cla = "cla.__main__:cli"
+
+[build-system]
+requires = ["setuptools", "wheel", "build"]
+build-backend = "setuptools.build_meta"

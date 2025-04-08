@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+cla/__init__.py
+cla/__main__.py
+cla/chat.py
+classistant.egg-info/PKG-INFO
+classistant.egg-info/SOURCES.txt
+classistant.egg-info/dependency_links.txt
+classistant.egg-info/entry_points.txt
+classistant.egg-info/requires.txt
+classistant.egg-info/top_level.txt
