@@ -1,0 +1,13 @@
+ovrlpy/__init__.py,sha256=aWPVYTIq1ytPIAxi7Z81oyQLpppZNL-ltsdtMZ0Rsqc,840
+ovrlpy/_ovrlp.py,sha256=dDzt7OtcvjV5lR8Wza_Nl2geyjexZtWSKwru3QBGjdw,46094
+ovrlpy/_patching.py,sha256=-wySJz69CoQ_S1RDIZqXP1_kYzm46KqrLaUtGcPXnJ8,1373
+ovrlpy/_utils.py,sha256=MJ-okUDGJv8LFcF8LQRrX6usjhKK7pNLJr8wO2H01OA,15061
+ovrlpy/io.py,sha256=u7C4ZmYPTblhLmCUYuP86zQiZEcdan_6Cj1EqkOQrAU,4787
+ovrlpy/_ssam2/__init__.py,sha256=w6KwSAhjZ9snDUArp7jzxmEYAWfD9Zh141jsW0zkvWM,224
+ovrlpy/_ssam2/_ssam.py,sha256=-xiJpiVJV5GwLZfKXYsd4MyLQ0W7Txzjvchm9LWQdEw,5094
+ovrlpy/_ssam2/_utils.py,sha256=63gKlSCb1ujP2ekECJXgtKq1TzcBewIwHquj66oN_z4,2395
+ovrlpy-0.2.1.dist-info/licenses/LICENSE,sha256=PXY6IjcVYDy1kVVXIDD_wzoC2JkU2SU7idQAhAhwaVY,1075
+ovrlpy-0.2.1.dist-info/METADATA,sha256=TOJytnB9IMfBTM7onVx-oSuhacJ3y7jzZazBSaN8TCE,5744
+ovrlpy-0.2.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+ovrlpy-0.2.1.dist-info/top_level.txt,sha256=bVwux4VDjoP31aHJiMrRAsuiPScqT-hQo83rBxrdvtk,7
+ovrlpy-0.2.1.dist-info/RECORD,,
