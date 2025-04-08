@@ -1,0 +1,2 @@
+[console_scripts]
+paper2d-root-motion-baker = main:main

@@ -1,0 +1,12 @@
+paper2d_root_motion_baker-0.1.0.dist-info/licenses/LICENSE,sha256=e3__ZgeGUgsxi4Vvgd9T17qO-SyblS-M7544GQ490eo,1064
+src/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+src/config_manager.py,sha256=aOe-eS4gZYMwO25BeCHJNBYfao_ugcGxlcas1ml5lQk,1520
+src/image_processor.py,sha256=BCn1LWO2qRiEy7uDITob-koFokpjNhA8agfniap52dY,1872
+src/json_exporter.py,sha256=0HVsqtHhYPor1ocYZoHeOJKjG_KmUZl7HxqZ5FkyLx4,642
+src/marker_detector.py,sha256=t1WsB_vSfrNpObp0X-wLTankCnVnLyu3ulV7PIfHxlo,2052
+src/motion_calculator.py,sha256=iFk3d1DkMtEvGyKCXg_PP-UqdqODD7OEjW-rj5mJDiI,1981
+paper2d_root_motion_baker-0.1.0.dist-info/METADATA,sha256=YF4u689rF56gYZmuTtr3UgwgPC5udfmYY0cW6an1Uvw,3711
+paper2d_root_motion_baker-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+paper2d_root_motion_baker-0.1.0.dist-info/entry_points.txt,sha256=4ELZT_WlAQPV-_rYXyncdS3L4bYIgM8-WGr-u63DlgA,56
+paper2d_root_motion_baker-0.1.0.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+paper2d_root_motion_baker-0.1.0.dist-info/RECORD,,
