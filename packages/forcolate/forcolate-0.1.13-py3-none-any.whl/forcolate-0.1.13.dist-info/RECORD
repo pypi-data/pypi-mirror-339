@@ -1,0 +1,17 @@
+forcolate/__init__.py,sha256=dHNkkt83SaJY0jZ4yfOEYGXgsxHoczqC58cdSEyCnqw,456
+forcolate/bullet_point_workflow.py,sha256=M8vaDWJwf8UEpUIXbiRf95wKN7LX_aq-HOuCNXF8gjQ,2004
+forcolate/document_to_text.py,sha256=SWhODBT1ikAPrMG8QJB0XrjQHNC33oy_fe9NjPXsfIk,4096
+forcolate/folder_search.py,sha256=2Q2gVwc6GZYRZsy_9AsthoLv8jHpQ69_sHIe4hCtHR4,4555
+forcolate/outlook_search.py,sha256=hqmw37CfiqxyRlBk1YclMOC2NX07Z-ARaN8ySZlG4Zk,4118
+forcolate/query_url_extractor.py,sha256=M-7DAEAz8A9ZdJLvBYAPSb4Of35gCxykPkhW6sG9oi0,847
+forcolate/summary_extractor.py,sha256=XH1Mq1Z5vatrxHUKyunhJHKGxi0AwQE96kEw9YCLfzc,5058
+forcolate/tool_selector.py,sha256=ojxc1ppK3RHEbSA0oQcos_UZDqBaY8xiDBEwWH522Dk,2409
+forcolate/vendors/ms-marco-MiniLM-L6-v2/config.json,sha256=OA4CyT9DGDG-ZdmaTn5fZ8EzmFvy532dTrpGhHGQusw,794
+forcolate/vendors/ms-marco-MiniLM-L6-v2/model.safetensors,sha256=ISb3MF0X5eBJcH7HpcX4oDTpOnxNuU7BKjR2pzZloHc,133
+forcolate/vendors/ms-marco-MiniLM-L6-v2/tokenizer_config.json,sha256=fjv2mLYst_Q5Mcf3nST9fgjQPadtRZ_xLWnpxREYctk,316
+forcolate/vendors/ms-marco-MiniLM-L6-v2/vocab.txt,sha256=B-ztN1zsFE0nyQAkHz4zlHjeyVj5L928VR8pXJkgOKM,231508
+forcolate-0.1.13.dist-info/licenses/LICENSE,sha256=9xl476dykRD-3VpIdJ5YiPhH4dqwFe_rEaelLP7GVpY,1265
+forcolate-0.1.13.dist-info/METADATA,sha256=TO-MjfG60DuLZSmIOuJ_ztsfwlVfOQHUfpKgTlPYA7g,3858
+forcolate-0.1.13.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+forcolate-0.1.13.dist-info/top_level.txt,sha256=bX_NnwHLuayAEjqqeWVeIQykOUQRFfowOeKXAII-0l0,10
+forcolate-0.1.13.dist-info/RECORD,,
