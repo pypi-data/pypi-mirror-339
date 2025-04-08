@@ -1,0 +1,16 @@
+LICENSE
+README.rst
+pyproject.toml
+stratmc/__init__.py
+stratmc/config.py
+stratmc/data.py
+stratmc/inference.py
+stratmc/model.py
+stratmc/plotting.py
+stratmc/synthetics.py
+stratmc/tests.py
+stratmc.egg-info/PKG-INFO
+stratmc.egg-info/SOURCES.txt
+stratmc.egg-info/dependency_links.txt
+stratmc.egg-info/requires.txt
+stratmc.egg-info/top_level.txt
