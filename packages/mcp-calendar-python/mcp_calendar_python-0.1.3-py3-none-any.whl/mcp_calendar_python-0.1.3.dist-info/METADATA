@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: mcp-calendar-python
+Version: 0.1.3
+Summary: MCP server for Google Calendar integration
+Author-email: Jaemin You <2dois2be@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/tobedoit/gCalendar-mcp-python
+Project-URL: Bug Tracker, https://github.com/tobedoit/gCalendar-mcp-python/issues
+Project-URL: Source Code, https://github.com/tobedoit/gCalendar-mcp-python
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: python-dotenv
+Requires-Dist: google-api-python-client
+Requires-Dist: google-auth
+Requires-Dist: google-auth-oauthlib
+
+# MCP Calendar
+
+MCP(Model Context Protocol) 서버를 이용한 Google Calendar 이벤트 생성 도구입니다.
+
+## 설치 방법
+
+```bash
+pip install mcp-calendar-python
