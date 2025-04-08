@@ -1,0 +1,47 @@
+[project]
+name = "glacier"
+version = "0.4.5"
+description = "Python CLI building library for minimalists"
+authors = [{ name = "Hiroki Konishi", email = "relastle@gmail.com" }]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+readme = "README.md"
+dependencies = ["click>=8.1.8", "click-help-colors>=0.9.4"]
+urls = { Homepage = "https://github.com/relastle/glacier", Documentation = "https://github.com/relastle/glacier", Repository = "https://github.com/relastle/glacier" }
+
+[build-system]
+requires = ["hatchling>=1.0.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = ["glacier/*.py", "README.md", "LICENSE", "pyproject.toml"]
+
+[tool.mypy]
+ignore_missing_imports = true
+warn_redundant_casts = true
+strict_optional = true
+no_implicit_optional = true
+show_error_context = true
+show_column_numbers = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = false
+
+[tool.ruff]
+lint.ignore = ['E721']
+line-length = 120
+
+[tool.ruff.format]
+quote-style = "single"
+
+[dependency-groups]
+dev = [
+  "build>=1.2.2.post1",
+  "coverage>=7.8.0",
+  "mypy>=1.15.0",
+  "pytest>=8.3.5",
+  "pytest-asyncio>=0.26.0",
+  "ruff>=0.11.2",
+  "twine>=6.1.0",
+]
