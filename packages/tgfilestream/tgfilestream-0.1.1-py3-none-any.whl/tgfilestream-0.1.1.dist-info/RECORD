@@ -1,0 +1,15 @@
+tgfilestream/__init__.py,sha256=QOXjoN2-QP-J64vLn6n6SRqbRk_wd0AFfqdWgiMvpbU,70
+tgfilestream/__main__.py,sha256=pgPBDRUgjyuZyofem7pNPq70kspJUgBe0eC7-kLwBbo,2344
+tgfilestream/cache_util.py,sha256=TBU77WlOp3VIkTDySqSSbgZNy4d5iiUdnl51JKwwdRw,3215
+tgfilestream/config.py,sha256=kq9WZb9MwEPsalTzVwLslsKAF8bW5jCiaxxb7pTYPkw,3440
+tgfilestream/log.py,sha256=p5Y8PA_SvGsGMLloxeEQZRUy67t9t3KjfBP6bAntbGQ,1094
+tgfilestream/paralleltransfer.py,sha256=7UzUGqAyJntqHXBw37t4at9TMJi0L7C5Qx4-H6OE9IQ,8144
+tgfilestream/telegram.py,sha256=82_gubM1e3x_v6X_txTnVhPd_TIQZfGjvPTdXWUDwxE,1668
+tgfilestream/util.py,sha256=lPprIepc1yr10UPnIRoDaUEh7XZgpkxbb_slFBjT9fo,2701
+tgfilestream/web_routes.py,sha256=RndVbQJMl2wSaVki7j2BuZ1ALkfUjKOFapCUDtfpu8U,3723
+tgfilestream-0.1.1.dist-info/licenses/LICENSE,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+tgfilestream-0.1.1.dist-info/METADATA,sha256=fxBaDEd5orDz0w_fSgAXXIjpuW4mzMfd8Q1-k9S4V9g,2951
+tgfilestream-0.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+tgfilestream-0.1.1.dist-info/entry_points.txt,sha256=YoXy1EpzeeEo4QDjiZ2IEzqEIyKmTvk9Co_Gx_JSzAc,60
+tgfilestream-0.1.1.dist-info/top_level.txt,sha256=uVGqAKbASjPq1Ge6GxDad-KiajSWODp0out6gUXu6lI,13
+tgfilestream-0.1.1.dist-info/RECORD,,
