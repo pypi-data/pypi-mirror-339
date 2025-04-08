@@ -1,0 +1,22 @@
+[package]
+name = "vortex-metrics"
+authors = { workspace = true }
+categories = { workspace = true }
+description = "Vortex Metrics"
+edition = { workspace = true }
+homepage = { workspace = true }
+include = { workspace = true }
+keywords = { workspace = true }
+license = { workspace = true }
+readme = "README.md"
+repository = { workspace = true }
+rust-version = { workspace = true }
+version = { workspace = true }
+
+[dependencies]
+getrandom_v03 = { workspace = true }
+vortex-error = { workspace = true }
+witchcraft-metrics = { workspace = true }
+
+[lints]
+workspace = true

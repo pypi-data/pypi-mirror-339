@@ -1,0 +1,60 @@
+[package]
+name = "vortex-expr"
+authors = { workspace = true }
+categories = { workspace = true }
+description = "Vortex Expressions"
+edition = { workspace = true }
+homepage = { workspace = true }
+include = { workspace = true }
+keywords = { workspace = true }
+license = { workspace = true }
+readme = "README.md"
+repository = { workspace = true }
+rust-version = { workspace = true }
+version = { workspace = true }
+
+[lints]
+workspace = true
+
+[dependencies]
+datafusion-expr = { workspace = true, optional = true }
+datafusion-physical-expr = { workspace = true, optional = true }
+dyn-hash = { workspace = true }
+itertools = { workspace = true }
+prost = { workspace = true, optional = true }
+prost-types = { workspace = true, optional = true }
+serde = { workspace = true, optional = true, features = ["derive"] }
+serde_json = { workspace = true, optional = true }
+vortex-array = { workspace = true }
+vortex-buffer = { workspace = true }
+vortex-dtype = { workspace = true }
+vortex-error = { workspace = true }
+vortex-proto = { workspace = true, features = ["expr"] }
+vortex-scalar = { workspace = true }
+
+[dev-dependencies]
+vortex-expr = { path = ".", features = ["test-harness"] }
+
+[features]
+datafusion = [
+    "dep:datafusion-expr",
+    "dep:datafusion-physical-expr",
+    "vortex-scalar/datafusion",
+]
+serde = [
+    "dep:serde",
+    "dep:serde_json",
+    "vortex-dtype/serde",
+    "vortex-scalar/serde",
+    "vortex-error/serde",
+]
+proto = [
+    "vortex-dtype/proto",
+    "vortex-scalar/proto",
+    "vortex-proto/expr",
+    "vortex-error/prost",
+    "dep:prost",
+    "dep:prost-types",
+    "serde",
+]
+test-harness = []
