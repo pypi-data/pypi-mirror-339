@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+requirements-dev.txt
+requirements-test.txt
+requirements.txt
+pdf_processor/__init__.py
+pdf_processor/processor.py
+rainbow_pdf_processor.egg-info/PKG-INFO
+rainbow_pdf_processor.egg-info/SOURCES.txt
+rainbow_pdf_processor.egg-info/dependency_links.txt
+rainbow_pdf_processor.egg-info/requires.txt
+rainbow_pdf_processor.egg-info/top_level.txt
+tests/test_processor_real.py

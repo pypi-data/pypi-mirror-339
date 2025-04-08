@@ -1,0 +1,8 @@
+# 开发环境依赖
+PyMuPDF>=1.25.0  # PDF 处理核心库
+
+# 代码格式化和质量检查
+black
+isort
+flake8
+mypy

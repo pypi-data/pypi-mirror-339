@@ -1,0 +1,15 @@
+PyMuPDF>=1.25.0
+
+[dev]
+PyMuPDF>=1.25.0
+black
+isort
+flake8
+mypy
+
+[test]
+PyMuPDF>=1.25.0
+pytest
+pytest-cov
+pytest-mock
+pytest-asyncio

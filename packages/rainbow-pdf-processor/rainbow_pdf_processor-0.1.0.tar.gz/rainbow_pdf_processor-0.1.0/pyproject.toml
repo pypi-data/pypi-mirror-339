@@ -1,0 +1,63 @@
+# 构建系统配置
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]  # 使用 setuptools 作为构建后端
+build-backend = "setuptools.build_meta"
+
+# 项目元数据
+[project]
+name = "rainbow-pdf-processor"
+version = "0.1.0"  # 遵循语义化版本
+authors = [{ name = "zhanghanlin", email = "zhanghanlin@163.com" }]
+description = "A powerful PDF processing tool with text extraction, table recognition, and image extraction capabilities"
+readme = "README.md"  # 自动从 README.md 生成长描述
+requires-python = ">=3.8"  # Python 版本要求
+keywords = ["pdf", "text extraction", "table recognition", "image extraction", "document processing"]
+license = { text = "MIT" }
+classifiers = [  # PyPI 分类标签
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: General",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+# 声明动态依赖，从外部文件读取
+dynamic = ["dependencies", "optional-dependencies"]
+
+# 动态依赖配置
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+optional-dependencies.dev = { file = ["requirements-dev.txt"] }
+optional-dependencies.test = { file = ["requirements-test.txt"] }
+
+# 项目链接
+[project.urls]
+"Homepage" = "https://github.com/RainbowGuysForFun/pdf-processor"
+"Bug Tracker" = "https://github.com/RainbowGuysForFun/pdf-processor/issues"
+"Documentation" = "https://github.com/RainbowGuysForFun/pdf-processor#readme"
+"Source Code" = "https://github.com/RainbowGuysForFun/pdf-processor"
+
+# pytest 配置
+[tool.pytest.ini_options]
+addopts = "-ra -q"  # -r 显示测试摘要，-a 显示所有，-q 安静模式
+testpaths = ["tests"]  # 测试文件目录
+asyncio_mode = "strict"  # 启用严格的异步模式
+asyncio_default_fixture_loop_scope = "function"  # 设置默认的事件循环作用域
+
+# black 代码格式化配置
+[tool.black]
+line-length = 88  # 行长度限制
+target-version = ['py38']  # 目标 Python 版本
+include = '\.pyi?$'  # 包含的文件类型
+
+# isort 导入排序配置
+[tool.isort]
+profile = "black"  # 使用 black 兼容配置
+multi_line_output = 3  # 多行输出样式
