@@ -1,0 +1,6 @@
+pytest>=7.0.0
+build>=0.10.0
+cibuildwheel>=2.13.1
+twine>=4.0.0
+pyarrow>=14.0.0
+setuptools_scm>=8.0.0
