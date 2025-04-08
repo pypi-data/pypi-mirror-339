@@ -1,0 +1,2 @@
+[console_scripts]
+label = labelgenerator.main:main
