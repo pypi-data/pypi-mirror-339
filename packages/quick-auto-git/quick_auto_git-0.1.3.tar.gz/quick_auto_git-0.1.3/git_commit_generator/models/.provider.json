@@ -1,0 +1,56 @@
+{
+    "ChatGLM": {
+        "provider": "ChatGLMProvider",
+        "model_name": "glm-4-flash",
+        "model_url": "https://open.bigmodel.cn/api/paas/v4/chat/completions",
+        "max_tokens": 1024
+    },
+    "DeepSeek": {
+        "provider": "DeepseekProvider",
+        "model_name": "deepseek-chat",
+        "model_url": "https://api.deepseek.com/chat/completions",
+        "max_tokens": 1024
+    },
+    "HuggingFace": {
+        "provider": "HuggingFaceProvider",
+        "model_name": "HuggingFace",
+        "model_url": "https://mirror.huggingface.cn",
+        "max_tokens": 1024
+    },
+    "Google": {
+        "provider": "GoogleProvider",
+        "model_name": "Gemma",
+        "model_url": "https://huggingface.co/google",
+        "max_tokens": 1024
+    },
+    "OpenAI": {
+        "provider": "OpenaiProvider",
+        "model_name": "gpt-3.5-turbo",
+        "model_url": "https://api.openai.com/v1/chat/completions",
+        "max_tokens": 1024
+    },
+    "Azure": {
+        "provider": "AzureProvider",
+        "model_name": "gpt-4",
+        "model_url": "https://your-resource-name.openai.azure.com/openai/deployments/your-deployment-name",
+        "max_tokens": 1024
+    },
+    "Anthropic": {
+        "provider": "AnthropicProvider",
+        "model_name": "claude-3-opus-20240229",
+        "model_url": "https://api.anthropic.com/v1/messages",
+        "max_tokens": 4096
+    },
+    "Baidu": {
+        "provider": "BaiduProvider",
+        "model_name": "ERNIE-Bot-4",
+        "model_url": "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat",
+        "max_tokens": 2048
+    },
+    "Moonshot": {
+        "provider": "MoonshotProvider",
+        "model_name": "moonshot-v1-8k",
+        "model_url": "https://api.moonshot.cn/v1/chat/completions",
+        "max_tokens": 1024
+    }
+}
