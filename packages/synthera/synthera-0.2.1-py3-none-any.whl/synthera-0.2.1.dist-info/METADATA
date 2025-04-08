@@ -1,0 +1,143 @@
+Metadata-Version: 2.4
+Name: synthera
+Version: 0.2.1
+Summary: Python client for Synthera AI API
+Author: Synthera AI
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: numpy>=2.2.3
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: pyarrow>=19.0.1
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: tenacity>=9.0.0
+Description-Content-Type: text/markdown
+
+# Synthera AI SDK
+
+This provides a Python SDK for accessing the Synthera AI API.
+
+## Installation
+
+```bash
+pip install synthera
+```
+
+## API Key
+You are required to use an API key to access the Synthera AI API.
+
+For ease of use, set as an environment variable: `SYNTHERA_API_KEY`.
+
+For example:
+```
+export SYNTHERA_API_KEY=<api_key>
+```
+
+Or you can pass to the client.
+
+## Getting Started
+
+Import the Synthera client:
+```python
+from synthera import SyntheraClient
+```
+
+Create a client:
+```python
+client = SyntheraClient()
+```
+
+Check the connection works:
+```python
+client.healthy()
+
+`True`
+```
+
+For more advanced connection options, pass parameters to the client:
+```python
+SyntheraClient(api_key: str, host: str, port: int, timeout_secs: int)
+```
+
+## Fixed Income
+
+To run fixed income yield curve simulations.
+
+### Parameters
+
+Prepare input parameters.
+
+| Parameter | Type | Description | Values |
+|-----------|------|-------------|---------|
+| no_of_days | integer | Number of days to simulate forward from the reference date | > 0 (e.g., 3, 30, 60, 120) |
+| no_of_samples | integer | Number of simulation paths to generate | > 0 (e.g., 100, 1024, 10000) |
+| reference_date | string | Reference date for the simulation (in the past) | YYYY-MM-DD format |
+| yield_curve_names | array[string] | List of yield curves to simulate, using their unique identifiers | List of curve names (e.g., ["USD_Z0", "EUR_Z0", "GBP_Z0"]) |
+| model_label | string | Version of the simulation model to use | Valid model version (e.g., "model-v28", "model-v29") |
+| return_conditional | boolean | Whether to return conditional simulation results | Optional, defaults to false |
+
+For example:
+```python
+params = {
+    "no_of_days": 60,
+    "no_of_samples": 1024,
+    "reference_date": "2010-01-01",
+    "yield_curve_names": [
+        "USD_Z0",
+        "EUR_Z0",
+    ],
+    "model_label": "model-v28",
+    "return_conditional": False
+}
+```
+
+### Simulations
+
+Run directly:
+```python
+results = client.fixed_income.simulation_past_date(params=params)
+```
+
+To view available yield curves:
+```python
+print(results.names)
+```
+
+To view yield curve dataframe column names:
+```python
+print(results.column_names)
+```
+
+To view a specific yield curve dataframes, e.g. for `USD_Z0`:
+```python
+print(results.dataframes["USD_Z0"])
+```
+
+To view all yield curves in a single `numpy` ndarray (order is same as `names`):
+```python
+print(results.ndarray)
+```
+
+To view request metadata:
+```python
+print(results.metadata)
+```
+
+Alternatively, import the fixed income class:
+```python
+from synthera import FixedIncome
+```
+
+Pass the client:
+```python
+fixed_income = FixedIncome(client)
+```
+
+Then run a simulations:
+```python
+results = fixed_income.simulation_past_date(params=params)
+```
