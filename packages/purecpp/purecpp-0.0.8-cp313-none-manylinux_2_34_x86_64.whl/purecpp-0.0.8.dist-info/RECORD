@@ -1,0 +1,13 @@
+purecpp/__init__.py,sha256=0F6mc6xsKdPWhyhv08IOVbv4G3kVYX6_ksQJ5H0V4MQ,4473
+purecpp/purecpp_chunks_clean.cpython-313-x86_64-linux-gnu.so,sha256=MwU0JdpGeV25oFJ2tCQ2v1RWw39y42DAGrSRabVCheA,51008353
+purecpp/purecpp_embed.cpython-313-x86_64-linux-gnu.so,sha256=ZvqFw-de2X3jj9Gh6uJxH9OR5FFSPB7nptZ8sQfoL78,13966273
+purecpp/purecpp_extract.cpython-313-x86_64-linux-gnu.so,sha256=HSaFqjk9jhZ6SnPJRUe_ex-GUrk2dh6OtVyoKTFaoHI,25503705
+purecpp/purecpp_libs.cpython-313-x86_64-linux-gnu.so,sha256=iuu5dtNfsHiRwa2UBncykm8TRf2vv6mdPXPVShMsWvo,3089337
+purecpp/purecpp_meta.cpython-313-x86_64-linux-gnu.so,sha256=59KggDB9mdZFdLRnnwUa9yectZpqfc-OkmcyK_atFOQ,41819393
+purecpp.libs/libc10-6687e695.so,sha256=cN0kzUmlV6RenqZsZ3RIK6MXzC16_6ODT50U40aI7_I,1381689
+purecpp.libs/libgomp-14f972ab.so.1.0.0,sha256=IHLwCI9uVbeP__qWWABlIyI1_zz-Yv1Zrbmr0x298Wo,311841
+purecpp.libs/libtorch-52708eda.so,sha256=jd_FqObSIwpOAbV_mm7bVXk2B3qfuRwfYIt_wIdJ5Ns,12985
+purecpp-0.0.8.dist-info/METADATA,sha256=cHuMsig5lJHdqT5mtKZEcc0iCGGIy7pMVInhyERhGcs,598
+purecpp-0.0.8.dist-info/WHEEL,sha256=r9NcMKgbPaYCUKLhSIbaxYFNf5Edc93uNFnwT9FmNGU,134
+purecpp-0.0.8.dist-info/top_level.txt,sha256=qHlioHpJArH9GfRCfT7XDDnh8aMxphdL2J_18sV9uSU,8
+purecpp-0.0.8.dist-info/RECORD,,
