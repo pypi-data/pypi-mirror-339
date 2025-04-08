@@ -1,0 +1,16 @@
+dedup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dedup/alignment.py,sha256=5s1sx3i_tNp3yrORbSY6oJPgODZoU21xOsu7gIUhqao,6798
+dedup/contig.py,sha256=XrwDbczshkCkBnHSItysrkczQEsE6H4oftDiOALTqFo,8315
+dedup/dedup.py,sha256=hVbi1Jv-670lqOGCYVuOo9ig1DzCkRp2GroHSqbncY8,30040
+dedup/kmer_spectrum.py,sha256=fKKgEU0BlMtrfP-tWC7SbdAyMxhj4LTBssc-YNiOJug,7498
+dedup/kmer_utilities.py,sha256=A2Ep-Y1vnp-UgnWXFJTRRhrxC2up867XiImAsfxfTgw,10653
+dedup/logging_config.py,sha256=6hdod2tQKy-ZonEG7_1WZv6y5CVzSYpvFTEp4Ra7Uys,1041
+dedup/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dedup/test/test_alignment.py,sha256=EAwI5GzeEEy-SclKwcpQNIlqQZh2s4B0V1aZ4fb5kmo,2497
+dedup/test/test_contig.py,sha256=M_f6iDoGVIgMAZRORtxeF-c738uusalkOTnFzS_Dd8c,2352
+dedup_assembly-1.0.dist-info/LICENSE,sha256=DKajWPs7pJhDpKTeHwSQ-y_oHijBzKFrWWEYhaNyPl4,1058
+dedup_assembly-1.0.dist-info/METADATA,sha256=0RLRIJviGB0IFIHW7y4gx0ho9KdDScfWPexPZ2UqIj4,4445
+dedup_assembly-1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+dedup_assembly-1.0.dist-info/entry_points.txt,sha256=F8ZePGFA1HO5liONvTfQyH5mTWcN4WJzPImX-VHom8E,43
+dedup_assembly-1.0.dist-info/top_level.txt,sha256=3brSLYZfn739QYkb51zlsnfrIyZYwBtFpw1L8BKvuAI,6
+dedup_assembly-1.0.dist-info/RECORD,,
