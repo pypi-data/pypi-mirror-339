@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+maths_mcp/__init__.py
+maths_mcp/main.py
+maths_mcp/utils.py
+maths_mcp.egg-info/PKG-INFO
+maths_mcp.egg-info/SOURCES.txt
+maths_mcp.egg-info/dependency_links.txt
+maths_mcp.egg-info/entry_points.txt
+maths_mcp.egg-info/requires.txt
+maths_mcp.egg-info/top_level.txt
