@@ -1,0 +1,7 @@
+langchain-openai
+langchain
+python-dotenv
+pymupdf
+Pillow
+fitz
+trafilatura
