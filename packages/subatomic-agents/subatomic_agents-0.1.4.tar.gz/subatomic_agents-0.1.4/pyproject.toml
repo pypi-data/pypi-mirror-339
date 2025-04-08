@@ -1,0 +1,41 @@
+[project]
+name = "subatomic_agents"
+version = "0.1.4"
+description = "A powerful multi-agent framework for processing and understanding multimodal information with GenAI."
+authors = [
+    {name = "Karl Simon", email = "karl@getsubatomic.ai"},
+    {name = "Aaron Sosa", email = "wilfredo@getsubatomic.ai"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+    "langchain",
+    "langchain_community",
+    "langchain_google_genai",
+    "langchain_core",
+    "langchain_text_splitters",
+    "python_dotenv",
+    "google_generativeai",
+    "langchain_openai",
+    "pydantic",
+    "langgraph",
+    "langchain_chroma",
+    "chromadb",
+    "youtube_transcript_api",
+    "pytube",
+    "pypdf",
+    "unstructured",
+    "python-magic",
+    "python-pptx",
+    "docx2txt",
+    "openpyxl",
+    "jq",
+    "gdown",
+    "weasyprint",
+    "pdf2docx"
+]
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
