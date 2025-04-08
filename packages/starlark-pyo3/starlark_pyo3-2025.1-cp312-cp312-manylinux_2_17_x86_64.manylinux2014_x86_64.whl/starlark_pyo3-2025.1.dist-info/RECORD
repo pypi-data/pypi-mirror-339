@@ -1,0 +1,8 @@
+starlark_pyo3-2025.1.dist-info/METADATA,sha256=pB19lPCDgLGDbpzF_x5JUV_G_Y_oiHuHxCOmcWh-SNo,3178
+starlark_pyo3-2025.1.dist-info/WHEEL,sha256=S1kMhEh6EykiwczohhYmFNC42qiDle6DE4gvf4LHuck,129
+starlark_pyo3-2025.1.dist-info/licenses/LICENSE,sha256=JcVW1PHUso1loxlJminIt49EWNpVV5o5UQpR6WD-gSU,11384
+starlark/__init__.py,sha256=EyGbHdpz0OtVifaAivX5cChxipG5H3-M_I8cI-AWBz4,115
+starlark/__init__.pyi,sha256=r43nzHCu7lHt6QwlnfdzP64mp3VdTlIzCUIoH-obikU,2652
+starlark/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+starlark/starlark.cpython-312-x86_64-linux-gnu.so,sha256=9eYDhkE-_8Z7FuHZcanBLch9jPgE73KiPTSkQDbQVwY,10678296
+starlark_pyo3-2025.1.dist-info/RECORD,,
