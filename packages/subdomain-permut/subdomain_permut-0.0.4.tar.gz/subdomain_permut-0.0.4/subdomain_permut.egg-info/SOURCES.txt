@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+subdomain_permut/__init__.py
+subdomain_permut/__version__.py
+subdomain_permut/main.py
+subdomain_permut.egg-info/PKG-INFO
+subdomain_permut.egg-info/SOURCES.txt
+subdomain_permut.egg-info/dependency_links.txt
+subdomain_permut.egg-info/entry_points.txt
+subdomain_permut.egg-info/requires.txt
+subdomain_permut.egg-info/top_level.txt

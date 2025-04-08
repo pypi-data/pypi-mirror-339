@@ -1,0 +1,2 @@
+[console_scripts]
+subdomain-permut = subdomain_permut.main:main
