@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: kaf_retry_wrapper
+Version: 0.1.0
+Summary: A Kafka-based retry mechanism for API requests with success/failure callbacks.
+Home-page: https://github.com/yourusername/kafka-retry-wrapper
+Author: Anas Iqbal
+Author-email: anas.iqbal@pepsales.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: kafka-python>=2.0.2
+Requires-Dist: requests>=2.32.3
+Requires-Dist: pymongo>=4.10.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
