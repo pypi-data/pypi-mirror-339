@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+mosart/__init__.py
+mosart/lsquares.py
+mosart/sfs.py
+mosart.egg-info/PKG-INFO
+mosart.egg-info/SOURCES.txt
+mosart.egg-info/dependency_links.txt
+mosart.egg-info/requires.txt
+mosart.egg-info/top_level.txt
