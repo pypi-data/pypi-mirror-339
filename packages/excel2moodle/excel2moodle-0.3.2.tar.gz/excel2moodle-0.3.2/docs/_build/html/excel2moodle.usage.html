@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="Python" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Guide &mdash; excel2moodle 0.3.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=3e6abc0e"></script>
+        <script src="_static/doctools.js?v=9bcbadda"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="excel2moodle.extra package" href="excel2moodle.extra.html" />
+    <link rel="prev" title="excel2moodle documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            excel2moodle
+          </a>
+              <div class="version">
+                0.3.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#writing-questions-into-the-spreadsheet">Writing questions into the spreadsheet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#question-type-agnostic-fields">Question-type agnostic fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-valid-questions-of-type-nfm">Creating valid questions of Type <code class="docutils literal notranslate"><span class="pre">NFM</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#generating-questions-from-the-spreadsheet">Generating questions from the spreadsheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-an-exam-question-selection">Creating an exam question selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-the-extra-modules-from-the-tools-section">Using the extra modules from the <code class="docutils literal notranslate"><span class="pre">Tools</span></code> section</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#available-extra-functionality">Available <em>extra</em> functionality</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="excel2moodle.extra.html">excel2moodle.extra package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="excel2moodle.core.html">excel2moodle.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="excel2moodle.ui.html">excel2moodle.ui package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">excel2moodle</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">User Guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/excel2moodle.usage.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="user-guide">
+<h1>User Guide<a class="headerlink" href="#user-guide" title="Link to this heading"></a></h1>
+<section id="writing-questions-into-the-spreadsheet">
+<h2>Writing questions into the spreadsheet<a class="headerlink" href="#writing-questions-into-the-spreadsheet" title="Link to this heading"></a></h2>
+<p>When writing questions several important things must be considered, as the program still is quite buggy and likely to crash, when unexpected input is reached.</p>
+<section id="question-type-agnostic-fields">
+<h3>Question-type agnostic fields<a class="headerlink" href="#question-type-agnostic-fields" title="Link to this heading"></a></h3>
+<p>For all of the qustion types the following fields must/may be included in the spreadsheet</p>
+<blockquote>
+<div><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">number</span></code>: <em>mandatory</em> The number of the question</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>:  <em>mandatory</em> any of  <code class="docutils literal notranslate"><span class="pre">NFM</span></code>, <code class="docutils literal notranslate"><span class="pre">NF</span></code>, <code class="docutils literal notranslate"><span class="pre">MC</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: <em>mandatory</em> the internal name of the question, not the title that will be seen when the question is viewed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code>: <em>mandatory</em>, the question text. At least one this must be filled out. If it occures more than once, a new paragraph gets added for each.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">picture</span></code>: <em>optional</em> if left empty, no picture will be included</p>
+<blockquote>
+<div><ul>
+<li><p>All pictures have to be in the folder <code class="docutils literal notranslate"><span class="pre">Abbildungen_SVG/KAT_XX</span></code> in the same dir as the spreadsheet</p></li>
+<li><p>if a picture should be include, <code class="docutils literal notranslate"><span class="pre">1</span></code> (like true) should be written here.</p></li>
+<li><p>If a picture from another Question should be used, write:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1=ID</span></code> where <code class="docutils literal notranslate"><span class="pre">ID</span></code> is the number of the question that the picture should be used from.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="creating-valid-questions-of-type-nfm">
+<h3>Creating valid questions of Type <code class="docutils literal notranslate"><span class="pre">NFM</span></code><a class="headerlink" href="#creating-valid-questions-of-type-nfm" title="Link to this heading"></a></h3>
+<p>The following fields must be filled out additionally to the type-agnostic ones:</p>
+<blockquote>
+<div><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">bulletPoints</span></code>: <em>mandatory</em> list of bullet points seperated by <code class="docutils literal notranslate"><span class="pre">;</span></code>, each bullet Points consist of 4 parts:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Name: (Example: <em>length</em>)</p></li>
+<li><p>Variable Name: (Example <em>l</em> )</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">=</span></code>-Sign</p></li>
+<li><p>Variable:  (Example <em>{l}</em>): must be one letter enclosed by curly braces</p></li>
+<li><p>Si-Unit: (Example <em>m</em>)</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">result</span></code>: <em>mandatory</em> formula to calculate the result. Must follow those rules.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Decimal separator must be a <code class="docutils literal notranslate"><span class="pre">.</span></code> dot.</p></li>
+<li><p>Variables must <strong>not</strong> be encapsulated by <code class="docutils literal notranslate"><span class="pre">{curly}</span></code> braces.</p></li>
+<li><p>Example: <code class="docutils literal notranslate"><span class="pre">3.7*a/(b+4*c)-a**2/4</span></code> is a valid formula</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tolerance</span></code>: <em>mandatory</em> as fraction</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code>: <em>optional</em>, 'not yet implemented'</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">firstResult</span></code>: <em>optional</em> but recommended to verify the <em>formula</em> inside <code class="docutils literal notranslate"><span class="pre">result</span></code> with the equation-checker tool.</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="generating-questions-from-the-spreadsheet">
+<h2>Generating questions from the spreadsheet<a class="headerlink" href="#generating-questions-from-the-spreadsheet" title="Link to this heading"></a></h2>
+<p>To generate the Questions, the spreadsheet must be filled according to the example spreadsheet. If not the creation of the XML-Files will throw some errors.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Open the excel2moodle Programm by executing <code class="docutils literal notranslate"><span class="pre">py</span> <span class="pre">-m</span> <span class="pre">excel2moodle</span></code> on the command line (py works on windows, for unix based systems it would be <code class="docutils literal notranslate"><span class="pre">python</span></code> or <code class="docutils literal notranslate"><span class="pre">python3</span></code>)</p></li>
+<li><p>Select the spreadsheet by clicking on the <code class="docutils literal notranslate"><span class="pre">select</span> <span class="pre">spreadsheet</span></code> button.</p></li>
+</ol>
+</div></blockquote>
+<p>Now all Questions are created and should be shown in the Question List, sorted into their categories</p>
+</section>
+<section id="creating-an-exam-question-selection">
+<h2>Creating an exam question selection<a class="headerlink" href="#creating-an-exam-question-selection" title="Link to this heading"></a></h2>
+<p>An exam most often will not include all questions present in the spreadsheet.
+Therefore only a selection of questions can be made with <em>excel2moodle</em>.
+The selection can be exported to a single <code class="docutils literal notranslate"><span class="pre">.xml</span></code> file, which then may be uploaded to <em>moodle</em></p>
+<p>Create an exam File:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>click on every questions that should be included in the exam</p></li>
+<li><p>check, if the total number of points and questions is as desired</p></li>
+<li><p>Configure the export Settings to your liking. Possible is:</p>
+<ul class="simple">
+<li><p>Whether or not the questions should be categorized</p></li>
+<li><p>If for every <code class="docutils literal notranslate"><span class="pre">NFM</span></code> question the same variant should be used</p></li>
+<li><p>If yes, which variant this should be</p></li>
+</ul>
+</li>
+<li><p>Export the selected questions by clicking on <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">selected</span> <span class="pre">questions</span> <span class="pre">to</span> <span class="pre">examfile</span></code></p></li>
+<li><p>You will be promted to specify the export location</p></li>
+</ol>
+</div></blockquote>
+<p>Now a little overview is shown with the selected questions. If clicking <em>OK</em> those questions will be exported into the file specified at step 3</p>
+</section>
+<section id="using-the-extra-modules-from-the-tools-section">
+<h2>Using the extra modules from the <code class="docutils literal notranslate"><span class="pre">Tools</span></code> section<a class="headerlink" href="#using-the-extra-modules-from-the-tools-section" title="Link to this heading"></a></h2>
+<p>Some functionality is separated from the main use-case, hence it lives outside the <em>core</em> subpackage inside the <em>extra</em> subpackage.
+Those functionality can be used either via <em>cmd</em> through the <code class="docutils literal notranslate"><span class="pre">excel2moodle.extra</span></code> subpackage and run as scripts,
+or it is accessible under the <code class="docutils literal notranslate"><span class="pre">Tools</span></code> section via the main window taskbar.</p>
+<p>How to use the <em>extra</em> scripts or the tools counterpart is documented in the source-code documentation <a class="reference internal" href="excel2moodle.extra.html"><span class="doc">excel2moodle.extra package</span></a></p>
+<section id="available-extra-functionality">
+<h3>Available <em>extra</em> functionality<a class="headerlink" href="#available-extra-functionality" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Equation verification <em>script</em> and <em>UI-tool</em></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="excel2moodle documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="excel2moodle.extra.html" class="btn btn-neutral float-right" title="excel2moodle.extra package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Jakob Bosse.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
