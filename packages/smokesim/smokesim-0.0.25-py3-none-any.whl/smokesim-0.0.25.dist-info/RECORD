@@ -1,0 +1,13 @@
+smokesim/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+smokesim/augmentation.py,sha256=vn4Y_GECfiPV703V1QnYJa2dwRc9zFvMu_mT9aBaiPI,7207
+smokesim/base.py,sha256=AmjUTn447I3ZlAqvN5adHxFd4uU6tvcy7gWmiFCJMRU,846
+smokesim/constants.py,sha256=qDMqP2kq08YbcGdoEF57BRc2ETgzK-ZabgEmLwaX3Tc,4909
+smokesim/engine.py,sha256=OKzKJUDLlo1VOUJxfOdOKG8XzcAR1noNlP0yGTs5yGw,6572
+smokesim/particle.py,sha256=RbowLqhwJ02g-mx0GdAzw7fzozApjuKUaEl9nLUAtfs,4638
+smokesim/smoke.py,sha256=cHlo-4BNWYzusMFsnFtWOifpdKkuQk6xpgk8hgvqlBA,8857
+smokesim/vis.py,sha256=jrY4_yWtU8hjS8LufBa1Adl9jFdm7bq0a2CH8QyhFzc,2403
+smokesim-0.0.25.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+smokesim-0.0.25.dist-info/METADATA,sha256=OxikCs383cKwd3X948dSOFoNweVF8pM6bRR9hPt7xxU,886
+smokesim-0.0.25.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+smokesim-0.0.25.dist-info/top_level.txt,sha256=iiZaWgoeE1h0zZec3QkUY-kW0xNpH8yY-fH84uGABhk,9
+smokesim-0.0.25.dist-info/RECORD,,
