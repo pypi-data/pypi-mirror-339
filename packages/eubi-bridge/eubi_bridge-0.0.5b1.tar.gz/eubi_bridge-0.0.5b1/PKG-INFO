@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: eubi_bridge
+Version: 0.0.5b1
+Summary: A package for converting datasets to OME-Zarr format.
+Home-page: https://github.com/Euro-BioImaging/EuBI-Bridge
+Author: Bugra Özdemir
+Author-email: bugraa.ozdemir@gmail.com
+License: MIT
+Description: A package to convert collections of image data from diverse formats
+        to the OME-Zarr format in a distributed manner.
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
