@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: jax-decision-making
+Version: 0.0.1
+Summary: Decision making with Gaussian processes in JAX.
+Project-URL: Documentation, https://github.com/U.N. Owen/jax-decision-making#readme
+Project-URL: Issues, https://github.com/JaxGaussianProcesses/jax-decision-making/issues
+Project-URL: Source, https://github.com/JaxGaussianProcesses/jax-decision-making
+Author-email: Thomas Pinder <tompinder@live.co.uk>, Thomas Christie <thomashamish@hotmail.com>
+License: MIT
+License-File: LICENSE.txt
+Keywords: decision-making,gaussian-processes,jax
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: <3.13,>=3.10
+Requires-Dist: beartype
+Requires-Dist: flax<0.10.0
+Requires-Dist: gpjax==0.9.4
+Requires-Dist: jax<0.4.28
+Requires-Dist: jaxlib<0.4.28
+Requires-Dist: jaxopt==0.8.2
+Requires-Dist: jaxtyping>0.2.10
+Requires-Dist: numpy<2.0.0
+Requires-Dist: optax>0.2.1
+Requires-Dist: tensorflow-probability>=0.24.0
+Description-Content-Type: text/markdown
+
+# jax-decision-making
+
+[![PyPI - Version](https://img.shields.io/pypi/v/jax-decision-making.svg)](https://pypi.org/project/jax-decision-making)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/jax-decision-making.svg)](https://pypi.org/project/jax-decision-making)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install jax-decision-making
+```
+
+## License
+
+`jax-decision-making` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
