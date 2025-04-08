@@ -1,0 +1,9 @@
+django-cms
+django-constance
+requests
+
+[test]
+freezegun
+responses
+django-stubs[compatible-mypy]
+types-requests

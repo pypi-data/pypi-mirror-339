@@ -1,0 +1,48 @@
+stages:
+    - test
+
+cache:
+    paths:
+        - .cache/pip
+
+.test: &test
+    stage: test
+    image: python:$PYTHON_VERSION
+    before_script:
+        - pip install tox ruff
+        - tox --notest
+    script:
+        - tox --parallel all
+    interruptible: true
+
+.py39: &py39
+    variables:
+        PYTHON_VERSION: "3.9"
+
+.py310: &py310
+    variables:
+        PYTHON_VERSION: "3.10"
+
+.py311: &py311
+    variables:
+        PYTHON_VERSION: "3.11"
+
+.py312: &py312
+    variables:
+        PYTHON_VERSION: "3.12"
+
+test:py39:
+    <<: *test
+    <<: *py39
+
+test:py310:
+    <<: *test
+    <<: *py310
+
+test:py311:
+    <<: *test
+    <<: *py311
+
+test:py312:
+    <<: *test
+    <<: *py312

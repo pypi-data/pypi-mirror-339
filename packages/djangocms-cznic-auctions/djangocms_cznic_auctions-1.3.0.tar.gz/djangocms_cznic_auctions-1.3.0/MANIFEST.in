@@ -1,0 +1,6 @@
+graft cznic_auctions/locale
+graft cznic_auctions/static
+graft cznic_auctions/templates
+global-exclude __pycache__/*
+include pyproject.toml
+prune example
