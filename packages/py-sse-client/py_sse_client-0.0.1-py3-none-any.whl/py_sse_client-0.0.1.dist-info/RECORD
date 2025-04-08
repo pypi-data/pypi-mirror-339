@@ -1,0 +1,9 @@
+py_sse_client-0.0.1.dist-info/licenses/LICENSE,sha256=eOQXUuXtFzRAYUP7ulirEYAL0RekeTwtsGQV6tEVg4A,1075
+pysse/event.py,sha256=F11se5SEoE4peKfyqnOMqfGKEv0C91MRCzwlw9BVpp0,113
+pysse/event_source.py,sha256=JvsN7DRd5fbeNUCcHOudVy6gP0sIZPg-3LH9eOs2OMw,2044
+pysse/exceptions.py,sha256=48XWpkKmyx8JbQkW3z29KIsX5BRl2yg03m7HD81gEMc,423
+pysse/test.py,sha256=6mZ4JSoSMckUsP80ZVFOaVkOpfphPRbqYe4RFCx-DVM,1476
+py_sse_client-0.0.1.dist-info/METADATA,sha256=bUFT9CHdgU-Z_7hfjHxAQt_JVApGIcJxvSkdegwYJzw,1180
+py_sse_client-0.0.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+py_sse_client-0.0.1.dist-info/top_level.txt,sha256=WGoRWPsjUL9xEwXmL45xeHed5OLrl32wxJpS2dsEGbo,6
+py_sse_client-0.0.1.dist-info/RECORD,,
