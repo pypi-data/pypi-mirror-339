@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: askOmi
+Version: 0.1.5
+Summary: Hi Cutie
+Author: Why Should I reveal
+Description-Content-Type: text/markdown
+Requires-Dist: google-generativeai
+Dynamic: author
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: summary
