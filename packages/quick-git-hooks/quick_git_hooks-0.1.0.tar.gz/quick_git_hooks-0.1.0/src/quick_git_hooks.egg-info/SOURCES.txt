@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/quick_git_hooks/__init__.py
+src/quick_git_hooks/cli.py
+src/quick_git_hooks/utils.py
+src/quick_git_hooks.egg-info/PKG-INFO
+src/quick_git_hooks.egg-info/SOURCES.txt
+src/quick_git_hooks.egg-info/dependency_links.txt
+src/quick_git_hooks.egg-info/entry_points.txt
+src/quick_git_hooks.egg-info/requires.txt
+src/quick_git_hooks.egg-info/top_level.txt
+src/quick_git_hooks/templates/.pre-commit-config.yaml
+src/quick_git_hooks/templates/GIT_HOOKS_GUIDE.md
+src/quick_git_hooks/templates/__init__.py
+src/quick_git_hooks/templates/eslint.config.js

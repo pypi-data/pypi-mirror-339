@@ -1,0 +1,2 @@
+[console_scripts]
+quick-git-hooks = quick_git_hooks.cli:cli
