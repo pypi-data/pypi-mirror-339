@@ -1,0 +1,26 @@
+[project]
+name = "address_parser_js"
+version = "0.1.0"
+description = "中文地址解析"
+authors = [
+    { name = "dinger", email = "dinger2dinger@gmail.com" },
+]
+dependencies = []
+requires-python = "==3.13.*"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Homepage = "https://github.com/dingtwo/address_parser"
+Issues = "https://github.com/dingtwo/address_parser/issues"
+
+[tool.pdm]
+distribution = false
+
+[build-system]
+requires = [
+    "pdm-backend >= 2.4.0",
+]
+build-backend = "pdm.backend"
