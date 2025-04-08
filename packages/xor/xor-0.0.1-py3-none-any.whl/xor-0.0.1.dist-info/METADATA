@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: xor
+Version: 0.0.1
+Summary: Explainable Operations Research made simple.
+Project-URL: Homepage, https://github.com/conclusion-ai-360/xor
+Project-URL: Repository, https://github.com/conclusion-ai-360/xor
+Author-email: Valentin Calomme <dev@valentincalomme.com>
+License-File: LICENSE
+Requires-Python: >=3.12
+Provides-Extra: cli
+Requires-Dist: typer>=0.15.2; extra == 'cli'
+Description-Content-Type: text/markdown
+
+# xOR
+
+Explainable Operations Research made simple.

@@ -1,0 +1,2 @@
+[console_scripts]
+xor = xor.cli.application:app
