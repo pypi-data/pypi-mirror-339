@@ -1,0 +1,16 @@
+oslo_policy_opa/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oslo_policy_opa/generator.py,sha256=ZbvSPH1YPEBH8QfFBrzyFQIiCzfUyZS8oucTEFVmIv8,53391
+oslo_policy_opa/neutron.py,sha256=p2DCXRa_sluvzeeb3qzWlQl0S_IZVHSTztbrDx9N9ZY,1333
+oslo_policy_opa/neutron_policy_hook.py,sha256=oTcZnIFlB5VjyJuk6ivwq0P6g3HlDnvlL18ZpVXXa28,5106
+oslo_policy_opa/opa.py,sha256=LEmxEtnvL3D2HXoqvZMqDkYp7WGjUjS4oNJNwrc-sZk,5764
+oslo_policy_opa/opts.py,sha256=LG6cZAP80AAjBPRwyHVxhQybQ7qW8xD1jDANurshGiU,2584
+oslo_policy_opa/version.py,sha256=uucmTqZOVTXF4Di61Nw5eQKvZUAPxE9G37YlVbU65Ec,635
+oslo_policy_opa/tests/test_generator.py,sha256=39gSRF5VRocfLrkSKWgmxKEH4Tw-ZDAhTRd9SNsZHZU,2441
+oslo_policy_opa-0.2.0.dist-info/licenses/AUTHORS,sha256=eSsGE3JVrW2ASH7bTgIouBS7PChDMIKvwa0R8N_ZRq4,156
+oslo_policy_opa-0.2.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+oslo_policy_opa-0.2.0.dist-info/METADATA,sha256=kDDNwNb6Sntd_q2R1j2pMqQwCNCi4u1hUGhbcIhHrds,13876
+oslo_policy_opa-0.2.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+oslo_policy_opa-0.2.0.dist-info/entry_points.txt,sha256=lRXLiyYY7JEhjp_AXj7jwdNM7R8HVczeqXaWt81Seyg,279
+oslo_policy_opa-0.2.0.dist-info/pbr.json,sha256=hr5aA5M1r2GxajYBDJ-Gd6qAIGrQyKm6ZiwumKMBlOY,47
+oslo_policy_opa-0.2.0.dist-info/top_level.txt,sha256=6Wovv2C5jGzJn3hpFaWYX3ddz4AjAFoFwqadr_tmBU4,16
+oslo_policy_opa-0.2.0.dist-info/RECORD,,
