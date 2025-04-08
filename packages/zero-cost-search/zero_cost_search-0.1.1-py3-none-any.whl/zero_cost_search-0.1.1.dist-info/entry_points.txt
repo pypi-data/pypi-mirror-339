@@ -1,0 +1,2 @@
+[console_scripts]
+zero-cost-search = zero_cost_search.cli:main
