@@ -1,0 +1,221 @@
+# test
+
+https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax  
+https://gist.github.com/rxaviers/7360908  
+
+# TiPi99
+Graphical user interface to configure the ![Autonomous Temperature Pressure Sensor TP99](https://github.com/Y1u/test?tab=readme-ov-file#about-the-project) and download the registered data.
+
+## Install
+
+1) Download and install [Miniforge](https://github.com/conda-forge/miniforge)  
+   Anaconda and Miniconda work the same way, but Miniconda uses free and openly-licensed packages from the conda-forge project by default. [More info.](https://www.sens.buffalo.edu/software/conda)
+
+2) From miniforge/anaconda prompt (windows) or terminal (Ubuntu & MAC) create a virtual environment with name "my_env":
+
+```bash
+conda create -n  my_env pip
+```
+
+3) Activate the virtual environment with
+```bash
+conda activate my_env
+```
+
+4) Install TiPi99 with:
+
+```bash
+
+pip install TiPi99
+```
+
+5) Launch TiPi99:
+
+```bash
+
+TiPi99
+```
+## Shortcut
+
+In windows the TiPi99.exe can be found in the virtual environment Scripts folder, usually something like:  
+- C:\Users\username\anaconda3\envs\my_env\Scripts
+- C:\Users\username\miniconda\envs\my_env\Scripts
+
+To check where the virtual environment has been installed:
+
+```bash
+
+conda env list 
+```
+
+# Manual
+
+## 'Serial' Tab: Starting page
+> [!Caution]
+> The _TP99 device_ once turned on automatically searches for a serial connection for 5 seconds during which the device LED flashes. If the serial connection is not found, the device enters the 'logger' mode and starts recording new data, **overwriting** the old data in memory. For this reason it is necessary to start the search of the _TP99 device_ **before** connecting it by USB cable.
+
+![Tab_1_Start](https://github.com/user-attachments/assets/a9c771b5-6b24-4970-a7da-e547a2ba680b)
+
+  - **Search TP99**
+    - starts the automatic search for the _TP99 device_ and wait for the USB cable connection.  
+
+  - **Update Port List**
+    - for debug purpose, it update and show all the COM ports available in the pc. By clicking on the name of the displayed COM you can see the details.  
+
+## 'Serial' Tab: Device Found
+
+![Tab_1_Connect](https://github.com/user-attachments/assets/3ae51fc1-dbee-4585-af9b-832b42b8d888)
+
+  - **Test Detector**
+    - read T and P from the sensor  
+
+  - **Test LED**
+    - turn the device LED ON/OFF  
+
+  - **Set Name**
+    - shows the name of the connected device (maximum length 8 characters). The name is saved in the device memory and can be changed.  
+
+  - **Set log time in sec**
+    - shows the time between each measurement in seconds and the total available duration (depends on device memory).  
+
+  - **Set battery date**
+    - shows the date the device battery was installed. Must be updated when changing the battery.  
+
+  - **Download Device Memory**
+    - download the data saved in the device memory. The data are showed in the 'Data' Tab and plotted in the 'Plot T', 'Plot P' and 'Plot TP' tabs
+   
+  - **Save Data**
+    - save the data to file using 3 formats: csv, txt and npy ([numpy format](https://numpy.org/doc/stable/reference/generated/numpy.lib.format.html))
+
+  - **Erase Device Memory**
+    - Erase the memory of the device, to be used to clear old data from a previous measurement from memory, so that it does not interfere with the data from a more recent measurement.
+
+> [!IMPORTANT]
+> Data can also be imported from previously saved files, see the menu.
+## 'Calc' Tab
+Calculator to estimate the optimal log times to use for a measurement.  
+
+![Tab_2_Calc](https://github.com/user-attachments/assets/ebbf6f16-dc3a-4166-9ee5-6a3669942d7f)
+
+The "start" and "Stop" tabs allow you to choose the start and end dates of the measurement on the calendars. The hour, minutes and seconds can be further added in the appropriate input areas.
+  - **Calc**
+    - estimate the two closest log times
+
+The two log times are displayed with their corresponding end dates next to them.
+
+## 'Data' Tab
+
+Displays loaded data (from device memory or file) in table form.  
+The starting date of the Date column can be changed by the **Set t0** in the 'Plot T' Tab.
+
+![Tab_3_Data](https://github.com/user-attachments/assets/2962f836-971f-4033-a619-81daf6082038)
+
+## 'Plot T' Tab
+Displays the temperature and shows the plot commands relative to the time axis.  
+
+
+![Tab_4_Plot_T_Large](https://github.com/user-attachments/assets/01caf0bf-f722-4de9-93d3-15aed841586e)
+
+### X scale available options
+  - **Elapsed**: elaposed time in seconds / minutes / hours or days
+  
+![image](https://github.com/user-attachments/assets/3b2962fa-0319-41d1-ab96-32b0bd4efe2c)
+
+  - **t0 Date**: it allows the selection of the measurement start date using a calendar
+
+![image](https://github.com/user-attachments/assets/c3b6a575-75ac-4a33-b32a-5b3a26d6f773)
+
+  - **t0 Epoch**: it allows the selection of the measurement start date using the [unix epoch time](https://www.epochconverter.com/) (number of seconds elapsed since January 1, 1970).
+
+![image](https://github.com/user-attachments/assets/162990e2-5ac6-4b44-8691-5ff1b341fb41)
+
+  - **Set t0**
+    - Updates the Date columns in the 'Data' tab and the X axis of all the plots
+
+## 'Plot T' and 'Plot TP' Tabs
+- **Plot T**
+  - Displays the pressure on the time axis selected in the 'Plot P' Tab.
+  - 
+ ![Tab_5_Plot_P](https://github.com/user-attachments/assets/9a314f03-a947-4be9-b208-3e1537465771)
+ 
+- **Plot TP**
+  - Displays the temperature and the pressure on the time axis selected in the 'Plot P' Tab.
+
+![Tab_6_Plot_TP](https://github.com/user-attachments/assets/6f60e1af-adc8-4c25-946b-473b637157dc)
+
+
+
+## Menu
+
+**File**  
+- Open File Ctrl + O
+- Quit  
+
+**Edit**  
+- Fonts Size  
+
+**Help**  
+- About  
+
+# Author
+
+**Yiuri Garino**  
+- Yiuri.Garino@cnrs.fr  
+
+<img src="https://github.com/CelluleProjet/Rubycond/assets/83216683/b728fe64-2752-4ecd-843b-09d335cf4f93" width="100" height="100">
+<img src="https://github.com/CelluleProjet/Rubycond/assets/83216683/0a81ce1f-089f-49d8-ae65-d19af8078492" width="100" height="100">
+
+# License
+**TiPi99**
+
+Copyright (c) 2022-2024 Yiuri Garino
+
+**TiPi99** is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+# Release notes
+
+Version 0.0.1  
+
+# About the Project
+
+## Title  
+- Capteur Autonome Température Pression – TP99
+
+## Description  
+- TP99 is an autonomous temperature pressure sensor that can operate up to 3000 m depth in waters between 2 and 50°C. Although several Conductivity Temperature Depth (CTD) sensors are commercially available, the latter have large dimensions making their use
+restrictive, with a relatively high maintenance cost, requiring regular intervention from the manufacturer. The development of a deep-sea PT sensor, miniaturized and financially accessible, would undoubtedly find opportunities in many areas of deep oceanography, including the different disciplines (biology, geology...) that are now booming.  
+
+## Funding  
+- ![Réseau de technologie des hautes pressions (Réseau HP)](https://reseauhp.org/idt-initiatives-de-developpement-de-technologies/)
+
+## PI  
+- Bruce Shillito  (UMR BOREA - MNHN, CNRS 8067, SU, IRD 207, UA)
+
+## Mechanics  
+- Louis Amand: Louis.Amand@sorbonne-universite.fr
+   
+## Electronics  
+- Marc Morand: Marc.Morand@sorbonne-universite.fr
+
+## Software  
+- Yiuri Garino: Yiuri.Garino@sorbonne-universite.fr
+  
+<img src="https://github.com/CelluleProjet/Rubycond/assets/83216683/b728fe64-2752-4ecd-843b-09d335cf4f93" width="100" height="100">
+<img src="https://github.com/CelluleProjet/Rubycond/assets/83216683/0a81ce1f-089f-49d8-ae65-d19af8078492" width="100" height="100">
+
+[Cellule Projet](http://impmc.sorbonne-universite.fr/fr/plateformes-et-equipements/cellule-projet.html) @ [IMPMC](http://impmc.sorbonne-universite.fr/en/index.html)
+
+![XiaoBoardTP99_PM](https://github.com/user-attachments/assets/ae0f1a72-97a0-4b50-b760-2618eda56d42)
+*PCB design: Marc Morand*
+
+![Louis_Amand](https://github.com/user-attachments/assets/20f6309d-03ff-4a34-a3c5-014b5ee8a981)
+*CAD model: Louis Amand*
+
+      
+
+
+
+
