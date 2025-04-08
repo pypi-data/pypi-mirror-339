@@ -1,0 +1,8 @@
+gpep517/__init__.py,sha256=ynXJZgxEXeue8FCqfPZvvkr4P7eBBqwAuY4cbdJzPPw,165
+gpep517/__main__.py,sha256=GtNGabYxs0Oe3wGjRjKfjC9mqc-gRA2Y1-iZbzpGvSY,15606
+gpep517/qa.py,sha256=qCZJdgI-ow05MZQIokaTVCTbQ5ZWvy6KA5PGqa1boIk,4190
+gpep517-17.dist-info/entry_points.txt,sha256=gNlDDscFaSSEjk3EriQoRCUqp3nR5dh5I_lHOqG4-nc,49
+gpep517-17.dist-info/licenses/COPYING,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+gpep517-17.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+gpep517-17.dist-info/METADATA,sha256=vEO1IMtjsjiMTgvArvyV36t-0Nb2QcS-2N-p0QMGc1o,5702
+gpep517-17.dist-info/RECORD,,
