@@ -1,0 +1,16 @@
+docs_src/conf.py,sha256=iLmk2hYoJ1jJHhny84Z3Dha01q2_4VOdan-YxfUoRxE,1203
+docs_src/generatePages.py,sha256=l_O3uaCfoeH0q8CL7QZEzqxtKb2fMBvfqh37lk-VIss,2737
+psychopy_whisper/__init__.py,sha256=IKAMv3CXIQEBr_XCz_UwuWBeUFNpCpQh21h_sT7SpLY,464
+psychopy_whisper/transcribe.py,sha256=rbkUPtjl8mlHejnEA-QEuaW2AOcQXfRmIGQ8CxpC64A,14542
+psychopy_whisper/components/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+psychopy_whisper/components/whisperBackend.py,sha256=UFkA48wmzkQPq59doUanFgfp0UdhaSVmwV6xq4A4E58,612
+psychopy_whisper-0.0.7.dist-info/licenses/LICENSE,sha256=oRgYWGvw4cvcpeZw_Vl3Ol10HDKb35qzPMAP8_-dhBY,35138
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_transcribe.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_components/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_components/test_whisperBackend.py,sha256=4n8Khw6Jz-NRp_1pkY5dAUyPwq-VAy6t8_s0w2qlISw,597
+psychopy_whisper-0.0.7.dist-info/METADATA,sha256=YXr3HpALiKfzOaG1s4Gbu9CDNF_UUS2rTavFYgD_K1A,2288
+psychopy_whisper-0.0.7.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+psychopy_whisper-0.0.7.dist-info/entry_points.txt,sha256=60sMjrCqd96lw65ccueKtRBfXeqKxzg28bQUE8Qp7wQ,201
+psychopy_whisper-0.0.7.dist-info/top_level.txt,sha256=p1utiHCYaJv6-9JawdMSyMw5DiqXZTpadR426WmpGrU,32
+psychopy_whisper-0.0.7.dist-info/RECORD,,
