@@ -1,0 +1,5 @@
+[psychopy.experiment.components.microphone]
+whisperBackend = psychopy_whisper.components.whisperBackend
+
+[psychopy.sound.transcribe]
+WhisperTranscriber = psychopy_whisper.transcribe:WhisperTranscriber

@@ -1,0 +1,11 @@
+openai-whisper
+typing-extensions
+
+[docs]
+psychopy
+sphinx
+furo
+
+[tests]
+psychopy
+pytest
