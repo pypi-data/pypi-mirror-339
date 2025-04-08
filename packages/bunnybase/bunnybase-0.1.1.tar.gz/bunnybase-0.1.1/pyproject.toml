@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "bunnybase"
+version = "0.1.1"
+description = "Datamanaging system"
+authors = ["trollmii <trollmii@outlook.de>"]
+readme = "README.md"
+repository = "https://github.com/trollmii/bunnybase"
+include = [
+    "imgs/adding-data-to-hub.png",
+    "imgs/performance-saving-hub.png"
+]
+exclude = [
+    "benchmarks/*"
+]
+[tool.poetry.dependencies]
+python = "^3.10"
+pyarrow = "^19.0.1"
+pandas = "^2.1.0"
+numpy = "^2.1.0"
+pillow = "^11.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
