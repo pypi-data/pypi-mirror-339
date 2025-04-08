@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: clarusui
+Version: 0.422
+Summary: Clarus UI Library
+Home-page: http://www.clarusft.com
+Author: Clarus Financial Technology
+Author-email: support@clarusft.com
+Requires-Dist: Jinja2
+Requires-Dist: plotly==2.5.0
+Requires-Dist: pandas
+Requires-Dist: premailer
+Requires-Dist: clarus
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
