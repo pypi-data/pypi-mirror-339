@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+neurostates/__init__.py
+neurostates.egg-info/PKG-INFO
+neurostates.egg-info/SOURCES.txt
+neurostates.egg-info/dependency_links.txt
+neurostates.egg-info/requires.txt
+neurostates.egg-info/top_level.txt
+neurostates/core/__init__.py
+neurostates/core/classification.py
+neurostates/core/clustering.py
+neurostates/core/connectivity.py
+neurostates/core/utils.py
+neurostates/core/window.py
