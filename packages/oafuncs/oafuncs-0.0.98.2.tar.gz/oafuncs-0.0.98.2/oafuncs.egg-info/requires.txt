@@ -1,0 +1,17 @@
+numpy
+scipy
+pandas
+xarray
+rich
+pathlib
+requests
+bs4
+matplotlib
+netCDF4
+xlrd
+geopandas
+Cartopy
+rasterio
+salem
+psutil
+dask
