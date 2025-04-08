@@ -1,0 +1,6 @@
+[console_scripts]
+fast_agent = gamebyte_agent.cli.__main__:app
+fastagent = gamebyte_agent.cli.__main__:app
+gamebyte-agent = gamebyte_agent.cli.__main__:app
+prompt-server = gamebyte_agent.mcp.prompts.__main__:main
+silsila = gamebyte_agent.cli.__main__:app
