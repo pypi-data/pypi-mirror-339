@@ -1,0 +1,16 @@
+click
+cloudpickle
+cryptography
+dynaconf
+flatten_json
+grpcio<1.66.0,>=1.56.2
+numpy
+pandas
+protobuf<6.0.0,>=4.22
+psutil
+pyyaml
+requests>=2.32.0
+rich
+scikit-learn
+tensorboardX
+tqdm
