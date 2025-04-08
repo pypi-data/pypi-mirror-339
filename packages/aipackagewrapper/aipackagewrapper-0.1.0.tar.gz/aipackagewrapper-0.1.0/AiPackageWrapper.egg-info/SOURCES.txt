@@ -1,0 +1,16 @@
+LICENSE
+setup.py
+AiPackageWrapper.egg-info/PKG-INFO
+AiPackageWrapper.egg-info/SOURCES.txt
+AiPackageWrapper.egg-info/dependency_links.txt
+AiPackageWrapper.egg-info/requires.txt
+AiPackageWrapper.egg-info/top_level.txt
+modules/__init__.py
+modules/data_augmentation_module.py
+modules/ocr_module.py
+modules/sentiment_analyzer_module.py
+modules/xai_module.py
+tests/test_augmentation.py
+tests/test_ocr.py
+tests/test_sentiment.py
+tests/test_xai.py
