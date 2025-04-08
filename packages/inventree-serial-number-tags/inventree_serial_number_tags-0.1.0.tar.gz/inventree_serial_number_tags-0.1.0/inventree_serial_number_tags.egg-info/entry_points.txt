@@ -1,0 +1,2 @@
+[inventree_plugins]
+SerialNumberTags = serial_number_tags.core:SerialNumberTags

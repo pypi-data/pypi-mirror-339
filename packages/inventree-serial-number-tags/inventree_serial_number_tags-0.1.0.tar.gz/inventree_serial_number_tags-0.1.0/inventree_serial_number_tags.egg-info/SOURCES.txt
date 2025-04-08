@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+inventree_serial_number_tags.egg-info/PKG-INFO
+inventree_serial_number_tags.egg-info/SOURCES.txt
+inventree_serial_number_tags.egg-info/dependency_links.txt
+inventree_serial_number_tags.egg-info/entry_points.txt
+inventree_serial_number_tags.egg-info/top_level.txt
+serial_number_tags/__init__.py
+serial_number_tags/core.py

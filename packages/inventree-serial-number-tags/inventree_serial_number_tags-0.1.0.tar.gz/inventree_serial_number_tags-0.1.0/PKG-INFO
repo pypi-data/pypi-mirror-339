@@ -1,0 +1,53 @@
+Metadata-Version: 2.4
+Name: inventree-serial-number-tags
+Version: 0.1.0
+Summary: Enforce unique serial numbers based on part tags
+Home-page: https://github.com/SchrodingersGat/inventree-serial-tags
+Author: Oliver Walters
+Author-email: oliver.henry.walters@gmail.com
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# SerialNumberTags
+
+InvenTree plugin to enforce unique serial numbers based on part tags
+
+## Description
+
+By default, InvenTree allows only basic validation of serial number uniqueness, supporting validation of either:
+
+- Across a "tree" of parts and variants
+- Across all parts
+
+This plugin provides serial number uniqueness to be validated across a specific set of parts, as controlled by a custom part parameter.
+
+A set of "tags" applied to each part (as specified by the selected parameter) controls which parts are linked together.
+
+## Installation
+
+### Command Line 
+
+To install manually via the command line, run the following command:
+
+```bash
+pip install inventree-serial-number-tags
+```
+
+## Configuration
+
+... todo ...
+
+## Usage
+
+... todo ...
