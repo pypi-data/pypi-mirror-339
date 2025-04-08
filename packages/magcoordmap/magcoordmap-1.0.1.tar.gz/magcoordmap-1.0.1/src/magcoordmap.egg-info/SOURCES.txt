@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/magcoordmap/__init__.py
+src/magcoordmap/maggridliner.py
+src/magcoordmap.egg-info/PKG-INFO
+src/magcoordmap.egg-info/SOURCES.txt
+src/magcoordmap.egg-info/dependency_links.txt
+src/magcoordmap.egg-info/requires.txt
+src/magcoordmap.egg-info/top_level.txt
+tests/test_functions.py

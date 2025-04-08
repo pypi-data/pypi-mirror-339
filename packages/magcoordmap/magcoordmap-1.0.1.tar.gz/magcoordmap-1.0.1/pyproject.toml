@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "magcoordmap"
+version = "1.0.1"
+authors = [
+  { name="L. Lamarche", email="leslie.lamarche@sri.com" },
+]
+description = "Add magnetic field coordinate grid to cartopy maps."
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["magnetic coordinates", "cartopy", "Apex"]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "cartopy",
+    "apexpy",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+"Homepage" = "https://github.com/ljlamarche/magcoordmap"
+"Bug Tracker" = "https://github.com/ljlamarche/magcoordmap/issues"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
+addopts = [
+    "--import-mode=importlib",
+]
