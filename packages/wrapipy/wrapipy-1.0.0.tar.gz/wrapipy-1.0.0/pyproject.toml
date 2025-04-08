@@ -1,0 +1,54 @@
+[project]
+name = "wrapipy"
+version = "1.0.0"
+description = "Simple API wrapper."
+authors = [{name = "Chris 'Scar(R)ed' Vajdik",email="chrisquackless@duck.com"}]
+readme = "README.md"
+license = "GNU GPLv3"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+include = [
+    "LICENSE",
+    "CHANGELOG.md",
+]
+packages = [
+    { include = "wrapipy", from = "src" },
+]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy (>=2.2.3,<3.0.0)",
+    "requests (>=2.32.3,<3.0.0)",
+    "beautifulsoup4 (>=4.13.3,<5.0.0)",
+    "pydantic (>=2.11.2,<3.0.0)"
+]
+
+[project.urls]
+Documentation = "https://wrapi-documentation.onrender.com"
+Repository = "https://gitlab.com/scarred-libraries/wrapi"
+
+[tool.poetry.group.dev.dependencies]
+isort = "^6.0.1"
+black = "^25.1.0"
+doq = "^0.10.0"
+pdoc3 = "^0.11.6"
+pytest = "^8.3.5"
+pytest-cov = "^6.1.1"
+fastapi = {extras = ["standard"], version = "^0.115.12"}
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[tool.doq]
+formatter = "google"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
