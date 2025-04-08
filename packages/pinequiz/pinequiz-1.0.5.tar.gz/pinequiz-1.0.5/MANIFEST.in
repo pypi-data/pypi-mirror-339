@@ -1,0 +1,25 @@
+# Include the README and LICENSE
+include README.md
+include LICENSE
+
+# Include the setup script and manifest itself
+include setup.py
+include MANIFEST.in
+
+# Include metadata from egg-info
+recursive-include pinequiz.egg-info *
+
+# Include the source package
+recursive-include pinequiz *.py
+
+# Include any compiled files (opsional, jarang perlu)
+# recursive-include pinequiz __pycache__ *
+
+# Include test files (opsional)
+include test.py
+
+# Include dist files (opsional, hanya kalau ingin didistribusi bareng source)
+recursive-include dist *
+
+# Exclude cache or system files
+global-exclude __pycache__ *.py[cod] *.pyo .DS_Store Thumbs.db
