@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netora"
+version = "0.24.0"
+description = "Quickly uncover details and geolocation for any IP address"
+authors = [{name = "nativevoid", email = "0x4E56@proton.me"}]
+maintainers = [{name = "nativevoid", email = "0x4E56@proton.me"}]
+readme = "docs/pyproject/README.md"
+requires-python = ">=3.6"
+keywords = ["geolocation", "IP", "OSINT"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security"
+]
+
+dependencies = [
+    "requests>=2.25",
+    "colorama>=0.4.6",
+    "tzdata>=2025.2",
+    "backports.zoneinfo>=0.2.1; python_version < '3.9'"
+]
+
+[project.urls]
+"Homepage" = "https://nativevoid.mintlify.app"
+"Repository" = "https://github.com/nativevoid/netora"
+"Bug Tracker" = "https://github.com/nativevoid/netora/issues"
+
+[project.scripts]
+netora = "netora.netora:main"
