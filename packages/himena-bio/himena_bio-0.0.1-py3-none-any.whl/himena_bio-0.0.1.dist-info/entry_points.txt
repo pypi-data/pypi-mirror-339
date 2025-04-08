@@ -1,0 +1,4 @@
+[himena.plugin]
+Bio-Sequence IO = himena_bio.io
+Bio-Sequence Tools = himena_bio.tools
+Widgets = himena_bio.widgets
