@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: py-sse-client
+Version: 0.0.1
+Summary: A simple server sent events client for python
+Author: Dilanka Rathnasiri
+Maintainer: Dilanka Rathnasiri
+Project-URL: Homepage, https://github.com/dilanka-rathnasiri/py-sse-client
+Project-URL: Documentation, https://github.com/dilanka-rathnasiri/py-sse-client
+Project-URL: Source, https://github.com/dilanka-rathnasiri/py-sse-client
+Keywords: SSE
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: AsyncIO
+Classifier: Framework :: aiohttp
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: license-file
+
+# py-sse-client
+
+A simple server sent events client for python
+
+## Installation
+
+```bash
+pip3 install py-sse-client
+```
+
+## Usage
+
+```python
+import pysse
+
+def listener(event):
+    print(event)
+
+client = pysse.Client("https://example.com/sse", listener)
+client.connect()
+```
