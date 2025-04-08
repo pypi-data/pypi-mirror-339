@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+module_swap/__init__.py
+module_swap/forms.py
+module_swap/navigation.py
+module_swap/urls.py
+module_swap/views.py
+module_swap.egg-info/PKG-INFO
+module_swap.egg-info/SOURCES.txt
+module_swap.egg-info/dependency_links.txt
+module_swap.egg-info/top_level.txt
+module_swap/templates/dcim/module.html
+module_swap/templates/module_swap/step1_select.html
+module_swap/templates/module_swap/step2_bay.html
