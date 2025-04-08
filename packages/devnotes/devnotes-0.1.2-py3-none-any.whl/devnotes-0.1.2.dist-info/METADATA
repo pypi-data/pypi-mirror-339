@@ -1,0 +1,213 @@
+Metadata-Version: 2.4
+Name: devnotes
+Version: 0.1.2
+Summary: DevNotes is a command-line tool for developers to efficiently manage development notes, tasks, and project documentation. It enables organizing work, tracking progress of activities, and maintaining structured documentation directly from the development environment.
+Author-email: Fabio Cantone <fabio@cantone.me>
+License-Expression: MIT
+Keywords: development,notes,tasks,project management
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: typer>=0.9.0
+Requires-Dist: rich>=13.0.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: prompt-toolkit>=3.0.0
+Requires-Dist: python-dateutil>=2.8.0
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+
+# DevNotes
+
+A tool for managing development notes and project tasks.
+
+## Features
+
+- Project task management
+- Code structure analysis
+- Mermaid diagram generation
+- Function relationship visualization
+- Task extraction from code comments
+- Trello integration for task synchronization
+
+## Installation
+
+```bash
+pip install devnotes
+```
+
+To use the diagram rendering functionality, you need to install `mermaid-cli`:
+
+```bash
+npm install -g @mermaid-js/mermaid-cli
+```
+
+## Usage
+
+### Initialization
+
+```bash
+devnotes init
+```
+
+### Task Management
+
+```bash
+# Add a new task interactively
+devnotes task-add-interactive
+
+# List all tasks
+devnotes task-list
+
+# Edit an existing task
+devnotes task-edit
+
+# Mark a task as done
+devnotes task-done 001
+```
+
+### Code Analysis
+
+```bash
+# Scan the project
+devnotes scan
+```
+
+#### Task Extraction from Code Comments
+
+You can define tasks directly in your code using special comment tags:
+
+```python
+# Simple task
+#TASK: Implement error handling
+
+# Task with tags
+#TASK(bug,high-priority): Fix memory leak in this function
+
+# Task with metadata
+#TASK(feature)[due:2023-12-31][priority:high][status:in_progress]: Add new feature
+# DESCRIPTION: This is a detailed description of the task
+# It can span multiple lines as long as each line starts with #
+```
+
+When you run `devnotes scan`, these comments will be automatically converted to tasks in your project.
+
+Supported metadata fields:
+- `due`: Due date for the task (e.g., `2023-12-31`)
+- `priority`: Priority level (e.g., `high`, `medium`, `low`)
+- `status`: Current status (e.g., `todo`, `in_progress`, `done`)
+
+You can also add a multi-line description by adding comment lines starting with `# DESCRIPTION:` followed by additional comment lines.
+
+### Diagrams
+
+```bash
+# Generate a task diagram
+devnotes diagram tasks
+
+# Generate a call graph
+devnotes diagram callgraph
+
+# Generate a hierarchy diagram
+devnotes diagram hierarchy
+
+# Generate a diagram and render it
+devnotes diagram tasks --render
+
+# Generate a diagram, render it and open it in the browser
+devnotes diagram callgraph --open
+
+# Render a Mermaid diagram to SVG
+devnotes render --path .project/call_graph.mmd
+```
+
+## Configuration
+
+Settings are stored in `.project/settings.yaml`. You can update the settings with:
+
+```bash
+devnotes update
+```
+
+### Configuration Options
+
+The `settings.yaml` file supports the following configuration options:
+
+```yaml
+# Task status options
+statuses: ["todo", "in_progress", "done", "blocked"]
+default_status: "todo"
+default_tags: []
+
+# Diagram settings
+diagram:
+  output: "project_structure.mmd"
+  style: "graph TD"
+
+# Scan settings
+scan:
+  exclude: [".project", ".venv"]
+  exclude_stdlib_calls: true
+```
+
+#### Status Colors
+
+You can customize the colors for each status by adding a `status_colors` section:
+
+```yaml
+status_colors:
+  todo: "yellow"
+  in_progress: "cyan"
+  done: "green"
+  blocked: "red"
+```
+
+### Trello Integration
+
+DevNotes supports synchronizing tasks with Trello:
+
+```bash
+# Configure Trello integration (interactive mode)
+devnotes trello setup
+
+# Quick setup with automatic list mapping
+devnotes trello setup --quick
+
+# Create a new Trello board with appropriate lists
+devnotes trello create-board
+
+# Sync local tasks to Trello
+devnotes trello sync-to
+
+# Sync tasks from Trello to local system
+devnotes trello sync-from
+
+# View integration status
+devnotes trello status
+```
+
+To use this feature, you need to:
+1. Obtain an API key and token from Trello (https://trello.com/app-key)
+2. Choose one of the following configuration methods:
+   - **Method 1 (recommended for new users)**: Run `devnotes trello create-board` to create a new Trello board with all the necessary lists already correctly configured
+   - **Method 2**: Run `devnotes trello setup --quick` for quick setup with automatic mapping of existing lists
+   - **Method 3**: Run `devnotes trello setup` for detailed manual configuration
+3. Follow the on-screen instructions
+
+The quick setup mode (`--quick`) attempts to automatically map Trello lists to task statuses based on common names (e.g., "To Do" → "todo", "In Progress" → "in_progress", etc.). If it can't find a match, it will ask you to manually select the appropriate list.
+
+The `create-board` command is the easiest way to get started, as it automatically creates a new Trello board with all the necessary lists already correctly configured for DevNotes.
+
+## Requirements
+
+- Python 3.8+
+- Mermaid CLI (optional, for diagram rendering)
+
+## License
+
+MIT
