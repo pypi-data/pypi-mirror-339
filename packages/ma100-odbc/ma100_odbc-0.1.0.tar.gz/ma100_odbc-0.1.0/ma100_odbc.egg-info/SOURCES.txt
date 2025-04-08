@@ -1,0 +1,8 @@
+setup.py
+ma100/odbc/__init__.py
+ma100/odbc/mysql.py
+ma100_odbc.egg-info/PKG-INFO
+ma100_odbc.egg-info/SOURCES.txt
+ma100_odbc.egg-info/dependency_links.txt
+ma100_odbc.egg-info/namespace_packages.txt
+ma100_odbc.egg-info/top_level.txt
