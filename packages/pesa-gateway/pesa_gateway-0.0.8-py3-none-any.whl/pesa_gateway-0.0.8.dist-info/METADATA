@@ -1,0 +1,258 @@
+Metadata-Version: 2.3
+Name: pesa-gateway
+Version: 0.0.8
+Summary: A Python library for integrating with various payment gateways in Africa, with initial support for M-Pesa
+License: MIT
+Author: ThakaCreator
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: phonenumbers (>=9.0.0,<10.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# PesaGateway
+
+A Python library for integrating with various payment gateways in Africa, with initial support for M-Pesa.
+
+## Features
+- **M-Pesa Integration**: Seamless integration with Safaricom's M-Pesa payment gateway
+- **Easy Configuration**: Simple setup with environment variables or direct configuration
+- **Comprehensive API Coverage**: Support for various M-Pesa API endpoints:
+  - STK Push (Lipa Na M-Pesa Online)
+  - C2B (Customer to Business)
+  - B2C (Business to Customer)
+  - Transaction Status Query
+  - Account Balance Query
+- **Phone Number Validation**: Built-in validation for East African phone numbers
+- **Detailed Documentation**: Clear examples and usage instructions
+- **Error Handling**: Robust error handling and informative error messages
+- **Python 3.10+ Support**: Built for modern Python applications
+
+## Installation
+
+```bash
+pip install pesagateway
+```
+
+## Configuration
+The library can be configured either through environment variables or by directly passing configuration parameters when initializing the client.
+
+### Environment Variables
+```python
+# Required environment variables for M-Pesa
+MPESA_CONSUMER_KEY="your_consumer_key"
+MPESA_CONSUMER_SECRET="your_consumer_secret"
+MPESA_BUSINESS_SHORT_CODE="your_shortcode"
+MPESA_PASS_KEY="your_pass_key"
+MPESA_ENVIRONMENT="sandbox"  # or "production"
+```
+
+### Direct Configuration
+```python
+from pesagateway import MPesaClient
+
+client = MPesaClient(
+    consumer_key="your_consumer_key",
+    consumer_secret="your_consumer_secret",
+    business_short_code="your_shortcode",
+    pass_key="your_pass_key",
+    environment="sandbox"  # or "production"
+)
+```
+
+## Usage Examples
+
+### STK Push (Lipa Na M-Pesa Online)
+```python
+from pesagateway import MPesaClient
+
+client = MPesaClient()
+
+response = client.stk_push(
+    phone_number="254712345678",
+    amount=1,
+    account_reference="TEST",
+    transaction_desc="Test Payment"
+)
+```
+
+### C2B (Customer to Business)
+```python
+response = client.c2b_register_urls(
+    confirmation_url="https://example.com/confirmation",
+    validation_url="https://example.com/validation"
+)
+```
+
+### B2C (Business to Customer)
+```python
+response = client.b2c_payment(
+    phone_number="254712345678",
+    amount=100,
+    remarks="Salary Payment",
+    occasion="December Salary"
+)
+```
+
+## Error Handling
+```python
+from pesagateway import MPesaError
+
+try:
+    response = client.stk_push(...)
+except MPesaError as e:
+    print(f"An error occurred: {e}")
+```
+
+## Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## API Reference
+
+### MPesaClient
+
+#### Initialization
+```python
+from pesagateway import MPesaClient
+
+client = MPesaClient(
+    consumer_key: str,
+    consumer_secret: str,
+    business_short_code: str,
+    pass_key: str,
+    environment: str = "sandbox"
+)
+```
+
+#### Methods
+
+##### STK Push
+```python
+def stk_push(
+    phone_number: str,
+    amount: int,
+    account_reference: str,
+    transaction_desc: str
+) -> dict:
+    """
+    Initiates an STK push request to a customer's phone.
+
+    Args:
+        phone_number: Customer's phone number (format: 254XXXXXXXXX)
+        amount: Amount to be paid
+        account_reference: Unique reference for the transaction
+        transaction_desc: Description of the transaction
+
+    Returns:
+        dict: Response from M-Pesa API containing CheckoutRequestID
+    """
+```
+
+##### C2B URL Registration
+```python
+def c2b_register_urls(
+    confirmation_url: str,
+    validation_url: str
+) -> dict:
+    """
+    Registers confirmation and validation URLs for C2B transactions.
+
+    Args:
+        confirmation_url: URL that receives payment notifications
+        validation_url: URL that validates payment requests
+
+    Returns:
+        dict: Response from M-Pesa API
+    """
+```
+
+##### B2C Payment
+```python
+def b2c_payment(
+    phone_number: str,
+    amount: int,
+    remarks: str,
+    occasion: str = None
+) -> dict:
+    """
+    Initiates a Business to Customer payment.
+
+    Args:
+        phone_number: Recipient's phone number (format: 254XXXXXXXXX)
+        amount: Amount to send
+        remarks: Comments about the transaction
+        occasion: Optional occasion description
+
+    Returns:
+        dict: Response from M-Pesa API containing transaction details
+    """
+```
+
+##### Query Transaction Status
+```python
+def query_transaction_status(
+    checkout_request_id: str
+) -> dict:
+    """
+    Checks the status of a transaction.
+
+    Args:
+        checkout_request_id: The CheckoutRequestID from STK push
+
+    Returns:
+        dict: Response containing transaction status
+    """
+```
+
+##### Query Account Balance
+```python
+def query_account_balance() -> dict:
+    """
+    Queries the account balance for the business.
+
+    Returns:
+        dict: Response containing account balance information
+    """
+```
+
+### Error Handling
+
+The library defines several error types for specific scenarios:
+
+- `MPesaError`: Base exception class for all M-Pesa related errors
+- `MPesaConnectionError`: Raised when there are network connectivity issues
+- `MPesaConfigError`: Raised when there are configuration problems
+- `MPesaValidationError`: Raised when input validation fails
+- `MPesaAPIError`: Raised when M-Pesa API returns an error response
+
+### Response Objects
+
+All API methods return a dictionary containing the following standard fields:
+
+```python
+{
+    "success": bool,          # Whether the request was successful
+    "message": str,          # Human-readable message
+    "data": dict,           # The actual response data from M-Pesa
+    "error": str | None     # Error message if success is False
+}
+```
+
+For detailed response formats for each API endpoint, please refer to the [M-Pesa API documentation](https://developer.safaricom.co.ke/).
+
+
