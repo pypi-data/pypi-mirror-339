@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: mcscan
+Version: 1.7
+Summary: A cli application to fetch data from your favourite minecraft server.
+Home-page: https://github.com/Moritz344/mcstatus-cli
+Author: Moritz Maier
+Author-email: moritzmaier353@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: questionary
+Requires-Dist: requests
+Requires-Dist: rich
+Requires-Dist: termcolor
+
+# mcscan
+A CLI application to fetch data from your favourite minecraft server.
+
+
+
+https://github.com/user-attachments/assets/a4efcb07-458e-4786-af89-d7f63e9a7577
+
+
+
+# Installation
+```bash
+pip install mcscan
+```
+
+https://pypi.org/project/mcscan/
+
+# API
+This project uses the [mcstatus API](https://mcstatus.io/docs) to retrieve real-time data from Minecraft servers.
+
+# Author
+- Moritz344
+
+
+
+
