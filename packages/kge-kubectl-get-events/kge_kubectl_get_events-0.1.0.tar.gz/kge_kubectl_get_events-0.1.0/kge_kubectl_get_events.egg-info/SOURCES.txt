@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+kge/__init__.py
+kge/kubernetes.py
+kge/cli/__init__.py
+kge/cli/main.py
+kge_kubectl_get_events.egg-info/PKG-INFO
+kge_kubectl_get_events.egg-info/SOURCES.txt
+kge_kubectl_get_events.egg-info/dependency_links.txt
+kge_kubectl_get_events.egg-info/entry_points.txt
+kge_kubectl_get_events.egg-info/requires.txt
+kge_kubectl_get_events.egg-info/top_level.txt
