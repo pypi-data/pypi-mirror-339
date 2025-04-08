@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+src/ai_workspace/__init__.py
+src/ai_workspace/database/__init__.py
+src/ai_workspace/database/connect.py
+src/ai_workspace/modules/Workspace.py
+src/ai_workspace/modules/__init__.py
+src/ai_workspace/modules/document.py
+src/ai_workspace/schemas/Workspace.py
+src/ai_workspace/schemas/__init__.py
+src/ai_workspace/schemas/document.py
+src/openedu_ai_workspace.egg-info/PKG-INFO
+src/openedu_ai_workspace.egg-info/SOURCES.txt
+src/openedu_ai_workspace.egg-info/dependency_links.txt
+src/openedu_ai_workspace.egg-info/requires.txt
+src/openedu_ai_workspace.egg-info/top_level.txt
+tests/test_workspace.py
