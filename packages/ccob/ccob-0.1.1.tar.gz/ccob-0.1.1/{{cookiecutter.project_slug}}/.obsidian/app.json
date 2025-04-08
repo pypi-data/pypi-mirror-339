@@ -1,0 +1,26 @@
+{
+  "legacyEditor": false,
+  "livePreview": false,
+  "lineWrap": true,
+  "useTab": false,
+  "strictLineBreaks": false,
+  "showFrontmatter": true,
+  "showLineNumber": true,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./",
+  "trashOption": "local",
+  "alwaysUpdateLinks": true,
+  "promptDelete": false,
+  "fileSortOrder": "alphabetical",
+  "showUnsupportedFiles": true,
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "communityThemeSortOrder": "download",
+  "readableLineLength": false,
+  "useMarkdownLinks": true,
+  "newLinkFormat": "relative"
+}
