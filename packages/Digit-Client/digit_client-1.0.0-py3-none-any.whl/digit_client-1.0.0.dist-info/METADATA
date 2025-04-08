@@ -1,0 +1,284 @@
+Metadata-Version: 2.2
+Name: Digit-Client
+Version: 1.0.0
+Home-page: https://github.com/Priyansuvaish/digit_lib.git
+Author: eGov Foundation
+Author-email: priyanshu.vaish@egovernments.org
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Requires-Dist: jsonschema>=4.0.0
+Requires-Dist: werkzeug>=3.0.1
+Requires-Dist: python-dotenv>=1.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+
+# DIGIT Client Library
+
+A comprehensive Python client library for interacting with DIGIT (Digital Infrastructure for Governance, Impact & Transformation) services. This library provides easy-to-use interfaces for various DIGIT microservices and APIs.
+
+## Core Components
+
+### 1. APIClient
+The base client class that handles all HTTP requests to the DIGIT API.
+
+**Parameters:**
+- `base_url`: The API endpoint (default: sandbox.digit.org)
+- `auth_token`: Authentication token for API requests
+
+**Methods:**
+- `get(endpoint, params=None, stream=False, require_auth=True)`: Make GET requests
+- `post(endpoint, json_data=None, data=None, additional_headers=None, params=None, files=None, require_auth=True)`: Make POST requests
+
+### 2. Configuration
+The `Config` class manages API settings and authentication.
+
+**Parameters:**
+- `API_ENDPOINT`: Base URL for API requests
+- `AUTH_TOKEN`: Authentication token
+
+**Methods:**
+- `set_auth_token(token)`: Set the authentication token
+- `set_api_endpoint(endpoint)`: Set the API endpoint
+
+## Features
+
+- Authentication and Authorization
+- User Management
+- Master Data Management (MDMS)
+- Workflow Management
+- Boundary Management
+- File Storage
+- Transaction Processing
+- Service Request Management
+- Localization Support
+- OTP Services
+- Reporting
+- And more...
+
+## Available Services
+
+### 1. Authentication Service
+Handles user authentication and session management.
+
+**Methods:**
+- `get_auth_token(auth_request)`: Get authentication token
+  - Parameters:
+    - `auth_request`: AuthenticationRequest object with credentials
+- `update_password_no_login(request_info)`: Update password without login
+  - Parameters:
+    - `request_info`: Optional RequestInfo object
+- `logout(request_info)`: Logout user
+  - Parameters:
+    - `request_info`: Optional RequestInfo object
+
+### 2. User Service
+Manages user operations and profiles.
+
+**Methods:**
+- User creation and management
+- Role assignment
+- Profile updates
+
+### 3. MDMS Service (Master Data Management)
+Handles master data operations.
+
+**Methods:**
+- Data retrieval
+- Schema management
+- Version control
+
+### 4. Workflow Service
+Manages business processes and workflows.
+
+**Methods:**
+- Process instance management
+- State transitions
+- Document handling
+
+### 5. File Store Service
+Handles file uploads and management.
+
+**Methods:**
+- File upload
+- File retrieval
+- Tag-based operations
+
+### 6. Transaction Service
+Manages financial transactions.
+
+**Methods:**
+- Payment processing
+- Transaction status
+- Tax calculations
+
+### 7. Service Request Service
+Handles service requests and complaints.
+
+**Methods:**
+- Request creation
+- Status updates
+- Attribute management
+
+## Request Configuration
+
+The library uses a `RequestConfig` class for managing request parameters:
+
+**Parameters:**
+- `action`: HTTP method (GET, POST, etc.)
+- `auth_token`: Authentication token
+- `api_id`: API identifier
+- `ver`: API version
+- `did`: Device ID
+- `key`: API key
+- `msg_id`: Message ID
+- `requester_id`: Requester ID
+- `ts`: Timestamp
+
+## Requirements
+
+- Python 3.6 or higher
+- requests>=2.31.0
+- werkzeug>=3.0.1
+- python-dotenv>=1.0.0
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+## Basic Usage
+
+```python
+from digit_client import APIClient, Config
+from digit_client.services import AuthenticationService
+from digit_client.models.auth import AuthenticationRequest
+
+# Initialize configuration
+Config.set_api_endpoint("https://your-digit-instance.org")
+
+# Set auth token to pass in header 
+Config.set_auth_token(response['access_token'])
+```
+
+## Example Usage Files
+
+The library includes comprehensive examples that demonstrate how to use various services:
+
+### Service Request Examples
+- Creating service definitions
+- Searching service definitions
+- Creating service requests
+- Searching service requests
+
+### Workflow Examples
+- Workflow transitions
+- Workflow search and counting
+- SLA management
+- Business service operations
+- Escalation handling
+
+### Other Available Examples:
+- Localization and language support
+- OTP generation and verification
+- Report generation and management
+- Search and indexing operations
+- URL shortening services
+- Transaction processing
+- Encryption utilities
+- File storage operations
+- Master Data Management System operations
+- Authorization examples
+- User authentication and testing
+
+Each example contains detailed code samples with comments explaining the functionality. These examples serve as practical guides for implementing various DIGIT services in your applications.
+
+## Use Cases
+
+The library provides examples for the following key use cases:
+
+### Service Request Management
+- Creating and managing service definitions with custom attributes
+- Submitting and tracking service requests
+- Searching and filtering service requests
+- Managing service request status and updates
+
+### Workflow Management
+- Creating and managing business processes
+- Handling workflow transitions and state changes
+- Managing Service Level Agreements (SLAs)
+- Escalation handling and notifications
+- Business service operations and configurations
+
+### Localization and Internationalization
+- Managing multi-language support
+- Handling translations and language-specific content
+- Configuring regional settings and preferences
+
+### Authentication and Security
+- User authentication and session management
+- Role-based access control
+- OTP (One-Time Password) generation and verification
+- Secure password management
+- Authorization and permission handling
+
+### Data Management
+- Master Data Management System operations
+- Data indexing and search functionality
+- File storage and retrieval
+- Data encryption and security
+
+### Transaction Processing
+- Payment processing and management
+- Transaction status tracking
+- Financial record management
+- Receipt generation and tracking
+
+### Reporting and Analytics
+- Report generation and customization
+- Data aggregation and analysis
+- Export functionality
+- Dashboard creation
+
+### Utility Services
+- URL shortening and management
+- File upload and download
+- Data encryption and decryption
+- Identity verification
+
+Each use case is demonstrated through practical examples that show how to:
+1. Initialize and configure the service
+2. Make API calls with proper authentication
+3. Handle responses and errors
+4. Implement best practices for each service
+
+## Error Handling
+
+The library includes custom exceptions for handling various error scenarios:
+- `AuthenticationError`: Authentication-related errors
+- `APIError`: General API errors
+- `ValidationError`: Input validation errors
+
+
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
