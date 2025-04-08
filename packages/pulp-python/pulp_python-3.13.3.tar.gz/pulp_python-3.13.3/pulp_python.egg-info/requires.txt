@@ -1,0 +1,4 @@
+pulpcore<3.85,>=3.49.0
+pkginfo<1.13.0,>=1.10.0
+bandersnatch<7.0,>=6.3
+pypi-simple<2.0,>=1.5.0
