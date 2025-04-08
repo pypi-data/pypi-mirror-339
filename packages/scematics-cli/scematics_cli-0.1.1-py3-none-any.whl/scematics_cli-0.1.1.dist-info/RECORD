@@ -1,0 +1,11 @@
+scematics-cli/__init__.py,sha256=jMqUFT6vLno-Ntu40AwTpl_hqPBeVVq5JmB522ZfdZI,176
+scematics-cli/cli.py,sha256=XxxiIR9kAv8yN1uJOQ8vZsTDPbw9kbocyvOKKHCEAg4,62831
+scematics-cli/custom_upload.py,sha256=fM9NOJHsUzujyoOE6A2hi1M-RA6utYED6tjlA7pwkq0,40659
+scematics-cli/direct_upload.py,sha256=cOabUfXqf9O7_iTHkL0C9ooOvYYokbYKAQwoDeWx6B8,40110
+scematics-cli/folder_uploads.py,sha256=Z0OqemrOvXakJA2XhoOYZdjoDGMlyVobwcVxHLxuokU,20823
+scematics-cli/tag_uploads.py,sha256=ldT-cq9_ERw1MxhsKMoBli1Pr1nyS2zf3M7dFDllCg8,16715
+scematics_cli-0.1.1.dist-info/METADATA,sha256=qJKVmgpAB8oFne9lxlkApSgNkehnoJOfLN9L7KK68O4,7146
+scematics_cli-0.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+scematics_cli-0.1.1.dist-info/entry_points.txt,sha256=TjKJj4xB8fLFeA0EhcSTYrvBFl7-WUhoy2NcLZmz7i8,57
+scematics_cli-0.1.1.dist-info/top_level.txt,sha256=hxIJhSuebkVnrnYrU-qsaETZiZlqV5i2b8awDY2tPD4,14
+scematics_cli-0.1.1.dist-info/RECORD,,
