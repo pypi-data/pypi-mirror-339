@@ -1,0 +1,258 @@
+Metadata-Version: 2.2
+Name: morelogin-mcp
+Version: 0.1.1
+Summary: MoreLogin MCP Protocol Implementation
+Home-page: https://github.com/yourusername/morelogin-mcp
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.31.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: fastapi>=0.104.0
+Requires-Dist: uvicorn>=0.24.0
+Requires-Dist: pydantic>=2.4.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# MoreLogin MCP API
+
+MoreLogin MCP API 是一个基于 MoreLogin API 的 MCP 协议兼容实现，提供了浏览器环境管理、代理管理和分组管理等功能。
+
+## 功能特点
+
+- 浏览器环境管理
+  - 创建、获取、更新和删除浏览器环境
+  - 批量操作浏览器环境
+  - 环境模板管理
+- 代理管理
+  - 代理服务器配置
+  - 代理规则设置
+  - 代理分组管理
+- 分组管理
+  - 创建和管理分组
+  - 批量分配环境到分组
+  - 分组权限控制
+
+## 安装
+
+### PyPI 安装
+
+```bash
+pip install morelogin-mcp
+```
+
+### 源码安装
+
+```bash
+git clone https://github.com/ryanao/morelogin-mcp.git
+cd morelogin-mcp
+pip install -e .
+```
+
+## 使用方法
+
+### 作为独立服务运行
+
+1. 配置环境变量：
+```bash
+cp .env.example .env
+# 编辑 .env 文件，填入您的 API 密钥
+```
+
+2. 启动服务：
+```bash
+python -m morelogin_mcp.main
+```
+
+### 在 Cursor 应用中使用
+
+```python
+from morelogin_mcp import MoreLoginClient, MCPHandler
+
+# 创建客户端
+client = MoreLoginClient(api_key="your_api_key")
+
+# 创建处理器
+handler = MCPHandler(client)
+
+# 处理 MCP 请求
+response = handler.handle_request({
+    "method": "create_profile",
+    "params": {
+        "name": "test_profile",
+        "platform": "windows",
+        "browser": "chrome"
+    }
+})
+```
+
+## API 文档
+
+### 浏览器环境管理
+
+#### 创建环境
+```python
+response = client.create_profile(
+    name="test_profile",
+    platform="windows",
+    browser="chrome"
+)
+```
+
+#### 获取环境
+```python
+profile = client.get_profile(profile_id="123")
+```
+
+#### 更新环境
+```python
+response = client.update_profile(
+    profile_id="123",
+    name="new_name",
+    platform="mac"
+)
+```
+
+#### 删除环境
+```python
+response = client.delete_profile(profile_id="123")
+```
+
+### 代理管理
+
+#### 添加代理
+```python
+response = client.add_proxy(
+    proxy_type="http",
+    host="127.0.0.1",
+    port=8080,
+    username="user",
+    password="pass"
+)
+```
+
+#### 获取代理列表
+```python
+proxies = client.get_proxies()
+```
+
+#### 更新代理
+```python
+response = client.update_proxy(
+    proxy_id="123",
+    host="new.host.com",
+    port=9090
+)
+```
+
+#### 删除代理
+```python
+response = client.delete_proxy(proxy_id="123")
+```
+
+### 分组管理
+
+#### 创建分组
+```python
+response = client.create_group(
+    name="test_group",
+    description="测试分组"
+)
+```
+
+#### 获取分组列表
+```python
+groups = client.get_groups()
+```
+
+#### 更新分组
+```python
+response = client.update_group(
+    group_id="123",
+    name="new_name",
+    description="新的描述"
+)
+```
+
+#### 删除分组
+```python
+response = client.delete_group(group_id="123")
+```
+
+## 开发指南
+
+### 环境设置
+
+1. 克隆仓库：
+```bash
+git clone https://github.com/ryanao/morelogin-mcp.git
+cd morelogin-mcp
+```
+
+2. 创建虚拟环境：
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# 或
+.\venv\Scripts\activate  # Windows
+```
+
+3. 安装开发依赖：
+```bash
+pip install -r requirements.txt
+pip install -r requirements-dev.txt
+```
+
+### 运行测试
+
+```bash
+pytest
+```
+
+### 代码规范
+
+- 遵循 PEP 8 代码风格指南
+- 使用类型注解
+- 编写清晰的文档字符串
+- 为所有公共 API 编写单元测试
+
+## 贡献指南
+
+请参阅 [CONTRIBUTING.md](CONTRIBUTING.md) 文件了解如何贡献代码。
+
+## 许可证
+
+本项目采用 MIT 许可证，详见 [LICENSE](LICENSE) 文件。
+
+## 联系方式
+
+- 项目主页：https://github.com/ryanao/morelogin-mcp
+- 问题反馈：https://github.com/ryanao/morelogin-mcp/issues
+
+## 更新日志
+
+### v0.1.1 (2024-03-21)
+
+- 修复了错误处理机制
+- 优化了测试用例
+- 改进了响应处理逻辑
+- 统一了错误消息格式
+
+### v0.1.0 (2024-03-20)
+
+- 初始版本发布
+- 支持基本的配置文件管理
+- 支持代理管理
+- 支持分组管理 

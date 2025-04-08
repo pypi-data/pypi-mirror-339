@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+morelogin_mcp/__init__.py
+morelogin_mcp/mcp_handler.py
+morelogin_mcp/morelogin_client.py
+morelogin_mcp.egg-info/PKG-INFO
+morelogin_mcp.egg-info/SOURCES.txt
+morelogin_mcp.egg-info/dependency_links.txt
+morelogin_mcp.egg-info/requires.txt
+morelogin_mcp.egg-info/top_level.txt
+tests/test_mcp_handler.py
+tests/test_morelogin_client.py
