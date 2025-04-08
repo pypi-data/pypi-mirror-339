@@ -1,0 +1,7 @@
+README.md
+setup.py
+geollama/__init__.py
+geollama.egg-info/PKG-INFO
+geollama.egg-info/SOURCES.txt
+geollama.egg-info/dependency_links.txt
+geollama.egg-info/top_level.txt
