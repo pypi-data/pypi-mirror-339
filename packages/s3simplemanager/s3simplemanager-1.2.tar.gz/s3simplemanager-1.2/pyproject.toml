@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "s3simplemanager"
+version = "1.2"
+authors = [
+  { name="Joao Chamine", email="jchamine@outlook.pt" },
+]
+description = "This package will allow an easier interaction with s3 buckets."
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  'boto3'
+]
+
+[project.urls]
+Homepage = "https://bitbucket.org/JoaoChamine/s3simplemanager/"
+Issues = "https://bitbucket.org/JoaoChamine/s3simplemanager/issues"
