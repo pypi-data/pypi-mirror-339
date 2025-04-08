@@ -1,0 +1,45 @@
+pattern:
+  - '.*\.txt$'
+  - '.*\.tsv$'
+  - '.*\.txt\.gz$'
+  - '.*\.tsv\.gz$'
+
+columns:
+  - PROTEIN
+  - TYPE
+
+annotation:
+
+  - type: internal
+    field: GENE
+    fieldSource:
+      - 'gene'
+      - 'Gene'
+      - 'GENE'
+      - 'Symbol'
+      - 'SYMBOL'
+      - 'GENE_SYMBOL'
+  - type: internal
+    field: PROTEIN
+    fieldSource:
+      - "protein"
+      - "Protein"
+      - "PROTEIN"
+  - type: internal
+    field: TRANSCRIPT
+    fieldSource:
+      - 'transcript'
+      - 'TRANSCRIPT'
+      - 'ENSEMBL_TRANSCRIPT'
+      - 'ensembl_transcript'
+      - 'MANE_SELECT'
+      - 'mane_select'
+      - 'MANE'
+      - 'mane'
+      - 'refseq_transcript'
+      - 'REFSEQ_TRANSCRIPT'
+      - 'refseq'
+      - 'REFSEQ'
+  - type: static
+    field: "TYPE"
+    value: "protein"

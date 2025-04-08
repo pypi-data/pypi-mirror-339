@@ -1,0 +1,69 @@
+pattern:
+  - '*.maf'
+  - '*.vcf'
+  - '*.tsv.gz'
+
+format: 'tsv'
+delimiter: 't'
+
+columns:
+  - 'by_OpenVariant'
+  - 'SAMPLE'
+  - 'MUTATION_REF'
+
+annotation:
+  - type: 'static'
+    field: 'by_OpenVariant'
+    value: 'True'
+
+  - type: 'internal'
+    field: 'CHROMOSOME'
+    fieldSource:
+      - 'Chromosome'
+      - 'Chr'
+      - 'Chrom'
+      - 'Chromosome_Name'
+      - '#chrom'
+    function: "lambda c: c.upper().replace('CHR', '').replace('23', 'X').replace('24', 'Y')"
+
+  - type: 'internal'
+    field: 'SAMPLE'
+    value: '{icgc_sample_id}_{icgc_specimen_id}'
+    fieldSource:
+      - ['icgc_sample_id','icgc_specimen_id']
+
+  - type: 'filename'
+    field: 'DATASET'
+    function: 'lambda x: "{}".format(x.lower()[:-4])'
+    regex: '[a-zA-Z0-9]*.'
+
+  - type: 'dirname'
+    field: 'PROJECT'
+    function: 'lambda x: "{}".format(x.lower())'
+    regex: '(*.)'
+
+  - type: 'mapping'
+    field: 'MUTATION_REF'
+    fieldSource:
+      - 'MutationID'
+      - 'id'
+      - 'Mutation_Id'
+    fieldMapping: 'MUTATION_ID'
+    fileMapping: 'metadata_mutation.tsv'
+    fieldValue: 'REFERENCE'
+
+  - type: 'plugin'
+    plugin: 'alteration_type'
+    field: 'ALT_TYPE'
+
+
+exclude:
+  - field: 'DATASET'
+    value: 'laml'
+
+  - field: 'DATASET'
+    value: 'ucs'
+
+
+
+

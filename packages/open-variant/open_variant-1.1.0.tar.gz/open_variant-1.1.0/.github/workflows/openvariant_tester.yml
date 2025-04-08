@@ -1,0 +1,53 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: OpenVariant tester
+
+on:
+  push:
+    branches:
+      - '**'
+      - '!refs/tags/.*'
+    tags-ignore:
+      - '*'
+    paths-ignore:
+      - './examples/*'
+  pull_request:
+    branches: [ "master" ]
+    paths-ignore:
+      - './examples/*'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+      UV_LINK_MODE: copy
+      RUFF_FORMAT: github
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version-file: "pyproject.toml"
+
+    - uses: astral-sh/setup-uv@v4
+      
+    - name: Lint with Ruff
+      run: |
+        uv sync --extra linting --frozen
+        uv run ruff check openvariant
+
+    - name: Test
+      run: |
+        uv sync --extra tests --frozen
+        uv run pytest --cov . 
+
+    - name: Upload coverage reports to Codecov with GitHub Action
+      uses: codecov/codecov-action@v3
+
