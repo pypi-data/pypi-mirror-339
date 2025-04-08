@@ -1,0 +1,9 @@
+romlib/__init__.py,sha256=CX2z-o2XKsuSEygA-GYuEEnv8tig5iFMQeeIUTYwhEE,965
+romlib/errors.py,sha256=oq8jUJGrkt36_QNrQ7Nj0cWhZv4gPNr-luG0EgufcCM,696
+romlib/roms.py,sha256=0mHitFEZLz8BouL2RoIJp0P_NLLNO_YurLJKjpMqpGE,55782
+romlib/tags.py,sha256=ADGgEQbcOdaicxe9T_cYYp5hUTLNTst6nnHtNzHYLKE,18654
+romlib-0.1.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+romlib-0.1.dist-info/METADATA,sha256=Rw-q4pFtk_ktn6mdUhS8Du0K5fqb8G1217BJRBcDKFY,25983
+romlib-0.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+romlib-0.1.dist-info/top_level.txt,sha256=WzQtsji6byPiYNCYA6vSnr5vVDBhIwCS4i5v5iF17eo,7
+romlib-0.1.dist-info/RECORD,,
