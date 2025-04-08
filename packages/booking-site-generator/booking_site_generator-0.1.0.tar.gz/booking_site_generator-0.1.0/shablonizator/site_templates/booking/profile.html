@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль - Название</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .page-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-size: 32px;
+            font-weight: 700;
+        }
+        
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            border-color: #e74c3c;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+        }
+        
+        .btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            color: #2c3e50;
+        }
+        
+        small {
+            font-size: 12px;
+            color: #666;
+            display: block;
+            margin-top: 5px;
+        }
+        
+        .form-actions {
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 20px;
+            }
+            
+            .page-title {
+                font-size: 28px;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">Название</a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="requests.html">Мои заявки</a></li>
+                        <li><a href="new-request.html">Новая заявка</a></li>
+                        <li><a href="profile.html" class="active">Профиль</a></li>
+                        <li><a href="#" id="logout-btn">Выйти</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h1 class="page-title">Профиль пользователя</h1>
+            
+            <div class="form-container">
+                <form id="profile-form">
+                    <div class="form-group">
+                        <label for="fullname">ФИО</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required readonly>
+                        <small>Email нельзя изменить</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="license">Номер документа</label>
+                        <input type="text" id="license" name="license" required>
+                    </div>
+                    
+                    <h2 class="section-title">Изменение пароля</h2>
+                    
+                    <div class="form-group">
+                        <label for="password">Текущий пароль</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="new-password">Новый пароль</label>
+                        <input type="password" id="new-password" name="new-password">
+                        <small>Минимум 8 символов</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Подтверждение нового пароля</label>
+                        <input type="password" id="confirm-password" name="confirm-password">
+                        <div class="error" id="password-error"></div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn">Сохранить изменения</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Название. Все права защищены.</p>
+        </div>
+    </footer>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

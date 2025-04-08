@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои заявки - Название</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Дополнительные стили для страницы заявок */
+        .requests-container {
+            margin-top: 30px;
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .no-requests {
+            text-align: center;
+            padding: 30px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .no-requests p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+        
+        #requests-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        
+        #requests-table th {
+            background-color: #2c3e50;
+            color: white;
+            padding: 12px 20px;
+            text-align: left;
+        }
+        
+        #requests-table td {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        #requests-table tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .actions {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .status {
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-block;
+            text-align: center;
+            min-width: 100px;
+        }
+        
+        .status-new {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .status-confirmed {
+            background-color: #27ae60;
+            color: white;
+        }
+        
+        .status-rejected {
+            background-color: #e74c3c;
+            color: white;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-size: 32px;
+            font-weight: 700;
+        }
+        
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 768px) {
+            .requests-container {
+                padding: 15px;
+                overflow-x: auto;
+            }
+            
+            #requests-table th, 
+            #requests-table td {
+                padding: 10px 15px;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">Название</a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="requests.html" class="active">Мои заявки</a></li>
+                        <li><a href="new-request.html">Новая заявка</a></li>
+                        <li><a href="profile.html">Профиль</a></li>
+                        <li><a href="#" id="logout-btn">Выйти</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h1 class="page-title">Мои заявки на бронирование</h1>
+            
+            <div class="requests-container">
+                <div class="no-requests" id="no-requests" style="display: none;">
+                    <p>У вас пока нет заявок на бронирование.</p>
+                    <a href="new-request.html" class="btn">Создать новую заявку</a>
+                </div>
+                
+                <table id="requests-table">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Товар</th>
+                            <th>Дата бронирования</th>
+                            <th>Статус</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Данные будут загружены из JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="actions">
+                <a href="new-request.html" class="btn">Создать новую заявку</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Название. Все права защищены.</p>
+        </div>
+    </footer>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/requests.js"></script>
+</body>
+</html>
