@@ -1,0 +1,13 @@
+stratmc/__init__.py,sha256=2fmg6QKv7xRo2yEeCyEp6Y5r4cdt5aV0OqlUcpcHvl8,160
+stratmc/config.py,sha256=uwQWiEMSfirZalv9bu5LRwoGFi1baRBVagf4xAHFo6w,147
+stratmc/data.py,sha256=zORU3BEE8SOhWWiONjdTpHefAMLtoQnZHV11wiEwvog,51939
+stratmc/inference.py,sha256=d1D99ge1_EMhhJtEjylwCijfHOeJmmfiF-Oe-ZKpMnQ,85719
+stratmc/model.py,sha256=6IvFMnF9iZlPS82MwXSoQMSqz7DTA4kIS9cEkQa6Ugc,144438
+stratmc/plotting.py,sha256=I9lT0ZHAnKOoTixYf4Kr5efqnHRGE4-erth2_sHlvYQ,125637
+stratmc/synthetics.py,sha256=py5AjkRF195XtCkor_vGlp-7_vpB5CbuIKr8nMrAp-E,41899
+stratmc/tests.py,sha256=2HUPUVo7Ey0fVITQJ4jZk9gIfbTs4Z_qM7RwKyvIVg8,23871
+stratmc-1.0.0.dist-info/licenses/LICENSE,sha256=YF6QR6Vjxcg5b_sYIyqkME7FZYau5TfEUGTG-0JeRK0,35129
+stratmc-1.0.0.dist-info/METADATA,sha256=ka8s_5oRh1yK0di2c5uUE-i6RTZObPYBZ5vZdhFYk3g,44055
+stratmc-1.0.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+stratmc-1.0.0.dist-info/top_level.txt,sha256=4FKlGYMpZLzyg9nmrmECsFHMV8id1MsuYtL4K8N-KkA,8
+stratmc-1.0.0.dist-info/RECORD,,
