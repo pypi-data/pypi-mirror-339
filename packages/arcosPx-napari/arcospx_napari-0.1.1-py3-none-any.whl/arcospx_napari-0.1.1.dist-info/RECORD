@@ -1,0 +1,17 @@
+arcospx/__init__.py,sha256=uCz4vvl2V0TGuFdst_F6n01uJX7t8cByO_48j4k_ot0,204
+arcospx/_version.py,sha256=Mmxse1R0ki5tjz9qzU8AQyqUsLt8nTyCAbYQp8R87PU,511
+arcospx/_widget.py,sha256=3eVRn9SQ9lP3lqOrK1hcGeRoLmbki9HgzuoRLqowabQ,10744
+arcospx/napari.yaml,sha256=MQWG1kupTI-F52U6tTQxII1qP2YM-YXnGoUSTNw46y8,792
+arcospx/utils.py,sha256=zvsGzIPd-0fVny30ETXlMmJ7ExvhaIh5bOmmsFCSDDI,5727
+arcospx/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arcospx/_tests/test_widget.py,sha256=RoiwVwTTcAmpFZgaLF0krApm_FHu5PLLeBuTJp3uXjU,1702
+arcospx/_tests/test_data/1_growing.tif,sha256=WyqQWnmayzfwb__FthTonGee2dGDbc6QMXMfWX4HYPM,2507
+arcospx/_tests/test_data/1_growing_track_events_true.tif,sha256=G0GAObhiY95oBk0-ormSx8JaUYvmERsZFJkvFC3Octk,1777
+arcospx/_tests/test_data/1_growing_true.tif,sha256=YmU6c7uyErOTDtp1VZSGKpa19_8GytNkdx6v8KCeC3Q,2901
+arcospx/_tests/test_data/4_colliding.tif,sha256=-LtfEyCYHBFl5XfbPU7sdmqeCUvxgqS0aCrjxFw9j7M,2507
+arcospx_napari-0.1.1.dist-info/licenses/LICENSE,sha256=1b9VCv3xJ3IlyclJfLeUpk3Z-Dk99OKJ8hb9py-RhhI,1491
+arcospx_napari-0.1.1.dist-info/METADATA,sha256=HguaKfsGEAJKntEZ-gMn--u3SBa5PsRXToQ_iPeAgBY,5204
+arcospx_napari-0.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+arcospx_napari-0.1.1.dist-info/entry_points.txt,sha256=XKSR7QfEouzxE8qAMVXDRMjEOxwlk-jn3FXGkIw4Iuw,55
+arcospx_napari-0.1.1.dist-info/top_level.txt,sha256=KD_O1Qz2Hoq7HLe_JgS9vEFSzSxFukvNKxWBHUiveuM,8
+arcospx_napari-0.1.1.dist-info/RECORD,,
