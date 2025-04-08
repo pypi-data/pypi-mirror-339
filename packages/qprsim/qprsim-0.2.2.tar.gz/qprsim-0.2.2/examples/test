@@ -1,0 +1,41 @@
+digraph {
+	pr_birth
+	"OCTransformerNode 1" [label="T (material create)" shape=diamond]
+	"OCSplit 2" [label="S (split 1)" shape=diamond]
+	"Add Material" [label="Add Material" shape=box style=rounded]
+	OCJoin4 [label=J shape=diamond]
+	"OCSplit 5" [label="S (split 2)" shape=diamond]
+	"XorSplit 6" [label="X (mat change)" shape=diamond]
+	"Change Material" [label="Change Material" shape=box style=rounded]
+	XorJoin8 [label=X shape=diamond]
+	OCJoin9 [label=J shape=diamond]
+	"OCTransformerNode 10" [label="T (po create)" shape=diamond]
+	"Create Purchase Order" [label="Create Purchase Order" shape=box style=rounded]
+	"Receive Order" [label="Receive Order" shape=box style=rounded]
+	grave
+	"XorSplit 14" [label="X (pr change)" shape=diamond]
+	"Change PR" [label="Change PR" shape=box style=rounded]
+	XorJoin16 [label=X shape=diamond]
+	"Create Purchase Requisition" [label="Create Purchase Requisition" shape=box style=rounded]
+	pr_birth -> "OCTransformerNode 1"
+	"OCTransformerNode 1" -> "OCSplit 2"
+	"OCSplit 2" -> "Create Purchase Requisition"
+	"OCSplit 2" -> "Add Material"
+	"Add Material" -> OCJoin4
+	OCJoin4 -> "OCSplit 5"
+	"OCSplit 5" -> "XorSplit 14"
+	"OCSplit 5" -> "XorSplit 6"
+	"XorSplit 6" -> XorJoin8
+	"XorSplit 6" -> "Change Material"
+	"Change Material" -> XorJoin8
+	XorJoin8 -> OCJoin9
+	OCJoin9 -> "OCTransformerNode 10"
+	"OCTransformerNode 10" -> "Create Purchase Order"
+	"Create Purchase Order" -> "Receive Order"
+	"Receive Order" -> grave
+	"XorSplit 14" -> XorJoin16
+	"XorSplit 14" -> "Change PR"
+	"Change PR" -> XorJoin16
+	XorJoin16 -> OCJoin9
+	"Create Purchase Requisition" -> OCJoin4
+}

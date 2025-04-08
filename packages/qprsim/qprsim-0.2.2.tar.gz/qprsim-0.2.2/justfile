@@ -1,0 +1,18 @@
+set shell := ["pwsh", "-c"]
+
+lock:
+    poetry lock --no-update
+
+update:
+    poetry update
+
+build:
+    poetry build
+
+publish:
+    poetry publish --build
+
+requirements:
+    poetry export --without-hashes -f requirements.txt > requirements.txt --without-hashes
+
+preflight: lock requirements build
