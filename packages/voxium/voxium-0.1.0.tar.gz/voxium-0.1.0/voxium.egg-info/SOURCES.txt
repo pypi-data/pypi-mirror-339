@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+voxium.egg-info/PKG-INFO
+voxium.egg-info/SOURCES.txt
+voxium.egg-info/dependency_links.txt
+voxium.egg-info/requires.txt
+voxium.egg-info/top_level.txt
+voxium_client/__init__.py
+voxium_client/client.py
+voxium_client/live_transcribe.py
