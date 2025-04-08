@@ -1,0 +1,10 @@
+address_parser_js-0.1.1.dist-info/METADATA,sha256=rTVUxzLmeC_1yp8gH8Pj3ahYshO0N6hvdTgxlr-2GtA,476
+address_parser_js-0.1.1.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+address_parser_js-0.1.1.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+parse/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parse/area.py,sha256=n-1op2_ZQdc7l5pDbMdcsTfvCMef1_hQPg04yDdIRI4,108521
+parse/index.js,sha256=kptxwxBN-1vqGaKmCtUKZs-QUl9szvGLuf38E0fI_SE,4488
+parse/parse_address.py,sha256=2OsqODnWV2hzoxtbHRXOLzKWZzaV9VA_0TCQ4Z9vA-w,13524
+parse/parse_area.py,sha256=oUD7jEykz5ABauBDChHIrTZiKvuB2QqViV7JGpJBqdg,43772
+parse/utils.py,sha256=N9c5UwvROitve-aHCSJmhkNbi7M4vN2nfKwYWcHETKs,9076
+address_parser_js-0.1.1.dist-info/RECORD,,
