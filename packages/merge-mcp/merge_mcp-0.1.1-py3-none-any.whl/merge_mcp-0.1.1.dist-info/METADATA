@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: merge-mcp
+Version: 0.1.1
+Summary: An MCP interface for the Merge API
+Author-email: david.dalmaso@merge.dev
+Requires-Python: >=3.10
+Requires-Dist: isort>=6.0.1
+Requires-Dist: mcp
+Provides-Extra: dev
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-asyncio; extra == 'dev'
+Requires-Dist: pytest-mock; extra == 'dev'

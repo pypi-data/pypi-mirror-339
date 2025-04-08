@@ -1,0 +1,2 @@
+[console_scripts]
+merge-mcp = merge_mcp.main:main
