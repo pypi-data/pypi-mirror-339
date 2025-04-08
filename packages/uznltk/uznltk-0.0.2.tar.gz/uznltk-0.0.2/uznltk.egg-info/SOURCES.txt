@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+uznltk/__init__.py
+uznltk/stopwords.py
+uznltk/tokenizer.py
+uznltk.egg-info/PKG-INFO
+uznltk.egg-info/SOURCES.txt
+uznltk.egg-info/dependency_links.txt
+uznltk.egg-info/top_level.txt
+uznltk/data/stopwords_uz.txt
