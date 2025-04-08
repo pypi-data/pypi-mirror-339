@@ -1,0 +1,31 @@
+# -*- coding:utf-8 -*-
+from mako import runtime, filters, cache
+UNDEFINED = runtime.UNDEFINED
+STOP_RENDERING = runtime.STOP_RENDERING
+__M_dict_builtin = dict
+__M_locals_builtin = locals
+_magic_number = 10
+_modified_time = 1744104054.8971517
+_enable_loop = True
+_template_filename = 'd:/projekte/studlis/studlis/studlis/webui/pages/study_browser.html'
+_template_uri = 'pages/study_browser.html'
+_source_encoding = 'utf-8'
+_exports = []
+
+
+def render_body(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        __M_locals = __M_dict_builtin(pageargs=pageargs)
+        __M_writer = context.writer()
+        __M_writer('<template tpl_id="study_browser">\r\n    <div class="flex-use-height">\r\n        <h2>Wähle Studie</h2>\r\n        <div class="study_list flex-use-height">\r\n            <div class="flex-use-height">\r\n                \r\n                <div class="controls d-flex">\r\n\r\n                    <div class="dropdown mr-2">\r\n                        <select id="sortDropdownMenu" class="form-control" onchange="page_study_browser.sort(this.value)">\r\n                            <option value="pseudorandom">Pseudorandom</option>\r\n                            <option value="asc">Asc</option>\r\n                            <option value="desc">Desc</option>\r\n                            <option value="date_desc">Date Desc</option>\r\n                            <option value="date_asc">Date Asc</option>\r\n                        </select>\r\n                    </div>\r\n\r\n                    <button id="btn-back" class="btn btn-outline-primary mr-2" style="width: 150px;" onclick="page_study_browser.back()">\r\n                        <i class="fas fa-arrow-left"></i> Back\r\n                    </button>\r\n                    <button id="btn-forward" class="btn btn-outline-primary mr-2" style="width: 150px;"onclick="page_study_browser.forward()">\r\n                        Forward <i class="fas fa-arrow-right"></i>\r\n                    </button>\r\n                    <div class="input-group mr-2">\r\n                        <input type="text" id="filter-box" class="form-control" placeholder="Filter" oninput="page_study_browser.filter()">\r\n                        <div class="input-group-append">\r\n                            <span class="input-group-text"><i class="fas fa-filter"></i></span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            \r\n\r\n                <div class="flex-use-height mt-2" style="overflow-y: auto;">\r\n                    <table class="study-table table-modern">\r\n                        <thead style="position: sticky; top: 0;">\r\n                            <tr class="">\r\n                                <td>Name</td>\r\n                                <td>Kurzbeschreibung</td>\r\n                                <td>Kommentar</td>\r\n                                <td>Studienzahl</td>\r\n\r\n                            </tr>\r\n                        </thead>\r\n                        <tbody class="study-content"></tbody>\r\n                    </table>\r\n                </div>\r\n                <div class="col-4">\r\n                </div>\r\n\r\n            </div>\r\n        </div>\r\n\r\n\r\n    </div>\r\n</template>\r\n<template tpl_id="study_item">\r\n    <tr class="" style="font-size:12pt;">\r\n        <td class="study-name"></td>\r\n        <td class="study-short" style="font-size:7pt;"></td>\r\n        <td class="study-comment"></td>\r\n        <td class="study-state">\r\n\r\n        </td>\r\n\r\n    </tr>\r\n\r\n</template>\r\n\r\n<script>\r\n    var selected_study="";\r\n    var pos=0;\r\n    var limit=30;\r\n    page_study_browser = {};\r\n    page_study_browser.show = function () {\r\n        node = $("#main-view-content").tpl("study_browser");\r\n        page_study_browser.load();\r\n        $("#sortDropdownMenu").val("pseudorandom");\r\n    }\r\n    page_study_browser.load=function(){\r\n        filter=$("#filter-box").val();\r\n        if (filter.length<3)filter="";\r\n        \r\n        order_mode=$("#sortDropdownMenu").val();\r\n\r\n        DoRequest("get_study_list", {"token":session_token,"project":selected_project,"from":pos,"filter":filter,"order_mode":order_mode}, function (data) {\r\n            if (data.value) {\r\n                $(".study-content").empty();\r\n                for (var i = 0; i < data.value.length; i++) \r\n                {\r\n                    let study = data.value[i];\r\n                    let index = i+pos;\r\n                    let node = $(".study-content").appendtpl("study_item");\r\n                    node.find(".study-name").text(study.name);\r\n                    node.find(".study-short").text(study.short);\r\n                    node.find(".study-comment").text(study.comment);\r\n                    node.find(".study-state").text(study.state);\r\n                    \r\n                    node.click(function(){\r\n                        selected_study=$(this).find(".study-name").text();\r\n                        study_viewer.start_list(study.id,index ,{"token":session_token,"project":selected_project,"from":pos,"filter":filter,"order_mode":order_mode});\r\n                    });\r\n                    //$(".main-view-sidenav").removeClass("d-none");\r\n                \r\n                }\r\n            }\r\n        });\r\n    }\r\n    page_study_browser.back=function(){\r\n        if (pos==0) return;\r\n        pos-=limit;\r\n        if(pos<0) pos=0;\r\n        page_study_browser.load();\r\n    }\r\n    page_study_browser.forward=function(){\r\n        pos+=limit;\r\n        page_study_browser.load();\r\n    }\r\n    page_study_browser.filter=function(){\r\n        page_study_browser.load();\r\n    }\r\n    page_study_browser.sort=function(type){\r\n        page_study_browser.load();\r\n        \r\n    }\r\n\r\n\r\n</script>')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
+"""
+__M_BEGIN_METADATA
+{"filename": "d:/projekte/studlis/studlis/studlis/webui/pages/study_browser.html", "uri": "pages/study_browser.html", "source_encoding": "utf-8", "line_map": {"16": 0, "21": 1, "27": 21}}
+__M_END_METADATA
+"""

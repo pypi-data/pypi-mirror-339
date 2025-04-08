@@ -1,0 +1,6 @@
+include studlis/webui/*.html
+include studlis/webui/pages/*.html
+recursive-include studlis/static *.css
+recursive-include studlis/static *.js
+recursive-include studlis/static *.ttf
+recursive-include studlis/static *.woff2
