@@ -1,0 +1,8 @@
+[console_scripts]
+pr_gui_fun3d_sfe_steady.py = pyrefine.monitoring.pr_gui_fun3d_sfe_steady:main
+pr_gui_fun3d_sfe_steady_adjoint.py = pyrefine.monitoring.pr_gui_fun3d_sfe_steady_adjoint:main
+pr_gui_fun3d_steady.py = pyrefine.monitoring.pr_gui_fun3d_steady:main
+pr_gui_fun3d_steady_live.py = pyrefine.monitoring.pr_gui_fun3d_steady_live:main
+pr_post_fun3d_steady_hist_to_tec.py = pyrefine.post_processing.pr_post_fun3d_steady_hist_to_tec:main
+pr_watch.py = pyrefine.monitoring.pr_watch:main
+sfe_cfg_update.py = pyrefine.simulation.sfe_cfg_update:main
