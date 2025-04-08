@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytest-gak"
+version = "2.0.0"
+authors = [
+  {name = "Josh Holbrook", email = "josh.holbrook@gmail.com"}
+]
+description = "A Pytest plugin and command line tool for interactive testing with Pytest"
+readme = "README.md"
+keywords = []
+classifiers = [
+  "Framework :: Pytest"
+]
+license = { text = "Apache-2.0" }
+requires-python = ">=3.11"
+dependencies = [
+  "click",
+  "rich",
+]
+
+[project.scripts]
+gaktest = "gaktest:main"
+
+[project.entry-points.pytest11]
+pytest-gak = "pytest_gak"
+
+[dependency-groups]
+dev = [
+  "flake8",
+  "flake8-black",
+  "pytest",
+  "black",
+  "click",
+  "isort",
+  "jupyter-console",
+  "validate-pyproject[all]",
+]
+
+[tool.uv]
+package = true
+
+[tool.isort]
+profile = "appnexus"
+known_application = "pytest_gak"
+
+[tool.pyright]
+include = ["pytest_gak", "gaktest", "tests"]
+
+[tool.pytest]
+addopts = "--verbose -s"
+testpaths = [ "tests" ]
+
+[tool.setuptools]
+packages = [ "pytest_gak", "gaktest" ]
