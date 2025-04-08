@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: character-extractor
+Version: 0.1.2
+Summary: An MCP server to extract and analyze story characters from text or PDF files
+Author-email: Akash Shivling Savalgi <asavalgi9@gmail.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: PyPDF2>=3.0.1
+Requires-Dist: requests
+
+# Character Extractor
+
+A Model Context Protocol (MCP) server that analyzes stories from `.txt` or `.pdf` files and extracts characters with attributes like name, age, appearance, and more.
+
+## Features
+- Extracts structured character info from stories
+- Designed to work seamlessly with Claude Desktop
+- No external API calls
+
+## Usage
+Install via pip:
+pip install character-extractor
+
+Run the server : 
+python -m character_extractor

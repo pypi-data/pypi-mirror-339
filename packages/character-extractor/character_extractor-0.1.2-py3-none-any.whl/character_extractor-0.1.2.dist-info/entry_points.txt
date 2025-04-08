@@ -1,0 +1,2 @@
+[console_scripts]
+character-extractor = character_extractor.main:main
