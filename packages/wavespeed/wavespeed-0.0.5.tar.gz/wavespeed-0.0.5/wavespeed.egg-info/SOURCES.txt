@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_client.py
+wavespeed/__init__.py
+wavespeed/client.py
+wavespeed.egg-info/PKG-INFO
+wavespeed.egg-info/SOURCES.txt
+wavespeed.egg-info/dependency_links.txt
+wavespeed.egg-info/requires.txt
+wavespeed.egg-info/top_level.txt
+wavespeed/schemas/__init__.py
+wavespeed/schemas/prediction.py
