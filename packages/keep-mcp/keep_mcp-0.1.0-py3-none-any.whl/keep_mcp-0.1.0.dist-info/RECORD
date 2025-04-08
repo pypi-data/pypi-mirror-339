@@ -1,0 +1,9 @@
+server/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+server/__main__.py,sha256=0g3iknXOS9gZUcpL_trgAcuCJnZZKjdsT_xt61WOVb4,60
+server/cli.py,sha256=gBgDM4yoCSaItBwRrRcT35HpnDlchK74HucE7HSqWds,1035
+server/keep_api.py,sha256=8WW69MNFwO6CPYF3ocJufDDUob5VU2yYLrTo-y8VzsQ,2114
+keep_mcp-0.1.0.dist-info/METADATA,sha256=3Rhm8LNVQCwuSquqR3hmG_YgdcZuGGU5EQhk0uwPm8A,2840
+keep_mcp-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+keep_mcp-0.1.0.dist-info/entry_points.txt,sha256=g2WJCYS32zIth25Jaw7tSHA8_IHMum1dK-tpJV9J-cU,40
+keep_mcp-0.1.0.dist-info/licenses/LICENSE,sha256=XiyxwtWwiJWRuHaP0MJXwp0IjL_tfoQTRrLVPkp7Xvg,1073
+keep_mcp-0.1.0.dist-info/RECORD,,
