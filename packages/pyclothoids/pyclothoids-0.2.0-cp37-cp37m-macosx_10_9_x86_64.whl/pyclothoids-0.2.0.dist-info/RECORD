@@ -1,0 +1,8 @@
+pyclothoids/__init__.py,sha256=kNIBkrNemgtuksuR8kA_1Pojmfcq4ZoEVVSSovF2q7s,40
+pyclothoids/clothoid.py,sha256=qPZaeUj8lfjUiMTcko4s_IJ6KHmKxuMuK5ruOgVjN48,12352
+pyclothoids/_clothoids_cpp.cpython-37m-darwin.so,sha256=0Pp2259PyNzakSwVv6l3nx2bo8Ey9t7_xNoP6c9AEjc,746808
+pyclothoids-0.2.0.dist-info/RECORD,,
+pyclothoids-0.2.0.dist-info/LICENSE,sha256=4Q6GH1g6hJ76bp_Olp359L-HoNfGx8fxPg0NiTIzIiA,1068
+pyclothoids-0.2.0.dist-info/WHEEL,sha256=cn3MqKxXPZf_umXVN9bjU7rU5G5fwrevuD19NAvGz6I,110
+pyclothoids-0.2.0.dist-info/top_level.txt,sha256=m_EDDG1qECjvvljc2U_Dkt089CnWFnjpqxf9lJ64AQs,12
+pyclothoids-0.2.0.dist-info/METADATA,sha256=f-M3EENQeGpcCdm7YWXvNZXxK4lImIkXgtdmc_1PMvk,2320
