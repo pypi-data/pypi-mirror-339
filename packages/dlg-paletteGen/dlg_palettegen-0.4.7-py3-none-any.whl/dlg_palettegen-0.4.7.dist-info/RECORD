@@ -1,0 +1,14 @@
+dlg_paletteGen/__init__.py,sha256=0jeUlRdfVJv15wE-AXi3C1jhgU9swbuqAkHM357WF9k,82
+dlg_paletteGen/__main__.py,sha256=krTjxRHJhGKpXYFyqNnXFazwI9_DPBwzaDVRsSP6GF0,163
+dlg_paletteGen/classes.py,sha256=RKFxWg-BP9a4Bx2dR-sSurifFsScuAxUde_e_hx76MI,29613
+dlg_paletteGen/cli.py,sha256=7hTZvMMY3ud6uuU1geP8fsBppBBkX8UX9Dn_x53bo1E,10540
+dlg_paletteGen/module_base.py,sha256=m_nqW4L-U3k6N8vMTYJcO89TXbRIWIPEdEyWPRbPLWI,14915
+dlg_paletteGen/settings.py,sha256=G7wGExJomAcGy9i4Z7lKL85r9cvFwGFCeOZEX14GVLk,2762
+dlg_paletteGen/source_base.py,sha256=q3EpGYVel53q43_7kmkZM1x70OcBApN6JQDgeIIekxk,32707
+dlg_paletteGen/support_functions.py,sha256=KGHEsohm_ovJw__RM_oztKWQDQPsULlMtGt52cLrITo,33565
+dlg_palettegen-0.4.7.dist-info/licenses/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+dlg_palettegen-0.4.7.dist-info/METADATA,sha256=ZnDQbnrBE9kdtCfls6oqa26oZAI80TaBJfutD3btnIs,3364
+dlg_palettegen-0.4.7.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+dlg_palettegen-0.4.7.dist-info/entry_points.txt,sha256=f1QxVtQZWt6eHWOqkm9tgtfLgZ622fOC_oF-fottrtY,110
+dlg_palettegen-0.4.7.dist-info/top_level.txt,sha256=A_GnGMbIIALZKSHoPqj9QX6zeiA9ElSzPS1bddaymUM,15
+dlg_palettegen-0.4.7.dist-info/RECORD,,
