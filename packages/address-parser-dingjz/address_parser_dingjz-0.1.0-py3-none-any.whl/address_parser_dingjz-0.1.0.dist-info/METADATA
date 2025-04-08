@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: address_parser_dingjz
+Version: 0.1.0
+Summary: 中文地址解析
+Author-Email: dinger <dinger2dinger@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/dingtwo/address_parser
+Project-URL: Issues, https://github.com/dingtwo/address_parser/issues
+Requires-Python: ==3.13.*
+Description-Content-Type: text/markdown
+
+# address_parser
+
+中文地址解析工具, 从[这个](https://github.com/akebe/address-parse)js版本用 ai 翻译过来
+
+
