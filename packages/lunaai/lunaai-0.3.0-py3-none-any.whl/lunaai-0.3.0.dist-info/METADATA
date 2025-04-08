@@ -1,0 +1,228 @@
+Metadata-Version: 2.1
+Name: lunaai
+Version: 0.3.0
+Summary: A retrieval-based QnA and code generation chatbot using sentence-transformer embeddings.
+Author: Joydeep Dutta
+Author-email: joydeep.development.cse@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: gdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: sentence-transformers
+Requires-Dist: scikit-learn
+Requires-Dist: nltk
+Requires-Dist: rapidfuzz
+
+# LunaAI
+
+**LunaAI** is a retrieval-based QnA and code generation chatbot built using SentenceTransformer embeddings and cosine similarity.  
+It can answer natural language questions and retrieve highly relevant answers from a preloaded CSV dataset â€” no fine-tuning required.
+Current Dataset size 100K.
+
+---
+
+## Features
+
+- Embedding-based search using SentenceTransformers
+- Cosine similarity + fuzzy matching fallback
+- Loads embeddings and CSV from Google Drive
+- Clean CLI interface with feedback saving
+- Lightweight and fast â€” works offline after setup
+
+---
+
+## Avilable Topics
+
+- National Bird (212 unique rows)
+- National Flower (141 unique rows)
+- National Tree (191 unique rows)
+- National fruit (198 unique rows)
+- National Flag (206 unique rows)
+- Capital City (197 unique rows)
+- National Emblem (191 unique rows)
+- National Anthem (186 unique rows)
+- National Language (197 unique rows)
+- National Animal (197 unique rows)
+- National Motto (198 unique rows)
+- National Dish (192 unique rows)
+- Special Days (1187 unique rows)
+- National Currency (198 unique rows)
+- National Monument (193 unique rows)
+- National Costume (192 unique rows)
+- National Music (191 unique rows)
+- National River (197 unique rows)
+- National Heritage Site (195 unique rows)
+- National Festivals (196 unique rows)
+- National Symbolic Objects (190 unique rows)
+- National Park (179 unique rows)
+- Historic Landmark (193 unique rows)
+- Languages Spoken (194 unique rows)
+- Famous Historical Figures (197 unique rows)
+- National Literature (196 unique rows)
+- Popular Tourist Attractions (196 unique rows)
+- Traditional Festivals (191 unique rows)
+- Independence Day (196 unique rows)
+- Religions Practiced (196 unique rows)
+- Political System (193 unique rows)
+- Economic Indicators (1475 unique rows)
+- Country (194 unique rows)
+- Cultural Heritage (1000 unique rows)
+- Topic (1 unique rows)
+- Longest river (196 unique rows)
+- Shortest river (200 unique rows)
+- Highest Peak (196 unique rows)
+- Longest & Shortest River (8 unique rows)
+- Deepest lake (209 unique rows)
+- Largest lake (196 unique rows)
+- Highest waterfall (187 unique rows)
+- Endangered species (201 unique rows)
+- Endangered birds (202 unique rows)
+- Endangered Trees (202 unique rows)
+- Endangered Fish (198 unique rows)
+- Largest Desert (208 unique rows)
+- Endangered Animals (201 unique rows)
+- UNESCO World Heritage Sites (182 unique rows)
+- Endangered Mammals (202 unique rows)
+- National Mammal (195 unique rows)
+- National Reptile (204 unique rows)
+- Endangered Reptile (194 unique rows)
+- Famous Years (251 unique rows)
+- Longest coastline (203 unique rows)
+- Largest forest (201 unique rows)
+- Natural Wonders (198 unique rows)
+- National Insect (205 unique rows)
+- National Amphibian (195 unique rows)
+- Endangered Amphibian (202 unique rows)
+- Medicinal Plants (191 unique rows)
+- Most Famous Historical Event (202 unique rows)
+- Most Significant War (196 unique rows)
+- Oldest Monument (195 unique rows)
+- Major Scientific Discovery (146 unique rows)
+- Oldest University (201 unique rows)
+- Most Advanced Technology (193 unique rows)
+- Main Economic Sector (202 unique rows)
+- Most Exported Product (201 unique rows)
+- Largest Company (202 unique rows)
+- Most Popular Sport (203 unique rows)
+- Most Famous Athlete (194 unique rows)
+- Biggest Stadium (199 unique rows)
+- Predicted Major Events (76 unique rows)
+- Cure for Cancer & Genetic Diseases (76 unique rows)
+- Mind Uploading & Digital Consciousness (76 unique rows)
+- Most Endangered Animal (185 unique rows)
+- National Fish (190 unique rows)
+- Unique Wildlife Species (195 unique rows)
+- Most Common Tree Species (190 unique rows)
+- Biodiversity Hotspot (193 unique rows)
+- Astronomy (582 unique rows)
+- Flower Names (26 unique rows)
+- Tree Names (26 unique rows)
+- Color Names (26 unique rows)
+- Aromatic Flower Names (26 unique rows)
+- Country names (51 unique rows)
+- Fruit names (26 unique rows)
+- Protected National Park (194 unique rows)
+- Marine Reserve (194 unique rows)
+- Deforestation Rate (189 unique rows)
+- Reforestation & Conservation Efforts (189 unique rows)
+- Popuation (188 unique rows)
+- Area (189 unique rows)
+- Average Temperature (189 unique rows)
+- Major Climate Zone (189 unique rows)
+- Largest Glacier (189 unique rows)
+- Fastest Train (185 unique rows)
+- Largest Railway Platform (202 unique rows)
+- National Game (168 unique rows)
+- Plastic Waste Generation by Countries (Kaggle) (168 unique rows)
+- Total Water Consumption by Countries (Kaggle) (500 unique rows)
+- Industrialal Water Usage (Kaggle) (500 unique rows)
+- Groundwater Depletion Rate (Kaggle) (500 unique rows)
+- Agricultural Water use (Kaggle) (500 unique rows)
+- Household Water use (Kaggle) (500 unique rows)
+- Annual Precipitation (Kaggle) (500 unique rows)
+- Clash of Clans (1971 unique rows)
+- Painting Color Types (54 unique rows)
+- Art Components (44 unique rows)
+- AI (154 unique rows)
+- Greeting (96 unique rows)
+- History (1 unique rows)
+- Fun & Casual Conversation (57 unique rows)
+- Help & Guidance (271 unique rows)
+- Whats App Help & Guidance (238 unique rows)
+- Facebook Help & Guide (491 unique rows)
+- Google Help & Guide (273 unique rows)
+- Emergency Assistant (340 unique rows)
+- Instagram Help & Guide (738 unique rows)
+- YouTube Help & Guide (552 unique rows)
+- Free fire characters (53 unique rows)
+- Free fire weapons (41 unique rows)
+- Free fire maps (21 unique rows)
+- Affection (2 unique rows)
+- Physics (14 unique rows)
+- Geography (30 unique rows)
+- Context Sense AI (2 unique rows)
+- Full forms (519 unique rows)
+- Fun (1 unique rows)
+- Travel Tips (9 unique rows)
+- Transportation Tips (7 unique rows)
+- Accommodations (7 unique rows)
+- Food and Dining (7 unique rows)
+- Destinations (12 unique rows)
+- About the Model (12 unique rows)
+- Plant Care (1214 unique rows)
+- Programming Language (24 unique rows)
+- Python (187 unique rows)
+- Regression Models (50 unique rows)
+- Classifiers (63 unique rows)
+- Machine Learning (78 unique rows)
+- General Knowledge (3191 unique rows)
+- Cricketer Name (Kaggle) (1542 unique rows)
+- Mobiles (Kaggle) (908 unique rows)
+- Cars (Kaggle) (720 unique rows)
+- Miscellaneous (251 unique rows)
+- Amazon Rainforest (126 unique rows)
+- Pyramids (145 unique rows)
+- Chemistry - Atomic Numbers (119 unique rows)
+- Periodic Table (177 unique rows)
+- Mesopotamian Civilization (256 unique rows)
+- Indus Valley Civilization (84 unique rows)
+- Grand Canyon (303 unique rows)
+- Great Barrier Reef (114 unique rows)
+- Moon Landings (329 unique rows)
+- Gemini (288 unique rows)
+- Mars Mission (346 unique rows)
+- Mythology (459 unique rows)
+- Scientific Discoveries (250 unique rows)
+- Modern Inventions (371 unique rows)
+- Historical Events (200 unique rows)
+- Space Exploration (107 unique rows)
+- Great World Leaders (319 unique rows)
+- World Wonders (101 unique rows)
+- Industrial Revolution (178 unique rows)
+- Global Conflicts (79 unique rows)
+- Human Evolution (31 unique rows)
+- Different types of Fishes (229 unique rows)
+- Different Apps (48 unique rows)
+- WikiPedia Dataset (2118 unique rows)
+- IPL (3252 unique rows)
+- Top Rated Movies (Kaggle) (9554 unique rows)
+- Popular Youtube Videos (Kaggle) (992 unique rows)
+- Google Quaries (7785 unique rows)
+- Products (998 unique rows)
+- Quora Questions (1693 unique rows)
+- HFRL (135 unique rows)
+- Smallest river (2 unique rows)
+- Visual Studio Code Help & Guidance (16 unique rows)
+- Taste (2 unique rows)
+- Color (1 unique rows)
+
+---
+
+## Installation
+
+```bash
+pip install lunaai
