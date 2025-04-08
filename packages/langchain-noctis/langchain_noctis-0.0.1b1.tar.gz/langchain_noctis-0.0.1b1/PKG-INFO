@@ -1,0 +1,462 @@
+Metadata-Version: 2.3
+Name: langchain-noctis
+Version: 0.0.1b1
+Summary: An integration package connecting Noctis API and LangChain
+License: MIT
+Keywords: langchain,noctis,domain,dns,security,ai,retriever,llm,tool
+Author: Noctis Team
+Author-email: support@noctis.io
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Internet
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: langchain-core (>=0.3.51,<0.4.0)
+Requires-Dist: noctis_sdk (>=0.0.3,<0.0.4)
+Project-URL: Bug Tracker, https://github.com/NoctisNet/langchain-noctis/issues
+Project-URL: Changelog, https://github.com/NoctisNet/langchain-noctis/CHANGELOG.md
+Project-URL: Documentation, https://github.com/NoctisNet/langchain-noctis/blob/main/architecture/README.md
+Project-URL: HomePage, https://www.noctisnet.com/
+Project-URL: Repository, https://github.com/NoctisNet/langchain-noctis
+Project-URL: Release Notes, https://github.com/NoctisNet/langchain-noctis/releases
+Project-URL: Source Code, https://github.com/NoctisNet/langchain-noctis
+Description-Content-Type: text/markdown
+
+# langchain-noctis
+
+[![Build and Create Release](https://github.com/NoctisNet/langchain-noctis-retriever/actions/workflows/publish.yml/badge.svg)](https://github.com/NoctisNet/langchain-noctis-retriever/actions/workflows/publish.yml)
+[![Run Tests](https://github.com/NoctisNet/langchain-noctis-retriever/actions/workflows/test.yml/badge.svg)](https://github.com/NoctisNet/langchain-noctis-retriever/actions/workflows/test.yml)
+[![PyPI version](https://badge.fury.io/py/langchain-noctis.svg)](https://badge.fury.io/py/langchain-noctis)
+[![Downloads](https://static.pepy.tech/badge/langchain-noctis)](https://pepy.tech/project/langchain-noctis)
+
+
+<p align="center">
+  <a href="https://www.noctisnet.com/">
+    <img src="https://cdn.prod.website-files.com/676bea044cb361883d143c96/67856b0790789b726a0ebc9d_d95bdca26bbd06ee46513e0f4c579b7e_Logo%20-%20White-p-500.png" alt="Noctis Logo" width="400"/>
+  </a>
+</p>
+
+This package contains the LangChain integration with [Noctis API](https://www.noctisnet.com/), providing domain information and mail server retrieval functionality, along with other domain-related tools.
+
+## Table of Contents
+- [Installation](#installation)
+- [Retrievers](#retrievers)
+  - [NoctisRetriever](#noctisretriever)
+  - [Features](#features)
+  - [Configuration Options](#configuration-options)
+- [Tools](#tools)
+  - [NoctisTool](#noctistool)
+  - [Tool Features](#tool-features)
+  - [Tool Configuration](#tool-configuration)
+- [Examples](#examples)
+- [Practical Use Cases](#practical-use-cases)
+  - [Security Analysis and Threat Intelligence](#security-analysis-and-threat-intelligence)
+- [Local Development](#local-development)
+  - [Prerequisites](#prerequisites)
+  - [Installation for Development](#installation-for-development)
+  - [Running Tests](#running-tests)
+  - [Running Examples](#running-examples)
+  - [Troubleshooting](#troubleshooting)
+    - [Common Issues](#common-issues)
+    - [Adding Verbose Logging](#adding-verbose-logging)
+- [Developer Documentation](#developer-documentation)
+
+## Installation
+
+```bash
+pip install -U langchain-noctis
+```
+
+And you should configure credentials by setting the following environment variables:
+
+```bash
+export NOCTIS_API_KEY=your-api-key
+```
+
+## Retrievers
+
+### NoctisRetriever
+
+`NoctisRetriever` provides a way to retrieve domain information and mail server details from the Noctis API. It automatically extracts domains from natural language queries and returns structured information about each domain.
+
+```python
+from langchain_noctis import NoctisRetriever
+
+# Create a retriever
+retriever = NoctisRetriever(
+    k=5,                               # Number of documents to return
+    include_mail_servers=True,         # Include mail server information
+    include_organization_domains=True, # Include domains from the same organization
+    organization_domains_limit=20,     # Limit number of organization domains
+    include_ip_sharing_domains=True,   # Include domains sharing the same IP address
+    ip_sharing_domains_limit=20,       # Limit number of IP sharing domains
+    parallel_requests=True             # Process multiple domains in parallel
+)
+
+# Get domain information from a query with one or more domains
+documents = retriever.invoke("Tell me about example.com and github.com")
+
+# Get information about related domains from the same organization
+documents = retriever.invoke("Find domains related to icann.org")
+
+# Get information about domains sharing the same IP address
+documents = retriever.invoke("Find domains that share the same IP as google.com")
+
+# Use in a chain
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.runnables import RunnablePassthrough
+from langchain_openai import ChatOpenAI
+
+def format_docs(docs):
+    return "\n\n".join(doc.page_content for doc in docs)
+
+prompt = ChatPromptTemplate.from_template(
+    """Answer the question based on the context.
+    
+    Context: {context}
+    
+    Question: {question}
+    """
+)
+
+llm = ChatOpenAI(model="gpt-3.5-turbo")
+
+chain = (
+    {"context": retriever | format_docs, "question": RunnablePassthrough()}
+    | prompt
+    | llm
+    | StrOutputParser()
+)
+
+result = chain.invoke("What mail servers does example.com use?")
+result = chain.invoke("What other domains are managed by the same organization as github.com?")
+result = chain.invoke("What domains share the same IP address as google.com?")
+```
+
+### Features
+
+1. **Domain Extraction**: Automatically extracts domain names from natural language queries.
+2. **Domain Information**: Retrieves comprehensive domain information including IP addresses, ASN details, and more.
+3. **Mail Server Information**: Retrieves mail server (MX record) information for domains.
+4. **Organization Domains**: Discovers other domains managed by the same organization.
+5. **IP Sharing Domains**: Identifies domains that share the same IP address.
+6. **Network Prefix Domains**: Finds domains on the same network prefix (subnet).
+7. **Parallel Processing**: Efficiently processes multiple domains in parallel.
+8. **Configurable Output**: Control how many documents are returned and what information to include.
+
+### Configuration Options
+
+- `k` (int, default=3): Number of documents to return.
+- `include_mail_servers` (bool, default=True): Whether to include mail server information.
+- `include_organization_domains` (bool, default=False): Whether to include other domains managed by the same organization.
+- `organization_domains_limit` (int, default=25): Maximum number of organization domains to return.
+- `include_ip_sharing_domains` (bool, default=False): Whether to include domains sharing the same IP address.
+- `ip_sharing_domains_limit` (int, default=25): Maximum number of IP sharing domains to return.
+- `include_network_prefix_domains` (bool, default=False): Whether to include domains on the same network prefix.
+- `network_prefix_domains_limit` (int, default=25): Maximum number of network prefix domains to return.
+- `parallel_requests` (bool, default=True): Process multiple domains in parallel.
+- `max_workers` (int, default=5): Maximum number of parallel workers when `parallel_requests` is True.
+
+## Tools
+
+### NoctisTool
+
+`NoctisTool` is a LangChain tool for retrieving domain information through the Noctis API. It's designed to be used in agent workflows, allowing LLMs to query specific domain information directly.
+
+```python
+from langchain_noctis import NoctisTool
+from langchain_core.agents import AgentExecutor, create_openai_tools_agent
+from langchain_openai import ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate
+
+# Create the tool
+tool = NoctisTool()
+
+# Create an agent with the tool
+llm = ChatOpenAI(model="gpt-4-turbo", temperature=0)
+prompt = ChatPromptTemplate.from_messages([
+    ("system", "You are a helpful assistant that analyzes domain information."),
+    ("user", "{input}")
+])
+
+agent = create_openai_tools_agent(llm, [tool], prompt)
+agent_executor = AgentExecutor(agent=agent, tools=[tool])
+
+# Use the agent to analyze domains
+result = agent_executor.invoke({
+    "input": "What mail servers does example.com use?"
+})
+print(result["output"])
+
+# Use directly in tool calling
+result = tool.invoke({
+    "domain": "example.com", 
+    "info_type": "domain_info"
+})
+print(result)
+```
+
+### Tool Features
+
+1. **Specific Domain Queries**: Allows direct queries about a specific domain without natural language extraction.
+2. **Multiple Information Types**: Supports querying different types of domain information:
+   - `domain_info`: Basic domain information
+   - `mail_servers`: Mail server records
+   - `organization_domains`: Other domains managed by the same organization
+   - `ip_sharing_domains`: Domains sharing the same IP address
+   - `network_prefix_domains`: Domains on the same network prefix
+3. **Formatted Output**: Provides well-formatted, human-readable responses suitable for LLM consumption.
+4. **Error Handling**: Robust error handling for API exceptions and invalid queries.
+5. **Tool Calling Integration**: Designed for integration with LLM tool calling capabilities.
+
+### Tool Configuration
+
+The `NoctisTool` accepts the following parameters:
+
+- **During initialization**:
+  - `api_client` (Optional): A custom Noctis API client instance
+  - `domains_api` (Optional): A custom Noctis DomainsApi instance
+
+- **During invocation**:
+  - `domain` (str, required): The domain name to retrieve information for
+  - `info_type` (str, default="domain_info"): The type of information to retrieve
+
+Example invocation:
+
+```python
+# Direct tool invocation
+tool = NoctisTool()
+result = tool.invoke({
+    "domain": "github.com",
+    "info_type": "organization_domains"
+})
+
+# As a tool call via JSON format
+result = tool.invoke({
+    "args": {
+        "domain": "google.com",
+        "info_type": "ip_sharing_domains"
+    },
+    "id": "1",
+    "name": tool.name,
+    "type": "tool_call"
+})
+```
+
+## Examples
+
+The `examples/` directory contains several examples demonstrating different features of the package:
+
+### Retriever Examples
+
+- **mail_server_example.py**: Shows how to retrieve mail server information for domains
+- **organization_domains_example.py**: Demonstrates finding domains belonging to the same organization
+- **ip_sharing_domains_example.py**: Shows how to find domains sharing the same IP address
+- **security_analysis_example.py**: Advanced example of using the retriever for security analysis and threat intelligence
+
+### Tool Examples
+
+- **noctis_tool_example.py**: Comprehensive example showing various ways to use the NoctisTool:
+  - Direct invocation for different information types (domain_info, mail_servers, etc.)
+  - Tool calling format for agent integration
+  - Using the tool with an LLM agent
+  - Creating a custom enhanced tool with extended functionality
+
+- **noctis_tool_security_analysis.py**: Advanced example implementing a domain security analyzer:
+  - Domain analysis with detailed security assessment
+  - Domain comparison for finding relationships
+  - Phishing domain detection and analysis
+  - LLM-powered risk assessment
+
+To run the examples:
+
+```bash
+# Run retriever examples
+python examples/mail_server_example.py
+python examples/organization_domains_example.py
+python examples/ip_sharing_domains_example.py
+python examples/security_analysis_example.py
+
+# Run tool examples
+python examples/noctis_tool_example.py
+python examples/noctis_tool_security_analysis.py
+```
+
+Each example requires a valid `NOCTIS_API_KEY` environment variable. The agent and security analysis examples also require an `OPENAI_API_KEY` environment variable.
+
+## Practical Use Cases
+
+### Security Analysis and Threat Intelligence
+
+The NoctisRetriever can be used for security analysis and threat intelligence by identifying potentially suspicious domain relationships and patterns:
+
+```python
+from langchain_noctis import NoctisRetriever
+
+# Create a retriever focused on security analysis
+retriever = NoctisRetriever(
+    include_ip_sharing_domains=True,
+    ip_sharing_domains_limit=30,
+    include_organization_domains=True
+)
+
+# Analyze potential phishing domains
+legitimate_domain = "paypal.com"
+suspect_domain = "paypa1-secure.com"  # Note the "1" instead of "l"
+
+# Get information about both domains
+legitimate_docs = retriever.invoke(f"Find information about {legitimate_domain}")
+suspect_docs = retriever.invoke(f"Find information about {suspect_domain}")
+
+# Check if domains share IP addresses
+ip_sharing_docs = retriever.invoke(f"Find domains that share the same IP as {suspect_domain}")
+
+# Pass to an LLM for analysis
+from langchain_openai import ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate
+
+llm = ChatOpenAI(model="gpt-3.5-turbo")
+prompt = ChatPromptTemplate.from_template(
+    """You are a cybersecurity analyst. Analyze these domain relationships:
+    
+    {context}
+    
+    Is {suspect_domain} likely to be a phishing attempt targeting {legitimate_domain}?
+    Provide a security assessment and recommended actions.
+    """
+)
+
+# ... continue with chain creation and invocation
+```
+
+For a complete implementation, see [security_analysis_example.py](examples/security_analysis_example.py) in the examples directory. This example demonstrates:
+
+1. Analyzing a set of domains for suspicious IP sharing patterns
+2. Identifying domains that share IPs with multiple different domains (potential infrastructure overlap)
+3. Generating security assessments using LangChain and LLMs
+4. Detecting potential phishing or typosquatting domains
+
+By combining domain intelligence from Noctis with LLMs, security teams can automate the initial analysis of domain relationships and identify potential threats more efficiently.
+
+## Local Development
+
+### Prerequisites
+
+To set up the local development environment, you'll need:
+
+- Python 3.8 or higher
+- Poetry (for dependency management)
+- A Noctis API key (sign up at [noctis.io](https://noctis.io))
+- Optional: OpenAI API key (for LLM examples)
+
+### Installation for Development
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/langchain-noctis-retriever.git
+cd langchain-noctis-retriever
+```
+
+2. Install dependencies using Poetry:
+```bash
+poetry install --with test,lint,test_integration,codespell,typing
+```
+
+3. Set up your API keys as environment variables:
+```bash
+export NOCTIS_API_KEY=your-noctis-api-key
+export OPENAI_API_KEY=your-openai-api-key  # Optional, for LLM examples
+```
+
+### Running Tests
+
+You can run the test suite using pytest:
+
+```bash
+# Run all tests
+poetry run pytest
+
+# Run unit tests only
+poetry run pytest tests/unit_tests/
+
+# Run integration tests only
+poetry run pytest tests/integration_tests/
+
+# Run with verbose output
+poetry run pytest -v
+```
+
+The integration tests with the live API require a valid `NOCTIS_API_KEY` environment variable. Tests without this key will be skipped automatically.
+
+### Running Examples
+
+The package includes several example scripts to demonstrate different features:
+
+```bash
+# Run mail server example
+poetry run python examples/mail_server_example.py
+
+# Run organization domains example
+poetry run python examples/organization_domains_example.py
+
+# Run IP sharing domains example
+poetry run python examples/ip_sharing_domains_example.py
+
+# Run security analysis example
+poetry run python examples/security_analysis_example.py
+```
+
+Each example requires a valid `NOCTIS_API_KEY` environment variable. Some examples (like the security analysis) also utilize OpenAI's LLM capabilities and require an `OPENAI_API_KEY` environment variable.
+
+Note that running examples with real API calls may incur costs depending on your Noctis API subscription tier.
+
+### Troubleshooting
+
+#### Common Issues
+
+1. **API Key Issues**:
+   - Ensure your `NOCTIS_API_KEY` is correctly set in your environment variables
+   - Verify that your API key is active and has sufficient permissions/credits
+
+2. **Rate Limiting**:
+   - If you're making many requests, you might encounter rate limiting
+   - Use the `parallel_requests=False` option to serialize requests
+
+#### Adding Verbose Logging
+
+To enable debug logging for troubleshooting:
+
+```python
+import logging
+logging.basicConfig(level=logging.DEBUG)
+
+retriever = NoctisRetriever(
+    # your configuration here
+)
+```
+
+## Developer Documentation
+
+Comprehensive technical documentation is available in the `docs/` directory:
+
+- **[Architecture Overview](architecture/architecture.md)** - High-level architecture and component explanations
+- **[Developer Guide](architecture/developer_guide.md)** - Guide for using and extending the retriever
+- **[Creating New Sources](architecture/creating_new_sources.md)** - How to implement custom information sources
+- **[API Reference](architecture/api_reference.md)** - Complete reference of all classes and methods
+
+The documentation covers both usage patterns and extension mechanisms.
+
+This will output detailed logs about API calls, request processing, and any errors encountered.
