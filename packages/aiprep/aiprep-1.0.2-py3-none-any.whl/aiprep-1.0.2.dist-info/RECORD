@@ -1,0 +1,10 @@
+aiprep/__init__.py,sha256=YtHQFMdPjCOIYkFkKnkZDBjLl2aZEf09o88UQ8QcDEY,224
+aiprep/__main__.py,sha256=Bm40XnlW_uGUdy0oEHq7YidO1nz6YEtNNmhMv4aFw5g,103
+aiprep/cli.py,sha256=O5lz-AsOcSqyH9IxphyRbXmffxLAGBHClDDCopIZXhE,2654
+aiprep/core.py,sha256=lPwYuKUJMN9L4ueIO30FbLITqT9DdWJhz3AdgTd291U,2491
+aiprep-1.0.2.dist-info/licenses/LICENSE,sha256=spPlGh4STUWH8_Wge3VdIWSjXw8Kiroctn19wOrniMI,1067
+aiprep-1.0.2.dist-info/METADATA,sha256=8EVAwfgVIsXXSn75OoUakwyzaUar2ig-s00bQJuWdgs,4798
+aiprep-1.0.2.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+aiprep-1.0.2.dist-info/entry_points.txt,sha256=h-Y7I2i6vA19Nxk0mGsQFT-_T6Y5TbDISO1HuuIgw4E,48
+aiprep-1.0.2.dist-info/top_level.txt,sha256=pM2PqVstTsHBuJmZyNmIJMHw5mPyBYdLc943REe-9Mw,7
+aiprep-1.0.2.dist-info/RECORD,,
