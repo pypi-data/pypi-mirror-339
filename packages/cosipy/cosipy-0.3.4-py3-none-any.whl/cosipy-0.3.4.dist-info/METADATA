@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: cosipy
+Version: 0.3.4
+Summary: High-level analysis for the COSI telescope data
+Home-page: https://github.com/cositools/cosipy
+Author: COSI Team
+Author-email: imc@umd.edu
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: histpy<2
+Requires-Dist: mhealpy
+Requires-Dist: scoords
+Requires-Dist: astromodels>=2.4.2
+Requires-Dist: threeml>=2.1.2
+Requires-Dist: matplotlib<=3.8.3
+Requires-Dist: numba
+Requires-Dist: astropy>5.0
+Requires-Dist: yayc
+Requires-Dist: awscli
+Requires-Dist: scipy<=1.13.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# cosipy
+
+[![unit_tests](https://github.com/cositools/cosipy/actions/workflows/unit_tests.yml/badge.svg?branch=develop)](https://github.com/cositools/cosipy/actions/workflows/unit_tests.yml)
+[![codecov](https://codecov.io/gh/cositools/cosipy/branch/develop/graph/badge.svg?token=FQGI2VG4OY)](https://codecov.io/gh/cositools/cosipy)
+
+The cosipy library is [COSI](https://cosi.ssl.berkeley.edu)'s high-level analysis software.
+
+The main repository is hosted in https://github.com/cositools/cosipy
+
+For the cosipy installation and usage instructions please refer to the main [cosipy documentation](https://cositools.github.io/cosipy/).
+
+
+
