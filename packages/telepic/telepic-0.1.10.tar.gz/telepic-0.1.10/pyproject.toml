@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "telepic"
+version = "0.1.10"
+description = "A lightweight CLI tool + web app for remotely viewing images from any machine in your browser. It is well-suited for sharing your images remotely."
+readme = "README.md"
+dependencies = [
+  "flask==2.0.1",
+  "Werkzeug==2.0.3",
+  "Pillow==11.1.0",
+  "python-dotenv==0.19.0",
+  "fire==0.7.0"
+]
+authors = [
+  { name = "Rafael Padilla" }
+]
+license="Apache-2.0"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: End Users/Desktop",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Scientific/Engineering :: Visualization",
+  "Typing :: Typed",
+  "Topic :: Utilities"
+]
+keywords = ["telepic", "image-viewer", "remote-view", "cli-tool", "image-sharing", "remote-access", "localhost-tunnel", "web-gallery", "server-images"]
+
+[project.optional-dependencies]
+dev = [
+  "pytest==7.0.0",
+  "ruff==0.11.2",
+  "mypy==1.15.0",
+  "pytest-cov==6.0.0",
+  "types-setuptools==76.0.0.20250313",
+]
+
+[project.scripts]
+telepic = "telepic.main:_entry_point"
+
+[project.urls]
+"Source" = "https://github.com/rafaelpadilla/telepic"
+"Bug Tracker" = "https://github.com/rafaelpadilla/telepic/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"telepic" = ["templates/*.html", "static/*"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.format]
+quote-style = "double"
