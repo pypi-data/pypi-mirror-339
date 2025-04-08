@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: autodistill-yoloe
+Version: 0.1.0
+Summary: use YOLOE to auto-label images for use in training fine-tuned object detection models
+Author: NourEldin Osama
+Requires-Python: >=3.11
+Requires-Dist: autodistill
+Requires-Dist: pillow
+Requires-Dist: roboflow
+Requires-Dist: supervision
+Requires-Dist: torch
+Requires-Dist: ultralytics
