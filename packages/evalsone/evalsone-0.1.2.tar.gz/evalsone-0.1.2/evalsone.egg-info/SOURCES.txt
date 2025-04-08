@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+evalsone/__init__.py
+evalsone/client.py
+evalsone.egg-info/PKG-INFO
+evalsone.egg-info/SOURCES.txt
+evalsone.egg-info/dependency_links.txt
+evalsone.egg-info/requires.txt
+evalsone.egg-info/top_level.txt
+examples/quick_add_sample.ipynb
+tests/__init__.py
+tests/test_client.py
