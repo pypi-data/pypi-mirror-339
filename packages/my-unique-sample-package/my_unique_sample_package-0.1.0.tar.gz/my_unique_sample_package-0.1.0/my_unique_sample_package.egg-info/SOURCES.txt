@@ -1,0 +1,10 @@
+LICENSE
+pyproject.toml
+setup.py
+my_unique_sample_package/__init__.py
+my_unique_sample_package/core.py
+my_unique_sample_package.egg-info/PKG-INFO
+my_unique_sample_package.egg-info/SOURCES.txt
+my_unique_sample_package.egg-info/dependency_links.txt
+my_unique_sample_package.egg-info/top_level.txt
+tests/test_core.py
