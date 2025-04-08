@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: pysideapi
+Version: 0.2.11
+Summary: Paquete que me permite trabajar con jira, dicccionario y dictamen
+Author: Jhon Castro
+Author-email: jhoncc20@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
+Requires-Dist: requests
+Requires-Dist: pytz
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
