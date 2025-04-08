@@ -1,0 +1,47 @@
+Metadata-Version: 2.2
+Name: 313
+Version: 3.1.3
+Summary: reaction-Telegram-Post By : t.me/goldenxpris.
+Author: Golden
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: rich
+Requires-Dist: colorama
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# r - Gmail Temporary API Client
+
+This Python library allows you to reaction post telegram .
+
+## Installation
+
+To install this package , simply :
+```bash
+pip install r
+```
+
+run - (1) :
+```python
+import r
+r.reaction(link='https://t.me/').start
+```
+run - (2) :
+```python
+import r
+r.reaction(link='https://t.me/')['while=True'].start
+```
+run - (3) :
+```python
+import r
+r.reaction(link='https://t.me/')['while=True']['threading=5'].start
+```
