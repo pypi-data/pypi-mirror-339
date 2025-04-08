@@ -1,0 +1,7 @@
+livekit/plugins/llama_index/__init__.py,sha256=3OBiDF41CjqCpWGNNTqSMEwAexzr-gXDxoxonvhSDkM,906
+livekit/plugins/llama_index/llm.py,sha256=n-LLHBdoeXY2eAOkZkYiWwJcykjb3z0HRlv2olltP1o,3421
+livekit/plugins/llama_index/log.py,sha256=FxIwvgC0uFACu2rNeARJiB2Acy_mOr3QjLGh1kiT6x4,74
+livekit/plugins/llama_index/version.py,sha256=5s6Hv1IUSlOftD9ikt3lJtVaaOmLyajrQjStMBpkvog,603
+livekit_plugins_llama_index-1.0.0rc8.dist-info/METADATA,sha256=QqK2lI9lcILoQlTmCKSCs_7CN7b51vVFBnvd5iCfFho,2186
+livekit_plugins_llama_index-1.0.0rc8.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+livekit_plugins_llama_index-1.0.0rc8.dist-info/RECORD,,
