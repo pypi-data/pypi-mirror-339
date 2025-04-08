@@ -1,0 +1,2 @@
+[console_scripts]
+ccob = ccob.cli:app
