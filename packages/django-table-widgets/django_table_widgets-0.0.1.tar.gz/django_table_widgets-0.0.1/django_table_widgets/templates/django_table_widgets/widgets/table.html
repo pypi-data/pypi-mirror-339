@@ -1,0 +1,51 @@
+{% block table-widget %}
+  <table id="id_table_{{ widget.name }}">
+    {% block table-widget-thead %}
+      <thead>
+        <tr>
+          <th></th>
+          {% for header in columns_headers %}
+            <th>{{ header }}</th>
+          {% endfor %}
+          {% if show_row_sum %}
+            <th>Total</th>
+          {% endif %}
+        </tr>
+      </thead>
+    {% endblock table-widget-thead %}
+    {% block table-widget-tbody %}
+      <tbody>
+        {% for row in widget.subwidgets %}
+          <tr>
+            <th>{{ row.header }}</th>
+            {% include row.template_name with widget=row %}
+          </tr>
+        {% endfor %}
+        {% if show_column_sum %}
+          <tr>
+            <th>Total</th>
+            {% for header in columns_headers %}
+              <td id="id_table_column_{{ widget.name }}_{{ forloop.counter0 }}_sum" data-column-sum="{{ forloop.counter0 }}"></td>
+            {% endfor %}
+            <td class="table-sum" data-table-sum></td>
+          </tr>
+        {% endif %}
+      </tbody>
+    {% endblock table-widget-tbody %}
+  </table>
+{% endblock table-widget %}
+
+{% block table-widget-js %}
+  {% if show_row_sum or show_column_sum or show_table_sum %}
+    <script>
+      tableFieldSumWidget{{ widget.name }} = new TableFieldSumWidget({
+        tableId: "id_table_{{ widget.name }}",
+        rowsCount: {{ rows_count }},
+        columnsCount: {{ columns_count }},
+        showRowSum: {{ show_row_sum|yesno:"true,false" }},
+        showColumnSum: {{ show_column_sum|yesno:"true,false" }},
+        showTableSum: {{ show_table_sum|yesno:"true,false" }},
+      });
+    </script>
+  {% endif %}
+{% endblock table-widget-js %}
