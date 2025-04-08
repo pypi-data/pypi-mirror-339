@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Internet Connection</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .icon {
+            font-size: 80px;
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .retry-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        .retry-btn:hover {
+            background: #2980b9;
+        }
+
+        .offline-animation {
+            width: 150px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjQgMTMuNjE2di0zLjIzMmMtMTAuNDMgMC0xOC45NjcgOC41MzctMTguOTY3IDE4Ljk2N2gzLjIzMmMwLTguNjk1IDcuMDQtMTUuNzM1IDE1LjczNS0xNS43MzV6bS0xMS45NjcgMGMtMy44OTUgMC03LjA2NyAzLjE2NC03LjA2NyA3LjA2N2gzLjIzM2MwLTIuMTIgMS43MTQtMy44MzMgMy44MzQtMy44MzNzMy44MzMgMS43MTMgMy44MzMgMy44MzNoMy4yMzNjMC0zLjkwMy0zLjE2Ni03LjA2Ny03LjA2Ni03LjA2N3oiLz48L3N2Zz4="
+            class="offline-animation" alt="Offline">
+        <h1>No Internet Connection</h1>
+        <p>Please check your internet connection and try again. This page will automatically reload when you're back
+            online.</p>
+        <button class="retry-btn" onclick="window.location.reload()">Try Again</button>
+    </div>
+
+    <script>
+        window.addEventListener('online', function () {
+            window.location.reload();
+        });
+
+        // Check connection status every 5 seconds
+        setInterval(function () {
+            if (navigator.onLine) {
+                window.location.reload();
+            }
+        }, 5000);
+    </script>
+</body>
+
+</html>
