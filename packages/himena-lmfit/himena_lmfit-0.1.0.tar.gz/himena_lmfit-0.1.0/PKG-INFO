@@ -1,0 +1,81 @@
+Metadata-Version: 2.4
+Name: himena-lmfit
+Version: 0.1.0
+Summary: Curve fitting and optimization in himena
+Project-URL: Documentation, https://github.com/hanjinliu/himena-lmfit#readme
+Project-URL: Issues, https://github.com/hanjinliu/himena-lmfit/issues
+Project-URL: Source, https://github.com/hanjinliu/himena-lmfit
+Author-email: hanjinliu <liuhanjin.sc@gmail.com>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2025, hanjinliu
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Requires-Dist: himena
+Requires-Dist: lmfit>=1.3
+Requires-Dist: numpy>=2.0
+Provides-Extra: testing
+Requires-Dist: himena[testing]; extra == 'testing'
+Requires-Dist: pyqt6; extra == 'testing'
+Requires-Dist: pytest-cov>=3.0.0; extra == 'testing'
+Requires-Dist: pytest>=6.0.0; extra == 'testing'
+Description-Content-Type: text/markdown
+
+# himena-lmfit
+
+[![PyPI - Version](https://img.shields.io/pypi/v/himena-lmfit.svg)](https://pypi.org/project/himena-lmfit)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/himena-lmfit.svg)](https://pypi.org/project/himena-lmfit)
+[![codecov](https://codecov.io/gh/hanjinliu/himena-lmfit/graph/badge.svg?token=26MF1DDwWN)](https://codecov.io/gh/hanjinliu/himena-lmfit)
+
+-----
+
+![](images/window.png)
+
+A [himena](https://github.com/hanjinliu/himena) plugin for minimization and curve
+fitting using [`lmfit`](https://github.com/lmfit/lmfit-py).
+
+## Installation
+
+```console
+pip install himena-lmfit
+```
+
+To install this plugin to your profile, manually edit the setting from `Ctrl+,` or run:
+
+```console
+himena <my-profile> --install himena-lmfit
+```
