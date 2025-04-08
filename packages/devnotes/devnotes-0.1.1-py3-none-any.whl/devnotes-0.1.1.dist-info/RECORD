@@ -1,0 +1,12 @@
+devnotes/__init__.py,sha256=7bCdtTIrQXO_t-AvmO_Tq74eHexdSVyeZoxORc37G6Q,98
+devnotes/analyzer.py,sha256=8oa_YZU5FtTVdv059j2kPa48iJKWnPtz9uEeD2a7doQ,9686
+devnotes/cli.py,sha256=20l10xSe1-NgYKv8XKQeu35crAGCeXH-fzsnosyCV44,3569
+devnotes/config.py,sha256=3qRVDbM3A52NmCZ8ZAcuzlOp-M-sPbb5X6DjH0oz_k8,2945
+devnotes/diagrams.py,sha256=3nO8dmwxPPxSYa5tV7oSRYw9vT3mNt5Dmf0tAWGAk80,3129
+devnotes/tasks.py,sha256=O7u9p_vP6aCN9rAFhGzl8iHWpoZ7HoZtT8g6umevNP8,9225
+devnotes/utils.py,sha256=xC3SDIknBMabcCcqG31Qw1r-L432OtD0P6lfGPCmn5E,1629
+devnotes-0.1.1.dist-info/METADATA,sha256=32Jh54oOLqXhdBVh0fsu5S6Klj19SbfMXZrQHbqGCZA,3247
+devnotes-0.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+devnotes-0.1.1.dist-info/entry_points.txt,sha256=mc6nX1IpzLWZu-Hqk3oTCD7rTnGlLdAZ2hvv1Pu1Meo,50
+devnotes-0.1.1.dist-info/top_level.txt,sha256=CdjPlelbDU3WSH4fzKtjsrzyiblPZ7lCWghsDN7P7hY,9
+devnotes-0.1.1.dist-info/RECORD,,
