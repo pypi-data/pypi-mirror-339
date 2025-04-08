@@ -1,0 +1,13 @@
+some_aiohttp_middleware/__init__.py,sha256=eAAYEuhxc8d7DQnAb7XFcATQDLJNVh19w2k8K1kC6sE,290
+some_aiohttp_middleware/admin_auth.py,sha256=2goPvRytaklYhIj4eflSweetQWG_3UKN2Cce6dTtomo,1945
+some_aiohttp_middleware/base.py,sha256=_nb8n97yD9XFz0BDtDXHz25hKsXDrWUEeDDCoAdQ8uc,4854
+some_aiohttp_middleware/basic_auth.py,sha256=fnUhU12fcyHG2HgobllcIZyJBgfVy5XS8-xF1vbnnJk,2375
+some_aiohttp_middleware/cognito.py,sha256=HACsumeio9wVO47HYeLWNtju0fux-BqkvPXZxy9HzIM,2017
+some_aiohttp_middleware/db.py,sha256=M3bcWwfzUyLOWeaExphdhR80PvxUfSdtwYSunJf8sU8,3972
+some_aiohttp_middleware/dynamodb.py,sha256=bvI1xM5r9kRAnDTiWxIxAqg_XanjP0vnt6-sI7KxvrY,2532
+some_aiohttp_middleware/memcached.py,sha256=TUQAePXZ3nGsaqZmCxvdx_YpmRYQ7Hs8K_mSLY6hAfA,1279
+some_aiohttp_middleware/s3.py,sha256=2MRvij1ZrUB7pCo2J87LrGcssmoR4-Ey-jwdJcCM4JA,2441
+some_aiohttp_middleware-0.1.12.dist-info/LICENSE,sha256=mzm5_9yeoJqjcnLgS_mFgB9wM-a1Fa6phh18rqLFM9A,1065
+some_aiohttp_middleware-0.1.12.dist-info/METADATA,sha256=cYvaFyFg9LwQ2PZx6-hUCdLJhyTVW6vM1CoOkeuQzOM,1635
+some_aiohttp_middleware-0.1.12.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+some_aiohttp_middleware-0.1.12.dist-info/RECORD,,
