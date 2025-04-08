@@ -1,0 +1,6 @@
+{
+  "resource": true,
+  "name": "checkly",
+  "version": "2.2.0-alpha.1744026052",
+  "server": "github://api.github.com/checkly"
+}
