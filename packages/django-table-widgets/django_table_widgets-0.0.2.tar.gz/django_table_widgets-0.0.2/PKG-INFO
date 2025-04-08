@@ -1,0 +1,109 @@
+Metadata-Version: 2.3
+Name: django-table-widgets
+Version: 0.0.2
+Summary: Widgets to display and edit two-dimensionals ArrayFields, based on django's `SplitArrayField`.
+License: BSD-3-Clause
+Author: Kapt
+Author-email: dev@kapt.mobi
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: Django (>=3.0)
+Project-URL: Repository, https://gitlab.com/kapt/open-source/django-table-widgets
+Description-Content-Type: text/markdown
+
+# django-table-widgets
+
+Widgets to display and edit two-dimensionals ArrayFields, based on django's `SplitArrayField`.
+
+On numbers array, you can also display a sum of rows, a sum of columns and a grand total.
+
+![Example of a table using django-table-widgets and custom CSS](https://gitlab.com/kapt/open-source/django-table-widgets/-/raw/main/preview.png)
+
+# Requirements
+
+- Python 3.10+
+- Django 3.0+
+
+# Installation
+
+- run `pip install django-table-widgets`
+- add `django_table_widgets` to your `INSTALLED_APPS`
+
+# Usage
+ In your forms, use the field like this:
+
+ ```py
+ from django_table_widgets.fields import TableField
+
+ number_of_bananas = TableField(
+    forms.IntegerField(  # required, it is the field used in every cell of the table
+      required=False,
+      widget=forms.NumberInput(attrs={"min": 0})
+    ),
+    rows_headers=[  # required
+      "Yellow",
+      "Green"
+    ],
+    columns_headers=[  # required
+        "XXL",
+        "XL",
+        "L",
+        "M",
+        "S",
+        "XS"
+    ],
+    show_row_sum=True,  # optional, defaults to False
+    show_column_sum=True,  # optional, defaults to False
+    show_table_sum=True,  # optional, defaults to False
+    widget=MyCustomWidget  # optional
+    remove_trailing_nulls=False,  # optional, default to False
+    required=False,
+)
+```
+
+Do not forget to include `{{ form.media.js }}` in your template if you want the sums to be processed after each `input` event.
+
+
+# Customize template
+
+You may want to customize the widget's template (to add CSS classes) by subclassing `widgets.TableWidget` and extending `templates/django_table_widgets/table.html`:
+
+```py
+from django_table_widgets.widgets import TableWidget
+
+
+class MyCustomWidget(TableWidget):
+    template_name = (
+        "my/custom/widget/template.html"
+    )
+```
+
+
+# Customize javascript
+
+In your custom template, override the block `table-widgets-js` and instantiate the `TableFieldSumWidget` class like this:
+
+```html
+{% extends "django_table_widgets/table.html" %}
+
+{% block table-widget-js %}
+  {% if show_row_sum or show_column_sum or show_table_sum %}
+    <script>
+      tableFieldSumWidget{{ widget.name }} = new TableFieldSumWidget({
+        tableId: "id_table_{{ widget.name }}",
+        rowsCount: {{ rows_count }},
+        columnsCount: {{ columns_count }},
+        showRowSum: {{ show_row_sum|yesno:"true,false" }},
+        showColumnSum: {{ show_column_sum|yesno:"true,false" }},
+        showTableSum: {{ show_table_sum|yesno:"true,false" }},
+        listenedEvent: "input"
+      });
+    </script>
+  {% endif %}
+{% endblock table-widget-js %}
+```
