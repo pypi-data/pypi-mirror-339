@@ -1,0 +1,12 @@
+requests
+numpy
+scipy
+torch
+nflows
+patsy
+pedalboard
+statsmodels
+matplotlib
+
+[:python_version < "3.10"]
+importlib-metadata

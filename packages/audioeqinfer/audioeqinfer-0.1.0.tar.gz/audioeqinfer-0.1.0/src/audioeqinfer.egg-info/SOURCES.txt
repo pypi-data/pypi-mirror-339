@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/audioeqinfer/__init__.py
+src/audioeqinfer/densityrepr.py
+src/audioeqinfer/finder.py
+src/audioeqinfer/parameterfunction.py
+src/audioeqinfer/utils.py
+src/audioeqinfer.egg-info/PKG-INFO
+src/audioeqinfer.egg-info/SOURCES.txt
+src/audioeqinfer.egg-info/dependency_links.txt
+src/audioeqinfer.egg-info/requires.txt
+src/audioeqinfer.egg-info/top_level.txt
