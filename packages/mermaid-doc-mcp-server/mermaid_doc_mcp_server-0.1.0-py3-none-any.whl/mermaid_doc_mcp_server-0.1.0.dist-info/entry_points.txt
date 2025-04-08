@@ -1,0 +1,2 @@
+[console_scripts]
+mermaid-doc-mcp-server = mermaid_doc.server:main
