@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cocoa-plant-detector"
+version = "0.1.1"
+description = "YOLOv8 Cocoa Plant Detection + GIS AI Pipeline with CLI"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+  { name="Nii Osa", email="your_email@example.com" }
+]
+dependencies = [
+  "ultralytics>=8.0",
+  "rasterio>=1.3",
+  "geopandas>=0.13",
+  "shapely>=2.0",
+  "numpy>=1.23",
+  "click",
+  "streamlit"
+]
+
+[project.urls]
+Homepage = "https://github.com/NiiOsa1/cocoa-plant-detector"
+Documentation = "https://github.com/NiiOsa1/cocoa-plant-detector/wiki"
+Source = "https://github.com/NiiOsa1/cocoa-plant-detector"
+Tracker = "https://github.com/NiiOsa1/cocoa-plant-detector/issues"
