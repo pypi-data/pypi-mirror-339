@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: uxtime
+Version: 1.0.0
+Summary: application for converting local time or UTC into Unixtime and viceversa
+Home-page: https://www.roadrunnerserver.com/contentshow/unixtimeconverter
+Author: Franz Wiesinger
+Author-email: py@roadrunnerserver.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: X11 Applications
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Customer Service
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Information Technology
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Desktop Environment
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: datetime
+Requires-Dist: pytz
+Requires-Dist: tkhtmlview
