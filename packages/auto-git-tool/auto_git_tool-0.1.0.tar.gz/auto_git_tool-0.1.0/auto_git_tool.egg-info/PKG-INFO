@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: auto-git-tool
+Version: 0.1.0
+Summary: Git uchun avtomatlashtirilgan add, AI commit va push buyrug‘i
+Home-page: https://github.com/Husanjonazamov/auto-git
+Author: Husanjon Azamov
+Author-email: Husanboy Azamov <azamovhusanboy08@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/Husanjonazamov/auto-git
+Project-URL: Repository, https://github.com/Husanjonazamov/auto-git
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: home-page
+
+# 🚀 auto-git
+
+AI yordamida Git jarayonlarini avtomatlashtirish: `git add`, `commit` (AI yozadi!), va `push` – barchasi bitta buyruq bilan!
+
+---
+
+## 📦 O‘rnatish
+
+```bash
+pip install auto-git
+
+```
+
+## 🏃 Ishga tushirish
+
+```bash
+autogit
+
+```
+
+## Loyiha Structurasi
+
+``` bash
+
+auto-git/
+├── auto_git/
+│   └── cli.py
+├── tests/
+│   └── test_something.py
+├── README.md
+├── LICENSE
+├── pyproject.toml
+```
+
