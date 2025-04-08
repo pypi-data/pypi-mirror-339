@@ -1,0 +1,16 @@
+cffi
+findlibs
+eccodes>=2.39.1
+packaging
+
+[dev]
+isort
+black
+flake8
+tox>=4.19
+
+[test]
+pytest
+pytest-cov
+pytest-flakes
+gitpython
