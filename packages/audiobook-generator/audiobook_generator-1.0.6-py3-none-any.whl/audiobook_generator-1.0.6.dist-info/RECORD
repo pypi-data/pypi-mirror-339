@@ -1,0 +1,11 @@
+audiobook_generator-1.0.6.dist-info/METADATA,sha256=1ajZ9Nn6gk3XiSujEhm4Y_XvAwHF8MbSxxRiUXvPAw4,6928
+audiobook_generator-1.0.6.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+audiobook_generator-1.0.6.dist-info/entry_points.txt,sha256=KzYjRg4BZywnKfvuilUyuqHOioTDiGrvMTI30wg1lz0,70
+audiobook_generator-1.0.6.dist-info/licenses/LICENSE,sha256=-XMDSl3nenznSifVl6qW3s6WQ9wcx6Q_N_bIDAWE9nw,1067
+audiobook_generator/__init__.py,sha256=mB2IYMw4aYZW9LfFhauQplnVdiLL9XDg7clwYXZEvG4,103
+audiobook_generator/chapterizer.py,sha256=GD_M54NvEqY9IbRJQGtNkIuhAb104skDuCF2-7m1fug,5316
+audiobook_generator/defaults.py,sha256=sqPUHSBB7i3JgNRccMcLgY9KP-fyBZWAQUCD0oWKpfY,452
+audiobook_generator/main.py,sha256=N_KvCogmP4ttli1FoNCoE5foDlAa_Y3E6OyQyPV63qE,5667
+audiobook_generator/tts.py,sha256=a4hZjh0DWt7Dy_1EEcuteirmlfqfGBqNyVPAtK6E07A,2449
+audiobook_generator/util.py,sha256=nQNrNN6qYAZymDOFyB5A10nlO7OmPlYJ4U7-obw0lCA,1412
+audiobook_generator-1.0.6.dist-info/RECORD,,
