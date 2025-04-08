@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: GameForce
+Version: 0.1a1
+Summary: This library is a toolkit for creating simple 2D games using the Pygame library. It allows the management of the map, objects, collisions, meshes and events. It is a flexible library that can be used to build different types of 2D games, such as puzzle, arcade or platform games. Thanks to its powerful classes, users can easily create objects, define events and manage movement and collisions on the map.
+Author: Franciszek Chmielewski
+Author-email: ferko2610@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# GameForce Library
+This library allows you to create your own games based on pygame. You can create collisions, entities, players, maps, generators, point grids and much more.
+This library uses internal libraries and requires installation of the pygame library:
+```
+pip install pygame
+```
+<b>THIS IS THE ALPHA VERSION. THE FULL RELEASE WILL INCLUDE FULL DOCUMENTATION AND THERE WILL BE SEVERAL YOUTUBE TUTORIALS OVER THE TWO VERSIONS</b>
