@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/nxtree/Tree.py
+src/nxtree/__init__.py
+src/nxtree/tree.py
+src/nxtree.egg-info/PKG-INFO
+src/nxtree.egg-info/SOURCES.txt
+src/nxtree.egg-info/dependency_links.txt
+src/nxtree.egg-info/top_level.txt
+tests/test_tree.py
