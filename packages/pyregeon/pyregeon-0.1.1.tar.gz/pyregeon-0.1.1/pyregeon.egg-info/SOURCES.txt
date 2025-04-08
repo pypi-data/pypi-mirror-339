@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+pyregeon/__init__.py
+pyregeon/settings.py
+pyregeon.egg-info/PKG-INFO
+pyregeon.egg-info/SOURCES.txt
+pyregeon.egg-info/dependency_links.txt
+pyregeon.egg-info/requires.txt
+pyregeon.egg-info/top_level.txt
+tests/test_pyregeon.py
