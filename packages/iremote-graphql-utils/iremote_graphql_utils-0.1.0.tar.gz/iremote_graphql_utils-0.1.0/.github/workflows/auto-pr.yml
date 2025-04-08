@@ -1,0 +1,42 @@
+# This workflow will create a pull request for any changes pushed to the repository
+# Author: Ramesh Doddi
+
+name: 'Auto Create PR'
+
+on:
+  push:
+    branches-ignore:
+      - 'main'
+#on:
+#  push:
+#    branches:
+#      - 'feature/**'
+#      - 'bugfix/**'
+#      - 'hotfix/**'
+#      - 'task/**'
+#      - 'release/**'
+
+jobs:
+  createPullRequest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check for Existing Pull Request
+        id: check_pr
+        run: |
+          PR_EXISTS=$(gh pr list --base "${DESTINATION_BRANCH}" --head "${SOURCE_BRANCH}" --json number --jq ".[] | select(.number)")
+          echo "PR_EXISTS=${PR_EXISTS}" >> $GITHUB_ENV
+        env:
+          SOURCE_BRANCH: ${{ github.ref_name }}
+          DESTINATION_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Pull Request
+        if: env.PR_EXISTS == ''
+        run: /bin/bash .github/scripts/create-pr.sh
+        env:
+          SOURCE_BRANCH: ${{ github.ref_name }}
+          DESTINATION_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
