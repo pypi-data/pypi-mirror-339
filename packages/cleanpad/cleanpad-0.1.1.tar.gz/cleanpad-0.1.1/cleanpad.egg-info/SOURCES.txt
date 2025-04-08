@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+cleanpad/__init__.py
+cleanpad/core.py
+cleanpad.egg-info/PKG-INFO
+cleanpad.egg-info/SOURCES.txt
+cleanpad.egg-info/dependency_links.txt
+cleanpad.egg-info/top_level.txt
+tests/__init__.py
+tests/test_core.py
