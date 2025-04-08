@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: image_processing_samuell_shoiti
+Version: 0.0.1
+Summary: Image Processing package using skimage
+Home-page: https://github.com/ThePersonWhoLikesUndertale/image-processing-package.git
+Author: Samuell Shoiti
+Author-email: sppaulisto972@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scikit-image>=0.16.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# image_processing
+
+Description
+The package image-processing-samuellshoiti is used to:
+	Processing:
+		- Histogram matching
+		- Structural similarity
+		- Resize Image
+	Utils:
+		- Read image
+		- Save image
+		- Plot image
+		- Plot result
+		- Plot histogram
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install image-processing-samuellshoiti
+
+```bash
+pip install image-processing-samuellshoiti
+```
+
+## Author
+Samuell Shoiti Pinto Assanuma
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
