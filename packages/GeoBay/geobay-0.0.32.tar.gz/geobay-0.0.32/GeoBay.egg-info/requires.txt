@@ -1,0 +1,9 @@
+numpy
+ipyleaflet>=0.17.0
+geopandas>=0.10.0
+
+[all]
+GeoBay[extra]
+
+[extra]
+pandas
