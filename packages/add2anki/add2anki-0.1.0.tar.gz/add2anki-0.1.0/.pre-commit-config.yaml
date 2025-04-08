@@ -1,0 +1,10 @@
+repos:
+  - repo: local
+    hooks:
+      - id: just-fix
+        name: Fix with ruff
+        description: Run just fix to fix code with ruff
+        entry: just fix
+        language: system
+        pass_filenames: false
+        types: [python]
