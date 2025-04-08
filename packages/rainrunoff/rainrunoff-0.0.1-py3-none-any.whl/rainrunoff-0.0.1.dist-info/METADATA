@@ -1,0 +1,50 @@
+Metadata-Version: 2.2
+Name: rainrunoff
+Version: 0.0.1
+Summary: A simple daily rainfall-runoff model
+Author: Gokhan Cuceloglu
+Author-email: cucelog@example.com
+License: MIT
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Hydrology
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: geopandas
+Requires-Dist: rasterio
+Requires-Dist: pyproj
+Requires-Dist: scipy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# rainrunoff
+
+`rainrunoff` is a Python package for daily rainfall-runoff modeling. It simulates runoff in lumped subbasins using the SCS Curve Number method and supports various routing options like Muskingum, Kirpich, and Kinematic. The model can estimate potential evapotranspiration (PET) using the Hargreaves or Penman methods.
+
+This package is currently under active development. The first version (v0.0.1) is a placeholder release to reserve the package name on PyPI.
+
+## Features
+
+- Rainfall-runoff simulation with SCS Curve Number method
+- Multiple routing options (Muskingum, Kirpich, Kinematic)
+- Modular structure for future extensions (e.g., calibration, QGIS plugin)
+
+## Installation
+
+To install the package, run:
+
+```bash
+pip install rainrunoff
