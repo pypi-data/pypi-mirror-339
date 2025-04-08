@@ -1,0 +1,2 @@
+[console_scripts]
+phi_cloud_server = phi_cloud_server:main
