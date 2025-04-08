@@ -1,0 +1,14 @@
+pxm_tools/Proxmox.py,sha256=TNYKyMZ7HovFOKz_zS2QgucGlHKSuKW46LwJRK-zoYY,11627
+pxm_tools/__init__.py,sha256=0dkxg1Fggb7FjRzqLMW1VVaq3g0t8OiLk2GackEkLao,55
+pxm_tools/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pxm_tools/cli/create.py,sha256=AEyFmhc5fme3qWNb5JSVOfxa7RabV_GoN5HQvry6PgA,629
+pxm_tools/cli/edit.py,sha256=0ViD8rg2lKawP5vR3T-3ZebxL1PtxwfQmQ6cUJD1iS4,405
+pxm_tools/cli/help.py,sha256=QvOHYw1djPt-TmQ8pMlR8IpC5C4Ps91rymGTuvVzBFU,685
+pxm_tools/cli/remove.py,sha256=7lfRvIpGkUK2909P1q20U2NfrmGaqGGDjCevP3Bo3Vw,173
+pxm_tools/cli/start.py,sha256=amrC7swTu8kOKncTnzm6xZD-dv3_qfS0_jnwq14lB1M,172
+pxm_tools/cli/stop.py,sha256=tjZrn-QyYRNw-JszM71zaUitb2It-c7Wpcg0QGrYxNs,171
+pxm_tools-0.1.5.dist-info/METADATA,sha256=CJMRBJ1G1KLIp_DqjAMYZ1JuAVv8_cK9XcHfAx2nqjc,1483
+pxm_tools-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pxm_tools-0.1.5.dist-info/entry_points.txt,sha256=VHkSA0w3HJT85a0_NDPV54mkvJvXV6MFdh1DZ9sJI_Q,229
+pxm_tools-0.1.5.dist-info/licenses/LICENSE,sha256=2hhvxnze_wLL3VTgWOuLI8Xp6RtmT_904_llvYTF7nk,1073
+pxm_tools-0.1.5.dist-info/RECORD,,
