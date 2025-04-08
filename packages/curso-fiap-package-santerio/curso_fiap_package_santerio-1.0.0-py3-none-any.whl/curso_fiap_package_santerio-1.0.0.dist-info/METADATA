@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: curso-fiap-package-santerio
+Version: 1.0.0
+Summary: curso-fiap-hello-word
+Home-page: https://github.com/santerioj/curso-fiap
+Author: santeriogouveia
+Author-email: santerioj@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# Curso-fiap
+
+A simple example library.
+
+## Installation
+
+```sh
+pip install curso-fiap
+```
+
+## Usage
+
+```python
+from curso-fiap import hello_world
+
+print(hello_world())
+```
+
+
