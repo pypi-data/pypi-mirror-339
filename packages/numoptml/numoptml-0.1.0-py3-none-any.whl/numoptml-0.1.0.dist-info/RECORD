@@ -1,0 +1,10 @@
+numoptml/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+numoptml/optimizers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+numoptml/optimizers/gradient_descent.py,sha256=D8l-04y33I5pwsLgUOaoQzuHwk_KIjinc7DwX4jg7Dc,262
+numoptml/optimizers/newton_method.py,sha256=lsOwnpXSwlfSzzprvHGFdcCovMSpblc1rYagD-7CuOI,306
+numoptml/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+numoptml/utils/line_search.py,sha256=UxzoHgSO9V0RFBt4aMQzFh7rWoRsnO6lHshcKGyJ6Bc,199
+numoptml-0.1.0.dist-info/METADATA,sha256=RN_3fLsKGHQFttqHbg11fzofI-aBfswyN1Mea8O0Ohk,305
+numoptml-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+numoptml-0.1.0.dist-info/top_level.txt,sha256=qa3LV7fna93nIY-2GwaxJj7mZ56MYr25TKPaXAsLE3o,9
+numoptml-0.1.0.dist-info/RECORD,,
