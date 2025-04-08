@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+notacheat/__init__.py
+notacheat/__version__.py
+notacheat/notacheat.py
+notacheat.egg-info/PKG-INFO
+notacheat.egg-info/SOURCES.txt
+notacheat.egg-info/dependency_links.txt
+notacheat.egg-info/top_level.txt
