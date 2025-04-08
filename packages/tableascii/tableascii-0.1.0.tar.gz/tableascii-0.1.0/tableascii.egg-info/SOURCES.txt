@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+tableascii/__init__.py
+tableascii/core.py
+tableascii.egg-info/PKG-INFO
+tableascii.egg-info/SOURCES.txt
+tableascii.egg-info/dependency_links.txt
+tableascii.egg-info/top_level.txt
+tests/test_table.py

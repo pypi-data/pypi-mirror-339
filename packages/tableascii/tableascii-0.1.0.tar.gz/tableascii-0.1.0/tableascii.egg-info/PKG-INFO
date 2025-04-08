@@ -1,0 +1,67 @@
+Metadata-Version: 2.4
+Name: tableascii
+Version: 0.1.0
+Summary: A lightweight, simple Python library to create clean ASCII Table.
+Home-page: https://github.com/Tari-dev/tableascii
+Author: Tariq Muhammed
+Project-URL: Source, https://github.com/Tari-dev/tableascii
+Project-URL: Bug Tracker, https://github.com/Tari-dev/tableascii/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-python
+Dynamic: summary
+
+# Tableascii
+
+A simple, lightweight, no-dependency Python library to create clean ASCII Table.
+
+## Installation
+Install from pypi
+```bash
+pip install tableascii
+```
+Or directly from Github
+```bash
+pip install git+https://github.com/Tari-dev/tableascii.git
+```
+
+## Usage Example
+```python
+from tableascii import Table
+
+data = [
+    ["Name", "Age"],
+    ["Alice", 30],
+    ["Bob", 25]
+]
+
+tb = Table(data)
+print(tb.create())
+```
+
+```bash
++-------------+
+| Name  | Age |
+|-------------|
+| Alice | 30  |
+| Bob   | 25  |
++-------------+
+```
+## Features
+- Pure ASCII output
+- Simple and Lightweight
+- No dependencies
+- Automatically adjusts column width
+
+## License
+[MIT](https://github.com/Tari-dev/tableascii/blob/main/LICENSE)
