@@ -1,0 +1,4 @@
+dspy
+
+[anthropic]
+anthropic<1.0.0,>=0.18.0
