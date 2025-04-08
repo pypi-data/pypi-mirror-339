@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "wiki-mcp-server"
+version = "0.0.4"
+description = "내 MCP 서버"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "hero", email = "icraft2170@gmail.com" },
+]
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "beautifulsoup4>=4.12.0",
+]
+
+[project.scripts]
+wiki-mcp-server = "src.server:run_server"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
