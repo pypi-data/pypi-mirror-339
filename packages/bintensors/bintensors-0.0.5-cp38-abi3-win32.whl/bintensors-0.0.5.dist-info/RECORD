@@ -1,0 +1,8 @@
+bintensors-0.0.5.dist-info/METADATA,sha256=-ErUll6d-tVLg2LdgExRFspW_893zsy8DvuKVrk06y8,10808
+bintensors-0.0.5.dist-info/WHEEL,sha256=RdYej9g_futKd6Tdhfgw26Xz0AC-l7pOevjJbjFph0M,90
+bintensors/numpy.py,sha256=wj1E5563pwpu0uWufITCz3zYT0taMSAzm_18Pg2QEhg,6729
+bintensors/torch.py,sha256=suvewG_G6rylztihkcaXzs-raI441Q7TzkZd5N0Ptzs,20990
+bintensors/__init__.py,sha256=wz0NDmpQ81j5kLgfwUvIh81Y49XrOk2QlN6ICrqn5FQ,144
+bintensors/__init__.pyi,sha256=Tn1ZzbE6bKfT2YUK0kEU29EPD9p7F3FvdKNyMSWXOIA,3824
+bintensors/_bintensors_rs.pyd,sha256=z93ksTMpN8rJXIm-becbDPYp1i0AQ0tfA-4yNBvNi-k,518656
+bintensors-0.0.5.dist-info/RECORD,,
