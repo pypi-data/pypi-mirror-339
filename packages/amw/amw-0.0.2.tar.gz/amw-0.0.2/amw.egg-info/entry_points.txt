@@ -1,0 +1,4 @@
+[console_scripts]
+spectral_mw = amw.mw.spectral_mw:main
+view_green_fun = amw.mw.test_greens_function:main
+
