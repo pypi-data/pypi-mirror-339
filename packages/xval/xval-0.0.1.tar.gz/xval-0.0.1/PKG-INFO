@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: xval
+Version: 0.0.1
+Summary: Xval's Python SDK and CLI
+Author-email: Timothy Quast <timothy.quast@xval.io>
+License: MIT
+Keywords: xval,xact,actuary,actuarial,valuation
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: click==8.1.8
+Requires-Dist: colorama==0.4.6
+Requires-Dist: markdown-it-py==3.0.0
+Requires-Dist: mdurl==0.1.2
+Requires-Dist: Pygments==2.19.1
+Requires-Dist: rich==14.0.0
+Requires-Dist: shellingham==1.5.4
+Requires-Dist: typer==0.15.2
+Requires-Dist: typing_extensions==4.13.1
+
+# TODO

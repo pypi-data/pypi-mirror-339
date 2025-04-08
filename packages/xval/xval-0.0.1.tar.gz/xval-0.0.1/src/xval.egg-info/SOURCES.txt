@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+requirements.txt
+src/xval/__init__.py
+src/xval/cli.py
+src/xval.egg-info/PKG-INFO
+src/xval.egg-info/SOURCES.txt
+src/xval.egg-info/dependency_links.txt
+src/xval.egg-info/entry_points.txt
+src/xval.egg-info/requires.txt
+src/xval.egg-info/top_level.txt
+src/xval/commands/__init__.py
