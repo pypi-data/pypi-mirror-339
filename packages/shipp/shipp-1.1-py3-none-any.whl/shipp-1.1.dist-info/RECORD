@@ -1,0 +1,11 @@
+shipp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shipp/components.py,sha256=aIKutDPIOVGuYUc6kjf5T1M-c5Tcco9UXnH7LK9oDkQ,16097
+shipp/io_functions.py,sha256=AmnxxSl2UFAD7I6KUyqF86Tgd5hqEM01So0nRtBkhsM,9947
+shipp/kernel.py,sha256=Qf9VleGpXmIa1IrvHZG3nV9QrmWPtxlh-Nr8n0XM19U,29459
+shipp/kernel_pyomo.py,sha256=MEXJzwIovJW1XSHpteyc3_VwUebyNPNauZzK0JdEXRY,59133
+shipp/timeseries.py,sha256=Nd_VYjH01aMa05UIZBvd-MpZRiByiFgA8jt9m21JFGA,1095
+shipp-1.1.dist-info/licenses/LICENSE,sha256=OQaHWwfaUKJFVoeaQqnXHtOBWliZ4q09-_xNXplZDHI,567
+shipp-1.1.dist-info/METADATA,sha256=m0kg4jWGjDrojLGHe9O-X_PtJ4liCbxUXqXXXtlHZSY,3848
+shipp-1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+shipp-1.1.dist-info/top_level.txt,sha256=qL_LROGWGYICqbXO1YNGAwRI5aknORoSfIaLzZ3B76Q,6
+shipp-1.1.dist-info/RECORD,,
