@@ -1,0 +1,6 @@
+{
+  "resource": true,
+  "name": "configcat",
+  "version": "5.0.2-alpha.1744096122",
+  "server": "api://github.com/pulumiverse"
+}
