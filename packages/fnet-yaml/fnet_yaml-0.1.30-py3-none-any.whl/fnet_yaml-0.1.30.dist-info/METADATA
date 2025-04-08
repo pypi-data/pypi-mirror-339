@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: fnet_yaml
+Version: 0.1.30
+Requires-Python: >=3.12
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: fnet-expression
+Dynamic: requires-dist
+Dynamic: requires-python
