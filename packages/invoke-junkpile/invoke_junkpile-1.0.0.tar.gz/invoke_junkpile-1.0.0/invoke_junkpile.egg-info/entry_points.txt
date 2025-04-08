@@ -1,0 +1,2 @@
+[console_scripts]
+invoke-junkpile = invoke_junkpile.__main__:main

@@ -1,0 +1,65 @@
+# Directory structure
+# invoke-junkpile/
+# ├── invoke_junkpile/
+# │   ├── __init__.py
+# │   └── __main__.py
+# ├── pyproject.toml
+# ├── README.md
+# └── LICENSE
+
+# ---------------------------
+# File: pyproject.toml
+# ---------------------------
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "invoke-junkpile"
+version = "1.0.0"
+description = "PowerShell obfuscation through stacked junk logic, dead code, and variable chaos."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{ name = "Tim Peck", email = "pypi@pf5.co" }]
+keywords = ["powershell", "obfuscation", "redteam", "cybersecurity"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Security",
+    "Topic :: Utilities"
+]
+
+[project.scripts]
+invoke-junkpile = "invoke_junkpile.__main__:main"
+
+# ---------------------------
+# File: invoke_junkpile/__init__.py
+# ---------------------------
+
+# (Leave this empty for now, or you can put version info)
+
+# ---------------------------
+# File: invoke_junkpile/__main__.py
+# ---------------------------
+
+# (Paste your current script here, adjusting any relative paths)
+
+# Make sure to rename the main execution block:
+# if __name__ == "__main__":
+#     main()
+
+# ---------------------------
+# After setup
+# ---------------------------
+# Build with:
+#   python -m build
+#
+# Test locally with:
+#   pip install .
+#
+# Run with:
+#   invoke-junkpile -f file.ps1 -o out.ps1
+
+# Publish to PyPI by tagging a GitHub release (if you set up GitHub Actions)
