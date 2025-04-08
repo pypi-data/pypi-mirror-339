@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: manimextra
+Version: 1.12.0
+Summary: A library that extends the capabilities of Manim
+License: MIT
+Author: Merzlikin-Matvey
+Author-email: merzlikinmatvey01@gmail.com
+Requires-Python: >=3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: flake8 (>=7.1.1)
+Requires-Dist: manim (>=0.18.0)
+Requires-Dist: setuptools (>=75.6.0)
+Description-Content-Type: text/markdown
+
+
