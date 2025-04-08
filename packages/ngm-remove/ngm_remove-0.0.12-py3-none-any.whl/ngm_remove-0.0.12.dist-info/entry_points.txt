@@ -1,0 +1,8 @@
+[console_scripts]
+copy = ngm_remove:run_copy
+fileblocks = ngm_remove:run_fileblocks
+filesize = ngm_remove:run_filesize
+filestat = ngm_remove:run_filestat
+mkfile = ngm_remove:run_mkfile
+reflink = ngm_remove:run_reflink
+remove = ngm_remove:run_remove
