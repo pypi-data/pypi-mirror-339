@@ -1,0 +1,4 @@
+[himena.plugin]
+IO = himena_lmfit.io
+LMfit tools = himena_lmfit.tools
+Widgets = himena_lmfit.widgets
