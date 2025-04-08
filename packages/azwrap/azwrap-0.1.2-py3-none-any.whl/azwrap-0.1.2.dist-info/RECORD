@@ -1,0 +1,10 @@
+AzWrap/__init__.py,sha256=WXirn9wUAa6YjAKXxUECTp4nRX60ntZkinNQOPj-u1s,1090
+AzWrap/cli.py,sha256=4dQ7y3CfcH5V31DVRBPXu-vQB9VtYGi3xFX764-vj8A,412
+AzWrap/cli_config.py,sha256=VAuQZ_tVMYvsxSQ_jZjg4HhsgfbDNV2ohfTxWE33wDg,25439
+AzWrap/main.py,sha256=-TBEOA7B0_7qE9DRvLfMJAUF32UnEk4tgxUb3vdGuyM,40666
+AzWrap/wrapper.py,sha256=wadS_OM_Ek0mmqmCeLGo543xPnzyOrr5Hk6zZRT7ZqA,78109
+azwrap-0.1.2.dist-info/METADATA,sha256=aztitGAhM7RNpw4zxmmcP7plBUiZhtfPdZjRRdwab2Y,9276
+azwrap-0.1.2.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+azwrap-0.1.2.dist-info/entry_points.txt,sha256=3o0MJ-2BAodoaEuDI_3tLqzLXkQ_8wCJf-b8ixykRyA,44
+azwrap-0.1.2.dist-info/top_level.txt,sha256=Qk24oFFU2hHZLCtzEqrypwOpxVetQWMDdxaXAS9ghhc,7
+azwrap-0.1.2.dist-info/RECORD,,

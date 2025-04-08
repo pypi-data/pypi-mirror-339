@@ -1,0 +1,2 @@
+[console_scripts]
+azwrap = AzWrap.main:main
