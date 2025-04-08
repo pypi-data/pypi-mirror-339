@@ -1,0 +1,8 @@
+kubernetes_mcp_server/__init__.py,sha256=d40A4JCpDjqvXWlIe8GIn4QApMwe44Qq10cwXSAaKsk,190
+kubernetes_mcp_server/__main__.py,sha256=RPYfroJwrEeE284oRukd8nqSdT1modISPSCK8KYzEZo,79
+kubernetes_mcp_server/kubernetes_mcp_server.py,sha256=EX8kyhHbaZstmv80G0HFrioqSlwZiF3dGW40HLWpY0Y,2933
+kubernetes_mcp_server-0.0.0.dev3.dist-info/METADATA,sha256=4VCLit8RyED4MB1EQTgzxfEux2D0TR2Thrd1J42BTzQ,7976
+kubernetes_mcp_server-0.0.0.dev3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+kubernetes_mcp_server-0.0.0.dev3.dist-info/entry_points.txt,sha256=yS4Go5a4VY-vxtoTSQAuzS0t39WlWCgblCR-EoTZtQo,69
+kubernetes_mcp_server-0.0.0.dev3.dist-info/top_level.txt,sha256=pu55W2hgOwHB5bz_jhPwa1E-lT400OQdIBuEEanwd64,22
+kubernetes_mcp_server-0.0.0.dev3.dist-info/RECORD,,
