@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: pyzola
+Version: 1.1
+Summary: Good library to start with code encryption
+Author: ALI KAZM
+Description-Content-Type: text/markdown
+
+
+
+install library
+
+``pip instal pyzola``
+
+usage
+
+``Python
+
+import pyzola
+
+data=pyzola.dumps('Hello, World')
+
+print(data)
+
+
+original_data=pyzola.loads(data)
+
+print(original_data)
+
+``
+
+``Python
+
+import pyzola
+
+code="""
+for i in range(10):
+	print(i)
+	
+
+"""
+
+encrption_code=pyzola.dump_code(code)
+
+print(encrption_code)
+
+
+pyzola.run_code(encrption_code)
+
+``
+
+
