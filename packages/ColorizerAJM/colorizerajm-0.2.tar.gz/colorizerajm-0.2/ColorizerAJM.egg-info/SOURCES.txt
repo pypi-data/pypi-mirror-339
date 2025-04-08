@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+ColorizerAJM/ColorizerAJM.py
+ColorizerAJM/__init__.py
+ColorizerAJM/_version.py
+ColorizerAJM.egg-info/PKG-INFO
+ColorizerAJM.egg-info/SOURCES.txt
+ColorizerAJM.egg-info/dependency_links.txt
+ColorizerAJM.egg-info/top_level.txt
