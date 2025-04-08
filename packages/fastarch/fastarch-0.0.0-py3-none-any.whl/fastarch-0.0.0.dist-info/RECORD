@@ -1,0 +1,13 @@
+fastarch/__init__.py,sha256=AeIgSEjt89Km-T21Zk8bmNtKY_vK8TVOGHM_zstlKsw,51
+fastarch/main.py,sha256=8Q6AQd3u8UcNOqX0Smq1c94wMLmjmK9OGu9jo22an30,141
+fastarch/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastarch/management/commands/__init__.py,sha256=OTQ6ZorS1v4pdF_wRv402TWAK1hgMJfl3HWkIQAk7Nk,264
+fastarch/management/commands/add_entity.py,sha256=_6SDaVjlH2-MVfNvmvx98KV5PbrKYfy7GDWETaowAvg,400
+fastarch/management/commands/base_command.py,sha256=SJzGG0E5qXgWs56v2vri-wbDbJX0TS2JhejpcyKUlsw,1870
+fastarch/management/commands/create_project.py,sha256=1ts1fyIfL9WNmdLAfIR972EWFRKJRzl-45rdPUGgyWA,312
+fastarch/management/manager.py,sha256=BYoOuJ6c6x4l1SmC_K0bDHlWmTP82fCpqKq5Lwg5ICE,1265
+fastarch-0.0.0.dist-info/LICENSE,sha256=S7jO24GN0gfZsugKmQOF_y7Ki6JR9x4zNw9OZqgSG0k,1073
+fastarch-0.0.0.dist-info/METADATA,sha256=YuRiG289lHog985N6-LMr5VEJiLMPXZqlQS6EMdwFbQ,817
+fastarch-0.0.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+fastarch-0.0.0.dist-info/entry_points.txt,sha256=9XIEU20PyzHWaTpYzIuOiFH5EiARlYV28s5AC1hsgWU,47
+fastarch-0.0.0.dist-info/RECORD,,

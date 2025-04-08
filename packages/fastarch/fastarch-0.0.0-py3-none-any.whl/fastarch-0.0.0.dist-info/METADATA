@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: fastarch
+Version: 0.0.0
+Summary: FastArch framework
+License: MIT
+Author: Nikita Ryzhenkov
+Author-email: nikita.ryzhenkoff@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: alembic (>=1.13.1,<2.0.0)
+Requires-Dist: asyncpg (>=0.29.0,<0.30.0)
+Requires-Dist: fastapi (>=0.109.0,<0.110.0)
+Requires-Dist: fastapi-filter (>=1.1.0,<2.0.0)
+Requires-Dist: psycopg2-binary (>=2.9.9,<3.0.0)
+Requires-Dist: sqlalchemy (>=2.0.25,<3.0.0)
+Requires-Dist: uvicorn[standart] (>=0.26.0,<0.27.0)
+Description-Content-Type: text/markdown
+
+# FastArch
+TODO
+
