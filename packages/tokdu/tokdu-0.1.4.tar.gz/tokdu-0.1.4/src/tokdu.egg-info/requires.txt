@@ -1,0 +1,9 @@
+tiktoken==0.9.0
+pathspec==0.12.1
+appdirs>=1.4.4
+
+[anthropic]
+anthropic>=0.49.0
+
+[gemini]
+google-cloud-aiplatform[tokenization]>=1.57.0
