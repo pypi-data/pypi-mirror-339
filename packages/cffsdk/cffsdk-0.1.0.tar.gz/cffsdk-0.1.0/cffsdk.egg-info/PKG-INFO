@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: cffsdk
+Version: 0.1.0
+Summary: A Python client for interacting with CFF server.
+Home-page: https://github.com/atripathy86/cff
+Author: Aalap Tripathy
+Author-email: aalap.tripathy@hpe.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.0.0
+
+# CFF SDK
+
+The `cffsdk` is a Python client for interacting with the Common Federation Framework (CFF) server. It provides helper functions to create and manage cross-facility workflows.
+
+## Installation
+
+### Install from PyPI
+To install the Python client from PyPI:
+```bash
+pip install cffsdk
+```
+
+### Install from Source
+To install the latest Python client corresponding to this repository:
+```bash
+cd client
+pip install .
+```
+
+### Build and Upload the Package
+To create the latest Python client wheel and upload it:
+```bash
+pip install setuptools wheel twine
+python3 setup.py sdist bdist_wheel
+twine upload dist/*
+```
+
+## Usage
+
+Here is an example of how to use the `cffsdk`:
+```python
+from cffsdk import cffsdk
+
+client = cffsdk(base_url="http://127.0.0.1:8000")
+print(client.get_root())
+```
+
+## Running Unit Tests
+
+To run the SDK client unit tests:
+```bash
+# Activate your Python environment
+conda activate cff
+
+# Navigate to the client directory
+cd client
+
+# Install the package
+pip install .
+
+# Run the tests
+python3 -m unittest discover -s tests
+```
