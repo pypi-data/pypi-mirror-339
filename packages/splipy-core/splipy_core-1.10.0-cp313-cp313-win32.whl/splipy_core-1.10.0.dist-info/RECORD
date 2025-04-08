@@ -1,0 +1,10 @@
+splipy_core/__init__.py,sha256=C9tMlFLpPMD-uHtJOpbCwQg4nct0g8G64w-o1Mb7oGo,95
+splipy_core/__init__.pyi,sha256=bHxq2dTXH1aU91dfw4d4_DAbfVx-nMBoy-VjqvSq6E4,482
+splipy_core/_core.cp313-win32.pyd,sha256=so7jPZE1OFoQNVvK55Z4fLBJnrh656wrcy9sQxkUSEs,146432
+splipy_core/core.c,sha256=0i7UW98i2qtjvrQqMV1AeDP3XCK0uQUMtepfYjQ25dE,1243229
+splipy_core/core.pyx,sha256=PPPnT4eLZ_EI7V0CMM4dUtiBYdKQF3Y4k90WdlfTfEE,5937
+splipy_core/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+splipy_core-1.10.0.dist-info/METADATA,sha256=MxhDTjxVizZPmZswKU_mKNC_qTF49bj_J_Fy3TWEakk,240
+splipy_core-1.10.0.dist-info/WHEEL,sha256=iuBtox58ZfmdZzG-BEHKFn_UiBPbBDtT4b67THCTeoc,97
+splipy_core-1.10.0.dist-info/top_level.txt,sha256=kBhLkjXVEb3wBI_IQlERVbkpOxDpEhiZ3MP16Lf1RAA,12
+splipy_core-1.10.0.dist-info/RECORD,,
