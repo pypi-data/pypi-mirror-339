@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/worldapi/__init__.py
+src/worldapi/main.py
+src/worldapi.egg-info/PKG-INFO
+src/worldapi.egg-info/SOURCES.txt
+src/worldapi.egg-info/dependency_links.txt
+src/worldapi.egg-info/top_level.txt
+tests/test.py
