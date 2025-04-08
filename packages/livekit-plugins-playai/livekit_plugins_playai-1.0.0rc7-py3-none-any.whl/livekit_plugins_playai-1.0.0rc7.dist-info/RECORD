@@ -1,0 +1,9 @@
+livekit/plugins/playai/__init__.py,sha256=i7EE3kO3k17axzifqimqs9LqgnB9gx693NcNAbm3uuw,467
+livekit/plugins/playai/log.py,sha256=J4cHkMbMnVkZ62qxwqbzUFGKp29x4XRsi-Q_R3vTsXI,69
+livekit/plugins/playai/models.py,sha256=rsjY6dveUdpfFbJapwNqm3p3w6ZW_nkNvEwnBilry94,220
+livekit/plugins/playai/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+livekit/plugins/playai/tts.py,sha256=c5ze09ujYZcjwylzll1_nM5w_r2XQekwr7_fjR7weuk,9750
+livekit/plugins/playai/version.py,sha256=PMN-06-P6HyDWF7MPAgpfA8VYsMolku6ARZq8r2txHA,26
+livekit_plugins_playai-1.0.0rc7.dist-info/METADATA,sha256=IMEF21Kohpj6gaJf76FN6WgDfa4IhcdvkI6SLKcL1zc,1353
+livekit_plugins_playai-1.0.0rc7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+livekit_plugins_playai-1.0.0rc7.dist-info/RECORD,,
