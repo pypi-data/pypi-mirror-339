@@ -1,0 +1,8 @@
+fastapi
+
+[memcache]
+pymemcache
+
+[redis]
+redis[hiredis]
+orjson
