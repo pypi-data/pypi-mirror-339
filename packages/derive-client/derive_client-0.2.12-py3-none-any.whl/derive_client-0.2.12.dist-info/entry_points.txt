@@ -1,0 +1,3 @@
+[console_scripts]
+dc=derive_client.cli:cli
+
