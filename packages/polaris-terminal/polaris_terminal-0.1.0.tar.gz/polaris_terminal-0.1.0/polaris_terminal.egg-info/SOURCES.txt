@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+polaris_terminal/__init__.py
+polaris_terminal/cli.py
+polaris_terminal/terminal.py
+polaris_terminal.egg-info/PKG-INFO
+polaris_terminal.egg-info/SOURCES.txt
+polaris_terminal.egg-info/dependency_links.txt
+polaris_terminal.egg-info/entry_points.txt
+polaris_terminal.egg-info/requires.txt
+polaris_terminal.egg-info/top_level.txt
