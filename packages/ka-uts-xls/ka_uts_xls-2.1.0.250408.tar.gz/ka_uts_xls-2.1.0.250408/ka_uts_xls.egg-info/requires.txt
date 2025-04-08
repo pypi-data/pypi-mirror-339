@@ -1,0 +1,9 @@
+ka_uts_arr>=2.0.1.250407
+ka_uts_com>=2.0.0.250407
+ka_uts_dfr>=2.0.0.250402
+ka_uts_dic>=2.0.0.250402
+ka_uts_obj>=2.0.0.250404
+openpyxl>=3.1.5
+pandas>=2.2.3
+polars>=1.26.0
+PyExcelerate>=0.12.0
