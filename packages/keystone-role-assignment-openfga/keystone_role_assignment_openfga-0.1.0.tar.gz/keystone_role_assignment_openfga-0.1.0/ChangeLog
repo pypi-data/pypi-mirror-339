@@ -1,0 +1,22 @@
+CHANGES
+=======
+
+v0.1.0
+------
+
+* chore: Add release workflow (#15)
+* build(deps): Bump jaxxstorm/action-install-gh-release (#14)
+* feat: Add multiplex plugin (#11)
+* build(deps): Bump crate-ci/committed from 1.1.5 to 1.1.7 (#13)
+* build(deps): Bump step-security/harden-runner from 2.10.4 to 2.11.0
+* build(deps): Bump dcarbone/install-jq-action from 2 to 3
+* build(deps): Bump jaxxstorm/action-install-gh-release
+* feat: Add check/delete system grant methods
+* feat: Add delete\_xxx\_asignments
+* feat: Cover create\_grant and delete\_grant method
+* feat: Implement create\_system\_grant method
+* feat: Implement add\_role\_to\_user\_and\_project method
+* feat: Add integration test
+* feat: Add commited workflow
+* feat: Add docs and tests
+* initial version using read tuples
