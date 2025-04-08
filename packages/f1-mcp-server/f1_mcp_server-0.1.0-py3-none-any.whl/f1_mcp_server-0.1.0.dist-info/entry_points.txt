@@ -1,0 +1,2 @@
+[console_scripts]
+f1-mcp-server = f1_mcp_server:main
