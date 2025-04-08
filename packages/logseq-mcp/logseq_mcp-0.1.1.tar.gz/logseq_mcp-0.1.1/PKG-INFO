@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: logseq-mcp
+Version: 0.1.1
+Summary: MCP server for Logseq integration
+Project-URL: Repository, https://github.com/apw124/logseq-mcp.git
+Requires-Python: >=3.11
+Requires-Dist: mcp[cli]>=1.2.0
+Requires-Dist: requests>=2.28.1
+Requires-Dist: websocket-client>=1.4.0
