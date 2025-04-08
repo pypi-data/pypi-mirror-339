@@ -1,0 +1,4 @@
+[console_scripts]
+export_overwatch_csv = raic.foundry.cli:cli_export_overwatch_csv
+export_overwatch_pickle = raic.foundry.cli:cli_export_overwatch_pickle
+raic-foundry = raic.foundry.cli.raic_cli:raic_commands
