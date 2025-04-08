@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: bunnybase
+Version: 0.1.4
+Summary: Datamanaging system
+Home-page: https://github.com/trollmii/bunnybase
+Author: trollmii
+Author-email: trollmii@outlook.de
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: numpy (>=2.1.0,<3.0.0)
+Requires-Dist: pandas (>=2.1.0,<3.0.0)
+Requires-Dist: pillow (>=11.1.0,<12.0.0)
+Requires-Dist: pyarrow (>=19.0.1,<20.0.0)
+Project-URL: Repository, https://github.com/trollmii/bunnybase
+Description-Content-Type: text/markdown
+
+# BunnyBase
+
+BunnyBase is a tool for working with data.
+The data won't be stored in a table, they will be stored in categories.
+
+## Performance
+__BunnyBase is: time = O(1)__
+![][1]
+![][2]
+
+## How to install?
+You can use PIP to install bunnybase:
+`pip install bunnybase`
+
+## Example
+```python
+from bunnybase import Hub, Data
+
+hub = Hub()
+hub << Data('person', firstname='peter', lastname='griffin')
+hub << Data('person', firstname='homer', lastname='simpson', favourite_food=['donuts'])
+hub << Data('animal', name='cat', age=15)
+hub << Data('os', name='linux', rate='good', spyware=False)
+hub << Data('distro', name='nixos', good=True)
+hub << Data('os', name='windows', free=False, spyware='maybe')
+
+hub.filter(name='cat') # DataList([Data('animal', name='cat', age=15)])
+hub.filter('person') # DataList([Data('person', firstname='peter', lastname='griffin'), Data('person', firstname='homer', lastname='simpson', favourite_food=['donuts']), ])
+hub.filter(name='*') # DataList([Data('animal', name='cat', age=15), Data('os', name='linux', rate='good', spyware=False), Data('distro', name='nixos', good=True), Data('os', name='windows', free=False, spyware='maybe')])
+```
+
+
+
+[1]: https://raw.githubusercontent.com/trollmii/bunnybase/master/imgs/adding-data-to-hub.png
+[2]: https://raw.githubusercontent.com/trollmii/bunnybase/master/imgs/performance-saving-hub.png
