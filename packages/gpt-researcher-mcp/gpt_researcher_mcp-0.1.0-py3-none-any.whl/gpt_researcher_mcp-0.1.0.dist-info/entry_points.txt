@@ -1,0 +1,2 @@
+[console_scripts]
+gpt-researcher-mcp = gpt_researcher_mcp:main
