@@ -1,0 +1,15 @@
+cotwo/__init__.py,sha256=_2FgsGgR5EvqV5EMpQGppgTv1yw6dSXt2hZk4E7sVqo,60
+cotwo/molecule.py,sha256=-61tot4QXUrG4A1tH1EIPtZ0IEBStmqzAB_w13dCdUI,3466
+cotwo/io/__init__.py,sha256=CwyXIvAo-26KBS2hVduCF6xFsvvbNmDHkgq5IldTJIA,48
+cotwo/io/xyz.py,sha256=an7jg8RQieDfBW7IIp_ytjz_uucGp8obEydQVXFCmXM,4019
+cotwo/rendering/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cotwo/rendering/atom.py,sha256=0LSoh3Ll-HytrSz8B2pufAIN-L3It8wZbdaWYRGOGdQ,2573
+cotwo/rendering/bond.py,sha256=4rnGQ28hOxom4lsR-YEWETg1vHikx3JqVmwIhIXWzFI,3629
+cotwo/rendering/isosurface.py,sha256=FMKfnJiUVYPQ2TTtAeK-82K_6uFXa0kMKf1j2IyitaE,5796
+cotwo/rendering/meshes.py,sha256=L0YxuEGWjsjZZtqapIF_1VRR3CN7ahrfuqatKd4b2JA,3620
+cotwo/resources/__init__.py,sha256=rHO2YNWMMn3ZWmdy49r9lR2yQPJuGtWYVr2BN4Bgffs,384
+cotwo/resources/bond_types.py,sha256=sGmfQCZnZAytyC1e1esQ4fbINxL4qb6U_WF77xDpdFo,326
+cotwo/resources/periodic_table.json,sha256=7gxb2iaU0rnGVFhKzBxQELAmIGnNw0lBo6xFqujrh2w,28816
+cotwo-1.0.4.dist-info/METADATA,sha256=pyI-Ev0rzxv2REG1GDndnV2ByZfHrwUJorfIqc_TkCA,2092
+cotwo-1.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+cotwo-1.0.4.dist-info/RECORD,,
