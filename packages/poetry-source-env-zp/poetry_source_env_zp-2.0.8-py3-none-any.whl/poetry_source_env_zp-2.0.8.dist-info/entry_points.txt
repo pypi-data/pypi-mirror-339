@@ -1,0 +1,3 @@
+[poetry.plugin]
+poetry-source-env-zp=poetry_source_env_zp.plugin:PoetrySourcePlugin
+
