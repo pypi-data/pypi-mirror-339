@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+code_xray/__main__.py
+code_xray/viewer.py
+code_xray.egg-info/PKG-INFO
+code_xray.egg-info/SOURCES.txt
+code_xray.egg-info/dependency_links.txt
+code_xray.egg-info/entry_points.txt
+code_xray.egg-info/requires.txt
+code_xray.egg-info/top_level.txt

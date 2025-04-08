@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "code-xray"
+version = "1.0.0"
+description = "Terminal-based code explainer powered by Ollama"
+authors = [{name = "Aayush Rajesh Jadhav", email = "aayushrj22@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = [
+    "textual",
+    "rich",
+    "httpx",
+    "typer[all]",
+    "prompt_toolkit"
+]
+
+[project.scripts]
+code-xray = "code_xray.__main__:app"
+
+[tool.setuptools]
+packages = ["code_xray"]
