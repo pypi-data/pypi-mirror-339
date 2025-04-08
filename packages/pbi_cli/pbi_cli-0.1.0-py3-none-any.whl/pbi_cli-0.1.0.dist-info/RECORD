@@ -1,0 +1,14 @@
+pbi_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pbi_cli/auth.py,sha256=BYcSiP3zC73s4k5t88_474bvzee06WvDHps-kpjYuqU,511
+pbi_cli/cli.py,sha256=6hR-JKwpcOmvFUiATN9Xm6h_r0HW4C-uNdTR9_pq4cw,11451
+pbi_cli/powerbi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pbi_cli/powerbi/admin.py,sha256=gx01zCP4fs8isJ7Tb4FipYTDQnASm2B-FC7rEoxKqr4,6467
+pbi_cli/powerbi/app.py,sha256=fUO4xKytvIVDDOFy5PGMvsVOhElW7284mhVjU-R0Qgw,4688
+pbi_cli/powerbi/base.py,sha256=p25SbIWswu96ErwHrUi102Vp7BQK3VdqpK14xHu9R4A,1151
+pbi_cli/powerbi/io.py,sha256=Yz-8Hjupw3DCVwMNS5bi8weZrXuLSNhcYwXzhWvSkug,755
+pbi_cli/powerbi/report.py,sha256=VAVsRjcafLSEPuP3vnXtAuvLUE2P3J5XZ_0TZ-eAuXQ,1115
+pbi_cli/web.py,sha256=6fbdrSKl1eVjWnczPeLQcUDxyLPYedTTFECl-0rXPfw,7055
+pbi_cli-0.1.0.dist-info/METADATA,sha256=UJS-Bwyu7gBkamCAV0SGomb_39tSGrx72GtdvL1FYXo,1056
+pbi_cli-0.1.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+pbi_cli-0.1.0.dist-info/entry_points.txt,sha256=WE7CvBY79lpE9IgIISo-r5h4g7PWLetotwc-K6r1eE4,39
+pbi_cli-0.1.0.dist-info/RECORD,,

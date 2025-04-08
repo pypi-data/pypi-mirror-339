@@ -1,0 +1,3 @@
+[console_scripts]
+pbi=pbi_cli.cli:pbi
+

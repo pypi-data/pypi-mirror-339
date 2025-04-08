@@ -1,0 +1,41 @@
+Metadata-Version: 2.3
+Name: pbi_cli
+Version: 0.1.0
+Summary: A Sample project.
+Author: L M
+Author-email: hi@leima.is
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: openpyxl (>=3.1.4,<4.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: python-slugify (>=8.0.4,<9.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# powerbi-cli
+
+Power BI command line tool
+
+## Setup
+
+### Requirements
+
+* Python 3.12
+
+### Development
+
+1. Install pre-commit hooks: `pre-commit install`
+2. Install dependencies `poetry install`
+
+
+### Use Jupyter Notebooks
+
+1. Put notebooks in the `notebooks` folder.
+2. Run `poetry run jupytext --sync notebooks/*py*` to sync the git commitable script and the notebooks.
+
