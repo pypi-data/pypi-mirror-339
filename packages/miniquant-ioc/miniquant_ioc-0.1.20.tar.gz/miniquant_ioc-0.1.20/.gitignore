@@ -1,0 +1,11 @@
+*~
+\#*
+__pycache__
+miniquant.egg-info
+dist/*
+src/miniquant_ioc/_version.py
+*.egg-info
+.\#*
+build/*
+.coverage*
+*.orig
