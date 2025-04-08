@@ -1,0 +1,11 @@
+{
+   "X.X.X.X": {
+      "commands": [
+         "system-view",
+         "interface GigabitEthernet0/0/1",
+         "description Conexion a Servidor",
+         "quit",
+         "save"
+      ]
+   }
+}

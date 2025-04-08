@@ -1,0 +1,10 @@
+{
+   "X.X.X.X": {
+      "commands": [
+         "interface Ethernet1",
+         "description Conexion a Servidor",
+         "no shutdown",
+         "exit"
+      ]
+   }
+}
