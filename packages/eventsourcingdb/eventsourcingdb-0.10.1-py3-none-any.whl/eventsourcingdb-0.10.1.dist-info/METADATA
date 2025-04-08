@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: eventsourcingdb
+Version: 0.10.1
+Summary: The official Python client SDK for EventSourcingDB.
+License: MIT
+Author: the native web GmbH
+Author-email: hello@thenativeweb.io
+Requires-Python: >=3.13,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aiohttp (==3.11.16)
+Description-Content-Type: text/markdown
+
+# eventsourcingdb
+
+The official Python client SDK for EventSourcingDB.
+
