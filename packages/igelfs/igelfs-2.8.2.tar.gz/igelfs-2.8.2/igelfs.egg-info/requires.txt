@@ -1,0 +1,14 @@
+pillow
+python-magic
+rsa
+
+[convert]
+pyparted
+
+[efs]
+cryptography
+PyNaCl
+python-lzf
+
+[tests]
+pytest
