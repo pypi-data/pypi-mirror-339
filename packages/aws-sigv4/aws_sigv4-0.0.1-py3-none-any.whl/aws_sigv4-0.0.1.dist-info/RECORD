@@ -1,0 +1,7 @@
+aws_sigv4/__init__.py,sha256=Gd-YG1zmn4n2IuYJiplKoCt91tBRgu6hKZmSjMS_FcE,30
+aws_sigv4/create_signature.py,sha256=hEQ50aFcoCcF2coE8_oCHuhrlC-A-zasNy4nXBetUbI,6187
+aws_sigv4-0.0.1.dist-info/licenses/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+aws_sigv4-0.0.1.dist-info/METADATA,sha256=hMHY67pldU0rbebGEcBlS-jdTXKU-HK-fIMssspMDsM,519
+aws_sigv4-0.0.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+aws_sigv4-0.0.1.dist-info/top_level.txt,sha256=D13P-kq3HqwmhZ1epc4HWI_pPLvX_UQnWq24eSS0rqY,10
+aws_sigv4-0.0.1.dist-info/RECORD,,
