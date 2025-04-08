@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "cloelike"
+version = "0.0.0"
+description = "Proof of concept"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
