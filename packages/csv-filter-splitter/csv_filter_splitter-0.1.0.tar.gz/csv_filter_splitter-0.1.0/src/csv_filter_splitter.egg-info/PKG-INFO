@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: csv_filter_splitter
+Version: 0.1.0
+Summary: CSV splitter using filter column
+Home-page: https://github.com/ricardogalindo24/csv-filter-splitter
+Author: Ricardo Galindo
+Author-email: jrichardgali@outlook.com
+License: BSD 2-clause
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: pandas==2.2.3
+Requires-Dist: textual==3.0.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary

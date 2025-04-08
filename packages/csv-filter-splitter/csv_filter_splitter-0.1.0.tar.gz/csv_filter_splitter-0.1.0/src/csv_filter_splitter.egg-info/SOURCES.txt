@@ -1,0 +1,12 @@
+setup.py
+src/csv_filter_splitter.egg-info/PKG-INFO
+src/csv_filter_splitter.egg-info/SOURCES.txt
+src/csv_filter_splitter.egg-info/dependency_links.txt
+src/csv_filter_splitter.egg-info/entry_points.txt
+src/csv_filter_splitter.egg-info/requires.txt
+src/csv_filter_splitter.egg-info/top_level.txt
+src/csv_splitter/__init__.py
+src/csv_splitter/csv_filter_spliter.py
+src/csv_splitter/csv_splitter.tcss
+src/csv_splitter/csv_splitter_interface.py
+src/csv_splitter/pd_datatable.py
