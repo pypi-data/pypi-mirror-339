@@ -1,0 +1,16 @@
+sidekick/__init__.py,sha256=UQ67Ej9nAPSKxqBL-kL4OszNxegRtALNIPuucEm61k4,992
+sidekick/_version.py,sha256=ZOvIDHUo2ZvgkOj_pDYCA5-zmKoY3uBAfw2W1GRXboQ,146
+sidekick/base_module.py,sha256=0j-CJryyjJtcBmf1RL781e0umRqPhKI3BOv9pGtJeMc,6846
+sidekick/canvas.py,sha256=w46VgAmwozQf4jEbW6DjA2mWH7nqQNj5BE_InTsMccU,9003
+sidekick/connection.py,sha256=aN_c7ylJtqvZiELTIKfNw7ZJwRlRSvUw54jFdV0WAWI,23181
+sidekick/console.py,sha256=VeyJHOETQ-DWsRRXa9L3MPxioglMxap4iPf6D8nkD6U,5694
+sidekick/control.py,sha256=zOfeMHgJcj2DONWwqWZo6z5OapRA1z_Irm57kP-aX1M,8511
+sidekick/grid.py,sha256=mE9iDyPSzvwPir7bKBydpKnFjY-vXv_kU4LYsdjGHqw,7933
+sidekick/observable_value.py,sha256=yBVAfL1tO6Ct1IsMAHHFBSeQbSIzYv7DTkMjmPiLAnE,15531
+sidekick/utils.py,sha256=HiVl1_0vbcuU7-_TIMc69Wpqs29G1lwygftwzjRq-ok,517
+sidekick/viz.py,sha256=I4APj1mGBdOq5DQTl-irYiky7NBu8FhoLxHdYC_mWdI,19115
+sidekick_py-0.0.1.dist-info/licenses/LICENSE.md,sha256=hBrFu5kv35yFLb1wap3xQLPpv-L-or4Sg5tqOS7o2Ew,1076
+sidekick_py-0.0.1.dist-info/METADATA,sha256=18COM-yLttjJPrPDvF3evi0RY_x1nHq1wG8oxwDBBAI,24412
+sidekick_py-0.0.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+sidekick_py-0.0.1.dist-info/top_level.txt,sha256=LenxPH0P8fPcAOlCw81ZhOcXHRetizWIEzex1u_1kQA,9
+sidekick_py-0.0.1.dist-info/RECORD,,
