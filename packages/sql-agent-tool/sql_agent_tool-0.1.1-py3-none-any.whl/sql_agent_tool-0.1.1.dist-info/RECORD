@@ -1,0 +1,13 @@
+sql_agent_tool/__init__.py,sha256=Jgd5RuLU8_jpo4bqNv21jp32VCU59V-ZJAMZvLrQmO4,165
+sql_agent_tool/core.py,sha256=hiGYi0OrPeWpZOzmxcCCfLCah3KdnDYW7vfb2znzWac,26622
+sql_agent_tool/exceptions.py,sha256=9HcL6sqiYal3HfMcS4KVi1jUbSxKIKAI01UWrFPPmyA,3076
+sql_agent_tool/models.py,sha256=vyAY-kfEiKqataTMOp_MUCBkGls2Yo6oUNWiuKJIQNY,819
+sql_agent_tool/utils.py,sha256=hi5eMWqvcIWMvqG2GOQysXVipKnx1Qol__Y7a8XVbBc,640
+sql_agent_tool-0.1.1.dist-info/licenses/LICENSE,sha256=gAgzEXLxYneomPxnhNaIPY0OlpN4DxwR4ojf5ikEm-I,1090
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_core.py,sha256=A1WA2XlwDMwNdeatcmu8c_9RyyJqp8vEeQNK2Riwlz0,423
+tests/test_postgresql.py,sha256=rCmZbFOE1nJsEhF0--Ka8zGhjQSjwHvP3CBX_ZZwh_Q,5085
+sql_agent_tool-0.1.1.dist-info/METADATA,sha256=gnBlB1XcZ4_JtSO1r6eHoc1UtGEpO1DwnvJziBFdQoE,6457
+sql_agent_tool-0.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+sql_agent_tool-0.1.1.dist-info/top_level.txt,sha256=Nz1tNZ0KuAoYYTsKV-EEuhYlu7SLuXsal2ptdbUOD3w,21
+sql_agent_tool-0.1.1.dist-info/RECORD,,
