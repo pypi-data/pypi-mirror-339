@@ -1,0 +1,9 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/discord_py_utilities.egg-info/PKG-INFO
+src/discord_py_utilities.egg-info/SOURCES.txt
+src/discord_py_utilities.egg-info/dependency_links.txt
+src/discord_py_utilities.egg-info/top_level.txt
