@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+BlackSpammerBd_VX1.egg-info/PKG-INFO
+BlackSpammerBd_VX1.egg-info/SOURCES.txt
+BlackSpammerBd_VX1.egg-info/dependency_links.txt
+BlackSpammerBd_VX1.egg-info/entry_points.txt
+BlackSpammerBd_VX1.egg-info/requires.txt
+BlackSpammerBd_VX1.egg-info/top_level.txt
+blackspammerbd/__init__.py
+blackspammerbd/cli.py
+blackspammerbd/core.py
+blackspammerbd/persistence.py
+blackspammerbd/teligram.py

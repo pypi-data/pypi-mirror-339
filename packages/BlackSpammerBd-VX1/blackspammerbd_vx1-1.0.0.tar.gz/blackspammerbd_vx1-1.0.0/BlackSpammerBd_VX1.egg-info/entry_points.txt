@@ -1,0 +1,2 @@
+[console_scripts]
+TEAM-BSB = blackspammerbd.cli:main
