@@ -1,0 +1,3 @@
+[console_scripts]
+exdb_wf_cli = rcsb.workflow.cli.ExDbExec:main
+imgs_exec_cli = rcsb.workflow.cli.ImgExec:main

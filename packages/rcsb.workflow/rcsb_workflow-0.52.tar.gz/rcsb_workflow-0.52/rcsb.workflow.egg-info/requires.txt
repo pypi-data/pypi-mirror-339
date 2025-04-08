@@ -1,0 +1,13 @@
+rcsb.utils.chem>=0.81
+rcsb.utils.seq>=0.82
+rcsb.utils.targets>=0.82
+rcsb.utils.seqalign>=0.31
+rcsb.utils.io>=1.48
+rcsb.exdb>=1.28
+rcsb.db>=1.800
+
+[dev]
+check-manifest
+
+[test]
+coverage
