@@ -1,0 +1,10 @@
+borfile/__init__.py,sha256=1dQayB2itK86yKz0EETMIc4tYgxb5O9G_Y7HC3KOQWk,173
+borfile/cli.py,sha256=ENnNXpGP8qh4gttjzVbsu-1DNQ3ogzF1DHasxUFPTrU,1730
+borfile/codes.py,sha256=kEfzEEqV6W80ZxLIpK-q-x90gvAL6OyYOu1RhCD0O6g,4823
+borfile/file.py,sha256=pc_cWXpO4sJIl_AHsTl7Q66OuAFEaAe-4wN6_r3pKpU,5994
+borfile/utils.py,sha256=WKI-Gtxdp05PrT57Hp4jf6boKQtzEAhPvNUafxndqbk,1114
+borfile-0.2.1.dist-info/entry_points.txt,sha256=tCM8oQj67f3GuBnf60LO6g5d7gF2OoLKv2FsH2A6qZE,120
+borfile-0.2.1.dist-info/licenses/LICENSE,sha256=soIDmNltAVHuy1nhtsPU15nsn_WlH-dcqn2aeeTX8c0,1073
+borfile-0.2.1.dist-info/WHEEL,sha256=_2ozNFCLWc93bK4WKHCO-eDUENDlo-dgc9cU3qokYO4,82
+borfile-0.2.1.dist-info/METADATA,sha256=43EGHCsT-ebDZNpkG38jKhUyHXIDuB61ek7oBSrwpTo,5388
+borfile-0.2.1.dist-info/RECORD,,
