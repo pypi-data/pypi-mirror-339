@@ -1,0 +1,14 @@
+litepolis_database_default/Actor.py,sha256=xDi06qnd9BeMSR-FNUT25WZTXFoEgCMUkabDYrh-qK8,876
+litepolis_database_default/Comments.py,sha256=qOTkH_a-7vzW9PlE5uCNdawzJ6Cmq7jiFXCWNWn3qB0,13433
+litepolis_database_default/Conversations.py,sha256=83J-bmsNAM_UPWZkEskokUDcDwasOk4mdO2dlZ0VkMQ,11824
+litepolis_database_default/MigrationRecord.py,sha256=e0lANvPvdBVR_Ub0QkZsTkUDK40N6XWGEa6eaMNq7Ds,3380
+litepolis_database_default/Report.py,sha256=gUHAE91Uz_ufw82_fGCTpWLxQ6YxsEJWnSOJwwZYBws,15624
+litepolis_database_default/Users.py,sha256=k9XG_PcaOOtguVcku1x2y8-aHAghXmpUMTEXCH3fJKY,8049
+litepolis_database_default/Vote.py,sha256=Mod4ykiGCeQzbIBl-nKoqbbGR-s0pdU3VcjfVK6l-lc,12524
+litepolis_database_default/__init__.py,sha256=q9a8PMX8azebBGBmUMueIgXoC5IvgjsCKLvFcN819Ow,66
+litepolis_database_default/utils.py,sha256=R3MicWKmvS5ezAEuVIprAJzxXsX8xYKcX0H4UoA54Go,1152
+litepolis_database_default-0.0.3.dist-info/licenses/LICENSE,sha256=0iGfShfblp2wHb_qpZLkZIepH12FitU-urnfBuXy1AQ,1065
+litepolis_database_default-0.0.3.dist-info/METADATA,sha256=p1dcLhC4pweu9nh8QAynPjGoYApmTL_zmJuqMI0P_Ug,1369
+litepolis_database_default-0.0.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+litepolis_database_default-0.0.3.dist-info/top_level.txt,sha256=hZhcVmLheQsGDEkaWexDIrXmy_To8-xmwNxB8E_YLps,27
+litepolis_database_default-0.0.3.dist-info/RECORD,,
