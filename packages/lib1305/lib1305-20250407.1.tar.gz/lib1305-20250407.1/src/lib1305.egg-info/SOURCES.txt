@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/lib1305/__init__.py
+src/lib1305/_lib.py
+src/lib1305/onetimeauth.py
+src/lib1305.egg-info/PKG-INFO
+src/lib1305.egg-info/SOURCES.txt
+src/lib1305.egg-info/dependency_links.txt
+src/lib1305.egg-info/top_level.txt
+tests/test_random.py
+tests/test_vector.py
