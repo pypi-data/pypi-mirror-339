@@ -1,0 +1,7 @@
+msr_reader/__init__.py,sha256=94GXYftGA9ROyejspLYAJHLl-kHcTGithxbZdTJUjCc,76
+msr_reader/obffile.py,sha256=udcggK9aHaw9tMH2F6WtSetv3Lw3whj9GTCSEVkix9Y,14027
+msr_reader/xml_metadata.py,sha256=udm9BCZuNNmItRQm5heEvbhqS_WSCpTRgGDTq0kwlOQ,3813
+msr_reader-0.2.1.dev0.dist-info/METADATA,sha256=z4b-sO20tvU4NW4qAyt13n0MXxkYA9Po7UkwrHZT-MI,1915
+msr_reader-0.2.1.dev0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+msr_reader-0.2.1.dev0.dist-info/licenses/LICENSE,sha256=D4f0-E9YKGq3zQjavuI_R0K3Bk2drh5EX5VB-MwYR5U,1059
+msr_reader-0.2.1.dev0.dist-info/RECORD,,
