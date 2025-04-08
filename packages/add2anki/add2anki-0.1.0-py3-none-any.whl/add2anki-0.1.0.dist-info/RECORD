@@ -1,0 +1,13 @@
+add2anki/__init__.py,sha256=wnXE8ns8EVGQjsQjiBoTvIrKiaJcTIk8S-G0e_HoZs4,55
+add2anki/anki_client.py,sha256=qZ2MdMCvtbHgAb8FAxVmGx06Rm5FY6xyAzkcmdNeW7w,9388
+add2anki/audio.py,sha256=GgBY_1aQsMaFflRWAj4OUL6YQRu7l9tALpRLWhBzcTk,8096
+add2anki/cli.py,sha256=y4mT2YNzF5QwSfXTWDxwtDXmF0jy1wM98b8Q5vnd9xs,70956
+add2anki/config.py,sha256=a3L1OyYs0wuSTUXnjhPXQSZfQwIHdUHopuPI6utm2yg,4532
+add2anki/exceptions.py,sha256=UB7q5ydzixTf3BiaNdECdJflgMjjgWS0N5yIOT1OEH8,928
+add2anki/language_detection.py,sha256=O95iI5N_g2vzipWXck6XBJizcxIcGnxwN-LTqXqZErI,8714
+add2anki/srt.py,sha256=iWS5Yb0JjUFJhe3FdwDsAd53QS7XriDub5-ivvq2T5Y,4251
+add2anki/translation.py,sha256=jMVxbRkdUOiE03YTEap3Mq7OtZ-F8YE_qnw9-B41a6s,4257
+add2anki-0.1.0.dist-info/METADATA,sha256=H0mcDLObE8iMQC1CumMyeZIlk1lQWrPpdTtgaXRYwEw,91363
+add2anki-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+add2anki-0.1.0.dist-info/entry_points.txt,sha256=Tb-NNlim60yfk1X8etxlyFVrGnNbBlJCfdCWxGcH5xA,47
+add2anki-0.1.0.dist-info/RECORD,,
