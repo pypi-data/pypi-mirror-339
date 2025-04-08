@@ -1,0 +1,100 @@
+[project]
+name = "donald"
+version = "1.1.0"
+description = "Task manager for asyncio"
+readme = "README.rst"
+requires-python = ">=3.9"
+license = { "text" = "MIT License" }
+authors = [{ name = "Kirill Klenov", email = "horneds@gmail.com" }]
+keywords = ["asyncio", "tasks", "queue"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Framework :: AsyncIO",
+]
+dependencies = [
+  "aioamqp       >= 0.15.0",
+  "click         >= 6.7",
+  "crontab       >= 0.22.0",
+  "async-timeout;python_version<'3.11'",
+  "typing-extensions;python_version<'3.10'",
+]
+
+[project.urls]
+homepage = "https://github.com/klen/donald"
+repository = "https://github.com/klen/donald"
+
+[project.scripts]
+donald = "donald.__main__:main"
+
+[project.optional-dependencies]
+tests = ["redis", "types-redis", "pytest", "pytest-aio", "pytest-mypy", "pytest-redislite", "ruff"]
+dev = ["pre-commit", "bump2version"]
+redis = ["redis"]
+
+[tool.setuptools]
+packages = ['donald']
+
+[tool.setuptools.package-data]
+donald = ["py.typed"]
+
+[tool.pytest.ini_options]
+addopts = "-xsvl"
+
+[tool.mypy]
+packages = ["donald"]
+ignore_missing_imports = true
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py39,py310,py311,py312,pypy39
+
+[testenv]
+deps = -e .[tests]
+commands =
+	pytest --mypy tests
+
+[testenv:pypy39]
+deps = -e .[tests]
+commands =
+	pytest tests
+"""
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+exclude = [".venv", "docs", "example.py"]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+  "D",
+  "COM",
+  "UP",
+  "ANN",
+  "DJ",
+  "EM",
+  "RSE",
+  "SLF",
+  "RET",
+  "S101",
+  "PLR2004",
+  "N804",
+  "E731",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["ARG", "TRY", "F", "PGH", "PLR", "PLW", "PTH", "SIM", "ERA", "RET504", "T20"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311", "py312"]
+preview = true

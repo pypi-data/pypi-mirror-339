@@ -1,0 +1,25 @@
+aioamqp>=0.15.0
+click>=6.7
+crontab>=0.22.0
+
+[:python_version < "3.10"]
+typing-extensions
+
+[:python_version < "3.11"]
+async-timeout
+
+[dev]
+pre-commit
+bump2version
+
+[redis]
+redis
+
+[tests]
+redis
+types-redis
+pytest
+pytest-aio
+pytest-mypy
+pytest-redislite
+ruff
