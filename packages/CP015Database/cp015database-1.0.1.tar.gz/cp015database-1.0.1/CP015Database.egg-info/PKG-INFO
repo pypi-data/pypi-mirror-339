@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: CP015Database
+Version: 1.0.1
+Summary: A simple database handler package for MOE CP015 Matriculation Programme 
+Author: Muhammad Aiman
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mysql-connector-python

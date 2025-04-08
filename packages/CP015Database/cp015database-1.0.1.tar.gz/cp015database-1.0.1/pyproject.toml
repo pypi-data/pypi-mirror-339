@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "CP015Database"
+version = "1.0.1"
+description = "A simple database handler package for MOE CP015 Matriculation Programme "
+readme = "README.md"
+requires-python = ">=3.6"
+authors = [
+    {name = "Muhammad Aiman"}
+]
+license = {text = "MIT"}
+
+dependencies = [
+    "mysql-connector-python"
+]
+
