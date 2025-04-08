@@ -1,0 +1,19 @@
+[project]
+name = "demo-near-shade-py"
+version = "0.1.1"
+description = ""
+authors = [
+    {name = "Hassel Alcalá",email = "hassel_aurora_13@hotmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "demo_near_shade_py", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
