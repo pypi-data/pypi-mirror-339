@@ -1,0 +1,28 @@
+name: vale-v0
+
+on:
+  pull_request:
+    # 'edited': check the PR title on changes
+    types: [opened, edited, reopened, synchronize]
+
+jobs:
+  pr-content-check:
+    name: pr-content-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: files
+        name: Get changed files
+        env:
+          ENDPOINT: repos/${{ github.repository }}/pulls/${{ github.event.number }}/files
+          SELECTOR: map(select(.status != "removed")) | map(.filename)
+          GITHUB_TOKEN: ${{ github.token }}
+        run: echo "added_modified=$(gh api "$ENDPOINT" --jq "$SELECTOR")" >> $GITHUB_OUTPUT
+      - name: vale check
+        uses: errata-ai/vale-action@reviewdog
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          files: ${{ steps.files.outputs.added_modified }}
+          fail_on_error: true
+          vale_flags: "--minAlertLevel=error"

@@ -1,0 +1,27 @@
+# Please see the documentation for all configuration options:
+# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: 'npm' # See documentation for possible values
+    directory: '/' # Location of package manifests
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+    commit-message:
+      prefix: 'chore'
+      include: 'scope'
+    labels:
+      - 'dependencies'
+  - package-ecosystem: 'gomod'
+    directory: 'tools/http-api-docs/' # Location of go package manifests
+    schedule:
+      interval: 'monthly'
+      day: 'monday'
+    open-pull-requests-limit: 0 # Disable dependabot for go deps, we want them rock solid
+    ignore:
+      - dependency-name: "go-ipfs" # explicit ignore just in case, because this is handled by  .github/workflows/update-on-new-ipfs-tag.yml
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
