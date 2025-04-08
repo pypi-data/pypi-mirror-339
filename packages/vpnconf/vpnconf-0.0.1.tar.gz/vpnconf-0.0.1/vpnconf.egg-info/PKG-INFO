@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: vpnconf
+Version: 0.0.1
+Summary: Script for creating vpn client configuration
+Home-page: https://github.com/mugiseyebrows/vpnconf.git
+Author: Stanislav Doronin
+Author-email: mugisbrows@gmail.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: summary
+
+# vpnconf
+
+Script for creating vpn client configuration

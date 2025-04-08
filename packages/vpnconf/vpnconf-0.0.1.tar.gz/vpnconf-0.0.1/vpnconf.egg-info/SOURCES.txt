@@ -1,0 +1,9 @@
+LICENSE
+setup.py
+vpnconf/__init__.py
+vpnconf/__main__.py
+vpnconf.egg-info/PKG-INFO
+vpnconf.egg-info/SOURCES.txt
+vpnconf.egg-info/dependency_links.txt
+vpnconf.egg-info/entry_points.txt
+vpnconf.egg-info/top_level.txt
