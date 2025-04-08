@@ -1,0 +1,229 @@
+from http import HTTPStatus
+from typing import Any, Optional, Union
+
+import httpx
+
+from ... import errors
+from ...client import AuthenticatedClient, Client
+from ...models.delete_sharing_group_legacy_sharing_groups_delete_sharing_group_id_delete_response_delete_sharing_group_legacy_sharing_groups_delete_sharinggroupid_delete import (
+    DeleteSharingGroupLegacySharingGroupsDeleteSharingGroupIdDeleteResponseDeleteSharingGroupLegacySharingGroupsDeleteSharinggroupidDelete,
+)
+from ...models.http_validation_error import HTTPValidationError
+from ...types import Response
+
+
+def _get_kwargs(
+    sharing_group_id: int,
+) -> dict[str, Any]:
+    _kwargs: dict[str, Any] = {
+        "method": "delete",
+        "url": f"/sharing_groups/delete/{sharing_group_id}",
+    }
+
+    return _kwargs
+
+
+def _parse_response(
+    *, client: Union[AuthenticatedClient, Client], response: httpx.Response
+) -> Optional[
+    Union[
+        DeleteSharingGroupLegacySharingGroupsDeleteSharingGroupIdDeleteResponseDeleteSharingGroupLegacySharingGroupsDeleteSharinggroupidDelete,
+        HTTPValidationError,
+    ]
+]:
+    if response.status_code == 200:
+        response_200 = DeleteSharingGroupLegacySharingGroupsDeleteSharingGroupIdDeleteResponseDeleteSharingGroupLegacySharingGroupsDeleteSharinggroupidDelete.from_dict(
+            response.json()
+        )
+
+        return response_200
+    if response.status_code == 422:
+        response_422 = HTTPValidationError.from_dict(response.json())
+
+        return response_422
+    if client.raise_on_unexpected_status:
+        raise errors.UnexpectedStatus(response.status_code, response.content)
+    else:
+        return None
+
+
+def _build_response(
+    *, client: Union[AuthenticatedClient, Client], response: httpx.Response
+) -> Response[
+    Union[
+        DeleteSharingGroupLegacySharingGroupsDeleteSharingGroupIdDeleteResponseDeleteSharingGroupLegacySharingGroupsDeleteSharinggroupidDelete,
+        HTTPValidationError,
+    ]
+]:
+    return Response(
+        status_code=HTTPStatus(response.status_code),
+        content=response.content,
+        headers=response.headers,
+        parsed=_parse_response(client=client, response=response),
+    )
+
+
+def sync_detailed(
+    sharing_group_id: int,
+    *,
+    client: AuthenticatedClient,
+) -> Response[
+    Union[
+        DeleteSharingGroupLegacySharingGroupsDeleteSharingGroupIdDeleteResponseDeleteSharingGroupLegacySharingGroupsDeleteSharinggroupidDelete,
+        HTTPValidationError,
+    ]
+]:
+    """Delete sharing group
+
+     Delete a specific sharing group.
+
+    Args:
+      auth: Authentication details
+      db: Database session
+      id: ID of the sharing group to delete
+
+    Returns:
+      Representation of the deleted sharing group
+
+    Args:
+        sharing_group_id (int):
+
+    Raises:
+        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        httpx.TimeoutException: If the request takes longer than Client.timeout.
+
+    Returns:
+        Response[Union[DeleteSharingGroupLegacySharingGroupsDeleteSharingGroupIdDeleteResponseDeleteSharingGroupLegacySharingGroupsDeleteSharinggroupidDelete, HTTPValidationError]]
+    """
+
+    kwargs = _get_kwargs(
+        sharing_group_id=sharing_group_id,
+    )
+
+    response = client.get_httpx_client().request(
+        **kwargs,
+    )
+
+    return _build_response(client=client, response=response)
+
+
+def sync(
+    sharing_group_id: int,
+    *,
+    client: AuthenticatedClient,
+) -> Optional[
+    Union[
+        DeleteSharingGroupLegacySharingGroupsDeleteSharingGroupIdDeleteResponseDeleteSharingGroupLegacySharingGroupsDeleteSharinggroupidDelete,
+        HTTPValidationError,
+    ]
+]:
+    """Delete sharing group
+
+     Delete a specific sharing group.
+
+    Args:
+      auth: Authentication details
+      db: Database session
+      id: ID of the sharing group to delete
+
+    Returns:
+      Representation of the deleted sharing group
+
+    Args:
+        sharing_group_id (int):
+
+    Raises:
+        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        httpx.TimeoutException: If the request takes longer than Client.timeout.
+
+    Returns:
+        Union[DeleteSharingGroupLegacySharingGroupsDeleteSharingGroupIdDeleteResponseDeleteSharingGroupLegacySharingGroupsDeleteSharinggroupidDelete, HTTPValidationError]
+    """
+
+    return sync_detailed(
+        sharing_group_id=sharing_group_id,
+        client=client,
+    ).parsed
+
+
+async def asyncio_detailed(
+    sharing_group_id: int,
+    *,
+    client: AuthenticatedClient,
+) -> Response[
+    Union[
+        DeleteSharingGroupLegacySharingGroupsDeleteSharingGroupIdDeleteResponseDeleteSharingGroupLegacySharingGroupsDeleteSharinggroupidDelete,
+        HTTPValidationError,
+    ]
+]:
+    """Delete sharing group
+
+     Delete a specific sharing group.
+
+    Args:
+      auth: Authentication details
+      db: Database session
+      id: ID of the sharing group to delete
+
+    Returns:
+      Representation of the deleted sharing group
+
+    Args:
+        sharing_group_id (int):
+
+    Raises:
+        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        httpx.TimeoutException: If the request takes longer than Client.timeout.
+
+    Returns:
+        Response[Union[DeleteSharingGroupLegacySharingGroupsDeleteSharingGroupIdDeleteResponseDeleteSharingGroupLegacySharingGroupsDeleteSharinggroupidDelete, HTTPValidationError]]
+    """
+
+    kwargs = _get_kwargs(
+        sharing_group_id=sharing_group_id,
+    )
+
+    response = await client.get_async_httpx_client().request(**kwargs)
+
+    return _build_response(client=client, response=response)
+
+
+async def asyncio(
+    sharing_group_id: int,
+    *,
+    client: AuthenticatedClient,
+) -> Optional[
+    Union[
+        DeleteSharingGroupLegacySharingGroupsDeleteSharingGroupIdDeleteResponseDeleteSharingGroupLegacySharingGroupsDeleteSharinggroupidDelete,
+        HTTPValidationError,
+    ]
+]:
+    """Delete sharing group
+
+     Delete a specific sharing group.
+
+    Args:
+      auth: Authentication details
+      db: Database session
+      id: ID of the sharing group to delete
+
+    Returns:
+      Representation of the deleted sharing group
+
+    Args:
+        sharing_group_id (int):
+
+    Raises:
+        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        httpx.TimeoutException: If the request takes longer than Client.timeout.
+
+    Returns:
+        Union[DeleteSharingGroupLegacySharingGroupsDeleteSharingGroupIdDeleteResponseDeleteSharingGroupLegacySharingGroupsDeleteSharinggroupidDelete, HTTPValidationError]
+    """
+
+    return (
+        await asyncio_detailed(
+            sharing_group_id=sharing_group_id,
+            client=client,
+        )
+    ).parsed

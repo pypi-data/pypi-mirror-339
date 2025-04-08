@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mmisp-api-client"
+version = "0.8.0"
+description = "A client library for accessing Modern MISP API"
+authors = []
+readme = "README.md"
+requires-python = ">=3.11.0"
+
+dependencies = [
+  "httpx>=0.20.0,<0.29.0",
+  "attrs>=22.2.0",
+  "python-dateutil~=2.8.0",
+]
+
+[tool.setuptools.package-data]
+"mmisp.api_client" = ["py.typed"]
+
+
+[tool.ruff]
+fix = true
+line-length = 120
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["F", "I", "UP"]
