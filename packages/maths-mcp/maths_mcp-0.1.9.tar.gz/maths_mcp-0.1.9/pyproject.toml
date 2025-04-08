@@ -1,0 +1,11 @@
+[project]
+name = "maths-mcp"
+version = "0.1.9"
+description = "Does all the cool maths related stuff for your LLM. Goal is to support all the maths tools we can support."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.6.0"
+]
+[project.scripts]
+maths-mcp = "maths_mcp.main:main"
