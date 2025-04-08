@@ -1,0 +1,14 @@
+src/__init__.py,sha256=yiEIIrzpZtoblFpjuDYaocb-S5m1fe6BSJjt1BfOLKg,114
+src/server.py,sha256=dCPCT_UL6h-PCqv9CmYhXD2GaiB6Gn7W0KwCC7JCC3o,6278
+src/model/request/wikipedia_search.py,sha256=pt-apzMFV2qYRxBq7EQMdHJBSgOCcn3308f_rGO1j7A,2072
+src/model/response/wikipedia_detail.py,sha256=LyvADYlIxp06VLmrSJtKAUGUxE0f8rOoH8CZj_Yoh0o,597
+src/model/response/wikipedia_search_result.py,sha256=_bCGmYwBhtimp21cwipdHtWb7ch0lRVUqsOP8wqwelM,650
+src/request/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/request/wikipedia_search.py,sha256=pt-apzMFV2qYRxBq7EQMdHJBSgOCcn3308f_rGO1j7A,2072
+src/response/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/response/wikipedia_detail.py,sha256=LyvADYlIxp06VLmrSJtKAUGUxE0f8rOoH8CZj_Yoh0o,597
+src/response/wikipedia_search_result.py,sha256=_bCGmYwBhtimp21cwipdHtWb7ch0lRVUqsOP8wqwelM,650
+wiki_mcp_server-0.0.4.dist-info/METADATA,sha256=IhmEOI9MqSbC_jpP9d7AWd9qKElePNOwP8X0A4AfAM0,2443
+wiki_mcp_server-0.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+wiki_mcp_server-0.0.4.dist-info/entry_points.txt,sha256=_A2ZHFZRePcxc0WkNr54X7b6xOOpqoAeYVNAYb8WGTo,58
+wiki_mcp_server-0.0.4.dist-info/RECORD,,
