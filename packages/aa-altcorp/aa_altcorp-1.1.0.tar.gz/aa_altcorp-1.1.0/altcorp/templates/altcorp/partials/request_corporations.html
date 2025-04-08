@@ -1,0 +1,73 @@
+{% load static %}
+{% load i18n %}
+{% load evelinks %}
+
+
+<div class="table-responsive">
+    <table class="table table-hover table-striped table-width-fix" id="tbl-corporations">
+        <thead>
+            <tr>
+                <th>{% translate "Corporation" %}</th>
+                <th>{% translate "Tokens/Req" %}</th>
+                <th>{% translate "Status" %}</th>
+                <th>{% translate "Actions" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for st in corps %}
+                <tr>
+                    <td>
+                        <img src="{{ st.corp.corporation_id|corporation_logo_url }}" class="img-circle">
+                        &nbsp;&nbsp;&nbsp;
+                        {{ st.corp.corporation_name }}
+                    </td>
+                    <td>
+                        {{ st.token_count }}/{{ st.corp.member_count }}
+                    </td>
+                    <td>
+                        {% if st.deadline_passed == True %}
+                            <i class="fas fa-reply-all fa-lg fa-fw text-danger" title="{% translate 'Corp will be removed' %}"></i> Your Corp will be removed
+                        {% elif st.pendingRevocation == True %}
+                            <i class="fas fa-exclamation-triangle fa-lg text-warning" title="{% translate 'Corp may be removed' %}"></i> {{st.revocation_deadline}}
+                        {% elif st.status == "EFFECTIVE" %}
+                            <i class="fas fa-star fa-lg fa-fw text-primary" title="{% translate 'In Alt Alliance' %}"></i>
+                        {% elif st.status == "APPROVED" %}
+                            <i class="fas fa-hourglass-half fa-lg fa-fw text-success" title="{% translate 'Accepted, pending join in game.' %}"></i>
+                        {% elif st.status == "PENDING" %}
+                            <i class="fas fa-hourglass-start fa-lg fa-fw" title="{% translate 'Request pending' %}"></i>
+                        {% else %}
+                            <i class="fas fa-info-circle fa-fw text-info" title="{% translate 'Not in alt corp' %}"></i>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if st.status == "PENDING" %}
+                            <a
+                                class="btn btn-warning"
+                                role="button"
+                                href="{% url 'altcorp:remove_corp_join' altcorp_id=st.altcorp.id %}"
+                                title="{% translate 'Cancel Request' %}">
+                                {% translate "Cancel" %}
+                            </a>
+                        {% elif st.pendingRevocation == True %}
+                            {% translate "Fix Compliance immediately!" %}
+                        {% elif st.status == "EFFECTIVE" %}
+                            {% translate "In Alt Alliance" %}
+                        {% elif st.status == "APPROVED" %}
+                            {% translate "Accepted, pending join in game." %}
+                        {% elif st.token_count >= st.corp.member_count %}
+                            <a
+                                class="btn btn-primary"
+                                role="button"
+                                href="{% url 'altcorp:request_corp_join' corporation_id=st.corp.corporation_id %}"
+                                title="{% translate 'Request to joing the alt alliance' %}">
+                                {% translate "Apply" %}
+                            </a>
+                        {% else %}
+                            <i class="fas fa-info-circle fa-lg fa-fw text-info" title="{% translate 'More toons required to request join' %}"></i>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

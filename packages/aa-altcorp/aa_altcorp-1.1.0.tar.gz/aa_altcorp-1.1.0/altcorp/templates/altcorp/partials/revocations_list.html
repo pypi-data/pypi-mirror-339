@@ -1,0 +1,73 @@
+{% load static %}
+{% load i18n %}
+{% load evelinks %}
+
+<div class="table-responsive">
+    <h3> {% translate "REVOKE IMMEDIATELY!" %} </h3>
+    <span> {% translate "These corps have failed to resolve compliance by the deadline and must be removed from the alt alliance." %} </span>
+    <table id="tab_requests" class="table table-condensed table-hover table-striped">
+        <thead>
+            <tr>
+                <th class="col-md-2">{% translate "Corporation" %}</th>
+                <th class="col-md-2">{% translate "Contact Name" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for corp in corps %}
+                <tr>
+                    <td>
+                        <img src="{{ corp.request.corporation.corporation_id|corporation_logo_url }}" class="img-circle">
+                        &nbsp;&nbsp;&nbsp;
+                        {{ corp.request.corporation }}
+                    </td>
+                    <td>
+                        <span>
+                            {{ corp.ceo }}
+                        </span>
+                    </td>
+                </tr>
+            {% empty %}
+                {% include "altcorp/partials/manage_empty_row.html" %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="table-responsive">
+    <h3> {% translate "Pending Revocations" %} </h3>
+    <span> {% translate "These requests have been approved and are just waiting for them to officially be in the alliance." %} </span>
+    <table id="tab_requests" class="table table-condensed table-hover table-striped">
+        <thead>
+            <tr>
+                <th class="col-md-2">{% translate "Corporation" %}</th>
+                <th class="col-md-2">{% translate "Contact Name" %}</th>
+                <th class="col-md-2">{% translate "Deadline" %}</th>
+                <th class="col-md-1">{% translate "Tokens/Req" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for corp in danger %}
+                <tr>
+                    <td>
+                        <img src="{{ corp.request.corporation.corporation_id|corporation_logo_url }}" class="img-circle">
+                        &nbsp;&nbsp;&nbsp;
+                        {{ corp.request.corporation }}
+                    </td>
+                    <td>
+                        <span>
+                            [{{ corp.ceo.corporation_ticker }}] {{ corp.ceo }}
+                        </span>
+                    </td>
+                    <td>
+                        {{ corp.request.revoke_deadline }}
+                    </td>
+                    <td>
+                        {{ corp.token_count }}/{{ corp.request.corporation.member_count }}
+                    </td>
+                </tr>
+            {% empty %}
+                {% include "altcorp/partials/manage_empty_row.html" %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
