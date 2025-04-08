@@ -1,0 +1,2 @@
+[console_scripts]
+xhs_mcp_server = xhs_mcp_server:main

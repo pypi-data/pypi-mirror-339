@@ -1,0 +1,92 @@
+Metadata-Version: 2.4
+Name: xhs_mcp_server
+Version: 0.1.4
+Summary: A Model Context Protocol (MCP) server to post xiaohongshu(rednote)
+Author-email: Zhiling Luo <godot.lzl@alibaba-inc.com>
+Requires-Python: >=3.11
+Requires-Dist: mcp>=1.0.0
+Requires-Dist: selenium
+Description-Content-Type: text/markdown
+
+# install 
+1. python packages
+```bash
+pip install -r requirements.txt
+```
+
+2. install chromedriver
+find out your chrome version like "134.0.6998.166".
+download it
+```bash
+npx @puppeteer/browsers install chromedriver@134.0.6998.166
+```
+copy the chromedriver to your path or add it in your path
+
+3. install xhs_mcp_server
+```bash
+pip install xhs-mcp-server
+```
+
+# login
+run the following command in your terminal.
+```bash
+env phone=YOUR_PHONE_NUMBER python -m xhs_mcp_server.__login__
+```
+it will show:
+```bash
+无效的cookies，已清理
+请输入验证码: 
+```
+
+and you need to input the verification code in the terminal and press enter.
+
+## check it 
+```bash
+env phone=YOUR_PHONE_NUMBER python -m xhs_mcp_server.__login__
+```
+it will show:
+```bash
+使用cookies登录成功
+```
+
+# inspector
+start the inspector by following command in terminal:
+```bash
+npx @modelcontextprotocol/inspector -e phone=YOUR_PHONE_NUMBER python -m xhs_mcp_server
+```
+
+you can use a local image, type in its path in the inspector
+
+["PATH\TO\YOUR\IMAGE.jpg"]
+
+
+it will show an error, but it is ok, the post will be sent.
+Error
+Request timed out
+
+
+# start the server
+start the server by following command:
+```bash
+env phone=YOUR_PHONE_NUMBER python -m xhs_mcp_server
+```
+
+or you can add following json into your config file
+```json
+{
+    "mcpServers": {
+        "xhs-mcp-server": {
+            "command": "python",
+            "args": [
+                "-m",
+                "xhs_mcp_server"
+            ],
+            "env": {
+                "phone": "YOUR_PHONE_NUMBER"
+            }
+        }
+    }
+}
+```
+
+# 
