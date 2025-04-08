@@ -1,0 +1,202 @@
+Metadata-Version: 2.4
+Name: nemo_library
+Version: 1.4.7
+Summary: A Python library for data management, project automation, and integration with the NEMO cloud solution
+Author: Gunnar Schug
+Author-email: GunnarSchug81@gmail.com
+Project-URL: Github, https://github.com/H3rm1nat0r/nemo_library
+Project-URL: NEMO, https://enter.nemo-ai.com/nemo/
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/x-rst
+Requires-Dist: altair
+Requires-Dist: altgraph
+Requires-Dist: attrs
+Requires-Dist: babel
+Requires-Dist: beautifulsoup4
+Requires-Dist: blinker
+Requires-Dist: boto3
+Requires-Dist: botocore
+Requires-Dist: bs4
+Requires-Dist: build
+Requires-Dist: cachetools
+Requires-Dist: certifi
+Requires-Dist: cffi
+Requires-Dist: charset-normalizer
+Requires-Dist: click
+Requires-Dist: colorama
+Requires-Dist: coverage
+Requires-Dist: cryptography
+Requires-Dist: Delorean
+Requires-Dist: Deprecated
+Requires-Dist: docutils
+Requires-Dist: et_xmlfile
+Requires-Dist: fernet
+Requires-Dist: gitdb
+Requires-Dist: GitPython
+Requires-Dist: h11
+Requires-Dist: hubspot
+Requires-Dist: hubspot-api-client
+Requires-Dist: humanize
+Requires-Dist: id
+Requires-Dist: idna
+Requires-Dist: importlib_metadata
+Requires-Dist: importlib_resources
+Requires-Dist: iniconfig
+Requires-Dist: jaraco.classes
+Requires-Dist: jaraco.context
+Requires-Dist: jaraco.functools
+Requires-Dist: Jinja2
+Requires-Dist: jmespath
+Requires-Dist: jsonschema
+Requires-Dist: jsonschema-specifications
+Requires-Dist: keyring
+Requires-Dist: macholib
+Requires-Dist: markdown-it-py
+Requires-Dist: MarkupSafe
+Requires-Dist: mdurl
+Requires-Dist: more-itertools
+Requires-Dist: narwhals
+Requires-Dist: nh3
+Requires-Dist: numpy
+Requires-Dist: openpyxl
+Requires-Dist: outcome
+Requires-Dist: packaging
+Requires-Dist: pandas
+Requires-Dist: pefile
+Requires-Dist: pillow
+Requires-Dist: pkgutil_resolve_name
+Requires-Dist: pluggy
+Requires-Dist: protobuf
+Requires-Dist: pyaes
+Requires-Dist: pyarrow
+Requires-Dist: pycparser
+Requires-Dist: pydeck
+Requires-Dist: Pygments
+Requires-Dist: pyinstaller
+Requires-Dist: pyinstaller-hooks-contrib
+Requires-Dist: pyproject_hooks
+Requires-Dist: PySocks
+Requires-Dist: pytest
+Requires-Dist: pytest-cov
+Requires-Dist: python-dateutil
+Requires-Dist: python-dotenv
+Requires-Dist: pytz
+Requires-Dist: pywin32-ctypes
+Requires-Dist: readme_renderer
+Requires-Dist: referencing
+Requires-Dist: requests
+Requires-Dist: requests-toolbelt
+Requires-Dist: rfc3986
+Requires-Dist: rich
+Requires-Dist: rpds-py
+Requires-Dist: s3transfer
+Requires-Dist: selenium
+Requires-Dist: setuptools
+Requires-Dist: simplejson
+Requires-Dist: six
+Requires-Dist: smmap
+Requires-Dist: sniffio
+Requires-Dist: sortedcontainers
+Requires-Dist: soupsieve
+Requires-Dist: streamlit
+Requires-Dist: streamlit-option-menu
+Requires-Dist: tabulate
+Requires-Dist: tenacity
+Requires-Dist: toml
+Requires-Dist: tornado
+Requires-Dist: tqdm
+Requires-Dist: trio
+Requires-Dist: trio-websocket
+Requires-Dist: twine
+Requires-Dist: typing_extensions
+Requires-Dist: tzdata
+Requires-Dist: tzlocal
+Requires-Dist: urllib3
+Requires-Dist: watchdog
+Requires-Dist: webdriver-manager
+Requires-Dist: websocket-client
+Requires-Dist: wheel
+Requires-Dist: win-inet-pton
+Requires-Dist: wrapt
+Requires-Dist: wsproto
+Requires-Dist: XlsxWriter
+Requires-Dist: zipp
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: summary
+
+NEMO Library
+============
+
+Welcome to the **NEMO Library**, a Python library designed to bring
+simplicity and efficiency to your data-driven workflows. This library
+offers powerful tools to streamline your operations, analyze data, and
+implement AI-driven insights effortlessly.
+
+--------------
+
+Key Features
+------------
+
+-  **Data Processing:** Transform, clean, and manage your data with
+   ease.
+-  **Integration-Friendly:** Seamlessly integrate into your existing
+   Python workflows or applications.
+-  **Scalable Solutions:** Designed to work efficiently with both small
+   datasets and large-scale applications.
+
+--------------
+
+Installation
+------------
+
+To get started, install the NEMO Library using pip:
+
+.. code:: bash
+
+   pip install nemo-library
+
+For detailed installation instructions, refer to the `Installation
+Guide <https://github.com/H3rm1nat0r/nemo_library/blob/master/docs/setup_guide.md>`__.
+
+--------------
+
+Usage
+-----
+
+Here’s a quick overview of what you can do with the NEMO Library:
+
+1. load reports from NEMO
+2. create and update projects
+3. create reports and deficiency mining rules
+
+For a comprehensive guide, refer to the `Usage
+Documentation <https://github.com/H3rm1nat0r/nemo_library/blob/master/docs/usage_guide.md>`__.
+
+--------------
+
+Contributions
+=============
+
+Contributions are welcome! If you would like to suggest improvements or
+have found a bug, please open an issue or submit a pull request.
+
+--------------
+
+License
+=======
+
+This project is released under the Unlicense. You can find the full text
+of the Unlicense in the `UNLICENSE <UNLICENSE>`__ file. This means that
+the code is released into the public domain, and you are free to use,
+modify, distribute, and do whatever you want with it, without any
+restrictions or requirements.
+
+--------------
+
+Happy coding with NEMO Library!
