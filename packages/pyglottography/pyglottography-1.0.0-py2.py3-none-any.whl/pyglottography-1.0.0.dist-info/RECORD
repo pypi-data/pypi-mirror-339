@@ -1,0 +1,17 @@
+pyglottography/__init__.py,sha256=NPZFEiAAW6-69CG0wz4ihLD_Al7v7NBq6Y-2yQFTgGI,69
+pyglottography/dataset.py,sha256=Cjm9uy9xExxoOwKrDwadS102zVLWCGpkZKKQik_Bh3Y,23215
+pyglottography/scaffold.py,sha256=4DqS-QOHxZzbCh_m55FiIA1E1ItoWlixE_PtGg43dko,251
+pyglottography/glottography_template/CONTRIBUTORS.md,sha256=fSBhG0jBAGRVl0eN87OsZXHH3dW9yMWyg9VK6oCTENM,97
+pyglottography/glottography_template/RELEASING.md_tmpl,sha256=h_8KfdFkbf3Lqf5Mwz4Yn6uGJs_bQOE6EwHxf0Iqt-w,385
+pyglottography/glottography_template/cldfbench_+id+.py_tmpl,sha256=cY7FRFc5brgJ6NsfOM8t9EGwPR-xGbpoXp9zH0u0Bz0,135
+pyglottography/glottography_template/setup.cfg,sha256=mjF3YkXrc3ENdszzGouCWB7bsVQjqGz0krVYMB815oc,89
+pyglottography/glottography_template/setup.py_tmpl,sha256=A9TBCE6fhHlj2OkKbOK98cPPKbwzI6dWF8sIfPDdueU,611
+pyglottography/glottography_template/test.py,sha256=T92mEj2ApAbbMGS72z00bcWh5OmcHbtgq5q8BqTC784,93
+pyglottography/glottography_template/.github/workflows/cldf-validation.yml,sha256=I_r8-ZkwGEl3604SAYrF1bPwQXxC1byaqXSgBxqjRUw,628
+pyglottography/glottography_template/etc/README.md,sha256=gt4_OkvfFSyx_SRqEs4eF6kSBPLGLEqb18EiG27-XgU,539
+pyglottography-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pyglottography-1.0.0.dist-info/METADATA,sha256=F-DR4f8ojl5SKGJbaB01_Zwe4lX6ozEUKqYqf79ZaiU,4097
+pyglottography-1.0.0.dist-info/WHEEL,sha256=0VNUDWQJzfRahYI3neAhz2UVbRCtztpN5dPHAGvmGXc,109
+pyglottography-1.0.0.dist-info/entry_points.txt,sha256=P_D3QzIUHWkh5_ke5JaBt-8Ta_pbEdR2AutJnWQzDL0,81
+pyglottography-1.0.0.dist-info/top_level.txt,sha256=uwxtYR3kyny5jm5hQs_owNlqt1md7jesoMgfUkaJ_1E,15
+pyglottography-1.0.0.dist-info/RECORD,,
