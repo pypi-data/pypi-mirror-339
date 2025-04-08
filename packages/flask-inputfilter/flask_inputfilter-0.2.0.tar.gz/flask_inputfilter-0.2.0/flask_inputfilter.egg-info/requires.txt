@@ -1,0 +1,6 @@
+flask>=2.1
+typing_extensions>=3.6.2
+
+[optional]
+pillow>=8.0.0
+requests>=2.22.0
