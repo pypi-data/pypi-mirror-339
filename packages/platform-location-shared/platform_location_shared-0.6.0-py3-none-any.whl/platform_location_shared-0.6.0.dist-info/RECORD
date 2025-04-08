@@ -1,0 +1,11 @@
+platform_location_shared/__init__.py,sha256=DS49q_bFynltwBtgneHYeVXTHLg5bjAOFWvTkv-jYmY,21
+platform_location_shared/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+platform_location_shared/models/error.py,sha256=t0x-CrXc4aTwoR_1-6-9oeaUqzIJ6zdsQJbzmZ4gOJQ,80
+platform_location_shared/models/location.py,sha256=MWsirMaiZbo0o79s9ezwwr2DSIU9YqKXp45XXvFn1SE,878
+platform_location_shared/models/mixins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+platform_location_shared/models/mixins/serialise.py,sha256=rSkW5WDQps5dFsYGuxpHFI_r4eBSwk_4zUJwJopui-E,133
+platform_location_shared/validations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+platform_location_shared/validations/postcode.py,sha256=OO4vkbAA58bLCHXqQVuf2QNFLnW2jzRAYGEGQH0dPig,682
+platform_location_shared-0.6.0.dist-info/METADATA,sha256=4AeO3Qw-W6qK3g9u3k6eNkY68Dg0CjjeAlXu1FWpzs4,696
+platform_location_shared-0.6.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+platform_location_shared-0.6.0.dist-info/RECORD,,
