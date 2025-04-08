@@ -1,0 +1,12 @@
+the_judge/__init__.py,sha256=dmc5aKIUU88UJTKllUAu6Hl6XiAyEkmPAmjVhPjUZfI,168
+the_judge/judge.py,sha256=nLOozit1BWmaGovEtbzx6qP4tNmP3ALpG-y-FfQ1AKk,20413
+the_judge/core/__init__.py,sha256=MhpPRi4xVLFPZR3Xe04WY0OetCmdcbT7hY7XItFZKKc,46
+the_judge/core/judge.py,sha256=-kxDYhBulExukOwI_edq29-5EVUzjY5ckgezGJ6pfu8,9901
+the_judge/core/judge_new.py,sha256=sS-Nmez-tz8o3vonRNcSoPWtnbcMnTf-vo_j7Ax3ZkE,4269
+the_judge/llm/__init__.py,sha256=pgdKUIpH4iXK-9qzafHLfFfFG7-kAZzDg0AvXh5N2Yk,99
+the_judge/llm/client.py,sha256=nFSUm0KCdadJFGECpM3f9xxo2l7PZnQoX0iKaWaMt0M,1767
+the_judge/llm/llm_judge.py,sha256=LFPggScZ6rNd6ORQ7qy3gffGSFDJHQzVayIRcV_k3oo,7014
+the_judge-0.1.0.dist-info/METADATA,sha256=0aIW1N1mFulRIAHbOg7bCQtufO9CrTvuNJBcAOeerhg,6106
+the_judge-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+the_judge-0.1.0.dist-info/top_level.txt,sha256=CFfK0vP7gPan57FPATEnLtQ95-IQleP0CAF6UViziIs,10
+the_judge-0.1.0.dist-info/RECORD,,
