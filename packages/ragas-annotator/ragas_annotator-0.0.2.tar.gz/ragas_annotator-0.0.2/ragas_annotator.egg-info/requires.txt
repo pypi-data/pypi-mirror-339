@@ -1,0 +1,10 @@
+notion-client
+fastcore
+tqdm
+langfuse
+instructor
+pydantic
+numpy
+
+[dev]
+pytest
