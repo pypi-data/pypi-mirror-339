@@ -1,0 +1,2 @@
+[console_scripts]
+devnotes = devnotes.cli:app_cli

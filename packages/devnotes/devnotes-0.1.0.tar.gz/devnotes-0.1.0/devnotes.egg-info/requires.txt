@@ -1,0 +1,11 @@
+rich
+typer
+PyYAML
+python-dateutil
+prompt-toolkit
+
+[dev]
+pytest
+pytest-cov
+flake8
+black
