@@ -1,0 +1,8 @@
+fire
+interegular
+regex==2023.8.8
+torch
+tqdm
+transformers==4.51.0
+datasets
+jsonschema
