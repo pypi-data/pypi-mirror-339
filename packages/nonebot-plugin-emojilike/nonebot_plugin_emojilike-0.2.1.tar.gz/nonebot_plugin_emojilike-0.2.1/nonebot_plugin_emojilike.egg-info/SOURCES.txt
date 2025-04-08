@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+nonebot_plugin_emojilike/__init__.py
+nonebot_plugin_emojilike/face.py
+nonebot_plugin_emojilike.egg-info/PKG-INFO
+nonebot_plugin_emojilike.egg-info/SOURCES.txt
+nonebot_plugin_emojilike.egg-info/dependency_links.txt
+nonebot_plugin_emojilike.egg-info/requires.txt
+nonebot_plugin_emojilike.egg-info/top_level.txt
