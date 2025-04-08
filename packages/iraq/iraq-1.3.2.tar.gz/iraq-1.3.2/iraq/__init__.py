@@ -1,0 +1,1 @@
+from .iraq import gen,message
