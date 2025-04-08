@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: cloelib
+Version: 0.0.1
+Summary: Name reserved for the libraty for the Cosmology Likelihood and Observables in Euclid.
+Author: Guadalupe Cañas-Herrera
+Author-email: guadalupe.canasherrera@esa.int
+Requires-Python: >=3.8
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
