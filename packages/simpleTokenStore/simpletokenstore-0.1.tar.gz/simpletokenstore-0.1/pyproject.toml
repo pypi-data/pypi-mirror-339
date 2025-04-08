@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools >= 61.0",]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["version"]
+name="simpleTokenStore"
+requires-python = ">=3.8"
+authors = [
+    {name = "Phillip Harry T", email = "philliptinsley44@gmail.com"}
+]
+description = "token storage made simple"
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: Other/Proprietary License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Information Technology", 
+]
+keywords = ["token", "webtoken", "api", "key", "local storage",
+    "json", "JSON", "query", "session", "jwt", "JWT"]
+
+[tool.setuptools.dynamic]
+version = {attr = "simpleTokenStore.__version__"}
+
+[project.scripts]

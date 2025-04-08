@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+simpleTokenStore/__init__.py
+simpleTokenStore/simpleTokenStore.py
+simpleTokenStore.egg-info/PKG-INFO
+simpleTokenStore.egg-info/SOURCES.txt
+simpleTokenStore.egg-info/dependency_links.txt
+simpleTokenStore.egg-info/top_level.txt
+tests/test_SimpleTokenStore.py
