@@ -1,0 +1,13 @@
+snowpylot/__init__.py,sha256=MWXSyoZ8giBX7bts4qxZu9vQ36usnyCf8D5Q-pSSg4Q,498
+snowpylot/caaml_parser.py,sha256=2PB4-gr3POrbhvQwK5Yx-aGeMqSf2GCapYyOF4PrXn8,15767
+snowpylot/coreInfo.py,sha256=bVfszzgBO07IL8B7JvABWpTrBxVhLahqJ5w3edu3NYc,7187
+snowpylot/layer.py,sha256=L_4oTHHhWi30KjZiTt763U_M7ifkzlhXVIgR7c4TtI8,6133
+snowpylot/snowPit.py,sha256=iD8pGPvyBOYh4M-RzoaDW0TUosv9j4vEYB1lRUIWEQ8,1668
+snowpylot/snowProfile.py,sha256=s2F4kCFU-3mpm1FNqFR-3_sSSleG-ZN0kZLgJ9qZLiw,4547
+snowpylot/stabilityTests.py,sha256=O-KDxNOuR4cogvhFaQPciTjwurxpCbYz9z9IfC8ePik,5527
+snowpylot/whumpfData.py,sha256=juB0dm6r9Qx22cM_ZkAoFbrWHdQvRaq71qmYGEKD5d4,1679
+snowpylot-1.0.8.dist-info/licenses/LICENSE,sha256=6M-N91ky2v2Dnev7GZeYEEsInU8EY1OuOc8pLTwdanc,1143
+snowpylot-1.0.8.dist-info/METADATA,sha256=mOi49F7pVfa17GtkexMnFvprD7f8G_B9WzUaVA1R9ZU,11744
+snowpylot-1.0.8.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+snowpylot-1.0.8.dist-info/top_level.txt,sha256=r0YzjusLYmBKZrIkMXo2QVD0QUrU23amu0nCC67sHS4,10
+snowpylot-1.0.8.dist-info/RECORD,,
