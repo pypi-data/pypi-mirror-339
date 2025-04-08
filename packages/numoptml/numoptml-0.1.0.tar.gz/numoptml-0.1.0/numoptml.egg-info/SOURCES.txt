@@ -1,0 +1,14 @@
+README.md
+setup.py
+numoptml/__init__.py
+numoptml.egg-info/PKG-INFO
+numoptml.egg-info/SOURCES.txt
+numoptml.egg-info/dependency_links.txt
+numoptml.egg-info/requires.txt
+numoptml.egg-info/top_level.txt
+numoptml/optimizers/__init__.py
+numoptml/optimizers/gradient_descent.py
+numoptml/optimizers/newton_method.py
+numoptml/utils/__init__.py
+numoptml/utils/line_search.py
+tests/test_optimizers.py
