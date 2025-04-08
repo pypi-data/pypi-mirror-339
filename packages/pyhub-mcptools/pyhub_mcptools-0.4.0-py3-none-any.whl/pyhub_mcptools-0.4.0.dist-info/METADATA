@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: pyhub-mcptools
+Version: 0.4.0
+Summary: 파이썬사랑방 MCP 도구
+Project-URL: Homepage, https://github.com/pyhub-kr/pyhub-mcptools
+Project-URL: Documentation, https://pyhub-kr.github.io/pyhub-mcptools
+Project-URL: Bug Tracker, https://github.com/pyhub-kr/pyhub-mcptools/issues
+Project-URL: Source Code, https://github.com/pyhub-kr/pyhub-mcptools
+Author-email: Chinseok Lee <me@pyhub.kr>
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Office/Business :: Office Suites
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Requires-Dist: django-environ
+Requires-Dist: django>=4.0
+Requires-Dist: mcp
+Requires-Dist: typer
+Requires-Dist: tzlocal
+Provides-Extra: all
+Requires-Dist: bs4; extra == 'all'
+Requires-Dist: httpx; extra == 'all'
+Requires-Dist: playwright; extra == 'all'
+Requires-Dist: xlwings; extra == 'all'
+Provides-Extra: browser
+Requires-Dist: bs4; extra == 'browser'
+Requires-Dist: httpx; extra == 'browser'
+Requires-Dist: playwright; extra == 'browser'
+Provides-Extra: build
+Requires-Dist: build; extra == 'build'
+Requires-Dist: setuptools; extra == 'build'
+Requires-Dist: twine; extra == 'build'
+Requires-Dist: wheel; extra == 'build'
+Provides-Extra: dev
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: djlint; extra == 'dev'
+Requires-Dist: isort; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-asyncio; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Requires-Dist: pytest-httpx; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: mkdocs-material>=9.1.0; extra == 'docs'
+Requires-Dist: mkdocs>=1.4.0; extra == 'docs'
+Requires-Dist: mkdocstrings-python>=1.0.0; extra == 'docs'
+Requires-Dist: mkdocstrings>=0.20.0; extra == 'docs'
+Provides-Extra: excel
+Requires-Dist: xlwings; extra == 'excel'
+Description-Content-Type: text/markdown
+
+# pyhub-mcptools
+
+## 지원 도구
+
+### 엑셀 MCP 도구
+
+Claude와 함께 엑셀 화면을 같이 보며, 함께 읽고 수정할 수 있습니다.
