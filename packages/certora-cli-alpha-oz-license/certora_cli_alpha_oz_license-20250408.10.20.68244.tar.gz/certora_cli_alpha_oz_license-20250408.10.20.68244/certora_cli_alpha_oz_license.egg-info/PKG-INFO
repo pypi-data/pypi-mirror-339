@@ -1,0 +1,40 @@
+Metadata-Version: 2.2
+Name: certora-cli-alpha-oz-license
+Version: 20250408.10.20.68244
+Summary: Runner for the Certora Prover
+Home-page: https://pypi.org/project/certora-cli-alpha-oz-license
+Author: Certora
+Author-email: support@certora.com
+License: GPL-3.0-or-later
+Project-URL: Documentation, https://docs.certora.com/en/latest/
+Project-URL: Source, https://github.com/Certora/CertoraProver
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: json5
+Requires-Dist: pycryptodome
+Requires-Dist: requests
+Requires-Dist: rich
+Requires-Dist: sly
+Requires-Dist: tabulate
+Requires-Dist: tqdm
+Requires-Dist: StrEnum
+Requires-Dist: universalmutator
+Requires-Dist: jinja2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Commit 96de043.                    Build and Run scripts for executing the Certora Prover on Solidity smart contracts.
