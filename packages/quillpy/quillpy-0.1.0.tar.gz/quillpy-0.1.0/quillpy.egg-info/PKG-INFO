@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: quillpy
+Version: 0.1.0
+Summary: A lightweight terminal-based text editor
+Home-page: https://github.com/mralfiem591/quillpy
+Author: mralfiem591
+Author-email: iamamccabe@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/mralfiem591/quillpy/issues
+Project-URL: Source Code, https://github.com/mralfiem591/quillpy
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Text Editors :: Documentation
+Classifier: Topic :: Utilities
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+License-File: LICENSE.txt
+Requires-Dist: windows-curses; platform_system == "Windows"
+Requires-Dist: pywin32; platform_system == "Windows"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
