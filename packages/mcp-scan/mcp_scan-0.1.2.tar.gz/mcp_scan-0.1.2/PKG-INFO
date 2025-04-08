@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: mcp-scan
+Version: 0.1.2
+Summary: MCP Scan tool
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: alive-progress>=3.2.0
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: termcolor>=3.0.1
+
+# mcp-scan
