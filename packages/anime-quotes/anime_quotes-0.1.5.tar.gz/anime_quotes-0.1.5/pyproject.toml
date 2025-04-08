@@ -1,0 +1,27 @@
+[project]
+name = "anime-quotes"
+version = "0.1.5"
+description = "Random anime quotes generator to motivate your burn-out soul"
+authors = [{ name = "Aldi Hermansyah", email = "alher6555@gmail.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.7"
+keywords = ["quotes", "anime", "motivation", "fun"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+anime-quote = "anime_quotes.__main__:main"
+
+[tool.setuptools.package-data]
+anime_quotes = ["quotes.json"]
+
+[tool.setuptools]
+include-package-data = true
