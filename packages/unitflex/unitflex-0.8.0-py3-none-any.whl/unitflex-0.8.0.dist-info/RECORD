@@ -1,0 +1,14 @@
+unitflex/__init__.py,sha256=PGxdxT4-0SleMJiCP3EkQh2vDCza3vJqeViF6h-kja4,363
+unitflex/data.py,sha256=9SSD0U54s3XDctzGNHQCEK9trZLLz5oQeBRfwMSdMjE,7143
+unitflex/length.py,sha256=3RkLy58BlvT7-F8yd77QALOri_wiPBm0mhXxj2p9UjE,4148
+unitflex/mass.py,sha256=MiyVcv8nmnIud3VRBRFAgh5mb4uBl49vOua8U88o-qE,4052
+unitflex/pressure.py,sha256=ksBvdlM3NargcpIeW2xfQ14NpHndpJvrm96UYxSWspA,4386
+unitflex/speed.py,sha256=P_F4eDJoDSkkGb5s8jfRBtRNlUyw2VcGsDv2WfV5aWU,6263
+unitflex/temperature.py,sha256=HuCrBtwTuoNsnemVYww-ToDcYseWNGT1X3nqKlJ7YMU,4622
+unitflex/time.py,sha256=8HXAOX-QMn63MPaVfwo5c_RjzotNB8LWxYgQtVoEOmU,4847
+unitflex/volume.py,sha256=AjA4u6d8I5iAEUSp6q6dvnMsulQguSW7tNVUon3IUBY,4392
+unitflex-0.8.0.dist-info/licenses/LICENSE,sha256=4tw9CAuITdC3FkRpHJ5ffNMvrdiQxWsFbFs2l1JyfV4,1088
+unitflex-0.8.0.dist-info/METADATA,sha256=bklIZGtKbpxk6VXISbzEzweSKMmrT6ytvftknSrkhCY,7655
+unitflex-0.8.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+unitflex-0.8.0.dist-info/top_level.txt,sha256=Mscl-2MNAKZxTY_VvnrKLOnVd38QV_TtN5UMxC3vB0w,9
+unitflex-0.8.0.dist-info/RECORD,,
