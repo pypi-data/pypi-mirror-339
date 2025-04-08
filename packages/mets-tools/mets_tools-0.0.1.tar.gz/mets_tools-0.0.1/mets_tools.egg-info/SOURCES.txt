@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+settings.ini
+setup.py
+mets_tools/__init__.py
+mets_tools/_modidx.py
+mets_tools/core.py
+mets_tools.egg-info/PKG-INFO
+mets_tools.egg-info/SOURCES.txt
+mets_tools.egg-info/dependency_links.txt
+mets_tools.egg-info/entry_points.txt
+mets_tools.egg-info/not-zip-safe
+mets_tools.egg-info/requires.txt
+mets_tools.egg-info/top_level.txt

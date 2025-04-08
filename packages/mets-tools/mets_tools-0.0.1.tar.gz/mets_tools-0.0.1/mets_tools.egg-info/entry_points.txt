@@ -1,0 +1,6 @@
+[console_scripts]
+
+
+[nbdev]
+mets_tools = mets_tools._modidx:d
+
