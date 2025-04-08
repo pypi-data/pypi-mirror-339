@@ -1,0 +1,17 @@
+# Each project update log and time max reload 5 offical 
+[release]
+main.version = "1.2.0"
+main.update_info."1.0.4" = "Add the setup.py" 
+main.update_time."1.0.4" = 2025-03-20 
+main.update_info."1.0.6" = "Fix some bug.\nAdd the Chinese documents.Update the update -- 1.1.0"
+main.update_time."1.0.6" = 2025-03-22
+main.update_info."1.0.7" = "Modify some code.\nUpdate the update -- 1.1.1"
+main.update_time."1.0.7" = 2025-03-23
+main.update_info."1.1.0" = "Modify some code."
+main.update_time."1.1.0" = 2025-04-05
+main.update_info."1.2.0" = "Fix some bug.\nAdd two moudles:\n\tpassword:Encrypt your texts.This moudle is not completed.\n\ttypes:Some types.\nNow dec can used.\n\tUpdate the update -- 1.1.2."
+main.update_time."1.2.0" = ""
+[pre-release]
+main.version = "1.2.0a1"
+main.update_info."1.2.0a1" = "Fix some bug.\nAdd two moudles:\n\tpassword:Encrypt your texts.This moudle is not completed.\n\ttypes:Some types.\nNow dec can used.\n\tUpdate the update -- 1.1.2."
+main.update_time."1.2.0a1" = 2025-04-07
