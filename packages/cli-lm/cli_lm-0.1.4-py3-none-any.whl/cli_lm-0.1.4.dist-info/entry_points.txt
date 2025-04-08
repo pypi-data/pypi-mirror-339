@@ -1,0 +1,2 @@
+[console_scripts]
+clm = cli_lm.main:main
