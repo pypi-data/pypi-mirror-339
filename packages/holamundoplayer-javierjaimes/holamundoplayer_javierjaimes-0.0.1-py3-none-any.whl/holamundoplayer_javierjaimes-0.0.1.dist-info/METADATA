@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: holamundoplayer_javierjaimes
+Version: 0.0.1
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+
+#Player de prueba
+Este es un reproductor de prueba
