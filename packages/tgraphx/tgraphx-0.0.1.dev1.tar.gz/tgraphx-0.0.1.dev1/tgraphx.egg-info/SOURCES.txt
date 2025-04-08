@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+tgraphx/__init__.py
+tgraphx.egg-info/PKG-INFO
+tgraphx.egg-info/SOURCES.txt
+tgraphx.egg-info/dependency_links.txt
+tgraphx.egg-info/top_level.txt
