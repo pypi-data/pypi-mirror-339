@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: pydantic_mcp_client
+Version: 0.1.1
+Summary: Async MCP client wrapper with pydantic_ai integration
+Author-email: Nishan <mdnishan006@gmail.com>
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: pydantic
+Requires-Dist: pydantic_ai
+Requires-Dist: aiohttp
+Requires-Dist: mcp
+Project-URL: Homepage, https://github.com/nishanlogicplum/pydantic_mcp_client
