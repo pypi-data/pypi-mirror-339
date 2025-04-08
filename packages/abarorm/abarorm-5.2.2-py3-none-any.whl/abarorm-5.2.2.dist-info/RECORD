@@ -1,0 +1,11 @@
+abarorm/__init__.py,sha256=MfgEZI8miY88FE0_dSoxHvwEQnUZlXXpxD9pgdipZAo,402
+abarorm/psql.py,sha256=K5DJywS_JO9__4uHv3KA-qltGXq6JKrz-egXNR0AZ3w,19881
+abarorm/sqlite.py,sha256=tngfSyNhDZrlpEwnpmfS7vktgMP71gUByZhp8bBN9I8,18438
+abarorm/fields/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+abarorm/fields/psql.py,sha256=J0wbZ8VNNV7WIvTRKxdxxGIB3khmVpDUP0_Ht2Vf4Yk,3416
+abarorm/fields/sqlite.py,sha256=Bi6-cY07Om44FTv5qsZW4rYSAVtzw_afqgaCx1KMjik,2962
+abarorm-5.2.2.dist-info/LICENSE,sha256=BDVTIC80a5C5QzJzjx-L2PTVZLxpjsEHCi_h3p735Gw,11346
+abarorm-5.2.2.dist-info/METADATA,sha256=oiO3C7yO8PATVRWo2oTdStNXK55qSqcARe7HCt1WjV0,10597
+abarorm-5.2.2.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+abarorm-5.2.2.dist-info/top_level.txt,sha256=8E0E0xSfHM2ZmTjDdBc2kjnpOeimJogBIChiwqdYq1E,8
+abarorm-5.2.2.dist-info/RECORD,,
