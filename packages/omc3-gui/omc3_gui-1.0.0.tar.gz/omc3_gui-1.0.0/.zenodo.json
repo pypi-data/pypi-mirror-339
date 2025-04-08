@@ -1,0 +1,20 @@
+{
+    "creators": [
+        {
+            "name": "OMC-Team",
+            "affiliation": "CERN"
+        },
+        {
+            "name": "Joschua Dilly",
+            "affiliation": "CERN",
+            "orcid": "0000-0001-7864-5448"
+        },
+        {
+            "name": "Jaime Maria Coello De Portugal - Martinez Vazquez",
+            "affiliation": "CERN",
+            "orcid": "0000-0002-6899-3809"
+        }
+    ],
+    "title": "OMC3-GUI",
+    "description": "Python 3 GUI wrapper for the ``omc3`` package. It allows to perform beam optics measurements and corrections in circular particle accelerators."
+}
