@@ -1,0 +1,17 @@
+image_explorer/__init__.py,sha256=Lf-m6-nN0i1iAvg8l9Ikjvs4PVT4A-MfHiXpslzEvPk,979
+image_explorer/image_explorer.py,sha256=uWXcs5vBslnW-TO_UarN7ryynpiIoVImxgr69MOjYCw,17604
+image_explorer/utils.py,sha256=IvdlFN4GowrVsS3UKgm5jWpxtgWIuxWZX0GnytSi05Y,1602
+image_explorer/public/css/image_explorer.css,sha256=-ylnr9ovy8a6MqRoxVdGM-FyFN5Wvn6AdqXLq6YUAeQ,3925
+image_explorer/public/images/hotspot-sprite.png,sha256=av6F-P1wKEONODvkWHMuPyie0LbbvcwkwhCyGgi03qU,2595
+image_explorer/public/js/image_explorer.js,sha256=1H8AQ9Kveq_h6JnJ55z2-VxZfHW1f3s4gmE6LU-w5QM,5966
+image_explorer/public/js/image_explorer_edit.js,sha256=28uPGzGD-yishO2EU_pz1lyivWGR-dkAwRDmSL0Wrrs,1259
+image_explorer/public/js/ooyala_player.js,sha256=csiConGPVpW8R1zuMA6lNMXQwLZdccGGSp-IBUxOTj8,159
+image_explorer/templates/html/image_explorer.html,sha256=5yzkTIXuC8l-4gLeIFvc8bYRTcfeDAyhdNs2hRbde4U,3876
+image_explorer/templates/html/image_explorer_edit.html,sha256=cX4XUNlTKkriSXIeJagnGoyNMzRKjgEQGTgPSLCArvE,2273
+image_explorer/translations/config.yaml,sha256=enUEGTEy28Opf2jpu4txuvZN0bgw4-hxH3meXnTJWHA,340
+xblock_image_explorer-3.0.1.dist-info/licenses/LICENSE,sha256=4S14VpdCb50-mprHwxk4fLGBV611UfrV4kWMIUggnhY,35136
+xblock_image_explorer-3.0.1.dist-info/METADATA,sha256=PUeajr16gvJXCld5nejM573OLiGubwCvdxFfp43buZk,8045
+xblock_image_explorer-3.0.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+xblock_image_explorer-3.0.1.dist-info/entry_points.txt,sha256=9cUQjS7WimRG7HYLa4qcJxOVmVRrPNf3XKP3JFhThyE,63
+xblock_image_explorer-3.0.1.dist-info/top_level.txt,sha256=C1YeNJfC1ZokSsKqMkwrEJgQHqxv0nmN9mC_KXjI5D0,15
+xblock_image_explorer-3.0.1.dist-info/RECORD,,
