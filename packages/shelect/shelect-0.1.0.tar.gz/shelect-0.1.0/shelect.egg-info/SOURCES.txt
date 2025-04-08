@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+shelect/__init__.py
+shelect/__main__.py
+shelect/ast_utils.py
+shelect/cli.py
+shelect/engine.py
+shelect/repl.py
+shelect/test_shelect.py
+shelect.egg-info/PKG-INFO
+shelect.egg-info/SOURCES.txt
+shelect.egg-info/dependency_links.txt
+shelect.egg-info/entry_points.txt
+shelect.egg-info/requires.txt
+shelect.egg-info/top_level.txt
