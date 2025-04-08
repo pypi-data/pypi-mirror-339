@@ -1,0 +1,2 @@
+[console_scripts]
+klipper-jsonrpc = klipper_jsonrpc:main
