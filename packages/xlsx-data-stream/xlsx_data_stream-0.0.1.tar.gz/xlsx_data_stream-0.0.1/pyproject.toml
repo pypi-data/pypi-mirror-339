@@ -1,0 +1,30 @@
+[project]
+name = "xlsx-data-stream"
+version = "0.0.1"
+description = "build xlsx files using streams"
+authors = [
+    {name = "Michael Kryukov",email = "mkrukov@bestplace.pro"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "openpyxl (>=3.1.5,<4.0.0)",
+    "zipstream-new (>=1.1.8,<2.0.0)",
+    "asynczipstream (>=1.0.1,<2.0.0)",
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-asyncio = "^0.26.0"
+ruff = "^0.11.4"
+pyright = "^1.1.398"
+
+[tool.ruff.lint]
+select = ["E", "F", "UP", "B", "SIM", "I"]
+
+[tool.pyright]
+include = ["scripts", "xlsx_data_stream", "tests"]
