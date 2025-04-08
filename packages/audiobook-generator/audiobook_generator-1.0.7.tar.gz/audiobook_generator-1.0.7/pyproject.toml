@@ -1,0 +1,49 @@
+[project]
+name = "audiobook-generator"
+version = "1.0.7"
+description = "Generate audiobooks (mp3 files per chapter) from ebooks (currently only supports the epub format)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "beautifulsoup4>=4.13.3",
+    "ebooklib>=0.18",
+    "kokoro>=0.8.2",
+    "misaki[en,zh]>=0.9.4",
+    "pip>=25.0.1",
+    "rich>=13.9.4",
+    "soundfile>=0.13.1",
+    "torch>=2.6.0",
+]
+
+[project.scripts]
+abg = "audiobook_generator.main:main"
+
+[project.urls]
+Homepage = "https://github.com/houtianze/audiobook-generator"
+Repository = "https://github.com/houtianze/audiobook-generator"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu124", marker = "sys_platform == 'win32'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[[tool.uv.index]]
+name = "default"
+url = "https://pypi.org/simple/"
+publish-url = "https://pypi.org/legacy/"
+
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
