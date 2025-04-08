@@ -1,0 +1,240 @@
+Metadata-Version: 2.4
+Name: neurostates
+Version: 0.1.2
+Summary: Neurostates is a tool for analyzing patterns of functional connectivity in EEG and fMRI.
+Author-email: Gabriel Della Bella <dellabellagabriel@gmail.com>, Natalia Rodriguez <natirodriguez114@gmail.com>
+License: Copyright (c) 2024, Della Bella, Gabriel; Rodriguez, Natalia
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        * Redistributions of source code must retain the above copyright notice, this
+        list of conditions and the following disclaimer.
+        
+        * Redistributions in binary form must reproduce the above copyright notice,
+        this list of conditions and the following disclaimer in the documentation
+        and/or other materials provided with the distribution.
+        
+        * Neither the name of the copyright holder nor the names of its
+        contributors may be used to endorse or promote products derived from
+        this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+        ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+        LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+        CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+        SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+        INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+        CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+        ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+        POSSIBILITY OF SUCH DAMAGE.
+Keywords: brain,functional,connectivity,eeg,fmri
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy<2.0,>=1.0
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Dynamic: license-file
+
+# NeuroStates
+
+<img src="https://raw.githubusercontent.com/dellabellagabriel/neurostates/main/res/logo_final.png" alt="logo" width="20%">
+
+[![Gihub Actions CI](https://github.com/dellabellagabriel/neurostates/actions/workflows/CI.yml/badge.svg)](https://github.com/dellabellagabriel/neurostates/actions/workflows/CI.yml)
+[![Documentation Status](https://readthedocs.org/projects/neurostates/badge/?version=latest&style=flat)](https://neurostates.readthedocs.io/en/latest/)
+[![License](https://img.shields.io/pypi/l/uttrs?color=blue)](https://www.tldrlegal.com/l/bsd3)
+
+**NeuroStates** is a Python package for detecting recurrent functional connectivity patterns (also known as brain states) and estimating their ocurrence probabilities in EEG and fMRI.
+
+# Install
+Before installing, make sure you have the following:
+- Python 3.9 or later.
+- pip (Python's package installer).
+- A virtual environment (optional, but recommended).
+
+From PyPI repo, simply run:
+```bash
+pip install neurostates
+```
+You can install it in development mode by running:
+```bash
+pip install -e .
+```
+
+# Basic Usage
+## Load data
+
+We load two groups of subjects — controls and patients — where each subject's data is a time series of brain activity (e.g., from fMRI or EEG).  
+It must be of size `(subjects x regions x time)`.
+
+```python
+import numpy as np
+import scipy.io as sio
+
+group_controls = sio.loadmat("path/to/control/data")["ts"]
+group_patients = sio.loadmat("path/to/patient/data")["ts"]
+
+groups = {
+    "controls": group_controls,
+    "patients": group_patients
+}
+
+print(f"Control group shape (subjects, regions, time): {group_controls.shape}")
+print(f"Patient group shape (subjects, regions, time): {group_patients.shape}")
+```
+
+```
+Control group shape (subjects, regions, time): (10, 90, 500)  
+Patient group shape (subjects, regions, time): (10, 90, 500)
+```
+
+## Build the pipeline
+
+Neurostates implements a `scikit-learn`-compatible pipeline that includes all of the important steps required for brain state analysis.  
+The pipeline includes:
+
+- A sliding window that segments the time series  
+- Dynamic connectivity estimation (e.g., Pearson, cosine similarity, Spearman’s R, or a custom metric)  
+- Concatenation of all matrices across subjects  
+- Clustering using KMeans to extract brain states  
+
+```python
+from sklearn.cluster import KMeans
+from sklearn.pipeline import Pipeline
+
+from neurostates.core.clustering import Concatenator
+from neurostates.core.connectivity import DynamicConnectivityGroup
+from neurostates.core.window import SecondsWindowerGroup
+
+brain_state_pipeline = Pipeline(
+    [
+        (
+            "windower",
+            SecondsWindowerGroup(length=20, step=5, sample_rate=1)
+        ),
+        (
+            "connectivity",
+            DynamicConnectivityGroup(method="pearson")
+        ),
+        (
+            "preclustering",
+            Concatenator()
+        ),
+        (
+            "clustering",
+            KMeans(n_clusters=3, random_state=42)
+        ),
+    ]
+)
+```
+
+Then you can use the `fit_transform()` method to transform your input data and get the centroids (brain states):
+
+```python
+brain_state_pipeline.fit_transform(groups)
+brain_states = brain_state_pipeline["clustering"].cluster_centers_
+
+# Originally brain_states will be a 3 by 8100 matrix.
+# We reshape them to get the matrix structure back
+brain_states = brain_states.reshape(3, 90, 90)
+```
+
+And you can plot them like so:
+
+```python
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(1, 3)
+ax[0].imshow(brain_states[0], vmin=-0.5, vmax=1)
+ax[0].set_title("state 1")
+ax[0].set_ylabel("regions")
+ax[0].set_xlabel("regions")
+
+ax[1].imshow(brain_states[1], vmin=-0.5, vmax=1)
+ax[1].set_title("state 2")
+
+ax[2].imshow(brain_states[2], vmin=-0.5, vmax=1)
+ax[2].set_title("state 3")
+
+plt.show()
+```
+
+<img src="https://github.com/dellabellagabriel/neurostates/raw/main/res/states.png" alt="logo" width="50%">
+
+You can also access intermediate results from the pipeline, such as the windowed timeseries or the connectivity matrices:
+
+```python
+connectivity_matrices = brain_state_pipeline["connectivity"].dict_of_groups_
+print(f"Connectivity matrices has keys: {connectivity_matrices.keys()}")
+print(f"Control has size: {connectivity_matrices['controls'].shape}")
+```
+
+```
+Connectivity matrices has keys: dict_keys(['controls', 'patients'])  
+Control has size (subjects, windows, regions, regions): (10, 97, 90, 90)
+```
+
+## Compute brain state frequencies
+
+To evaluate how often each brain state occurs for each subject, we use the `Frequencies` transformer:
+
+```python
+from neurostates.core.classification import Frequencies
+
+frequencies = Frequencies(
+    centroids=brain_state_pipeline["clustering"].cluster_centers_
+)
+freqs = frequencies.transform(connectivity_matrices)
+
+print(f"freqs has keys: {freqs.keys()}")
+print(f"Control has size (subjects, states): {freqs['controls'].shape}")
+```
+
+```
+freqs has keys: dict_keys(['controls', 'patients'])  
+Control has size (subjects, states): (10, 3)
+```
+
+Finally, you can plot the frequency of each brain state in the data:
+
+```python
+fig, ax = plt.subplots(1, 3, figsize=(8, 4))
+
+ax[0].boxplot(
+    [freqs["controls"][:, 0], freqs["patients"][:, 0]],
+    labels=["controls", "patients"]
+)
+ax[0].set_ylabel("frequency")
+ax[0].set_title("state 1")
+
+ax[1].boxplot(
+    [freqs["controls"][:, 1], freqs["patients"][:, 1]],
+    labels=["controls", "patients"]
+)
+ax[1].set_title("state 2")
+
+ax[2].boxplot(
+    [freqs["controls"][:, 2], freqs["patients"][:, 2]],
+    labels=["controls", "patients"]
+)
+ax[2].set_title("state 3")
+
+plt.show()
+```
+
+<img src="https://github.com/dellabellagabriel/neurostates/raw/main/res/frequencies.png" alt="logo" width="50%">
+
+# Documentation
+If you want to see the full documentation please visit [https://neurostates.readthedocs.io/en/latest/index.html](https://neurostates.readthedocs.io/en/latest/).
+
+# License
+Neurostates is under The 3-Clause BSD License
+
+This license allows unlimited redistribution for any purpose as long as its copyright notices and the license's disclaimers of warranty are maintained.
+
+# Contact Us
+If you have any questions, feel free to check out our Github issues or write us an email to: dellabellagabriel@gmail.com or natirodriguez114@gmail.com
