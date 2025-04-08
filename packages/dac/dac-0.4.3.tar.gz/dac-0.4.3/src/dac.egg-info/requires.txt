@@ -1,0 +1,4 @@
+build~=1.2
+toml~=0.10.2
+typer~=0.15.2
+wheel~=0.45
