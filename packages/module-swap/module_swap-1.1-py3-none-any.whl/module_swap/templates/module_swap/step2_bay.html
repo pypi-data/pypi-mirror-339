@@ -1,0 +1,10 @@
+{% extends 'base/layout.html' %}
+{% load static %}
+{% block content %}
+<h2>Krok 2: Výběr module bay pro vybrané zařízení</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-success" type="submit">Dokončit přesun</button>
+</form>
+{% endblock %}
