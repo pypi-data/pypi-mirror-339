@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: opencv-cuda-v12.6
+Version: 4.12.0
+Summary: Precompiled OpenCV with CUDA 12.6 support for Windows/Python3.9
+Home-page: https://github.com/fastbiubiu/opencv-cuda-wheels
+Author: fastbiubiu
+Author-email: fastbiubiu@163.com
+License: UNKNOWN
+Keywords: opencv cuda windows precompiled
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Requires-Python: ==3.9.*
+Requires-Dist: numpy<2.0.0,>=1.19.3
+
+针对Windows平台下Python3.9版本预编译的支持CUDA12.6的OpenCV库。
+
+    特性包含：
+    - 基于OpenCV 4.12.0源码编译
+    - 集成CUDA 12.6加速支持
+    - 包含cuDNN 8.x深度学习推理加速
+    - 支持NVIDIA GPU硬件加速
+
