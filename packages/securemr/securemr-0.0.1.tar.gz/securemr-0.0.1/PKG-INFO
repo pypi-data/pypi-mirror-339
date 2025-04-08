@@ -1,0 +1,155 @@
+Metadata-Version: 2.4
+Name: securemr
+Version: 0.0.1
+Summary: Python bindings for SecureMR.
+Author-email: "bingwen.ai" <bingwen.ai@bytedance.com>
+License: MIT License
+        
+        Copyright (c) 2025 PICO Developer
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: repository, https://github.com/Pico-Developer/pySecureMR
+Requires-Python: ==3.10.*
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy<=2.0
+Requires-Dist: opencv-python
+Requires-Dist: pure-python-adb
+Provides-Extra: test
+Requires-Dist: coverage; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-xdist; extra == "test"
+Requires-Dist: pytest-pythonpath; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-html; extra == "test"
+Requires-Dist: pytest-repeat; extra == "test"
+Requires-Dist: pytest-watch; extra == "test"
+Requires-Dist: mypy==0.910; extra == "test"
+Requires-Dist: toml; extra == "test"
+Provides-Extra: dev
+Requires-Dist: pre-commit>=2.13.0; extra == "dev"
+Requires-Dist: pre-commit-hooks>=4.0.1; extra == "dev"
+Requires-Dist: isort==5.6.4; extra == "dev"
+Requires-Dist: flake8-pyproject; extra == "dev"
+Requires-Dist: flake8-bugbear==21.4.3; extra == "dev"
+Requires-Dist: flake8-comprehensions==3.6.0; extra == "dev"
+Requires-Dist: autoflake==1.4; extra == "dev"
+Requires-Dist: black==22.3.0; extra == "dev"
+Requires-Dist: pydocstyle==6.1.1; extra == "dev"
+Requires-Dist: pep8-naming==0.12.1; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Dynamic: license-file
+
+# pySecureMR
+
+<p align="center">
+  <a  alt="python version">
+      <img src="https://img.shields.io/badge/python-3.10-blue?logo=python" /></a>
+  <a> <img src="https://img.shields.io/badge/secure-mr-green" /></a>
+  <a> <img src="https://img.shields.io/badge/os-linux-yellow" /></a>
+  <a> <img src="https://img.shields.io/badge/os-windows(wsl2)-yellow" /></a>
+</p>
+
+Python bindings for [SecureMR](https://path-to-SecureMR-link) project.
+
+## Table of Contents
+
+  * [Why pySecureMR](#why-pysecuremr)
+  * [Supported platform](#supported-platform)
+  * [Install](#install)
+     * [Pip](#pip)
+     * [Manual install](#manual-install)
+  * [Run test](#run-test)
+  * [Supported operators](#supported-operators)
+
+## Why pySecureMR?
+
+When developing a SecureMR app, it's not very easy to debug pipeline.
+You are not allowed to access each operator output directly. `pySecureMR` happens here
+to rescue you from complicated and painful debugging time. We bind [most of SecureMR
+operators to python](#supported-operators) so you can call each operator and check input and output.
+
+## Supported platform
+- Linux (ubuntu22): YES
+- Windows (wsl2, ubuntu22): YES
+- Mac: NO
+
+## Install
+
+### Manual install
+```bash
+git clone https://github.com/Pico-Developer/pySecureMR
+cd pySecureMR
+pip3 install -e "."
+```
+Check installation:
+```bash
+python3 -c "import securemr"
+```
+
+### Pip
+
+TODO
+
+## Run test
+
+```bash
+pytest
+```
+Refer to [test code](./tests) to learn more about the usage.
+
+## Supported operators
+
+| ID  | Name                         | Pybind |
+|-----|------------------------------|--------|
+| 1   | ARITHMETIC_COMPOSE           | ✅     |
+| 4   | ELEMENTWISE_MIN              | ✅     |
+| 5   | ELEMENTWISE_MAX              | ✅     |
+| 6   | ELEMENTWISE_MULTIPLY         | ✅     |
+| 7   | CUSTOMIZED_COMPARE           | ✅     |
+| 8   | ELEMENTWISE_OR               | ✅     |
+| 9   | ELEMENTWISE_AND              | ✅     |
+| 10  | ALL                          | ✅     |
+| 11  | ANY                          | ✅     |
+| 12  | NMS                          | ✅     |
+| 13  | SOLVE_P_N_P                  | ✅     |
+| 14  | GET_AFFINE                   | ✅     |
+| 15  | APPLY_AFFINE                 | ✅     |
+| 16  | APPLY_AFFINE_POINT           | ✅     |
+| 17  | UV_TO_3D_IN_CAM_SPACE        | ❌     |
+| 18  | ASSIGNMENT                   | ✅     |
+| 19  | RUN_MODEL_INFERENCE          | ❌     |
+| 21  | NORMALIZE                    | ✅     |
+| 22  | CAMERA_SPACE_TO_WORLD        | ❌     |
+| 23  | RECTIFIED_VST_ACCESS         | ❌     |
+| 24  | ARGMAX                       | ✅     |
+| 25  | CONVERT_COLOR                | ✅     |
+| 26  | SORT_VEC                     | ✅     |
+| 27  | INVERSION                    | ✅     |
+| 28  | MAKE_TRANSFORM_MAT           | ✅     |
+| 29  | SORT_MAT                     | ✅     |
+| 30  | SWITCH_GLTF_RENDER_STATUS    | ❌     |
+| 31  | UPDATE_GLTF                  | ❌     |
+| 32  | RENDER_TEXT                  | ❌     |
+| 33  | UPLOAD_TEXTURE_TO_GLTF       | ❌     |
+
+
