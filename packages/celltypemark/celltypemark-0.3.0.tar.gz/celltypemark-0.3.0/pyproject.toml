@@ -1,0 +1,10 @@
+[project]
+name = "celltypemark"
+version = "0.3.0"
+description = "cell type annotation with scRNA sequencing data using any marker gene sets"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "anndata>=0.11.4",
+    "requests>=2.32.3",
+]
