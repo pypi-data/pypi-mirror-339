@@ -1,0 +1,113 @@
+Metadata-Version: 2.4
+Name: lab_mic
+Version: 0.2.0
+Summary: Record audio directly within Jupyter/IPython/Colab using the browser microphone and ffmpeg.
+Author-email: voidful <voidful.stack@gmail.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: IPython
+Classifier: Framework :: Jupyter
+Classifier: Topic :: Multimedia :: Sound/Audio :: Capture/Recording
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: ffmpeg-python
+Requires-Dist: ipython
+Requires-Dist: ipywidgets>=7.0.0
+
+# Lab Mic
+
+[![PyPI version](https://badge.fury.io/py/lab_mic.svg)](https://badge.fury.io/py/lab_mic)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Record audio directly within Jupyter Notebooks, JupyterLab, Google Colab, or other IPython environments using your browser's microphone. This package provides an `ipywidgets`-based interface, captures audio using standard browser APIs, and leverages `ffmpeg` for reliable conversion to WAV format (16-bit PCM mono).
+
+## Features
+
+* Simple `ipywidgets` interface for recording start/stop within notebooks.
+* Captures audio directly in the browser using `getUserMedia` and `MediaRecorder`.
+* Uses **`ffmpeg`** for robust conversion from web formats (like webm/opus) to WAV (16-bit PCM, mono).
+* Works across different Jupyter environments including Colab.
+* Allows specifying the target sampling rate for the output.
+* Returns the final audio data conveniently as a NumPy array.
+* Includes basic UI feedback for status and errors.
+
+## Installation
+
+**1. Install `ffmpeg`:**
+
+   This package **requires** the `ffmpeg` command-line tool to be installed on the system where the Python kernel is running (this includes the Colab runtime if using Colab). `ffmpeg` must be accessible in the system's PATH.
+
+   * **Ubuntu/Debian:** `sudo apt update && sudo apt install ffmpeg`
+   * **macOS (using Homebrew):** `brew install ffmpeg`
+   * **Windows:** Download from the [official ffmpeg website](https://ffmpeg.org/download.html), extract, and add the `bin` directory to your system's PATH.
+   * **Google Colab:** `ffmpeg` is usually pre-installed on Colab runtimes.
+
+**2. Install the Python package:**
+
+   Install `lab_mic` using pip. This will also install required Python dependencies (`numpy`, `scipy`, `ffmpeg-python`, `ipython`, `ipywidgets`).
+
+   ```bash
+   pip install lab_mic
+   ```
+
+## Usage
+```python
+from lab_mic import LabMic
+
+# Create an instance of LabMic
+mic = LabMic()
+
+# Start recording
+mic.start_recording()
+
+# Stop recording after a specified duration (e.g., 5 seconds)
+mic.stop_recording(duration=5)
+
+# Get the recorded audio data as a NumPy array
+audio_data = mic.get_audio_data()
+
+# Save the recorded audio to a file (optional)
+mic.save_to_file("output.wav")
+```
+
+## Example in Jupyter Notebook
+
+```python
+from lab_mic import LabMic
+
+# Initialize the microphone recorder
+mic = LabMic(sampling_rate=16000)
+
+print("Displaying recording interface...")
+# --- Display the Interface ---
+# This will show the button and status/preview area in the cell output
+mic.display()
+
+# --- Get the Processed Audio ---
+audio_data = mic.get_result()
+```
+
+
+## How it Works
+The NotebookMic (or similarly named class) uses ipywidgets to create interactive elements (Button, Output area, hidden Text widget) in the notebook frontend.
+When initiated, it injects HTML and JavaScript code into the ipywidgets.Output area.  
+The JavaScript utilizes the browser's navigator.mediaDevices.getUserMedia to request microphone access and MediaRecorder to capture audio (typically in formats like webm/opus).
+Upon stopping, the recorded audio data is encoded into a Base64 Data URL by the JavaScript.  
+This Data URL is sent back to the Python kernel by setting the .value of the hidden ipywidgets.Text widget.  
+A Python observer callback (_handle_received_data within the class) detects the change in the Text widget's value.  
+The Python code decodes the Base64 data.  
+It uses the ffmpeg-python library to execute the external ffmpeg command, piping the received audio binary data in and piping the converted WAV audio data out.
+The resulting WAV data (as bytes) is parsed, potentially resampled or type-converted, and loaded into a NumPy array using scipy.io.wavfile and numpy.  
+The final NumPy array (int16 PCM) is stored and made accessible via the .get_result() method.  
+
+## License
+This project is licensed under the MIT License.
+
+## Author
+voidful <voidful.stack@gmail.com>

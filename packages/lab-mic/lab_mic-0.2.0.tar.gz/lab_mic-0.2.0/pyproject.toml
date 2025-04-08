@@ -1,0 +1,39 @@
+# jupyter_mic_recorder/pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lab_mic"
+version = "0.2.0"
+authors = [
+   { name="voidful", email="voidful.stack@gmail.com" }
+]
+description = "Record audio directly within Jupyter/IPython/Colab using the browser microphone and ffmpeg."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" } # Or choose another license like "Apache-2.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Framework :: IPython",
+    "Framework :: Jupyter",
+    "Topic :: Multimedia :: Sound/Audio :: Capture/Recording",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+]
+# List all necessary runtime dependencies
+dependencies = [
+    "numpy",
+    "scipy",
+    "ffmpeg-python", # For interacting with ffmpeg
+    "ipython",       # For display() and HTML()
+    "ipywidgets>=7.0.0", # Crucial for the widgets interface
+]
+
+# Optional: Specify where the package source code is
+[tool.setuptools.packages.find]
+where = ["."] # look in the current directory for the package folder
+include = ["lab_mic*"] # Include the package directory

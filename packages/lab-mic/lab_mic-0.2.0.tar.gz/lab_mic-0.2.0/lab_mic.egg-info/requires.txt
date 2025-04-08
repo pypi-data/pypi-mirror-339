@@ -1,0 +1,5 @@
+numpy
+scipy
+ffmpeg-python
+ipython
+ipywidgets>=7.0.0
