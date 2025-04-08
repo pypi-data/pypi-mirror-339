@@ -1,0 +1,9 @@
+wavespeed/__init__.py,sha256=2FtuMqh9rupszySlWU5gr9gb-7xD3D8pgMtfKB1yRMg,344
+wavespeed/client.py,sha256=cNzMqBPNt-C4L3mbfaCPZAT08V4yr2oJ-HQ21OYlu68,11642
+wavespeed/schemas/__init__.py,sha256=JY5V-7ERVR6dTS8JzGb1gGWr_I4d3yowOgoM48nW8jI,178
+wavespeed/schemas/prediction.py,sha256=nPdn5GKLDGSlZ8tucg39lw62-8ouoWOuYr9EYv3nVBs,3007
+wavespeed-0.0.5.dist-info/licenses/LICENSE,sha256=NhGwKyyoFYDE-bt1TtIDF4YceNw7nPvlTIKWsIOhk_0,1068
+wavespeed-0.0.5.dist-info/METADATA,sha256=GQpol-6Akh3Vh1HLH-R9QwOWbj-uaEMy4TKeam3WzSc,7838
+wavespeed-0.0.5.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+wavespeed-0.0.5.dist-info/top_level.txt,sha256=4S7lS5Vrdmel6Lg7UE5GK85WTaW_b8V_RxT59dAbV5I,10
+wavespeed-0.0.5.dist-info/RECORD,,
