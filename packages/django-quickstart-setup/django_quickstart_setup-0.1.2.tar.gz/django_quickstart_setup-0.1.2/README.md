@@ -1,0 +1,67 @@
+# Django Quickstart Setup
+
+A utility to quickly set up Django projects with best practices and common configurations.
+
+## Features
+
+- Creates a virtual environment
+- Installs Django and dependencies
+- Sets up a new Django project with app
+- Configures static and media files
+- Sets up basic URL routing
+- Creates a sample template
+- Configures development settings
+
+## Installation
+
+```bash
+pip install django-quickstart-setup
+```
+
+## Usage
+
+After installation, you can use the command:
+
+```bash
+django-quickstart
+```
+
+The script will prompt you for:
+
+- Virtual environment name
+- Project name
+- App name
+
+## Project Structure
+
+The script creates a Django project with the following structure:
+
+```
+project_name/
+├── project_name/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── app_name/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── views.py
+│   └── urls.py
+├── templates/
+│   └── app_name/
+│       └── index.html
+├── static/
+└── media/
+```
+
+## License
+
+MIT License
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
