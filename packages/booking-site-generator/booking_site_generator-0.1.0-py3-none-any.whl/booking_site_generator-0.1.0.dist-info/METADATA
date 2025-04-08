@@ -1,0 +1,112 @@
+Metadata-Version: 2.4
+Name: booking-site-generator
+Version: 0.1.0
+Summary: Генератор сайта для системы бронирования
+Home-page: https://github.com/Y3ppi3/booking-site-generator
+Author: katarymba
+Author-email: email@example.com
+Keywords: site generator booking website template
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools>=45.0.0
+Requires-Dist: wheel>=0.34.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Генератор сайта для системы бронирования
+
+## Описание
+
+Этот инструмент позволяет быстро создавать статические веб-сайты для систем бронирования с предустановленным функционалом.
+
+## Возможности
+
+- Создание полностью готового проекта с шаблонной структурой
+- Простая кастомизация через конфигурационный файл
+- Поддержка различных параметров настройки
+
+## Установка
+
+```bash
+# Клонирование репозитория
+git clone https://github.com/Y3ppi3/booking-site-generator.git
+
+# Переход в директорию проекта
+cd booking-site-generator
+
+# Установка пакета
+pip install .
+```
+
+## Использование
+
+### Создание нового проекта
+
+```bash
+# Создание проекта с именем по умолчанию
+booking-site-gen create
+
+# Создание проекта с произвольным именем
+booking-site-gen create --name my-custom-site
+
+# Создание проекта в определенной директории
+booking-site-gen create --output /path/to/project
+```
+
+### Кастомизация проекта
+
+```bash
+# Кастомизация с использованием файла конфигурации
+booking-site-gen customize --config custom_config.json
+```
+
+## Файл конфигурации
+
+Пример `custom_config.json`:
+
+```json
+{
+    "site_name": "Мой сервис бронирования",
+    "company_name": "Моя Компания",
+    "contact_email": "info@mycompany.com",
+    "phone": "+7 (999) 123-45-67",
+    "color_scheme": {
+        "primary": "#e74c3c",
+        "secondary": "#2c3e50"
+    }
+}
+```
+
+## Требования
+
+- Python 3.7+
+- pip
+
+## Лицензия
+
+MIT License
+
+## Contributing
+
+1. Форкните репозиторий
+2. Создайте свою ветку (`git checkout -b feature/AmazingFeature`)
+3. Закоммитьте изменения (`git commit -m 'Add some AmazingFeature'`)
+4. Запушьте в ветку (`git push origin feature/AmazingFeature`)
+5. Откройте Pull Request
