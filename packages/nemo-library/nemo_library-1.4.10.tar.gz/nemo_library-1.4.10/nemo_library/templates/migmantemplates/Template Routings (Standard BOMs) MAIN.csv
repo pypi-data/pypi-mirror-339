@@ -1,0 +1,8 @@
+PMM_BomHeadRoutingRel.Part;PMM_BomHeadRoutingRel.PartVariant;PMM_BomHeadRoutingRel.PMM_Routing_ID;PMM_BomHeadRoutingRel.BasicRouting;PMM_BomHeadRoutingRel.IsMRPBaseProcess
+;;;no;no
+Column;Column Name;Description / Remark;Location in Proalpha;Data Type;Format
+1;Teil;Part;PMM_BomHeadRoutingRel.Part;CHARACTER;x(20);
+2;Variante;Variant;PMM_BomHeadRoutingRel.PartVariant;CHARACTER;x(6);
+3;Prozess;Routing;PMM_BomHeadRoutingRel.PMM_Routing_ID;CHARACTER;x(20);
+4;Basisprozess;Basic Routing;PMM_BomHeadRoutingRel.BasicRouting;LOGICAL;ja/nein;
+5;BPro DispoBer;Basic Routing MRP;PMM_BomHeadRoutingRel.IsMRPBaseProcess;LOGICAL;ja/nein;
