@@ -1,0 +1,137 @@
+Metadata-Version: 2.4
+Name: enterprise-risk-assessment
+Version: 0.1.0
+Summary: A comprehensive enterprise risk assessment system
+Home-page: https://github.com/yourusername/enterprise-risk-assessment
+Author: LT
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.0.0
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: matplotlib>=3.3.0
+Requires-Dist: openpyxl>=3.0.0
+Requires-Dist: PyYAML>=5.4.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# 企业风险评估系统
+
+这是一个基于 Python 的企业风险评估系统，用于评估企业的战略风险、财务风险、市场风险、法律信用风险和事件风险等多个维度的风险状况。
+
+## 功能特点
+
+- 多维度风险评估：战略风险、财务风险、市场风险、法律信用风险和事件风险
+- 灵活的配置系统：支持通过 YAML 配置文件自定义权重和参数
+- 详细的计算过程：提供完整的风险计算过程和中间结果
+- 可视化分析：自动生成风险评分柱状图
+- 数据导出：支持将结果导出为 Excel 文件
+
+## 安装说明
+
+1. 克隆项目到本地：
+```bash
+git clone [项目地址]
+cd [项目目录]
+```
+
+2. 安装依赖：
+```bash
+pip install -r requirements.txt
+```
+
+## 使用方法
+
+1. 准备数据文件：
+   - 准备一个 Excel 文件，包含所需的财务和运营数据
+   - 确保数据格式符合要求（第一列是指标名称，后续列为各月份数据）
+
+2. 运行评估：
+```python
+from main import RiskModel
+
+# 创建模型实例
+risk_model = RiskModel(config_path='config.yaml')  # 可选：使用配置文件
+
+# 加载数据
+risk_model.load_data('your_data.xlsx', sheet_name='Sheet1')
+
+# 计算风险
+results = risk_model.calculate_total_risk()
+
+# 导出结果
+risk_model.export_calculation_details(results, 'risk_details.xlsx')
+risk_model.plot_risk_scores(results, save_path='risk_chart.png')
+```
+
+## 数据要求
+
+数据文件需要包含以下指标：
+- 主营业务收入
+- 总营业务收入
+- 主营业务成本
+- 总业务成本
+- 主营业务费用
+- 研发费用
+- 负债总额
+- 资产总额
+- 带息负债总额
+- 经营现金流入
+- 经营现金流出
+- 经营净现金流
+- 投资分红等收益
+- 利息支出
+- 预付账款
+- 预收账款
+- 应收账款
+- 应付账款
+- 净资产
+- 应收账款总额
+- 坏账准备金额
+- 存货
+- 企业当年涉及司法诉讼案件的数量
+- 执行金额
+- 被执行金额
+- 已销号事件数
+- 年初事件数
+- 新增事件数
+- 已销号事件影响金额
+- 年初事件影响金额
+- 新增事件影响金额
+- 未销号事件兜底保障金额
+- 未销号事件追损挽损金额
+- 未销号事件累计计提减值金额
+- 未销号事件影响金额
+- 已处置金额
+
+## 配置说明
+
+可以通过 `config.yaml` 文件配置以下参数：
+- 各项风险的权重
+- 风险判断阈值
+- 其他计算参数
+
+## 输出结果
+
+系统会生成以下输出：
+1. 风险评估结果（Excel 文件）
+2. 风险计算详情（Excel 文件）
+3. 风险评分柱状图（PNG 文件）
+
+## 许可证
+
+[许可证类型]
+
+## 联系方式
+
+[联系方式] 
