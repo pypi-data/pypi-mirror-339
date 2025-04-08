@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: reflex-github-button
+Version: 0.1.1
+Summary: Reflex custom component github-button
+Project-URL: repository, https://github.com/TimChild/reflex-github-buttons
+Project-URL: issues, https://github.com/TimChild/reflex-github-buttons/issues
+Project-URL: homepage, https://reflex-github-buttons-demo.adventuresoftim.com
+Author-email: YOUREMAIL@domain.com
+License: Apache-2.0
+Keywords: reflex,reflex-custom-components
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Requires-Dist: reflex>=0.7.5
+Description-Content-Type: text/markdown
+
+# github-button
+
+A Reflex custom component github-button.
+
+Wraps [react-github-btn](https://www.npmjs.com/package/react-github-btn)
+
+See a demo [here](https://reflex-github-button.adventuresoftim.com).
+
+See full customization options [here](buttons.github.io/)
+
+Or clone and run the demo locally.
+
+## Installation
+
+```bash
+uv add reflex-github-button
+```
+
+Or
+
+```bash
+pip install reflex-github-button
+```
+
