@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: ophac
+Version: 0.5.1
+Summary: Order Preserving Hierarchical Agglomerative Clustering
+Home-page: https://bitbucket.org/Bakkelund/ophac/src/v04/
+Author: Daniel Bakkelund
+Author-email: daniel_bakkelund@hotmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# ophac -- Order Preserving Hierarachical Agglomerative Clustering
+The code in this project realises the theory described in <https://arxiv.org/abs/2004.12488>.
+The functionality provided is that of _**order preserving hierarchical agglomerative clustering of partially ordered sets**_.
+
+The [ophac wiki](https://bitbucket.org/Bakkelund/ophac/wiki/Home) provides examples of how to use the library.
+
+## Licensing
+
+The software in this package is released under the [GNU Lesser General Public License](https://www.gnu.org/licenses/lgpl-3.0.en.html).
+
+## Platform requirements
+`ophac` runs on **python 3.0** or greater, and makes use of the following python libraries:
+
+* numpy
+* scipy
+* [ophac-cpp](https://pypi.org/project/ophac-cpp/)
+
+## Installation
+
+```python
+python -m pip install ophac [--user]
+```
+
+## Source
+
+The full source is available from
+<https://bitbucket.org/Bakkelund/ophac/src/v04/>.
