@@ -1,0 +1,29 @@
+.translation-row {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+}
+
+.file-header {
+    margin: 2rem 0 1rem 0;
+    padding: 0.5rem;
+    background-color: #eee;
+    border-radius: 4px;
+}
+
+.folder-header {
+    margin: 1.5rem 0 1rem 0;
+    color: #666;
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.is-hidden {
+    display: none;
+} 

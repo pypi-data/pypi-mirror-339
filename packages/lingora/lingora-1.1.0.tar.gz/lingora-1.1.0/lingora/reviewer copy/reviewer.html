@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Translation Reviewer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+    <link rel="stylesheet" href="./reviewer.css"/>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+</head>
+<body>
+    <div x-data="translationReviewer()" x-init="loadTranslations()">
+        <section class="section">
+            <div class="container">
+                <h1 class="title">Translation Reviewer</h1>
+                
+                <template x-for="(fileData, filePath) in translations" :key="filePath">
+                    <div class="file-section">
+                        <h3 class="subtitle" x-text="filePath"></h3>
+                        
+                        <template x-for="(item, key) in fileData" :key="key">
+                            <div class="translation-row columns">
+                                <div class="column is-5" x-text="item.source"></div>
+                                <div class="column is-5">
+                                    <input class="input"
+                                           type="text"
+                                           x-model="item.target"
+                                           :readonly="!item.editing"
+                                           @keyup.enter="saveTranslation(filePath, key)">
+                                </div>
+                                <div class="column is-2 has-text-right">
+                                    <button class="button is-small is-success"
+                                            @click="approveTranslation(filePath, key)">
+                                        <span class="icon"><i class="fas fa-check"></i></span>
+                                    </button>
+                                    <button class="button is-small"
+                                            :class="item.editing ? 'is-success' : 'is-info'"
+                                            @click="toggleEdit(filePath, key)">
+                                        <span class="icon">
+                                            <i :class="item.editing ? 'fas fa-save' : 'fas fa-edit'"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+            </div>
+        </section>
+        
+        <div id="notification" 
+             class="notification is-success"
+             :class="{ 'is-hidden': !notification.show }"
+             x-show="notification.show"
+             x-transition>
+            <button class="delete" @click="notification.show = false"></button>
+            <span x-text="notification.message"></span>
+        </div>
+    </div>
+    <script src="reviewer.js"></script>
+</body>
+</html> 

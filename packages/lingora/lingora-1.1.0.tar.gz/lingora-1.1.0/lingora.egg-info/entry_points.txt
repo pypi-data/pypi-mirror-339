@@ -1,0 +1,2 @@
+[console_scripts]
+lingora = lingora.cli:app
