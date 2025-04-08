@@ -1,0 +1,5 @@
+[console_scripts]
+gcs-upload = zeit.nightwatch.gcs:upload
+
+[pytest11]
+zeit_nightwatch = zeit.nightwatch.pytest
