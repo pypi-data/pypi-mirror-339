@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeSnapper Web UI</title>
+    <!-- PrismJS CSS (using a CDN) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <style>
+        /* Keep existing styles */
+        :root {
+            /* Catppuccin Mocha Theme */
+            --bg-color: #1e1e2e;        /* Base */
+            --text-color: #cdd6f4;     /* Text */
+            --border-color: #313244;   /* Surface0 */
+            --input-bg: #181825;       /* Mantle (Slightly darker than base for contrast) */
+            --button-bg: #89b4fa;      /* Blue */
+            --button-text: #1e1e2e;     /* Base (for contrast on button) */
+            --hover-bg: #313244;       /* Surface0 */
+            --selected-bg: #45475a;   /* Surface1 */
+            --folder-color: #fab387;   /* Peach */
+            --file-color: #89dceb;     /* Sky */
+            --output-bg: #1e1e2e;      /* Base */
+            --arrow-color: #6c7086;    /* Overlay0 */
+            --heading-color: #b4befe;  /* Lavender */
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            height: calc(100vh - 40px); /* Full viewport height minus padding */
+            margin: 0;
+        }
+        #file-tree, #output-area {
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            height: 100%; /* Fill available height */
+            overflow-y: auto;
+            background-color: var(--input-bg);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+        #file-tree { width: 40%; }
+        #output-area { width: 60%; } /* Adjusted width */
+
+        #tree-container { flex-grow: 1; overflow-y: auto; margin-bottom: 15px; }
+
+        #snapshot-output {
+            flex-grow: 1;
+            white-space: pre-wrap;
+            overflow-y: auto;
+            background-color: var(--output-bg);
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 3px;
+            color: var(--text-color);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0; /* Remove default padding */
+            margin: 0;
+        }
+        /* Add specific padding for nested lists */
+        li > ul {
+            padding-left: 20px; /* Adjust this value for desired indentation */
+        }
+        li {
+            margin-bottom: 3px;
+            padding: 2px 0;
+            /* display: flex; Removed this */
+            /* align-items: center; Removed this */
+        }
+        li > span {
+             margin-left: 5px; /* Space between checkbox and text */
+             /* vertical-align: middle; Removed - handled by wrapper div */
+        }
+        /* Target the span inside the div inside the folder li */
+        .folder > div > span {
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--folder-color);
+            position: relative; /* Needed for absolute positioning of ::before */
+            padding-left: 15px; /* Space for arrow */
+        }
+         /* Target the ::before pseudo-element of the span inside the div */
+         .folder > div > span::before { /* Arrow styling */
+            content: '▶';
+            position: absolute;
+            left: 0;
+            font-size: 0.9em; /* Slightly larger arrow */
+            transition: transform 0.1s ease-in-out;
+            color: var(--arrow-color);
+        }
+        .folder.expanded > div > span::before { /* Expanded arrow */
+             transform: rotate(90deg);
+        }
+        .file > span {
+            cursor: default;
+            color: var(--file-color);
+        }
+        li input[type="checkbox"] {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        button {
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+        }
+        button:hover {
+            background-color: #1177bb; /* Darker blue on hover */
+        }
+        /* Style for the preview/output area */
+        #output-content {
+            flex-grow: 1;
+            overflow-y: auto;
+            background-color: var(--output-bg);
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 3px;
+            color: var(--text-color);
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; /* Better coding font stack */
+            font-size: 0.9em;
+        }
+        /* Remove default padding/margin for pre inside the container */
+         #output-content pre[class*="language-"] {
+            margin: 0;
+            padding: 1em; /* Add padding inside pre for better spacing */
+            background: var(--output-bg) !important; /* Ensure background matches */
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        /* Style for hover/active items in tree */
+        /* Apply hover to the div containing checkbox/span */
+        #tree-container li > div:hover {
+             background-color: var(--hover-bg);
+        }
+        /* Apply active style to the div when its span has active-file class */
+        /* We'll adjust the JS to add 'active-file' to the div instead */
+        .file > div.active-file {
+            background-color: var(--selected-bg) !important; /* Apply to the div */
+        }
+        .file > div.active-file > span {
+             font-weight: normal; /* Keep font weight normal on span */
+        }
+        button:hover {
+            background-color: #7ac0ff; /* Lighter blue on hover */
+        }
+        h2 {
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            color: var(--heading-color); /* Use heading color variable */
+        }
+    </style>
+</head>
+<body>
+    <div id="file-tree">
+        <h2>Select Files/Folders</h2>
+        <div id="tree-container">
+            <!-- File tree will be loaded here by JavaScript -->
+            Loading file tree...
+        </div>
+        <button id="generate-btn" style="margin-top: 15px;">Generate Snapshot</button>
+    </div>
+
+    <div id="output-area">
+        <h2 id="output-title">Preview / Snapshot <span id="token-count-display" style="font-size: 0.8em; color: var(--text-color); font-weight: normal; margin-left: 10px;"></span></h2>
+        <!-- Removed Copy Button -->
+        <!-- Use a div with pre/code for PrismJS -->
+        <div id="output-content">
+             <pre><code id="output-code" class="language-plaintext">Select a file to preview or click "Generate Snapshot".</code></pre>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script>
+        const treeContainer = document.getElementById('tree-container');
+        const generateBtn = document.getElementById('generate-btn');
+        const outputContent = document.getElementById('output-content');
+        const outputCode = document.getElementById('output-code');
+        const outputTitle = document.getElementById('output-title');
+        const tokenCountDisplay = document.getElementById('token-count-display'); // Get the new span
+        // Removed copyBtn and outputArea references as they are no longer needed
+
+        function renderTree(nodes, parentElement) {
+            const ul = document.createElement('ul');
+            nodes.forEach(node => {
+                const li = document.createElement('li');
+                li.classList.add(node.type); // 'file' or 'directory'
+
+                // Create a wrapper div for the checkbox and span
+                const itemLineDiv = document.createElement('div');
+                itemLineDiv.style.display = 'flex'; // Apply flex directly for simplicity here
+                itemLineDiv.style.alignItems = 'center'; // Align items vertically
+
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.value = node.path;
+                checkbox.dataset.type = node.type;
+                itemLineDiv.appendChild(checkbox); // Add checkbox to wrapper
+
+                const span = document.createElement('span');
+                span.textContent = node.name;
+                itemLineDiv.appendChild(span); // Add span to wrapper
+
+                li.appendChild(itemLineDiv); // Add the wrapper div to the list item
+
+                if (node.type === 'directory') {
+                    li.classList.add('folder'); // Ensure class is added
+                    const childrenUl = renderTree(node.children, li); // Render children first
+                    childrenUl.style.display = 'none'; // Start collapsed
+                    li.appendChild(childrenUl); // Append children UL
+
+                    // Click on folder text (span) or the wrapper div to expand/collapse
+                    itemLineDiv.addEventListener('click', (e) => {
+                        // Prevent clicks on checkbox itself from toggling folder
+                        if (e.target === checkbox) return;
+                        e.stopPropagation(); // Prevent triggering checkbox
+                        const isExpanded = li.classList.toggle('expanded');
+                        childrenUl.style.display = isExpanded ? 'block' : 'none';
+                    });
+
+                    // Checkbox change propagates to children
+                    checkbox.addEventListener('change', (event) => {
+                        const isChecked = event.target.checked;
+                        // Select only direct children checkboxes within this folder's UL
+                        const childCheckboxes = childrenUl.querySelectorAll(':scope > li > input[type="checkbox"]');
+                        childCheckboxes.forEach(cb => {
+                            if (cb.checked !== isChecked) {
+                                cb.checked = isChecked;
+                                // Manually trigger change event for nested folders
+                                const changeEvent = new Event('change', { bubbles: true });
+                                cb.dispatchEvent(changeEvent);
+                            }
+                        });
+                    });
+                } else { // It's a file
+                     li.classList.add('file'); // Ensure class is added
+                     // Add click listener to file wrapper div for preview
+                     itemLineDiv.addEventListener('click', (e) => {
+                         // Prevent clicks on checkbox itself from triggering preview
+                         if (e.target === checkbox) return;
+                         e.stopPropagation(); // Keep this? Maybe not needed if handled above.
+                         showFilePreview(node.path, itemLineDiv); // Pass the div, not the span
+                     });
+                     // This line is duplicated from line 220, removing it.
+                }
+
+                ul.appendChild(li);
+            });
+            parentElement.appendChild(ul);
+            return ul; // Return the created UL element
+        }
+
+        function getSelectedFiles() {
+            const selectedFiles = [];
+            const checkboxes = treeContainer.querySelectorAll('input[type="checkbox"]:checked');
+            checkboxes.forEach(cb => {
+                // Only add files, not directories themselves
+                if (cb.dataset.type === 'file') {
+                    selectedFiles.push(cb.value);
+                }
+            });
+            // Remove duplicates that might arise from folder selections
+            return [...new Set(selectedFiles)];
+        }
+
+        let currentPreviewPath = null; // Track which file is being previewed
+
+        function showFilePreview(filePath, clickedItemDiv) { // Renamed second arg
+            // Remove active class from previously clicked item div
+            const activeItemDiv = treeContainer.querySelector('.active-file'); // Find the div with the class
+            if (activeItemDiv) {
+                activeItemDiv.classList.remove('active-file');
+            }
+             // Add active class to the clicked item div
+            if (clickedItemDiv) {
+                 clickedItemDiv.classList.add('active-file'); // Apply class to the div
+            }
+
+            outputTitle.textContent = `Preview: ${filePath}`; // Clear previous title text
+            tokenCountDisplay.textContent = ''; // Clear previous token count
+            outputCode.textContent = 'Loading...';
+            outputCode.className = 'language-plaintext'; // Reset language class
+            Prism.highlightElement(outputCode); // Apply basic styling
+
+            currentPreviewPath = filePath; // Set current preview
+
+            fetch(`/api/file_content?path=${encodeURIComponent(filePath)}`)
+                .then(response => {
+                     if (!response.ok) {
+                         return response.json().then(err => { throw new Error(err.error || `HTTP error ${response.status}`) });
+                     }
+                     return response.json();
+                 })
+                .then(data => {
+                    // Only update if the user hasn't clicked another file in the meantime
+                    if (currentPreviewPath === filePath) {
+                        outputCode.textContent = data.content || '';
+                        // Set the language class for PrismJS
+                        outputCode.className = data.language ? `language-${data.language}` : 'language-plaintext';
+                        Prism.highlightElement(outputCode); // Trigger highlighting
+                        // Display token count if available
+                        if (data.token_count !== undefined) {
+                             tokenCountDisplay.textContent = `(${data.token_count} tokens)`;
+                        }
+                    }
+                })
+                .catch(error => {
+                    if (currentPreviewPath === filePath) {
+                       outputCode.textContent = `Error loading preview: ${error.message}`;
+                       outputCode.className = 'language-plaintext';
+                       Prism.highlightElement(outputCode);
+                       tokenCountDisplay.textContent = ''; // Clear token count on error
+                     }
+                    console.error('Error fetching file content:', error);
+                });
+        }
+
+        // Fetch and render file tree on page load
+        fetch('/api/files')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                treeContainer.innerHTML = ''; // Clear loading message
+                renderTree(data, treeContainer);
+            })
+            .catch(error => {
+                treeContainer.innerHTML = `Error loading file tree: ${error}`;
+                console.error('Error fetching file tree:', error);
+            });
+
+        // Generate Snapshot & Copy Button
+        generateBtn.addEventListener('click', () => {
+            const selected = getSelectedFiles();
+            if (selected.length === 0) {
+                alert('Please select at least one file.');
+                return;
+            }
+
+            // Update button text while processing
+            const originalButtonText = generateBtn.textContent;
+            generateBtn.textContent = 'Generating...';
+            generateBtn.disabled = true; // Disable button during processing
+
+            outputTitle.textContent = 'Generating Snapshot...'; // Clear previous title text
+            tokenCountDisplay.textContent = ''; // Clear previous token count
+            outputCode.textContent = 'Generating...';
+            outputCode.className = 'language-plaintext'; // Reset language class
+            Prism.highlightElement(outputCode);
+            currentPreviewPath = null; // Clear preview state
+            // Remove active class from file span
+            const activeFileSpan = treeContainer.querySelector('.active-file');
+            if (activeFileSpan) {
+                activeFileSpan.classList.remove('active-file');
+            }
+            fetch('/api/generate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ files: selected }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                outputTitle.textContent = 'Generated Snapshot';
+                if (data.error) {
+                    outputCode.textContent = `Error: ${data.error}`;
+                    outputCode.className = 'language-plaintext';
+                    tokenCountDisplay.textContent = ''; // Clear token count on error
+                } else {
+                    outputCode.textContent = data.snapshot || 'No content generated.';
+                    // Maybe apply a generic highlighting or just keep plaintext for combined output
+                    outputCode.className = 'language-plaintext'; // Or another appropriate class
+                    // Display total token count if available
+                    if (data.total_token_count !== undefined) {
+                         tokenCountDisplay.textContent = `(${data.total_token_count} tokens total)`;
+                    }
+                }
+                Prism.highlightElement(outputCode); // Highlight the result
+
+                // --- Auto-copy logic ---
+                const textToCopy = outputCode.textContent;
+                 if (textToCopy && !data.error) {
+                     navigator.clipboard.writeText(textToCopy).then(() => {
+                         generateBtn.textContent = 'Generated & Copied!'; // Success feedback
+                         setTimeout(() => { generateBtn.textContent = originalButtonText; }, 2000); // Revert after 2s
+                     }, (err) => {
+                         generateBtn.textContent = 'Generated (Copy Failed)'; // Error feedback
+                         console.error('Clipboard copy error:', err);
+                         alert('Generated snapshot, but failed to copy to clipboard automatically.');
+                         setTimeout(() => { generateBtn.textContent = originalButtonText; }, 3000); // Revert after 3s
+                     });
+                 } else if (data.error) {
+                      generateBtn.textContent = 'Generation Failed';
+                      setTimeout(() => { generateBtn.textContent = originalButtonText; }, 3000);
+                 } else {
+                      generateBtn.textContent = originalButtonText; // Revert if nothing generated
+                 }
+                 generateBtn.disabled = false; // Re-enable button
+            })
+            .catch(error => {
+                 outputTitle.textContent = 'Error';
+                 outputCode.textContent = `Error generating snapshot: ${error}`;
+                 outputCode.className = 'language-plaintext';
+                 tokenCountDisplay.textContent = ''; // Clear token count on error
+                 Prism.highlightElement(outputCode);
+                console.error('Error generating snapshot:', error);
+                generateBtn.textContent = 'Error'; // Error feedback
+                generateBtn.disabled = false; // Re-enable button
+                setTimeout(() => { generateBtn.textContent = originalButtonText; }, 3000); // Revert after 3s
+            });
+        });
+
+        // Removed separate copy button event listener
+    </script>
+</body>
+</html>
