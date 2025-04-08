@@ -1,0 +1,13 @@
+AUTHORS.rst
+LICENSE
+README.rst
+pyproject.toml
+src/easyprov/__init__.py
+src/easyprov/provenance.py
+src/easyprov/version.py
+src/easyprov.egg-info/PKG-INFO
+src/easyprov.egg-info/SOURCES.txt
+src/easyprov.egg-info/dependency_links.txt
+src/easyprov.egg-info/requires.txt
+src/easyprov.egg-info/top_level.txt
+test/test_packaging.py
