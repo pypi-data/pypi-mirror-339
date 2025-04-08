@@ -1,0 +1,2 @@
+[console_scripts]
+ndcli = dimcli:main

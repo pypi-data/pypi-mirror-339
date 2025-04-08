@@ -1,0 +1,10 @@
+dimcli/__init__.py,sha256=N7hv8WbfFg9tn2vh2V6jcFVewFyNDoLu9OucCMQMklQ,126370
+dimcli/cliparse.py,sha256=K84x-yRj3eYkoz8lAwSJb5c2NbZ0RSMsfl9Ril4gVWs,19559
+dimcli/version.py,sha256=0d9oIWwAHMvObmOgY8l4wpB6I9zKE4JEFXW9l89yYdw,18
+dimcli/zonedelete.py,sha256=Dxzq9A_DbjdK2-ZYONNwEA3u9nL8PM48-nPAjQY0RJY,2681
+dimcli/zoneimport.py,sha256=A6wvbMZZp9WFRk6pSiP4zZ0k3e5dVY50O-egPcLgCV0,6745
+dimclient_cli-5.0.4.post1.dist-info/METADATA,sha256=H4rkA6gJakVC9ZzUm6tx8icd3LXAIsdoan3pUFD3D_8,1422
+dimclient_cli-5.0.4.post1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+dimclient_cli-5.0.4.post1.dist-info/entry_points.txt,sha256=mF2NgeXYWd4SP3lpl_P-RU7RHPWUJNvgIS4A5A47724,38
+dimclient_cli-5.0.4.post1.dist-info/top_level.txt,sha256=flAsnom0MJNWiVBECj1OKRN9bs0s6BrHeD8VypO9o2s,7
+dimclient_cli-5.0.4.post1.dist-info/RECORD,,
