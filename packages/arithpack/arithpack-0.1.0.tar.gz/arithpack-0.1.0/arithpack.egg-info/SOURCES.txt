@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+arithpack/__init__.py
+arithpack.egg-info/PKG-INFO
+arithpack.egg-info/SOURCES.txt
+arithpack.egg-info/dependency_links.txt
+arithpack.egg-info/top_level.txt
