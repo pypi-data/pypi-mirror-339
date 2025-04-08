@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: pypipemachine
+Version: 0.0.1
+Summary: An OOP-based alternative approach to FSM in Python.
+License: GNU GPL v3.0
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: attrs>=25.3.0
+
+# pypipemachine
+
+OOP-based FSM framework for Python 3.13+.
