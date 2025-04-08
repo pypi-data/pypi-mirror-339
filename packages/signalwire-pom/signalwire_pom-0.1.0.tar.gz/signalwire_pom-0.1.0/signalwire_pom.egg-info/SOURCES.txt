@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+signalwire_pom/__init__.py
+signalwire_pom/pom.py
+signalwire_pom.egg-info/PKG-INFO
+signalwire_pom.egg-info/SOURCES.txt
+signalwire_pom.egg-info/dependency_links.txt
+signalwire_pom.egg-info/top_level.txt

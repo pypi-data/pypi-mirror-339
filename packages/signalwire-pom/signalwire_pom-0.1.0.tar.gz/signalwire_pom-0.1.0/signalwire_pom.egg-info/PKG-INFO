@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: signalwire-pom
+Version: 0.1.0
+Summary: Prompt Object Model - A library for structured prompt management
+Home-page: https://github.com/signalwire/signalwire-pom
+Author: SignalWire
+Author-email: support@signalwire.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# SignalWire Prompt Object Model (POM)
+
+A lightweight Python library for structured prompt management that helps organize and manipulate prompts for large language models.
+
+## Installation
+
+```bash
+pip install signalwire-pom
+```
+
+## Usage
+
+```python
+from signalwire_pom import PromptObjectModel
+
+# Create a new POM
+pom = PromptObjectModel()
+
+# Add sections with content
+overview = pom.add_section("Overview", body="This is an overview of the project.")
+overview.add_bullets(["Point 1", "Point 2", "Point 3"])
+
+# Add subsections
+details = overview.add_subsection("Details", body="More detailed information.")
+details.add_bullets(["Detail 1", "Detail 2"])
+
+# Generate markdown
+markdown = pom.render_markdown()
+print(markdown)
+
+# Generate JSON representation
+json_data = pom.to_json()
+print(json_data)
+```
+
+## Features
+
+- Create structured hierarchical prompts
+- Add sections, subsections, body text, and bullet points
+- Export to markdown or JSON
+- Find sections by title
+
+## License
+
+MIT 
