@@ -1,0 +1,9 @@
+httpx
+rich
+click
+aiofiles
+
+[GUI]
+qtpy
+PySide6-essentials~=6.6.0
+qasync
