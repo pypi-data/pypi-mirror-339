@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: boris-behav-obs
+Version: 9.3
+Summary: BORIS - Behavioral Observation Research Interactive Software
+Author-email: Olivier Friard <olivier.friard@unito.it>
+License-Expression: GPL-3.0-only
+Project-URL: Homepage, http://www.boris.unito.it
+Project-URL: Documentation, https://boris.readthedocs.io/en/latest/
+Project-URL: Change_log, https://github.com/olivierfriard/BORIS/wiki/BORIS-change-log-v.8
+Project-URL: Source_code, https://github.com/olivierfriard/BORIS
+Project-URL: Issues, https://github.com/olivierfriard/BORIS/issues
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.12
+Description-Content-Type: text/x-rst
+License-File: LICENSE.TXT
+Requires-Dist: exifread>=3.0.0
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: matplotlib>=3.3.3
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: tablib[cli,html,ods,pandas,xls,xlsx]>=3
+Requires-Dist: pyreadr
+Requires-Dist: pyside6==6.8.0.2
+Requires-Dist: hachoir>=3.3.0
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Dynamic: license-file
