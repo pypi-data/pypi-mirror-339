@@ -1,0 +1,8 @@
+requests
+openai
+rich
+nltk
+chess
+networkx
+python-dotenv
+websockets
