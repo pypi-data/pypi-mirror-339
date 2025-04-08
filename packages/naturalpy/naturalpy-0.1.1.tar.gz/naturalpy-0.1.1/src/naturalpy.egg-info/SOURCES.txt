@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/naturalpy/__init__.py
+src/naturalpy/core.py
+src/naturalpy.egg-info/PKG-INFO
+src/naturalpy.egg-info/SOURCES.txt
+src/naturalpy.egg-info/dependency_links.txt
+src/naturalpy.egg-info/requires.txt
+src/naturalpy.egg-info/top_level.txt
+tests/test_natural.py

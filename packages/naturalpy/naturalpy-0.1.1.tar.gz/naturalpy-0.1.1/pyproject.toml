@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "naturalpy"
+version = "0.1.1"
+description = "A minimalistic natural programming inspired library for easy integration of LLMs into Python in a more pythonic way."
+readme = "README.md"
+authors = [
+    {name = "Isuru Wijesiri", email = "imwijesiri@gmial.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "openai>=1.70.0",
+    "pydantic>=2.11.0",
+    "instructor>=1.7.8",
+]
+requires-python = ">=3.11"
+
+[project.urls]
+"Homepage" = "https://github.com/IsuruMaduranga/natural-python"
+"Bug Tracker" = "https://github.com/IsuruMaduranga/natural-python/issues"
