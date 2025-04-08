@@ -1,0 +1,79 @@
+[build-system]
+requires = ["hatchling>=1.26.1"]
+build-backend = "hatchling.build"
+
+[project]
+name = "himena-bio"
+dynamic = ["version"]
+description = "Plasmid editor and basic bioinformatic analysis in himena"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+keywords = []
+authors = [
+  { name = "hanjinliu", email = "liuhanjin.sc@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "biopython>=1.85",
+  "cmap>=0.5.0",
+  "himena",
+]
+[project.optional-dependencies]
+testing = [
+  "pytest>=6.0",
+  "pytest-qt",
+  "pytest-cov>=2.0",
+  "pyqt6",
+]
+
+[project.urls]
+Documentation = "https://github.com/hanjinliu/himena-bio#readme"
+Issues = "https://github.com/hanjinliu/himena-bio/issues"
+Source = "https://github.com/hanjinliu/himena-bio"
+
+[tool.hatch.version]
+path = "src/himena_bio/__init__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/himena_bio tests}"
+
+[tool.coverage.run]
+source_pkgs = ["himena_bio", "tests"]
+branch = true
+parallel = true
+
+[tool.coverage.paths]
+himena_bio = ["src/himena_bio", "*/himena-bio/src/himena_bio"]
+tests = ["tests", "*/himena-bio/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+[tool.hatch.envs.test]
+features = ["testing"]
+
+[tool.hatch.envs.test.scripts]
+run = "pytest -v --cov --cov-report=xml"
+
+[project.entry-points."himena.plugin"]
+"Widgets" = "himena_bio.widgets"
+"Bio-Sequence IO" = "himena_bio.io"
+"Bio-Sequence Tools" = "himena_bio.tools"

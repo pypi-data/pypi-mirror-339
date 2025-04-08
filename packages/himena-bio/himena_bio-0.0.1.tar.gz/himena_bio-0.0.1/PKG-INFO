@@ -1,0 +1,75 @@
+Metadata-Version: 2.4
+Name: himena-bio
+Version: 0.0.1
+Summary: Plasmid editor and basic bioinformatic analysis in himena
+Project-URL: Documentation, https://github.com/hanjinliu/himena-bio#readme
+Project-URL: Issues, https://github.com/hanjinliu/himena-bio/issues
+Project-URL: Source, https://github.com/hanjinliu/himena-bio
+Author-email: hanjinliu <liuhanjin.sc@gmail.com>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2024, hanjinliu
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Requires-Dist: biopython>=1.85
+Requires-Dist: cmap>=0.5.0
+Requires-Dist: himena
+Provides-Extra: testing
+Requires-Dist: pyqt6; extra == 'testing'
+Requires-Dist: pytest-cov>=2.0; extra == 'testing'
+Requires-Dist: pytest-qt; extra == 'testing'
+Requires-Dist: pytest>=6.0; extra == 'testing'
+Description-Content-Type: text/markdown
+
+# himena-bio
+
+[![PyPI - Version](https://img.shields.io/pypi/v/himena-bio.svg)](https://pypi.org/project/himena-bio)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/himena-bio.svg)](https://pypi.org/project/himena-bio)
+[![codecov](https://codecov.io/gh/hanjinliu/himena-bio/graph/badge.svg?token=XS0WdfiSIh)](https://codecov.io/gh/hanjinliu/himena-bio)
+
+-----
+
+Plasmid editor and basic bioinformatic analysis in [`himena`](https://github.com/hanjinliu/himena).
+
+![](images/window.png)
+
+## Installation
+
+```console
+pip install himena-bio
+himena <my-profile> --install himena-bio
+```
