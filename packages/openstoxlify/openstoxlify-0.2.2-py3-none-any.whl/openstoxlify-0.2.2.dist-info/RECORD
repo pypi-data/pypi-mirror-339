@@ -1,0 +1,12 @@
+openstoxlify/__init__.py,sha256=ExEKMLrWQ1xVnSrEK2-sqcEgux4d3FFc-eN-OWCDBXA,356
+openstoxlify/draw.py,sha256=c8fwrmPLL4SyK6Fy4aGqW6aLHBcXrWpgiopblqqHDlg,4384
+openstoxlify/fetch.py,sha256=u2UkrNxq6Oci--XpofiWO1E5gBWeXkhX5jgFkpHrPNA,2160
+openstoxlify/models.py,sha256=Aoo3ZoS7jynnt3wtx6QRe2ZdVbXonY_8313NVbHveaA,1765
+openstoxlify/output.py,sha256=sCxQzmGJQ1fjKjb4R-pA_sFCZYA9m4xfSPnOKQsivis,901
+openstoxlify/plotter.py,sha256=I3dg-dS5nvo3yIcsKq-FZYnPULKEgmX0AAIFOq98oTc,751
+openstoxlify/strategy.py,sha256=NpzPoqCEi8p059VEmhImZH-LrfNreqNeQ1zqg0m5Yxg,423
+openstoxlify-0.2.2.dist-info/licenses/LICENSE,sha256=F8d2z2lP_yBF4IvdtY2AbGaUYLrNy1xwra8kZPXJQEQ,1068
+openstoxlify-0.2.2.dist-info/METADATA,sha256=yvSUuBkwAteU4zwpPShFYseYAClYWylWnHfrWscSamg,209
+openstoxlify-0.2.2.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+openstoxlify-0.2.2.dist-info/top_level.txt,sha256=Pd0CUyE28gFiqSuwGpVpjSvIQSWIr3OjOSIg4Lvv1pQ,13
+openstoxlify-0.2.2.dist-info/RECORD,,
