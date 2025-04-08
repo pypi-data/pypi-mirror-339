@@ -1,0 +1,9 @@
+rockcloner/__init__.py,sha256=k2jL8FVoayCDq51zTEkbTEbdAsY4uHKBYaBiX4CJgaM,127
+rockcloner/cli.py,sha256=rfszzpueVApRASeB-AqyGH-4HtTd9-PO2q62Anf8aDY,109
+rockcloner/main.py,sha256=p3f9v5TR9e2vByUulizEchsPP4IJYCtWQtZEypO_43M,10468
+rockcloner/replicator.py,sha256=JMDDVku-GRcemn4uhSXcNzSjXzTBQJFFKnyRPbyTOX4,11552
+rockcloner-1.0.1.dist-info/METADATA,sha256=5ydT2j3Slb0mfs4GRrOL23pQwK8oHTraSm7DBsONxNc,785
+rockcloner-1.0.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+rockcloner-1.0.1.dist-info/entry_points.txt,sha256=DOZkuqO54GXpe1O1rYhpNG8LqZXH1b2QXTYufPGrk0A,50
+rockcloner-1.0.1.dist-info/top_level.txt,sha256=1kZo-5pgPPvoxg7cSHTihfFrbrI8Cj-Loytpni5I43A,11
+rockcloner-1.0.1.dist-info/RECORD,,
