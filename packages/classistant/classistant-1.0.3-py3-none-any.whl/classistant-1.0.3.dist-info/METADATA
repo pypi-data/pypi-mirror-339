@@ -1,0 +1,106 @@
+Metadata-Version: 2.4
+Name: classistant
+Version: 1.0.3
+Summary: Command Line AI Assistant
+Author: Paulo Lira
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx
+Dynamic: license-file
+
+
+# CLA - Command Line Assistant 🤖🖥️
+
+**CLAssistant** (Command Line Assistant) é um assistente de linha de comando movido por inteligência artificial, criado para te ajudar a **gerar comandos de terminal** com base em instruções em linguagem natural.
+
+Com ele, basta você dizer o que deseja fazer, e o CLA irá sugerir o comando exato para executar no seu terminal. Ideal para devs que querem agilidade e praticidade no dia a dia.
+
+---
+
+## ✨ Funcionalidades
+
+- 💡 Sugere comandos de terminal a partir de descrições em linguagem natural
+- 🔒 Usa uma API LLM (modelo de linguagem) configurável por você
+- ⚡ Interface simples e direta via CLI
+- 🧠 Powered by AI
+
+---
+
+## 📦 Instalação
+
+Você pode instalar o `classistant` diretamente via `pip`:
+
+```bash
+pip install classistant
+```
+
+---
+
+## 🚀 Como usar
+
+Após instalar, basta rodar:
+
+```bash
+cla gerar um comando que exclui todos os arquivos .log da pasta atual
+```
+
+E o CLAssistant vai te sugerir algo como:
+
+```bash
+rm *.log
+```
+
+---
+
+## 🔐 Configuração
+
+Antes de usar, defina duas variáveis de ambiente:
+
+- `CLA_KEY`: Sua chave de autenticação para a API de linguagem (LLM)
+- `CLA_BASE_URL`: URL base da API (ex: `https://api.exemplo.com`)
+
+Você pode definir isso diretamente no terminal:
+
+```bash
+export CLA_KEY=suachaveaqui
+export CLA_BASE_URL=https://api.seumodelo.com/
+```
+
+Ou adicionar no seu `.bashrc`, `.zshrc` ou `.env`.
+
+---
+
+## 🛠️ Exemplo de uso
+
+```bash
+cla criar um comando que conta quantas linhas existem em todos os arquivos .py
+```
+
+Resultado:
+
+```bash
+find . -name "*.py" | xargs wc -l
+```
+
+---
+
+## 🤖 Como funciona
+
+O `cla` envia sua solicitação para uma API de modelo de linguagem (LLM), que interpreta o que você quer fazer e retorna um comando de terminal correspondente.
+
+Você pode usar qualquer LLM compatível com prompt + resposta via API REST — como um modelo local, o OpenAI, ou outros provedores.
+
+---
+
+## 🧪 Requisitos
+
+- Python 3.9+
+- Dependência principal: `httpx`
+
+---
+
+## 📄 Licença
+
+MIT © [Paulo Lira](https://github.com/PauloLiraDev)
