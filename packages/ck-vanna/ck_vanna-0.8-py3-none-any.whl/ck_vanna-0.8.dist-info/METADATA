@@ -1,0 +1,135 @@
+Metadata-Version: 2.4
+Name: ck_vanna
+Version: 0.8
+Summary: Generate SQL queries from natural language
+Author-email: yilimaizi team <yilimaizi@yilimaizi.com>
+Requires-Python: >=3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: tabulate
+Requires-Dist: plotly
+Requires-Dist: pandas
+Requires-Dist: sqlparse
+Requires-Dist: kaleido
+Requires-Dist: flask
+Requires-Dist: flask-sock
+Requires-Dist: flasgger
+Requires-Dist: sqlalchemy
+Requires-Dist: psycopg2-binary ; extra == "all"
+Requires-Dist: db-dtypes ; extra == "all"
+Requires-Dist: PyMySQL ; extra == "all"
+Requires-Dist: google-cloud-bigquery ; extra == "all"
+Requires-Dist: snowflake-connector-python ; extra == "all"
+Requires-Dist: duckdb ; extra == "all"
+Requires-Dist: openai ; extra == "all"
+Requires-Dist: qianfan ; extra == "all"
+Requires-Dist: mistralai>=1.0.0 ; extra == "all"
+Requires-Dist: chromadb ; extra == "all"
+Requires-Dist: anthropic ; extra == "all"
+Requires-Dist: zhipuai ; extra == "all"
+Requires-Dist: marqo ; extra == "all"
+Requires-Dist: google-generativeai ; extra == "all"
+Requires-Dist: google-cloud-aiplatform ; extra == "all"
+Requires-Dist: qdrant-client ; extra == "all"
+Requires-Dist: fastembed ; extra == "all"
+Requires-Dist: ollama ; extra == "all"
+Requires-Dist: httpx ; extra == "all"
+Requires-Dist: opensearch-py ; extra == "all"
+Requires-Dist: opensearch-dsl ; extra == "all"
+Requires-Dist: transformers ; extra == "all"
+Requires-Dist: pinecone-client ; extra == "all"
+Requires-Dist: pymilvus[model] ; extra == "all"
+Requires-Dist: weaviate-client ; extra == "all"
+Requires-Dist: azure-search-documents ; extra == "all"
+Requires-Dist: azure-identity ; extra == "all"
+Requires-Dist: azure-common ; extra == "all"
+Requires-Dist: faiss-cpu ; extra == "all"
+Requires-Dist: boto ; extra == "all"
+Requires-Dist: boto3 ; extra == "all"
+Requires-Dist: botocore ; extra == "all"
+Requires-Dist: langchain_core ; extra == "all"
+Requires-Dist: langchain_postgres ; extra == "all"
+Requires-Dist: langchain-community ; extra == "all"
+Requires-Dist: langchain-huggingface ; extra == "all"
+Requires-Dist: xinference-client ; extra == "all"
+Requires-Dist: anthropic ; extra == "anthropic"
+Requires-Dist: azure-search-documents ; extra == "azuresearch"
+Requires-Dist: azure-identity ; extra == "azuresearch"
+Requires-Dist: azure-common ; extra == "azuresearch"
+Requires-Dist: fastembed ; extra == "azuresearch"
+Requires-Dist: boto3 ; extra == "bedrock"
+Requires-Dist: botocore ; extra == "bedrock"
+Requires-Dist: google-cloud-bigquery ; extra == "bigquery"
+Requires-Dist: chromadb ; extra == "chromadb"
+Requires-Dist: clickhouse_connect ; extra == "clickhouse"
+Requires-Dist: duckdb ; extra == "duckdb"
+Requires-Dist: faiss-cpu ; extra == "faiss-cpu"
+Requires-Dist: faiss-gpu ; extra == "faiss-gpu"
+Requires-Dist: google-generativeai ; extra == "gemini"
+Requires-Dist: google-generativeai ; extra == "google"
+Requires-Dist: google-cloud-aiplatform ; extra == "google"
+Requires-Dist: transformers ; extra == "hf"
+Requires-Dist: marqo ; extra == "marqo"
+Requires-Dist: pymilvus[model] ; extra == "milvus"
+Requires-Dist: mistralai>=1.0.0 ; extra == "mistralai"
+Requires-Dist: PyMySQL ; extra == "mysql"
+Requires-Dist: ollama ; extra == "ollama"
+Requires-Dist: httpx ; extra == "ollama"
+Requires-Dist: openai ; extra == "openai"
+Requires-Dist: opensearch-py ; extra == "opensearch"
+Requires-Dist: opensearch-dsl ; extra == "opensearch"
+Requires-Dist: langchain-community ; extra == "opensearch"
+Requires-Dist: langchain-huggingface ; extra == "opensearch"
+Requires-Dist: oracledb ; extra == "oracle"
+Requires-Dist: chromadb ; extra == "oracle"
+Requires-Dist: langchain-postgres>=0.0.12 ; extra == "pgvector"
+Requires-Dist: pinecone-client ; extra == "pinecone"
+Requires-Dist: fastembed ; extra == "pinecone"
+Requires-Dist: psycopg2-binary ; extra == "postgres"
+Requires-Dist: db-dtypes ; extra == "postgres"
+Requires-Dist: qdrant-client ; extra == "qdrant"
+Requires-Dist: fastembed ; extra == "qdrant"
+Requires-Dist: qianfan ; extra == "qianfan"
+Requires-Dist: snowflake-connector-python ; extra == "snowflake"
+Requires-Dist: tox ; extra == "test"
+Requires-Dist: vllm ; extra == "vllm"
+Requires-Dist: weaviate-client ; extra == "weaviate"
+Requires-Dist: xinference-client ; extra == "xinference-client"
+Requires-Dist: zhipuai ; extra == "zhipuai"
+Project-URL: Bug Tracker, http://106.15.103.105/ai/ck-vanna/issues
+Project-URL: Homepage, http://106.15.103.105/ai/ck-vanna
+Provides-Extra: all
+Provides-Extra: anthropic
+Provides-Extra: azuresearch
+Provides-Extra: bedrock
+Provides-Extra: bigquery
+Provides-Extra: chromadb
+Provides-Extra: clickhouse
+Provides-Extra: duckdb
+Provides-Extra: faiss-cpu
+Provides-Extra: faiss-gpu
+Provides-Extra: gemini
+Provides-Extra: google
+Provides-Extra: hf
+Provides-Extra: marqo
+Provides-Extra: milvus
+Provides-Extra: mistralai
+Provides-Extra: mysql
+Provides-Extra: ollama
+Provides-Extra: openai
+Provides-Extra: opensearch
+Provides-Extra: oracle
+Provides-Extra: pgvector
+Provides-Extra: pinecone
+Provides-Extra: postgres
+Provides-Extra: qdrant
+Provides-Extra: qianfan
+Provides-Extra: snowflake
+Provides-Extra: test
+Provides-Extra: vllm
+Provides-Extra: weaviate
+Provides-Extra: xinference-client
+Provides-Extra: zhipuai
