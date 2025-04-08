@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: aliyun-bootstrap
+Version: 1.0.4
+Summary: aliyun  bootstrap 
+Project-URL: Homepage, https://github.com/open-telemetry/opentelemetry-python-contrib/tree/main/opentelemetry-instrumentation
+Author: Aliyun Authors
+License-Expression: Apache-2.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Requires-Dist: requests
+Requires-Dist: setuptools>=16.0
+Requires-Dist: tqdm
+Requires-Dist: wrapt<2.0.0,>=1.0.0
+Provides-Extra: progress
+Requires-Dist: tqdm>=4.50.0; extra == 'progress'
+Description-Content-Type: text/x-rst
+
+
+Installation
+------------
+
+
+aliyun-bootstrap
+-----------------------
+
+::
+
+    aliyun-bootstrap [-a |--action=][install|requirements]
+
+RELEASE_NOTES
+-------------
+
+ * 1.0.2: add uninstall command.
+          remove wrapt dependency.
