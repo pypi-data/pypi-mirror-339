@@ -1,0 +1,222 @@
+Metadata-Version: 2.4
+Name: open-variant
+Version: 1.1.0
+Summary: OpenVariant provides different functionalities to read, parse and operate different multiple input file formats, being able to customize the output.
+Project-URL: Homepage, https://github.com/bbglab/openvariant
+Project-URL: Documentation, https://openvariant.readthedocs.io/
+Project-URL: Repository, https://github.com/bbglab/openvariant
+Project-URL: Issues, https://github.com/bbglab/openvariant/issues
+Author-email: "BBGLab (Barcelona Biomedical Genomics Lab)" <bbglab@irbbarcelona.org>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2021, BBGLab - Barcelona Biomedical Genomics Lab
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE
+Keywords: bbglab,bioinformatics,openvar,openvariant
+Requires-Python: >=3.10
+Requires-Dist: appdirs==1.4.4
+Requires-Dist: click==8.1.3
+Requires-Dist: pyliftover==0.4.1
+Requires-Dist: pyyaml==6.0.1
+Requires-Dist: tqdm==4.66.3
+Provides-Extra: docs
+Requires-Dist: alabaster==0.7.12; extra == 'docs'
+Requires-Dist: asttokens==2.0.5; extra == 'docs'
+Requires-Dist: attrs==22.1.0; extra == 'docs'
+Requires-Dist: babel==2.10.3; extra == 'docs'
+Requires-Dist: backcall==0.2.0; extra == 'docs'
+Requires-Dist: beautifulsoup4==4.11.1; extra == 'docs'
+Requires-Dist: bleach==5.0.1; extra == 'docs'
+Requires-Dist: charset-normalizer==2.1.0; extra == 'docs'
+Requires-Dist: click==8.1.3; extra == 'docs'
+Requires-Dist: decorator==5.1.1; extra == 'docs'
+Requires-Dist: defusedxml==0.7.1; extra == 'docs'
+Requires-Dist: docutils==0.17.1; extra == 'docs'
+Requires-Dist: entrypoints==0.4; extra == 'docs'
+Requires-Dist: executing==0.9.1; extra == 'docs'
+Requires-Dist: fastjsonschema==2.16.1; extra == 'docs'
+Requires-Dist: idna==3.7; extra == 'docs'
+Requires-Dist: imagesize==1.4.1; extra == 'docs'
+Requires-Dist: ipython>=8.18.0; extra == 'docs'
+Requires-Dist: jedi==0.18.1; extra == 'docs'
+Requires-Dist: jinja2==3.1.4; extra == 'docs'
+Requires-Dist: jsonschema==4.8.0; extra == 'docs'
+Requires-Dist: jupyter-client==7.3.4; extra == 'docs'
+Requires-Dist: jupyter-core==4.11.2; extra == 'docs'
+Requires-Dist: jupyterlab-pygments==0.2.2; extra == 'docs'
+Requires-Dist: markupsafe==2.1.1; extra == 'docs'
+Requires-Dist: matplotlib-inline==0.1.3; extra == 'docs'
+Requires-Dist: mistune==2.0.3; extra == 'docs'
+Requires-Dist: nbclient==0.6.6; extra == 'docs'
+Requires-Dist: nbconvert==7.0.0rc0; extra == 'docs'
+Requires-Dist: nbformat==5.4.0; extra == 'docs'
+Requires-Dist: nbsphinx==0.8.9; extra == 'docs'
+Requires-Dist: nest-asyncio==1.5.5; extra == 'docs'
+Requires-Dist: packaging==21.3; extra == 'docs'
+Requires-Dist: pandocfilters==1.5.0; extra == 'docs'
+Requires-Dist: parso==0.8.3; extra == 'docs'
+Requires-Dist: pexpect==4.8.0; extra == 'docs'
+Requires-Dist: pickleshare==0.7.5; extra == 'docs'
+Requires-Dist: prompt-toolkit==3.0.30; extra == 'docs'
+Requires-Dist: ptyprocess==0.7.0; extra == 'docs'
+Requires-Dist: pure-eval==0.2.2; extra == 'docs'
+Requires-Dist: pydata-sphinx-theme==0.8.1; extra == 'docs'
+Requires-Dist: pygments==2.15.0; extra == 'docs'
+Requires-Dist: pyparsing==3.0.9; extra == 'docs'
+Requires-Dist: pyrsistent==0.18.1; extra == 'docs'
+Requires-Dist: python-dateutil==2.8.2; extra == 'docs'
+Requires-Dist: pytz==2022.1; extra == 'docs'
+Requires-Dist: pyyaml==6.0.1; extra == 'docs'
+Requires-Dist: pyzmq==26.2.0; extra == 'docs'
+Requires-Dist: requests==2.32.2; extra == 'docs'
+Requires-Dist: ruamel-yaml==0.16.13; extra == 'docs'
+Requires-Dist: setuptools>=58.2.0; extra == 'docs'
+Requires-Dist: six==1.16.0; extra == 'docs'
+Requires-Dist: snowballstemmer==2.2.0; extra == 'docs'
+Requires-Dist: soupsieve==2.3.2.post1; extra == 'docs'
+Requires-Dist: sphinx-copybutton==0.5.0; extra == 'docs'
+Requires-Dist: sphinx-gallery==0.10.1; extra == 'docs'
+Requires-Dist: sphinx-panels==0.6.0; extra == 'docs'
+Requires-Dist: sphinx==4.5.0; extra == 'docs'
+Requires-Dist: sphinxcontrib-applehelp==1.0.2; extra == 'docs'
+Requires-Dist: sphinxcontrib-autoyaml==1.0.0; extra == 'docs'
+Requires-Dist: sphinxcontrib-bibtex==2.6.3; extra == 'docs'
+Requires-Dist: sphinxcontrib-devhelp==1.0.2; extra == 'docs'
+Requires-Dist: sphinxcontrib-htmlhelp==2.0.0; extra == 'docs'
+Requires-Dist: sphinxcontrib-jsmath==1.0.1; extra == 'docs'
+Requires-Dist: sphinxcontrib-qthelp==1.0.3; extra == 'docs'
+Requires-Dist: sphinxcontrib-serializinghtml==1.1.5; extra == 'docs'
+Requires-Dist: stack-data==0.3.0; extra == 'docs'
+Requires-Dist: tinycss2==1.1.1; extra == 'docs'
+Requires-Dist: tornado==6.4.2; extra == 'docs'
+Requires-Dist: tqdm==4.66.3; extra == 'docs'
+Requires-Dist: traitlets==5.3.0; extra == 'docs'
+Requires-Dist: urllib3==1.26.19; extra == 'docs'
+Requires-Dist: wcwidth==0.2.5; extra == 'docs'
+Requires-Dist: webencodings==0.5.1; extra == 'docs'
+Provides-Extra: linting
+Requires-Dist: flake8>=7.1.1; extra == 'linting'
+Requires-Dist: ruff>=0.8.3; extra == 'linting'
+Provides-Extra: tests
+Requires-Dist: coverage>=7.6.9; extra == 'tests'
+Requires-Dist: pytest-cov>=6.0.0; extra == 'tests'
+Requires-Dist: pytest>=8.3.4; extra == 'tests'
+Description-Content-Type: text/markdown
+
+<div align="center">
+    <a href="https://openvariant.readthedocs.io/">
+      <img src="https://github.com/bbglab/openvariant/raw/master/logo.png" width="590" height="350">
+    </a>
+    <br>
+    <br>
+  	<a href="https://opensource.org/licenses/BSD-3-Clause">
+  		<img alt="License" src="https://img.shields.io/github/license/bbglab/openvariant">
+  	</a>
+  	<a href="https://pypi.org/project/open-variant/">
+  		<img alt="PyPi" src="https://img.shields.io/pypi/v/open-variant">
+  	</a>
+     <a href="https://github.com/bbglab/openvariant/actions/workflows/openvariant_tester.yml">
+         <img alt="Test" src="https://github.com/bbglab/openvariant/actions/workflows/openvariant_tester.yml/badge.svg">
+     </a>
+    <a href="https://codecov.io/gh/bbglab/openvariant" > 
+        <img alt="Coverage" src="https://codecov.io/gh/bbglab/openvariant/branch/develop/graph/badge.svg?token=N6HUMWS9U5"/> 
+    </a>
+  	<a href="https://openvariant.readthedocs.io/en/latest/?badge=latest">
+  		<img alt="Documentation Status" src="https://readthedocs.org/projects/openvariant/badge/?version=latest">
+  	</a>
+    <br>
+    <br>
+</div>
+
+OpenVariant is a comprehensive Python package that provides different functionalities to read, parse and operate
+different multiple input file formats (e. g. ``tsv``, ``csv``, ``vcf``, ``maf``, ``bed``), being able to customize the output.
+
+Its aim is being able to manage a ton of data represented in multiple ways and be able to build an unified output with 
+a proper annotation file structure. This package was thought to work with any kind of data that can be represented 
+as a table.
+
+_Documentation_: [https://openvariant.readthedocs.io](https://openvariant.readthedocs.io)
+
+## Features
+
+OpenVariant offers a toolkit to transform and operate the parsed input data. We will be able to apply different 
+functionalities on our parsed result some of them are the following ones:
+
+- Find files
+- Read and save
+- Cat
+- Group by
+- Count
+- Command-line interface (CLI)
+- Plugins
+
+<div align="center">
+  <a href="https://openvariant.readthedocs.io/en/latest/user_guide.html">
+    <img src="https://github.com/bbglab/openvariant/raw/master/workflow.gif" width="600" height="352">
+  </a>
+</div>
+
+Check [User guide](https://openvariant.readthedocs.io/en/latest/user_guide.html) in OpenVariant's documentation to find all the information about how it works 
+and how can be applied the different functionalities.  
+
+## Installation
+
+It requires Python 3 or higher and can be installed as [PyPI package](https://pypi.org/project/open-variant/) with:
+
+```bash
+pip install open-variant
+```
+
+For more details check our [Installation](https://openvariant.readthedocs.io/en/latest/installation.html) section.
+
+## Examples
+
+We provide a variety of [examples](https://github.com/bbglab/openvariant/tree/master/examples) to help to understand how OpenVariant can be applied. Explore the 
+[Examples](https://openvariant.readthedocs.io/en/latest/examples.html) section in OpenVariant's documentation for more details.
+
+As well, we present a small dataset for hands-on use with OpenVariant, allowing users to test the tool's functionalities. It may be found at [Zenodo](https://zenodo.org/records/14215914) and it can be downloaded using the following commands:
+```bash
+pip install zenodo_get                      
+zenodo_get 14215914
+```
+
+## Contributing
+
+You're welcome to contribute to the code as much as you'd like!
+
+Please review the guidelines outlined in the [Contributing](https://github.com/bbglab/openvariant/blob/master/CONTRIBUTING.md) document and adhere to the standards of conduct detailed in the [Code of Conduct](https://github.com/bbglab/openvariant/blob/master/CODE_OF_CONDUCT.md).
+
+## License
+
+The software is licensed under [BSD-3-Clause](https://github.com/bbglab/openvariant/blob/master/LICENSE).
+
+## Reference
+
+If you use OpenVariant in your research, please cite:
+
+> David Martínez-Millán, Federica Brando, Miguel L. Grau, Mònica Sánchez-Guixé, Carlos López-Elorduy, Iker Reyes-Salazar, Jordi Deu-Pons, Núria López-Bigas, Abel González-Pérez, OpenVariant: a toolkit to parse and operate multiple input file formats, Bioinformatics, Volume 40, Issue 12, December 2024, btae714, [https://doi.org/10.1093/bioinformatics/btae714](https://doi.org/10.1093/bioinformatics/btae714)
