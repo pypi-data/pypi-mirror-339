@@ -1,0 +1,13 @@
+boto3
+docling
+docling-core
+speechbrain
+whisper
+whisper-openai
+pyannote.audio
+pyannote.core
+wave
+scikit-learn
+torch@ https://download.pytorch.org/whl/cu126/torch-2.1.2%2Bcu126-cp311-cp311-win_amd64.whl
+torchvision@ https://download.pytorch.org/whl/cu126/torchvision-0.16.2%2Bcu126-cp311-cp311-win_amd64.whl
+torchaudio@ https://download.pytorch.org/whl/cu126/torchaudio-2.1.2%2Bcu126-cp311-cp311-win_amd64.whl
