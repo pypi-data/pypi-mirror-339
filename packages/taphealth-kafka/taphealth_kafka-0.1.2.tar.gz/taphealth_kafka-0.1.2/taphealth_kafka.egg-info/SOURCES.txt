@@ -1,0 +1,12 @@
+README.md
+setup.py
+taphealth_kafka/__init__.py
+taphealth_kafka/client.py
+taphealth_kafka/consumer.py
+taphealth_kafka/producer.py
+taphealth_kafka/topics.py
+taphealth_kafka.egg-info/PKG-INFO
+taphealth_kafka.egg-info/SOURCES.txt
+taphealth_kafka.egg-info/dependency_links.txt
+taphealth_kafka.egg-info/requires.txt
+taphealth_kafka.egg-info/top_level.txt
