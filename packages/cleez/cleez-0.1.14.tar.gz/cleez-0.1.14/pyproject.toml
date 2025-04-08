@@ -1,0 +1,152 @@
+[project]
+authors = [
+    { name = "Abilian SAS", email = "sf@abilian.com" },
+]
+requires-python = "<4,>=3.9"
+dependencies = [
+    "termcolor ~= 3.0",
+]
+name = "cleez"
+version = "0.1.14"
+description = "Simple class-based CLI framework."
+readme = "README.md"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+[project.urls]
+homepage = "https://github.com/abilian/cleez"
+
+[dependency-groups]
+dev = [
+    "abilian-devtools",
+    "cruft",
+    "toml",
+    "devtools<1.0.0,>=0.12.2",
+    "snoop",
+]
+
+[tool.pdm.build]
+includes = [
+    "src/cleez",
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+filterwarnings = []
+addopts = "--tb=short"
+testpaths = [
+    "tests",
+    "src",
+]
+
+[tool.ruff.lint]
+select = [
+    "F",
+    "E",
+    "C90",
+    "I",
+    "UP",
+    "N",
+    "YTT",
+    "B",
+    "A",
+    "C4",
+    "ICN",
+    "Q",
+    "S",
+    "BLE",
+    "RET",
+    "SIM",
+    "TID",
+    "RUF",
+    "PLC",
+    "PLE",
+    "PLR",
+    "PLW",
+]
+exclude = [
+    "src/cleez/testing.py",
+]
+ignore = [
+    "S101",
+    "SIM108",
+    "A001",
+    "A002",
+    "I001",
+    "RUF012",
+]
+
+[tool.bandit]
+skips = [
+    "B404",
+    "B603",
+]
+
+[tool.pyanalyze]
+paths = [
+    "src/",
+]
+import_paths = [
+    ".",
+]
+bare_ignore = true
+missing_f = true
+use_fstrings = true
+value_always_true = true
+attribute_is_never_set = false
+duplicate_dict_key = false
+import_failed = false
+impossible_pattern = false
+incompatible_argument = false
+incompatible_call = false
+incompatible_return_value = false
+internal_error = false
+missing_return = false
+possibly_undefined_name = false
+undefined_attribute = false
+unused_variable = false
+
+[tool.deptry]
+ignore_obsolete = []
+ignore_missing = []
+ignore_transitive = []
+exclude = [
+    ".tox",
+    "tests",
+    "sandbox",
+    "doc",
+    "scripts",
+]
+
+[tool.pyright]
+exclude = [
+    ".tox",
+    ".nox",
+    "tests",
+    "sandbox",
+    "doc",
+    "scripts",
+    "tmp",
+]
+include = [
+    "src",
+]
+reportPrivateImportUsage = false
+reportGeneralTypeIssues = false
+reportMissingImports = false
+reportOptionalSubscript = false
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
