@@ -1,0 +1,118 @@
+api:
+  url: "HTTP url for Home-Assistant API. usually it should be http://127.0.0.1:8123/api"
+  long_lived_token: "It's a Home-Assistant token (a long password) to generate on Home-Assistant web pagei : Home-Assistant => User profile / Security / long lived token / Create token."
+  ssl_certificate: "A file path to the SSL certificate. For the moment it's not corectly managed"
+localization:
+  latitude: "The home lattitude (usefull for solar-panel and wether predictions)"
+  longitude: "The home longitude (usefull for solar-panel and wether predictions)"
+  altitude: "The home altitude (usefull for solar-panel)"
+  timeZone: "Time-Zone : "Your TZ identifier in https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List"
+  language: "Language abbreviation ('fr' for french, 'en' to english)"
+server:
+  htmlRoot: "Root location of web server."
+  inDocker: "True if OpenHEMS run in docker."
+  port: "Web server port for listening."
+  logformat: "Format for log on OpenHEMS # for custom configuration see https://docs.python.org/3/library/logging.html#logrecord-attributes"
+  logfile: "Log file path"
+  loglevel: "Log level, (critical, error, warning, info, debug)"
+  loopDelay: "Interval beetween 2 OpenHEMS loop. Less is better for reaction, but use more power."
+  network: "Way to access your home network. (homeassistant, fake)".
+  strategies: "Define the algorithms used to control the home energy."
+network:
+  nodes: "Configure your home nodes"
+# All default values.
+default:
+  strategy:
+    emhass:
+      freq: 30
+      days_to_retrieve: 2
+      method_ts_round: nearest
+      delta_forecast: 1
+      weather_forecast_method: scrapper
+      load_cost_hp: 0.30
+      load_cost_hc: 0.15
+      prod_sell_price: 0.0
+      set_total_pv_sell: False
+      lp_solver: default
+      lp_solver_path: empty
+      set_nocharge_from_grid: False
+      set_nodischarge_to_grid: True
+      set_battery_dynamic: False
+      battery_dynamic_max: 0.9
+      battery_dynamic_min: -0.9
+    offpeak:
+      offpeakhours: None
+    switchoff:
+      reverse: False
+      offhours: []
+      offconditions: False
+    annealing:
+      freq: 15
+      max_iteration_number: 1000
+      initial_temp: 1000
+      cooling_factor: 0.95
+      min_temp: 0.1
+      max_no_improve: 100
+    nosell:
+      ratio: -1
+      margin: 300
+    nobuy:
+      ratio: 1
+      margin: 300
+    ratiosellbuy:
+      ratio: 0
+      margin: 200
+  node:
+    publicpowergrid:
+      currentPower: ""
+      maxPower: ""
+      minPower: ""
+      marginPower: ""
+      contract:
+        rtetempo:
+          color: null
+          nextcolor: null
+          offpeakhoursranges: ["22h - 6h"]
+          peakprice:
+            bleu: 0.1609
+            blanc: 0.1894
+            rouge: 0.7562
+          offpeakprice:
+            bleu: 0.1296
+            blanc: 0.1486
+            rouge: 0.1568
+        rteheurescreuses:
+          offpeakhoursranges: ["22h - 6h"]
+          peakprice: 0.2700
+          offpeakprice: 0.2068
+        rtetarifbleu:
+          price: 0.2516
+        generic:
+          offpeakhoursranges: []
+          defaultPrice: 0.1
+          outRangePrice: 1.0
+          sellprice: 0.0
+    solarpanel:
+      currentPower: ""
+      maxPower: ""
+      moduleModel: ""
+      inverterModel: ""
+      tilt: "Angle between solar panel and horizontal"
+      azimuth: "Angle betwwen solar panel orientation and north (Best is 180 in north.)"
+      modulesPerString: ""
+      stringsPerInverter: ""
+    battery:
+      currentPower: "Home-Assistant id to get the switch."
+      maxPowerIn: "Maximum power can deliver the battery (to the home)"
+      maxPowerOut: "Maximum power to charge the battery"
+      efficiencyIn: "Rate of efficiency when "
+      efficiencyOut: "Rate of efficiency when "
+      capacity: "Battery capacity in Wh"
+      currentLevel: "Home-Assistant id to get the charging level"
+      lowLevel: "Level under witch we should go"
+      highLevel: "Level above witch we should go"
+      targetLevel: "The battery level witch should be good at end of charge."
+    switch:
+      currentPower: "Home-Assistant id to get the switch."
+      maxPower: "Maximum power can deliver the switch."
+      isOn: "Home-Assistant id to command the switch"
