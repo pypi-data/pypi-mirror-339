@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: livekit-plugins-uplift
+Version: 0.1.1
+Summary: Agent Framework plugin for voice synthesis with Uplift AI.
+Project-URL: Homepage, https://github.com/V12Hero/livekit-plugins-uplift
+Project-URL: Source, https://github.com/V12Hero/livekit-plugins-uplift
+Project-URL: Tracker, https://github.com/V12Hero/livekit-plugins-uplift/issues
+Author-email: Ammar <ammar@itsitgroup.com>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: aiohttp
+Requires-Dist: livekit-agents[codecs]>=1.0.0.rc6
+Description-Content-Type: text/markdown
+
+# LiveKit Plugins - Uplift
+
+This plugin provides TTS integration for [Uplift AI](https://upliftai.org) into the LiveKit Agent Framework.
+
+## Installation
+
+```bash
+pip install livekit-plugins-uplift
+```
+
+## Pre-requisites
+
+You'll need an API key from UpliftAI. It can be set as an environment variable: `UPLIFT_AI_API_KEY`
