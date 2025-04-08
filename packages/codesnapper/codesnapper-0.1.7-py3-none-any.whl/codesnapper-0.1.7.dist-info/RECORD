@@ -1,0 +1,10 @@
+codesnapper/__init__.py,sha256=E--a2qzHxEM6e3Ext6HEBqRP0XzJmY1Tf4DfB94iBZg,48
+codesnapper/app.py,sha256=ySrMOhbGk4vmfLngAUUe72Z3oK6bQ78wF7nZrm3Z0r0,14121
+codesnapper/codesnap.py,sha256=chpDJUhUWcGQ_kCqxljCJtEQJgPXmVWBE-10Z3Kj_bo,6610
+codesnapper/templates/index.html,sha256=9b-kWbRAxTI5MkDLbv600gmugux0wQs2FAo34aTzKWU,20469
+codesnapper-0.1.7.dist-info/licenses/LICENSE,sha256=4kiyYt5KGPj8YnY9lzhci4lUtr4MVQk9YVNAMBKPk3c,1078
+codesnapper-0.1.7.dist-info/METADATA,sha256=1Klo_Wtmk0DKnX9x67zRkwDjabr1iy_IFTMPVA-OA8s,2110
+codesnapper-0.1.7.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+codesnapper-0.1.7.dist-info/entry_points.txt,sha256=G2NAHjKn3d6eoQDWvK723m8CemsTUP2Y9nqVNCCDvN0,58
+codesnapper-0.1.7.dist-info/top_level.txt,sha256=g8BP_oXDSDFCzbyxQsbxwciRAifnR_sIlQZOJDCqpQQ,12
+codesnapper-0.1.7.dist-info/RECORD,,
