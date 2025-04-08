@@ -1,0 +1,11 @@
+LICENSE,sha256=kdJmo_2-vOYnFVLSdq2OtB-KHhgBylqoiw7I_-DAtcI,1071
+README.md,sha256=0gJYKGKw1BYta81VzmLtfPCeubMjsleZ7qeS9hGt6ck,9257
+pyproject.toml,sha256=gSjgC5RNE8wqidgu13BkIGDqOxXbTp0BRIctNImLRSU,1206
+glacier/__init__.py,sha256=CNlzFaPZVYGUOq_VexTa0ZJaWSHwZ8U8sfHcw2pX9MY,49
+glacier/core.py,sha256=Ebvg4GAZftnVFrGCAA3Liis2DytZgtHbPM1OusuY-Bo,8463
+glacier/docstring.py,sha256=B_8Tl9S7huwOVBLx4d8XNRoyN5JAhVSnaouJptMvGxA,8238
+glacier/misc.py,sha256=08QqGIKWPY-mZ10CUA7q_akrhJIU80oBxooRp8Rh67U,457
+glacier-0.4.5.dist-info/METADATA,sha256=rpiXKu0NOgMDIiMgcku-H1Qv5FocOmhgUannobdczvE,9762
+glacier-0.4.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+glacier-0.4.5.dist-info/licenses/LICENSE,sha256=kdJmo_2-vOYnFVLSdq2OtB-KHhgBylqoiw7I_-DAtcI,1071
+glacier-0.4.5.dist-info/RECORD,,
