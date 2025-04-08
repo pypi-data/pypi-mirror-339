@@ -1,0 +1,3 @@
+[console_scripts]
+geoterminal=geoterminal.cli.main:main
+
