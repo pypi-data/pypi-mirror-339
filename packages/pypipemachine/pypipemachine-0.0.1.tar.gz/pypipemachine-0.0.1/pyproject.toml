@@ -1,0 +1,26 @@
+[project]
+name = "pypipemachine"
+version = "0.0.1"
+description = "An OOP-based alternative approach to FSM in Python."
+readme = "README.md"
+license = {text = "GNU GPL v3.0"}
+requires-python = ">=3.13"
+dependencies = [
+    "attrs>=25.3.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.1",
+    "ruff>=0.11.4",
+    "wemake-python-styleguide>=1.1.0",
+]
