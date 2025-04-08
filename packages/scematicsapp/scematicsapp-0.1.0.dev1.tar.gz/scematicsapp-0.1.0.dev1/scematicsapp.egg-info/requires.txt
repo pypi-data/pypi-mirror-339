@@ -1,0 +1,6 @@
+typer
+requests
+rich
+pillow
+opencv-python
+pathlib
