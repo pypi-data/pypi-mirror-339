@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+SCXML/__init__.py
+SCXML/_version.py
+SCXML.egg-info/PKG-INFO
+SCXML.egg-info/SOURCES.txt
+SCXML.egg-info/dependency_links.txt
+SCXML.egg-info/top_level.txt
+scxmlviz/__init__.py
+scxmlviz/_display.py
+scxmlviz/static/scxml-bundle.js
