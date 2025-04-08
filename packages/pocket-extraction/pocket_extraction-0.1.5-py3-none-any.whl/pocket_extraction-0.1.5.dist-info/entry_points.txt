@@ -1,0 +1,4 @@
+[console_scripts]
+extract_ligand = pocket_extraction.extract_ligand:main
+extract_ligand_and_pocket = pocket_extraction.extract_ligand_and_pocket:main
+extract_pocket = pocket_extraction.extract_pocket:main
