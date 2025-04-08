@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+notionary/__init__.py
+notionary.egg-info/PKG-INFO
+notionary.egg-info/SOURCES.txt
+notionary.egg-info/dependency_links.txt
+notionary.egg-info/requires.txt
+notionary.egg-info/top_level.txt
