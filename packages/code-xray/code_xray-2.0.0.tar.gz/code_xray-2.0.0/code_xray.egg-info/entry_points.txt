@@ -1,0 +1,2 @@
+[console_scripts]
+code-xray = code_xray.__main__:app
