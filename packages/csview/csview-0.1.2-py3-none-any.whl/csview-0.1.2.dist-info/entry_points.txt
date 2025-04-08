@@ -1,0 +1,3 @@
+[console_scripts]
+csview=csview.csview:main
+
