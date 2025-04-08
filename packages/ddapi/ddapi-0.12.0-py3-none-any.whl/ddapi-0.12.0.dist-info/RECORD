@@ -1,0 +1,14 @@
+ddapi/__init__.py,sha256=VLIOUAYlDoX0IOcOSTiC1APfCFZtNt9Z2nFdU0-wbdk,226
+ddapi/api.py,sha256=wkGKZVE2DxexbDtM9N4KPs_vk61ky14_tbKuIEttWwc,2879
+ddapi/main.py,sha256=AbBF_qZ-gEM22_t639pz8AfQsidQuZ0YY33JUwnCBpw,8198
+ddapi/types.py,sha256=SXmIxETbZQ7nuhYXhyP97dNi7ha0_DFaZAsH6OIIZHM,48
+ddapi/scheme/__init__.py,sha256=E1Fqf__vl33hPhjT9x95Ru_yQDJ6Irf0bgNcJnLMbxE,152
+ddapi/scheme/base.py,sha256=pIvC14hc4EsmGFCDwH-B1f2vAtxe9Bc_5qGOS_OiWJA,805
+ddapi/scheme/ddnet.py,sha256=j-YpK0AQ8fmTS0pq9Zw2YA48urMvTKtfEmj7Ce3MeTI,6843
+ddapi/scheme/ddstats_tw.py,sha256=I5XFF30gEcgE91O0ARE9J2vD7RnJYd2pdcgC0Or9ktA,5471
+ddapi/scheme/status_tw.py,sha256=MkTvzK_cAysID14meNfFc95yPJ8_KBbweg8YsAwZSuU,3609
+ddapi-0.12.0.dist-info/licenses/LICENSE,sha256=W4kN1MW8f-TkMq53LaWHCju0aOi5mWgMvp_kjrYGwOY,1083
+ddapi-0.12.0.dist-info/METADATA,sha256=daotyGV98Xqeq7ivgZE1zUBNUEexclHS7NRCXCWGWfE,1364
+ddapi-0.12.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+ddapi-0.12.0.dist-info/top_level.txt,sha256=BgV_9Wja4JjgIvlSd9BEcP-g0JN-oTqFqxwd2vo1uY8,6
+ddapi-0.12.0.dist-info/RECORD,,
