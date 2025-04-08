@@ -1,0 +1,2 @@
+[console_scripts]
+simlab = sim_lab.cli.main:app
