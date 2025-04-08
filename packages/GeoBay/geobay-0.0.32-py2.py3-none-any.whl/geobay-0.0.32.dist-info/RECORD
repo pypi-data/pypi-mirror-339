@@ -1,0 +1,11 @@
+GeoBay/GeoBay.py,sha256=t7MOPkLJF0jm-TDHBdgYi0adeWd0sd3_VXtHX9KYrdE,5269
+GeoBay/__init__.py,sha256=_NpMvxtWa6LIbMAjM0ktOvxtGsFe7IXFRif_si5YEG4,150
+GeoBay/common.py,sha256=Rw6d9qmZDu3dUGTyJto1Y97S7-QA-m2p-pbCNvMDrm4,184
+GeoBay/example.ipynb,sha256=ClrArZhyxU51Gd8_s7sn5mWsr9tN9YlhGyql78yk7q8,4108
+GeoBay/foliumap.py,sha256=vbrh_AVvc6DsJjhR-DFnmtfFy3fjI525fn5ATfOGtZM,3390
+geobay-0.0.32.dist-info/licenses/LICENSE,sha256=-amjT_r7Hb-ntz4xVqeIlhlBR7FlsLkXALRbmHPHPe0,1069
+geobay-0.0.32.dist-info/METADATA,sha256=dUgrrOGqrtufFylp8SdK93LnLYjj6AP5AJ2QdfQtnFE,1365
+geobay-0.0.32.dist-info/WHEEL,sha256=MAQBAzGbXNI3bUmkDsiV_duv8i-gcdnLzw7cfUFwqhU,109
+geobay-0.0.32.dist-info/entry_points.txt,sha256=sWr3OTtvjBf-h1gWQhqEenmKNPVaL_dn2k5igzWtLgo,43
+geobay-0.0.32.dist-info/top_level.txt,sha256=xZ5M-ziU7DJnmx3XthfGOtSfFiAHMoHlowZPVTB7DJI,7
+geobay-0.0.32.dist-info/RECORD,,
