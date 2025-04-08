@@ -1,0 +1,13 @@
+keystone_role_assignment_openfga/__init__.py,sha256=OIaIVgfYnW7c4avDvCLZLrrpn_z_3shQuht2BYbgJDc,545
+keystone_role_assignment_openfga/config.py,sha256=AVU_HA6Oh56bkEQPN5RQj-ly9gC8J6G_HQ6qJKlCL0U,1228
+keystone_role_assignment_openfga/multiplex_plugin.py,sha256=_UxXDBzUR4b3bi48ujSef0sR90V-GTCiudQYaKTHq6I,16603
+keystone_role_assignment_openfga/plugin.py,sha256=_O86kSEtzKcHV4-ve2aESlkL4sPbHOYGSy2YLSiTRX4,28140
+keystone_role_assignment_openfga/tests/test_plugin.py,sha256=vY6D77ITcsFGfvrUz-HMETWLFwKdAMnj0-Cd5xLGT9g,27490
+keystone_role_assignment_openfga-0.1.0.dist-info/licenses/AUTHORS,sha256=eSsGE3JVrW2ASH7bTgIouBS7PChDMIKvwa0R8N_ZRq4,156
+keystone_role_assignment_openfga-0.1.0.dist-info/licenses/LICENSE,sha256=XfKg2H1sVi8OoRxoisUlMqoo10TKvHmU_wU39ks7MyA,10143
+keystone_role_assignment_openfga-0.1.0.dist-info/METADATA,sha256=teG4Q1pUcl6_hVBPep7EiMvHwpsv0VIleGg9p9pMsX8,4133
+keystone_role_assignment_openfga-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+keystone_role_assignment_openfga-0.1.0.dist-info/entry_points.txt,sha256=nt_iG7zzM72_mR-7DBXIOJxvABbb_mG7ixi8AVMTPOw,174
+keystone_role_assignment_openfga-0.1.0.dist-info/pbr.json,sha256=DWLgSnGvZFuFjjnxuFJgEpWwZm911pfB_HMvh9Dw6v4,47
+keystone_role_assignment_openfga-0.1.0.dist-info/top_level.txt,sha256=n1lZaLJWJ0sD0Bxh2nw9kwy-i6gPEzxUg20mFB4bOLw,33
+keystone_role_assignment_openfga-0.1.0.dist-info/RECORD,,
