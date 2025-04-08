@@ -1,0 +1,8 @@
+numpy
+opencv-python
+ultralytics
+geopandas
+shapely
+pyproj
+tqdm
+streamlit
