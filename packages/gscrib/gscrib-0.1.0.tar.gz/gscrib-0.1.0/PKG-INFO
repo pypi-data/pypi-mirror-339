@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: gscrib
+Version: 0.1.0
+Summary: Supercharge G-code with Python
+Home-page: https://github.com/joansalasoler/gscrib
+License: GPL-3.0
+Keywords: G-code,Python,G-code transformer
+Author: Joan Sala
+Author-email: contact@joansala.com
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: numpy (>=2.2.0,<2.3.0)
+Requires-Dist: pydantic (>=2.10.0,<2.11.0)
+Requires-Dist: pyserial (>=3.5.0,<3.6.0)
+Requires-Dist: scipy (>=1.15.0,<1.16.0)
+Requires-Dist: typeguard (>=4.4.0,<4.5.0)
+Project-URL: Documentation, https://gscrib.readthedocs.io
+Project-URL: Repository, https://github.com/joansalasoler/gscrib
