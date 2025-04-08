@@ -1,0 +1,11 @@
+imodmodel/__init__.py,sha256=rgIndqNlNGW29x8YvvnGe7L7mar4ma1Yxc9WnjwAA0c,107
+imodmodel/binary_specification.py,sha256=jo5Pv6MMdnzBwoWzzze5-y42ZH-20Lz4jtv5T-HSdms,2831
+imodmodel/dataframe.py,sha256=idaPDncDm203c5XClog1OdQs9Wg67439Y76W-XS5n20,2146
+imodmodel/functions.py,sha256=po8nHc3paYeyXXRiRm4kvacXPJuZcpgkqP10SzYgbU8,887
+imodmodel/models.py,sha256=zJ0Bagf9B7hRQgs9Hxi3pg5w67Cw67NevYYupHlQJHw,17253
+imodmodel/parsers.py,sha256=x3Qii-1V-IuYk0TmjdupRR5YbQNRQLSwe0HfonC71AY,7347
+imodmodel/writers.py,sha256=A8MovY4VokD1yRqB-q-fmVw5LN664lxgz-I7oV9jfzg,5219
+imodmodel-0.1.0.dist-info/METADATA,sha256=XXT51CkurK0vPlf2CxXammh6sevJ8ULj1yUkW-OH5vA,2985
+imodmodel-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+imodmodel-0.1.0.dist-info/licenses/LICENSE,sha256=tEUp1hBehHov1EqUVPm09_TlyKymwNcSBBwvu2ZPPMs,1513
+imodmodel-0.1.0.dist-info/RECORD,,
