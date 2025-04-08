@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+medical_article_sdk/config.json
+medical_article_sdk/medical_prompt.txt
+medical_article_sdk/title_note_prompt.txt
+medical_article_sdk.egg-info/PKG-INFO
+medical_article_sdk.egg-info/SOURCES.txt
+medical_article_sdk.egg-info/dependency_links.txt
+medical_article_sdk.egg-info/requires.txt
+medical_article_sdk.egg-info/top_level.txt
+medical_article_sdk/__pycache__/__init__.cpython-312.pyc
+medical_article_sdk/__pycache__/medical_article_sdk.cpython-312.pyc

@@ -1,0 +1,2 @@
+include medical_article_sdk/__pycache__/*.pyc
+exclude medical_article_sdk/*.py
