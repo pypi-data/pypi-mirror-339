@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package station_control.station;
+
+enum Station_State {
+  OFF = 0;
+  HIBERNATE = 1;
+  STANDBY = 2;
+  ON = 3;
+}
+
+service Station {
+  rpc GetStationState(GetStationStateRequest) returns (StationStateReply) {}
+  rpc SetState(SetStationStateRequest) returns (stream StationStateReply) {}
+  rpc SoftReset(SoftResetRequest) returns (stream StationStateReply) {}
+  rpc HardReset(HardResetRequest) returns (stream StationStateReply) {}
+}
+
+message SetStationStateRequest {
+  Station_State station_state = 1;
+}
+
+message GetStationStateRequest {
+}
+
+message SoftResetRequest {
+
+}
+
+message HardResetRequest {
+
+}
+
+message StationStateResult {
+  Station_State station_state = 1;
+}
+
+message StationStateReply {
+  StationStateResult result = 1;
+}
