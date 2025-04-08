@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: bionemo-testing
+Version: 2.4.1
+Summary: Utilities aiding test creation for BioNeMo sub-packages.
+Author-email: BioNeMo Team <bionemofeedback@nvidia.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bionemo-core
+Requires-Dist: bionemo-llm
+Requires-Dist: email-validator
+Requires-Dist: pytest
+Requires-Dist: overrides
+Dynamic: license-file
+
+# bionemo-testing
+
+A package of test-time requirements and utilities for bionemo sub-packages. In particular, the `bionemo-testing` package
+handles downloading and caching data and other assets for running unit tests and example notebooks. For more information
+on test data handling, see [BioNeMo test data management](https://github.com/NVIDIA/bionemo-framework/blob/main/sub-packages/bionemo-testing/src/bionemo/testing/data/README.md)
