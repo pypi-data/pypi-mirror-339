@@ -1,0 +1,2 @@
+[console_scripts]
+fnet_yaml = fnet_yaml.cli:main
