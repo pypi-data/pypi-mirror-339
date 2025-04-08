@@ -1,0 +1,7 @@
+neurips_downloader/__init_.py,sha256=T60aSXh1CbeFQqACD4xI-CPFlyESJJleE6v2YOOrCdc,93
+neurips_downloader/core.py,sha256=HtAe89FLrJG1QIJVL2oWcTUkA9wI3N3hVoJXor4jQMw,2955
+neurips_downloader/commands/download_proceeding_by_year.py,sha256=_bwlz07ilbilZHhc5Ruzn4DCV-yBBP8rfYAqmtbOLBo,962
+neurips_downloader-0.1.2.dist-info/METADATA,sha256=PtTQL7gIfemgBOxRrezO5PQ0Cg5axPSvDp333jLniHU,290
+neurips_downloader-0.1.2.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+neurips_downloader-0.1.2.dist-info/top_level.txt,sha256=4VD3Fvg1GmSau51qSZ9sNfc4PDVSYYuxHVjYMeetGws,19
+neurips_downloader-0.1.2.dist-info/RECORD,,
