@@ -1,0 +1,108 @@
+
+
+CSVSelectorApp Header{
+width: 1fr;
+height: 1;}
+
+CSVSelectorApp Footer{
+width: 1fr;
+height: 1;}
+
+CSVSelectorApp #directory_tree_container {
+
+    content-align: center middle;
+    background: $secondary-darken-3;
+    scrollbar-gutter: stable;
+    overflow: auto;
+    width: 20%;
+    height: 100%;
+    dock: left;
+    border: outer $secondary;
+    padding-left:1;
+}
+
+CSVSelectorApp#directory-tree{
+    padding-top:1;
+    width: 100%;
+    background: $secondary-darken-3;
+
+     }
+
+CSVSelectorApp #datatable_container{
+
+    content-align: center middle;
+    background: $surface;
+    scrollbar-gutter: stable;
+    overflow: auto;
+    width: 80%;
+    height: 100%;
+    dock: right;
+}
+
+
+
+CSVSelectorApp #run_container{
+    layout: horizontal;
+    align: center middle;
+    height: auto;
+
+
+
+}
+
+CSVSelectorApp #select_filter{
+    margin-top: 1;
+    margin-bottom: 1;
+    height: auto;
+    width: 3fr;}
+
+CSVSelectorApp DataFrameTable{
+    border: outer $secondary;
+}
+
+CSVSelectorApp Static{
+
+    width: 100%;
+
+}
+
+CSVSelectorApp #run{
+     width: 25%;
+     margin-top:1;
+    content-align: center middle;
+}
+
+
+CSVSelectorApp #status{
+
+    width: 100%;
+    }
+
+QuitScreen {
+    align: center middle;
+
+}
+
+QuitScreen #dialog {
+    grid-size: 2;
+    grid-gutter: 1 2;
+    grid-rows: 1fr 3;
+    padding: 0 1;
+    width: 60;
+    height: 11;
+    border: thick $background 80%;
+    background: $surface;
+}
+
+QuitScreen #question {
+    column-span: 2;
+    height: 1fr;
+    width: 1fr;
+    content-align: center middle;
+}
+
+QuitScreen Button {
+    width: 1fr;
+    border: tall $secondary-lighten-3;
+
+     }

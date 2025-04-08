@@ -1,0 +1,10 @@
+csv_splitter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+csv_splitter/csv_filter_spliter.py,sha256=95WeJ5U8QlD4ZrpUSB93EMZU4R5RwU9VkRK0-rsWP7o,1643
+csv_splitter/csv_splitter.tcss,sha256=whFTLYaJII87DFaafqVYTZEcBdDuia8Piq9bwCa9GIU,1690
+csv_splitter/csv_splitter_interface.py,sha256=d3wMLSgQhN_wvsh4AP9K9PIzn5WM39tKLR07GoEmreo,7728
+csv_splitter/pd_datatable.py,sha256=UdyoItnQxyy2F0bnbfW1kMftp1uzQ8Ohs4F0x6B-C2c,1273
+csv_filter_splitter-0.1.0.dist-info/METADATA,sha256=ODlEejqxBswpCdai3TqxN5a4JuXWM1FKFpnMP-pQvQw,915
+csv_filter_splitter-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+csv_filter_splitter-0.1.0.dist-info/entry_points.txt,sha256=1JAFsrcBTseowwX8JdXib8WhnFtb8f9unTU4PvpH0NM,80
+csv_filter_splitter-0.1.0.dist-info/top_level.txt,sha256=Q97rVweqN33Y_xJOINCuVvVvGcqPs-q17zsf1Hr_Wak,13
+csv_filter_splitter-0.1.0.dist-info/RECORD,,
