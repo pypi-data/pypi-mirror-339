@@ -1,0 +1,8 @@
+voxium-0.1.0.dist-info/licenses/LICENSE,sha256=pIUacHbRo0ypKKPInsEYxsiyCtrx3lLNyOYBVGIvN1k,1063
+voxium_client/__init__.py,sha256=0pGQFQ6HNCK2aG7YoZb2V7Z1YXgGqCR-o9C0UcDT7ss,464
+voxium_client/client.py,sha256=Um7V2CvOeN_xU4JpuqUE8TTYWc2juIjYlMv-lHgodvU,15722
+voxium_client/live_transcribe.py,sha256=ywRaBqOVYF6OvXyRDzmRBtG3BLh_Kpz2TxR6YIqjQyw,13949
+voxium-0.1.0.dist-info/METADATA,sha256=uvRWmKOYQbTGoq7qOwe4ak8r_XMujYqza2iHS8_Ovws,15396
+voxium-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+voxium-0.1.0.dist-info/top_level.txt,sha256=FUi1dPB9bJWa3YZsstl605Qj8RRoNhY9CuQdnMeOYGQ,14
+voxium-0.1.0.dist-info/RECORD,,
