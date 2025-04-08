@@ -1,0 +1,11 @@
+banquo/__init__.py,sha256=TZKCO2bRRyJj4p4nVsOUUyDcMRSIqYpzpUyUmobza5I,335
+banquo/__main__.py,sha256=HVjaw5PheugjBWhTLDSRzomzvvDHCAGaKzxm36TDKqc,263
+banquo/banquo.py,sha256=bOUGDp30b3RPBLBerAv_z0hamtd8C1YP9XmuLk5iecU,43518
+banquo/kernels.py,sha256=tv7KKshrK08Mw2vZ6yI00AX-CQ-loTY6Cr5lF6AYFSs,9858
+banquo/numpyro.py,sha256=o0-tPRmIoPZ05HIac2qMI1dHcgF_77m64wWscgTBslE,13035
+banquo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+banquo-0.7.1.dist-info/LICENSE,sha256=w21mnWYw7Gnt25ISuqchb_Dl29EpRFB462wGgFqk-hg,1074
+banquo-0.7.1.dist-info/METADATA,sha256=tV6k9pSkWKf2zGgcAyjLJ7jfUIjbZz8dAq1D8vj7ZyM,3911
+banquo-0.7.1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+banquo-0.7.1.dist-info/entry_points.txt,sha256=Fx_A8fIGohcefdS5odavp-UAHF7XbJAFGQ251FKYaII,47
+banquo-0.7.1.dist-info/RECORD,,
