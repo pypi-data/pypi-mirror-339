@@ -1,0 +1,113 @@
+Metadata-Version: 2.4
+Name: promptify-cli
+Version: 0.1.7
+Summary: Interactive CLI to select files, generate markdown for LLM prompts, and copy it to the clipboard.
+Author-email: Oliver Proudfoot <oliverproudfoot@gmail.com>
+License-Expression: MIT
+Project-URL: Repository, https://github.com/olliepro/promptify
+Project-URL: Bug Tracker, https://github.com/olliepro/promptify/issues
+Project-URL: Documentation, https://github.com/olliepro/promptify#readme
+Keywords: cli,prompt,clipboard,llm,ai,developer-tools
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: typer>=0.9.0
+Requires-Dist: pyperclip>=1.8.0
+Requires-Dist: gitignore-parser>=0.1.0
+Requires-Dist: tiktoken>=0.4.0
+Requires-Dist: nbformat>=5.0.0
+Requires-Dist: nbconvert>=7.0.0
+Requires-Dist: prompt_toolkit>=3.0.0
+Requires-Dist: appdirs>=1.4.0
+Requires-Dist: chardet>=4.0.0
+
+# Promptify CLI
+
+An interactive CLI to select files, generate markdown suitable for LLM prompts, and copy it to the clipboard.
+
+## Installation
+
+```bash
+pip install promptify-cli
+```
+
+## Demo
+
+![Promptify CLI Demo](https://raw.githubusercontent.com/olliepro/promptify/refs/heads/main/assets/promptify_example.gif)
+
+## Basic Usage
+
+### Default Behavior
+- Run `promptify` to interactively select files and generate markdown for your clipboard
+- Supports `.promptignore` files (works like `.gitignore`)
+- Offers to add a basic `.promptignore` if none is found at project root. (First time only)
+- Includes a file tree to depth 4, excluding ignored files
+- Selected files (highlighted green) are md-formatted
+- Shows LOC and GPT-4o token counts as you use the UI
+
+### Help
+
+```bash
+promptify --help
+```
+
+> | Option                 | Short | Type      | Description                       | Default |
+> | ---------------------- | ----- | --------- | --------------------------------- | ------- |
+> | `--depth`              | `-d`  | INTEGER   | Max directory depth (0=root only) | `4`     |
+> | `--path`               | `-p`  | DIRECTORY | Starting directory path           | CWD     |
+> | `--clear-state`        |       |           | Clear previous selections         |         |
+> | `--install-completion` |       |           | Install shell completion          |         |
+> | `--show-completion`    |       |           | Show shell completion             |         |
+> | `--help`               |       |           | Show help message and exit        |         |
+
+
+## Example Output (Copied to Clipboard)
+
+````markdown
+Project Structure (Depth: 4):
+
+```
+example_documentation_project/
+├─ foobar/
+│  └─ bar.py
+├─ foo.py
+└─ output.md
+```
+
+---
+
+## File: `foo.py`
+
+```python
+def foo(bar):
+    return bar
+
+```
+
+---
+
+## File: `foobar/bar.py`
+
+```python
+def bar(foo):
+    return foo
+
+```
+````
+
+## Development
+
+This package is self-contained in 1 file at `src/promptify/cli.py`. It's in a state that the UI and features meet my needs, but if you wish to modify the functionality, add more args, etc. drop me a github issue (slow response time) or feel free to submit a merge request!
