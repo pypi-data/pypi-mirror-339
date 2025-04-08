@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+pydamic/PYDAMIC.py
+pydamic/__init__.py
+pydamic.egg-info/PKG-INFO
+pydamic.egg-info/SOURCES.txt
+pydamic.egg-info/dependency_links.txt
+pydamic.egg-info/top_level.txt
