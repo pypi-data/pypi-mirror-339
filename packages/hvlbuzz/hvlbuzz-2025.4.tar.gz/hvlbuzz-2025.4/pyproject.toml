@@ -1,0 +1,99 @@
+[build-system]
+requires = ["setuptools >= 40.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hvlbuzz"
+dynamic = ["version"]
+license = {file = "LICENSE.txt"}
+description = "Compute surface gradient of overhead power lines / prediction of audible noise and electromagnetic field at ground"
+readme = "README.md"
+authors = [
+    {name = "Aldo Tobler", email = "faldo@student.ethz.ch"},
+    {name = "Sören Hedtke", email = "hedtkec@ethz.ch"},
+    {name = "Pascal Bleuler", email = "bleulerp@ethz.ch"},
+    {name = "Henrik Menne", email = "menne@fkh.ch"},
+    {name = "Gerhard Bräunlich", email = "g.braeunlich@disroot.org"},
+]
+maintainers = [
+    {name = "Henrik Menne", email = "menne@fkh.ch"},
+    {name = "Gerhard Bräunlich", email = "g.braeunlich@disroot.org"},
+]
+keywords = ["high voltage", "electro engineering"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+requires-python = ">= 3.9"
+dependencies = [
+    "Kivy==2.1.0",
+    "kivy-garden.matplotlib",
+    "numpy>=1.18, <2.0",
+    "matplotlib==3.7.2",
+    "reportlab>=3.5, <4.0.0",
+    "pywin32>=1.0; platform_system=='Windows'",
+    "exceptiongroup; python_version<'3.11'",
+]
+optional-dependencies = {type-check = ["types-six"]}
+scripts = {hvlbuzz = "hvlbuzz.__main__:main"}
+
+[project.urls]
+Repository = "https://gitlab.com/ethz_hvl/hvlbuzz"
+Documentation = "https://ethz_hvl.gitlab.io/hvlbuzz/"
+
+[tool.setuptools]
+dynamic = {version = {attr = "hvlbuzz.__version__"}}
+package-data = {hvlbuzz = ["static/*"]}
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+  "ANN",      # flake8-annotations (mypy's job)
+  "COM812",   # missing-trailing-comma (conflicts with formatter)
+  "CPY",      # flake8-copyright
+  "D105",     # undocumented-magic-method
+  "D107",     # undocumented-public-init
+  "D202",     # no-blank-line-after-function
+  "D212",     # multi-line-summary-first-line
+  "D401",     # non-imperative-mood
+  "DTZ",      # flake8-datetimez
+  "FIX",      # flake8-fixme (flake8-todos is enough)
+  "ISC001",   # single-line-implicit-string-concatenation (conflicts with formatter)
+  "N802",     # pep8-naming: non-lowercase-variable-in-function
+  "N803",     # pep8-naming: invalid-argument-name
+  "N806",     # pep8-naming: non-lowercase-variable-in-function
+  "N815",     # mixed-case-variable-in-class-scope
+  "PLR2004",  # magic-value-comparison
+  "PTH",      # flake8-use-pathlib
+  "S101",     # flake8-bandit: assert
+  "T201",     # print
+]
+
+
+[tool.mypy]
+strict = true
+exclude = ["dist", "build", "docs"]
+
+[[tool.mypy.overrides]]
+module = [
+    "kivy",
+    "kivy.*",
+    "kivy_garden.*",
+    "reportlab.*",
+    "win32api",
+    "matplotlib",
+    "matplotlib.*",
+]
+ignore_missing_imports = true
+
+
+[tool.pytest.ini_options]
+addopts = "--verbose"
+testpaths = ["test"]
