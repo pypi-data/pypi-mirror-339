@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements-dev.txt
+setup.cfg
+setup.py
+kybra_simple_logging/__init__.py
+kybra_simple_logging/_handler.py
+kybra_simple_logging.egg-info/PKG-INFO
+kybra_simple_logging.egg-info/SOURCES.txt
+kybra_simple_logging.egg-info/dependency_links.txt
+kybra_simple_logging.egg-info/top_level.txt
