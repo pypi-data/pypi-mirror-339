@@ -1,0 +1,2 @@
+[console_scripts]
+haiguitang-mcp = haiguitang_mcp.server:main
