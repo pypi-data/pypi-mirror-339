@@ -1,0 +1,11 @@
+hhi-0.3.0.dist-info/RECORD,,
+hhi-0.3.0.dist-info/WHEEL,sha256=zT4bWmTpgvLb-CO5IGKhtulo8JdnX1gd0cgiqom_p-o,109
+hhi-0.3.0.dist-info/top_level.txt,sha256=EfTuPa1GAcTkI-xLMOZ5QzqZ7xN_A5AKNCFk-B-R7Ck,4
+hhi-0.3.0.dist-info/METADATA,sha256=Ny2PEtXiwD0fK1bNH7jssL2UZQirgRyjZEk8PuGNn7A,2994
+hhi-0.3.0.dist-info/licenses/LICENSE,sha256=hV3WtGIxITkb3B4MjEp-x6Cbem8SAr9ptRN1tbsktSU,1077
+hhi/config.py,sha256=qpp-1K-GPNwE-jTsqjTHLLs2juUIVvEERnjjDGWXhoo,608
+hhi/models.py,sha256=suIIp-q9GoP6PGbqQ-WxPa5dckneyLGddEiZMmTIJGY,967
+hhi/tech.py,sha256=2oOrXECANn21Nbs364yDD2cx0cD0fdqYbrDC7wNqb8s,18187
+hhi/__init__.py,sha256=qlR-mnwnXHlRe-c-CrQ95JN5NJFJHxlsE6ATKJX1KWo,355
+hhi/layers.yaml,sha256=Zugh0gOx_q5K-ukIG2CdjRyvFVOawLFBP5bj48HUqKQ,1377
+hhi/pdk/__init__.cpython-312-darwin.so,sha256=pJUukQyul6iW_iCNoeWBk9Gt3-b_2dQu15LKqnCcOp8,100336
