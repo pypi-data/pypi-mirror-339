@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/stabix/__init__.py
+src/stabix/stabixcore.so
+src/stabix.egg-info/PKG-INFO
+src/stabix.egg-info/SOURCES.txt
+src/stabix.egg-info/dependency_links.txt
+src/stabix.egg-info/top_level.txt
