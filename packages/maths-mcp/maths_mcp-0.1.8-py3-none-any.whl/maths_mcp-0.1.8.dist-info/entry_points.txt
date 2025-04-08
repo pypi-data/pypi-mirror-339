@@ -1,0 +1,2 @@
+[console_scripts]
+maths-mcp = maths_mcp.main:main
