@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+excepthook/__init__.py
+excepthook/code.py
+excepthook/install.py
+excepthook.egg-info/PKG-INFO
+excepthook.egg-info/SOURCES.txt
+excepthook.egg-info/dependency_links.txt
+excepthook.egg-info/entry_points.txt
+excepthook.egg-info/requires.txt
+excepthook.egg-info/top_level.txt
