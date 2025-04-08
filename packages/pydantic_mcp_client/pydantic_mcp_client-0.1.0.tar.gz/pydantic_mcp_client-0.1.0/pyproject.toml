@@ -1,0 +1,21 @@
+[build-system]
+requires = ["flit_core>=3.2"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "pydantic_mcp_client"
+version = "0.1.0"
+description = "Async MCP client wrapper with pydantic_ai integration"
+authors = [
+    { name = "Nishan", email = "mdnishan006@gmail.com" }
+]
+dependencies = [
+    "pydantic",
+    "pydantic_ai",
+    "aiohttp",
+    "mcp",  # replace with actual name if it's your own module
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/nishanlogicplum/pydantic_mcp_client"
