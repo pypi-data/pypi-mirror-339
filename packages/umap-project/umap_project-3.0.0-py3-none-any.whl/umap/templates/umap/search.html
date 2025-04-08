@@ -1,0 +1,43 @@
+{% extends "umap/content.html" %}
+
+{% load i18n %}
+
+{% block head_title %}
+  {% translate "Explore maps" %} - {{ SITE_DESCRIPTION }}
+{% endblock head_title %}
+
+{% block messages %}
+  {# We don't want maps from the results list to display errors in the main page. #}
+{% endblock messages %}
+{% block maincontent %}
+  {% include "umap/search_bar.html" %}
+  <div class="wrapper">
+    <div class="row">
+      {% if request.GET.q %}
+        {% if maps %}
+          <h2>
+            {% blocktranslate trimmed count counter=count %}
+              {{ count }} map found:
+            {% plural %}
+              {{ count }} maps found:
+            {% endblocktranslate %}
+          </h2>
+          <div class="grid-container">
+            {% include "umap/map_list.html" with prefix="search_map" %}
+          </div>
+        {% else %}
+          <h2>
+            {% trans "No map found." %}
+          </h2>
+        {% endif %}
+      {% else %}
+        <h2>
+          {% trans "Latest created maps" %}
+        </h2>
+        <div class="grid-container">
+          {% include "umap/map_list.html" with prefix="search_map" %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock maincontent %}
