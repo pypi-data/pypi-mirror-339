@@ -1,0 +1,5 @@
+grpcio==1.71.0
+protobuf
+numpy
+prompt_toolkit
+python-dotenv
