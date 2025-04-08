@@ -1,0 +1,50 @@
+
+# 现代 Python 项目的核心配置文件
+
+[project]
+name = "hhframe"
+version = "0.5.0"
+description = "houheaven frame for python"
+authors = [
+    { name = "立树", email = "970012685@qq.com" }
+]
+keywords = ["hhframe", "houheaven", "后天堂"]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.6"
+# 指定要安装的依赖包
+dependencies = [
+    "requests>=2.32.3",
+    "urllib3>=2.3.0",
+    "xlwt>=1.3.0",
+    "PyExecJs>=1.5.1",
+    "bs4>=0.0.1",
+    # "qiniu>=7.4.1",
+    # "mysqlclient>=2.0.3",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "http://plugin.houheaven.com/hhframe"
+Documentation = "http://plugin.houheaven.com/hhframe"
+Repository = "http://plugin.houheaven.com/hhframe"
+Issues = "http://plugin.houheaven.com/hhframe"
+
+# 构建系统
+[build-system]
+requires = [
+    "setuptools",            # setuptools 负责构建和打包
+    "wheel"                  # wheel 用于创建二进制分发包
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = [
+    "hhframe",
+    # "hhframe.common"
+]
