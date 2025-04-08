@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: request-replay
+Version: 0.1.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: htamlive
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: httpx
+Requires-Dist: tqdm
+Requires-Dist: httpx[http2]
+
+UNKNOWN
+
