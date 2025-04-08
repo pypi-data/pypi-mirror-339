@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-k8s-server = mcp_k8s_server.main:main
