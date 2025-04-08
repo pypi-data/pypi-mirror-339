@@ -1,0 +1,1611 @@
+Metadata-Version: 2.4
+Name: ka_uts_com
+Version: 2.1.0.250408
+Summary: Communication Class Utilities
+Author-email: Bernd Stroehle <bernd.stroehle@gmail.com>
+Maintainer-email: Bernd Stroehle <bernd.stroehle@gmail.com>
+License-Expression: GPL-3.0-only WITH Classpath-exception-2.0 OR BSD-3-Clause
+Project-URL: Source Code, https://github.com/bs29/ka_uts_com/tree/master
+Project-URL: Homepage, https://kosakya.de/
+Project-URL: Documentation, https://ka-com.readthedocs.io/en/latest
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Natural Language :: English
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Requires-Dist: Jinja2>=3.1.6
+Requires-Dist: orjson>=3.10.16
+Requires-Dist: psutil>=7.0.0
+Requires-Dist: PyYAML>=6.0.2
+Requires-Dist: simplejson>=3.20.1
+Dynamic: license-file
+
+##########
+ka_uts_com
+##########
+
+Overview
+********
+
+.. start short_desc
+
+**Communication Utilities**
+
+.. end short_desc
+
+Installation
+************
+
+.. start installation
+
+The package ``ka_uts_com`` can be installed from PyPI or Anaconda.
+
+To install with ``pip``:
+
+.. code-block:: shell
+
+	$ python -m pip install ka_uts_com
+
+To install with ``conda``:
+
+.. code-block:: shell
+
+	$ conda install -c conda-forge ka_uts_com
+
+.. end installation
+
+Package logging
+***************
+
+Standard or user specific Package logging of application package is defined
+in the static logging class **Log_** of Base module log\_.py of the Communication
+Package **ka_uts_com**.
+The default Logging configuration is defined by the yaml files **log.std.yml**
+for standard Logging or **log.usr.yml** for user Logging in the data directory
+**/ka_uts_com/data** of the Communication package.
+The Logging configuration could be overriden by yaml files with the same names in the
+data directory **<application>/data** of the application packages.
+
+Logging defines log file paths for the following log message types: .
+
+#. *error*
+#. *warning*
+#. *info*
+#. *log*
+#. *debug*
+
+  .. Naming-conventions-for-logging-files-label:
+  .. table:: *Naming conventions for logging file*
+
+   +-------+--------------------------------------------+-------------------+
+   |Type   |Directory                                   |File               |
+   +=======+============================================+===================+
+   |error  |/data/<tenant>/RUN/<package>/<function>/errs|errs_<pid>_<ts>.log|
+   +-------+--------------------------------------------+-------------------+
+   |wnrning|/data/<tenant>/RUN/<package>/<function>/wrns|wrns_<pid>_<ts>.log|
+   +-------+--------------------------------------------+-------------------+
+   |info   |/data/<tenant>/RUN/<package>/<function>/infs|infs_<pid>_<ts>.log|
+   +-------+--------------------------------------------+-------------------+
+   |log    |/data/<tenant>/RUN/<package>/<function>/logs|logs_<pid>_<ts>.log|
+   +-------+--------------------------------------------+-------------------+
+   |debug  |/data/<tenant>/RUN/<package>/<function>/debs|debs_<pid>_<ts>.log|
+   +-------+--------------------------------------------+-------------------+
+
+  .. Naming examples-of-logging-files-label:
+  .. table:: *Naming examples of logging file*
+
+   +-------+-------------------------------+------------------------+
+   |Type   |Directory                      |File                    |
+   +=======+===============================+========================+
+   |error  |/data/umh/RUN/umh_otec/srr/errs|errs_9470_1737118199.log|
+   +-------+-------------------------------+------------------------+
+   |warning|/data/umh/RUN/umh_otec/srr/wrns|wrns_9470_1737118199.log|
+   +-------+-------------------------------+------------------------+
+   |info   |/data/umh/RUN/umh_otec/srr/infs|infs_9470_1737118199.log|
+   +-------+-------------------------------+------------------------+
+   |log    |/data/umh/RUN/umh_otec/srr/logs|logs_9470_1737118199.log|
+   +-------+-------------------------------+------------------------+
+   |debug  |/data/umh/RUN/umh_otec/srr/debs|debs_9470_1737118199.log|
+   +-------+-------------------------------+------------------------+
+
+Package files
+*************
+
+Classification
+==============
+
+The Files of Package ``ka_uts_com`` could be classified into the follwing file types:
+
+#. *Special files*
+#. *Dunder modules*
+#. *Decorator modules*
+#. *Package modules*
+#. *Data files*
+
+Special files
+*************
+
+  .. Special-file-label:
+  .. table:: *Special-file*
+
+   +--------+--------+-------------------------------------------------------------+
+   |Name    |Type    |Description                                                  |
+   +========+========+=============================================================+
+   |py.typed|Type    |The py.typed file is a marker file used in Python packages to|
+   |        |checking|indicate that the package supports type checking. This is a  |
+   |        |marker  |part of the PEP 561 standard, which provides a standardized  |
+   |        |file    |way to package and distribute type information in Python.    |
+   +--------+--------+-------------------------------------------------------------+
+
+Dunder Modules
+**************
+
+  .. Dunder-modules-label:
+  .. table:: *Dunder-Modules*
+
+   +--------------+---------+----------------------------------------------------+
+   |Name          |Type     |Description                                         |
+   +==============+=========+====================================================+
+   |__init__.py   |Package  |The module is used to execute initialisation code or|
+   |              |directory|mark the directory it contains as a package. The    | 
+   |              |marker   |Module enforces explicit imports and thus clear     |
+   |              |file     |namespace use and call them with the dot notation.  |
+   +--------------+---------+----------------------------------------------------+
+   |__version__.py|Version  |The module consist of Assignment Statements for     |
+   |              |file     |system Variables used in Versioning.                |
+   +--------------+---------+----------------------------------------------------+
+
+Decorator Modules
+*****************
+
+Overview
+========
+
+  .. Decorator Modules-label:
+  .. table:: *Decorator Modules*
+
+   +------+-----------------+
+   |Name  |Decription       |
+   +======+=================+
+   |dec.py|Decorators module|
+   +------+-----------------+
+
+Data Files
+**********
+
+Overview
+========
+
+  .. Data-Files-label:
+  .. table:: *Data Files*
+
+   +-----------+-----------------------------------------+
+   |Name       |Description                              |
+   +===========+=========================================+
+   |log.std.yml|Yaml definition file for standard logging|
+   +-----------+-----------------------------------------+
+   |log.usr.yml|Yaml definition file for user logging    |
+   +-----------+-----------------------------------------+
+
+Package Files
+*************
+
+Classification
+==============
+
+The Modules of Package ``ka_uts_com`` could be classified into the following module types:
+
+#. **Communication Modules**
+#. **Base Modules**
+#. **Utility Modules**
+#. **I/O Control Modules**
+
+Communication Modules
+=====================
+
+Overview
+--------
+
+  .. Communication Modules-label:
+  .. table:: *Communication Modules*
+
+   +--------+-----------------------------+
+   |Name    |Decription                   |
+   +========+=============================+
+   |com.py  |Communication handling module|
+   +--------+-----------------------------+
+   |fnc.py  |Function Management module   |
+   +--------+-----------------------------+
+   |log.py  |Logging management module    |
+   +--------+-----------------------------+
+   |timer.py|Timer management module      |
+   +--------+-----------------------------+
+
+Communication module com.py
+===========================
+
+The Communication Module ``com.py`` contains the single static class ``Com``.
+
+Class Com
+---------
+
+The static Class ``Com`` contains the subsequent variables and methods.
+
+Variables
+^^^^^^^^^
+
+  .. Variables-of-class-Com-label:
+  .. table:: *Variables of class Com*
+
+   +--------+-----------+-------+-----------------------------------+
+   |Name    |Type       |Default|Description                        |
+   +========+===========+=======+===================================+
+   |cfg     |TyDic      |None   |Configuration dictionary           |
+   +--------+-----------+-------+-----------------------------------+
+   |d_pacmod|TyDic      |{}     |pacmod dictionary                  |
+   +--------+-----------+-------+-----------------------------------+
+   |pid     |TyInt      |None   |Process id                         |
+   +--------+-----------+-------+-----------------------------------+
+   |sw_init |TyBool     |None   |Initialisation switch              |
+   +--------+-----------+-------+-----------------------------------+
+   |ts      |TnTimeStamp|None   |Timestamp                          |
+   +--------+-----------+-------+-----------------------------------+
+   |ts_start|TnDateTime |None   |start timestamp in date time format|
+   +--------+-----------+-------+-----------------------------------+
+   |ts_end  |TnDateTime |None   |end timestamp in date time format  |
+   +--------+-----------+-------+-----------------------------------+
+   |ts_etime|TnDateTime |None   |elapse Time                        |
+   +--------+-----------+-------+-----------------------------------+
+   |d_timer |TyDic      |False  |Timer dictionary                   |
+   +--------+-----------+-------+-----------------------------------+
+   |Log     |TyLogger   |False  |Log class                          |
+   +--------+-----------+-------+-----------------------------------+
+   |App     |TyAny      |False  |Application class                  |
+   +--------+-----------+-------+-----------------------------------+
+   |Exit    |TyAny      |False  |Exit class                         |
+   +--------+-----------+-------+-----------------------------------+
+
+Methods
+^^^^^^^
+
+  .. Methods-of-class-Com-label:
+  .. table:: *Methods-of-class-Com*
+
+   +---------+-------------------------------------------------------+
+   |Name     |Description                                            |
+   +=========+=======================================================+
+   |init     |Initialise static variables if they are not initialized|
+   +---------+-------------------------------------------------------+
+   |sh_kwargs|Show keyword arguments                                 |
+   +---------+-------------------------------------------------------+
+
+Method init
+^^^^^^^^^^^
+        
+Parameter
+"""""""""
+
+  .. Parameter-of-method-init-label:
+  .. table:: *Parameter-of-method-init*
+
+   +---------+-----+-----------------+
+   |Name     |Type |Description      |
+   +=========+=====+=================+
+   |cls      |class|current class    |
+   +---------+-----+-----------------+
+   |\**kwargs|TyAny|keyword arguments|
+   +---------+-----+-----------------+
+
+Method sh_kwargs
+^^^^^^^^^^^^^^^^
+        
+Parameter
+"""""""""
+
+  .. Parameter-of-method-sh_kwargs-label:
+  .. table:: *Parameter of method sh_kwargs*
+
+   +--------+-----+--------------------+
+   |Name    |Type |Description         |
+   +========+=====+====================+
+   |cls     |class|current class       |
+   +--------+-----+--------------------+
+   |root_cls|class|root lass           |
+   +--------+-----+--------------------+
+   |d_parms |TyDic|parameter dictionary|
+   +--------+-----+--------------------+
+   |\*args  |list |arguments array     |
+   +--------+-----+--------------------+
+
+Function Module fnc.py
+======================
+
+The Module ``fnc.py`` contains the static class ``Fnc`` with I/O Control methods for log files;
+
+Class Fnc
+---------
+
+The static Class ``Fnc`` contains the subsequent methods
+
+Methods
+^^^^^^^
+
+  .. Methods-of-class-Fnc-label:
+  .. table:: *Methods of class Fnc*
+
+   +--------+------+---------------------------------------------------------+
+   |Name    |Type  |Description                                              |
+   +========+======+=========================================================+
+   |identity|static|Identity function for objects                            |       
+   +--------+------+---------------------------------------------------------+
+   |sh      |static|Show function localised in the given dictionary of       |       
+   |        |      |functions by the given key                               |       
+   +--------+------+---------------------------------------------------------+
+   |ex      |class |Execute the function localised by the show function of   |       
+   |        |      |class Fnc using the given key and dictionary of functions|       
+   +--------+------+---------------------------------------------------------+
+
+Method identity
+^^^^^^^^^^^^^^^
+
+Parameter
+"""""""""
+
+  .. Parameter-of-method-identity-label:
+  .. table:: *Parameter of method identity*
+
+   +----+-----+-----------+
+   |Name|Type |Description|
+   +====+=====+===========+
+   |obj |TyAny|object     |
+   +----+-----+-----------+
+
+Return Value
+""""""""""""
+
+  .. Return-values-of-method-identity-label:
+  .. table:: *Return values of method identity*
+
+   +----+-----+-----------+
+   |Name|Type |Description|
+   +====+=====+===========+
+   |obj |TyAny|object     |
+   +----+-----+-----------+
+
+Method ex
+^^^^^^^^^
+
+Parameter
+"""""""""
+
+  .. Parameter-of-method-ex-label:
+  .. table:: *Parameter of method ex*
+
+   +-----------+--------+------------------------------+
+   |Name       |Type    |Description                   |
+   +===========+========+==============================+
+   |cls        |class   |current class                 |
+   +-----------+--------+------------------------------+
+   |doc        |TnDoC   |Dictionary of Callables       |
+   +-----------+--------+------------------------------+
+   |key        |TnDoc   |key                           |
+   +-----------+--------+------------------------------+
+   |args_kwargs|TnArrDoc|arguments or keyword arguments|
+   +-----------+--------+------------------------------+
+
+Return Value
+""""""""""""
+
+  .. Return-value-of-method-ex-label:
+  .. table:: *Return value of method ex*
+
+   +----+----------+------------------------------------------+
+   |Name|Type      |Description                               |
+   +====+==========+==========================================+
+   |    |TyCallable|Value of Function for argument args_kwargs|
+   +----+----------+------------------------------------------+
+
+Method sh
+^^^^^^^^^
+
+Parameter
+"""""""""
+
+  .. Parameter-of-method-sh-label:
+  .. table:: *Parameter of method sh*
+
+   +----+-----+------------------------------+
+   |Name|Type |Description                   |
+   +====+=====+==============================+
+   |cls |class|current class                 |
+   +----+-----+------------------------------+
+   |doc |TnDoC|Dictionary of Callables       |
+   +----+-----+------------------------------+
+   |key |TnDoc|key                           |
+   +----+-----+------------------------------+
+
+Return Value
+""""""""""""
+
+  .. Return-value-of-method-sh-label:
+  .. table:: *Return value of method sh*
+
+   +----+----------+-----------+
+   |Name|Type      |Description|
+   +====+==========+===========+
+   |fnc |TyCallable|Function   |
+   +----+----------+-----------+
+
+Communicstion Module: log.py
+============================
+
+The Module ``log.py`` contains the static class ``Log`` with I/O Control methods for log files;
+
+Class Log
+---------
+
+The static Class ``Log`` contains the subsequent sub classes and methods
+
+Sub-Classes
+^^^^^^^^^^^
+
+The Class ``Log`` contains the following sub-classes.
+
+  .. Static-sub-classes-of-class-Log-label:
+  .. table:: *Static sub classes of class Log label*
+
+   +----+----------------------------------------------------+
+   |Name|Description                                         |
+   +====+====================================================+
+   |Eq  |Log generated Equate messages                       |
+   +----+----------------------------------------------------+
+   |Dic |Log generated Equate messages for dictionary entries|
+   +----+----------------------------------------------------+
+
+Sub class Eq
+^^^^^^^^^^^^
+
+Methods
+"""""""
+
+  .. Methods-of-sub-class-Eq-label:
+  .. table:: *Methods-of-sub-class-Eq-label*
+
+   +-----+-----------------------------------------------------------------------+
+   |Name |Description                                                            |
+   +=====+=======================================================================+
+   |debug|Log generated equate message "<key> = <value>" to the debug destination|
+   +-----+-----------------------------------------------------------------------+
+   |error|Log generated equate message "<key> = <value>" to the error destination|
+   +-----+-----------------------------------------------------------------------+
+   |info |Log generated equate message "<key> = <value>" to the info destination |
+   +-----+-----------------------------------------------------------------------+
+   |debug|Log generated equate message "<key> = <value>" to the log destination  |
+   +-----+-----------------------------------------------------------------------+
+
+All Methods use the following Parameter:
+
+Parameter
+"""""""""
+
+  .. Parameter-of-Methods-of-sub-class-Eq-label:
+  .. table:: *Parameter of Methods of sub class Eq*
+
+   +-----+-----+-------------+
+   |Name |Type |Description  |
+   +=====+=====+=============+
+   |cls  |class|current class|
+   +-----+-----+-------------+
+   |key  |TyAny|Key          |
+   +-----+-----+-------------+
+   |value|TyAny|Value        |
+   +-----+-----+-------------+
+
+Sub class Dic
+^^^^^^^^^^^^^
+
+Methods
+"""""""
+
+  .. Methods-of-Sub-class-Dic-of-class-Log-label:
+  .. table:: *Methods of Sub class Dic of class Log*
+
+   +-----+---------------------------------------------------------------------------------+
+   |Name |Description                                                                      |
+   +=====+=================================================================================+
+   |debug|Log generated equate messages for all dictionary entries to the debug destination|
+   +-----+---------------------------------------------------------------------------------+
+   |error|Log generated equate messages for all dictionary entries to the error destination|
+   +-----+---------------------------------------------------------------------------------+
+   |info |Log generated equate messages for all dictionary entries to the info destination |
+   +-----+---------------------------------------------------------------------------------+
+   |log  |Log generated equate messages for all dictionary entries to the log destination  |
+   +-----+---------------------------------------------------------------------------------+
+
+All Methods of Sub class Dic of class Log use the following Parameters:
+
+Parameter
+"""""""""
+
+  .. Methods-Parameter-of-Sub-class-Dic-of-class-Log-label:
+  .. table:: *Methods Parameter of Sub class Dic of class-Log*
+
+   +----+-----+-------------+
+   |Name|Type |Description  |
+   +====+=====+=============+
+   |cls |class|current class|
+   +----+-----+-------------+
+   |dic |TyDic|Dictionary   |
+   +----+-----+-------------+
+
+Methods
+^^^^^^^
+
+  .. Methods-of-Sub-class-Dic-of-class-Log-label:
+  .. table:: *Methods of Sub class Dic of class Log*
+
+   +-------+-----------------------------------------------------------+
+   |Name   |Description                                                |
+   +=======+===========================================================+
+   |debug  |Setup stacklevel and log message to the debug destination  |      
+   +-------+-----------------------------------------------------------+
+   |error  |Setup stacklevel and log message to the error destination  |      
+   +-------+-----------------------------------------------------------+
+   |info   |Setup stacklevel and log message to the info destination   |      
+   +-------+-----------------------------------------------------------+
+   |warning|Setup stacklevel and log message to the warning destination|      
+   +-------+-----------------------------------------------------------+
+
+Time management Module timer.py
+===============================
+
+Classes
+-------
+
+The Module ``timer.py`` contains the following classes
+
+
+  .. Static-classes-of-module-timer.py-label:
+  .. table:: *Static classes of module timer.py*
+
+   +---------+------+---------------+
+   |Name     |Type  |Description    |
+   +=========+======+===============+
+   |Timestamp|static|Timestamp class|
+   +---------+------+---------------+
+   |Timer    |static|Timer class    |
+   +---------+------+---------------+
+
+
+Class Timer
+-----------
+
+Methods
+^^^^^^^
+
+  .. Methods-of-class-Timer-label:
+  .. table:: *Methods of class Timer*
+
+   +----------+------------------------------------+
+   |Name      |Description                         |
+   +==========+====================================+
+   |sh_task_id|Show task id                        |
+   +----------+------------------------------------+
+   |start     |Start Timer                         |
+   +----------+------------------------------------+
+   |end       |End Timer and Log Timer info message|
+   +----------+------------------------------------+
+
+Method sh_task_id
+^^^^^^^^^^^^^^^^^
+        
+Show task id, which is created by the concatination of the following items if they are defined:
+#. package,
+#. module,
+#. class_name,
+#. parms
+The items package and module are get from the package-module directory;
+The item class_name is the class_id if its a string, otherwise the attribute
+__qualname__ is used.
+        
+Parameter
+"""""""""
+
+  .. Parameter-of-method-sh_task_id-label:
+  .. table:: *Parameter-of-method-sh_task_id*
+
+   +--------+-----+-----------------+
+   |Name    |Type |Description      |
+   +========+=====+=================+
+   |d_pacmod|TyDic|pacmod dictionary|
+   +--------+-----+-----------------+
+   |class_id|TyAny|Class Id         |
+   +--------+-----+-----------------+
+   |parms   |TnAny|Parameters       |
+   +--------+-----+-----------------+
+   |sep     |TyStr|Separator        |
+   +--------+-----+-----------------+
+
+Return Value
+""""""""""""
+
+  .. Return-value-of-method-sh_task_id-label:
+  .. table:: *Return value of method sh_task_id*
+
+   +----+-----+-----------+
+   |Name|Type |Description|
+   +====+=====+===========+
+   |    |TyStr|Task Id    |
+   +----+-----+-----------+
+
+Method start
+^^^^^^^^^^^^
+        
+Parameter
+"""""""""
+
+  .. Parameter-of-method-start-label:
+  .. table:: *Parameter of method start*
+
+   +--------+-----+-------------+
+   |Name    |Type |Description  |
+   +========+=====+=============+
+   |cls     |class|current class|
+   +--------+-----+-------------+
+   |class_id|TyAny|Class Id     |
+   +--------+-----+-------------+
+   |parms   |TnAny|Parameter    |
+   +--------+-----+-------------+
+   |sep     |TyStr|Separator    |
+   +--------+-----+-------------+
+
+Method: end
+^^^^^^^^^^^
+        
+Parameter
+"""""""""
+
+  .. Parameter-of-end-method-label:
+  .. table:: *Parameter of end method*
+
+   +--------+-----+-------------+
+   |Name    |Type |Description  |
+   +========+=====+=============+
+   |cls     |class|current class|
+   +--------+-----+-------------+
+   |class_id|TyAny|Class Id     |
+   +--------+-----+-------------+
+   |parms   |TnAny|Parameter    |
+   +--------+-----+-------------+
+   |sep     |TyStr|Separator    |
+   +--------+-----+-------------+
+
+Base Modules
+************
+
+Overview
+========
+
+  .. Base Modules-label:
+  .. table:: *Base Modules*
+
+   +---------+----------------------------+
+   |Name     |Decription                  |
+   +=========+============================+
+   |app\_.py |Application setup module    |
+   +---------+----------------------------+
+   |cfg\_.py |Configuration setup module  |
+   +---------+----------------------------+
+   |exit\_.py|Exit Manafement setup module|
+   +---------+----------------------------+
+   |log\_.py |Log management setup module |
+   +---------+----------------------------+
+
+Application setup module: app\_.py
+==================================
+
+The Module ``app.py`` contains a single static class ``App_``.
+
+Class: App\_
+------------
+
+The static class ``App_`` contains the subsequent static variables and methods
+
+Static Variables
+^^^^^^^^^^^^^^^^
+
+  .. Static-variables-of-class-App_-label:
+  .. table:: *Static Variables of class App_*
+
+   +---------------+-------+-------+---------------------+
+   |Name           |Type   |Default|Description          |
+   +===============+=======+=======+=====================+
+   |sw_init        |TyBool |False  |initialisation switch|
+   +---------------+-------+-------+---------------------+
+   |httpmod        |TyDic  |None   |http modus           |
+   +---------------+-------+-------+---------------------+
+   |sw_replace_keys|TnBool |False  |replace keys switch  |
+   +---------------+-------+-------+---------------------+
+   |keys           |TnArr  |None   |Keys array           |
+   +---------------+-------+-------+---------------------+
+   |reqs           |TyDic  |None   |Requests dictionary  |
+   +---------------+-------+-------+---------------------+
+   |app            |TyDic  |None   |Appliction dictionary|
+   +---------------+-------+-------+---------------------+
+
+Methods
+^^^^^^^
+
+  .. Methods-of-class-App_-label:
+  .. table:: *Methods of class App_*
+
+   +----+------+------------------------------------+
+   |Name|Type  |Description                         |
+   +====+======+====================================+
+   |init|class |initialise static variables of class|
+   |    |      |if they are not allready initialized|
+   +----+------+------------------------------------+
+   |sh  |class |show (return) class                 |
+   +----+------+------------------------------------+
+
+Method: init
+^^^^^^^^^^^^
+        
+Parameter
+"""""""""
+
+  .. Parameter-of-method-init-label:
+  .. table:: *Parameter of method init*
+
+   +---------+-----+-----------------+
+   |Name     |Type |Description      |
+   +=========+=====+=================+
+   |cls      |class|Current class    |
+   +---------+-----+-----------------+
+   |\**kwargs|TyAny|Keyword arguments|
+   +---------+-----+-----------------+
+
+Method: sh
+^^^^^^^^^^
+        
+  .. Parameter-of-method-sh-label:
+  .. table:: *Parameter of method sh*
+
+   +---------+-----+-----------------+
+   |Name     |Type |Description      |
+   +=========+=====+=================+
+   |cls      |class|Current class    |
+   +---------+-----+-----------------+
+   |\**kwargs|TyAny|Keyword arguments|
+   +---------+-----+-----------------+
+
+Return Value
+""""""""""""
+
+  .. Return-values-of-method-sh-label:
+  .. table:: *Return values of method sh*
+
+   +----+--------+-----------+
+   |Name|Type    |Description|
+   +====+========+===========+
+   |log |TyLogger|Logger     |
+   +----+--------+-----------+
+
+cfg\_.py
+========
+
+The Base module cfg\_.py contains a single static class ``Cfg_``.
+
+Class Cfg\_
+-----------
+
+The static class ``Cfg_`` contains the subsequent static variables and methods
+
+Static Variables
+^^^^^^^^^^^^^^^^
+
+  .. Static-variables-of-Cfg_-label:
+  .. table:: *Static Variables of Cfg_*
+
+   +----+-----+-------+--------------------+
+   |Name|Type |Default|Description         |
+   +====+=====+=======+====================+
+   |cfg |TyDic|None   |Configuration object|
+   +----+-----+-------+--------------------+
+
+Methods
+^^^^^^^
+
+  .. Methods-of-class-Cfg_-label:
+  .. table:: *Methods of class Cfg_*
+
+   +----+------+-----------------------------------+
+   |Name|Type  |Description                        |
+   +====+======+===================================+
+   |sh  |class |read pacmod yaml file into class   |
+   |    |      |variable cls.dic and return cls.cfg|
+   +----+------+-----------------------------------+
+
+Method: sh
+^^^^^^^^^^
+        
+Parameter
+"""""""""
+
+  .. Parameter-of-method-init-label:
+  .. table:: *Parameter of method sh*
+
+   +--------+--------+-----------------+
+   |Name    |Type    |Description      |
+   +========+========+=================+
+   |cls     |class   |Current class    |
+   +--------+--------+-----------------+
+   |log     |TyLogger|Logger           |
+   +--------+--------+-----------------+
+   |d_pacmod|TyDic   |pacmod dictionary|
+   +--------+--------+-----------------+
+
+Return Value
+""""""""""""
+
+  .. Return-values-of-method-sh-label:
+  .. table:: *Return values of method sh*
+
+   +-------+-----+-----------+
+   |Name   |Type |Description|
+   +=======+=====+===========+
+   |cls.cfg|TyDic|           |
+   +-------+-----+-----------+
+
+Base Modul exit\_.py
+====================
+
+The Base module exit\_.py contains a single static class ``Exit_``.
+
+class Exit\_
+------------
+
+The static Class ``Exit_`` contains the subsequent static variables and methods.
+
+Static Variables
+^^^^^^^^^^^^^^^^
+
+  .. Static variables-of-class-Exit_-label:
+  .. table:: *Static variables of class Exit_*
+
+   +--------------+------+-------+---------------------+
+   |Name          |Type  |Default|Description          |
+   +==============+======+=======+=====================+
+   |sw_init       |TyBool|False  |initialisation switch|
+   +--------------+------+-------+---------------------+
+   |sw_critical   |TyBool|False  |critical switch      |
+   +--------------+------+-------+---------------------+
+   |sw_stop       |TyBool|False  |stop switch          |
+   +--------------+------+-------+---------------------+
+   |sw_interactive|TyBool|False  |interactive switch   |
+   +--------------+------+-------+---------------------+
+
+Methods
+^^^^^^^
+
+  .. Methods-of-class-Exit_-label:
+  .. table:: *Methods of class Exit_*
+
+   +----+------+------------------------------------+
+   |Name|Method|Description                         |
+   +====+======+====================================+
+   |init|class |initialise static variables of class|
+   |    |      |if they are not allready initialized|
+   +----+------+------------------------------------+
+   |sh  |class |show (return) class                 |
+   +----+------+------------------------------------+
+
+Method: init
+^^^^^^^^^^^^
+        
+Parameter
+"""""""""
+
+  .. Parameter-of-method-init-label:
+  .. table:: *Parameter of method init*
+
+   +---------+-----+-----------------+
+   |Name     |Type |Description      |
+   +=========+=====+=================+
+   |cls      |class|Current class    |
+   +---------+-----+-----------------+
+   |\**kwargs|TyAny|Keyword arguments|
+   +---------+-----+-----------------+
+
+Method: sh
+^^^^^^^^^^
+        
+Parameter
+"""""""""
+
+  .. Parameter-of-method-sh-label:
+  .. table:: *Parameter of method sh*
+
+   +---------+-----+-----------------+
+   |Name     |Type |Description      |
+   +=========+=====+=================+
+   |cls      |class|Current class    |
+   +---------+-----+-----------------+
+   |\**kwargs|TyAny|Keyword arguments|
+   +---------+-----+-----------------+
+
+Return Value
+""""""""""""
+
+  .. Return-values-of-method-sh-label:
+  .. table:: *Return values of method sh*
+
+   +----+-----+-------------+
+   |Name|Type |Description  |
+   +====+=====+=============+
+   |cls |class|Current class|
+   +----+-----+-------------+
+
+Module log\_.py
+===============
+
+The Base module log\_.py contains a single static class ``Log_``.
+
+Class Log\_
+-----------
+
+The static Class ``Log_`` contains the subsequent static variables and methods.
+
+Static Variables
+^^^^^^^^^^^^^^^^
+
+  .. Static-variables-of-class-Log_-label:
+  .. table:: *Static variables of class Log_*
+
+   +--------+--------+---------------------------------+---------------------+
+   |Name    |Type    |Default                          |Description          |
+   +========+========+=================================+=====================+
+   |sw_init |TyBool  |False                            |initialisation switch|
+   +--------+--------+---------------------------------+---------------------+
+   |log     |TyLogger|logging.getLogger('dummy_logger')|Logger               |
+   +--------+--------+---------------------------------+---------------------+
+   |username|TyStr   |psutil.Process().username()      |current username     |
+   +--------+--------+---------------------------------+---------------------+
+
+Methods
+^^^^^^^
+
+  .. Methods-of-class-Log_-label:
+  .. table:: *Methods of class Log_*
+
+   +------+------+-------------------------------------+
+   |Name  |Method|Description                          |
+   +======+======+=====================================+
+   |init  |class |initialise static variables of class |
+   |      |      |if they are not allready initialized.|
+   +------+------+-------------------------------------+
+   |sh_cfg|class |Read configuration template into     |
+   |      |      |configuration dictionary and return  |
+   |      |      |changed configuration dictionary.    |
+   +------+------+-------------------------------------+
+   |sh    |class |show (return) current class          |
+   +------+------+-------------------------------------+
+
+Method: init
+^^^^^^^^^^^^
+        
+Parameter
+"""""""""
+
+  .. Parameter-of-method-init-label:
+  .. table:: *Parameter of method init*
+
+   +---------+-----+-------------------+
+   |Name     |Type |Description        |
+   +=========+=====+===================+
+   |cls      |class|Current class      |
+   +---------+-----+-------------------+
+   |com      |class|Communication class|
+   +---------+-----+-------------------+
+   |\**kwargs|TyAny|Keyword arguments  |
+   +---------+-----+-------------------+
+
+Method sh_cfg
+^^^^^^^^^^^^^
+        
+Parameter
+"""""""""
+
+  .. Parameter-of-method-sh_cfg-label:
+  .. table:: *Parameter of method sh_cfg*
+
+   +---------+-----+-------------------+
+   |Name     |Type |Description        |
+   +=========+=====+===================+
+   |cls      |class|Current class      |
+   +---------+-----+-------------------+
+   |com      |class|Communication class|
+   +---------+-----+-------------------+
+   |\**kwargs|TyAny|Keyword arguments  |
+   +---------+-----+-------------------+
+
+Return Value
+""""""""""""
+
+  .. Return-values-of-method-sh-label:
+  .. table:: *Return values of method sh*
+
+   +----+-----+-------------+
+   |Name|Type |Description  |
+   +====+=====+=============+
+   |cls |class|Current class|
+   +----+-----+-------------+
+
+sh (Method of class Log\_)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+        
+Parameter
+"""""""""
+
+  .. Parameter-of-method-sh-label:
+  .. table:: *Parameter of method sh*
+
+   +---------+-----+-----------------+
+   |Name     |Type |Description      |
+   +=========+=====+=================+
+   |cls      |class|Current class    |
+   +---------+-----+-----------------+
+   |\**kwargs|TyAny|Keyword arguments|
+   +---------+-----+-----------------+
+
+Return Value
+""""""""""""
+
+  .. Return-values-of-method-sh-label:
+  .. table:: *Return values of method sh*
+
+   +----+-----+-------------+
+   |Name|Type |Description  |
+   +====+=====+=============+
+   |cls |class|Current class|
+   +----+-----+-------------+
+
+Utility Modules
+***************
+
+Overview
+========
+
+  .. Utility-Modules-label:
+  .. table:: *Utility Modules*
+
+   +-----------+--------------------------------+
+   |Name       |Functionality                   |
+   +===========+================================+
+   |aoeqstmt.py|Manage array of equate statement|
+   +-----------+--------------------------------+
+   |date.py    |Manage dates                    |
+   +-----------+--------------------------------+
+   |doeq.py    |Manage dictionary of equates    |
+   +-----------+--------------------------------+
+   |fnc.py     |Manage functions                |
+   +-----------+--------------------------------+
+   |pacmod.py  |Manage Packages and Modules     |
+   +-----------+--------------------------------+
+   |str.py     |Manage strings                  |
+   +-----------+--------------------------------+
+
+Module aoeqstmt.py
+==================
+
+Classes
+-------
+
+  .. Classes-of-module-aoeqstmt.py-label:
+  .. table:: *Classes of Module aoeqstmt.py*
+
+   +-------------------------------------------------------+
+   |Static Class                                           |
+   +---------+---------------------------------------------+
+   |Name     |Description                                  |
+   +=========+=============================================+
+   |AoEqStmt |Manage Commandline Arguments as Equate String|
+   +---------+---------------------------------------------+
+
+Class AoEqStmt
+--------------
+
+The static Class ``AoEqStmt`` contains the subsequent variables and methods
+
+Variables
+^^^^^^^^^
+
+  .. Variables-of-class-AoEqStmt-label:
+  .. table:: *Variables of class AoEqStmt*
+
+   +----------------------------------------------------+
+   |Static Variables                                    |
+   +---------------+------+-------+---------------------+
+   |Name           |Type  |Default|Description          |
+   +===============+======+=======+=====================+
+   |sw_init        |TyBool|False  |initialisation switch|
+   +---------------+------+-------+---------------------+
+   |httpmod        |TyDic |None   |http modus           |
+   +---------------+------+-------+---------------------+
+   |sw_replace_keys|TnBool|False  |replace keys switch  |
+   +---------------+------+-------+---------------------+
+   |keys           |TnArr |None   |Keys array           |
+   +---------------+------+-------+---------------------+
+   |reqs           |TyDic |None   |Requests dictionary  |
+   +---------------+------+-------+---------------------+
+   |app            |TyDic |None   |Appliction dictionary|
+   +---------------+------+-------+---------------------+
+
+Methods
+^^^^^^^
+
+  .. Methods-of-class-AoEqStmt-label:
+  .. table:: *Methods of class AoEqStmt*
+
+   +--------------+---------------------------------------------------------+
+   |Name          |Description                                              |
+   +==============+=========================================================+
+   |_set_by_pacmod|set item "current pacmod dictionary" of equate dictionary|
+   +--------------+---------------------------------------------------------+
+   |_set_by_prof  |set item "show profile" of equate dictionary             |
+   +--------------+---------------------------------------------------------+
+   |sh            |set and show (return) equate dictionary                  |
+   +--------------+---------------------------------------------------------+
+
+Method _set_pacmod_curr
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Description
+"""""""""""  
+
+Set item "pacmod_curr" of equate dictionary using item "tenant".
+
+Parameter
+"""""""""
+
+  .. Parameter-of-method-set_pacmod_curr-label:
+  .. table:: *Parameter of method set_pacmod_curr*
+
+   +--------+-----+---------------------+
+   |Name    |Type |Description          |
+   +========+=====+=====================+
+   |d_eq    |TyDic|Dictionary of Equates|
+   +--------+-----+---------------------+
+   |root_cls|class|Root Class           |
+   +--------+-----+---------------------+
+
+Method _set_sh_prof
+^^^^^^^^^^^^^^^^^^^
+
+Description
+"""""""""""
+
+Set item "sh_prof" of equate dictionary using profile initialiation function.
+
+Parameter
+"""""""""
+
+  .. Parameter-of-Method-set_sh_prof-label:
+  .. table:: *Parameter of method set_sh_prof*
+
+   +-------+------+-------------------------------+
+   |Name   |Type  |Description                    |
+   +=======+======+===============================+
+   |d_eq   |TyDic |Dictionary of Equates          |
+   +-------+------+-------------------------------+
+   |sh_prof|TyCall|Profile initialisation function|
+   +-------+------+-------------------------------+
+
+Method: sh
+^^^^^^^^^^
+
+Description
+"""""""""""
+
+Set and show (return) equate dictionary
+
+Parameter
+"""""""""
+
+  .. Parameter-of-method-sh-label:
+  .. table:: *Parameter of method sh*
+
+   +-------+------+-------------------------------+
+   |Name   |Type  |Description                    |
+   +=======+======+===============================+
+   |a_s_eq |TyDic |Dictionary of Equates          |
+   +-------+------+-------------------------------+
+   |sh_prof|TyCall|Profile initialisation function|
+   +-------+------+-------------------------------+
+
+doeq.py
+=======
+
+The Module ``doeq.py`` contains a single static class ``DoEq``.
+
+Module doeq.py
+--------------
+
+The static class ``DoEq`` is used to manage Commandline Arguments of Equate Strings.
+
+Methods
+^^^^^^^
+
+  .. Methods-of-class-DoEq-label:
+  .. table:: *Methods of class DoEq*
+
+   +--------+--------------------------------------------------+
+   |Name    |Description                                       |
+   +========+==================================================+
+   |sh_value|Show value of equate string provided by single    |
+   |        |command line argument                             |
+   +--------+--------------------------------------------------+
+   |sh_d_eq |Show Dictionary created by parsing array of equate|
+   |        |strings provided by commandline arguments         |
+   +--------+--------------------------------------------------+
+
+Method: sh_value
+^^^^^^^^^^^^^^^^
+
+Parameter
+"""""""""
+
+  .. Parameter-of-method-sh_value-label:
+  .. table:: *Parameter of method sh_value*
+
+   +-------------+-----+-------------------------------------+
+   |Name         |Type |Description                          |                
+   +=============+=====+=====================================+
+   |cls          |class|current class                        |
+   +-------------+-----+-------------------------------------+
+   |key          |TyStr|Key of equate string                 |
+   +-------------+-----+-------------------------------------+
+   |value        |TyAny|Value of equate string               |
+   +-------------+-----+-------------------------------------+
+   |d_valid_parms|TnDic|Dictionary of valid keys (parameters)|
+   +-------------+-----+-------------------------------------+
+   |cls          |class|current class                        |
+   +-------------+-----+-------------------------------------+
+   |a_s_eq       |TyArr|array of equate strings              |
+   +-------------+-----+-------------------------------------+
+   |d_valid_parms|TnDic|Dictionary of valid parameter-keys   |
+   +-------------+-----+-------------------------------------+
+
+Return Values
+"""""""""""""
+
+  .. Return-values-of-method-sh_value-label:
+  .. table:: *Return values of method sh_value*
+
+   +-----+-----+----------------------+
+   |Name |Type |Description           | 
+   +=====+=====+======================+
+   |value|Any  |converted Value of the|
+   |     |     |equate-string         |
+   |     |     |according Value type  |
+   |     |     |d_valid_parms         |
+   +-----+-----+----------------------+
+   |d_eq |TnDic|Dictiony of parameter |
+   |     |     |key, values           |
+   +-----+-----+----------------------+
+
+Utility Module: pacmod.py
+=========================
+
+The Utility module pacmod.py contains a single static class ``PacMod``.
+
+Class PaMmod
+-------------
+
+Methods
+^^^^^^^
+
+  .. Methods-of-class-Pacmod-label:
+  .. table:: *Methods of class Pacmod*
+
+   +-----------------+-------------------------------------------------+
+   |Name             |Description                                      |
+   +=================+=================================================+
+   |sh_d_pacmod      |create and show (return) pacmod dictionary       |
+   +-----------------+-------------------------------------------------+
+   |sh_path_cfg_yaml |show pacmod file path of the yaml file           |
+   |                 |<pacmod module>.yaml in the data directory of the|
+   |                 |current module of the current package            |
+   +-----------------+-------------------------------------------------+
+   |sh_path_keys_yaml|show pacmod file path type for the yaml file     |
+   |                 |keys.yml in the data directory of the current    |
+   |                 |module of the current pacḱage                    |
+   +-----------------+-------------------------------------------------+
+   |sh_pacmod_type   |show pacmod type directory path                  |
+   +-----------------+-------------------------------------------------+
+   |sh_file_path     |show pacmod file path                            |
+   +-----------------+-------------------------------------------------+
+   |sh_pattern       |show pacmod file path pattern                    |
+   +-----------------+-------------------------------------------------+
+   |sh_path_cfg_log  |show file path of log configuration file         |
+   +-----------------+-------------------------------------------------+
+   |sh_d_pacmod      |show pacmod dictionary                           |
+   +-----------------+-------------------------------------------------+
+
+Method: sh_d_pacmod
+^^^^^^^^^^^^^^^^^^^
+        
+Parameter
+"""""""""
+
+  .. Parameter-of-module-sh_d_pacmod-label:
+  .. table:: *Parameter of method sh_d_pacmod*
+
+   +--------+-----+-----------------+
+   |Name    |Type |Description      |
+   +========+=====+=================+
+   |root_cls|class|root class       |
+   +--------+-----+-----------------+
+   |tenant  |Any  |                 |
+   +--------+-----+-----------------+
+        
+Method: sh_path_cfg_yaml
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Parameter
+"""""""""
+
+  .. Parameter-of-module-sh_path_cfg_yaml-of-class-Pacmod-label:
+  .. table:: *Parameter of method sh_path_cfg_yaml*
+
+   +------+-----+-----------------+
+   |Name  |Type |Description      |
+   +======+=====+=================+
+   |pacmod|TyDic|                 |
+   +------+-----+-----------------+
+        
+Method: sh_path_cfg_yaml
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Parameter
+"""""""""
+
+
+   +------+-----+-----------------+
+   |Name  |Type |Description      |
+   +======+=====+=================+
+   |pacmod|TyDic|                 |
+   +------+-----+-----------------+
+   |type\_|Tystr|                 |
+   +------+-----+-----------------+
+        
+Method: sh_path_cfg_yaml
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Parameter
+"""""""""
+
+  .. Parameter-of-module-sh_path_cfg_yaml-label:
+  .. table:: *Parameter of method sh_path_cfg_yaml*
+
+   +------+-----+-----------------+
+   |Name  |Type |Description      |
+   +======+=====+=================+
+   |pacmod|TyDic|                 |
+   +------+-----+-----------------+
+   |type\_|str  |                 |
+   +------+-----+-----------------+
+        
+Method: sh_path_cfg_yaml
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Parameter
+"""""""""
+
+  .. Parameter-of-module-sh_path_cfg_yaml-label:
+  .. table:: *Parameter of method sh_path_cfg_yaml*
+
+   +---------+-----+-----------------+
+   |Name     |Type |Description      |
+   +=========+=====+=================+
+   |cls      |class|current class    |
+   +---------+-----+-----------------+
+   |pacmod   |TyDic|                 |
+   +---------+-----+-----------------+
+   |type\_   |TyStr|                 |
+   +---------+-----+-----------------+
+   |suffix   |TyStr|                 |
+   +---------+-----+-----------------+
+   |pid      |TyStr|                 |
+   +---------+-----+-----------------+
+   |ts       |TyAny|                 |
+   +---------+-----+-----------------+
+   |\**kwargs|TyAny|keyword arguments|
+   +---------+-----+-----------------+
+        
+Method: sh_path_cfg_yaml
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Parameter
+"""""""""
+
+  .. Parameter-of-method-sh_path_cfg_yaml-label:
+  .. table:: *Parameter of method sh_path_cfg_yaml*
+
+   +---------+-----+-----------------+
+   |Name     |Type |Description      |
+   +=========+=====+=================+
+   |pacmod   |TyDic|                 |
+   +---------+-----+-----------------+
+   |type\_   |TyStr|                 |
+   +---------+-----+-----------------+
+   |suffix   |TyStr|                 |
+   +---------+-----+-----------------+
+   |\**kwargs|TyAny|keyword arguments|
+   +---------+-----+-----------------+
+        
+Method: sh_path_cfg_yaml
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Parameter
+"""""""""
+
+  .. Parameter-of-method-sh_path_cfg_yaml-label:
+  .. table:: *Parameter of method sh_path_cfg_yaml*
+
+   +--------+-----+-----------------+
+   |Name    |Type |Description      |
+   +========+=====+=================+
+   |pacmod  |TnDic|                 |     
+   +--------+-----+-----------------+
+   |filename|TyStr|                 |
+   +--------+-----+-----------------+
+        
+Method: sh_d_pacmod
+^^^^^^^^^^^^^^^^^^^
+
+Parameter
+"""""""""
+
+  .. Parameter-of-method-sh_d_pacmod-label:
+  .. table:: *Parameter of method sh_d_pacmod*
+
+   +---------+-----+-----------------+
+   |Name     |Type |Description      |
+   +=========+=====+=================+
+   |cls      |class|current class    |
+   +---------+-----+-----------------+
+   |\**kwargs|TyAny|keyword arguments|
+   +---------+-----+-----------------+
+
+I/O Control Modules
+*******************
+
+Module jinja2\_.py
+==================
+
+The Module ``jinja2_.py`` contains the single static class Jinja2
+
+Class: Jinja2
+-------------
+
+The static Class ``Jinja2`` provides I/O Control methods for Jinja2 files;
+it contains the subsequent methods.
+
+Methods
+^^^^^^^
+
+  .. Methods-of-class-Jinja2-label:
+  .. table:: *Methods of class Jinja2*
+
+   +-------------+------------------------------+
+   |Name         |Description                   |
+   +=============+==============================+
+   |read         |Read log file path with jinja |
+   +-------------+------------------------------+
+   |read_template|Read log file path with jinja2|       
+   +-------------+------------------------------+
+
+Method: read
+^^^^^^^^^^^^
+
+Parameter
+"""""""""
+
+  .. Parameter-of-method-read-label:
+  .. table:: *Parameter of method read*
+
+   +--------+-----+---------------+
+   |Name    |Type |Description    |
+   +========+=====+===============+
+   |pacmod  |TnDic|               |
+   +--------+-----+---------------+
+   |filename|str  |               |
+   +--------+-----+---------------+
+
+Method read_template
+^^^^^^^^^^^^^^^^^^^^
+
+Parameter
+"""""""""
+
+  .. Parameter-of-method-read-template-label:
+  .. table:: *Parameter of method read template*
+
+   +--------+-----+---------------+
+   |Name    |Type |Description    |
+   +========+=====+===============+
+   |pacmod  |TnDic|               |
+   +--------+-----+---------------+
+   |filename|TnAny|               |
+   +--------+-----+---------------+
+
+Module yaml\_.py
+================
+
+The Module ``yaml_.py`` contains one static class ``Yaml``
+
+Class Yaml
+----------
+
+The static Class ``Yaml`` provides I/O Control functions for Yaml files;
+it contains the subsequent methods
+
+Methods
+^^^^^^^
+
+  .. Methods-of-class-Yaml-label:
+  .. table:: *Methods of class Yaml*
+
+   +----+------------------------------------------------------+
+   |Name|Description                                           |
+   +====+======================================================+
+   |load|Load yaml string into any object using yaml loader.   |
+   |    |Default is yaml.safeloader                            |
+   +----+------------------------------------------------------+
+   |read|Read yaml file path into any object using yaml loader.|
+   |    |Default loader is yaml.safeloader                     |
+   +----+------------------------------------------------------+
+
+Method load
+^^^^^^^^^^^
+
+Parameter
+"""""""""
+
+  .. Parameter-of-method-load-label:
+  .. table:: *Parameter of method load*
+
+   +------+-----+--------------+
+   |Name  |Type |Description   |
+   +======+=====+==============+
+   |string|TyStr|              |
+   +------+-----+--------------+
+   |loader|TyStr|              |
+   +------+-----+--------------+
+
+Method read
+^^^^^^^^^^^
+
+Parameter
+"""""""""
+
+  .. Parameter-of-method-read-label:
+  .. table:: *Parameter of method read*
+
+   +------+-----+--------------+
+   |Name  |Type |Description   |
+   +======+=====+==============+
+   |path  |TyStr|              |
+   +------+-----+--------------+
+   |loader|TyStr|              |
+   +------+-----+--------------+
+
+Appendix
+********
+
+.. contents:: **Table of Content**
