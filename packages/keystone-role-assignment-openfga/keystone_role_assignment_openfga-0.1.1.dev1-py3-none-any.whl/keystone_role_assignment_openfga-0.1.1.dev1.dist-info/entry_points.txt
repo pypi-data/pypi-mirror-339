@@ -1,0 +1,3 @@
+[keystone.assignment]
+openfga = keystone_role_assignment_openfga.plugin:OpenFGA
+openfga_sql_multiplex = keystone_role_assignment_openfga.multiplex_plugin:OpenFGASqlMultiplex
