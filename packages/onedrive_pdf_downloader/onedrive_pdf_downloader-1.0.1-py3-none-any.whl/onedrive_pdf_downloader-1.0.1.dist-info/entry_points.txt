@@ -1,0 +1,2 @@
+[console_scripts]
+onedrive-pdf-downloader = onedrive_pdf_downloader.__main__:main
