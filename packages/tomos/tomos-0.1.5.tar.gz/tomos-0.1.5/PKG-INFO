@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: tomos
+Version: 0.1.5
+Summary: Code Tomographies for AyED2
+License: MIT
+Author: Javier Mansilla
+Author-email: javimansilla@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: buttons-and-dials (>=0.1.3,<0.2.0)
+Requires-Dist: docopt (>=0.6.2,<0.7.0)
+Requires-Dist: lark (>=1.2.2,<2.0.0)
+Requires-Dist: moviepy (>=2.1.2,<3.0.0)
+Requires-Dist: prettytable (>=3.11.0,<4.0.0)
+Requires-Dist: pydantic (>=2.10.6,<3.0.0)
+Requires-Dist: pygments (>=2.18.0,<3.0.0)
+Requires-Dist: pygments-ayed2 (>=0.1.2,<0.2.0)
+Requires-Dist: six (>=1.17.0,<2.0.0)
+Requires-Dist: skitso (>=0.1.13,<0.2.0)
+Description-Content-Type: text/markdown
+
+# τόμος
+
+Tomographies for your code
+
+![betterlogo](https://github.com/user-attachments/assets/1138b7bb-815a-43e4-8384-c742ce029c76)
+
