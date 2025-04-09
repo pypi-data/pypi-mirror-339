@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+markupsafe-markdown-filter = mkdocs_markupsafe_markdown_filter.plugin:MarkupSafeMarkdownFilterPlugin
