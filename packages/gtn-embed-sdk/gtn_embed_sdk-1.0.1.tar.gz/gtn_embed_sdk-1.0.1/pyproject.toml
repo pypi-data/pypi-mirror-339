@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gtn-embed-sdk"
+version = "1.0.1"
+description = "Python Software Developement Kit for GTN Fintech API"
+dependencies = [
+    "requests",
+    "cryptography",
+    "PyJWT",
+    "websocket-client",
+    "toml"
+]
+requires-python = ">=3.12"
+authors = [
+    { name = "Uditha Nagahawatta", email = "n.uditha@gtngroup.com" },
+]
+maintainers = [
+    { name = "Fintech API Team", email = "embed-pypi@gtngroup.com" },
+]
+readme = "README.md"
+license-files = ["LICENSE"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+    "Topic :: Internet",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Intended Audience :: Developers",
+]
+keywords = ["GTN API"]
+
+[project.urls]
+Homepage = "https://github.com/GTN-Tech/python-sdk"
+Documentation = "https://github.com/GTN-Tech/python-sdk"
+Source = "https://github.com/GTN-Tech/python-sdk.git"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["gtnapi*"]
