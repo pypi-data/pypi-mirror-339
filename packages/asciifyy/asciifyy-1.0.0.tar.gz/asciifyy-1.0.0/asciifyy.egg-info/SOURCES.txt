@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+asciify.bat
+asciify.py
+pyproject.toml
+requirements.txt
+setup.py
+asciifyy.egg-info/PKG-INFO
+asciifyy.egg-info/SOURCES.txt
+asciifyy.egg-info/dependency_links.txt
+asciifyy.egg-info/entry_points.txt
+asciifyy.egg-info/requires.txt
+asciifyy.egg-info/top_level.txt
