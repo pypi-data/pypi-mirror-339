@@ -1,0 +1,3 @@
+[console_scripts]
+macids = macids.__main__:main
+macids-netmon = macids.netmon.__main__:main
