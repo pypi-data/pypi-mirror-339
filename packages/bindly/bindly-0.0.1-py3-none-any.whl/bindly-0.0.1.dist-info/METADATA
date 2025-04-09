@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: bindly
+Version: 0.0.1
+Summary: Composable, type-safe, and testable API clients for Python.
+Project-URL: Homepage, https://github.com/valentincalomme/bindly
+Project-URL: Repository, https://github.com/valentincalomme/bindly
+Author-email: Valentin Calomme <dev@valentincalomme.com>
+License-File: LICENSE
+Requires-Python: >=3.12
+Provides-Extra: cli
+Requires-Dist: typer>=0.15.2; extra == 'cli'
+Description-Content-Type: text/markdown
+
+# xOR
+
+Composable, type-safe, and testable API clients for Python.

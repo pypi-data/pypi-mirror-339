@@ -1,0 +1,2 @@
+[console_scripts]
+bindly = bindly.cli.application:app
