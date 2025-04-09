@@ -1,0 +1,193 @@
+Metadata-Version: 2.4
+Name: llama-metasearch
+Version: 0.1.0
+Summary: Metasearch engine aggregating and ranking results from multiple LlamaAI sources.
+Project-URL: Homepage, https://github.com/yourusername/llama-metasearch
+Project-URL: Bug Tracker, https://github.com/yourusername/llama-metasearch/issues
+Project-URL: Documentation, https://yourusername.github.io/llama-metasearch/
+Author-email: Your Name <your.email@example.com>
+License: MIT License
+        
+        Copyright (c) 2024 Your Name # Replace with current year and your name/organization
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE. 
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Requires-Dist: asyncio>=3.4
+Requires-Dist: httpx>=0.24.0
+Requires-Dist: llamafind>=0.1.0
+Requires-Dist: loguru>=0.7.0
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: pydantic>=1.10.0
+Requires-Dist: scikit-learn>=1.1.0
+Provides-Extra: all
+Requires-Dist: black>=23.3.0; extra == 'all'
+Requires-Dist: fastapi>=0.95.0; extra == 'all'
+Requires-Dist: httpx; extra == 'all'
+Requires-Dist: isort>=5.12.0; extra == 'all'
+Requires-Dist: mkdocs-material>=9.1.6; extra == 'all'
+Requires-Dist: mkdocs>=1.4.2; extra == 'all'
+Requires-Dist: mkdocstrings[python]>=0.20.0; extra == 'all'
+Requires-Dist: mypy>=1.2.0; extra == 'all'
+Requires-Dist: pre-commit>=3.3.1; extra == 'all'
+Requires-Dist: pytest-asyncio; extra == 'all'
+Requires-Dist: pytest-cov>=4.1.0; extra == 'all'
+Requires-Dist: pytest-mock>=3.10.0; extra == 'all'
+Requires-Dist: pytest>=7.3.1; extra == 'all'
+Requires-Dist: ruff>=0.0.260; extra == 'all'
+Requires-Dist: uvicorn[standard]>=0.21.0; extra == 'all'
+Provides-Extra: api
+Requires-Dist: fastapi>=0.95.0; extra == 'api'
+Requires-Dist: uvicorn[standard]>=0.21.0; extra == 'api'
+Provides-Extra: dev
+Requires-Dist: black>=23.3.0; extra == 'dev'
+Requires-Dist: httpx; extra == 'dev'
+Requires-Dist: isort>=5.12.0; extra == 'dev'
+Requires-Dist: mypy>=1.2.0; extra == 'dev'
+Requires-Dist: pre-commit>=3.3.1; extra == 'dev'
+Requires-Dist: pytest-asyncio; extra == 'dev'
+Requires-Dist: pytest-cov>=4.1.0; extra == 'dev'
+Requires-Dist: pytest-mock>=3.10.0; extra == 'dev'
+Requires-Dist: pytest>=7.3.1; extra == 'dev'
+Requires-Dist: ruff>=0.0.260; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: mkdocs-material>=9.1.6; extra == 'docs'
+Requires-Dist: mkdocs>=1.4.2; extra == 'docs'
+Requires-Dist: mkdocstrings[python]>=0.20.0; extra == 'docs'
+Description-Content-Type: text/markdown
+
+# llama-metasearch
+
+[![PyPI version](https://img.shields.io/pypi/v/llama_metasearch.svg)](https://pypi.org/project/llama_metasearch/)
+[![License](https://img.shields.io/github/license/llamasearchai/llama-metasearch)](https://github.com/llamasearchai/llama-metasearch/blob/main/LICENSE)
+[![Python Version](https://img.shields.io/pypi/pyversions/llama_metasearch.svg)](https://pypi.org/project/llama_metasearch/)
+[![CI Status](https://github.com/llamasearchai/llama-metasearch/actions/workflows/llamasearchai_ci.yml/badge.svg)](https://github.com/llamasearchai/llama-metasearch/actions/workflows/llamasearchai_ci.yml)
+
+**Llama Metasearch (llama-metasearch)** is a powerful metasearch engine within the LlamaSearch AI ecosystem. It aggregates results from multiple underlying search sources, ranks them, and presents a unified set of results to the user.
+
+## Key Features
+
+- **Metasearch Engine:** Core logic for querying multiple sources and combining results (`metasearch.py`).
+- **Source Aggregation:** Fetches results from various configured search engines or APIs.
+- **Result Ranking:** Implements algorithms to rank aggregated results effectively.
+- **Unified API:** Provides a single point of access for querying diverse sources.
+- **Core Module:** Manages the overall metasearch process (`core.py`).
+- **Configurable:** Allows defining search sources, ranking parameters, and other settings (`config.py`).
+
+## Installation
+
+```bash
+pip install llama-metasearch
+# Or install directly from GitHub for the latest version:
+# pip install git+https://github.com/llamasearchai/llama-metasearch.git
+```
+
+## Usage
+
+*(Usage examples demonstrating how to perform metasearch queries will be added here.)*
+
+```python
+# Placeholder for Python client usage
+# from llama_metasearch import MetasearchClient, SearchConfig
+
+# config = SearchConfig.load("config.yaml")
+# client = MetasearchClient(config)
+
+# # Perform a metasearch query
+# results = client.search("artificial intelligence trends", sources=["web", "news", "academic"])
+# for result in results:
+#     print(f"[{result.source}] {result.title} - {result.url}")
+```
+
+## Architecture Overview
+
+```mermaid
+graph TD
+    A[User Query] --> B{Core Orchestrator (core.py)};
+    B --> C{Metasearch Engine (metasearch.py)};
+    C -- Queries --> D[Source 1 Interface];
+    C -- Queries --> E[Source 2 Interface];
+    C -- Queries --> F[...];
+    D --> G((Source 1 API / DB));
+    E --> H((Source 2 API / DB));
+    F --> I((...));
+    G -- Results --> C;
+    H -- Results --> C;
+    I -- Results --> C;
+    C --> J{Result Aggregation & Ranking};
+    J --> K[Unified Search Results];
+
+    L[Configuration (config.py)] -- Configures --> B;
+    L -- Configures --> C;
+    L -- Configures --> D;
+    L -- Configures --> E;
+    L -- Configures --> F;
+
+    style C fill:#f9f,stroke:#333,stroke-width:2px
+```
+
+1.  **Query Input:** The user submits a search query.
+2.  **Core Orchestrator:** Manages the request flow.
+3.  **Metasearch Engine:** Receives the query and dispatches it to configured source interfaces.
+4.  **Source Interfaces:** Interact with the actual underlying search sources (APIs, databases, etc.).
+5.  **Aggregation & Ranking:** The engine gathers results from all sources, deduplicates, and ranks them.
+6.  **Output:** Presents a unified list of ranked results.
+7.  **Configuration:** Defines which sources to query, API keys, ranking strategies, etc.
+
+## Configuration
+
+*(Details on configuring search sources, API keys, ranking algorithms, result caching, etc., will be added here.)*
+
+## Development
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/llamasearchai/llama-metasearch.git
+cd llama-metasearch
+
+# Install in editable mode with development dependencies
+pip install -e ".[dev]"
+```
+
+### Testing
+
+```bash
+pytest tests/
+```
+
+### Contributing
+
+Contributions are welcome! Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) and submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
