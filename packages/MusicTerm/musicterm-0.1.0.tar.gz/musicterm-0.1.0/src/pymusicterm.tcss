@@ -1,0 +1,80 @@
+.search_tabs {
+    height: 60%;
+}
+
+.status_controls {
+    align: center middle;
+}
+
+.player_controls {
+    padding: 0 0;
+    align: center middle;
+}
+
+Rule {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+#search_results {
+    margin: 0 1;
+}
+
+#playlist_results {
+    margin: 0 1;
+}
+
+.song_item {
+    height: 5;
+    padding: 1 0 0 0;
+    text-wrap: nowrap;
+    border-bottom: hkey white;
+    text-overflow: ellipsis;
+
+}
+
+.title {
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    width: 50%;
+}
+
+.album {
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    width: 20%;
+}
+
+
+.artist {
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    width: 50%;
+}
+
+.control_label {
+    padding: 0 1;
+    align: center bottom;
+}
+
+.length {
+    padding: 0 1;
+    align: center bottom;
+}
+.image {
+    height: 3;
+    width: 6;
+    margin: 0 1 0 1;
+    align: center middle;
+}
+
+ListItem {
+    transition: background 0.3s;
+}
+
+
+.playing {
+    background: $primary;
+}
