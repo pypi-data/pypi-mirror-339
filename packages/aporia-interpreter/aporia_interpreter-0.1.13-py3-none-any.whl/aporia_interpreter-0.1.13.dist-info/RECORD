@@ -1,0 +1,16 @@
+aporia/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aporia/main.py,sha256=2EUbqzXr_DPqh0LvAYNl6PL9WwaXTR4naEuW4cb-uGM,1548
+aporia/aporia_ast/__init__.py,sha256=ibs0nhR_mBbKz111ETLX8fwZ7dkc1pqxwvKES0LUS-A,37
+aporia/aporia_ast/main.py,sha256=oQiKpfHIQ5VTwHdJqO438quIo7aDCx2fxjdrRdDUe38,6821
+aporia/interpreter/__init__.py,sha256=p3B7gArE0ipwM_gg2ynZsftRYYSMIVO4FtQPdl7eHz0,47
+aporia/interpreter/main.py,sha256=neB0bkUAHMG2Hce9BnFRUTMq1uTAmyttW1NfNcricpM,5044
+aporia/interpreter/utils.py,sha256=50rB6iCLflDbA5Ih6P1nSmIhDyDOomoVt0VmAP3rk5c,4574
+aporia/parser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aporia/parser/grammar.lark,sha256=qFst9Q8z7pAXUSSuJenKLN0ID2F1Z1_EG40En2rs7J8,1455
+aporia/parser/parser.py,sha256=kMzXy8DDVpaYi_1ACUbXCWL_R-AR-IKLrDpuUInCrDE,410
+aporia/parser/transformer.py,sha256=ANyIztsmYfO48rtXT3nr4n7psS-Yto2qV1NkA6LPMq8,4576
+aporia_interpreter-0.1.13.dist-info/METADATA,sha256=hnqJzAab77ChgdxIE5dvRijAh9Gvcjn4tGQveNU7BUs,1591
+aporia_interpreter-0.1.13.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+aporia_interpreter-0.1.13.dist-info/entry_points.txt,sha256=GjiiZoREjgA-Gc_PgrGLk_tG2K0aNZAOaQpsTDYBlFk,43
+aporia_interpreter-0.1.13.dist-info/top_level.txt,sha256=0iuNvndRStOlO0H0ddlqKtsVfDmQMRED1v_CQmrjvFI,7
+aporia_interpreter-0.1.13.dist-info/RECORD,,
