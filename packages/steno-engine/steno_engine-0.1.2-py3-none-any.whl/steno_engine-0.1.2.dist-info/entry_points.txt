@@ -1,0 +1,2 @@
+[console_scripts]
+steno = steno.main:cli
