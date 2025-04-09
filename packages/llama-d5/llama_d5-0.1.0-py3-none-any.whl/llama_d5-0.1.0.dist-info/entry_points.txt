@@ -1,0 +1,2 @@
+[console_scripts]
+llama-d5 = llama_d5.llamadoc2pdf.main:run

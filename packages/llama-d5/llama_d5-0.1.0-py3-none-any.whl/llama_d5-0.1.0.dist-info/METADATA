@@ -1,0 +1,218 @@
+Metadata-Version: 2.4
+Name: llama-d5
+Version: 0.1.0
+Summary: A comprehensive document and web page conversion toolkit powered by Llama AI
+Project-URL: Homepage, https://github.com/llama-ai/llama-d5
+Project-URL: Bug Tracker, https://github.com/llama-ai/llama-d5/issues
+Author-email: Llama D5 Team <team@llamad5.dev>
+License: MIT License
+        
+        Copyright (c) 2024 Llama AI
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE. 
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Documentation
+Classifier: Topic :: Internet :: WWW/HTTP :: Browsers
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Requires-Dist: aiohttp>=3.8.3
+Requires-Dist: alembic>=1.12.0
+Requires-Dist: anticaptchaofficial>=1.0.54
+Requires-Dist: beautifulsoup4>=4.12.2
+Requires-Dist: cloudscraper>=1.2.60
+Requires-Dist: docx2pdf>=0.1.8
+Requires-Dist: fake-useragent>=1.1.1
+Requires-Dist: fastapi>=0.104.0
+Requires-Dist: img2pdf>=0.5.0
+Requires-Dist: langchain>=0.0.267
+Requires-Dist: llama-index-tools-playwright>=0.1.0
+Requires-Dist: llm-cmd>=0.1.0
+Requires-Dist: llm-mlx>=0.2.0
+Requires-Dist: markdown2>=2.4.6
+Requires-Dist: markdown>=3.5.1
+Requires-Dist: mlx>=0.8.0
+Requires-Dist: networkx>=3.2
+Requires-Dist: numpy>=1.24.2
+Requires-Dist: openai>=1.0.0
+Requires-Dist: opencv-python-headless>=4.7.0.68
+Requires-Dist: pdfkit>=1.0.0
+Requires-Dist: pikepdf>=6.2.5
+Requires-Dist: pillow>=10.0.0
+Requires-Dist: playwright-pdf>=0.1.3
+Requires-Dist: playwright-stealth>=1.0.7
+Requires-Dist: playwright>=1.40.0
+Requires-Dist: pydantic-settings>=2.0.3
+Requires-Dist: pydantic>=2.4.2
+Requires-Dist: pypdf2>=2.12.1
+Requires-Dist: pypdf>=4.0.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: reportlab>=4.0.4
+Requires-Dist: requests-html>=0.10.0
+Requires-Dist: requests>=2.31.0
+Requires-Dist: rich>=13.0.0
+Requires-Dist: selenium-stealth>=1.0.6
+Requires-Dist: selenium>=4.8.0
+Requires-Dist: setuptools>=68.0.0
+Requires-Dist: shot-scraper>=0.9.0
+Requires-Dist: sqlalchemy>=2.0.23
+Requires-Dist: tf-playwright-stealth>=0.1.0
+Requires-Dist: tqdm>=4.66.1
+Requires-Dist: typer>=0.9.0
+Requires-Dist: undetected-chromedriver>=3.2.0
+Requires-Dist: uvicorn>=0.23.2
+Requires-Dist: weasyprint>=60.1
+Provides-Extra: all
+Requires-Dist: black>=23.10.1; extra == 'all'
+Requires-Dist: flake8>=6.1.0; extra == 'all'
+Requires-Dist: isort>=5.12.0; extra == 'all'
+Requires-Dist: mypy>=1.6.1; extra == 'all'
+Requires-Dist: pre-commit>=3.5.0; extra == 'all'
+Requires-Dist: pytest-cov>=4.1.0; extra == 'all'
+Requires-Dist: pytest-mock>=3.12.0; extra == 'all'
+Requires-Dist: pytest-playwright-asyncio>=0.7.0; extra == 'all'
+Requires-Dist: pytest-playwright>=0.7.0; extra == 'all'
+Requires-Dist: pytest-sugar>=0.9.7; extra == 'all'
+Requires-Dist: pytest>=7.4.3; extra == 'all'
+Requires-Dist: ruff>=0.0.260; extra == 'all'
+Requires-Dist: tox>=4.11.3; extra == 'all'
+Requires-Dist: uv>=0.1.0; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: black>=23.10.1; extra == 'dev'
+Requires-Dist: flake8>=6.1.0; extra == 'dev'
+Requires-Dist: isort>=5.12.0; extra == 'dev'
+Requires-Dist: mypy>=1.6.1; extra == 'dev'
+Requires-Dist: pre-commit>=3.5.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.1.0; extra == 'dev'
+Requires-Dist: pytest-mock>=3.12.0; extra == 'dev'
+Requires-Dist: pytest-playwright-asyncio>=0.7.0; extra == 'dev'
+Requires-Dist: pytest-playwright>=0.7.0; extra == 'dev'
+Requires-Dist: pytest-sugar>=0.9.7; extra == 'dev'
+Requires-Dist: pytest>=7.4.3; extra == 'dev'
+Requires-Dist: ruff>=0.0.260; extra == 'dev'
+Requires-Dist: tox>=4.11.3; extra == 'dev'
+Requires-Dist: uv>=0.1.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# llama-d5
+
+[![PyPI version](https://img.shields.io/pypi/v/llama_d5.svg)](https://pypi.org/project/llama_d5/)
+[![License](https://img.shields.io/github/license/llamasearchai/llama-d5)](https://github.com/llamasearchai/llama-d5/blob/main/LICENSE)
+[![Python Version](https://img.shields.io/pypi/pyversions/llama_d5.svg)](https://pypi.org/project/llama_d5/)
+[![CI Status](https://github.com/llamasearchai/llama-d5/actions/workflows/llamasearchai_ci.yml/badge.svg)](https://github.com/llamasearchai/llama-d5/actions/workflows/llamasearchai_ci.yml)
+
+**Llama D5 (llama-d5)** is a document processing toolkit within the LlamaSearch AI ecosystem. It appears to focus on document conversion (potentially from various formats to PDF, indicated by `llamadoc2pdf`) and capturing document representations (like screenshots, suggested by `llama_screenshot`).
+
+## Key Features
+
+- **Document Conversion:** Includes components for converting document formats, possibly centered around PDF output (`llamadoc2pdf/`).
+- **Document Capture:** Functionality to capture visual representations of documents, like screenshots (`llama_screenshot.py`).
+- **Core Module:** Likely orchestrates the conversion and capture processes (`core.py`).
+- **Configurable:** Supports configuration options (`config.py`).
+
+## Installation
+
+```bash
+pip install llama-d5
+# Or install directly from GitHub for the latest version:
+# pip install git+https://github.com/llamasearchai/llama-d5.git
+```
+
+## Usage
+
+*(Usage examples for document conversion and screenshot generation will be added here.)*
+
+```python
+# Placeholder for Python client usage
+# from llama_d5 import DocProcessor, ConversionConfig
+
+# config = ConversionConfig.load("config.yaml")
+# processor = DocProcessor(config)
+
+# # Convert a document to PDF
+# pdf_path = processor.convert_to_pdf(input_file="document.docx")
+# print(f"PDF saved to: {pdf_path}")
+
+# # Take a screenshot
+# screenshot_path = processor.take_screenshot(url="https://example.com", output_file="webpage.png")
+# print(f"Screenshot saved to: {screenshot_path}")
+```
+
+## Architecture Overview
+
+```mermaid
+graph TD
+    A[Input Document / URL] --> B{Core Processor (core.py)};
+    B -- Conversion Task --> C{Document Converter (llamadoc2pdf/)};
+    C --> D[Output PDF];
+    B -- Capture Task --> E{Screenshot Tool (llama_screenshot.py)};
+    E --> F[Output Image (Screenshot)];
+
+    G[Configuration (config.py)] -- Configures --> B;
+    G -- Configures --> C;
+    G -- Configures --> E;
+
+    style B fill:#f9f,stroke:#333,stroke-width:2px
+```
+
+1.  **Input:** Accepts a document file or URL.
+2.  **Core Processor:** Manages the request and routes it to the appropriate tool.
+3.  **Converter:** Handles conversion of input documents into PDF format.
+4.  **Screenshot Tool:** Captures a visual representation (screenshot) of a document or webpage.
+5.  **Output:** Produces either a PDF file or an image file.
+6.  **Configuration:** Settings control the behavior of the conversion and capture tools.
+
+## Configuration
+
+*(Details on configuring input/output formats, screenshot resolution, conversion options, etc., will be added here.)*
+
+## Development
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/llamasearchai/llama-d5.git
+cd llama-d5
+
+# Install in editable mode with development dependencies
+pip install -e ".[dev]"
+```
+
+### Testing
+
+```bash
+pytest tests/
+```
+
+### Contributing
+
+Contributions are welcome! Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) and submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
