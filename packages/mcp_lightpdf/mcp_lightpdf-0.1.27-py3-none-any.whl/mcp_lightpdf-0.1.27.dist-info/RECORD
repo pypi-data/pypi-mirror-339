@@ -1,0 +1,10 @@
+mcp_lightpdf/__init__.py,sha256=PPnAgpvJLYLVOTxnHDmJAulFnHJD6wuTwS6tRGjqq6s,141
+mcp_lightpdf/common.py,sha256=GqtiWsQDChhczXuDM7mez153-D9k7qXX_28kiMgAwrs,9380
+mcp_lightpdf/converter.py,sha256=qVIQmUxBe361Zz3aTn_BUaOIuxFTNrfcIBg04gMKB5s,11614
+mcp_lightpdf/editor.py,sha256=YEOCiI7uwkoqu8yJCBS4-1aLcUnS2oGa3nluwOoEawI,20845
+mcp_lightpdf/server.py,sha256=rYCbHWoTsC8HSB99znJ3_2vSzBctewfVi0H-Arf4yQ0,35656
+mcp_lightpdf-0.1.27.dist-info/METADATA,sha256=wt5TRffHHNCzoQyjRnehVOmdu9xgu9rOc1uDPTxZ3vc,3477
+mcp_lightpdf-0.1.27.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+mcp_lightpdf-0.1.27.dist-info/entry_points.txt,sha256=XukO7bgYDAGTzHofxzDqBgNfBQGFTBohLeawGBtW8ww,51
+mcp_lightpdf-0.1.27.dist-info/top_level.txt,sha256=-YXXLeYHzexCac5OHY6ZijS4Lo2fCaKg5Rsjx3iEPRs,13
+mcp_lightpdf-0.1.27.dist-info/RECORD,,
