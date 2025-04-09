@@ -1,0 +1,18 @@
+[project]
+name = "Landsifier"
+version = "2.0.1"
+authors = [
+  {name="Manan Kapoor", email='manank1997@gmail.com'},
+  {name="Kushanav Bhuyan", email="kushanav.bhuyan@phd.unipd.it"},
+  {name="Kamal Rana", email="kamalrana520@gmail.com"}
+]
+description = "A python package for landslides research"
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.urls]
+"Homepage" = "https://github.com/manank1997/Landsifier-V2.0.0/"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
