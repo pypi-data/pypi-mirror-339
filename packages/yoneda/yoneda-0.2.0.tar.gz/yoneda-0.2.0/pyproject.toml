@@ -1,0 +1,90 @@
+[project]
+name = "yoneda"
+version = "0.2.0"
+description = "Category theory in python."
+readme = "README.md"
+license = "MIT"
+keywords = [
+    "category",
+    "category-theory",
+    "monad",
+    "monoid",
+    "functor",
+    "isomorphism",
+    "morphism",
+    "arrow",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "infix>=1.2",
+    "lunchbox",
+]
+authors = [
+    { name = "Alex Braun", email = "alexander.g.braun@gmail.com" },
+]
+
+[project.urls]
+repository = "https://github.com/theNewFlesh/yoneda"
+documentation = "https://theNewFlesh.github.io/yoneda"
+
+[project.optional-dependencies]
+
+[build-system]
+requires = [
+    "pdm-pep517>=1.0.0",
+]
+build-backend = "pdm.pep517.api"
+
+[tool.ruff]
+cache-dir = "/home/ubuntu/.cache/ruff"
+line-length = 100
+indent-width = 4
+exclude = [
+    "*_test.py",
+]
+
+[tool.ruff.format]
+quote-style = "preserve"
+indent-style = "space"
+docstring-code-format = true
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+]
+ignore = [
+    "E731",
+]
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "single"
+inline-quotes = "single"
+
+[tool.uv]
+cache-dir = "/home/ubuntu/pdm/cache"
+
+[tool.coverage.report]
+show_missing = true
+omit = [
+    "*/__init__.py",
+    "*/*_test_base.py",
+    "*/*_test.py",
+    "*/*_tests.py",
+    "*/cli.py",
+    "*/command.py",
+    "*/mock_*.py",
+    "*/conftest.py",
+]
