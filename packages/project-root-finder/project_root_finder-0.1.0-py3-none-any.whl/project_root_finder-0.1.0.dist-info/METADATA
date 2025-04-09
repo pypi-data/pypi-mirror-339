@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: project_root_finder
+Version: 0.1.0
+Summary: A simple package to get the absolute path of your Python project root
+Author-email: James <mail@jamesdavies.me>
+License: MIT
+Project-URL: Homepage, https://github.com/jamesmdavies88
+Project-URL: Repository, https://github.com/jamesmdavies88/project_root_finder
+Keywords: project,root,path,utility
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
