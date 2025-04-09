@@ -1,0 +1,4 @@
+[console_scripts]
+ai = cmd_ai.main:main
+ai-bash = cmd_ai.main:main
+ai_bash = cmd_ai.main:main
