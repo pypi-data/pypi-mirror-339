@@ -1,0 +1,6 @@
+
+[color]
+colorama
+
+[progress]
+rich>=10.0.0
