@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: dvp-tools
+Version: 5.0.1
+Summary: Delphix Virtualization SDK Tools
+Home-page: https://developer.delphix.com
+Author: Delphix
+Author-email: virtualization-plugins@delphix.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11, <3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: attrs<22.3,>=22.2
+Requires-Dist: certifi<2023,>=2022
+Requires-Dist: click==7.1.2
+Requires-Dist: click-configfile==0.2.3
+Requires-Dist: configparser<5.4,>=5.3
+Requires-Dist: dvp-libs==5.0.1
+Requires-Dist: dvp-platform==5.0.1
+Requires-Dist: flake8<6.1,>=6.0
+Requires-Dist: httpretty<1.1,>=1.0
+Requires-Dist: importlib-resources<5.11,>=5.10
+Requires-Dist: jinja2<3.2,>=3.1
+Requires-Dist: jsonschema<4.18,>=4.17
+Requires-Dist: MarkupSafe<2.2,>=2.1
+Requires-Dist: pkgutil-resolve-name==1.3.10
+Requires-Dist: pyyaml<7,>=6
+Requires-Dist: requests<2.32,>=2.31
+Requires-Dist: six<1.17,>=1.16
+Requires-Dist: zipp<3.12,>=3.11
+
+**Standalone installation of this package is not supported.** Please install the [dvp](https://pypi.org/project/dvp/) package which will install this package.
+
+# Disclaimer
+
+The software is provided “as-is” without any warranties of any kind. To the maximum extent permitted by applicable law, Delphix Corp. and its affiliates disclaim any liability, implied warranties, including, without limitation, any implied warranties of merchantability, fitness for a particular purpose and non-infringement of intellectual property rights.
