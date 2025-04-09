@@ -1,0 +1,75 @@
+Metadata-Version: 2.4
+Name: wagtail-case-insensitive
+Version: 0.1.2
+Summary: Fixes case errors in URLs by redirecting.
+Home-page: https://github.com/FullFact/wagtail-case-insensitive
+Author: Andy Lulham
+Author-email: andy.lulham@fullfact.org
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 5.1
+Classifier: Framework :: Wagtail
+Classifier: Framework :: Wagtail :: 6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+License-File: LICENSE
+Requires-Dist: wagtail>=6.4
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+Wagtail case insensitive redirects
+==================================
+
+Fixes case errors in URLs by redirecting.
+
+Installation
+------------
+
+.. code:: shell
+
+    pip install wagtail-case-insensitive
+
+Usage
+-----
+
+In your project’s Django settings file:
+
+.. code:: python
+
+    INSTALLED_APPS = [
+        # ...
+
+        'case_insensitive',
+    ]
+
+    MIDDLEWARE = [
+        # ...
+        # all other django middleware first
+
+        'case_insensitive.middleware.CaseInsensitiveRouteMiddleware',
+    ]
+
+
+Then replace :code:`wagtail.models.Page` with :code:`case_insensitive.models.CaseInsensitiveRoutePage`:
+
+.. code:: python
+
+    from case_insensitive.models import CaseInsensitiveRoutePage as Page
+
+
+    class MyContentPage(Page):
+        ...

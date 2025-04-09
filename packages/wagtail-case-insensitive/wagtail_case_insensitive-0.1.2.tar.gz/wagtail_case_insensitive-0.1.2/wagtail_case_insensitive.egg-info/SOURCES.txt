@@ -1,0 +1,11 @@
+LICENSE
+README.rst
+setup.py
+case_insensitive/__init__.py
+case_insensitive/middleware.py
+case_insensitive/models.py
+wagtail_case_insensitive.egg-info/PKG-INFO
+wagtail_case_insensitive.egg-info/SOURCES.txt
+wagtail_case_insensitive.egg-info/dependency_links.txt
+wagtail_case_insensitive.egg-info/requires.txt
+wagtail_case_insensitive.egg-info/top_level.txt
