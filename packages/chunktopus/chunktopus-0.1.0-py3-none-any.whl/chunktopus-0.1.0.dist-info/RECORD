@@ -1,0 +1,11 @@
+chunktopus/__init__.py,sha256=w4GiSaD_6B-naOSOzxuZ5HB7h6w87IVKAG11ae0xYCc,2947
+chunktopus/cli.py,sha256=ctQhHzSa0WvFVjJCRZzCwtNTffFgNlZ72g82j7atpwQ,3509
+chunktopus/main.py,sha256=KdaQ3OFinnKibzZliqKUwg5ls9i52xugNAaRXGBAcpI,236
+chunktopus/routes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chunktopus/routes/chunking_routes.py,sha256=y_eyxlpcfO0CcJ2bEBn0w92rv3aTskRXNLdrAIBAPr4,2785
+chunktopus/routes/root_routes.py,sha256=l2uZgssG1mR1T809m3kzznR3QMPGRKTIKLAOpzHU-Zs,749
+chunktopus-0.1.0.dist-info/METADATA,sha256=bHb5lwnFydW9KrJ1eaXP8g7YhD22DxO2TreRFnYprY4,4168
+chunktopus-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+chunktopus-0.1.0.dist-info/entry_points.txt,sha256=Y0iAaptKNcfWoxQB0GyeACvcya5b3q3oeyb8krO3k44,51
+chunktopus-0.1.0.dist-info/top_level.txt,sha256=WQlGH5DEBD2Nl7XBGaUVStangOpMq8PKxIvgn71r4fI,11
+chunktopus-0.1.0.dist-info/RECORD,,
