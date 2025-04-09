@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+zenquotespy/__init__.py
+zenquotespy/main.py
+zenquotespy.egg-info/PKG-INFO
+zenquotespy.egg-info/SOURCES.txt
+zenquotespy.egg-info/dependency_links.txt
+zenquotespy.egg-info/requires.txt
+zenquotespy.egg-info/top_level.txt
