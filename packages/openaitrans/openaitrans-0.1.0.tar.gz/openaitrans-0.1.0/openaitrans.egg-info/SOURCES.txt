@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+openaitrans/__init__.py
+openaitrans/translator.py
+openaitrans.egg-info/PKG-INFO
+openaitrans.egg-info/SOURCES.txt
+openaitrans.egg-info/dependency_links.txt
+openaitrans.egg-info/requires.txt
+openaitrans.egg-info/top_level.txt
+tests/test_translator.py
