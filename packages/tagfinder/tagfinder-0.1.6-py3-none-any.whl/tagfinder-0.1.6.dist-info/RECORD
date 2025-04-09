@@ -1,0 +1,8 @@
+tagfinder-0.1.6.dist-info/METADATA,sha256=1O7t-0LOcN6ZSApG4TzxZpHht3LcFyeP9l1e6WSWpYw,2219
+tagfinder-0.1.6.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+tagfinder-0.1.6.dist-info/entry_points.txt,sha256=dKfRILoVVwuF8YSesvmk-6BI8TS8fnSN3DTsqT9Mxao,64
+tagfinder/__init__.py,sha256=lkelKM_up_lF72SXLPX_HAPQzCr-81fOHViicnR1SNk,175
+tagfinder/cli.py,sha256=fbua5LiKKzODlLyRgOX3JWijJNbx5iqZuGxP4KCmKV4,4089
+tagfinder/config.py,sha256=xhASjmixpZaxhpggPSyZ11-qh4aq3tL0BpXSLdvpOrc,3855
+tagfinder/core.py,sha256=7A2zo-g7dFNQcsD7BvBTjIWrR0dvvOz6EQ3UA6vPJYw,4430
+tagfinder-0.1.6.dist-info/RECORD,,
