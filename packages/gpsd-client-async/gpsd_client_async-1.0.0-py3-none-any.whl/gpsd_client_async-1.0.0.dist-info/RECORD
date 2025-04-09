@@ -1,0 +1,8 @@
+gpsd_client_async/__init__.py,sha256=9WQvf0mNoh463v2v4fxV_SUkaWppklX6upnhJH_xmeM,166
+gpsd_client_async/client.py,sha256=xtexiMtLcNM3E3VrmqGmPxhJyKexcwOk9dzxy9Kkiho,1617
+gpsd_client_async/messages.py,sha256=D_IC2UMjlaHryB7ed2JMOZCoUSB2lxFeJb2IUpys6V0,2412
+gpsd_client_async-1.0.0.dist-info/licenses/LICENSE,sha256=gjODYxzLULHfTSy-X6V_i-eA3A5r21mhBDJRI5fL0lc,1103
+gpsd_client_async-1.0.0.dist-info/METADATA,sha256=7cYi53LuHSQfDmpjsJhqBh5CTxCs8WfP24xTDk7E4Ds,453
+gpsd_client_async-1.0.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+gpsd_client_async-1.0.0.dist-info/top_level.txt,sha256=AxOJnhsYP1NTLaMDw1dfWzyxDGssM2QZ48OtXyXxIQQ,18
+gpsd_client_async-1.0.0.dist-info/RECORD,,
