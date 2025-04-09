@@ -1,0 +1,8 @@
+evo-sdk-common>=0.1.0
+pydantic<3,>=2
+
+[aiohttp]
+evo-sdk-common[aiohttp]>=0.1.0
+
+[notebooks]
+evo-sdk-common[notebooks]>=0.1.0
