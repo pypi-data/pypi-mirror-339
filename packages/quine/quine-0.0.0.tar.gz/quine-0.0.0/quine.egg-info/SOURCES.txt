@@ -1,0 +1,13 @@
+COPYING.md
+README.md
+pyproject.toml
+quine.egg-info/PKG-INFO
+quine.egg-info/SOURCES.txt
+quine.egg-info/dependency_links.txt
+quine.egg-info/entry_points.txt
+quine.egg-info/requires.txt
+quine.egg-info/top_level.txt
+src/python/quine/__init__.py
+src/python/quine/cli.py
+src/python/tests/__init__.py
+src/python/tests/test_cli.py

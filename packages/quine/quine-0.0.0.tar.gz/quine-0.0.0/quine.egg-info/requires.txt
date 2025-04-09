@@ -1,0 +1,10 @@
+
+[dev]
+black
+ruff
+mypy
+pytest
+pytest-cov
+bandit
+radon
+pip-audit

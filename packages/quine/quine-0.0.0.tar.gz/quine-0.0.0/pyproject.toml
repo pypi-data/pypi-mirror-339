@@ -1,0 +1,88 @@
+# Quine - verifiable software roots
+
+# https://quine.build
+
+# Copyright (C) 2025 Hendrik M Halkow
+# SPDX-License-Identifier: AGPL-3.0-only
+
+# This program is free software: you can redistribute it and/or modify it under
+# the terms of the GNU Affero General Public License as published by the Free
+# Software Foundation, either version 3 of the License, or (at your option) any
+# later version.
+
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+# details.
+
+# You should have received a verbatim copy of the GNU Affero General Public
+# License along with this program in the file COPYING.md.
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quine"
+version = "0.0.0"
+description = "Minimal build root for reproducible compiler infrastructure."
+authors = [
+  { name = "Hendrik M Halkow", email = "hendrik@halkow.com" },
+]
+readme = "README.md"
+license = { file = "COPYING.md" }
+requires-python = ">=3.13"
+dependencies = []
+
+# PyPI classifiers help others find your project and understand its maturity
+classifiers = [
+  "License :: OSI Approved :: GNU Affero General Public License v3",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.13",
+  "Intended Audience :: Developers",
+  "Development Status :: 3 - Alpha",
+]
+
+[project.optional-dependencies]
+dev = [
+  "black",
+  "ruff",
+  "mypy",
+  "pytest",
+  "pytest-cov",
+  "bandit",
+  "radon",
+  "pip-audit",
+]
+
+[project.scripts]
+quine = "quine.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/hendrikhalkow/quine"
+Repository = "https://github.com/hendrikhalkow/quine"
+Documentation = "https://github.com/hendrikhalkow/quine/blob/main/README.md"
+Changelog = "https://github.com/hendrikhalkow/quine/releases"
+Issues = "https://github.com/hendrikhalkow/quine/issues"
+
+[tool.black]
+target-version = ["py313"]
+line-length = 79
+
+[tool.mypy]
+strict = true
+show_error_codes = true
+python_version = "3.13"
+
+[tool.pytest.ini_options]
+addopts = "--cov=quine --cov-report=term-missing -ra"
+
+[tool.ruff]
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "D"]
+ignore = ["D203", "D212"]
+
+[tool.setuptools]
+packages = { find = {} }
