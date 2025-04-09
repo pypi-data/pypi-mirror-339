@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+mistral_cli_tool.egg-info/PKG-INFO
+mistral_cli_tool.egg-info/SOURCES.txt
+mistral_cli_tool.egg-info/dependency_links.txt
+mistral_cli_tool.egg-info/entry_points.txt
+mistral_cli_tool.egg-info/requires.txt
+mistral_cli_tool.egg-info/top_level.txt
+src/__init__.py
+src/main.py
