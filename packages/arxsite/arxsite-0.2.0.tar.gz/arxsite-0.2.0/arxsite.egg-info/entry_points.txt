@@ -1,0 +1,2 @@
+[console_scripts]
+arxsite = arxsite.cli:main
