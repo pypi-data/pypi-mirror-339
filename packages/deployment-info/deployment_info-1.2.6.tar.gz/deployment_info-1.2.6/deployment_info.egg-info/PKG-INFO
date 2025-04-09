@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: deployment-info
+Version: 1.2.6
+Summary: deployment-info
+Home-page: https://github.com/pbullian/k8s_deployments_info
+Download-URL: https://github.com/pbullian/k8s_deployments_info
+Author: Tom Christian
+Author-email: tom.christian@openxta.com
+Project-URL: Documentation, https://github.com/pbullian/k8s_deployments_info
+Description-Content-Type: text/plain
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: summary
+
+This Python library provides a simple interface for retreiving the system deployment information.
