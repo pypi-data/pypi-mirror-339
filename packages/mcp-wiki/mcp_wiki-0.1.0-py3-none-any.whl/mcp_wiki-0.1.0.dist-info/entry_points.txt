@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-wiki = mcp_wiki:main
