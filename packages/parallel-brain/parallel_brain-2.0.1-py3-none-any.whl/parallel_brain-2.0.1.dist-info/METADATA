@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: parallel-brain
+Version: 2.0.1
+Summary: ParallelBrain ANN with Adaptive Inhibition - Version 3.6
+Author: Darshan
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: torch
+
