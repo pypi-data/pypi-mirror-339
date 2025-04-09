@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scrapy-drissionpage"
+version = "1.0.3"
+description = "将Scrapy爬虫框架与DrissionPage网页自动化工具进行无缝集成"
+readme = "README.md"
+authors = [
+    {name = "KingKing888", email = "184108270@qq.com"}
+]
+license = {text = "MIT"}
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Development Status :: 4 - Beta",
+]
+dependencies = [
+    "scrapy>=2.12.0",
+    "DrissionPage>=4.1.0.18",
+]
+keywords = ["scrapy", "drissionpage", "crawler", "spider", "web scraping", "automation", "commercial-use", "personal-use"]
+
+[project.urls]
+"Homepage" = "https://github.com/xyuns-cn/scrapy-drissionpage"
+"Bug Tracker" = "https://github.com/xyuns-cn/scrapy-drissionpage/issues"
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+disallow_incomplete_defs = false 
