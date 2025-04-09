@@ -1,0 +1,7 @@
+pandas>=1.0.0
+numpy>=1.18.0
+scikit-bio>=0.5.0
+matplotlib
+seaborn
+paramiko>=2.7.0
+pyyaml>=5.1

@@ -1,0 +1,198 @@
+# If the optional function is not available, define a dummy version.
+try:
+    from snakemake.io import optional
+except ImportError:
+    def optional(x):
+        return x
+
+# --- Complete Taxonomic Profiling Snakefile ---
+
+# --- Configuration ---
+
+# Define directories (will be updated by toxolib)
+RAW_DATA_DIR = "/home/dac6360/Toxonomy/Raw_Data"
+PREPROCESSED_DATA_DIR = "/home/dac6360/Toxonomy/Preprocessed_Data"
+KRAKEN2_DB_DIR = "/home/dac6360/Toxonomy/Kraken2_DB"
+KRAKEN2_DNA_DIR = "/home/dac6360/Toxonomy/Results/Taxonomic_Profiling/1_DNA_Kraken2"
+BRACKEN_DNA_DIR = "/home/dac6360/Toxonomy/Results/Taxonomic_Profiling/2_DNA_Bracken"
+PYTHON_BRACKEN_TO_KRONA_DIR = "/home/dac6360/Toxonomy/Results/Taxonomic_Profiling/3_DNA_Bracken_To_Krona_Python"
+PYTHON_ALPHA_BETA_DIVERSITY_DIR = "/home/dac6360/Toxonomy/Results/Taxonomic_Profiling/4_DNA_Alpha_Beta_Diversity_Python"
+PYTHON_RELATIVE_ABUNDANCE_MATRIX_DIR = "/home/dac6360/Toxonomy/Results/Taxonomic_Profiling/5_DNA_Relative_Abundance_Matrix_Python"
+
+FASTP_LOGS_DIR = "/home/dac6360/Toxonomy/Logs/Preprocessing/Fastp"
+BOWTIE2_HOST_LOGS_DIR = "/home/dac6360/Toxonomy/Logs/Preprocessing/Bowtie2_Host"
+KRAKEN2_DB_LOGS_DIR = "/home/dac6360/Toxonomy/Logs/Kraken2_DB"
+KRAKEN2_DNA_LOGS_DIR = "/home/dac6360/Toxonomy/Logs/Taxonomic_Profiling/1_DNA_Kraken2"
+BRACKEN_DNA_LOGS_DIR = "/home/dac6360/Toxonomy/Logs/Taxonomic_Profiling/2_DNA_Bracken"
+PYTHON_BRACKEN_TO_KRONA_LOGS_DIR = "/home/dac6360/Toxonomy/Logs/Taxonomic_Profiling/3_DNA_Bracken_To_Krona_Python"
+PYTHON_ALPHA_BETA_DIVERSITY_LOGS_DIR = "/home/dac6360/Toxonomy/Logs/Taxonomic_Profiling/4_DNA_Alpha_Beta_Diversity_Python"
+PYTHON_RELATIVE_ABUNDANCE_MATRIX_LOGS_DIR = "/home/dac6360/Toxonomy/Logs/Taxonomic_Profiling/5_DNA_Relative_Abundance_Matrix_Python"
+
+# Sample and Lane definition (will be updated by toxolib)
+SAMPLES = ["S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10", 
+           "S11", "S12", "S13", "S14", "S15", "S16", "S17", "S18", "S19", "S20", 
+           "S21", "S22", "S23", "S24", "S25", "S26"]
+LANES = ["L001", "L002"]  # Lanes L001 and L002
+
+# --- Rules ---
+
+rule all:
+    input:
+        # Use combined files instead of dehosted files since we're skipping host removal.
+        expand(f"{PREPROCESSED_DATA_DIR}/{{sample}}_combined_R1.fastq.gz", sample=SAMPLES),
+        expand(f"{PREPROCESSED_DATA_DIR}/{{sample}}_combined_R2.fastq.gz", sample=SAMPLES),
+        # Kraken2 Reports
+        expand(f"{KRAKEN2_DNA_DIR}/{{sample}}/{{sample}}.k2report", sample=SAMPLES),
+        # Bracken Reports (species and genus)
+        expand(f"{BRACKEN_DNA_DIR}/{{sample}}/{{sample}}_species.bracken", sample=SAMPLES),
+        expand(f"{BRACKEN_DNA_DIR}/{{sample}}/{{sample}}_genus.bracken", sample=SAMPLES),
+        # Krona Plots (optional)
+        expand(f"{PYTHON_BRACKEN_TO_KRONA_DIR}/{{sample}}/{{sample}}_species_filtered.html", sample=SAMPLES),
+        # Relative abundance matrix (optional)
+        f"{PYTHON_RELATIVE_ABUNDANCE_MATRIX_DIR}/relative_abundance_matrix_species.csv"
+
+rule fastp:
+    input:
+        r1 = f"{RAW_DATA_DIR}/{{sample}}_{{lane}}_R1.fastq.gz",
+        r2 = f"{RAW_DATA_DIR}/{{sample}}_{{lane}}_R2.fastq.gz"
+    output:
+        r1_trimmed = f"{RAW_DATA_DIR}/{{sample}}_{{lane}}_R1.trimmed.fastq.gz",
+        r2_trimmed = f"{RAW_DATA_DIR}/{{sample}}_{{lane}}_R2.trimmed.fastq.gz",
+        html = f"{RAW_DATA_DIR}/{{sample}}_{{lane}}_fastp.html",
+        json = f"{RAW_DATA_DIR}/{{sample}}_{{lane}}_fastp.json"
+    params:
+        outdir = f"{RAW_DATA_DIR}",
+        logdir = f"{FASTP_LOGS_DIR}/{{sample}}"
+    log:
+        f"{FASTP_LOGS_DIR}/{{sample}}/{{lane}}_fastp.log"
+    threads: 8
+    shell:
+        """
+        mkdir -p {params.logdir}
+        fastp -i {input.r1} -I {input.r2} -o {output.r1_trimmed} -O {output.r2_trimmed} \
+              -h {output.html} -j {output.json} -w {threads} > {log} 2>&1
+        """
+
+rule combine_lanes:
+    input:
+        r1_lanes = lambda wildcards: expand(f"{RAW_DATA_DIR}/{{sample}}_{{lane}}_R1.trimmed.fastq.gz",
+                                             sample=wildcards.sample, lane=LANES),
+        r2_lanes = lambda wildcards: expand(f"{RAW_DATA_DIR}/{{sample}}_{{lane}}_R2.trimmed.fastq.gz",
+                                             sample=wildcards.sample, lane=LANES)
+    output:
+        r1 = f"{PREPROCESSED_DATA_DIR}/{{sample}}_combined_R1.fastq.gz",
+        r2 = f"{PREPROCESSED_DATA_DIR}/{{sample}}_combined_R2.fastq.gz"
+    params:
+        logdir = f"{FASTP_LOGS_DIR}/{{sample}}"
+    log:
+        f"{FASTP_LOGS_DIR}/{{sample}}/combine_lanes.log"
+    shell:
+        """
+        mkdir -p {PREPROCESSED_DATA_DIR}
+        mkdir -p {params.logdir}
+        cat {input.r1_lanes} > {output.r1}
+        cat {input.r2_lanes} > {output.r2}
+        """
+
+rule bowtie2_host_remove:
+    input:
+        r1 = f"{PREPROCESSED_DATA_DIR}/{{sample}}_combined_R1.fastq.gz",
+        r2 = f"{PREPROCESSED_DATA_DIR}/{{sample}}_combined_R2.fastq.gz"
+    params:
+        index_prefix = "/home/dac6360/Toxonomy/corn_db/corn_db",
+        logdir = f"{BOWTIE2_HOST_LOGS_DIR}/{{sample}}"
+    output:
+        mapped_sam = temp(f"{PREPROCESSED_DATA_DIR}/{{sample}}_mapped_to_host.sam"),
+        unmapped_r1 = f"{PREPROCESSED_DATA_DIR}/{{sample}}_dehost_R1.fastq.gz",
+        unmapped_r2 = f"{PREPROCESSED_DATA_DIR}/{{sample}}_dehost_R2.fastq.gz"
+    log:
+        f"{BOWTIE2_HOST_LOGS_DIR}/{{sample}}/bowtie2_host.log"
+    threads: 12
+    shell:
+        """
+        mkdir -p {params.logdir}
+        bowtie2 -p {threads} -x {params.index_prefix} -1 {input.r1} -2 {input.r2} -S {output.mapped_sam} --un-conc-gz {PREPROCESSED_DATA_DIR}/{wildcards.sample}_dehost_%s.fastq.gz 2> {log}
+        mv {PREPROCESSED_DATA_DIR}/{wildcards.sample}_dehost_1.fastq.gz {output.unmapped_r1}
+        mv {PREPROCESSED_DATA_DIR}/{wildcards.sample}_dehost_2.fastq.gz {output.unmapped_r2}
+        """
+
+rule kraken2:
+    input:
+        r1 = f"{PREPROCESSED_DATA_DIR}/{{sample}}_combined_R1.fastq.gz",
+        r2 = f"{PREPROCESSED_DATA_DIR}/{{sample}}_combined_R2.fastq.gz"
+    output:
+        report = f"{KRAKEN2_DNA_DIR}/{{sample}}/{{sample}}.k2report",
+        unclassified = [
+            f"{KRAKEN2_DNA_DIR}/{{sample}}/{{sample}}_unclassified__1.fastq",
+            f"{KRAKEN2_DNA_DIR}/{{sample}}/{{sample}}_unclassified__2.fastq"
+        ]
+    params:
+        outdir = f"{KRAKEN2_DNA_DIR}/{{sample}}",
+        logdir = f"{KRAKEN2_DNA_LOGS_DIR}/{{sample}}"
+    log:
+        f"{KRAKEN2_DNA_LOGS_DIR}/{{sample}}/kraken2.log"
+    threads: 8
+    shell:
+        """
+        mkdir -p {params.logdir} {params.outdir}
+        kraken2 --db {KRAKEN2_DB_DIR}/kraken2-microbial-fatfree --threads {threads} --paired \
+            --report {output.report} \
+            --output /dev/null \
+            --unclassified-out {params.outdir}/{wildcards.sample}_unclassified_#.fastq \
+            {input.r1} {input.r2} 2> {log}
+        """
+
+rule bracken:
+    input:
+        kraken_report = f"{KRAKEN2_DNA_DIR}/{{sample}}/{{sample}}.k2report"
+    output:
+        bracken_species = f"{BRACKEN_DNA_DIR}/{{sample}}/{{sample}}_species.bracken",
+        bracken_genus = f"{BRACKEN_DNA_DIR}/{{sample}}/{{sample}}_genus.bracken"
+    params:
+        outdir = f"{BRACKEN_DNA_DIR}/{{sample}}",
+        logdir = f"{BRACKEN_DNA_LOGS_DIR}/{{sample}}",
+        read_len = 150
+    log:
+        f"{BRACKEN_DNA_LOGS_DIR}/{{sample}}/bracken.log"
+    threads: 20
+    shell:
+        """
+        mkdir -p {params.logdir} {params.outdir}
+        bracken -d {KRAKEN2_DB_DIR}/kraken2-microbial-fatfree -i {input.kraken_report} -o {output.bracken_species} -l S -r {params.read_len} 2> {log}
+        bracken -d {KRAKEN2_DB_DIR}/kraken2-microbial-fatfree -i {input.kraken_report} -o {output.bracken_genus} -l G -r {params.read_len} 2>> {log}
+        """
+
+rule bracken_to_krona:
+    input:
+        bracken_report = f"{BRACKEN_DNA_DIR}/{{sample}}/{{sample}}_species.bracken"
+    output:
+        krona_html = f"{PYTHON_BRACKEN_TO_KRONA_DIR}/{{sample}}/{{sample}}_species_filtered.html"
+    params:
+        outdir = f"{PYTHON_BRACKEN_TO_KRONA_DIR}/{{sample}}",
+        temp_txt = f"{PYTHON_BRACKEN_TO_KRONA_DIR}/{{sample}}/{{sample}}_forKrona_filtered.txt"
+    log:
+        f"{PYTHON_BRACKEN_TO_KRONA_LOGS_DIR}/{{sample}}/krona.log"
+    shell:
+        r"""
+        mkdir -p {params.outdir}
+        tail -n +2 {input.bracken_report} | awk '$5 >= 10 {{print $5 "\t" $1}}' > {params.temp_txt}
+        ktImportText -o {output.krona_html} {params.temp_txt} 2> {log}
+        """
+
+rule relative_abundance_matrix:
+    input:
+        bracken_files = expand(f"{BRACKEN_DNA_DIR}/{{sample}}/{{sample}}_species.bracken", sample=SAMPLES)
+    output:
+        rel_abundance_matrix = f"{PYTHON_RELATIVE_ABUNDANCE_MATRIX_DIR}/relative_abundance_matrix_species.csv"
+    params:
+        logdir = f"{PYTHON_RELATIVE_ABUNDANCE_MATRIX_LOGS_DIR}",
+        outdir = f"{PYTHON_RELATIVE_ABUNDANCE_MATRIX_DIR}"
+    log:
+        f"{PYTHON_RELATIVE_ABUNDANCE_MATRIX_LOGS_DIR}/rel_abundance.log"
+    shell:
+        """
+        mkdir -p {params.logdir} {params.outdir}
+        python scripts/create_abundance_matrix.py \
+            --input_files {input.bracken_files} \
+            --output {output.rel_abundance_matrix} > {log} 2>&1
+        """
