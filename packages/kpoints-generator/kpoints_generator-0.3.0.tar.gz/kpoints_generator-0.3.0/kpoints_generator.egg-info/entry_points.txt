@@ -1,0 +1,2 @@
+[console_scripts]
+kpoints-generator = kpoints_generator.cli:main
