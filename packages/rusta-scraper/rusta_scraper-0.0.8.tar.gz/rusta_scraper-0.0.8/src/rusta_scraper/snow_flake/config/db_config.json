@@ -1,0 +1,21 @@
+{
+    "snowflake_rusta_dwh": {
+        "account": "RD78518.west-europe.azure",
+        "user": "CAMPAIGN_VERIFICATION",
+        "password": "gAAAAABnj4aZkadD2W2b-3wMj3t4oA6MtlrFgwsuNw7M6jdjiS3qs2X29bHSJvBL-dmO7P31xPraCAw1EJN_T3dVAnV6WGxLRH2aV8W6SAgNN6fTdQDrydc=",
+        "database": "RUSTA_DW",
+        "schema": "CAMPAIGN_VERIFICATION",
+        "role": "CAMPAIGN_VERIFICATION_READER",
+        "warehouse": "CAMPAIGN_VERIFICATION"
+    },
+    "snowflake_rusta_crawler_dwh": {
+        "account": "RD78518.west-europe.azure",
+        "user": "CAMPAIGN_VERIFICATION",
+        "password": "gAAAAABnj4aZkadD2W2b-3wMj3t4oA6MtlrFgwsuNw7M6jdjiS3qs2X29bHSJvBL-dmO7P31xPraCAw1EJN_T3dVAnV6WGxLRH2aV8W6SAgNN6fTdQDrydc=",
+        "database": "RUSTA_CRAWLER",
+        "schema": "RUSTA_WEB_CRAWLER",
+        "role": "CRAWLER_ADMIN",
+        "warehouse": "COMPUTE_CRAWLER"
+    }
+
+}

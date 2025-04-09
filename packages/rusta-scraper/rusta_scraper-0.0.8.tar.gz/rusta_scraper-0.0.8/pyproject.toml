@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[metadata]
+name = "rusta_scraper"
+version = "0.0.8"
+
+
+[project]
+name = "rusta_scraper"
+version = "0.0.8"
+authors = [
+  { name="David Momeni", email="dav.momeni@gmail.com" },
+]
+description = "Rusta Article Scraper"
+readme = "README.md"
+requires-python = ">=3.8"

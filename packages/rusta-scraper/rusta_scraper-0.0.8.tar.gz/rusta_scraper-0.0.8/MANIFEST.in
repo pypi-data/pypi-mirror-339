@@ -1,0 +1,4 @@
+
+recursive-include src/rusta_scraper/snow_flake/config *.json
+recursive-include src/rusta_scraper/spider/sql *.sql
+recursive-include src/rusta_scraper *.txt
