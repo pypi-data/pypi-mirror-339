@@ -1,0 +1,2 @@
+[console_scripts]
+factblitz = fact_blitz.__main__:main
