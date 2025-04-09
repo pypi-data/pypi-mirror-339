@@ -1,0 +1,2 @@
+[console_scripts]
+concernbert = concernbert:__main__

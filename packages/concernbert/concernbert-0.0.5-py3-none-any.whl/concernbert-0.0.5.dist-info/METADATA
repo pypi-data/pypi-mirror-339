@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: concernbert
+Version: 0.0.5
+Summary: Source code embeddings from finetuned BERT-based models
+Author-email: Jason Lefever <jason.titus.lefever@gmail.com>
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Requires-Dist: click>=8.1.7
+Requires-Dist: fitter>=1.7.1
+Requires-Dist: gensim>=4.3.2
+Requires-Dist: lmdb>=1.5.1
+Requires-Dist: networkx>=3.3
+Requires-Dist: nltk>=3.8.1
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: openpyxl>=3.1.4
+Requires-Dist: ordered-set>=4.1.0
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: pyarrow>=16.1.0
+Requires-Dist: scipy==1.12
+Requires-Dist: sentence-transformers==2.7.0
+Requires-Dist: statsmodels>=0.14.2
+Requires-Dist: torch>=2.3.0
+Requires-Dist: transformers[torch]>=4.41.0
+Requires-Dist: tree-sitter-languages>=1.10.2
+Requires-Dist: tree-sitter==0.20.4
+Description-Content-Type: text/markdown
+
+# ConcernBERT
+
+TODO
