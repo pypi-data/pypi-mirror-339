@@ -1,0 +1,7 @@
+[project]
+name = "calcot"
+version = "0.1.0"
+description = "Calçot: a smoky parody of Celery 🧅🔥"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
