@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: py_shopify_graphql
+Version: 0.1.1
+Summary: A Python client for making Shopify GraphQL API requests
+Home-page: https://github.com/pawan1793/py-shopify-graphql-client
+Author: Pawan More
+Author-email: hello@pawanmore.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+
+UNKNOWN
+
