@@ -1,0 +1,12 @@
+[project]
+name = "cli_ih"
+version = "0.5.1.2"
+description = "A background command handler for python's command line interface."
+# readme = "README.md"
+dependencies=[
+    'logging==0.4.9.6'
+]
+requires-python = ">= 3.8"
+authors = [
+    {name = "Hotment", email = "michatchuplay@gmail.com"}
+]
