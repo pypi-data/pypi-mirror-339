@@ -1,0 +1,50 @@
+<%inherit file="_layout.html"/>
+
+
+<!-- Main content goes here -->
+<div class="main-view-content d-flex flex-colum" id="main-view-content">
+            
+</div>
+
+
+<script>
+  var global_variants = ${global_variants};
+  var studlib={};
+  studlib.dirty=false; // flag to indicate if the document has been modified
+  studlib.on_save_event=undefined; // callback function to be called when save event is triggered
+  window.addEventListener('beforeunload', function (e) {
+        if (!studlib.dirty) {
+            return; // Do nothing if no changes were made
+        }
+   
+        var confirmationMessage = 'Eingaben wurden verändert, wirklich verlassen?';
+        e.returnValue = confirmationMessage; 
+        return confirmationMessage; 
+       
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.ctrlKey && e.key === 's') {
+        e.preventDefault(); // Prevent the default save action
+        if (typeof studlib.on_save_event === 'function') {
+          studlib.on_save_event(); // Call the save event callback
+        }
+      }
+    },true);
+
+
+</script>
+
+
+<!-- Include subpages --->
+
+<%include file="pages/login.html"/>
+<%include file="pages/select_project.html"/>
+<%include file="pages/project_overview.html"/>
+<%include file="pages/study_browser.html"/>
+<%include file="pages/study_viewer.html"/>
+<script>
+
+
+  
+</script>
