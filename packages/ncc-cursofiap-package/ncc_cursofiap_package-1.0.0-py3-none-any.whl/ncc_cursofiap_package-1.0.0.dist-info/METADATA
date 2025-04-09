@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: ncc-cursofiap-package
+Version: 1.0.0
+Summary: Descricao da sua lib ncc_cursofiap
+Home-page: https://github.com/tadrianonet/ncc_cursofiap
+Author: Robson Nicácio
+Author-email: robson.nicacio@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+
+# Ncc_cursofiap
+
+A simple example library.
+
+## Licença 
+Distribuído sob a licença MIT. Veja 'LICENSE' para mais informações. 
+
+
+## Installation
+
+```sh
+pip install ncc_cursofiap
+```
+
+## Usage
+
+```python
+from ncc_cursofiap import hello_world
+
+print(hello_world())
+```
