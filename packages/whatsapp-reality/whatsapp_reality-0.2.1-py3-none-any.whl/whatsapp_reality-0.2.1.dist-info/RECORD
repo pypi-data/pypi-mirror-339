@@ -1,0 +1,12 @@
+tests/__init__.py,sha256=rEAM7UsjnY0cikv-yhiBsE6gVrZ7ds0e8HHfVdZY2ss,41
+tests/test_basic.py,sha256=KQuLPuaJYB6gMCB5bNIp8mAqoAeDXwTEdlumgt85XhU,274
+whatsapp_reality/__init__.py,sha256=pokjXc5sa27RIK4X-LFUcZewmYBdTNeanKm6LauuHzA,165
+whatsapp_reality/analyzer.py,sha256=m0GMkvMc9pBATa_ZaBgCL0FW3FeDRDUK59oUb36Zae4,116711
+whatsapp_reality/preprocessor.py,sha256=PX4fVa3LKqAJv5usXVEAIW54GpMXz8v2MR4_3RA0ckk,6426
+whatsapp_reality/py.typed,sha256=-66PL-ou2-FqAzcgwHLct3HQaQx-jUYDAMI0QFsXp3c,66
+whatsapp_reality/data/__init__.py,sha256=tazoXAV1Gm-z4oqzA38p_0p130Qdf-f-W3TZORf5Gfw,30
+whatsapp_reality-0.2.1.dist-info/licenses/LICENSE,sha256=D6qjjWe2y3LieHdLhbPwugIXt4NTTJEWkUl-CmhqaXA,1062
+whatsapp_reality-0.2.1.dist-info/METADATA,sha256=4htjHmYklI-kPbzGhltOW6YgLp9wJArUFJRTBaw2xIM,7189
+whatsapp_reality-0.2.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+whatsapp_reality-0.2.1.dist-info/top_level.txt,sha256=ovmWfNZTSLCZin7gyFNyRuFpovZzfu4EKbSOfi0dpN4,23
+whatsapp_reality-0.2.1.dist-info/RECORD,,
