@@ -1,0 +1,3 @@
+[console_scripts]
+snapshot-cli = chuk_virtual_fs.cli.snapshot_cli:main
+template-cli = chuk_virtual_fs.cli.template_cli:main
