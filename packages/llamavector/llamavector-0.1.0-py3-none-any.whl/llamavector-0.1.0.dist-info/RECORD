@@ -1,0 +1,13 @@
+llama_vector/__init__.py,sha256=wTrUdPSmziCP5lwi4X8WP-fzxjvNYAtEJpHxoC6Rh8s,185
+llama_vector/config.py,sha256=eHhU44oJQph-1LCLoQzUb2sEAPQE51rbIUK69K9gkdk,1010
+llama_vector/core.py,sha256=2rgsG6TIspjg0iiiZYguXJcrGoFMCnbCOHkTw2v05q8,1187
+llama_vector/embedding.py,sha256=exFzdCQPeeg2wbzAcT8kIZET6Edt-L6OiyZGB-SNsDQ,1489
+llama_vector/index.py,sha256=_aZUFyt8dG1ruPlACbUs71d-qmSLmuSejLnjBUiHU8I,2897
+llama_vector/quality.py,sha256=gmnZKQzzMTrGf9ywMX3KOhI-cDXXlj5_Mfh2Egv6yww,12612
+llama_vector/query.py,sha256=DDOiv0-ZtdPPVqBA6TP0n3Xpha3jy7TPG326ZpUY-Fc,1809
+llama_vector/utils.py,sha256=jP21xvZMABhvD4sG8uKdqqtptEAckndjgAnRhD1L2tk,6199
+llama_vector/vector_store.py,sha256=mRF9TehR0ZnlHgCRmnhU_31fqCEn5EgzIkg1ilrJM-E,3986
+llamavector-0.1.0.dist-info/METADATA,sha256=g98JKvS5cimT6QPlDeAlcNmGkTdw8yDJA4S5CWWz3ec,7934
+llamavector-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+llamavector-0.1.0.dist-info/licenses/LICENSE,sha256=XKMnva5OvjPNm8U4H4gmpWOc3Y_H3UwOwTy3xpiDFF8,1121
+llamavector-0.1.0.dist-info/RECORD,,
