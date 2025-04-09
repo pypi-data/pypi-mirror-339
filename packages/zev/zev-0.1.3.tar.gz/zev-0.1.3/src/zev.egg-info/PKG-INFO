@@ -1,0 +1,52 @@
+Metadata-Version: 2.4
+Name: zev
+Version: 0.1.3
+Summary: Lookup CLI commands easily
+Project-URL: Repository, https://github.com/danielnewman/zev
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openai==1.68.2
+Requires-Dist: platformdirs==4.3.7
+Requires-Dist: pyperclip==1.9.0
+Requires-Dist: pydantic==2.10.6
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: questionary===2.1.0
+Requires-Dist: rich==13.9.4
+Provides-Extra: dev
+Requires-Dist: ruff>=0.11.2; extra == "dev"
+Dynamic: license-file
+
+# Zev
+
+Zev helps you remember (or discover) terminal commands.
+
+![Description](./.github/demo.gif)
+
+## Installation
+
+```bash
+pip install zev
+```
+
+This project runs on top of the OpenAI API. After your first time running it, you will be prompted to enter an OpenAI key.
+
+## Usage
+
+#### Option 1: Type zev and follow the workflow
+
+```bash
+zev
+```
+
+#### Option 2: Put your prompt in quotes
+
+```bash
+zev '<what you want to do>'
+```
+
+## Examples
+
+```bash
+zev 'show all running python processes'
+```
