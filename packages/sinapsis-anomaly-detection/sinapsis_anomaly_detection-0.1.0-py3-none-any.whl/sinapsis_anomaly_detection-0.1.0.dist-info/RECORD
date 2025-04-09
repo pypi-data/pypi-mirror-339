@@ -1,0 +1,14 @@
+sinapsis_anomalib/src/sinapsis_anomalib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sinapsis_anomalib/src/sinapsis_anomalib/helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sinapsis_anomalib/src/sinapsis_anomalib/helpers/config_factory.py,sha256=M7CPS2qHgUWBUTYkuVGhaa2S6IJZ8C3zGPulVjgXr_U,4493
+sinapsis_anomalib/src/sinapsis_anomalib/templates/__init__.py,sha256=ltv45AB2oIhPw0jRrL0S6HMYYQp63Cr-DBjD0HjK1i0,904
+sinapsis_anomalib/src/sinapsis_anomalib/templates/anomalib_base.py,sha256=R_-_tHLfZKB9IoJ5wNar8GNBfRAhKKd-s1CZniN7IF4,7779
+sinapsis_anomalib/src/sinapsis_anomalib/templates/anomalib_base_inference.py,sha256=1fyIoPTlwlkt9JMiHRKHFpfvDifBHBSh8K3FV_cM7a0,8685
+sinapsis_anomalib/src/sinapsis_anomalib/templates/anomalib_export.py,sha256=QVXrtmbpv_GJ7taybJLOy-vFNmsl2DoiT3FOUu_R0Xk,7218
+sinapsis_anomalib/src/sinapsis_anomalib/templates/anomalib_openvino_inference.py,sha256=LUXsYxX_Cy3YlAIgaeXFEcKCtpNzWADPjPW0FA93ZBA,2959
+sinapsis_anomalib/src/sinapsis_anomalib/templates/anomalib_torch_inference.py,sha256=r_y42WEbTu-QT9052pWMnWk-ibqGVK9NLpGVciZyDv4,2624
+sinapsis_anomalib/src/sinapsis_anomalib/templates/anomalib_train.py,sha256=M_Riq9l8Pd6QQ1OgeJQ2asRxK5bPOj6rZzpviRfPiY0,7498
+sinapsis_anomaly_detection-0.1.0.dist-info/METADATA,sha256=qqmXPsr6qEZ_Qc9HNSksDcFhj0xUmQIxikqf4jLkXMg,48216
+sinapsis_anomaly_detection-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+sinapsis_anomaly_detection-0.1.0.dist-info/top_level.txt,sha256=p9ltOdENM_b-Ekvb0AvXmvZRV4Bwtly7c7qeOokACvE,18
+sinapsis_anomaly_detection-0.1.0.dist-info/RECORD,,
