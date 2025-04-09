@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+img_processor/__init__.py
+img_processor/core.py
+my_image_processor.egg-info/PKG-INFO
+my_image_processor.egg-info/SOURCES.txt
+my_image_processor.egg-info/dependency_links.txt
+my_image_processor.egg-info/requires.txt
+my_image_processor.egg-info/top_level.txt
+tests/test_core.py
