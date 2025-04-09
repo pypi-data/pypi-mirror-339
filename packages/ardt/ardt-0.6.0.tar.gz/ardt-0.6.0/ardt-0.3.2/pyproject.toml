@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ardt"
+#version = "0.2.0"
+dynamic = ["version"]
+authors = [
+  { name="Timothy C. Sweeney-Fanelli", email="tim@affects.ai" },
+]
+maintainers = [
+  { name="Timothy C. Sweeney-Fanelli", email="tim@affects.ai" },
+]
+description = "Affective Research Dataset Tookit (ARDT): an extensible utility package for working with AER Datasets such as ASCERTAIN, CUADS, DREAMER and more"
+readme = "README.md"
+license = "CC-BY-NC-SA-4.0"
+license-files = ["LICEN[CS]E*"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">= 3.10"
+dependencies = [
+    "ijson",
+    "neurokit2",
+    "numpy",
+    "pyyaml",
+    "scikit_learn",
+    "scipy",
+    "keras>=3.8.0",
+    "tensorboard>=2.17.0",
+    "tensorflow>=2.17.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/affectsai/ardt"
+Issues = "https://github.com/affectsai/ardt/issues"
+
+[tool.hatch.version]
+path = "src/ardt/__about__.py"
+
+[tool.coverage.paths]
+arrc = ["src/ardt", "*/ardt/src/ardt"]
+tests = ["tests", "*/ardt/tests"]
