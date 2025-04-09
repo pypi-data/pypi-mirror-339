@@ -1,0 +1,3 @@
+[console_scripts]
+cubehandler=cubehandler.cli.main:cli
+

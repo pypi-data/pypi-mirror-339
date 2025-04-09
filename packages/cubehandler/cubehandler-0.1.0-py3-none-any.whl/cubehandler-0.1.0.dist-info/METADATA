@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: cubehandler
+Version: 0.1.0
+Summary: CubeHandler package.
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: ase
+Requires-Dist: click
+Requires-Dist: scikit-image
+Requires-Dist: bumpver==2023.1129 ; extra == "dev"
+Requires-Dist: pre-commit==3.6.0 ; extra == "dev"
+Requires-Dist: pytest==7.4.4 ; extra == "dev"
+Requires-Dist: pytest-cov==4.1.0 ; extra == "dev"
+Provides-Extra: dev
+
+

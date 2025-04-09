@@ -1,0 +1,11 @@
+cubehandler/__init__.py,sha256=CSq4TU1EbgsPdUTPqDctJIanj2pUPKtVNemBKLs06G4,130
+cubehandler/cube.py,sha256=rovF_7GZ8hKPVj-a6QRV41iBBzIUvA_ILkk0N3tBEPI,11408
+cubehandler/version.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+cubehandler/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cubehandler/cli/main.py,sha256=ZmDUhV7PbbGl5yfRqs6zB9YTG5FwhdOI1inp5dAaFEE,307
+cubehandler/cli/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cubehandler/cli/commands/shrink.py,sha256=qG2KMIfah1-HDjkQWnqPKtr-6kMxLzeWdmC79ehkPj4,1441
+cubehandler-0.1.0.dist-info/entry_points.txt,sha256=YaGSbLTRqWH1HCm4Njem_MrfrWMXORq-jjlgTd3iNsw,56
+cubehandler-0.1.0.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+cubehandler-0.1.0.dist-info/METADATA,sha256=uLwvyF1v27DHi36w69vmCgZeTR-MqDAt_ifLCeyr6II,675
+cubehandler-0.1.0.dist-info/RECORD,,
