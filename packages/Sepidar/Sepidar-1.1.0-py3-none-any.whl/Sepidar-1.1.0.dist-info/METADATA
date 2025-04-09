@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: Sepidar
+Version: 1.1.0
+Summary: An asynchronous Python wrapper for the Sepidar API Search.
+Home-page: https://api-free.ir
+Author: Mahdi Ahmadi
+Author-email: mahdiahmadi.1208@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://t.me/dev_jav
+Project-URL: Documentation, https://api-free.ir/
+Project-URL: Source Code, https://api-free.ir/
+Keywords: Sepidar,bot,Google,python,asynchronous,aiohttp
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp >=3.8.1
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: mkdocs ; extra == 'docs'
+Requires-Dist: pdoc3 ; extra == 'docs'
+
+##Sepidar Class Documentation##
+Overview
+The Sepidar class is designed for interacting with the Sepidar search API. It allows users to perform searches and manage search history efficiently.
+
+Example Usage
+python
+Run
+```python
+sepidar = Sepidar("Tatlo", page=1)
+results = sepidar.search()
+print(results)
+```
+Class Definition
+
+Features
+Search Functionality: Perform searches using a specified query and page number.
+Dynamic User-Agent: Automatically generates a random User-Agent string for each request.
+Search History Management:
+Retrieve previous search queries.
+Clear search history.
+Save search queries to history during searches.
+Error Handling
+The class handles HTTP errors by checking the response status code and printing an error message if the request fails.
+It also catches exceptions related to request failures and prints an appropriate message.
+Conclusion
+The Sepidar class provides a simple and effective way to interact with the Sepidar search API, making it easy to perform searches and manage search history.
