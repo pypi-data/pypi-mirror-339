@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: ai_bash
+Version: 0.1.0
+Summary: 一个将自然语言需求转换为命令行命令的AI工具
+License: MIT
+License-File: LICENSE
+Requires-Python: >=3.8
+Requires-Dist: click>=8.1.0
+Requires-Dist: openai>=1.0.0
+Requires-Dist: python-dotenv>=1.0.0
+Description-Content-Type: text/markdown
+
+# AI-Bash: 智能命令行工具
+
+一个基于大模型的命令行工具，可以将自然语言需求转换为对应平台的命令行命令。
+
+## 功能介绍
+
+- 接收用户的自然语言描述
+- 调用大模型API将需求转换为命令行命令
+- 自动识别用户的操作系统和命令行环境
+- 根据当前平台生成最适合的命令
+- 支持自定义API密钥、主机地址和模型名称
+- 生成命令并在用户确认后执行
+
+## 快速开始
+
+安装:
+```bash
+uv pip install ai_bash
+```
+
+使用:
+```bash
+# 基本用法(生成命令并等待用户回车后执行)
+ai_bash "查一下当前目录的文件路径"
+
+# 只生成命令不执行
+ai_bash "列出所有进程" --no-exec
+
+# 查看帮助信息
+ai_bash --help
+```
+
+## 配置
+
+在用户主目录下创建`.cmd_ai`文件:
+```
+# 必需的API密钥
+OPENAI_API_KEY=你的OpenAI API密钥
+```
+
+## 文档与贡献
+
+- 详细使用说明和开发指南：[文档.md](文档.md)
+- 贡献代码规范：[CONTRIBUTING.md](CONTRIBUTING.md) 

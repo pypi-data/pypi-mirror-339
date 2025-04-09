@@ -1,0 +1,9 @@
+cmd_ai/__init__.py,sha256=ms85WttgYgFUBaDBW-9-vOLYlwfncdWyQ5xIEe4CEpo,95
+cmd_ai/config.py,sha256=tqZh6mIbdZdIgOy3DbgV65Rjt07vKJtIfsrdD0PnJ50,1831
+cmd_ai/llm.py,sha256=1YLL1ZlJSWGXRikPADTa1g_Bm2v-s-phZFXgkROf9Qo,5385
+cmd_ai/main.py,sha256=GAdR2kAWHq_yTmvBQoiwZg0l7U4cSfAwgBB_2px_DBc,3527
+ai_bash-0.1.0.dist-info/METADATA,sha256=uQtuN7axlSIew_zZDih_oWuHcmRFtmsc66miFioWZPg,1322
+ai_bash-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ai_bash-0.1.0.dist-info/entry_points.txt,sha256=BQafmH9PNuki8Sj6w2tZD-nwcuV27nX47LVMYtpWw4c,44
+ai_bash-0.1.0.dist-info/licenses/LICENSE,sha256=riP-4-9tfFMgfiAao7fNaP_XIszNjqVC28-OcCsO2-0,1063
+ai_bash-0.1.0.dist-info/RECORD,,
