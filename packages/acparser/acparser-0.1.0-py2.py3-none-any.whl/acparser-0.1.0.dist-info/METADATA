@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: acparser
+Version: 0.1.0
+Summary: ansible collection parser
+Author-email: Anwesha Das <anwesha.srkr@gmail.com>
+Description-Content-Type: text/markdown
+License-Expression: MIT
+License-File: LICENSE
+Project-URL: Home, https://github.com/anweshadas/acparser
+
+A tool to parse an ansible collection.
+
+## License
+
+MIT.
