@@ -1,0 +1,309 @@
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+response_num = 10
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+LoadMethod "D:\Chemstation\1\Methods\", "GENERAL-POROSHELL-OPT.M"
+response$ = _MethFile$
+response$ = _MethFile$
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+response$ = _MethFile$
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+Local TestNum
+TestNum = 0
+Print TestNum
+response_num = TestNum
+Print response_num
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+PrepRun
+response$ = AcqStatus$
+response$ = AcqStatus$
+Local Rows
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+Standby
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+response_num = 10
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+LoadMethod "C:\ChemStation\1\Methods\", "GENERAL-POROSHELL-OPT.M"
+response$ = _MethFile$
+response$ = _MethFile$
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+response$ = _MethFile$
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+Local TestNum
+TestNum = 0
+Print TestNum
+response_num = TestNum
+Print response_num
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+PrepRun
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+Standby
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+response_num = 10
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+LoadMethod "C:\ChemStation\1\Methods\", "GENERAL-POROSHELL-OPT.M"
+response$ = _MethFile$
+response$ = _MethFile$
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+response$ = _MethFile$
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+Local TestNum
+TestNum = 0
+Print TestNum
+response_num = TestNum
+Print response_num
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+PrepRun
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+Standby
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+response_num = 10
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+LoadMethod "C:\ChemStation\1\Methods\", "GENERAL-POROSHELL-OPT.M"
+response$ = _MethFile$
+response$ = _MethFile$
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+response$ = _MethFile$
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+Local TestNum
+TestNum = 0
+Print TestNum
+response_num = TestNum
+Print response_num
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+PrepRun
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+Standby
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+response_num = 10
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+LoadMethod "C:\ChemStation\1\Methods\", "GENERAL-POROSHELL-OPT.M"
+response$ = _MethFile$
+response$ = _MethFile$
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+response$ = _MethFile$
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+Local TestNum
+TestNum = 0
+Print TestNum
+response_num = TestNum
+Print response_num
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+PrepRun
+response$ = AcqStatus$
+response$ = AcqStatus$
+response$ = _METHPATH$
+response$ = _SEQUENCEPATHS$
+response$ = _DATAPATHS$
+SaveMethod _MethPath$, _MethFile$, "method saved by pychemstation"
+SaveSequence _SeqPath$, _SeqFile$
+macro "SHUTDOWN.MAC" ,go
+Standby
+response$ = AcqStatus$
