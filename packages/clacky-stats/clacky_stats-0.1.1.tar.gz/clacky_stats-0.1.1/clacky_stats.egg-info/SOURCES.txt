@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+./bin/__init__.py
+./bin/clackystats/__init__.py
+./bin/clackystats/blame.py
+./bin/clackystats/cli.py
+bin/__init__.py
+bin/clackystats/__init__.py
+bin/clackystats/blame.py
+bin/clackystats/cli.py
+clacky_stats.egg-info/PKG-INFO
+clacky_stats.egg-info/SOURCES.txt
+clacky_stats.egg-info/dependency_links.txt
+clacky_stats.egg-info/entry_points.txt
+clacky_stats.egg-info/requires.txt
+clacky_stats.egg-info/top_level.txt
