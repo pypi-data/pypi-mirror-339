@@ -1,0 +1,178 @@
+Metadata-Version: 2.4
+Name: yala-events
+Version: 0.1.0
+Summary: A MCP server for Yala Events API
+Author-email: Yala Events <hello@yala.events>
+Requires-Python: >=3.11
+Requires-Dist: httpx>=0.27.0
+Requires-Dist: mcp[cli]>=1.5.0
+Requires-Dist: python-dotenv>=1.0.0
+Description-Content-Type: text/markdown
+
+# Yala Events MCP Server
+
+A Model Context Protocol (MCP) server that provides programmatic access to the yala.events API, enabling event management, user roles, permissions, and organizational features.
+
+## Overview
+
+This MCP server wraps the yala.events API, providing a set of tools for managing events, organizations, user roles, permissions, and more. It's built using FastMCP and provides asynchronous API access with comprehensive error handling and logging.
+
+## Requirements
+
+- Python >= 3.11
+- MCP CLI >= 1.6.0
+- HTTPX >= 0.28.1
+
+## Installation
+
+1. Clone the repository
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Configuration
+
+The server requires the following environment variables:
+
+- `YALA_EVENTS_API_TOKEN`: Your yala.events API authentication token
+- `BASE_URL`: The base URL for the yala.events API
+
+Create a `.env` file in the project root:
+
+```env
+YALA_EVENTS_API_TOKEN=your_token_here
+BASE_URL=https://api.yala.events
+```
+
+## Available Tools
+
+### Events Management
+
+- `list_events`: List events with optional date filtering
+- `create_event`: Create a new event with full details
+- `get_event_details`: Get comprehensive information about a specific event
+
+### Organizations Management
+
+- `get_organizations`: List all organizations
+- `list_public_organizations`: Get SEO-optimized list of public organizations
+
+### Module Management
+
+- `list_modules`: List all modules with search capability
+- `create_module`: Create a new module
+- `update_module`: Modify an existing module
+- `delete_module`: Remove a module
+- `get_module_histories`: View module change history
+
+### Permissions Management
+
+- `list_permissions`: List all permissions
+- `create_permission`: Create a new permission
+- `update_permission`: Modify existing permissions
+- `delete_permission`: Remove a permission
+- `get_permission_histories`: Track permission changes
+
+### Role Management
+
+- `list_roles`: List all roles with user counts
+- `create_role`: Create a new role with permissions
+- `update_role`: Modify role details and permissions
+- `delete_role`: Remove a role
+- `get_role_histories`: View role modification history
+
+### Favorites Management
+
+- `list_favorites_events`: View favorited events
+- `create_favorite_event`: Add an event to favorites
+- `update_favorite_event`: Modify favorite event details
+- `delete_favorite_event`: Remove an event from favorites
+- `get_favorites_events_histories`: Track favorites changes
+
+### Personal Access Tokens
+
+- `list_personal_access_tokens`: View all access tokens
+- `create_personal_access_token`: Generate new access token
+- `update_personal_access_token`: Modify token details
+- `delete_personal_access_token`: Revoke access token
+- `get_personal_access_token_histories`: Track token changes
+
+### System Tools
+
+- `get_app_version`: Retrieve application version info
+- `health_check`: Verify system health status
+
+## Usage Examples
+
+### List Events
+
+```python
+events = await list_events(date="2024-04-07")
+print(events)
+```
+
+### Create New Event
+
+```python
+event = await create_event(
+    title="Tech Conference 2024",
+    content="Annual technology conference",
+    date="2024-05-15T09:00:00Z",
+    organization_id=1,
+    type_id=1,
+    category_id=1,
+    format_id=1,
+    covers=["https://example.com/cover.jpg"],
+    is_private=False
+)
+print(event)
+```
+
+### Manage Roles
+
+```python
+# List all roles
+roles = await list_roles()
+
+# Create new role with permissions
+role = await create_role(
+    name="Event Manager",
+    permissions_per_module=[
+        {"moduleId": 1, "permissionId": 1},
+        {"moduleId": 2, "permissionId": 2}
+    ]
+)
+```
+
+## Error Handling
+
+The server includes comprehensive error handling with detailed logging. All API requests include:
+
+- Timeout handling (30-second default)
+- HTTP status error handling
+- Detailed error messages in logs
+- Graceful error responses
+
+## Logging
+
+The server uses Python's built-in logging module with INFO level by default. All API requests and responses are logged for debugging purposes.
+
+## Health Monitoring
+
+Use the `health_check` tool to verify the system status:
+
+```python
+status = await health_check()
+print(status)  # "Application is healthy"
+```
+
+## Contributing
+
+Contributions are welcome! Please ensure you:
+
+1. Write tests for new features
+2. Follow existing code style
+3. Update documentation as needed
+4. Add logging for new functionality
