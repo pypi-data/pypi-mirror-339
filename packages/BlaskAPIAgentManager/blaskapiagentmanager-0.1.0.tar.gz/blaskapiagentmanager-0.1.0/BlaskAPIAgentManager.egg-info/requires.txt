@@ -1,0 +1,14 @@
+langchain
+langchain-openai
+langchain-core
+requests
+python-dotenv
+pydantic
+openai
+
+[dev]
+pytest
+pytest-cov
+black
+isort
+mypy
