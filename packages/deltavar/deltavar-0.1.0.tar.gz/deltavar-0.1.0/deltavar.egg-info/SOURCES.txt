@@ -1,0 +1,7 @@
+LICENSE
+README.md
+pyproject.toml
+deltavar.egg-info/PKG-INFO
+deltavar.egg-info/SOURCES.txt
+deltavar.egg-info/dependency_links.txt
+deltavar.egg-info/top_level.txt
