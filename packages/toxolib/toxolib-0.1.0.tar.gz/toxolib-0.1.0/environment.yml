@@ -1,0 +1,17 @@
+name: taxonomy_env
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - kraken2
+  - bracken
+  - krona=2.7.1
+  - fastp
+  - bowtie2
+  - samtools
+  - pandas
+  - scikit-bio>=0.5.0
+  - matplotlib
+  - seaborn
