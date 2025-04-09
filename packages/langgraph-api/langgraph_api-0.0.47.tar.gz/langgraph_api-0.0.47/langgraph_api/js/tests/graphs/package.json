@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "dependencies": {
+    "@langchain/core": "^0.3.40",
+    "@langchain/langgraph": "^0.2.49"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.1"
+  }
+}
