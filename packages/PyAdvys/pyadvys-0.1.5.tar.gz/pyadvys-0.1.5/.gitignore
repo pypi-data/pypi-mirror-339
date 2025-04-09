@@ -1,0 +1,6 @@
+dist/
+*.egg-info
+*pycache*/
+.pytest_cache
+.venv*
+__version__*
