@@ -1,0 +1,2 @@
+[console_scripts]
+kaia-setup = killeraiagent.setup_utils:main
