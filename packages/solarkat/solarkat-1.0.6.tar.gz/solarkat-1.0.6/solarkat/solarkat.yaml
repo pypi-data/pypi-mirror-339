@@ -1,0 +1,478 @@
+#!/usr/bin/env -S stimela run
+
+_include:
+  - solarkat-cabs.yaml
+
+opts:
+  log:
+    dir: logs/log-{config.run.datetime}
+    name: log-{info.fqname}
+    nest: 2
+    symlink: log
+  backend:
+    select: native
+
+solarkat:
+  name: solarkat recipe
+  info: 'Recipe to Image and subtraction of the Sun from observations'
+
+  assign:
+    image-prefix: '{recipe.dir_out}/im{info.suffix}/im{info.suffix}{recipe.suffix}'
+    mask-prefix: '{recipe.dir_out}/im{info.suffix}/mask{info.suffix}{recipe.suffix}'
+    dirs:
+      ms: ../msdir       # MSs live here
+      temp: ./tmp
+
+  assign_based_on:
+    _include: solarkat-observation-sets.yaml
+
+  inputs:
+    obs:
+      choices: [L1, L2, UHF, L3, L4, L5, L6, L7,L8]
+      info: "Selects observation by label, -- edit solarkat-observation-sets.yml"
+      required: true
+    suffix:
+      dtype: str
+      default: ''
+    dir_out:
+      dtype: str
+    ms:
+      dtype: MS
+    splitted_ms_suffix:
+      dtype: str
+      default: '_scan_'
+    ms_list:
+      dtype: List[MS]
+    strArray:
+      dtype: List[str]
+
+  steps:
+    image-1:
+      info: "Auto-masked deep I clean"
+      cab: wsclean
+      params:
+        ms: =recipe.ms
+        nchan: 4
+        mgain: 0.8
+        size: 1000
+        niter: 10000
+        padding: 2.0
+        column: DATA
+        scale: 1.5asec
+        auto-threshold: 3
+        weight: 'briggs 0'
+        join-channels: true 
+        fit-spectral-pol: 4 
+        temp-dir: =recipe.dirs.temp
+        prefix: '{recipe.image-prefix}'
+
+    mask-1:
+      cab: breizorro
+      info: 'Creating a fits mask with breizorro'
+      params:
+        threshold: 15
+        outfile: '{previous.prefix}-mask.fits'
+        restored-image: "{previous.prefix}-MFS-image.fits"
+        outcatalog: None
+        outregion: None
+
+
+    image-2: 
+      info: "Breizorro-masked deep I clean"
+      cab: wsclean
+      params:
+        ms: =recipe.ms
+        nchan: 4
+        mgain: 0.8
+        size: 10000
+        niter: 100000
+        padding: 2.0
+        column: DATA
+        scale: 1.5asec
+        auto-threshold: 3
+        weight: 'briggs 0'        
+        join-channels: true
+        fit-spectral-pol: 4 
+        fits-mask: "{previous.mask}"
+        temp-dir: =recipe.dirs.temp
+        prefix: '{recipe.image-prefix}'
+
+    save-flags-1: 
+      cab: casa.flagman
+      info: 'Saving the flags after 1GC'
+      params:
+        ms: =recipe.ms
+        versionname: 'before-selfcal.yml'
+        mode: save
+
+
+    selfcal-1:
+      cab: quartical
+      info: "Self-calibration"
+      params:
+        input_ms.path: =recipe.ms
+        input_ms.time_chunk: '128'
+        input_model.recipe: MODEL_DATA
+        solver.terms: [K]
+        solver.iter_recipe: [100]
+        K.type: phase
+        K.freq_interval: '0'
+        K.time_interval: '4' 
+        K.initial_estimate: true       
+        K.direction_dependent: false
+        output.overwrite: true
+        output.products: [corrected_data]
+        output.columns: [CORRECTED_DATA]
+
+ 
+    save-flags-2: 
+      cab: casa.flagman
+      info: 'Saving flags after 2GC'
+      params:
+        ms: =recipe.ms
+        versionname: "after-2GC.yml"
+        mode:  save
+
+
+    image-3: 
+      info: "Breizorro-masked deep I clean"
+      cab: wsclean
+      params:
+        ms: =recipe.ms        
+        nchan: 4
+        mgain: 0.8
+        size:  10000
+        niter: 100000
+        padding: 2.0
+        scale: 1.5asec                        
+        weight: 'briggs 0'
+        join-channels: true
+        fit-spectral-pol: 4
+        column: CORRECTED_DATA
+        temp-dir: =recipe.dirs.temp
+        prefix: '{recipe.image-prefix}'
+        fits-mask: "{steps.image-1.prefix}-mask.fits"
+
+    backup-model-data:
+      cab: msutils.renamecol
+      info: 'Renaming the MODEL_DATA visibilities to ORIGINAL_MODEL_DATA (saving the MODEL_DATA of the original visibilities)'
+      skip: false
+      params:
+        msname: =recipe.ms
+        old-column: 'MODEL_DATA'
+        new-column: 'MODEL_DATA_ORIGINAL' 
+
+
+    scan-numbers-extraction:
+      info: 'Extract a list of unique scan numbers from a Measurement Set. The scan output parameter is a list of strings representing the unique scan numbers.'
+      cab: extract_and_save_scan_numbers
+      params:
+        ms: =recipe.ms
+        output_file: ='{recipe.dir_out}/scan-numbers.txt' 
+
+
+    split-ms-by-scan:
+      info: 'Load scan numbers extracted in the previous step and Split the MS into scans using as input the scan_numbers'
+      recipe:
+        inputs:
+          scan_file:
+            dtype: File
+        steps:
+          load-scan-numbers:
+            cab: load_scan_numbers
+            params:
+              scans_file: =root.steps.scan-numbers-extraction.output_file
+          split-ms:
+            params:
+              scan_list: =steps.load-scan-numbers.scan_numbers
+            recipe:
+              inputs:
+                scan_list:
+                  dtype: List[str]
+                ms:
+                  dtype: MS
+              for_loop:
+                var: scan
+                over: scan_list
+              steps:
+                casa_split_scan:
+                  cab: splitms_scan
+                  params:
+                    vis: '{root.ms}'
+                    datacolumn: 'all'
+                    scan: '{recipe.scan}'
+                    outputvis: ="{root.dir_out}" + "/" + "{root.perscan_dir_out}" + "/" + STRIPEXT(BASENAME(root.ms)) + "_scan_{recipe.scan}.ms"
+
+
+    get-perscan-old-coords: 
+      cab: get_old_coords
+      info: 'Get the phase centre coordinates of the scans main field.'
+      params: 
+        output_file: '{recipe.dir_out}/old-perscans-coods.txt'
+        ms_list: =GLOB("{recipe.dir_out}/{recipe.perscan_dir_out}/*_scan_*")
+
+
+    get-sun-coordinates: 
+      cab: sun_coordinates
+      info: 'Determine the Sun coordinates (RA/DEC) for all scans in the MS and write into a txt file '
+      params:
+        ms: =recipe.ms
+        output_file: '{recipe.dir_out}/sun-coordinates.txt'
+
+
+    shift-to-sun: 
+      cab: shift_coords
+      info: 'Change the phase centre of the main field to the Sun.'
+      params:
+        ms_list: =GLOB("{recipe.dir_out}/{recipe.perscan_dir_out}/*_scan_*")
+        coords: '{recipe.steps.get-sun-coordinates.output_file}'
+        splitted_ms_dir: '{recipe.dir_out}/{recipe.perscan_dir_out}/'
+        datacolumn: 'all'
+
+    image-sun:
+      info: "Create a dirty image of the Sun's field for each scan"
+      params:
+        ms_list: =GLOB("{recipe.dir_out}/{recipe.perscan_dir_out}/*_scan_*.ms")  
+      recipe:
+        inputs:
+          ms_list:
+            dtype: List[MS]
+        for_loop:
+          var: ms
+          over: ms_list
+        steps:
+          image:
+            cab: wsclean
+            params: 
+              niter: 0
+              nchan: 4
+              size: 6000
+              scale: 1.5asec 
+              ms: =recipe.ms
+              column: CORRECTED_DATA
+              temp-dir: =root.dirs.temp
+              prefix: ="{root.dir_out}/{root.perscan_dir_out}/{root.sun_images_dir}/" + STRIPEXT(BASENAME(recipe.ms))
+
+
+    create-ds9-regions:
+      cab: create_ds9_regions
+      info: 'Create ds9 regions for each Sun image.'
+      params:
+        ms: =recipe.ms
+        input_file: '{recipe.steps.get-sun-coordinates.output_file}'
+        output_dir: '{recipe.dir_out}/{recipe.regions_dir_out}' 
+
+
+    make-mask:      
+      info: 'Sun Fits-mask creation in each scan with breizorro'
+      recipe:
+        inputs:
+          scan_list:
+            dtype: List[str]
+        steps:
+          load-scan-numbers:
+            cab: load_scan_numbers
+            params:
+              scans_file: =root.steps.scan-numbers-extraction.output_file  
+          making_masks:
+            params:
+              region_dir:  "{root.dir_out}/{root.regions_dir_out}"  
+              scan_list: =steps.load-scan-numbers.scan_numbers   
+            recipe:
+              inputs:
+                scan_list:
+                  dtype: List[str]
+                region_dir:
+                  dtype: Directory 
+              for_loop:
+                var: scan
+                over: scan_list
+              steps:
+                make_mask:
+                  cab: breizorro
+                  params:
+                    restored-image: ="{root.dir_out}/{root.perscan_dir_out}/{root.sun_images_dir}/" + STRIPEXT(BASENAME(root.ms)) + "_scan_{recipe.scan}-MFS-image.fits"
+                    threshold: 999999999999
+                    merge: ="{root.dir_out}" + "/" + "{root.regions_dir_out}" + "/" + "sun-region-{recipe.scan}.reg"
+                    outfile: ="{root.dir_out}" + "/" + "{root.masks_dir_out}" + "/" + STRIPEXT(BASENAME(root.ms)) + "_scan_{recipe.scan}-mask.fits"
+                    outcatalog: None
+                    outregion: None
+
+
+
+    deconvolve-sun:
+      info: " clean imaging of the Sun for a better model, using the masks created from the make_mask step."
+      params:
+        mask_list: =GLOB('{recipe.dir_out}/{recipe.masks_dir_out}/*.fits*') 
+        ms_list:  =GLOB('{recipe.dir_out}/{recipe.perscan_dir_out}/*_scan_*.ms') # insert folder path then glob#         
+      recipe:
+        inputs:
+          ms_list:
+            dtype: List[MS]
+          mask_list:
+            dtype: List[File]
+        for_loop:
+          var: ms
+          over: ms_list
+        steps:
+          image:
+            cab: wsclean
+            params:              
+              nchan: 4
+              size:  6000
+              niter: 100000
+              ms: =recipe.ms
+              scale: 1.5asec               
+              multiscale: true 
+              auto-threshold: 1
+              join-channels: true
+              fit-spectral-pol: 4
+              save-source-list: true  
+              column: CORRECTED_DATA 
+              temp-dir: =root.dirs.temp
+              prefix: ="{root.dir_out}/{root.perscan_dir_out}/{root.clean_image_sun}/" + STRIPEXT(BASENAME(recipe.ms))
+              fits-mask: ="{root.dir_out}" + "/" + "{root.masks_dir_out}" + "/" + STRIPEXT(BASENAME(recipe.ms)) + "-mask.fits"
+
+
+
+    predict-sun-model:
+      info: " Predict Sun Model to the MODEL_DATA column."     
+      params: 
+        ms_list: =GLOB("{recipe.dir_out}/{recipe.perscan_dir_out}/*_scan_*.ms")
+      recipe:
+        inputs:
+          scans:
+            dtype: List[MS]
+          ms_list:
+            dtype: List[MS]
+          mask_list:
+            dtype: List[File]
+        for_loop:
+          var: ms 
+          over: ms_list
+        steps:
+          predict:
+            cab: wsclean        
+            params:
+              nchan: 4
+              size:   6000
+              ms: =recipe.ms
+              scale: 1.5asec
+              predict: true
+              temp-dir: =root.dirs.temp
+              prefix: ="{root.dir_out}/{root.perscan_dir_out}/{root.clean_image_sun}/" + STRIPEXT(BASENAME(recipe.ms)) 
+
+    rephase:
+      cab: shift_coords
+      info: "Rephase scans coordinate to main field"
+      params:
+        ms_list: =GLOB("{recipe.dir_out}/{recipe.perscan_dir_out}/*_scan_*")
+        coords: '{recipe.steps.get-perscan-old-coords.output_file}'
+        splitted_ms_dir: '{recipe.dir_out}/{recipe.perscan_dir_out}/'
+        datacolumn: 'all'
+
+
+
+    add-model-data-columnn:
+      cab: msutils.addcol
+      info: "Add MODEL_DATA_SUN column to the original MS"
+      params:
+        msname:  =recipe.ms
+        colname: 'MODEL_DATA_SUN'
+        likecol: 'MODEL_DATA_ORIGINAL'
+
+
+    copycolumn:
+      info: 'Copying data from MODEL_DATA to MODEL_DATA_SUN, from each scan in the MS to the single MS'
+      params:
+        ms-list:  =GLOB("{recipe.dir_out}/{recipe.perscan_dir_out}/*_scan_*")
+      recipe:
+        inputs:
+          msname:
+            dtype: MS
+          fromcol:
+            dtype: str
+          tocol:
+            dtype: str
+          ms-list:
+            dtype: List[MS]
+        for_loop:
+          var: ms
+          over: ms-list
+        steps:
+          copy-column: 
+            cab:  msutils.copycol
+            params:
+              msname: =recipe.ms
+              fromcol: 'MODEL_DATA'
+              tocol: 'MODEL_DATA_SUN'
+
+
+    cal-and-peel-sun:
+      cab: quartical
+      info: 'Selfcal + peel sun'
+      params:
+        input_ms.path: =recipe.ms
+        input_ms.is_bda: False
+        input_ms.time_chunk: '14'
+        input_ms.freq_chunk: '0'
+        input_ms.select_uv_range: [0,0]
+        input_ms.weight_column: WEIGHT_SPECTRUM
+        input_ms.group_by: [FIELD_ID,DATA_DESC_ID,SCAN_NUMBER]
+        input_model.recipe: MODEL_DATA_ORIGINAL:MODEL_DATA_SUN
+        input_model.apply_p_jones: false
+        solver.terms: [K,dE]
+        solver.iter_recipe: [100,50]
+        solver.propagate_flags: false
+        solver.robust: false
+        solver.threads: 4
+        dask.threads: 8
+        mad_flags.enable: false
+        dask.scheduler: threads
+        K.type: phase
+        K.time_interval: 4
+        K.freq_interval: 0
+        K.initial_estimate: true
+        K.direction_dependent: false
+        dE.type: complex
+        dE.time_interval: 14
+        dE.freq_interval: 64
+        dE.pinned_directions: [0]
+        dE.initial_estimate: False
+        dE.direction_dependent: true
+        output.flags: true
+        output.overwrite: true
+        output.subtract_directions: [1]
+        output.apply_p_jones_inv: false
+        output.products: [corrected_residual]
+        output.columns: [CORRECTED_RESIDUAL]
+        output.log_directory: '{recipe.dir_out}/{recipe.qcal_output_dir}/'
+        output.gain_directory: '{recipe.dir_out}/{recipe.qcal_output_dir}/peeled.qc'
+
+
+    save-flags-3:
+      cab: casa.flagman
+      params:
+        ms: =recipe.ms
+        versionname: "After-3GC.yml"
+        mode: save
+
+
+    image-4:
+      info: "Deconvolve the improved image"
+      cab: wsclean
+      params:
+        nchan: 4
+        mgain: 0.8
+        size:  10000
+        padding: 2.0
+        niter: 100000
+        ms: =recipe.ms
+        scale: 1.5asec
+        auto-threshold: 3
+        weight: 'briggs 0'
+        join-channels: true
+        column: CORRECTED_RESIDUAL
+        temp-dir: =recipe.dirs.temp
+        prefix: '{recipe.image-prefix}'
+
