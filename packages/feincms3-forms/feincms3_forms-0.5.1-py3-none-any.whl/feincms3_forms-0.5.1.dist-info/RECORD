@@ -1,0 +1,12 @@
+feincms3_forms/__init__.py,sha256=eZ1bOun1DDVV0YLOBW4wj2FP1ajReLjbIrGmzN7ASBw,22
+feincms3_forms/admin.py,sha256=thzZk5z1n2_oTnO9UFtNTlmaZRYqVIiFkToEeNAX3-Q,5336
+feincms3_forms/models.py,sha256=f6d-cxkD58mWN082Pb3X2J1jrf0T1Z0WJi633EnGX0I,14549
+feincms3_forms/renderer.py,sha256=ynlUx0OB9gAMs8BIONmev19C1b1vW4_7M-SCLhbFQpE,1768
+feincms3_forms/reporting.py,sha256=G3UdUnAnKvQI4dVlBU_iTuqljayPdwlmccy6_vHz1rw,941
+feincms3_forms/validation.py,sha256=qPnbeKXbNGSXkq_u0NFLRCGaGBWL341HaGqdZmtGfbQ,2578
+feincms3_forms/locale/de/LC_MESSAGES/django.mo,sha256=jDM3N9fTjzAQmPPFifTvdIOY3pAOQ_B5t7Zpt7jt868,3460
+feincms3_forms/locale/de/LC_MESSAGES/django.po,sha256=OZ7clT5Idz4u7PjKPG_cP33x0Plyzkxbf6F3sUmSdQ4,4412
+feincms3_forms-0.5.1.dist-info/METADATA,sha256=ll7LNWozdzyM9hOyPREWOAvIeXFbmABQMSNi_guHcsc,11901
+feincms3_forms-0.5.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+feincms3_forms-0.5.1.dist-info/licenses/LICENSE,sha256=bGCh3k7OeHrIXMDCn548Khpf-FI2HcoJkxBLDxA_n4A,1548
+feincms3_forms-0.5.1.dist-info/RECORD,,
