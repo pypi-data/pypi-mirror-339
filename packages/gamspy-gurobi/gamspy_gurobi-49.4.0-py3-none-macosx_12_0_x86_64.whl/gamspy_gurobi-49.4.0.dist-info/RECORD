@@ -1,0 +1,10 @@
+gamspy_gurobi/__init__.py,sha256=awyNCTZYbFdM7Y4DKMZalZjy3AmBrm_dzMK5Adnsqjo,400
+gamspy_gurobi/grbgetkey,sha256=6HCKdWZL82D93ltkw8X9va4T2OVpBBxA462Zo1YaF0Q,11743408
+gamspy_gurobi/grbprobe,sha256=CPCbsbjBtfTi-Zchezc9dG67GgpXEZG06OhZQozvyz8,13221696
+gamspy_gurobi/libgrbcclib64.dylib,sha256=MxkcSjj7G_EU5dP2X_7O57GdN78xm8Ky2j1aEC5JnFs,527928
+gamspy_gurobi/optgurobi.def,sha256=ZmTclmMzi9Jgn5eiUePjaqsVnnFQOB8XJiOHUhDAQCA,21139
+gamspy_gurobi/version.py,sha256=iAkpToKg__ekhLNEMJl6zFEUyaFCF2eiAP6oBXhd1oo,22
+gamspy_gurobi-49.4.0.dist-info/METADATA,sha256=-WI2cmZO9qU9_p-J2CWJ7ePHS-nChQofGFXI-w1wuPw,58
+gamspy_gurobi-49.4.0.dist-info/WHEEL,sha256=d_p2FrCYD-fEZeapZrSq1iJrqJHHviWIe1r7M1U95vU,112
+gamspy_gurobi-49.4.0.dist-info/top_level.txt,sha256=3w4TYVPqS1HlETRlDgAPOeLV1j-gUeKE1iJ6ds47eQI,14
+gamspy_gurobi-49.4.0.dist-info/RECORD,,
