@@ -1,0 +1,5 @@
+recursive-include littlefscli/templates *.json
+
+include README.md
+
+include LICENSE

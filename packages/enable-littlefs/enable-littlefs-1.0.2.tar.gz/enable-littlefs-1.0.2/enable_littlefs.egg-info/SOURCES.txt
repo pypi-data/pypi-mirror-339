@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+enable_littlefs.egg-info/PKG-INFO
+enable_littlefs.egg-info/SOURCES.txt
+enable_littlefs.egg-info/dependency_links.txt
+enable_littlefs.egg-info/entry_points.txt
+enable_littlefs.egg-info/top_level.txt
+littlefscli/__init__.py
+littlefscli/config.ini
+littlefscli/enable_littlefs.py
+littlefscli/templates/task.partition.template.json
+littlefscli/templates/tasks.base.template.json
