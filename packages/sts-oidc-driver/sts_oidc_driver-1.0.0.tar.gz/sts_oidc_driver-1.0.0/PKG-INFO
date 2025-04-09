@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: sts_oidc_driver
+Version: 1.0.0
+Summary: A utility to sign into the AWS CLI with STS using OIDC/OAuth
+Home-page: https://github.com/awslabs/StsOidcDriver
+Author: Liam Wadman
+Author-email: liwadman@amazon.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: requests~=2.32.3
+Requires-Dist: bottle~=0.13.2
+Requires-Dist: boto3~=1.37.2
+Requires-Dist: pyjwt~=2.10.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

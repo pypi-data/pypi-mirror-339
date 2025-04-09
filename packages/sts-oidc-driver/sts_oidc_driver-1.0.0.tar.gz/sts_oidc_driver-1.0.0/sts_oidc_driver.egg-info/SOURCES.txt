@@ -1,0 +1,12 @@
+LICENSE
+NOTICE
+README.md
+setup.cfg
+setup.py
+stsoidcdriver.py
+sts_oidc_driver.egg-info/PKG-INFO
+sts_oidc_driver.egg-info/SOURCES.txt
+sts_oidc_driver.egg-info/dependency_links.txt
+sts_oidc_driver.egg-info/entry_points.txt
+sts_oidc_driver.egg-info/requires.txt
+sts_oidc_driver.egg-info/top_level.txt
