@@ -1,0 +1,10 @@
+allauth_suap/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+allauth_suap/apps.py,sha256=VF9RQSn3x968GblM4X6mcQ1ACXWLTj51WDjuvtofIQA,155
+allauth_suap/provider.py,sha256=thh6kHeIvuFY9ysmoJ64WFcUnB3ilYK4DB3xunmPRfQ,1108
+allauth_suap/tests.py,sha256=7JmPFv4fTRRYb8wvvIleQ65JaYPywRzfIsrWHeKWsig,14
+allauth_suap/urls.py,sha256=g9brMe_3oXs2oTwVpPmH9cFYZuUebNqUUQa0OWdkBMY,174
+allauth_suap/views.py,sha256=oDurO6J15bDDGWLjL2_KF_zs2LyNUR3YUfPuKgJUTBI,1226
+django_allauth_suap-0.1.1.dist-info/METADATA,sha256=_2IKZcm5gPpPLTgDkIL7gRMYsfs5yt1TUQRiMrJ-NGw,763
+django_allauth_suap-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+django_allauth_suap-0.1.1.dist-info/licenses/LICENSE,sha256=mRh08Nh0cygmfRUeRFA7HIk8l7eOJ3tTq2GwkWJFmu0,1069
+django_allauth_suap-0.1.1.dist-info/RECORD,,
