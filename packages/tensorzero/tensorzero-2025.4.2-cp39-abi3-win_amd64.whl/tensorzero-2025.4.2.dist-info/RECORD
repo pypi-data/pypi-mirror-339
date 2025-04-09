@@ -1,0 +1,11 @@
+tensorzero-2025.4.2.dist-info/METADATA,sha256=PUEVXJ75e52GreHtrxXK6-_ZQXtLtwGGy2_kjhNxAv4,5921
+tensorzero-2025.4.2.dist-info/WHEEL,sha256=Knh24GxuPajrgujpzxXdeeXMnLIvsBdfIjwPKjrPZc8,94
+tensorzero/client.py,sha256=79rMZ4gAgbZqbW5GQBUf2jM7CxPmQvHV1ZIVJeCE-70,282
+tensorzero/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tensorzero/tensorzero.pyi,sha256=4TGZPR2tJIMmjnv7iS9wqp1z2mbsbIaaZshY6dnwbUs,16825
+tensorzero/types.py,sha256=lDWyyp0LhUaspf7Pdvvgo24AQ4RtxV3jdM5j1qPVIfs,11248
+tensorzero/util.py,sha256=FbsSYXPDdqLyYK3XsRYJJ24GTf1glp_zZEh_baimm2Q,286
+tensorzero/__init__.py,sha256=RbWNXjAn9fx0-3kktnHnMnzwhlYHY7eqxzgGoQXLlME,5064
+.cargo/config.toml,sha256=rRFsH_rIZcmBCKN2x2DI2u0Nje5Of1dWv9i1Jf5aVFU,540
+tensorzero/tensorzero.pyd,sha256=7ftFWvbYWuhPt9tuuHM50Rc4nKIHZ1h97Yrxkh1dq8Y,34641920
+tensorzero-2025.4.2.dist-info/RECORD,,
