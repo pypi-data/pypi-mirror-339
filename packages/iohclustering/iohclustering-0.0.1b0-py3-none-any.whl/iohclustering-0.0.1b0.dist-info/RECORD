@@ -1,0 +1,9 @@
+iohclustering/__init__.py,sha256=9R7zIJTiJHhsI09guyu43TTGMLpl-d3i6t87XofvpQ0,128
+iohclustering/cluster_base.py,sha256=zwpiaINDc1fk5nE3I2qLC3Qrg02jwXHwyLlC0jjxyOM,9898
+iohclustering/cluster_baseline_problems.py,sha256=qFb9LVAHvzYUwHW5ZVViaRiECFvawaFWJ4ToWmruTOY,641
+iohclustering/cluster_metrics.py,sha256=2TJtiE_zefZbV9hcDVVorggsu-b3C1Rd8AqOjnFLFvg,2376
+iohclustering/utils_metrics.py,sha256=XGWrzPWrS1a4rFz1a1LTM_8HUanwgXPP4sUUZytQYYY,1791
+iohclustering-0.0.1b0.dist-info/METADATA,sha256=_AAzcdaBUXhkh75Z1kC8I9i9fXq5DjZTLs0KGWTwXU8,3627
+iohclustering-0.0.1b0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+iohclustering-0.0.1b0.dist-info/top_level.txt,sha256=a5WmcN366X2jxJNOHs_9XFqOEsctXnropeBEx5N1TBk,14
+iohclustering-0.0.1b0.dist-info/RECORD,,
