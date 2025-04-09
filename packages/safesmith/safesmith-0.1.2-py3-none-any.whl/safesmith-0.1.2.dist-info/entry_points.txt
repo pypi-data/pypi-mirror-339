@@ -1,0 +1,2 @@
+[console_scripts]
+safesmith = safesmith.cli:main
