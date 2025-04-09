@@ -1,0 +1,14 @@
+numpy>=1.26.0
+scipy>=1.15.0
+opencv-python>=4.11.0
+pillow>=9.3.0
+
+[dev]
+pip
+setuptools>=78
+build
+twine
+black
+mypy
+coverage
+scipy-stubs
