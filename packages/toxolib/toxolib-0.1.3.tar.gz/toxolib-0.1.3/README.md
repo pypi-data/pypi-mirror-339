@@ -1,0 +1,233 @@
+# toxolib
+
+A Python package for metagenomic taxonomic profiling and abundance matrix generation.
+
+## Installation
+
+### Using pip
+
+```bash
+pip install toxolib
+```
+
+### Install directly from GitHub
+
+```bash
+pip install git+https://github.com/dhruvac29/toxolib.git
+```
+
+### Using conda
+
+We recommend using conda to install all dependencies. An environment file is included in the package:
+
+```bash
+# Clone the repository
+git clone https://github.com/dhruvac29/toxolib.git
+cd toxolib
+
+# Create and activate the conda environment
+conda env create -f environment.yml
+conda activate taxonomy_env
+
+# Install the package
+pip install -e .
+```
+
+## Requirements
+
+This package requires the following external tools to be installed and available in your PATH:
+
+- Kraken2
+- Bracken
+- Krona (for visualization)
+- fastp (for preprocessing)
+- bowtie2 (for host removal)
+- samtools
+
+All these dependencies are included in the conda environment file.
+
+You'll also need to set the environment variable `KRAKEN2_DB_DIR` to the path of your Kraken2 database:
+
+```bash
+export KRAKEN2_DB_DIR=/path/to/kraken2/database
+```
+
+## Usage
+
+### Local Usage
+
+#### Generate abundance matrix from raw data
+
+```bash
+toxolib abundance -r raw_data_1.fastq.gz raw_data_2.fastq.gz -o output_directory
+```
+
+This will:
+1. Run Kraken2 on the raw data
+2. Run Bracken on the Kraken2 results
+3. Generate an abundance matrix from the Bracken results
+
+#### Create abundance matrix from existing Bracken files
+
+```bash
+toxolib matrix -i sample1_species.bracken sample2_species.bracken -o abundance_matrix.csv
+```
+
+### HPC Usage
+
+Toxolib can run the analysis pipeline on an HPC cluster using SLURM for job scheduling.
+
+#### 1. Set up HPC connection
+
+```bash
+toxolib hpc-setup --hostname your-hpc-server.edu --username your-username --key-file ~/.ssh/id_rsa
+```
+
+This will save your HPC connection details to `~/.toxolib/hpc_config.yaml`.
+
+#### 2. Run the pipeline on HPC
+
+```bash
+toxolib hpc -r raw_data_1.fastq.gz raw_data_2.fastq.gz -o /path/on/hpc/output_dir \
+    --kraken-db /path/on/hpc/kraken2_db \
+    --corn-db /path/on/hpc/corn_db \
+    --partition normal --threads 32 --memory 200 --time 144:00:00
+```
+
+This will:
+1. Upload your raw data files to the HPC
+2. Create a Snakemake workflow file
+3. Upload an environment.yml file to the HPC
+4. Submit a SLURM job to run the analysis
+5. Return a job ID for tracking
+
+##### Automatic Conda Environment Creation
+
+When submitting a job to the HPC, toxolib will automatically:
+1. Upload a conda environment.yml file to the HPC
+2. Create a conda environment in the output directory if it doesn't exist
+3. Activate the environment before running the analysis
+
+This ensures all required dependencies are available on the HPC without requiring manual environment setup.
+
+#### 3. Check job status
+
+```bash
+toxolib hpc-status --job-id your_job_id
+```
+
+#### 4. Download results when complete
+
+```bash
+toxolib hpc-download --job-id your_job_id --output-dir ./local_results
+```
+
+## Database Setup
+
+### Automated Database Setup
+
+Toxolib now provides automated database setup for both local and HPC environments.
+
+#### Local Database Setup
+
+```bash
+# Set up both Kraken2 and corn genome databases
+toxolib db-setup -o /path/to/databases --kraken --corn
+
+# Set up only Kraken2 database
+toxolib db-setup -o /path/to/databases --kraken
+
+# Set up only corn genome database
+toxolib db-setup -o /path/to/databases --corn
+
+# Force re-download of databases even if they exist
+toxolib db-setup -o /path/to/databases --kraken --corn --force
+```
+
+After setup, you should set the environment variable for Kraken2:
+
+```bash
+export KRAKEN2_DB_DIR=/path/to/databases/Kraken2_DB
+```
+
+#### HPC Database Setup
+
+When submitting jobs to the HPC, you can now automatically download and set up the databases on the HPC:
+
+```bash
+# Automatically download and set up both databases on the HPC
+toxolib hpc -r raw_data_1.fastq.gz raw_data_2.fastq.gz -o /path/on/hpc/output_dir \
+    --setup-kraken-db --setup-corn-db
+
+# Automatically download and set up only Kraken2 database
+toxolib hpc -r raw_data_1.fastq.gz raw_data_2.fastq.gz -o /path/on/hpc/output_dir \
+    --setup-kraken-db
+
+# Automatically download and set up only corn genome database
+toxolib hpc -r raw_data_1.fastq.gz raw_data_2.fastq.gz -o /path/on/hpc/output_dir \
+    --setup-corn-db
+```
+
+When using these options, toxolib will:
+1. Create the necessary directories on the HPC
+2. Download the databases directly on the HPC
+3. Extract and set up the databases in the specified locations
+4. Configure the Snakefile to use the correct database paths
+
+### Manual Database Setup
+
+If you prefer to set up the databases manually, you can follow these steps:
+
+#### Kraken2 Database
+
+You can download the standard Kraken2 database from:
+[https://genome-idx.s3.amazonaws.com/kraken/k2_standard_20240112.tar.gz](https://genome-idx.s3.amazonaws.com/kraken/k2_standard_20240112.tar.gz)
+
+```bash
+wget https://genome-idx.s3.amazonaws.com/kraken/k2_standard_20240112.tar.gz
+tar -xzf k2_standard_20240112.tar.gz -C /path/to/kraken2/database
+export KRAKEN2_DB_DIR=/path/to/kraken2/database
+```
+
+#### Corn Genome Database
+
+For host removal, you can download the corn genome reference from:
+[https://glwasoilmetagenome.s3.us-east-1.amazonaws.com/corn_db.zip](https://glwasoilmetagenome.s3.us-east-1.amazonaws.com/corn_db.zip)
+
+```bash
+wget https://glwasoilmetagenome.s3.us-east-1.amazonaws.com/corn_db.zip
+unzip corn_db.zip -d /path/to/corn_db
+```
+
+#### Manual Setup on HPC
+
+When using the HPC functionality, you can manually upload and extract these databases on your HPC system:
+
+```bash
+# On your local machine, download the databases
+wget https://genome-idx.s3.amazonaws.com/kraken/k2_standard_20240112.tar.gz
+wget https://glwasoilmetagenome.s3.us-east-1.amazonaws.com/corn_db.zip
+
+# Upload to HPC (using scp)
+scp k2_standard_20240112.tar.gz your-username@your-hpc-server.edu:/path/on/hpc/
+scp corn_db.zip your-username@your-hpc-server.edu:/path/on/hpc/
+
+# SSH into HPC and extract
+ssh your-username@your-hpc-server.edu
+mkdir -p /path/on/hpc/kraken2_db
+tar -xzf /path/on/hpc/k2_standard_20240112.tar.gz -C /path/on/hpc/kraken2_db
+mkdir -p /path/on/hpc/corn_db
+unzip /path/on/hpc/corn_db.zip -d /path/on/hpc/corn_db
+```
+
+Then when running toxolib, specify these paths:
+
+```bash
+toxolib hpc -r raw_data_1.fastq.gz raw_data_2.fastq.gz -o /path/on/hpc/output_dir \
+    --kraken-db /path/on/hpc/kraken2_db \
+    --corn-db /path/on/hpc/corn_db
+```
+
+## License
+
+MIT
