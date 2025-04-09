@@ -1,0 +1,6 @@
+numpy
+target-approximation>=0.0.4
+tools-mp==0.2.0
+torch
+torchaudio
+vocaltractlab-cython==0.0.16
