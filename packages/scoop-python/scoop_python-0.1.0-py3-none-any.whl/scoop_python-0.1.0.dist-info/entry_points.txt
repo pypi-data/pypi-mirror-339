@@ -1,0 +1,2 @@
+[console_scripts]
+scoop-python = scoop_python:main
