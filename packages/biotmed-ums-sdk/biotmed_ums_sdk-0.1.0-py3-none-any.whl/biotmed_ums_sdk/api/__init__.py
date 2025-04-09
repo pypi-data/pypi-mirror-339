@@ -1,0 +1,22 @@
+# flake8: noqa
+
+# import apis into api package
+from biotmed_ums_sdk.api.captcha_api_api import CaptchaAPIApi
+from biotmed_ums_sdk.api.device_api_api import DeviceAPIApi
+from biotmed_ums_sdk.api.group_api_api import GroupAPIApi
+from biotmed_ums_sdk.api.health_check_api_api import HealthCheckAPIApi
+from biotmed_ums_sdk.api.login_api_api import LoginAPIApi
+from biotmed_ums_sdk.api.mfa_login_api_api import MFALoginAPIApi
+from biotmed_ums_sdk.api.permission_api_api import PermissionAPIApi
+from biotmed_ums_sdk.api.role_api_api import RoleAPIApi
+from biotmed_ums_sdk.api.security_api_api import SecurityAPIApi
+from biotmed_ums_sdk.api.self_permission_api_api import SelfPermissionAPIApi
+from biotmed_ums_sdk.api.self_user_api_api import SelfUserAPIApi
+from biotmed_ums_sdk.api.service_user_api_api import ServiceUserAPIApi
+from biotmed_ums_sdk.api.settings_api_api import SettingsAPIApi
+from biotmed_ums_sdk.api.sync_token_permissions_api_api import SyncTokenPermissionsAPIApi
+from biotmed_ums_sdk.api.sync_token_permissions_core_api_api import SyncTokenPermissionsCoreAPIApi
+from biotmed_ums_sdk.api.temporary_credentials_api_api import TemporaryCredentialsAPIApi
+from biotmed_ums_sdk.api.temporary_token_operation_api_api import TemporaryTokenOperationAPIApi
+from biotmed_ums_sdk.api.user_api_api import UserAPIApi
+
