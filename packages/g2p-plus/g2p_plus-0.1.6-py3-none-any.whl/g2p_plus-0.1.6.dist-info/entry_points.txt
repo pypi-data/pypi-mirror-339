@@ -1,0 +1,2 @@
+[console_scripts]
+g2p_plus = g2p_plus.main:main
