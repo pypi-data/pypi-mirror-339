@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: gpt_memory
+Version: 0.0.10
+Summary: A LLM memory management library
+Home-page: https://github.com/git4sun/gpt_memory
+Author: Yang Sun
+Author-email: sun@raaslabs.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: sqlalchemy
+
+# GPT Memory
+
+GPT Memory is a package that stores historical memory of your LLM conversations and uses these memories to improve subsequent interactions. The system automatically classifies the memories and generates abstracts to behave like how human making conversations.
+
+## Features
+
+- **Historical Memory Storage**: Stores and manages historical chat data.
+- **Automatic Classification**: Automatically classifies chat memories for better organization.
+- **Abstract Generation**: Generates abstracts of past conversations to enhance GPT's context handling.
+- **Mood detection**: Check user emotional status and store in history chat data.
+- **Context generation**: Generates context for current message based on historical conversation.
+
+## Installation
+
+To install GPT Memory, use pip:
+
+```bash
+pip install gpt_memory
+```
+
+## Usage
+
+### Importing and Using the Memory Class
+
+To start using GPT Memory, import the `Memory` class and process a user message:
+
+```python
+from gpt_memory import Memory
+
+m = Memory()
+response = m.process_message('user_message')
+```
+
+## Example
+
+Here’s a simple example of how to use the `Memory` class:
+
+```python
+from gpt_memory import Memory
+
+# Initialize the memory system
+memory_system = Memory()
+
+# Process a user message
+response = memory_system.process_message('Hello, how are you?')
+
+# Print the status and response
+print(f"Response: {response}")
+```
+
+## Contributing
+
+If you would like to contribute to GPT Memory, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Implement your changes.
+4. Submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or inquiries, please contact [sun@raaslabs.com](mailto:sun@raaslabs.com).
