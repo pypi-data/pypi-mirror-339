@@ -1,0 +1,5 @@
+grpc_client/__init__.py,sha256=IViU5-acucJUyAkodBqmPY9eTS9uNWivwnQJ6xh66qs,2899
+allure_grpc_client-1.3.7.dist-info/LICENSE,sha256=t6tcqDpsfdADX2vEiOTfhv7gC2eRMFO2cyg2bpHcY5w,1062
+allure_grpc_client-1.3.7.dist-info/METADATA,sha256=CwRjC_qkc0K0Qm_vMpbt_L7HAJ2ANiZ7klA3yojBmDU,1155
+allure_grpc_client-1.3.7.dist-info/WHEEL,sha256=aiTauIPAnqOMBuVimVqk4bevIILHLWXNdkzTocSR-tg,92
+allure_grpc_client-1.3.7.dist-info/RECORD,,
