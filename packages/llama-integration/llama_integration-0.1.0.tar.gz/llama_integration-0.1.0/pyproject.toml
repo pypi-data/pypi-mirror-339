@@ -1,0 +1,84 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llama-integration"
+version = "0.1.0"
+description = "Unified interface for multiple LLM providers with advanced features (routing, privacy, logging)."
+readme = "README.md" # Assuming a README will be created/updated
+requires-python = ">=3.8"
+license = {text = "MIT"} # Assuming MIT license, update if needed
+authors = [
+    {name = "Your Name / Llama Team", email = "your.email@example.com"} # Replace with actual details
+]
+keywords = ["llm", "ai", "gateway", "openai", "anthropic", "routing", "privacy", "integration"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License", # Assuming MIT
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    # Core dependencies inferred from file names/previous context
+    "aiohttp>=3.8.0",
+    "pyyaml>=6.0",
+    "numpy>=1.20.0", # Often needed
+    "pydantic>=2.0.0", # Likely used for models
+    "cryptography>=39.0.0", # For security aspects
+    "typing-extensions>=4.0.0", # Good practice
+    "loguru>=0.7.0", # Good logging library
+    # Add other known core dependencies here
+]
+
+[project.optional-dependencies]
+dev = [
+    # From requirements-dev.txt
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.20.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.0.0",
+    "pylint>=2.17.0", # Consider switching to ruff later if preferred
+    "sphinx>=6.0.0",
+    "sphinx-rtd-theme>=1.2.0",
+    "pytest-mock>=3.10.0", # Often useful
+]
+# Optional provider dependencies can be added here, e.g.:
+# openai = ["openai>=1.0.0"]
+# anthropic = ["anthropic>=0.5.0"]
+# mlx = ["mlx>=0.0.4"] # If mlx-router is used
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/llamasearchai-git2-copy" # Replace with actual URL
+"Bug Tracker" = "https://github.com/yourusername/llamasearchai-git2-copy/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/llama_integration"]
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true # Start permissive
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+asyncio_mode = "auto"
+
+# Consider adding ruff configuration later for unified linting/formatting 
