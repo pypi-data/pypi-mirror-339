@@ -1,0 +1,2 @@
+[console_scripts]
+dvp = dlpx.virtualization._internal.cli:delphix_sdk
