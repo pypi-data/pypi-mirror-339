@@ -1,0 +1,9 @@
+# 风险评估模型配置文件
+
+# 各类风险权重配置
+weights:
+  strategic: 0.25    # 战略风险权重
+  financial: 0.30    # 财务风险权重
+  market: 0.20       # 市场风险权重
+  legal_credit: 0.15 # 法律信用风险权重
+  event: 0.10        # 事件风险权重 
