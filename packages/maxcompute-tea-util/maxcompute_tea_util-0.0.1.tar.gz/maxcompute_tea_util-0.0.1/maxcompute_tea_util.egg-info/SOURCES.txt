@@ -1,0 +1,9 @@
+README.md
+setup.py
+maxcompute_tea_util/__init__.py
+maxcompute_tea_util/client.py
+maxcompute_tea_util.egg-info/PKG-INFO
+maxcompute_tea_util.egg-info/SOURCES.txt
+maxcompute_tea_util.egg-info/dependency_links.txt
+maxcompute_tea_util.egg-info/requires.txt
+maxcompute_tea_util.egg-info/top_level.txt

@@ -1,0 +1,30 @@
+Metadata-Version: 2.2
+Name: maxcompute_tea_util
+Version: 0.0.1
+Summary: utils use by maxcompute-openapi-sdk
+Home-page: https://github.com/aliyun/maxcompute-openapi-sdk
+Author: Alibaba Cloud MaxCompute Team
+Author-email: zhangdingxin.zdx@alibaba-inc.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: alibabacloud-tea>=0.3.3
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
