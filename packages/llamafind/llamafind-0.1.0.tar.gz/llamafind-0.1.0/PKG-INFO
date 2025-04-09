@@ -1,0 +1,160 @@
+Metadata-Version: 2.4
+Name: llamafind
+Version: 0.1.0
+Summary: Base search engine integration and utilities for the LlamaAI Ecosystem
+Project-URL: Homepage, https://github.com/yourusername/llama-find
+Project-URL: Bug Tracker, https://github.com/yourusername/llama-find/issues
+Project-URL: Documentation, https://yourusername.github.io/llama-find/
+Author-email: Your Name <your.email@example.com>
+License: MIT License
+        
+        Copyright (c) 2024 Your Name # Replace with current year and your name/organization
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE. 
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Requires-Dist: beautifulsoup4>=4.12.0
+Requires-Dist: duckduckgo-search>=2.9.0
+Requires-Dist: fastapi>=0.95.0
+Requires-Dist: httpx>=0.24.0
+Requires-Dist: loguru>=0.7.0
+Provides-Extra: dev
+Requires-Dist: black>=23.3.0; extra == 'dev'
+Requires-Dist: isort>=5.12.0; extra == 'dev'
+Requires-Dist: mypy>=1.2.0; extra == 'dev'
+Requires-Dist: pre-commit>=3.3.1; extra == 'dev'
+Requires-Dist: pytest-cov>=4.1.0; extra == 'dev'
+Requires-Dist: pytest>=7.3.1; extra == 'dev'
+Requires-Dist: ruff>=0.0.260; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: mkdocs-material>=9.1.6; extra == 'docs'
+Requires-Dist: mkdocs>=1.4.2; extra == 'docs'
+Requires-Dist: mkdocstrings[python]>=0.20.0; extra == 'docs'
+Description-Content-Type: text/markdown
+
+# llama-find
+
+[![PyPI version](https://img.shields.io/pypi/v/llama_find.svg)](https://pypi.org/project/llama_find/)
+[![License](https://img.shields.io/github/license/llamasearchai/llama-find)](https://github.com/llamasearchai/llama-find/blob/main/LICENSE)
+[![Python Version](https://img.shields.io/pypi/pyversions/llama_find.svg)](https://pypi.org/project/llama_find/)
+[![CI Status](https://github.com/llamasearchai/llama-find/actions/workflows/llamasearchai_ci.yml/badge.svg)](https://github.com/llamasearchai/llama-find/actions/workflows/llamasearchai_ci.yml)
+
+**Llama Find (llama-find)** is a sophisticated search and information retrieval toolkit within the LlamaSearch AI ecosystem. It provides agents capable of querying multiple underlying search engines, processing results, and delivering synthesized information through a unified API. It includes support for MLX optimizations.
+
+## Key Features
+
+- **Agent-Based Search:** Utilizes intelligent agents to manage search queries.
+- **Multi-Engine Support:** Integrates with various search backends (defined in `search_engines/`).
+- **API Access:** Exposes functionality through a comprehensive API (`api.py`).
+- **Web Interface (Optional):** Includes components for a basic web server (`web_server.py`).
+- **MLX Compatibility:** Offers potential performance benefits on compatible hardware (`mlx_compat.py`).
+- **Caching:** Implements caching (`cache/`) to improve response times.
+- **Configurable:** Allows customization via configuration files (`config.py`, `config/`).
+
+## Installation
+
+```bash
+pip install llama-find
+# Or install directly from GitHub for the latest version:
+# pip install git+https://github.com/llamasearchai/llama-find.git
+```
+
+## Usage
+
+*(Usage examples for the API client or web interface will be added here based on the final implementation.)*
+
+```python
+# Placeholder for Python client usage
+# from llama_find import FinderClient
+
+# client = FinderClient(config_path="path/to/config.yaml")
+# results = client.search("your query here", engine="auto")
+# print(results)
+```
+
+## Architecture Overview
+
+```mermaid
+graph TD
+    A[User / Client Application] --> B{API Layer (api.py / web_server.py)};
+    B --> C{Search Agent (agents/)};
+    C --> D[Core Processing (core.py)];
+    D --> E{Search Engine Interface};
+    E --> F[Search Engine 1];
+    E --> G[Search Engine 2];
+    E --> H[...];
+    F --> I((External Search Service));
+    G --> I;
+    D --> J[Cache System (cache/)];
+    D --> K[MLX Compatibility Layer (mlx_compat.py)];
+    B --> L[Configuration (config.py, config/)];
+    C --> L;
+    D --> L;
+
+    style D fill:#f9f,stroke:#333,stroke-width:2px
+    style J fill:#ccf,stroke:#333,stroke-width:1px
+```
+
+1.  **Entry Point:** Users or client applications interact via the API or web server.
+2.  **API Layer:** Handles incoming requests and routes them.
+3.  **Search Agent:** Manages the query lifecycle and interacts with core components.
+4.  **Core Processing:** Orchestrates the search, potentially leveraging MLX and caching.
+5.  **Search Engine Interface:** Abstracts interactions with different backend search engines.
+6.  **Cache/Config:** Caching improves speed; configuration allows customization.
+
+## Configuration
+
+*(Details on configuring search engines, API keys, caching, etc., will be added here.)*
+
+## Development
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/llamasearchai/llama-find.git
+cd llama-find
+
+# Install in editable mode with development dependencies
+pip install -e ".[dev]"
+```
+
+### Testing
+
+```bash
+pytest tests/
+```
+
+### Contributing
+
+Contributions are welcome! Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) and submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
