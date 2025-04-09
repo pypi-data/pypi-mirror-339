@@ -1,0 +1,2 @@
+[console_scripts]
+ptm = app.ptm:ptm
