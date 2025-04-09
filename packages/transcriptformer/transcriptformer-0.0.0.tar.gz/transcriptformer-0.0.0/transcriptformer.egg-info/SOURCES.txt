@@ -1,0 +1,6 @@
+pyproject.toml
+transcriptformer/__init__.py
+transcriptformer.egg-info/PKG-INFO
+transcriptformer.egg-info/SOURCES.txt
+transcriptformer.egg-info/dependency_links.txt
+transcriptformer.egg-info/top_level.txt
