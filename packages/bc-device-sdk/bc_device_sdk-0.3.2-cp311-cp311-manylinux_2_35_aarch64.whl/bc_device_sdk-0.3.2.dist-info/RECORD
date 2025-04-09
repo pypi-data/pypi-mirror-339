@@ -1,0 +1,13 @@
+bc_device_sdk-0.3.2.dist-info/METADATA,sha256=GTHBYUJ86s_Xhx_nUn9Qcx5g0ipqpmGC-u2aZEDV128,284
+bc_device_sdk-0.3.2.dist-info/WHEEL,sha256=SL9ZLT2GyNnhO-CR6B2EIglnFtRGgac8qKbNmPpKXrk,109
+bc_device_sdk.libs/libcap-06d8d750.so.2,sha256=1X5Lav8uKtO0MK7W5oLCdr54z2LSWo1Z7CZn85pWGtg,67345
+bc_device_sdk.libs/libdbus-1-60318833.so.3,sha256=kV3ZmUgXrTvFZZIajAsmpJEFv_OTH3CdrqDhBzH0dzc,408737
+bc_device_sdk.libs/libgcrypt-ba7a8457.so.20,sha256=2tbMk7xwZda1_hXNTk0KJQOFmwdIJ-2XkFrpvTg_byo,987865
+bc_device_sdk.libs/libgpg-error-06777d61.so.0,sha256=puEG5X7Qlswk72zej1K0shKG-bySEr8d-_TxT2y8EdY,201425
+bc_device_sdk.libs/liblz4-72a50edc.so.1,sha256=F7Wk2hgxWo8x9X2WUjkpsaBPkC-SdXV3cokAgjBDi98,134465
+bc_device_sdk.libs/liblzma-3da8981d.so.5,sha256=hA8JSZLacUo1yLOaYQJiS_1V6ue1jpW6Ugl9SzTGdjs,200321
+bc_device_sdk.libs/libsystemd-84d94ec8.so.0,sha256=xdrYI_TBmmW9ypGFXLpfyhyxpte5e8DIZrXcmR_QjbA,935449
+bc_device_sdk.libs/libzstd-a1561916.so.1,sha256=nDk5DQkhx5nCjXtIfqk5r3-TFw-N-ghSvnQ7vQdB_5s,805265
+bc_device_sdk/__init__.py,sha256=hEr5uADQKpxYX-xX8tzUdrxK9fg8RBKp4D84QPdR4-M,135
+bc_device_sdk/bc_device_sdk.cpython-311-aarch64-linux-gnu.so,sha256=x1hK1u9lMF-_FEXtWaxjbhSQrHdhcKCPc6t8wZWECqg,8000417
+bc_device_sdk-0.3.2.dist-info/RECORD,,
