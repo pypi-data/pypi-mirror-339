@@ -1,0 +1,9 @@
+typer
+requests
+rich
+pillow
+opencv-python
+pathlib
+websocket-client
+websockets
+tqdm
