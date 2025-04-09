@@ -1,0 +1,13 @@
+chunktopus/__init__.py,sha256=t_SiuEzsuVTqmwMCBYzt2u9wBbbOKMIPeCshsefYeZY,3500
+chunktopus/main.py,sha256=EaHK38PcH2Jy_wq297gGRt_rVtbK-lZoIs9aUANL5qg,250
+chunktopus/routes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chunktopus/routes/chunking_routes.py,sha256=y_eyxlpcfO0CcJ2bEBn0w92rv3aTskRXNLdrAIBAPr4,2785
+chunktopus/routes/root_routes.py,sha256=l2uZgssG1mR1T809m3kzznR3QMPGRKTIKLAOpzHU-Zs,749
+chunktopus/utils/__init__.py,sha256=DW49K6GCTjZ14e5AhcoNYzgzLvAG6q9PZmf_fOe_vAg,37
+chunktopus/utils/chunking.py,sha256=GL-4Qe8T6wYkNp1AEQ2_8-iIROG-KPpp_5YXCdGtbFo,5738
+chunktopus/utils/openai.py,sha256=pKN9mSJ0uG1cWOCJY_fbmt3VTs4rNlD27aoIW8nqcAg,17136
+chunktopus-0.1.1.dist-info/METADATA,sha256=hFdLdvbkLDIT6JjRPQYYFyaee-1NFnyOuv-BoS2Qv1Y,5182
+chunktopus-0.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+chunktopus-0.1.1.dist-info/entry_points.txt,sha256=Y0iAaptKNcfWoxQB0GyeACvcya5b3q3oeyb8krO3k44,51
+chunktopus-0.1.1.dist-info/top_level.txt,sha256=WQlGH5DEBD2Nl7XBGaUVStangOpMq8PKxIvgn71r4fI,11
+chunktopus-0.1.1.dist-info/RECORD,,
