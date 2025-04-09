@@ -1,0 +1,7 @@
+pyodps_catalog/__init__.py,sha256=rnObPjuBcEStqSO0S6gsdS_ot8ITOQjVj_-P1LUUYpg,22
+pyodps_catalog/client.py,sha256=EA5kQ0q3-VFmWirV1ebm0syPOuvsbYFXmRzoytcjPe0,4084
+pyodps_catalog/models.py,sha256=Ik6C1-6Enfz7Bjfg4JcJeKZ3uouhB604GmUW8AsV3n0,20340
+pyodps_catalog-0.1.1.dist-info/METADATA,sha256=FkY__V5W3GGdcqXXrfS95S4k3muq9jDWe4J9VPzEA6Q,1190
+pyodps_catalog-0.1.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+pyodps_catalog-0.1.1.dist-info/top_level.txt,sha256=HWqv04_gdlDbsWTPiFrTZoUZOIbGfMwYBwPE5X9IkE0,15
+pyodps_catalog-0.1.1.dist-info/RECORD,,
