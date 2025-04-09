@@ -1,0 +1,16 @@
+model_manager_client/__init__.py,sha256=pkED6dodfGixevl8a1X4OnDy1dgpClDpkL8k4eSHhdQ,248
+model_manager_client/client.py,sha256=MY5vMNxH0W2ej7mr8r_nD8YrKyCKpZ-3VgbnydtL-Ts,8329
+model_manager_client/exceptions.py,sha256=jYU494OU_NeIa4X393V-Y73mTNm0JZ9yZApnlOM9CJQ,332
+model_manager_client/enums/__init__.py,sha256=srW0_dKk3MN0oER8CF_k_BTvE8Kl3a_nxFI1B4Gi6ZE,141
+model_manager_client/enums/invoke.py,sha256=CFiWcDSTob--30yYnjs0wYk90MD2FTyz4RQIDR3Vt2c,124
+model_manager_client/enums/providers.py,sha256=qjKNOJ8s5wIVg3TmJLWmPEnyLxvg1xbvIRcN70VTZ0Y,231
+model_manager_client/generated/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+model_manager_client/generated/model_service_pb2.py,sha256=Jz1GyW_vJihmActV0oMYKvqMwq1wQO6CcRATB09DtoU,3775
+model_manager_client/generated/model_service_pb2_grpc.py,sha256=JZR4vBcg235JRsyr05WlbPLb4sIAxtWv2UaP5U7H0EY,3437
+model_manager_client/schemas/__init__.py,sha256=L8YXHd5vYt3YtahrxB9rZcUELZH0jlUFVecA9f9ok-k,309
+model_manager_client/schemas/inputs.py,sha256=yMqDUOjnlN1I8SRK9Ot73ELGa5gpmVer1O6gBiQJGUw,912
+model_manager_client/schemas/outputs.py,sha256=eDJskj5xZRz6j_8_x_kDYdQP-YK81VRyPgJFhB0T0NU,584
+model_manager_client-0.1.3.dist-info/METADATA,sha256=7anUK9mDvaW5b6Ca6pnqfTnu_h6zfpbjbpXCPYqANho,5267
+model_manager_client-0.1.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+model_manager_client-0.1.3.dist-info/top_level.txt,sha256=hW4Pn-RDdPWK5vISAYwnTVzlWLTmnDZdvo4-ul82xVA,21
+model_manager_client-0.1.3.dist-info/RECORD,,
