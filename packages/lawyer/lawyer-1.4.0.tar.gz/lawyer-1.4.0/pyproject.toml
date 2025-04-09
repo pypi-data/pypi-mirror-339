@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lawyer"
+version = "1.4.0"
+description = "A redefined argument parser designed for ease of use."
+requires-python = ">=3.8"
+authors = [{name = "Soumyo Deep Gupta", email="deep@d33p0st.in"}]
+maintainers = [{name = "Soumyo Deep Gupta", email="deep@d33p0st.in"}]
+dependencies = ['colorama']
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools.package-data]
+lawyer = ["*.so", "*.pyi"]
+
+[tool.setuptools]
+packages = {find = {where = ["src"]}}
