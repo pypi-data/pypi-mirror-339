@@ -1,0 +1,2 @@
+cmake/deps/glad/include/** linguist-vendored
+cmake/deps/glad/src/** linguist-vendored
