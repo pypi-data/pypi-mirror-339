@@ -1,0 +1,17 @@
+els/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+els/cli.py,sha256=2INEkjjh77YDP-i8oquSHgAfbFxYfquYX0CBRHP9I1Q,13025
+els/config.py,sha256=pU9-Vw_ecH88DhBmaxzUDWoDnusd7cMTRpZPBbc2rZw,12347
+els/core.py,sha256=cNU5nD458-ktPmz4jgyGdIFPjQrz_PbG6o6cjjI_sbU,10099
+els/execute.py,sha256=weVQb_FizqlMrsouVlBtwhAJ0fJeROPCLBkNZuc0_8I,25444
+els/flow.py,sha256=Jyy8sUdZmT_96KhXm0FxXsEgSTwfV73CbEYNzMkV1LM,3840
+els/path.py,sha256=N8sd0M4AonxtO9LPXOTNC-OQvVJ7MnYVhVU7ZdWGxEc,31871
+els/pathprops.py,sha256=BavSGqXlNDmQAoKDjJyfazkKAhszGcvBzjT4orL17J8,2140
+els/pd.py,sha256=4TZYTIqFJ1bEir3ur8fp0-gr6Fa_3Fgl8UMiz2w2vHE,8388
+els/sa.py,sha256=DYuFTAqDCXsidzqiC1F4cpKnYKFe0OiOzXLwpA22n38,8803
+els/xl.py,sha256=fdGUZbjldk9PJQp6XVSUshuRkY0HijiaBmudUGXIGKY,7501
+elspec-0.5.1.dist-info/licenses/LICENSE,sha256=wiTqqXoicDWFG7_o6DJFDVshboi3xfjvZk928tGBtd4,1076
+elspec-0.5.1.dist-info/METADATA,sha256=Rff5mcU60R-WezVOTtexXiMdfqsPb0j3zs9qveHx2Y4,36071
+elspec-0.5.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+elspec-0.5.1.dist-info/entry_points.txt,sha256=WsDqUMDKzPlduKdbYoQq9ZqiTZWXddAa46pCV2LhBMs,37
+elspec-0.5.1.dist-info/top_level.txt,sha256=P3ybfp7S6GKG0LpDLdpnvy_U9AQy2OCwbXEPLYO-ybo,4
+elspec-0.5.1.dist-info/RECORD,,
