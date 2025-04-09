@@ -1,0 +1,2 @@
+[console_scripts]
+image_generation_mcp_server = image_generation_mcp_server:main
