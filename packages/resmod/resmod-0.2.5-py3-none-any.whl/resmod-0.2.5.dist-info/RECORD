@@ -1,0 +1,15 @@
+resmod/__init__.py,sha256=ZFvwWlROJkkPngu1j6vrjAxT3kPQG43LX6JRPvmKQv0,154
+resmod/plotting/__init__.py,sha256=MSiznjcidiWFCGLWNzXmQ6ZLSHbh4hciwJHAF3Rg1j8,90
+resmod/plotting/interact_plot.py,sha256=mgGy9iBYaPjxfKBhGLU9NAq16KH5B5REwbaBkvD-GH4,12379
+resmod/sem/__init__.py,sha256=ln9jxkz8nmT2u5Z1g9j8IWg6rzFPRMwkM6Vsi7pyIVw,90
+resmod/sem/orthogonalize.py,sha256=TDnQWTJyQALiHyxCkmCEx5K8v4dgxT5Rl55UtEO0EN8,3143
+resmod/single/__init__.py,sha256=pP7JpuyM_2g_nHTxXWP4VPWsuZmulGOSUBqkiLcUAPI,150
+resmod/single/residual_center.py,sha256=dPxMhKo8nrnQXQLOcyeq2jvVeiZ4YOPa5d_EDiw_e-0,3677
+resmod/single/three_center.py,sha256=OMR1JRUh8HxNi-Lds9D8lBIMBbjjHrr_UMn-tQPC30o,3673
+resmod/slopes/__init__.py,sha256=fcwlHFYkjnpnfSEb50FXI-x_BMyIDAQ7D4Rh5wXpBGE,90
+resmod/slopes/simple_slopes.py,sha256=-EncxPYjfLGHq-poz1Z1U7KLD6eNWMay76QzKdGS6_4,11747
+resmod-0.2.5.dist-info/licenses/LICENSE,sha256=9dqTKRhohWfv35-GSUa4T-XEnX6tdOfPXs9wz3cslBg,1073
+resmod-0.2.5.dist-info/METADATA,sha256=zzaZ5oSWn0ZNKSKFHOAw73bBlgaJK9QAZBMBuV5hf4s,10639
+resmod-0.2.5.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+resmod-0.2.5.dist-info/top_level.txt,sha256=2NLDuZAoI5oMzHkY-UAf0sDprqT336yOALqECzGHvz4,7
+resmod-0.2.5.dist-info/RECORD,,
