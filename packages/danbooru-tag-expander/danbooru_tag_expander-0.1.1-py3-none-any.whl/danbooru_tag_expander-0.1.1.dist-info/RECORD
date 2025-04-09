@@ -1,0 +1,12 @@
+danbooru_tag_expander/__init__.py,sha256=fivRv5O36yp5-leRsMQgHS8MXttbjGWOysAT2CjL2YE,83
+danbooru_tag_expander/tag_expander_cli.py,sha256=4h3tMFroR9RYMbqrIBYruixWlBbePhlddfbet_DLsSI,7066
+danbooru_tag_expander/utils/__init__.py,sha256=VTQYyv9TPJTxt4wfpItKj8swSRj9y3mPiffaPBaWCQs,44
+danbooru_tag_expander/utils/tag_expander.py,sha256=2rGWLozvphNxlKoK0LIwCzHBfbUqV8IpmJDjJ--k7xs,13506
+danbooru_tag_expander-0.1.1.dist-info/licenses/LICENSE,sha256=_br5MjkDubfZUVZJdRoVzGUPJsa07W_2OYMLQg4LSC0,1066
+tests/__init__.py,sha256=qkirUpl-C_8-oDw4rU2uFIFvJbKtg65y4113pzmmbVU,32
+tests/test_tag_expander.py,sha256=njnIUZGnOonkqhV-yXVFXv32vjCKz3-VFJeWxlWWrE0,3762
+danbooru_tag_expander-0.1.1.dist-info/METADATA,sha256=emQp-trLQZoL26BEShSkj9a9-0SjaDkv6s4GLXWlCCw,3127
+danbooru_tag_expander-0.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+danbooru_tag_expander-0.1.1.dist-info/entry_points.txt,sha256=DXERqR6k9rKbZ5NHXCQt2KesYwcX_2qERo6Engaf3jQ,86
+danbooru_tag_expander-0.1.1.dist-info/top_level.txt,sha256=0fxGS6uU7Y1Fn4RHaX5UfAOE9TvD3Lvxzt2CmgDIzm0,28
+danbooru_tag_expander-0.1.1.dist-info/RECORD,,
