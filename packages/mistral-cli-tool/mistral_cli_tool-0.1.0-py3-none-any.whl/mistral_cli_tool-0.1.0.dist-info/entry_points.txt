@@ -1,0 +1,2 @@
+[console_scripts]
+mistral-cli-tool = src.main:main

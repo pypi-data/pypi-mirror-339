@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: mistral_cli_tool
+Version: 0.1.0
+Summary: A package to call the Mistral AI API
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: python-dotenv
+Requires-Dist: mistralai
+
+# Mistral AI CLI Tool
+
+A CLI tool to call the Mistral AI API.
+
+## Installation
+
+```bash
+pip install mistral_cli_tool
+```
+
+## Usage
+
+```bash
+export MISTRAL_AI_KEY='your_api_key'
+mistral_cli_tool Your prompt here
+```
+
