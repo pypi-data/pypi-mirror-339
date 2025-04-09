@@ -1,0 +1,102 @@
+Metadata-Version: 2.4
+Name: linkd
+Version: 0.0.2
+Summary: A powerful async-only dependency injection framework for Python.
+Keywords: ioc,dependency injection,injection,inversion of control,asyncio
+Author-email: tandemdude <tandemdude1@gmail.com>
+Requires-Python: >=3.10.0,<3.14
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+License-File: LICENSE
+Requires-Dist: nox==2025.2.9 ; extra == "dev"
+Requires-Dist: towncrier==24.8.0 ; extra == "dev-changelog"
+Requires-Dist: sphinx>=8.0.2, <9 ; extra == "dev-docs"
+Requires-Dist: furo==2024.8.6 ; extra == "dev-docs"
+Requires-Dist: myst-parser>=4.0.0, <5 ; extra == "dev-docs"
+Requires-Dist: sphinx-copybutton>=0.5.2, <1 ; extra == "dev-docs"
+Requires-Dist: sphinx-inline-tabs==2023.4.21 ; extra == "dev-docs"
+Requires-Dist: sphinx_design>=0.6.0, <1 ; extra == "dev-docs"
+Requires-Dist: sphinx-prompt>=1.8.0, <2 ; extra == "dev-docs"
+Requires-Dist: sphinx-notfound-page>=1.0.2, <2 ; extra == "dev-docs"
+Requires-Dist: sphinxext-opengraph>=0.9.1, <1 ; extra == "dev-docs"
+Requires-Dist: sphinxcontrib-mermaid>=0.9.2, <2 ; extra == "dev-docs"
+Requires-Dist: ruff==0.11.4 ; extra == "dev-format"
+Requires-Dist: flit==3.12.0 ; extra == "dev-release"
+Requires-Dist: slotscheck>=0.19.0, <1 ; extra == "dev-slotscheck"
+Requires-Dist: pytest>=8.3.2, <9 ; extra == "dev-test"
+Requires-Dist: pytest-asyncio>=0.23.8, <0.27 ; extra == "dev-test"
+Requires-Dist: pytest-cov>=5.0.0, <7 ; extra == "dev-test"
+Requires-Dist: pytest-randomly>=3.15.0, <4 ; extra == "dev-test"
+Requires-Dist: pyright==1.1.398 ; extra == "dev-typecheck"
+Requires-Dist: typing-extensions>=4.12.2, <5 ; extra == "dev-typecheck"
+Requires-Dist: types-polib>=1.2.0.20240327, <2 ; extra == "dev-typecheck"
+Requires-Dist: types-croniter>=3.0.0.20240727, <6 ; extra == "dev-typecheck"
+Project-URL: Changelog, https://linkd.readthedocs.io/en/latest/changelog.html
+Project-URL: Documentation, https://linkd.readthedocs.io/en/latest/
+Project-URL: Homepage, https://github.com/tandemdude/linkd
+Project-URL: Repository, https://github.com/tandemdude/linkd
+Provides-Extra: dev
+Provides-Extra: dev-changelog
+Provides-Extra: dev-docs
+Provides-Extra: dev-format
+Provides-Extra: dev-release
+Provides-Extra: dev-slotscheck
+Provides-Extra: dev-test
+Provides-Extra: dev-typecheck
+
+[![PyPI](https://img.shields.io/pypi/v/linkd)](https://pypi.org/project/linkd)
+
+# Overview
+Linkd is a powerful [dependency-injection](https://en.wikipedia.org/wiki/Dependency_injection) framework for
+asyncio-based Python applications.
+
+This library aims to provide an easy way for framework developers to provide dependency-injection functionality,
+while also being suitable for use with standalone applications with a little bit more work.
+
+For an example of `linkd` in action, have a look at [`hikari-lightbulb`](https://github.com/tandemdude/hikari-lightbulb) which
+uses it to provide all dependency injection functionality.
+
+## Installation
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install linkd.
+
+```bash
+pip install linkd
+```
+
+## Usage
+
+Coming soon...
+
+## Issues
+If you find any bugs, issues, or unexpected behaviour while using the library,
+you should open an issue with details of the problem and how to reproduce if possible.
+Please also open an issue for any new features you would like to see added.
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue/discussion first to discuss what you would like to change.
+
+Please try to ensure that documentation is updated if you add any features accessible through the public API.
+
+If you use this library and like it, feel free to sign up to GitHub and star the project,
+it is greatly appreciated and lets me know that I'm going in the right direction!
+
+## Links
+- **License:** [MIT](https://choosealicense.com/licenses/mit/)
+- **Repository:** [GitHub](https://github.com/tandemdude/linkd)
+- **Documentation:** [ReadTheDocs](https://linkd.readthedocs.io/en/latest/)
+
