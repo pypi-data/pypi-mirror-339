@@ -1,0 +1,15 @@
+notion2sql/__init__.py,sha256=yW-0R75oyZJ85iCngL48Gy3EVNy-Y7ZOyTSkIAVfcKA,269
+notion2sql/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+notion2sql/core/client.py,sha256=AlaG7UttAl_GSkbRg5Fq04ugKJA7bNHOhfLdgQ7EsaY,2672
+notion2sql/core/database.py,sha256=nIjKbnMyGdmaNcv9Y4XrrOEJb63ZPLu2huA2Nz7_LkI,6977
+notion2sql/core/page.py,sha256=uk1NyuFRjQU-LwDzx7S1VKNggUcH3BUoofbsWJRlwKU,3000
+notion2sql/core/sql_interface.py,sha256=3Pqos76F0EHh3iIN_BWg0J_u-MAqOLc6skgSh3HiEKI,6733
+notion2sql/utils/__init__.py,sha256=cPkE90TRHPGJW6C9gHotoatKKnEFN3KkMwp2i6Gtxsg,83
+notion2sql/utils/property_converter.py,sha256=2ax0LUY295ygg2PTOKaAIba84DZyqr80ww_6Hz8nQoU,5373
+notion2sql-0.1.0.dist-info/licenses/LICENSE,sha256=wXMjtQl4pyY8SC8me768tfBKzHq2Ue-_eecuxrb2gMw,1063
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_client.py,sha256=D8yau8rE3ro1l__ueaP5vsimoherGybISExcnD2BPkE,3173
+notion2sql-0.1.0.dist-info/METADATA,sha256=Gb9gbHJII44m5_wGdNV4K4Sq75O-g4HDRgu5IaGivIs,4184
+notion2sql-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+notion2sql-0.1.0.dist-info/top_level.txt,sha256=YbMjQFnZKsN7552eIOvzb7gqWLMBdl0bJB8fNhebxIU,17
+notion2sql-0.1.0.dist-info/RECORD,,
