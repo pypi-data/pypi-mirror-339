@@ -1,0 +1,57 @@
+[project]
+name = "dbt-docs-mcp"
+dynamic = ["version"]
+description = "Model Context Protocol (MCP) server for dbt docs"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Mattijs De Paepe", email = "mattijsdepaepe@hotmail.com" },
+]
+dependencies = [
+    "dbt-core==1.8",
+    "mcp[cli]>=1.6.0",
+    "networkx>=3.4.2",
+    "python-decouple>=3.8",
+    "rapidfuzz>=3.12.2",
+    "sqlglot>=26.12.0",
+    "tqdm>=4.67.1",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+
+[project.urls]
+Code = "https://github.com/mattijsdp/dbt-docs-mcp"
+
+[build-system]
+requires = ["hatchling>=1.21.0", "hatch-vcs>=0.4.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/marvin"]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "pre-commit>=4.2.0",
+    "ruff>=0.11.4",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "PL", "C90"]
+fixable = ["ALL"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+docstring-code-format = false
+
