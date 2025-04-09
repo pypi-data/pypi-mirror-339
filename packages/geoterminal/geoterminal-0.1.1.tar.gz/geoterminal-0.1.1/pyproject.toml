@@ -1,0 +1,42 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "geoterminal"
+version = "0.1.1"
+description = "Geoterminal is a command-line tool designed to simplify common GIS tasks that you may encounter in your daily work."
+authors = [{name = "Jerónimo Luza", email = "jero.luza@gmail.com"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+  "geopandas>=0.9.0",
+  "pandas>=1.2.0",
+  "pyarrow>=6.0.0",
+  "shapely>=1.7.0",
+  "h3>=4.1.2"
+]
+
+[project.urls]
+Repository = "https://github.com/jeronimoluza/geoterminal"
+Homepage = "https://github.com/jeronimoluza/geoterminal"
+
+[project.scripts]
+geoterminal = "geoterminal.cli.main:main"
+
+[tool.setuptools.packages.find]
+include = ["geoterminal"]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=6.0",
+  "black>=21.0",
+  "flake8>=3.8"
+]
+
+docs = [
+  "mkdocs>=1.6.1",
+  "mkdocs-material>=9.6.11"
+]
