@@ -1,0 +1,16 @@
+dpack/__init__.py,sha256=deI4mNjHjmW3BapJLbw7W64qOz47AfSASojn_pwBFVs,172
+dpack/__main__.py,sha256=MSmt_5Xg84uHqzTN38JwgseJK8rsJn_11A8WD99VtEo,61
+dpack/base.py,sha256=dOBiyntgQoGMpvDwimR2vPKpEpxUZ-bnxWG6aPhIPO8,8448
+dpack/cli.py,sha256=-hKssHpKAdNeHd6OvkG5qdMGP2TlK5itDolk0bLEZog,1706
+dpack/finders.py,sha256=AryXmBEhHe16_HiGOh6n5bWf7LsbUuv6CIP90QV3M_s,2641
+dpack/serve.py,sha256=JFUGqXofO-L_RDcoEBOQv18BkKoIbu4bis-tuxUww8U,1027
+dpack/processors/__init__.py,sha256=mBzq3wdhGA-4AO27bX-nqXzqvayMq4xxiV2fw25Z8y4,68
+dpack/processors/cssmin.py,sha256=FZkLg04XyRzY-mLvzekpMYlf3aqMD1wV_3pTLo4GhW8,83
+dpack/processors/jsmin.py,sha256=9yMTaY_zxB2tFu-rRwrD-GWxsg7_CQQbc8RL0LczivI,80
+dpack/processors/rewrite.py,sha256=qP9MTN_6mffYD0_1er2vzN3T_-IAymy1ErbbzeUEnvE,1686
+dpack/processors/sass.py,sha256=6G10mWYU2ODtE1d44XBw1p5b7CiR7OrtSplh0p0fyeU,141
+dpack-0.5.0.dist-info/METADATA,sha256=dThDv0q0dZba8-oJf1v8SZ04r2yF6Xm0Gj8lOCQ8aTs,5397
+dpack-0.5.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dpack-0.5.0.dist-info/entry_points.txt,sha256=UAsq9qmzp7KDwww9HGY3WxvyCJbM2aSAxvXiTEyknPU,41
+dpack-0.5.0.dist-info/licenses/LICENSE,sha256=KjCadNFiCaHtKQ7tZCKJ5y-f0cyPcnWMR5OWqD9VaYU,1067
+dpack-0.5.0.dist-info/RECORD,,
