@@ -1,0 +1,217 @@
+Metadata-Version: 2.4
+Name: llama-backup
+Version: 0.1.0
+Summary: Backup and restore utilities for LlamaAI data and configurations.
+Project-URL: Homepage, https://github.com/yourusername/llama-backup
+Project-URL: Bug Tracker, https://github.com/yourusername/llama-backup/issues
+Project-URL: Documentation, https://github.com/yourusername/llama-backup/
+Author-email: Your Name <your.email@example.com>
+License: MIT License
+        
+        Copyright (c) 2024 Your Name # Replace with current year and your name/organization
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE. 
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Archiving :: Backup
+Requires-Python: >=3.8
+Requires-Dist: apscheduler>=3.10.0
+Requires-Dist: loguru>=0.7.0
+Requires-Dist: pydantic>=1.10.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: python-snappy>=0.6.0
+Requires-Dist: shutil>=1.0
+Requires-Dist: typer[all]>=0.9.0
+Requires-Dist: zstandard>=0.19.0
+Provides-Extra: all
+Requires-Dist: azure-storage-blob>=12.14.0; extra == 'all'
+Requires-Dist: black>=23.3.0; extra == 'all'
+Requires-Dist: boto3>=1.26.0; extra == 'all'
+Requires-Dist: freezegun>=1.2.0; extra == 'all'
+Requires-Dist: google-cloud-storage>=2.7.0; extra == 'all'
+Requires-Dist: isort>=5.12.0; extra == 'all'
+Requires-Dist: mkdocs-material>=9.1.6; extra == 'all'
+Requires-Dist: mkdocs>=1.4.2; extra == 'all'
+Requires-Dist: mkdocstrings[python]>=0.20.0; extra == 'all'
+Requires-Dist: mypy>=1.2.0; extra == 'all'
+Requires-Dist: mysql-connector-python>=8.0.0; extra == 'all'
+Requires-Dist: pre-commit>=3.3.1; extra == 'all'
+Requires-Dist: psycopg2-binary>=2.9.0; extra == 'all'
+Requires-Dist: pymongo>=4.0.0; extra == 'all'
+Requires-Dist: pytest-cov>=4.1.0; extra == 'all'
+Requires-Dist: pytest-mock>=3.10.0; extra == 'all'
+Requires-Dist: pytest>=7.3.1; extra == 'all'
+Requires-Dist: redis[hiredis]>=4.5.0; extra == 'all'
+Requires-Dist: ruff>=0.0.260; extra == 'all'
+Provides-Extra: aws
+Requires-Dist: boto3>=1.26.0; extra == 'aws'
+Provides-Extra: azure
+Requires-Dist: azure-storage-blob>=12.14.0; extra == 'azure'
+Provides-Extra: dev
+Requires-Dist: black>=23.3.0; extra == 'dev'
+Requires-Dist: freezegun>=1.2.0; extra == 'dev'
+Requires-Dist: isort>=5.12.0; extra == 'dev'
+Requires-Dist: mypy>=1.2.0; extra == 'dev'
+Requires-Dist: pre-commit>=3.3.1; extra == 'dev'
+Requires-Dist: pytest-cov>=4.1.0; extra == 'dev'
+Requires-Dist: pytest-mock>=3.10.0; extra == 'dev'
+Requires-Dist: pytest>=7.3.1; extra == 'dev'
+Requires-Dist: ruff>=0.0.260; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: mkdocs-material>=9.1.6; extra == 'docs'
+Requires-Dist: mkdocs>=1.4.2; extra == 'docs'
+Requires-Dist: mkdocstrings[python]>=0.20.0; extra == 'docs'
+Provides-Extra: gcp
+Requires-Dist: google-cloud-storage>=2.7.0; extra == 'gcp'
+Provides-Extra: mongo
+Requires-Dist: pymongo>=4.0.0; extra == 'mongo'
+Provides-Extra: mysql
+Requires-Dist: mysql-connector-python>=8.0.0; extra == 'mysql'
+Provides-Extra: postgres
+Requires-Dist: psycopg2-binary>=2.9.0; extra == 'postgres'
+Provides-Extra: redis
+Requires-Dist: redis[hiredis]>=4.5.0; extra == 'redis'
+Description-Content-Type: text/markdown
+
+# llama-backup
+
+[![PyPI version](https://img.shields.io/pypi/v/llama_backup.svg)](https://pypi.org/project/llama_backup/)
+[![License](https://img.shields.io/github/license/llamasearchai/llama-backup)](https://github.com/llamasearchai/llama-backup/blob/main/LICENSE)
+[![Python Version](https://img.shields.io/pypi/pyversions/llama_backup.svg)](https://pypi.org/project/llama_backup/)
+[![CI Status](https://github.com/llamasearchai/llama-backup/actions/workflows/llamasearchai_ci.yml/badge.svg)](https://github.com/llamasearchai/llama-backup/actions/workflows/llamasearchai_ci.yml)
+
+**Llama Backup (llama-backup)** is a utility within the LlamaSearch AI ecosystem designed for creating and managing backups. It likely handles backing up data to various storage backends with considerations for security like encryption.
+
+## Key Features
+
+- **Backup Management:** Core logic for creating, restoring, and managing backups (`core.py`, `main.py`).
+- **Storage Backends:** Interfaces with different storage solutions (e.g., local disk, cloud storage) (`storage.py`).
+- **Security Features:** Includes mechanisms for encryption and secure handling of backup data (`security.py`).
+- **Command-Line Interface:** Provides CLI tools for initiating and managing backups (`cli.py`).
+- **Configurable:** Allows specifying backup sources, destinations, schedules (potentially via integration), encryption keys, etc. (`config.py`).
+
+## Installation
+
+```bash
+pip install llama-backup
+# Or install directly from GitHub for the latest version:
+# pip install git+https://github.com/llamasearchai/llama-backup.git
+```
+
+## Usage
+
+### Command-Line Interface (CLI)
+
+*(CLI usage examples for creating, listing, and restoring backups will be added here.)*
+
+```bash
+llama-backup create --source /path/to/data --destination s3://my-bucket/backups --encrypt
+llama-backup list
+llama-backup restore --backup-id <backup_id> --target /path/to/restore
+```
+
+### Python Client / Embedding
+
+*(Python usage examples for programmatically managing backups will be added here.)*
+
+```python
+# Placeholder for Python client usage
+# from llama_backup import BackupManager, BackupConfig
+
+# config = BackupConfig.load("config.yaml")
+# manager = BackupManager(config)
+
+# # Create a backup
+# backup_job = manager.create_backup(
+#     source_path="/important/data",
+#     options={'encryption_key': 'supersecret'}
+# )
+# print(f"Backup started: {backup_job.id}")
+
+# # List backups
+# backups = manager.list_backups()
+# for b in backups:
+#     print(f"ID: {b.id}, Timestamp: {b.timestamp}, Status: {b.status}")
+```
+
+## Architecture Overview
+
+```mermaid
+graph TD
+    A[User / CLI (cli.py)] --> B{Core Backup Manager (core.py, main.py)};
+    B -- Backup/Restore Request --> C{Storage Interface (storage.py)};
+    C -- Read/Write --> D[(Storage Backend (Local, S3, etc.))];
+    B -- Encryption/Decryption --> E{Security Module (security.py)};
+    E -- Uses Keys --> F[(Key Store / Secrets Manager)];
+
+    G[Configuration (config.py)] -- Configures --> B;
+    G -- Configures --> C;
+    G -- Configures --> E;
+
+    style B fill:#f9f,stroke:#333,stroke-width:2px
+    style D fill:#ccf,stroke:#333,stroke-width:1px
+    style F fill:#ccf,stroke:#333,stroke-width:1px
+```
+
+1.  **Interface:** Users interact via the CLI or potentially a programmatic API.
+2.  **Core Manager:** Orchestrates the backup or restore process based on configuration.
+3.  **Storage Interface:** Handles communication with the chosen storage backend (local, cloud, etc.).
+4.  **Security Module:** Manages encryption/decryption of backup data, potentially using external key management.
+5.  **Configuration:** Defines source data, destination storage, encryption settings, etc.
+
+## Configuration
+
+*(Details on configuring backup sources, storage destinations (S3 buckets, local paths), encryption methods, keys, potential scheduling options, etc., will be added here.)*
+
+## Development
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/llamasearchai/llama-backup.git
+cd llama-backup
+
+# Install in editable mode with development dependencies
+pip install -e ".[dev]"
+```
+
+### Testing
+
+```bash
+pytest tests/
+```
+
+### Contributing
+
+Contributions are welcome! Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) and submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

@@ -1,0 +1,2 @@
+[console_scripts]
+llama-backup = llama_backup.cli:app
