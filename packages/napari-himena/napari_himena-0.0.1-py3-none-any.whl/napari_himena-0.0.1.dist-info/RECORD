@@ -1,0 +1,12 @@
+napari_himena/__init__.py,sha256=_kZnlJ2Xhi6trzy04zuA6Y5o2-jfk6AW5tki4eoJOVA,289
+napari_himena/_widget.py,sha256=aUAjJqRB2efWGLI-5HtSZpAL9tkCC3Ob9Dr4rSqDTKM,8569
+napari_himena/himena_commands.py,sha256=fsTwn9fkBe8myy5SMWNJx6Y9u7t5cnMxZ7Cp4DzTfwM,7249
+napari_himena/napari.yaml,sha256=S-lthDtnyucC5FoDKlQPkpc2EH-VlKy84eKkYuxkmj4,533
+napari_himena/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_himena/_tests/test_himena_commands.py,sha256=njslYpkEIU0jkdg6N4facQI8stfi0NeWeCV71vsam0M,2871
+napari_himena-0.0.1.dist-info/licenses/LICENSE,sha256=HunaJybd776s4uTUX6RyLX8r3IrYsaUY7-kfyQZnVBg,1485
+napari_himena-0.0.1.dist-info/METADATA,sha256=VAlr3_yWlT3qecEeT-yvIbil7wD5_iL_RzFl1fqwHxk,8143
+napari_himena-0.0.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+napari_himena-0.0.1.dist-info/entry_points.txt,sha256=MAQP4sCsvmMSqCt8Kfkxkn-Yh7vG_K-mAHUCa45X-V4,132
+napari_himena-0.0.1.dist-info/top_level.txt,sha256=WjJ6-qFfmwoK5nPX1cnGJDzmVEy4ZSG-I63PH-V_nek,14
+napari_himena-0.0.1.dist-info/RECORD,,
