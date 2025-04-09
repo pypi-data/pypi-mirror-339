@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+docspore/__init__.py
+docspore.egg-info/PKG-INFO
+docspore.egg-info/SOURCES.txt
+docspore.egg-info/dependency_links.txt
+docspore.egg-info/top_level.txt
+tests/test_placeholder.py

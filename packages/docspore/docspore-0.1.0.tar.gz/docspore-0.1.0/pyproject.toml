@@ -1,0 +1,11 @@
+[project]
+name = "docspore"
+version = "0.1.0"
+description = "TODO: Describe your project"
+authors = [{ name = "Chris Greening", email = "chris@christophergreening.com" }]
+readme = "README.md"
+requires-python = ">=3.9"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
