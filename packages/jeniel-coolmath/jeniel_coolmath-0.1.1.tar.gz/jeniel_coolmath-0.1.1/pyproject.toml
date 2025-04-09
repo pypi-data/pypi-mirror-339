@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jeniel_coolmath"
+version = "0.1.1"
+description = "A simple math package"
+authors = [
+  { name="Jeniel_Cruz", email="jenielcruz@proton.me" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+dependencies = []
