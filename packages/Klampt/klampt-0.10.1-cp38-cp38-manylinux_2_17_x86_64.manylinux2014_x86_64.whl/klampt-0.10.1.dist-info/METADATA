@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: Klampt
+Version: 0.10.1
+Summary: Python API to Klamp't, a package for robot modeling, simulating, planning, optimization, and visualization
+Home-page: https://github.com/krishauser/Klampt
+Author: Kris Hauser
+Author-email: Kris Hauser <hauser.kris@gmail.com>
+Project-URL: Homepage, https://klampt.org
+Project-URL: Documentation, https://pythondocs.klampt.org
+Project-URL: Repository, https://github.com/krishauser/Klampt.git
+Project-URL: Issues, https://github.com/krishauser/Klampt/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Provides-Extra: gui
+Requires-Dist: PyOpenGL; extra == "gui"
+Requires-Dist: PyQt6; extra == "gui"
+Requires-Dist: pyqtgraph; extra == "gui"
+Requires-Dist: pillow; extra == "gui"
+Requires-Dist: imageio; extra == "gui"
+Requires-Dist: imageio-ffmpeg; extra == "gui"
+Requires-Dist: psutil; extra == "gui"
+
