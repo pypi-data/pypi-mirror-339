@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Административная панель - Пользователи</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Список пользователей (Админ)</h1>
+        <form action="{{ url_for('delete_all_users') }}" method="post"
+            onsubmit="return confirm('Вы уверены, что хотите удалить всех пользователей?');">
+            <button type="submit" class="btn btn-danger mb-3">Удалить всех пользователей</button>
+        </form>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped mt-3">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Имя пользователя</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>
+                            <form action="{{ url_for('delete_user', user_id=user.id) }}" method="post" style="display:inline-block;">
+                                <button type="submit" class="btn btn-danger btn-sm"
+                                    onclick="return confirm('Удалить пользователя?');">Удалить</button>
+                            </form>
+                            &nbsp;
+                            <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#userDetailsModal" data-id="{{ user.id }}"
+                                data-username="{{ user.username }}" data-password_plain="{{ user.password_plain }}">
+                                Подробнее
+                            </button>
+                            &nbsp;
+                            <form action="{{ url_for('toggle_ban', user_id=user.id) }}" method="post" style="display:inline-block;">
+                                {% if user.is_banned %}
+                                <button type="submit" class="btn btn-success btn-sm"
+                                    onclick="return confirm('Разбанить пользователя?');">Разбанить</button>
+                                {% else %}
+                                <button type="submit" class="btn btn-warning btn-sm"
+                                    onclick="return confirm('Забанить пользователя?');">Бан</button>
+                                {% endif %}
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <a href="{{ url_for('admin_tests') }}" class="btn btn-primary">Вернуться в панель тестов</a>
+    </div>
+
+    <div class="modal fade" id="userDetailsModal" tabindex="-1" aria-labelledby="userDetailsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userDetailsModalLabel">Подробная информация</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>ID:</strong> <span id="modalUserId"></span></p>
+                    <p><strong>Имя пользователя:</strong> <span id="modalUsername"></span></p>
+                    <p><strong>Пароль:</strong> <span id="modalPassword"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var userDetailsModal = document.getElementById('userDetailsModal');
+        userDetailsModal.addEventListener('show.bs.modal', function (event) {
+            var button = event.relatedTarget;
+            var userId = button.getAttribute('data-id');
+            var username = button.getAttribute('data-username');
+            var password = button.getAttribute('data-password_plain');
+
+            document.getElementById('modalUserId').textContent = userId;
+            document.getElementById('modalUsername').textContent = username;
+            document.getElementById('modalPassword').textContent = password;
+        });
+        var socket = io();
+
+        socket.on('user_deleted', function (data) {
+            var userId = "{{ session.get('user_id') }}";
+            if (userId == data.user_id) {
+                alert("Ваш аккаунт был удален администратором");
+                window.location.href = "{{ url_for('login') }}";
+            }
+        });
+    </script>
+</body>
+</html>

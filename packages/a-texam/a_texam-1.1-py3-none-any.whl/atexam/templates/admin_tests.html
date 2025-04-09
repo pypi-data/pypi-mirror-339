@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Административная панель - Тесты</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <h1 style="color: red;">A-TExam</h1>
+        <h4>Система тестирования нового поколения</h4>
+        <div class="button-container">
+            <a href="{{ url_for('about') }}" class="btn btn-danger text-white text-decoration-none">О системе</a>
+            <a href="{{ url_for('registration_requests') }}" class="btn btn-success text-white text-decoration-none">Запросы регистрации</a>
+            <a href="{{ url_for('logout') }}" class="btn btn-secondary text-white text-decoration-none">Выйти</a>
+        </div>
+    </header>
+    <div class="container">
+        <h1 class="mt-5">Список тестов (Админ)</h1>
+        <a href="{{ url_for('add_test') }}" class="btn btn-success mb-3">Добавить новый тест</a>
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Название</th>
+                    <th>Описание</th>
+                    <th>Макс. попыток</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for test in tests %}
+                <tr>
+                    <td>{{ test.id }}</td>
+                    <td>{{ test.title }}</td>
+                    <td>{{ test.description }}</td>
+                    <td>
+                        {% if test.max_attempts %}
+                        {{ test.max_attempts }}
+                        {% else %}
+                        Не ограничено
+                        {% endif %}
+                    </td>
+                    <td>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="{{ url_for('edit_test', test_id=test.id) }}"
+                                class="btn btn-primary btn-sm action-btn">Редактировать</a>
+                            <form action="{{ url_for('delete_test', test_id=test.id) }}" method="post"
+                                class="action-btn">
+                                <button type="submit" class="btn btn-danger btn-sm"
+                                    onclick="return confirm('Удалить тест?');">Удалить</button>
+                            </form>
+                            <form action="{{ url_for('toggle_test', test_id=test.id) }}" method="post"
+                                class="action-btn">
+                                {% if test.is_hidden %}
+                                <button type="submit" class="btn btn-success btn-sm">Показать</button>
+                                {% else %}
+                                <button type="submit" class="btn btn-warning btn-sm">Скрыть</button>
+                                {% endif %}
+                            </form>
+                            <a href="{{ url_for('add_question', test_id=test.id) }}"
+                                class="btn btn-secondary btn-sm action-btn">Добавить вопрос</a>
+                            <a href="{{ url_for('test_questions', test_id=test.id) }}"
+                                class="btn btn-info btn-sm action-btn">Просмотр вопросов</a>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ url_for('admin_results') }}" class="btn btn-outline-primary">Посмотреть результаты тестов</a>
+        &nbsp; &nbsp;&nbsp;&nbsp;
+        <a href="{{ url_for('admin_users') }}" class="btn btn-outline-primary">Управление пользователями</a>
+    </div>
+
+    <style>
+        @media (max-width: 576px) {
+            .action-btn {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</body>
+
+</html>

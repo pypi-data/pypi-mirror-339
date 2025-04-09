@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактировать вопрос</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        window.MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          },
+          svg: {
+            fontCache: 'global'
+          }
+        };
+    </script>
+    <script type="text/javascript" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Редактировать вопрос</h1>
+        <form method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="question_text" class="form-label">Текст вопроса</label>
+                <textarea class="form-control" id="question_text" name="question_text" rows="3">{{ question.question_text }}</textarea>
+                <div id="previewArea" class="border p-3 mb-3" style="min-height: 50px;"></div>
+            </div>
+            <div class="mb-3">
+                <label for="points" class="form-label">Баллы</label>
+                <input type="number" class="form-control" id="points" name="points" value="{{ question.points }}">
+            </div>
+
+            <!-- Варианты ответов -->
+            <h3>Варианты ответов</h3>
+            {% for idx in range(1, 5) %}
+            <div class="mb-3">
+                <label for="answer{{ idx }}" class="form-label">Ответ {{ idx }}</label>
+                <input type="text" class="form-control" id="answer{{ idx }}" name="answer{{ idx }}"
+                       value="{% if question.answers|length >= idx %}{{ question.answers[idx-1].answer_text }}{% endif %}">
+            </div>
+            {% endfor %}
+
+            {% set correct_idx = None %}
+            {% for answer in question.answers %}
+                {% if answer.is_correct %}
+                    {% set correct_idx = loop.index %}
+                {% endif %}
+            {% endfor %}
+            <div class="mb-3">
+                <label for="correct_answer" class="form-label">Номер правильного ответа</label>
+                <select class="form-select" id="correct_answer" name="correct_answer">
+                    <option value="1" {% if correct_idx==1 %}selected{% endif %}>1</option>
+                    <option value="2" {% if correct_idx==2 %}selected{% endif %}>2</option>
+                    <option value="3" {% if correct_idx==3 %}selected{% endif %}>3</option>
+                    <option value="4" {% if correct_idx==4 %}selected{% endif %}>4</option>
+                </select>
+            </div>
+            {% if question.attachments %}
+            <div class="mb-3">
+                <label class="form-label">Существующие вложения:</label>
+                <ul class="list-group">
+                    {% for att in question.attachments %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="{{ url_for('static', filename=att.file_path) }}" target="_blank">{{ att.file_path }}</a>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="delete_attachments" value="{{ att.id }}" id="delete_{{ att.id }}">
+                            <label class="form-check-label" for="delete_{{ att.id }}">Удалить</label>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            <div class="mb-3">
+                <label for="attachments" class="form-label">Прикрепить файлы (изображения, аудио, видео)</label>
+                <input type="file" class="form-control" id="attachments" name="attachments" accept="image/*,audio/*,video/*" multiple>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+            <a href="{{ url_for('admin_tests') }}" class="btn btn-secondary">Отмена</a>
+        </form>
+    </div>
+    <script>
+        document.getElementById("question_text").addEventListener("input", function () {
+            let text = this.value;
+            document.getElementById("previewArea").innerHTML = text;
+            if (window.MathJax && MathJax.typesetPromise) {
+                MathJax.typesetPromise().catch(function (err) {
+                    console.error("Ошибка при рендеринге MathJax:", err);
+                });
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            let text = document.getElementById("question_text").value;
+            document.getElementById("previewArea").innerHTML = text;
+            if (window.MathJax && MathJax.typesetPromise) {
+                MathJax.typesetPromise().catch(function (err) {
+                    console.error("Ошибка при первичном рендеринге MathJax:", err);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

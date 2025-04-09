@@ -1,0 +1,124 @@
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>О системе A-TExam</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body class="a_texam-page">
+        <header class="header">
+            <h1 style="color: red;">A-TExam</h1>
+            <h4>Система тестирования нового поколения</h4>
+        </header>
+        <div class="container my-5">
+            <div class="text-center mb-5">
+                <img src="{{ url_for('static', filename='t.jpg') }}" alt="Создатель системы" class="img-fluid" style="max-width: 300px; border-radius: 10px">
+                <h2 class="mt-3">Anvarjon Toshmatov</h2>
+                <p>Систему <span style="color: red; font-weight: bold;">A-TExam</span> создал Toshmatov — веб-разработчик и UX/UI-дизайнер, увлечённый созданием удобных и функциональных IT-решений. Его цель — упростить процесс тестирования и сделать его доступным для всех.</p>
+            </div>
+            <div class="mb-5">
+                <h2>О системе A-TExam</h2>
+                <p><span style="color: red; font-weight: bold;">A-TExam</span> – это платформа для локального тестирования, разработанная для создания и проведения тестов с рядом специфических функций:</p>
+                <ul>
+                    <li><strong>Создание и редактирование тестов:</strong> возможность детальной настройки тестов, включая редактирование вопросов и вариантов ответов, а также установку условий прохождения.</li>
+                    <li><strong>Прохождение тестов:</strong> интуитивно понятный интерфейс, где отключена функция копирования текста; тест автоматически завершается, если пользователь переключается на другую вкладку или страницу.</li>
+                    <li><strong>Управление системой:</strong> функции администрирования, позволяющие просматривать результаты тестов, управлять пользователями (включая удаление) и контролировать процесс тестирования.</li>
+                </ul>
+            </div>
+            <div class="mb-5">
+                <h2>Дополнительные функции</h2>
+                <p>Платформа включает следующие возможности:</p>
+                <ol>
+                    <li><strong>Регистрация с подтверждением:</strong> при регистрации пользователя отправляется запрос в админпанель, и аккаунт создаётся только после одобрения администратором.</li>
+                    <li><strong>Блокировка пользователей (бан):</strong> администратор может заблокировать пользователя для контроля доступа и безопасности системы.</li>
+                    <li><strong>Прикрепление файлов:</strong> возможность прикрепления видео, аудио и фото к вопросам теста.</li>
+                    <li><strong>Редактирование тестов в режиме реального времени:</strong> добавление вопросов, просмотр правильных ответов и оперативное обновление содержимого через админпанель.</li>
+                    <li><strong>Интеграция MathJax:</strong> для форматирования и отображения математических выражений в тестах.</li>
+                    <li><strong>Автоматическое завершение теста:</strong> тест завершается при смене вкладки или переходе на другую страницу, с сохранением времени теста, подсчётом попыток и функционалом выхода из системы.</li>
+                    <li><strong>Управление регистрацией и данными пользователей:</strong> администратор может открывать закрывать регистрацию, просматривать подробную статистику и удалять историю тестирования.</li>
+                </ol>
+            </div>
+            <div class="mb-5">
+                <h2>Поддержка и обратная связь</h2>
+                <p>Если у вас есть вопросы или предложения по улучшению <span style="color: red; font-weight: bold;">A-TExam</span>, вы можете связаться со мной по <a href="mailto:anvarjon0038de@gmail.com">электронной почте</a>.</p>
+            </div>
+            <div class="text-center">
+                <a href="/" class="btn btn-primary">Вернуться на главную</a>
+            </div>
+        </div>
+        <footer class="bg-light text-center py-3">
+            <div>
+                <p>&copy; 2025 A-TExam. Все права защищены.</p>
+            </div>
+        </footer>
+        <style>
+            body.a_texam-page {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
+            .header {
+                position: relative;
+                padding: 20px;
+                background-color: white;
+                border-bottom: 2px solid #dee2e6;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .header h1 {
+                font-size: 3rem;
+                margin-bottom: 10px;
+            }
+            .header h4 {
+                font-size: 1.5rem;
+                font-weight: bold;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: #343a40;
+            }
+            body.a_texam-page .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
+            body.a_texam-page h2 {
+                font-size: 2rem;
+                color: #0056b3;
+                margin-bottom: 20px;
+                border-bottom: 2px solid #eaeaea;
+                padding-bottom: 10px;
+            }
+            body.a_texam-page p {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+            body.a_texam-page ul,
+            body.a_texam-page ol {
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+            body.a_texam-page ul li,
+            body.a_texam-page ol li {
+                margin-bottom: 10px;
+            }
+            body.a_texam-page .btn-primary {
+                background-color: #0056b3;
+                border-color: #0056b3;
+                font-size: 1rem;
+                padding: 10px 20px;
+                border-radius: 5px;
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+            }
+            body.a_texam-page .btn-primary:hover {
+                background-color: #004494;
+                border-color: #003a80;
+            }
+        </style>
+    </body>
+    </html>
