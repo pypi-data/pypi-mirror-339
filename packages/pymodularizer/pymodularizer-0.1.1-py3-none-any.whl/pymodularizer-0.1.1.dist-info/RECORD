@@ -1,0 +1,17 @@
+core/__init__.py,sha256=jSjtPXDJrn8v0NusBrx1QHxdf_l50rT1VomNZE2SizQ,73
+core/cli.py,sha256=TG-wIKzbsBSanB5PvqdjFGFZbMOsnennsTrbxIV10MU,2123
+core/default_config.py,sha256=_EI0crfNLxgBswu4ilbVV3ZXtjxRypiWmbWabzAJhKI,135
+core/generator.py,sha256=yHsjT-57xw09G2DNe9B5KuNwwjH-UqYWFR6O3UlnQ7Q,379
+core/templates.py,sha256=cjJOxK7nHOwgpRRdv5m0LjT21nAwtHW6RIdS_XOIp0c,5647
+core/utils.py,sha256=9Hw18I4h-XMF93HQ9LN_utO5xahDcDZUgKv68FHyebY,249
+helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+helpers/files.py,sha256=34fNp3Pm8scca88uugF3ARugYKwGe6XhJDIVP-Pe-DI,204
+helpers/module.py,sha256=a1tV0kr_y3d-LA0l0UoXP2woOl6bK8-7AkUDCczbyww,397
+pymodularizer-0.1.1.dist-info/licenses/LICENSE,sha256=cZXLlKAWMFbx3udGJwa3s3lMz0BzVa6f5o7LILl2NcY,1099
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_generator.py,sha256=T-ynqdAh9XLe3xvjfovQ7MFmOoLMlOXb7ykHJWwgl_4,417
+tests/test_templates.py,sha256=EsUEJjYmsq8jXNPmH-0iQSAIXPGVXfTJgg0uRo_5Ntg,861
+pymodularizer-0.1.1.dist-info/METADATA,sha256=WWRUCSoEQV78ZteWQFErpgbbOjpPkYrvbC_rDHw9Hzw,5574
+pymodularizer-0.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+pymodularizer-0.1.1.dist-info/top_level.txt,sha256=zSYTOGMXP1G7-UGY5dMCL7BdkDnJU9YFgHAnWpuZ_qg,19
+pymodularizer-0.1.1.dist-info/RECORD,,
