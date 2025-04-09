@@ -1,0 +1,17 @@
+pymodularizer/__init__.py,sha256=k8ndhQXL7HhgAobkHzh7DyFe7CXcRy3VSVWSoDQIFr8,141
+pymodularizer/__main__.py,sha256=1iVOwYnBAS_2XbctTIQViyW72AI8Cd2GNqadLn1m5W4,66
+pymodularizer/core/__init__.py,sha256=jSjtPXDJrn8v0NusBrx1QHxdf_l50rT1VomNZE2SizQ,73
+pymodularizer/core/cli.py,sha256=TG-wIKzbsBSanB5PvqdjFGFZbMOsnennsTrbxIV10MU,2123
+pymodularizer/core/default_config.py,sha256=_EI0crfNLxgBswu4ilbVV3ZXtjxRypiWmbWabzAJhKI,135
+pymodularizer/core/generator.py,sha256=yHsjT-57xw09G2DNe9B5KuNwwjH-UqYWFR6O3UlnQ7Q,379
+pymodularizer/core/templates.py,sha256=cjJOxK7nHOwgpRRdv5m0LjT21nAwtHW6RIdS_XOIp0c,5647
+pymodularizer/core/utils.py,sha256=9Hw18I4h-XMF93HQ9LN_utO5xahDcDZUgKv68FHyebY,249
+pymodularizer/helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymodularizer/helpers/files.py,sha256=34fNp3Pm8scca88uugF3ARugYKwGe6XhJDIVP-Pe-DI,204
+pymodularizer/helpers/module.py,sha256=a1tV0kr_y3d-LA0l0UoXP2woOl6bK8-7AkUDCczbyww,397
+pymodularizer-0.1.4.dist-info/licenses/LICENSE,sha256=cZXLlKAWMFbx3udGJwa3s3lMz0BzVa6f5o7LILl2NcY,1099
+pymodularizer-0.1.4.dist-info/METADATA,sha256=on9XBm8_ekIvPFp8hGUTQ1sH96izZNtkUcivqsZbMIM,5601
+pymodularizer-0.1.4.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+pymodularizer-0.1.4.dist-info/entry_points.txt,sha256=UtKeujxuNYRiD4ojQZImVKxfGqOzg2rhtElNMcD6Oig,61
+pymodularizer-0.1.4.dist-info/top_level.txt,sha256=91YauxA_fPlkPj9nbi9DtF2Eei75uVk50xPq8Uzk5d0,14
+pymodularizer-0.1.4.dist-info/RECORD,,
