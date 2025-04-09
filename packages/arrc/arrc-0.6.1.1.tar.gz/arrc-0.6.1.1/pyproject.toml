@@ -1,0 +1,66 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "arrc"
+dynamic = ["version"]
+description = 'Affective Research on Representations and Classifications (ARRC)'
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+    { name = "Tim Sweeney-Fanelli", email = "tim@affects.ai" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+    "hatch>=1.14.0",
+    "tensorflow>=2.17.0",
+    "keras>=3.8.0",
+    "umap-learn>=0.5.7"
+]
+
+[project.urls]
+Documentation = "https://affects.ai/arrc"
+Issues = "https://github.com/Tim Sweeney-Fanelli/arrc/issues"
+Source = "https://github.com/Tim Sweeney-Fanelli/arrc"
+
+[tool.hatch.version]
+path = "src/arrc/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+    "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/arrc tests}"
+
+[tool.coverage.run]
+source_pkgs = ["arrc", "tests"]
+branch = true
+parallel = true
+omit = [
+    "src/arrc/__about__.py",
+]
+
+[tool.coverage.paths]
+arrc = ["src/arrc", "*/arrc/src/arrc"]
+tests = ["tests", "*/arrc/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "no cov",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]
