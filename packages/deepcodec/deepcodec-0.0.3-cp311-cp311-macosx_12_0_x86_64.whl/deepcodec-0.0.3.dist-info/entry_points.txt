@@ -1,0 +1,2 @@
+[console_scripts]
+pyav = deepcodec.__main__:main
