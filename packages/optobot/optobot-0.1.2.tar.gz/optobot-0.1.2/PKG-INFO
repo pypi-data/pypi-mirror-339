@@ -1,0 +1,74 @@
+Metadata-Version: 2.4
+Name: optobot
+Version: 0.1.2
+Summary: A package for automated experimental optimisation using an Opentrons OT-2 robot.
+Author: Akthar Uzzaman, Hanxuan Sheng, Hodan Abdi, Nicola Egues Muhlberger, Pavan Ponupureddi, Sebastian Parkin
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/nicolaegues/OptoBot
+Project-URL: Documentation, https://optobot.readthedocs.io/en/latest/
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Requires-Python: <3.13,>=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib==3.9.2
+Requires-Dist: numpy==1.26.4
+Requires-Dist: opencv-python==4.11.0.86
+Requires-Dist: opentrons==8.3.0
+Requires-Dist: pandas==2.2.3
+Requires-Dist: pyswarms==1.3.0
+Requires-Dist: scikit-optimize==0.10.2
+Dynamic: license-file
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/nicolaegues/OptoBot/main/docs/_static/logo.png" alt="OptoBot Logo">
+</p>
+
+## Overview
+<p align="justify">
+Welcome! <code>OptoBot</code> is a package for implementing automated 
+experimental optimisation using an <a href="https://opentrons.com/robots/ot-2">Opentrons OT-2</a> 
+liquid handling robot. 
+<!--><!-->
+<code>OptoBot</code> aims to provide lab scientists with a simple interface for 
+implementing experimental optimisation in their own work with minimal 
+programming experience.
+<!--><!-->
+In its current implementation, <code>OptoBot</code> focuses on automating and 
+optimising colorimetric experiments where experimental products can be 
+assessed based on their measured RGB colour using a camera.
+<!--><!-->
+<code>OptoBot</code> can be used to semi-automate and optimise other 
+experiments but manual measurements of experimental products and manual inputs 
+are required.
+</p>
+
++ **Documentation**: https://optobot.readthedocs.io/en/latest/
+
+## Installation
+<p align="justify">
+<code>OptoBot</code> can be installed from <code>PyPI</code> with <code>pip</code> 
+using the following command.
+</p>
+
+```
+$ pip install optobot
+```
+
+<p align="justify">
+<code>OptoBot</code> can also be installed from source with <code>pip</code> 
+using the following commands.
+</p>
+
+```
+$ git clone git@github.com:nicolaegues/OptoBot.git
+$ pip install OptoBot/.
+```
