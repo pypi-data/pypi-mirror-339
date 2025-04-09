@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+streamlit_tldraw/__init__.py
+streamlit_tldraw/example.py
+streamlit_tldraw.egg-info/PKG-INFO
+streamlit_tldraw.egg-info/SOURCES.txt
+streamlit_tldraw.egg-info/dependency_links.txt
+streamlit_tldraw.egg-info/requires.txt
+streamlit_tldraw.egg-info/top_level.txt
