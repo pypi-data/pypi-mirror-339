@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+topen.py
+topen.egg-info/PKG-INFO
+topen.egg-info/SOURCES.txt
+topen.egg-info/dependency_links.txt
+topen.egg-info/entry_points.txt
+topen.egg-info/requires.txt
+topen.egg-info/top_level.txt

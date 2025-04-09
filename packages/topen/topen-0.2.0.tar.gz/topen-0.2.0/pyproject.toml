@@ -1,0 +1,28 @@
+[project]
+name = "topen"
+version = "0.2.0"
+description = "simple taskwarrior note management"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "tasklib>=2.5.1",
+]
+
+[project.urls]
+Documentation = "https://marty-oehme.github.io/topen"
+Repository = "https://github.com/marty-oehme/topen"
+Changelog = "https://github.com/marty-oehme/topen/blob/main/CHANGELOG.md"
+
+[tool.uv]
+package = true
+
+[project.scripts]
+topen = "topen:main"
+
+[tool.pyright]
+typeCheckingMode = "standard"
+
+[dependency-groups]
+dev = [
+    "pdoc>=15.0.1",
+]
