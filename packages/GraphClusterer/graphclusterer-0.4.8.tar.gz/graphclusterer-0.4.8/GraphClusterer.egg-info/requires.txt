@@ -1,0 +1,16 @@
+replicate
+cohere
+networkx
+numpy
+pandas
+scipy
+spacy
+plotly
+matplotlib
+chardet
+requests
+sentence-transformers
+dcor
+scikit-learn
+leidenalg
+igraph
