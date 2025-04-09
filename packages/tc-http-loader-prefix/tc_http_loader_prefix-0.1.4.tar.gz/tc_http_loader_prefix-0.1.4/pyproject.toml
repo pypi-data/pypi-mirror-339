@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tc_http_loader_prefix"
+version = "0.1.4"
+description = "A small package to provide a predefined base host for HTTP loader"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = { text = "MIT" }
+dependencies = ["thumbor"]
+
+[project.urls]
+Homepage = "https://github.com/jcord04/thumbor-http-load-prefix"
+Issues = "https://github.com/jcord04/thumbor-http-load-prefix/issues"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools]
+license-files = ["LICENSE", "LICENCE"]
+
+[project.entry-points."thumbor.loaders"]
+custom_loader = "tc_http_loader_prefix.loader:load"

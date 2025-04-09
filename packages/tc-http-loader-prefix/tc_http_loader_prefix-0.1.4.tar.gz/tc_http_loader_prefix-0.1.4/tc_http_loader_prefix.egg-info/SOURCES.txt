@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+tc_http_loader_prefix/__init__.py
+tc_http_loader_prefix/config.py
+tc_http_loader_prefix/loader.py
+tc_http_loader_prefix.egg-info/PKG-INFO
+tc_http_loader_prefix.egg-info/SOURCES.txt
+tc_http_loader_prefix.egg-info/dependency_links.txt
+tc_http_loader_prefix.egg-info/entry_points.txt
+tc_http_loader_prefix.egg-info/requires.txt
+tc_http_loader_prefix.egg-info/top_level.txt
+tests/test_loader.py
