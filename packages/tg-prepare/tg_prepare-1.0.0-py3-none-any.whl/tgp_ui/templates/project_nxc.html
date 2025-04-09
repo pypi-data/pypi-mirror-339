@@ -1,0 +1,37 @@
+{% extends 'layout2.html' %}
+{% block content %}
+<div class="row">
+    <div class="tab-content pt-2" id="tab-content">
+        <div class="tab-pane {{'active' if tab=='upload' }}" id="tab_upload" role="tabpanel">
+            {% include 'file_upload.html' %}
+        </div>
+        <div class="tab-pane {{'active' if tab=='files' }}" id="tab_files" role="tabpanel">
+            {% for item in project.list_files_and_folder() %}
+            {% include 'file_tree.html' %}
+            {% endfor %}
+        </div>
+        {% for c in project.collections %}
+        {% set collection_config = project.collections[c]['config'] %}
+        <div class="tab-pane {{'active' if tab==collection_config.short_title}}" id="tab_{{ c }}" role="tabpanel">
+        </div>
+        {% endfor %}
+        <div class="tab-pane {{'active' if tab=='publish' }}" id="tab_publish" role="tabpanel">
+            {% include 'publish.html' %}
+        </div>
+        <div class="tab-pane {{'active' if tab=='nextcloud' }}" id="tab_nextcloud" role="tabpanel">
+            {% for item in project.nextcloud.nxc_list_files_and_folders() %}
+            {% include 'file_tree.html' %}
+            {% endfor %}
+        </div>
+
+
+    </div>
+</div>
+
+<div class="modal fade" id="xpathParserModal" tabindex="-1" aria-labelledby="xpathParserModalLabel" aria-hidden="true">
+</div>
+
+<div class="modal fade" id="teiExplorer" tabindex="-1" aria-labelledby="teiExplorerLabel" aria-hidden="true">
+</div>
+
+{% endblock %}

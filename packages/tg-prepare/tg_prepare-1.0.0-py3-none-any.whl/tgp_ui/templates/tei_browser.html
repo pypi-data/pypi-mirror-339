@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row g-3">
+        {% for desc in desc_list %}
+        <div class="col-6 p-3">
+            <h4> {{ desc['title']}} </h4>
+            <div class="desc_content" style="display: none;"> {{desc['content']}} </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

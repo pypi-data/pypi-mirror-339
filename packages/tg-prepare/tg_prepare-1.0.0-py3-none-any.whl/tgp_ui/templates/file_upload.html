@@ -1,0 +1,24 @@
+<form class="row mb-3" action="{{ url_for('upload_files', projectname=project.name) }}" method="POST"
+    enctype="multipart/form-data">
+    <h5>Upload Files or Folders</h5>
+    <div class="col-6">
+        <input type="file" class="form-control" name="files" multiple webkitdirectory onchange="this.form.submit()">
+    </div>
+</form>
+<form class="row" method="POST" data-url="{{ url_for('clone_git_project', projectname=project.name) }}" method="POST"
+    id="cloneFromGit">
+    <h5>Upload from git project</h5>
+    <i>Please be aware, that this can a take while (depending on the size of the git project)!</i>
+    <div class="col-6">
+        <input type="text" class="form-control" name="github_repo">
+    </div>
+    <div class="col-6">
+        <button type="submit" class="btn btn-primary">
+            <span class="spinner-border spinner-border-sm" style="display:none;" role="status"
+                aria-hidden="true"></span>
+            <span>Clone</span>
+        </button>
+    </div>
+</form>
+
+<br>
