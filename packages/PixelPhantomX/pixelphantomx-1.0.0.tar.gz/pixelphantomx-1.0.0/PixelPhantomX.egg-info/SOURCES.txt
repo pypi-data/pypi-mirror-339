@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+PixelPhantomX.egg-info/PKG-INFO
+PixelPhantomX.egg-info/SOURCES.txt
+PixelPhantomX.egg-info/dependency_links.txt
+PixelPhantomX.egg-info/entry_points.txt
+PixelPhantomX.egg-info/requires.txt
+PixelPhantomX.egg-info/top_level.txt
