@@ -1,0 +1,2 @@
+[console_scripts]
+baiyx-mcp-server-time-20240408 = mcp_server_time:main
