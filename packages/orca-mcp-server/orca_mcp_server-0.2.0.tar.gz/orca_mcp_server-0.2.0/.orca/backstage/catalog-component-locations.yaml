@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: catalog-locations-orcamcp
+  labels:
+    repository: orcamcp
+  annotations:
+    github.com/project-slug: orcasecurity/orcamcp
+spec:
+  presence: optional
+  targets: []
