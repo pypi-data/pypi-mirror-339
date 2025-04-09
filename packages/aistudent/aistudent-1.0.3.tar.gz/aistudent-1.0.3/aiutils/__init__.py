@@ -1,0 +1,5 @@
+__author__ = "Peter Norvig & AIMA Team"
+__compiler__ = "Babar Ahmad (Packager)"
+__version__ = "1.0"
+__email__ = "babarlinuxguy@gmail.com"
+__license__ = "MIT"
