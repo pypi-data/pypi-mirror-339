@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: robotframework-roboai
+Version: 0.2.0
+Summary: Custom AI-powered library for Robot Framework
+Author: Mrigendra Kumar
+License: MIT
+Classifier: Framework :: Robot Framework
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: openai
+Requires-Dist: robotframework
+Requires-Dist: python-dotenv
+Dynamic: author
+Dynamic: classifier
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary

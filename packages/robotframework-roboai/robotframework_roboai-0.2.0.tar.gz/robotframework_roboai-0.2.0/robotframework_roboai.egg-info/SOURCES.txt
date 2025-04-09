@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ai_lib/__init__.py
+ai_lib/ai_lib.py
+robotframework_roboai.egg-info/PKG-INFO
+robotframework_roboai.egg-info/SOURCES.txt
+robotframework_roboai.egg-info/dependency_links.txt
+robotframework_roboai.egg-info/entry_points.txt
+robotframework_roboai.egg-info/requires.txt
+robotframework_roboai.egg-info/top_level.txt
