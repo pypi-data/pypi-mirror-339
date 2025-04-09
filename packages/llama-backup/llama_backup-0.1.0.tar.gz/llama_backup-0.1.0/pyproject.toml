@@ -1,0 +1,120 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llama-backup"
+version = "0.1.0"
+description = "Backup and restore utilities for LlamaAI data and configurations."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}, # Replace
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Archiving :: Backup",
+    "Topic :: Database",
+]
+dependencies = [
+    # Core utilities
+    "pydantic>=1.10.0",
+    "loguru>=0.7.0",
+    "typer[all]>=0.9.0", # For potential CLI commands
+    "python-dotenv>=1.0.0",
+
+    # File/Directory operations
+    "shutil>=1.0", # Though often built-in, explicit can be good
+
+    # Database interaction (specific clients needed based on DBs used)
+    # "psycopg2-binary>=2.9.0", # For PostgreSQL
+    # "mysql-connector-python>=8.0.0", # For MySQL
+    # "pymongo>=4.0.0", # For MongoDB
+    # "redis[hiredis]>=4.5.0", # For Redis dump/restore
+
+    # Cloud Storage
+    # "boto3>=1.26.0", # For AWS S3
+    # "google-cloud-storage>=2.7.0", # For Google Cloud Storage
+    # "azure-storage-blob>=12.14.0", # For Azure Blob Storage
+
+    # Scheduling (if backups are scheduled)
+    "apscheduler>=3.10.0",
+
+    # Compression
+    "python-snappy>=0.6.0", # Example compression library
+    "zstandard>=0.19.0", # Example compression library
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.3.1",
+    "pytest-cov>=4.1.0",
+    "black>=23.3.0",
+    "isort>=5.12.0",
+    "mypy>=1.2.0",
+    "ruff>=0.0.260",
+    "pre-commit>=3.3.1",
+    "pytest-mock>=3.10.0",
+    "freezegun>=1.2.0", # For testing time-based operations
+]
+docs = [
+    "mkdocs>=1.4.2",
+    "mkdocs-material>=9.1.6",
+    "mkdocstrings[python]>=0.20.0",
+]
+postgres = ["psycopg2-binary>=2.9.0"]
+mysql = ["mysql-connector-python>=8.0.0"]
+mongo = ["pymongo>=4.0.0"]
+redis = ["redis[hiredis]>=4.5.0"]
+aws = ["boto3>=1.26.0"]
+gcp = ["google-cloud-storage>=2.7.0"]
+azure = ["azure-storage-blob>=12.14.0"]
+all = [
+    "llama-backup[dev,docs,postgres,mysql,mongo,redis,aws,gcp,azure]"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/llama-backup"
+"Bug Tracker" = "https://github.com/yourusername/llama-backup/issues"
+"Documentation" = "https://github.com/yourusername/llama-backup/"
+
+[project.scripts]
+llama-backup = "llama_backup.cli:app" # Example CLI entry point
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/llama_backup"]
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 88
+select = ["E", "W", "F", "I", "C", "B", "A", "T20"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py" 
