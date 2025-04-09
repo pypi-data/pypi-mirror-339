@@ -1,0 +1,12 @@
+channels:
+  - conda-forge
+dependencies:
+  - coreutils
+  - python=3.11
+  - pip
+  - pip:
+    - bio-corgi==0.4.1
+    - pandas
+    - fastai==2.7.12
+  - click
+  
