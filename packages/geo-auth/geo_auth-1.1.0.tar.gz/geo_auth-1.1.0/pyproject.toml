@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geo_auth"
+version = "1.1.0"
+description = "Django plugin for geolocation info"
+keywords = ["Django", "geolocation", "plugin", "authentication"]
+license = "MIT"
+dependencies = [
+    "APScheduler==3.11.0",
+    "Django==5.1.6",
+    "django-ipware==4.0.2",
+    "djangorestframework==3.15.2",
+    "IP2Location==8.10.5",
+    "requests==2.32.3",
+    "pycountry==24.6.1",
+    "python-dotenv==1.0.0",
+    "tzlocal==5.3.1",
+    "timezonefinder==6.5.8",
+    "user-agents==2.2.0",
+    "iso3166==2.1.1",
+]
+
+# Metadata
+authors = [
+  { name = "Shoile Abdulazeez Adenuga", email = "shoabdulazeez@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.12"
+# Optional
+classifiers = [
+    "Framework :: Django",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools.packages]
+find = { include = ["geo_auth", "geo_auth.*"] }
+
+
+[project.urls]
+Homepage = "https://github.com/shoileazeez/drf_geodata.git"
+Issues = "https://github.com/shoileazeez/drf_geodata/issues"
