@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: linux-do-mcp-steve
+Version: 0.1.0.5
+Summary: MCP Server for Linux.do
+Project-URL: Homepage, https://github.com/stevessr/linux-do-mcp
+Project-URL: Repository, https://github.com/stevessr/linux-do-mcp.git
+Author-email: stevessr <steve-ssr@outlook.com>
+License: MIT
+Keywords: http,linux.do,mcp
+Requires-Python: >=3.12
+Requires-Dist: asyncio>=3.4.3
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.5.0
+Description-Content-Type: text/markdown
+
+## How to run locally?
+
+I use the command `uv init linux-do-mcp` under the root path `src/linux-do-mcp/python`
+
+If you want to run this MCP Server locally, you can follow the step bellow:
+
+cd to `src/linux-do-mcp/python`, and install the dependency
+
+```
+uv venv
+.venv\Scripts\activate
+uv add "mcp[cli]" httpx
+pip install .
+```
+
+run the following command to test in dev env
+
+```
+mcp dev src/linux_do_mcp/main.py
+```

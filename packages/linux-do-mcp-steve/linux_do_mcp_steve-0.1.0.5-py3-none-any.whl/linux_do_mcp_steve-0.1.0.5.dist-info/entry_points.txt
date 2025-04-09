@@ -1,0 +1,2 @@
+[console_scripts]
+linux-do-mcp-steve = linux_do_mcp_steve:main
