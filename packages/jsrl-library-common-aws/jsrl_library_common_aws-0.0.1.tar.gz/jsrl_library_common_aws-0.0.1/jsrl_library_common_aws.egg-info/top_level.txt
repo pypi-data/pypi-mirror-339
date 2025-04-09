@@ -1,0 +1,8 @@
+jsrl_library_common
+jsrl_library_common/
+jsrl_library_common/constants
+jsrl_library_common/constants/aws
+jsrl_library_common/exceptions
+jsrl_library_common/exceptions/aws
+jsrl_library_common/utils
+jsrl_library_common/utils/aws
