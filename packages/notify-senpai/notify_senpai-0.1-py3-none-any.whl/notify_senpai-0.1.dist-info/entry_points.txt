@@ -1,0 +1,3 @@
+[console_scripts]
+just_notify = notify.notifier:just_notify
+notify = notify.notifier:notify_on_completion
