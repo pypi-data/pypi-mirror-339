@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pymcp-sse"
+version = "0.4.0"
+authors = [
+    {name = "Rafaello Virgilli", email = "rvirgilli@gmail.com"},
+]
+description = "A lightweight, flexible implementation of the Model Context Protocol (MCP) for Python applications, specializing in robust HTTP/SSE transport."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Communications",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "fastapi>=0.95.0",
+    "uvicorn>=0.22.0",
+    "sse-starlette>=1.6.1",
+    "httpx>=0.24.0",
+    "httpx-sse>=0.3.1",
+    "pydantic>=2.0.0",
+]
+keywords = ["mcp", "model context protocol", "sse", "server sent events", "llm", "agent"]
+
+[project.urls]
+"Repository" = "https://github.com/rvirgilli/pymcp-sse"
+"Bug Tracker" = "https://github.com/rvirgilli/pymcp-sse/issues"
+
+[tool.setuptools.packages.find]
+# Automatically find all packages within the project directory
+where = ["."] 
+include = ["pymcp_sse*"] # Include the main package and its subpackages
+exclude = ["examples*", "tests*"] # Exclude examples and tests directories
