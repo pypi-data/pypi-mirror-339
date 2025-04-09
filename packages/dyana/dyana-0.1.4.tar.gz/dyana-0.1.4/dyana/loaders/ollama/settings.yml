@@ -1,0 +1,35 @@
+description: Loads and profiles models via an Ollama server. Local models on the host machine are mounted and shared with the container.
+
+gpu: true
+
+volumes:
+  # on macOS - mount with write permissions
+  - host: ~/.ollama/models
+    guest: /root/.ollama/models
+    options: "rw"
+  # on Linux - mount with write permissions
+  - host: /usr/share/ollama/.ollama/models
+    guest: /root/.ollama/models
+    options: "rw"
+  # Add a writable directory for Ollama to store manifests
+  - host: ~/.ollama/manifests
+    guest: /root/.ollama/manifests
+    options: "rw"
+  # Add directory for model cache
+  - host: ~/.ollama/cache
+    guest: /root/.ollama/cache
+    options: "rw"
+
+args:
+  - name: model
+    description: Name of the Ollama model to profile.
+    required: true
+
+  - name: input
+    description: Input for the model.
+    default: This is an example sentence.
+    required: false
+
+examples:
+  - description: "Pull a model on your host machine and profile it:"
+    command: ollama pull deepseek-r1:1.5b && dyana trace --loader ollama --model deepseek-r1:1.5b
