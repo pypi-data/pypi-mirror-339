@@ -1,0 +1,189 @@
+Metadata-Version: 2.4
+Name: llama-distributed
+Version: 0.1.0
+Summary: Distributed task execution and coordination for LlamaAI workloads.
+Project-URL: Homepage, https://github.com/yourusername/llama-distributed
+Project-URL: Bug Tracker, https://github.com/yourusername/llama-distributed/issues
+Project-URL: Documentation, https://yourusername.github.io/llama-distributed/
+Author-email: Your Name <your.email@example.com>
+License: MIT License
+        
+        Copyright (c) 2024 Your Name # Replace with current year and your name/organization
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE. 
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Distributed Computing
+Requires-Python: >=3.8
+Requires-Dist: celery[redis]>=5.3.0
+Requires-Dist: loguru>=0.7.0
+Requires-Dist: pydantic>=1.10.0
+Provides-Extra: all
+Requires-Dist: black>=23.3.0; extra == 'all'
+Requires-Dist: dask[distributed]>=2023.3.0; extra == 'all'
+Requires-Dist: isort>=5.12.0; extra == 'all'
+Requires-Dist: mkdocs-material>=9.1.6; extra == 'all'
+Requires-Dist: mkdocs>=1.4.2; extra == 'all'
+Requires-Dist: mkdocstrings[python]>=0.20.0; extra == 'all'
+Requires-Dist: mypy>=1.2.0; extra == 'all'
+Requires-Dist: pre-commit>=3.3.1; extra == 'all'
+Requires-Dist: pytest-celery>=0.0.0; extra == 'all'
+Requires-Dist: pytest-cov>=4.1.0; extra == 'all'
+Requires-Dist: pytest-mock>=3.10.0; extra == 'all'
+Requires-Dist: pytest>=7.3.1; extra == 'all'
+Requires-Dist: ray[default]>=2.4.0; extra == 'all'
+Requires-Dist: redis; extra == 'all'
+Requires-Dist: ruff>=0.0.260; extra == 'all'
+Provides-Extra: dask
+Requires-Dist: dask[distributed]>=2023.3.0; extra == 'dask'
+Provides-Extra: dev
+Requires-Dist: black>=23.3.0; extra == 'dev'
+Requires-Dist: isort>=5.12.0; extra == 'dev'
+Requires-Dist: mypy>=1.2.0; extra == 'dev'
+Requires-Dist: pre-commit>=3.3.1; extra == 'dev'
+Requires-Dist: pytest-celery>=0.0.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.1.0; extra == 'dev'
+Requires-Dist: pytest-mock>=3.10.0; extra == 'dev'
+Requires-Dist: pytest>=7.3.1; extra == 'dev'
+Requires-Dist: redis; extra == 'dev'
+Requires-Dist: ruff>=0.0.260; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: mkdocs-material>=9.1.6; extra == 'docs'
+Requires-Dist: mkdocs>=1.4.2; extra == 'docs'
+Requires-Dist: mkdocstrings[python]>=0.20.0; extra == 'docs'
+Provides-Extra: ray
+Requires-Dist: ray[default]>=2.4.0; extra == 'ray'
+Description-Content-Type: text/markdown
+
+# llama-distributed
+
+[![PyPI version](https://img.shields.io/pypi/v/llama_distributed.svg)](https://pypi.org/project/llama_distributed/)
+[![License](https://img.shields.io/github/license/llamasearchai/llama-distributed)](https://github.com/llamasearchai/llama-distributed/blob/main/LICENSE)
+[![Python Version](https://img.shields.io/pypi/pyversions/llama_distributed.svg)](https://pypi.org/project/llama_distributed/)
+[![CI Status](https://github.com/llamasearchai/llama-distributed/actions/workflows/llamasearchai_ci.yml/badge.svg)](https://github.com/llamasearchai/llama-distributed/actions/workflows/llamasearchai_ci.yml)
+
+**Llama Distributed (llama-distributed)** is a toolkit within the LlamaSearch AI ecosystem designed for distributing tasks or packages across multiple nodes or environments. It likely aids in packaging applications and managing their deployment or execution in a distributed setting.
+
+## Key Features
+
+- **Package Distribution:** Core logic related to packaging and distributing Python applications or tasks (`package.py`).
+- **Deployment Management (Potential):** May include tools for deploying packages to target environments.
+- **Task Execution (Potential):** Could support running distributed tasks or parallel processing.
+- **Core Module:** Manages the distribution process (`core.py`).
+- **Configurable:** Allows specifying target environments, package details, and distribution methods (`config.py`).
+
+## Installation
+
+```bash
+pip install llama-distributed
+# Or install directly from GitHub for the latest version:
+# pip install git+https://github.com/llamasearchai/llama-distributed.git
+```
+
+## Usage
+
+*(Usage examples for packaging and distributing applications or tasks will be added here.)*
+
+```python
+# Placeholder for Python client usage
+# from llama_distributed import Distributor, PackageConfig
+
+# config = PackageConfig.load("config.yaml")
+# distributor = Distributor(config)
+
+# # Define package or task
+# package_path = "/path/to/my_app"
+# target_nodes = ["node1.example.com", "node2.example.com"]
+
+# # Distribute the package
+# distribution_job = distributor.distribute(
+#     package_path=package_path,
+#     targets=target_nodes,
+#     options={'run_command': 'python main.py'}
+# )
+# print(f"Distribution job started: {distribution_job.id}")
+```
+
+## Architecture Overview
+
+```mermaid
+graph TD
+    A[User / Build System] --> B{Core Distributor (core.py)};
+    B --> C{Packaging Logic (package.py)};
+    C --> D[Packaged Application / Task];
+    B -- Uses --> E{Deployment / Execution Interface};
+    E -- Deploys/Runs on --> F[Target Node 1];
+    E -- Deploys/Runs on --> G[Target Node 2];
+    E -- Deploys/Runs on --> H[...];
+
+    I[Configuration (config.py)] -- Configures --> B;
+    I -- Configures --> C;
+    I -- Configures --> E;
+
+    style B fill:#f9f,stroke:#333,stroke-width:2px
+    style F fill:#ccf,stroke:#333,stroke-width:1px
+    style G fill:#ccf,stroke:#333,stroke-width:1px
+    style H fill:#ccf,stroke:#333,stroke-width:1px
+```
+
+1.  **Input:** User or a build system triggers the distribution process.
+2.  **Core Distributor:** Manages the workflow based on configuration.
+3.  **Packaging:** The application or task is packaged for distribution.
+4.  **Deployment/Execution:** The packaged artifact is sent to target nodes and potentially executed.
+5.  **Targets:** Represents the remote machines or environments where the package is distributed.
+6.  **Configuration:** Defines the package source, target nodes, deployment methods, execution commands, etc.
+
+## Configuration
+
+*(Details on configuring source packages, target node addresses/credentials, distribution protocols (SSH, etc.), post-deployment commands, etc., will be added here.)*
+
+## Development
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/llamasearchai/llama-distributed.git
+cd llama-distributed
+
+# Install in editable mode with development dependencies
+pip install -e ".[dev]"
+```
+
+### Testing
+
+```bash
+pytest tests/
+```
+
+### Contributing
+
+Contributions are welcome! Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) and submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

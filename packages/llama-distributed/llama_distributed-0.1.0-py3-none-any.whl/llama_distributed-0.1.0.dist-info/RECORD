@@ -1,0 +1,8 @@
+llama_distributed/__init__.py,sha256=Np_Ym3Uh43eD9Rodd_-Hp_F50VgmX4z512t_V-aDNh0,185
+llama_distributed/config.py,sha256=Ur_i4TXwqPDyJSxpgE3enEFg7_3TIc9UKraq5ZlNJ8Y,913
+llama_distributed/core.py,sha256=_iA1ULklpOxNjvuzuJZd08pogK8baBnkMA2IoXKjKOY,948
+llama_distributed/package.py,sha256=hWmHpQEduLlOWuw-Uc75moThH1aMicd9VaKuv0TD3qQ,39985
+llama_distributed-0.1.0.dist-info/METADATA,sha256=CdkvqH-002-UB0U5fwmVTpEXfjzNGK693PctFrEYAww,8181
+llama_distributed-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+llama_distributed-0.1.0.dist-info/licenses/LICENSE,sha256=XKMnva5OvjPNm8U4H4gmpWOc3Y_H3UwOwTy3xpiDFF8,1121
+llama_distributed-0.1.0.dist-info/RECORD,,
