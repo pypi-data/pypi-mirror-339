@@ -1,0 +1,2 @@
+[console_scripts]
+CQ-editor = cq_editor.cqe_run:main

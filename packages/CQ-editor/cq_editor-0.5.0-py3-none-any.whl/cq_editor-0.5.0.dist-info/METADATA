@@ -1,0 +1,422 @@
+Metadata-Version: 2.4
+Name: CQ-editor
+Version: 0.5.0
+Summary: CadQuery plugin to create a mesh of an assembly with corresponding data
+Author: CadQuery Developers
+Maintainer: CadQuery Developers
+License:                                  Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "[]"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright [yyyy] [name of copyright owner]
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               http://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+        
+Project-URL: Repository, https://github.com/CadQuery/CQ-editor.git
+Project-URL: Bug Tracker, https://github.com/CadQuery/CQ-editor/issues
+Keywords: cadquery,CAD,engineering,design
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: <3.13,>=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cadquery
+Requires-Dist: pyqtgraph
+Requires-Dist: spyder<6,>=5.5.6
+Requires-Dist: path
+Requires-Dist: logbook
+Requires-Dist: requests
+Requires-Dist: qtconsole<5.6.0,>=5.5.1
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pluggy; extra == "test"
+Requires-Dist: pytest-qt; extra == "test"
+Requires-Dist: pytest-mock; extra == "test"
+Requires-Dist: pytest-repeat; extra == "test"
+Requires-Dist: pyvirtualdisplay; extra == "test"
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Dynamic: license-file
+
+# CadQuery editor
+
+[![Build status](https://ci.appveyor.com/api/projects/status/g98rs7la393mgy91/branch/master?svg=true)](https://ci.appveyor.com/project/adam-urbanczyk/cq-editor/branch/master)
+[![codecov](https://codecov.io/gh/CadQuery/CQ-editor/branch/master/graph/badge.svg)](https://codecov.io/gh/CadQuery/CQ-editor)
+[![Build Status](https://dev.azure.com/cadquery/CQ-editor/_apis/build/status/CadQuery.CQ-editor?branchName=master)](https://dev.azure.com/cadquery/CQ-editor/_build/latest?definitionId=3&branchName=master)
+[![DOI](https://zenodo.org/badge/136604983.svg)](https://zenodo.org/badge/latestdoi/136604983)
+
+CadQuery GUI editor based on PyQT supports Linux, Windows and Mac.
+
+<img src="https://github.com/CadQuery/CQ-editor/raw/master/screenshots/screenshot2.png" alt="Screenshot" width="70%" >
+<img src="https://github.com/CadQuery/CQ-editor/raw/master/screenshots/screenshot3.png" alt="Screenshot" width="70%" >
+<img src="https://github.com/CadQuery/CQ-editor/raw/master/screenshots/screenshot4.png" alt="Screenshot" width="70%" >
+
+## Notable features
+
+* Automatic code reloading - you can use your favourite editor
+* OCCT based
+* Graphical debugger for CadQuery scripts
+  * Step through script and watch how your model changes
+* CadQuery object stack inspector
+  * Visual inspection of current workplane and selected items
+  * Insight into evolution of the model
+* Export to various formats
+  * STL
+  * STEP
+
+## Installation - Pre-Built Packages (Recommended)
+
+### Development Packages
+
+Development builds are also available, but can be unstable and should be used at your own risk. You can download the newest build [here](https://github.com/CadQuery/CQ-editor/releases/tag/nightly). Install and run the `run.sh` (Linux/MacOS) or `run.bat` (Windows) script in the root CQ-editor directory. The CQ-editor window should launch.
+
+### MacOS workarounds
+
+On later MacOS versions you may also need `xattr -r -d com.apple.quarantine path/to/CQ-editor-MacOS`.
+
+## Installation (conda/mamba)
+
+Use conda or mamba to install:
+```
+mamba install -c cadquery -c conda-forge cq-editor=master
+```
+and then simply type `cq-editor` to run it. This installs the latest version built directly from the HEAD of this repository.
+
+Alternatively clone this git repository and set up the following conda environment:
+```
+mamba env create -f cqgui_env.yml -n cqgui
+mamba activate cqgui
+python run.py
+```
+
+If you are concerned about mamba/conda modifying your shell settings, you can use [micromamba](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html):
+```
+micromamba install -n base -c cadquery cq-editor
+micromamba run -n base cq-editor
+```
+
+On some linux distributions (e.g. `Ubuntu 18.04`+) it might be necessary to install additonal packages:
+```
+sudo apt install libglu1-mesa libgl1-mesa-dri mesa-common-dev libglu1-mesa-dev
+```
+On Fedora 29 the packages can be installed as follows:
+```
+dnf install -y mesa-libGLU mesa-libGL mesa-libGLU-devel
+```
+
+## Installation (pip)
+
+A newer installation option (starting with 0.3.0) is to install via pip. Being a newer option, there may be issues that are not present with the conda installation method. It has worked well in testing so far though.
+
+```
+pip install CQ-editor
+```
+
+## Running
+
+Whether CQ-editor was installed via conda or pip, it should now be possible to start the application using the following command.
+```bash
+CQ-editor
+```
+If you are running a Linux distribution which uses Wayland, you may get an error. The following command line is a work-around for Wayland issues.
+```bash
+CQ-editor --platform xcb
+```
+
+## Usage
+
+### Showing Objects
+
+By default, CQ-editor will display a 3D representation of all `Workplane` objects in a script with a default color and alpha (transparency). To have more control over what is shown, and what the color and alpha settings are, the `show_object` method can be used. `show_object` tells CQ-editor to explicity display an object, and accepts the `options` parameter. The `options` parameter is a dictionary of rendering options named `alpha` and `color`. `alpha` is scaled between 0.0 and 1.0, with 0.0 being completely opaque and 1.0 being completely transparent. The color is set using R (red), G (green) and B (blue) values, and each one is scaled from 0 to 255. Either option or both can be omitted. The `name` parameter can assign a custom name which will appear in the objects pane of CQ-editor.
+
+```python
+show_object(result, name="somename", options={"alpha":0.5, "color": (64, 164, 223)})
+```
+
+Note that `show_object` works for `Shape` and `TopoDS_Shape` objects too. In order to display objects from the embedded Python console use `show`.
+
+### Rotate, Pan and Zoom the 3D View
+
+The following mouse controls can be used to alter the view of the 3D object, and should be familiar to CAD users, even if the mouse buttons used may differ.
+
+* _Left Mouse Button_ + _Drag_ = Rotate
+* _Middle Mouse Button_ + _Drag_ = Pan
+* _Right Mouse Button_ + _Drag_ = Zoom
+* _Mouse Wheel_ = Zoom
+
+### Debugging Objects
+
+There are multiple menu options to help in debugging a CadQuery script. They are included in the `Run` menu, with corresponding buttons in the toolbar. Below is a listing of what each menu item does.
+
+* `Debug` (Ctrl + F5) - Instead of running the script completely through as with the `Render` item, it begins executing the script but stops at the first non-empty line, waiting for the user to continue execution manually.
+* `Step` (Ctrl + F10) - Will move execution of the script to the next  non-empty line.
+* `Step in` (Ctrl + F11) - Will follow the flow of execution to the inside of a user-created function defined within the script.
+* `Continue` (Ctrl + F12) - Completes execution of the script, starting from the current line that is being debugged.
+
+It is also possible to do visual debugging of objects. This is possible by using the `debug()` function to display an object instead of `show_object()`. An alternative method for the following code snippet is shown below for highlighting a specific face, but it demonstrates one use of `debug()`.
+```python
+import cadquery as cq
+
+result = cq.Workplane().box(10, 10, 10)
+
+highlight = result.faces('>Z')
+
+show_object(result, name='box')
+debug(highlight)
+```
+Objects displayed with `debug()` are colored in red and have their alpha set so they are semi-transparent. This can be useful for checking for interference, clearance, or whether the expected face is being selected, as in the code above.
+
+### Console Logging
+
+Python's standard `print()` function will not output to the CQ-editor GUI, and `log()` should be used instead. `log()` will output the provided text to the _Log viewer_ panel, providing another way to debug CadQuery scripts. If you started CQ-editor from the command line, the `print()` function will output text back to it.
+
+### Using an External Code Editor
+
+Some users prefer to use an external code editor instead of the built-in Spyder-based editor that comes stock with CQ-editor. The steps below should allow CQ-editor to work alongside most text editors.
+
+1. Open the Preferences dialog by clicking `Edit->Preferences`.
+2. Make sure that `Code Editor` is selected in the left pane.
+3. Check `Autoreload` in the right pane.
+4.  If CQ-editor is not catching the saves from your external editor, increasing `Autoreload delay` in the right pane may help. This issue has been reported when using vim or emacs.
+
+### Exporting an Object
+
+Any object can be exported to either STEP or STL format. The steps for doing so are listed below.
+
+1. Highlight the object to be exported in the _Objects_ panel.
+2. Click either `Export as STL` or `Export as STEP` from the `Tools` menu, depending on which file format you want to export. Both of these options will be disabled if an object is not selected in the _Objects_ panel.
+
+Clicking either _Export_ item will present a file dialog that allows the file name and location of the export file to be set.
+
+### Displaying All Wires for Debugging
+
+**NOTE:** This is intended for debugging purposes, and if not removed, could interfere with the execution of your model in some cases.
+
+Using `consolidateWires()` is a quick way to combine all wires so that they will display together in CQ-editor's viewer. In the following code, it is used to make sure that both rects are displayed. This technique can make it easier to debug in-progress 2D sketches.
+
+```python
+import cadquery as cq
+res = cq.Workplane().rect(1,1).rect(3,3).consolidateWires()
+show_object(res)
+```
+
+### Highlighting a Specific Face
+
+Highlighting a specific face in a different color can be useful when debugging, or when trying to learn CadQuery selectors. The following code creates a separate, highlighted object to show the selected face in red. This is an alternative to using a `debug()` object, and in most cases `debug()` will provide the same result with less code. However, this method will allow the color and alpha of the highlight object to be customized.
+
+```python
+import cadquery as cq
+
+result = cq.Workplane().box(10, 10, 10)
+
+highlight = result.faces('>Z')
+
+show_object(result)
+show_object(highlight,'highlight',options=dict(alpha=0.1,color=(1.,0,0)))
+```
+
+### Naming an Object
+
+By default, objects have a randomly generated ID in the object inspector. However, it can be useful to name objects so that it is easier to identify them. The `name` parameter of `show_object()` can be used to do this.
+
+```python
+import cadquery as cq
+
+result = cq.Workplane().box(10, 10, 10)
+
+show_object(result, name='box')
+```
