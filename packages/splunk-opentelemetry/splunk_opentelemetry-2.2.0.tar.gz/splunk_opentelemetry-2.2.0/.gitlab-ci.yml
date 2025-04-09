@@ -1,0 +1,67 @@
+default:
+  image: 'cimg/python:3.11'
+
+include:
+  - project: core-ee/signing/api-integration
+    ref: develop
+    file: /templates/.sign-client.yml
+
+stages:
+  - build
+  - sign
+  - deploy
+  - post-release
+
+build-job:
+  stage: build
+  script:
+    - pip install hatch
+    - hatch build
+    - shasum -a 256 dist/* > dist/checksums.txt
+  artifacts:
+      paths:
+        - dist/
+  only:
+    - /^v[0-9]+\.[0-9]+\.[0-9]+.*/
+  except:
+    - branches
+
+checksum-signing-job:
+  stage: sign
+  extends: .submit-signing-request
+  needs:
+    - build-job
+  variables:
+    ARTIFACT: dist/checksums.txt
+    SIGN_TYPE: GPG
+    DOWNLOAD_DIR: dist
+    LOGLEVEL: DEBUG
+  only:
+    - /^v[0-9]+\.[0-9]+\.[0-9]+.*/
+  artifacts:
+    paths:
+      - dist/
+
+deploy-job:
+  stage: deploy
+  script:
+    - pip install hatch keyrings.alt
+    - hatch --no-interactive publish
+  needs:
+    - checksum-signing-job
+  only:
+    - /^v[0-9]+\.[0-9]+\.[0-9]+.*/
+  except:
+    - branches
+
+publish-docker-image:
+  stage: post-release
+  image: docker:latest
+  services:
+    - docker:dind
+  variables:
+    DOCKER_TLS_CERTDIR: ""
+  only:
+    - /^v[0-9]+\.[0-9]+\.[0-9]+.*/
+  script:
+    - ./docker/publish_docker_image.sh "$CI_COMMIT_TAG"
