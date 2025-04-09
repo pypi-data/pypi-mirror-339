@@ -1,0 +1,2 @@
+include src/assets/fun_facts_10000.csv
+recursive-include src/assets/video_backgrounds *

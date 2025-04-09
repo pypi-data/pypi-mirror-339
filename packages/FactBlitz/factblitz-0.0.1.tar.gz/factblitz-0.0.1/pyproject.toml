@@ -1,0 +1,47 @@
+[project]
+name = "FactBlitz"
+version = "0.0.1"
+description = "A package to create Tik-Tok videos with fun facts."
+readme = "README.md"
+
+authors = [
+    { name = "Chris Asmussen", email = "chrisasmussen1@gmail.com" },
+    { name = "Evan Whinery", email = "evan.whinery@gmail.com" },
+    { name = "factblitzzz", email = "factblitzzz@gmail.com" }
+]
+maintainers = [
+    { name = "Chris Asmussen", email = "chrisasmussen1@gmail.com" },
+    { name = "Evan Whinery", email = "evan.whinery@gmail.com" },
+    { name = "factblitzzz", email = "factblitzzz@gmail.com" }
+]
+
+requires-python = ">=3.12"
+dependencies = [
+    "pytube3",
+    "google-api-python-client",
+    "google-auth",
+    "google-auth-oauthlib",
+    "google-auth-httplib2",
+    "gtts",
+    "moviepy",
+    "requests",
+    "beautifulsoup4",
+    "selenium",
+    "pandas"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+fact_blitz = ["assets/fun_facts_10000.csv", "assets/video_backgrounds/*"]
+
+[project.scripts]
+factblitz = "fact_blitz.__main__:main"

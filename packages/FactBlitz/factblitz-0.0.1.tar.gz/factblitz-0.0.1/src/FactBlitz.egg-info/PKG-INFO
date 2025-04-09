@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: FactBlitz
+Version: 0.0.1
+Summary: A package to create Tik-Tok videos with fun facts.
+Author-email: Chris Asmussen <chrisasmussen1@gmail.com>, Evan Whinery <evan.whinery@gmail.com>, factblitzzz <factblitzzz@gmail.com>
+Maintainer-email: Chris Asmussen <chrisasmussen1@gmail.com>, Evan Whinery <evan.whinery@gmail.com>, factblitzzz <factblitzzz@gmail.com>
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: pytube3
+Requires-Dist: google-api-python-client
+Requires-Dist: google-auth
+Requires-Dist: google-auth-oauthlib
+Requires-Dist: google-auth-httplib2
+Requires-Dist: gtts
+Requires-Dist: moviepy
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: selenium
+Requires-Dist: pandas
+
+need to get our application approved so that we can obtain OAuth tokens
+need to be approved for the direct post api (otherwise, videos may be private by default)
+need to agree on how video_manager class logic should be created and if we want one class handling youtube/tiktok or split it up inbetween 2 classes
