@@ -1,0 +1,2 @@
+[console_scripts]
+run-gypsum-dl = gypsum_dl.cli:run_gypsum_dl

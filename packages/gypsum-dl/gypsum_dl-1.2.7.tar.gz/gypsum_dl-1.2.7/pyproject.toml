@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gypsum_dl"
+dynamic = ["version"]
+requires-python = ">=3.9"
+dependencies = [
+    "six",
+    "rdkit",
+    "numpy",
+    "scipy",
+    "pytest",
+    ]
+authors = [{name = "Sung-Hun Bae", email="sunghun.bae@gmail.com"}, ]
+maintainers = [{name = "Sung-Hun Bae", email="sunghun.bae@gmail.com"}, ]
+description = "Gypsum-DL converts SMILES and 2D SDF into 3D models"
+readme = "README.md"
+license = "Apache-2.0"
+keywords = [
+    "Small-molecule",
+    "Ionized",
+    "Protonated",
+    "Tautomers", 
+    "Stereoisomers",
+    ]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage        = "https://github.com/sunghunbae/gypsum_dl"
+Repository      = "https://github.com/sunghunbae/gypsum_dl.git"
+Issues          = "https://github.com/sunghunbae/gypsum_dl/issues"
+Changelog       = "https://github.com/sunghunbae/gypsum_dl/blob/master/CHANGELOG.md"
+Documentation   = "https://sunghunbae.github.io/gypsum_dl/"
+
+[project.scripts]
+run-gypsum-dl   = "gypsum_dl.cli:run_gypsum_dl"
+
+[tool.setuptools.dynamic]
+version = {attr = "gypsum_dl.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"gypsum_dl.Steps.SMILES" = ["*.smarts"]
+"gypsum_dl.Steps.SMILES.dimorphite_dl" = ["*.smarts"]
