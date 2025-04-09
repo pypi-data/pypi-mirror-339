@@ -1,0 +1,61 @@
+[project]
+name = "cpkmetrics"
+version = "0.1.0"
+authors = [{ name = "Roshan M." }]
+description = "A featherweight library to compute process capability metrics"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+keywords = ["process capability", "cpk", "six sigma", "statistics"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Manufacturing",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.mypy]
+mypy_path = "src"
+exclude = ['^build/', '^.venv/', '^tests/', 'temp/', 'examples/']
+
+[tool.ruff]
+line-length = 100
+
+[tool.interrogate]
+ignore-init-method = false
+ignore-init-module = true
+ignore-magic = false
+ignore-semiprivate = false
+ignore-private = false
+ignore-property-decorators = false
+ignore-module = false
+ignore-nested-functions = false
+ignore-nested-classes = false
+ignore-setters = false
+ignore-overloaded-functions = false
+fail-under = 90
+# example values
+exclude = ["examples", "tests", "temp"]
+# example regex
+ignore-regex = ["^get$", "^mock_.*", ".*BaseClass.*"]
+ext = []
+# possible values: 0 (minimal output), 1 (-v), 2 (-vv)
+verbose = 1
+quiet = false
+whitelist-regex = []
+color = true
+omit-covered-files = false
+
+[dependency-groups]
+dev = ["pytest>=8.3.5"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
