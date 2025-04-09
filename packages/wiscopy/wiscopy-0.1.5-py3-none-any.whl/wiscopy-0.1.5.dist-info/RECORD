@@ -1,0 +1,11 @@
+wiscopy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wiscopy/_version.py,sha256=Y4jy4bEMmwl_qNPCmiMFnlQ2ofMoqyG37hp8uwI3m10,511
+wiscopy/data.py,sha256=8McL4ca_4GwuHqLqV-tVa24Sjpi1iriLJI-dggJtglY,9692
+wiscopy/interface.py,sha256=NTLxyLPCyciaUGIteCkFAIRVzLo6ej_tkAzWnZwTvFs,8308
+wiscopy/process.py,sha256=ZQNbuVlwFOHnqeOml8_sZaiTO9_y2-c4h9olkGThlCM,3171
+wiscopy/schema.py,sha256=gLGg5MI3-Ws3pAj2j0jFFWYIDv1iQ0WgtYw4Kv_0hSg,2278
+wiscopy/variables.py,sha256=ZwXpLhmPHVYgUDdj9l0mIk4A2tSX7vALJsfjpjO3TdA,1051
+wiscopy-0.1.5.dist-info/METADATA,sha256=ayrCVUQL38bWUsMYXraiYBuFY-V3-zpZfYeCKgehAQU,3806
+wiscopy-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+wiscopy-0.1.5.dist-info/licenses/LICENSE,sha256=t2_RA69W-T6sAhCtkrEpL04IUWl_btYMUJ1Xaa1Re-Q,1081
+wiscopy-0.1.5.dist-info/RECORD,,
