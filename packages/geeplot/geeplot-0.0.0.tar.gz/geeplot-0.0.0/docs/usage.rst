@@ -1,0 +1,4 @@
+Usage
+=====
+
+**geeplot** usage documentation.

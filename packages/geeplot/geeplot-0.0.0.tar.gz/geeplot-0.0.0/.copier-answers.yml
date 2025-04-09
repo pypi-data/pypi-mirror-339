@@ -1,0 +1,15 @@
+# Changes here will be overwritten by Copier
+_commit: 0.1.16
+_src_path: gh:12rambau/pypackage
+author_email: pierrick.rambaud49@gmail.com
+author_first_name: Pierrick
+author_last_name: Rambaud
+author_orcid: 0000-0001-8764-5749
+creation_year: "2025"
+github_repo_name: geeplot
+github_user: gee-community
+project_name: geeplot
+project_slug: geeplot
+short_description:
+  A python library to bridge GEE computation capabilities and all
+  the Python plotting solutions
