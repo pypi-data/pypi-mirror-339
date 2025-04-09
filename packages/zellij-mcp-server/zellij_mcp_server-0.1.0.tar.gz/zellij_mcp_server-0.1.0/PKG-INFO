@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: zellij-mcp-server
+Version: 0.1.0
+Summary: Zellij MCP Server
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# zellij-mcp-server
+A MCP Server to over zellij over STDIO
