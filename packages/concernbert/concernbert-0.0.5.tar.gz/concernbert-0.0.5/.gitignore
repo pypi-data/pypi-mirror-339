@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Common development directories
+_cache/
+_data/
+_examples/
+_fileranker/
+_models/
+
+# MacOS
+.DS_Store
+
+_notes/
+.vscode/
+notebooks/
+streamlit/

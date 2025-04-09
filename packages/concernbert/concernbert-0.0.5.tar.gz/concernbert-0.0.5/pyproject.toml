@@ -1,0 +1,58 @@
+[project]
+name = "concernbert"
+version = "0.0.5"
+description = "Source code embeddings from finetuned BERT-based models"
+readme = "README.md"
+authors = [
+    { name = "Jason Lefever", email = "jason.titus.lefever@gmail.com" }
+]
+requires-python = ">=3.12"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "pandas>=2.2.2",
+    "numpy>=1.26.4",
+    "torch>=2.3.0",
+    "transformers[torch]>=4.41.0",
+    "sentence-transformers==2.7.0",
+    "pyarrow>=16.1.0",
+    "click>=8.1.7",
+    "statsmodels>=0.14.2",
+    "openpyxl>=3.1.4",
+    "networkx>=3.3",
+    "gensim>=4.3.2",
+    "nltk>=3.8.1",
+    "scipy==1.12",
+    "ordered-set>=4.1.0",
+    "lmdb>=1.5.1",
+    "fitter>=1.7.1",
+    "tree-sitter==0.20.4",
+    "tree-sitter-languages>=1.10.2",
+]
+
+[project.scripts]
+concernbert = "concernbert:__main__"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.0.0",
+    "matplotlib>=3.9.0",
+    "umap-learn>=0.5.6",
+    "seaborn>=0.13.2",
+    "hdbscan>=0.8.36",
+    "streamlit>=1.42.0",
+    "plotly>=6.0.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/concernbert"]
