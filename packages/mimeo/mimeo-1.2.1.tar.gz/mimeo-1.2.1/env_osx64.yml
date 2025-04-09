@@ -1,0 +1,17 @@
+name: mimeo-osx-64
+channels:
+  - conda-forge/osx-64
+  - bioconda/osx-64
+dependencies:
+  - python 3.12
+  - lastz
+  - bedtools
+  - trf
+  - pip
+  - pip:
+      - biopython
+      - pandas
+      - hatch
+      - pytest
+      - pytest-cov
+      - rich
