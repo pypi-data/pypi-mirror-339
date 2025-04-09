@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: JasurOmanov
+Version: 0.0.2
+Summary: Oddiy kutubxona
+Author: Jasur Omanov
+Author-email: jasuromanov05@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# JasurOmanov
+
+`JasurOmanov` — bu oddiy va foydali Python kutubxonasi. Ushbu kutubxona orqali `Salom, <ism>!` ko‘rinishida salomlashish funksiyasidan foydalanish mumkin.
+
+## ✨ Xususiyatlar
+
+- Salomlashish funksiyasi
+- Juda yengil va sodda
+- O‘rganish uchun qulay
+
+## 📦 O‘rnatish
+
+```bash
+pip install JasurOmanov

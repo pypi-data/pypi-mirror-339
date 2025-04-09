@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+JasurOmanov/__init__.py
+JasurOmanov/core.py
+JasurOmanov.egg-info/PKG-INFO
+JasurOmanov.egg-info/SOURCES.txt
+JasurOmanov.egg-info/dependency_links.txt
+JasurOmanov.egg-info/top_level.txt
+tests/test_core.py
