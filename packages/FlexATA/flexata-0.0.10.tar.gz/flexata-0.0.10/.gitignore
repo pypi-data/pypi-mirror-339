@@ -1,0 +1,9 @@
+trying.py
+misc/
+__pycache__/
+src/build_forms/__pycache__/
+instruction.md
+*.lp
+dist/
+.pypirc
+*.pyc
