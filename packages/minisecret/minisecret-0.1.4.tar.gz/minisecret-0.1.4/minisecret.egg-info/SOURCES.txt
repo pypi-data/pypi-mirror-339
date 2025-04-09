@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+minisecret/__init__.py
+minisecret/__main__.py
+minisecret/minisecret.py
+minisecret.egg-info/PKG-INFO
+minisecret.egg-info/SOURCES.txt
+minisecret.egg-info/dependency_links.txt
+minisecret.egg-info/entry_points.txt
+minisecret.egg-info/requires.txt
+minisecret.egg-info/top_level.txt
