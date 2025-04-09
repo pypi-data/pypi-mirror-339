@@ -1,0 +1,81 @@
+[project]
+name = "explicit-sql"
+authors = [{ name="Ivan Zakutnii", email="zakutnii.ivan@gmail.com" }]
+version = "0.0.4"
+description = "Human mind friendly SQL generator"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+keywords = [
+    "python",
+    "sql",
+    "duckdb",
+    "sql-generator",
+    "typeddict",
+    "type-safe",
+    "database",
+    "orm-alternative",
+    "python310",
+    "python311", 
+    "python312"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: SQL",
+    "Topic :: Database",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development",
+    "Typing :: Typed"
+]
+dependencies = []
+
+
+[tool.mypy]
+# The mypy configurations: http://bit.ly/2zEl9WI
+plugins = ["returns.contrib.mypy.returns_plugin"]
+ignore_missing_imports = true
+strict = true
+local_partial_types = true
+warn_unreachable = true
+
+enable_error_code = [
+  "truthy-bool",
+  "truthy-iterable",
+  "redundant-expr",
+  "unused-awaitable",
+  # "ignore-without-code",
+  "possibly-undefined",
+  "redundant-self",
+  # "explicit-override",
+  # "mutable-override",
+  "unimported-reveal",
+  "deprecated",
+]
+
+disable_error_code = [
+  "no-untyped-def", # TODO: fix
+]
+
+[[tool.mypy.overrides]]
+module = "wemake_python_styleguide.compat.nodes"
+# We allow explicit `Any` only in this file, because of the compatibility:
+disallow_any_explicit = false
+
+[[tool.mypy.overrides]]
+module = "wemake_python_styleguide.compat.packaging"
+# We allow unused `ignore` comments, because we cannot sync it between versions:
+warn_unused_ignores = false
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
