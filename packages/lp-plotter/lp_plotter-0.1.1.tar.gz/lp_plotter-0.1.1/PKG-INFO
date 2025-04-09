@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: lp_plotter
+Version: 0.1.1
+Summary: Visualização gráfica de modelos de programação linear com duas variáveis
+Author: Pedro Eckel
+Requires-Python: >=3.7
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: sympy
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
