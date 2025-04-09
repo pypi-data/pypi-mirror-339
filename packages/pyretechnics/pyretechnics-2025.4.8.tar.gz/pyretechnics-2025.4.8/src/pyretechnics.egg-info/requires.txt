@@ -1,0 +1,13 @@
+numpy
+rasterio
+sortedcontainers
+Cython
+
+[dev]
+pytest
+snakeviz
+twine
+pkginfo
+matplotlib
+dask
+distributed
