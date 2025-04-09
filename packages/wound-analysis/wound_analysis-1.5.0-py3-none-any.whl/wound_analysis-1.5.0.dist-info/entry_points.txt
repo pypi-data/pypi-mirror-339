@@ -1,0 +1,3 @@
+[console_scripts]
+wound-analysis = wound_analysis.main:main
+wound-dashboard = wound_analysis.cli:run_dashboard
