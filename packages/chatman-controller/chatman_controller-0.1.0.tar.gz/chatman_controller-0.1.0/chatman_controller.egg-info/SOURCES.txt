@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+chatman_controller/__init__.py
+chatman_controller/chatman_cli.py
+chatman_controller/chatman_controller.py
+chatman_controller/chatman_gui.py
+chatman_controller.egg-info/PKG-INFO
+chatman_controller.egg-info/SOURCES.txt
+chatman_controller.egg-info/dependency_links.txt
+chatman_controller.egg-info/entry_points.txt
+chatman_controller.egg-info/requires.txt
+chatman_controller.egg-info/top_level.txt
