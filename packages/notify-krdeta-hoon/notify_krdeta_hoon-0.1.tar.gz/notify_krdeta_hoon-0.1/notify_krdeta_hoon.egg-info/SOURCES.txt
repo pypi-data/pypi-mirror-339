@@ -1,0 +1,9 @@
+setup.py
+notify/__init__.py
+notify/notifier.py
+notify/notify.sh
+notify_krdeta_hoon.egg-info/PKG-INFO
+notify_krdeta_hoon.egg-info/SOURCES.txt
+notify_krdeta_hoon.egg-info/dependency_links.txt
+notify_krdeta_hoon.egg-info/entry_points.txt
+notify_krdeta_hoon.egg-info/top_level.txt
