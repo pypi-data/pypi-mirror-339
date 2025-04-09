@@ -1,0 +1,15 @@
+[project]
+name = "shipyard-slack"
+version = "0.1.6a0"
+description = "A local client for connecting and working with Slack"
+requires-python = ">=3.9"
+dependencies = [
+    "slack-sdk>=3.26.2",
+    "shipyard-bp-utils>=1.0.2",
+    "shipyard-templates>=0.6.2",
+]
+
+[dependency-groups]
+dev = [
+    "python-dotenv>=1.0.1",
+]
