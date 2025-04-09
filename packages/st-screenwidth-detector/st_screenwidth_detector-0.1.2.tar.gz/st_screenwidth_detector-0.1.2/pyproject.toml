@@ -1,0 +1,19 @@
+[project]
+name = "st-screenwidth-detector"
+version = "0.1.2"
+description = "Get current screen width when screen size changes"
+readme = "README.md"
+authors = [{ name = "Kelvin Ng", email = "hoishing@gmail.com" }]
+requires-python = ">=3.12"
+dependencies = ["streamlit>=1.44.1"]
+
+
+[project.urls]
+repository = "https://github.com/hoishing/st-screenwidth-detector"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = ["watchdog>=6.0.0"]
