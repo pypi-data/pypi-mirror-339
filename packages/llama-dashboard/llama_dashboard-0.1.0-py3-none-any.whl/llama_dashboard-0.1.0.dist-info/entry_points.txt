@@ -1,0 +1,2 @@
+[console_scripts]
+llama-dashboard = llama_dashboard.app:run
