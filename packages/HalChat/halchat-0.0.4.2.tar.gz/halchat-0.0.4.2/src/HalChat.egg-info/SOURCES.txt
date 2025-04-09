@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+src/HalChat.py
+src/HalChatAPI.py
+src/HalChatEncryption.py
+src/HalChatWS.py
+src/HalEncryption.py
+src/HalHash.py
+src/__init__.py
+src/HalChat.egg-info/PKG-INFO
+src/HalChat.egg-info/SOURCES.txt
+src/HalChat.egg-info/dependency_links.txt
+src/HalChat.egg-info/requires.txt
+src/HalChat.egg-info/top_level.txt
+tests/test.py

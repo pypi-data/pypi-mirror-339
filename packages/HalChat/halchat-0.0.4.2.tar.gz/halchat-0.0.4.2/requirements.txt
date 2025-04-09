@@ -1,0 +1,5 @@
+pycryptodomex
+requests
+asyncio
+websockets
+aiohttp
