@@ -1,0 +1,26 @@
+[project]
+name = "refrot"
+version = "1.4.3"
+authors = [{name = "Craig Howard", email = "craig@seagrape.us"}]    
+description = "Verify website links"
+readme = {file = "README", content-type = "text/markdown"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+] 
+dependencies = [
+    "requests",
+]    
+
+[project.urls]
+Homepage = "https://seagrape.us/refrot.html"
+Repository = "https://pypi.org/project/refrot/"
+Changelog = "https://seagrape.us/refrot-history.html"
+
+[project.scripts]
+refrot = "refrot.__main__:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

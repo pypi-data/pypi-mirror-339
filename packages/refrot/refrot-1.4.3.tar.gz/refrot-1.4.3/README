@@ -1,0 +1,34 @@
+# Refrot
+
+A [Python] script to check a website for broken links, also known as link rot or
+reference rot.
+
+## How to install it
+
+Install using:
+
+	pip3 install refrot
+
+## How to use it
+
+    refrot <url>
+
+By default refrot checks all internal links, no matter how many levels, and a single level of external links. URLs with status codes other than OK (200) and Temporary Redirect (302) are displayed in the post-run summary.
+
+### Options
+
+    -h --help                   Show help.
+    -i --ignore-external-links  Ignore external links.
+    -u --user-agent AGENT       User agent.
+    -v --version                Show version number.
+
+## Links
+
+- [Project page](https://seagrape.us/refrot.html)
+- [Changelog](https://seagrape.us/refrot-history.html)
+
+## Contact Me
+
+Send bug reports and patches to <craig@seagrape.us>.
+
+[Python]: https://www.python.org
