@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+pryanda_client/__init__.py
+pryanda_client/core.py
+pryanda_client.egg-info/PKG-INFO
+pryanda_client.egg-info/SOURCES.txt
+pryanda_client.egg-info/dependency_links.txt
+pryanda_client.egg-info/requires.txt
+pryanda_client.egg-info/top_level.txt
