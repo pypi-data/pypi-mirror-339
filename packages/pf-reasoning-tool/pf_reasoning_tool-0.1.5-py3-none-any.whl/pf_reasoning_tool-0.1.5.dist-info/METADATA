@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: pf_reasoning_tool
+Version: 0.1.5
+Summary: Custom PromptFlow tools for Hall & Wilcox
+Requires-Dist: promptflow-core>=1.0.0
+Requires-Dist: jinja2>=3.0
+Requires-Dist: ruamel.yaml>=0.17
+Requires-Dist: openai>=1.0
+Requires-Dist: psutil<7,>=5.9
+Dynamic: requires-dist
+Dynamic: summary
