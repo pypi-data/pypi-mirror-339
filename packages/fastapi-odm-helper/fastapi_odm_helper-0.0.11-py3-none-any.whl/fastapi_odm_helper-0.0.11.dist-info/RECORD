@@ -1,0 +1,9 @@
+fastapi_odm_helper/__init__.py,sha256=6nUnGSH7NIvvvYU2jVaJiYTXlW6wb0gRp6Dvk-cprkc,124
+fastapi_odm_helper/decorators/entity.py,sha256=Fae6gCK-J-nFGpWTUb4dEJtWRXxn2CWKq8c6Fbo6-z0,843
+fastapi_odm_helper/dependencies/pagination.py,sha256=FXDNobt96vr9qJthGAdTe8Vju0v759PL3cAZMUgGlOE,249
+fastapi_odm_helper/repositories/base.py,sha256=y6GQ0wbCtPz6f5DXjVZBuN3OGLvDT8uvdhqI-eJxEFk,7343
+fastapi_odm_helper/responses/pagination.py,sha256=B_lMXoEkCx7Vtl2xy55bnjRUGjtQ70eWfRWdipeh3PE,204
+fastapi_odm_helper-0.0.11.dist-info/METADATA,sha256=i0VQnPM8bNvZy1L282KI-c9WGNm2NYrs0m-9_ILBa98,1095
+fastapi_odm_helper-0.0.11.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fastapi_odm_helper-0.0.11.dist-info/licenses/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+fastapi_odm_helper-0.0.11.dist-info/RECORD,,
