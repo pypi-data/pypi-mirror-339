@@ -1,0 +1,66 @@
+Metadata-Version: 2.4
+Name: zenquotespy
+Version: 0.2.1
+Summary: ZenquotesPy is a lightweight Python package that provides easy access to motivational and inspirational quotes from the ZenQuotes.io API.
+Home-page: https://zenquotespy.pages.dev
+Author: Nilay Sarma
+License: MIT
+Project-URL: Documentation, https://zenquotespy.pages.dev
+Project-URL: Repository, https://github.com/nilaysarma/zenquotespy
+Project-URL: Release Notes, https://github.com/nilaysarma/zenquotespy/releases/latest
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests==2.32.3
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: summary
+
+# ZenquotesPy
+
+[![PyPI - Version](https://img.shields.io/pypi/v/zenquotespy)](https://pypi.org/project/zenquotespy/)
+[![PyPI - License](https://img.shields.io/pypi/l/zenquotespy)](https://pypi.org/project/isoddeven/)
+[![GitHub deployments](https://img.shields.io/github/deployments/nilaysarma/zenquotespy/release)](https://github.com/nilaysarma/zenquotespy/deployments/release)
+[![PyPI - Status](https://img.shields.io/pypi/status/zenquotespy)](https://pypi.org/project/zenquotespy/)
+
+ZenquotesPy is a lightweight Python package that provides easy access to motivational and inspirational quotes from the ZenQuotes.io API.
+
+Whether you're building a chatbot, a productivity app, a daily quote generator, or just want a little inspiration in your terminal — this package makes it effortless. It is published as a Python package named `zenquotespy` on [PyPI](https://pypi.org/project/zenquotespy). ZenquotesPy stands for Zenquotes Python, which means Zenquotes for Python developers.
+
+⚠️ This project is under development.
+
+## Installation
+You can install the package using `pip`. It is recommended to create a virtual environment first.
+```sh
+pip install zenquotespy
+```
+To update the package use this command:
+```sh
+pip install --upgrade zenquotespy
+```
+
+## Quick usage
+Here's a quick example of how to use it:
+```py
+import zenquotespy
+
+quote = zenquotespy.random()
+
+print(quote)
+```
+
+## More details
+Read the [documentation page](https://zenquotespy.pages.dev) to know more about the package.
