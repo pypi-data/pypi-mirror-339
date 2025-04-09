@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+config.json
+setup.py
+necmec_api/__init__.py
+necmec_api/api.py
+necmec_api/cli.py
+necmec_api.egg-info/PKG-INFO
+necmec_api.egg-info/SOURCES.txt
+necmec_api.egg-info/dependency_links.txt
+necmec_api.egg-info/entry_points.txt
+necmec_api.egg-info/requires.txt
+necmec_api.egg-info/top_level.txt
