@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: addftool
+Version: 0.1.5
+Requires-Dist: cryptography
+Requires-Dist: requests
+Requires-Dist: PyYAML
+Requires-Dist: psutil
