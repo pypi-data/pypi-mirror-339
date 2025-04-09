@@ -1,0 +1,17 @@
+python-dotenv>=1.0.1
+python-dateutil>=2.9.0
+colorama>=0.4.6
+
+[all]
+process[control]
+process[model]
+process[simulate]
+
+[control]
+python-process-control
+
+[model]
+python-process-model
+
+[simulate]
+python-process-simulate
