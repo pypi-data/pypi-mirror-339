@@ -1,0 +1,345 @@
+Metadata-Version: 2.4
+Name: llm_switch
+Version: 0.1.0
+Summary: LLM Switch Module - 一個用於切換不同 LLM 提供商的模組
+Home-page: https://github.com/yourusername/llm_switch
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: python-dotenv>=0.19.0
+Provides-Extra: openai
+Requires-Dist: openai>=1.0.0; extra == "openai"
+Provides-Extra: anthropic
+Requires-Dist: anthropic>=0.5.0; extra == "anthropic"
+Provides-Extra: google
+Requires-Dist: google-generativeai>=0.3.0; extra == "google"
+Provides-Extra: flask
+Requires-Dist: flask>=2.0.0; extra == "flask"
+Provides-Extra: requests
+Requires-Dist: requests>=2.0.0; extra == "requests"
+Provides-Extra: all
+Requires-Dist: openai>=1.0.0; extra == "all"
+Requires-Dist: anthropic>=0.5.0; extra == "all"
+Requires-Dist: google-generativeai>=0.3.0; extra == "all"
+Requires-Dist: flask>=2.0.0; extra == "all"
+Requires-Dist: requests>=2.0.0; extra == "all"
+Requires-Dist: python-dotenv>=0.19.0; extra == "all"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# LLM Switch
+
+一個用於切換不同 LLM 提供商的模組，專為程式設計師設計。
+
+
+## 特點
+
+- 僅供程式設計師使用，通過設定檔切換不同的 LLM 提供商
+- 可以在任何 Flask 後台專案中輕鬆整合
+- 將 LLM 服務解耦，實現模組化設計
+- 支援多種 LLM 提供商，包括 OpenAI、DeepSeek、XAI 等
+- 提供詳細的模型資訊，包括多模態能力和費用資訊
+
+## 安裝
+
+```bash
+# 從本地安裝
+pip install -e .
+
+# 或者，如果已發布到 PyPI
+pip install llm-switch
+```
+
+## 快速開始
+
+### 基本使用
+
+```python
+from llm_switch import LLMService
+
+# 初始化 LLM 服務
+LLMService.initialize("llm_config.yaml")
+
+# 獲取預設提供商
+llm = LLMService.get_instance().get_provider()
+
+# 使用 LLM
+response = llm.complete("用中文解釋量子力學")
+print(response.content)
+```
+
+### 切換提供商
+
+```python
+# 獲取特定提供商
+deepseek_llm = LLMService.get_instance().get_provider("deepseek")
+xai_llm = LLMService.get_instance().get_provider("xai")
+
+# 使用不同提供商
+deepseek_response = deepseek_llm.complete("用中文解釋量子力學")
+xai_response = xai_llm.complete("用中文解釋量子力學")
+```
+
+### 在 Flask 中使用
+
+```python
+from flask import Flask, request, jsonify
+from llm_switch import LLMService
+
+app = Flask(__name__)
+
+# 初始化 LLM 服務
+LLMService.initialize("llm_config.yaml")
+
+@app.route('/complete', methods=['POST'])
+def complete():
+    data = request.json
+    prompt = data['prompt']
+    provider_name = data.get('provider')  # 可選參數
+
+    # 獲取提供商
+    llm = LLMService.get_instance().get_provider(provider_name)
+
+    # 生成回應
+    response = llm.complete(prompt)
+
+    return jsonify({
+        'content': response.content,
+        'model': response.model,
+        'provider': response.provider,
+        'usage': response.usage
+    })
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+## 設定檔
+
+LLM Switch 使用 YAML 或 JSON 格式的設定檔，並支援從 `.env` 文件讀取環境變量。
+
+### 使用環境變量
+
+建議將 API 密鑰存儲在 `.env` 文件中，而不是直接寫在設定檔中：
+
+```
+# .env 文件
+
+# OpenAI
+OPENAI_API_KEY=your-openai-api-key
+OPENAI_API_BASE=https://api.openai.com/v1
+
+# XAI
+XAI_API_KEY=your-xai-api-key
+XAI_API_BASE=https://api.x.ai/v1
+
+# Google (Gemini)
+GOOGLE_API_KEY=your-google-api-key
+GOOGLE_API_BASE=https://generativelanguage.googleapis.com/v1
+```
+
+然後在設定檔中使用 `${ENV_VAR}` 語法引用環境變量：
+
+### 設定檔示例
+
+```yaml
+LLM_CONFIG:
+  default_provider: "openai"  # 預設提供商
+
+  providers:
+    # OpenAI 提供商
+    openai:
+      api_key: "${OPENAI_API_KEY}"  # 從環境變量讀取
+      api_base: "${OPENAI_API_BASE}"  # 從環境變量讀取
+      model: "gpt-4o"
+      temperature: 0.7
+      max_tokens: 1000
+
+    # DeepSeek 提供商
+    deepseek:
+      api_key: "${DEEPSEEK_API_KEY}"  # 從環境變量讀取
+      api_base: "${DEEPSEEK_API_BASE}"  # 從環境變量讀取
+      model: "deepseek-chat"
+      temperature: 0.7
+      max_tokens: 1000
+
+    # XAI 提供商
+    xai:
+      api_key: "${XAI_API_KEY}"  # 從環境變量讀取
+      api_base: "${XAI_API_BASE}"  # 從環境變量讀取
+      model: "grok-2"  # XAI 的模型
+      temperature: 0.7
+      max_tokens: 1000
+      explanation_level: "detailed"  # XAI 特有參數
+```
+
+## 支援的提供商
+
+- OpenAI
+- DeepSeek
+- XAI
+- Anthropic
+- Google (Gemini)
+- Azure OpenAI
+- HuggingFace
+
+## API 參考
+
+### LLMService
+
+- `initialize(config_path=None, config_dict=None)`: 初始化 LLM 服務
+- `get_instance()`: 獲取 LLMService 單例實例
+- `get_provider(provider_name=None)`: 獲取提供商實例
+- `get_model_info(provider_name, model_name=None)`: 獲取模型資訊
+
+### LLMProvider
+
+- `complete(prompt, **kwargs)`: 生成文本補全
+- `chat(messages, **kwargs)`: 生成聊天補全
+- `embed(text, **kwargs)`: 生成嵌入向量
+- `get_model_info()`: 獲取模型資訊
+- `supports_capability(capability)`: 檢查是否支援特定能力
+
+### LLMResponse
+
+- `content`: 回應內容
+- `raw_response`: 原始回應物件
+- `usage`: 使用情況，如 token 數
+- `model`: 使用的模型
+- `provider`: 使用的提供商
+- `finish_reason`: 完成原因
+
+## 測試方式
+
+### 基本測試
+
+我們提供了多種測試腳本，幫助您測試 LLM 切換模組的功能：
+
+```bash
+# 測試預設提供商
+python test_default_provider.py
+
+# 測試特定提供商
+python test_openai.py
+python test_google.py
+python test_xai.py
+
+# 測試所有提供商
+python test_provider_switching.py
+
+# 測試 Flask 整合
+python flask_example.py
+```
+
+### 測試預設提供商
+
+您可以使用 `test_default_provider.py` 來測試在 `llm_config.yaml` 中設定的預設提供商：
+
+```python
+from llm_switch import LLMService
+
+# 初始化 LLM 服務
+LLMService.initialize("llm_config.yaml")
+
+# 獲取預設提供商 (不指定提供商名稱)
+default_llm = LLMService.get_instance().get_provider()
+
+# 使用預設提供商
+response = default_llm.complete("用中文解釋量子力學")
+print(response.content)
+```
+
+### 修改預設提供商
+
+要修改預設提供商，您可以編輯 `llm_config.yaml` 文件，修改 `default_provider` 值：
+
+```yaml
+LLM_CONFIG:
+  default_provider: "google"  # 將預設提供商修改為 Google
+```
+
+修改後，再次運行 `test_default_provider.py` 來測試新的預設提供商。
+
+### 測試所有提供商
+
+使用 `test_provider_switching.py` 可以測試所有配置的提供商：
+
+```bash
+python test_provider_switching.py
+```
+
+這將嘗試使用每個提供商生成回應，並顯示結果或錯誤訊息。
+
+### 測試 Flask 整合
+
+運行 Flask 示例應用程式：
+
+```bash
+python flask_example.py
+```
+
+然後，您可以使用 curl 或 Postman 等工具發送請求：
+
+```bash
+# 文本補全
+curl -X POST http://localhost:5000/complete \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "用中文解釋量子力學的基本原理", "provider": "openai"}'
+
+# 聊天補全
+curl -X POST http://localhost:5000/chat \
+  -H "Content-Type: application/json" \
+  -d '{"messages": [{"role": "system", "content": "你是一個有用的助手。"}, {"role": "user", "content": "用中文解釋相對論的基本原理"}], "provider": "openai"}'
+
+# 獲取所有提供商
+curl http://localhost:5000/providers
+```
+
+## 擴展
+
+要添加新的提供商，只需創建一個新的提供商類，並實現 `LLMProvider` 介面：
+
+```python
+from llm_switch.core.base import LLMProvider
+from llm_switch.core.response import LLMResponse
+from llm_switch.core.factory import LLMFactory
+
+class MyProvider(LLMProvider):
+    def __init__(self, api_key, model, **kwargs):
+        super().__init__(api_key=api_key, model=model, **kwargs)
+        # 初始化代碼...
+
+    def complete(self, prompt, **kwargs):
+        # 實現文本補全...
+        return LLMResponse(...)
+
+    def chat(self, messages, **kwargs):
+        # 實現聊天補全...
+        return LLMResponse(...)
+
+    def embed(self, text, **kwargs):
+        # 實現嵌入生成...
+        return [...]
+
+# 註冊提供商
+LLMFactory.register("my_provider", MyProvider)
+```
+
+## 許可證
+
+MIT
