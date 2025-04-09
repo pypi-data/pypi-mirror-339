@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: cipherShad0w
+Version: 0.1.5
+Summary: Utilities by Jannis
+Home-page: https://github.com/cipher-shad0w/sorting_visualizer
+Author: cipher-shad0w
+Author-email: Jannis.krija@icloud.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# Usefull for Cipher Shadow
+
+---
+
+## Installation
+```bash
+pip install cipherShadow
+```
+```
+

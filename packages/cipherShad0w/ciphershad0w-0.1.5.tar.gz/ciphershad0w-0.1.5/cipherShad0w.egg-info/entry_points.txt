@@ -1,0 +1,2 @@
+[console_scripts]
+cipherShad0w = cipherShad0w.cli:main
