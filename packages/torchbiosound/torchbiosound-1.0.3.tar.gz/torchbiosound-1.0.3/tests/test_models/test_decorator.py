@@ -1,0 +1,66 @@
+import pytest
+
+import torchbiosound.models
+
+from .conftest import MockModel, MockModelFamily, MockEncoderDecoderModel
+from .test_definition import TweetyNetDefinition as TweetyNet
+
+from .test_definition import (
+    MissingClassVarModelDefinition,
+    ExtraClassVarModelDefinition,
+    InvalidNetworkTypeModelDefinition,
+    InvalidNetworkDictKeyModelDefinition,
+    InvalidNetworkDictValueModelDefinition,
+    InvalidLossTypeModelDefinition,
+    InvalidOptimTypeModelDefinition,
+    InvalidMetricsTypeModelDefinition,
+    InvalidMetricsDictKeyModelDefinition,
+    InvalidMetricsDictValueModelDefinition,
+)
+
+
+TweetyNet.__name__ = 'TweetyNet'
+
+
+@pytest.mark.parametrize(
+    'definition, family, expected_name',
+    [
+        (MockModel,
+         MockModelFamily,
+         'MockModel'),
+        (MockEncoderDecoderModel,
+         MockModelFamily,
+         'MockEncoderDecoderModel'),
+    ]
+)
+def test_model(definition, family, expected_name):
+    """Test that :func:`vak.models.decorator.model` decorator
+    returns a new instance of ModelFactory,
+    and has the expected name"""
+    model_class = torchbiosound.models.decorator.model(family)(definition)
+
+    assert isinstance(model_class, torchbiosound.models.factory.ModelFactory)
+    assert model_class.__name__ == expected_name
+
+    # need to delete model from registry so other tests don't fail
+    del torchbiosound.models.registry.MODEL_REGISTRY[model_class.__name__]
+
+
+@pytest.mark.parametrize(
+    'definition',
+    [
+        MissingClassVarModelDefinition,
+        ExtraClassVarModelDefinition,
+        InvalidNetworkTypeModelDefinition,
+        InvalidNetworkDictKeyModelDefinition,
+        InvalidNetworkDictValueModelDefinition,
+        InvalidLossTypeModelDefinition,
+        InvalidOptimTypeModelDefinition,
+        InvalidMetricsTypeModelDefinition,
+        InvalidMetricsDictKeyModelDefinition,
+        InvalidMetricsDictValueModelDefinition,
+    ]
+)
+def test_model_raises(definition):
+    with pytest.raises(torchbiosound.models.decorator.ModelDefinitionValidationError):
+        torchbiosound.models.decorator.model(MockModelFamily)(definition)
