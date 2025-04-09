@@ -1,0 +1,10 @@
+gamspy_mosek/__init__.py,sha256=Nq86KIXRF7txbDK-AsOvWj0rbCLwZEPeWwrP3CKyiuo,411
+gamspy_mosek/libmosek64.so.11.0,sha256=8BMUxVON7uEDCGMM7rEOftZBeY4BxQQ5oQXYz6Obcv8,16633272
+gamspy_mosek/libmskcclib64.so,sha256=YWa75IbxWWEKmxbNtvraX6BDwYXT65VW2ro9JZeCY1A,531840
+gamspy_mosek/libtbb_debug.so.12,sha256=P3rtVjVOds0cFe3AR-f41jYsMijcRFbUP5M8hnsIo5Q,3352728
+gamspy_mosek/optmosek.def,sha256=lcHaQkfxPe83Cisa0sQ4zlmKUSZ5DywYqS94bVSB668,47409
+gamspy_mosek/version.py,sha256=iAkpToKg__ekhLNEMJl6zFEUyaFCF2eiAP6oBXhd1oo,22
+gamspy_mosek-49.4.0.dist-info/METADATA,sha256=HTdI5SofydXd3evMypE7cpbRpBGahg-cwYLBQy9Drh4,57
+gamspy_mosek-49.4.0.dist-info/WHEEL,sha256=4JsT7u8m1y3SXW78amfjXJWn3W7rA1iKiqeYj6wqhkE,116
+gamspy_mosek-49.4.0.dist-info/top_level.txt,sha256=D_ibqdJHzeK1ovUML42JCi2Bg_SJ_XL0doZuT9jgKzg,13
+gamspy_mosek-49.4.0.dist-info/RECORD,,
