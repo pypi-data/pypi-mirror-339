@@ -1,0 +1,73 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sidekick-cli"
+version = "0.2.0"
+description = "Your agentic CLI developer."
+keywords = ["cli", "agent", "development", "automation"]
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+    { name = "Gavin Vickery", email = "gavin@geekforbrains.com" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "prompt_toolkit==3.0.50",
+    "pydantic-ai[logfire]==0.0.49",
+    "pygments==2.19.1",
+    "python-dotenv==1.1.0",
+    "rich==14.0.0",
+    "typer==0.15.2",
+    "playwright==1.51.0",
+    "httpx[http2]==0.28.1",
+    "beautifulsoup4==4.13.3",
+    "sentry_sdk==2.25.1",
+]
+
+[project.scripts]
+sidekick = "sidekick.main:app"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8",
+    "isort",
+    "pytest",
+]
+
+[project.urls]
+Homepage = "https://geekforbrains.com"
+Repository = "https://github.com/geekforbrains/sidekick-cli"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src/sidekick",
+    "/README.md",
+    "/LICENSE",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sidekick"]
+
+[tool.hatch.build]
+packages = ["src/sidekick"]
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+line_length = 100
