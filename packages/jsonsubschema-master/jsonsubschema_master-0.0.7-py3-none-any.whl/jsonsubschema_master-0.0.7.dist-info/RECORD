@@ -1,0 +1,15 @@
+jsonsubschema/__init__.py,sha256=DYR42t9DoRIBS9shB88c0_7Vk2pzsPyT0oHZKK_RlX8,452
+jsonsubschema/_canonicalization.py,sha256=75VuxYdT8OtNWqZHTGRuQCJ15Z1VaH0x_r-kPT3OalE,11999
+jsonsubschema/_checkers.py,sha256=JmEVkLCShmo1yCjctDv1sMOI_peiVEMVRRIeEuNCONI,60852
+jsonsubschema/_constants.py,sha256=703tDpoj6kKOc8vRBz-2twWyhFc9OhUe_M954x6rMZI,1543
+jsonsubschema/_utils.py,sha256=edxu5VoVVa6s9prZadE3MwNsHmldmqNgf4MJjPtaQf0,9841
+jsonsubschema/api.py,sha256=WjewZYIXOucl4m9i_yNK27IFc7hO9dgnCXd7H6tbUZ8,2070
+jsonsubschema/cli.py,sha256=vXqXWPTa5dl4DSY0IgJQYUdyEKyG3UfSMbyXXF5ixK4,903
+jsonsubschema/config.py,sha256=UP5cxn-awe4ctnAI2Y7ehtMzMLsBr1TCoWlgWTTZ3qI,1010
+jsonsubschema/exceptions.py,sha256=Ltqjn1B5DbszIHlnWUimDbbI6N9CqmIKyCfHcnYexc8,1866
+jsonsubschema_master-0.0.7.dist-info/licenses/LICENSE.txt,sha256=HlI7IV-C5Plv9NZSXyw0o4-DJ57YvlaMJKf7zFnTuwE,11351
+jsonsubschema_master-0.0.7.dist-info/METADATA,sha256=rB_8R0QyzXYR11PGikPYgjQZv1FrNTAiVi0vV5f87_M,4049
+jsonsubschema_master-0.0.7.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+jsonsubschema_master-0.0.7.dist-info/entry_points.txt,sha256=6zI73738TjHLrUD6Yqw3luEsrexcxXovNQg3fCpeMl0,57
+jsonsubschema_master-0.0.7.dist-info/top_level.txt,sha256=d-km6hw8mpeEwXkIYmjCVBP3OgOsL3RizNkBrit9yXg,14
+jsonsubschema_master-0.0.7.dist-info/RECORD,,
