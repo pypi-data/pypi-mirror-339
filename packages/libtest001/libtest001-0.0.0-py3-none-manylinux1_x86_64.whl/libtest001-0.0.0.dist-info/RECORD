@@ -1,0 +1,7 @@
+libtest001/Backwardcompatibility.py,sha256=V8SQBDOQAxrcmcKN-Dyey8BxZ6KdTBvlnrXGKqX4BSU,417
+libtest001/__init__.py,sha256=gxAVC71vp_HYrGo5i3fStN2bKm6UAqs0padmpUqrqfg,71
+libtest001/__pycache__/good.so,sha256=0hvbIe8CMLjKMNoc3pRFayhaAkuB0CJfJAilklBZWqI,1472552
+libtest001-0.0.0.dist-info/METADATA,sha256=Vhlk3LGTUvQkYLxlsH6UwJBJjrnBz9TJcZnFo8jkuO8,179
+libtest001-0.0.0.dist-info/WHEEL,sha256=XYu_VHmNEf2noKVYzlVp01ZZWTe1ziZKv6CHbJf921s,106
+libtest001-0.0.0.dist-info/top_level.txt,sha256=iNiFdh3e_z_CZf_2T0BLMp2XmtVcMY498oBo0gpuEPA,11
+libtest001-0.0.0.dist-info/RECORD,,
