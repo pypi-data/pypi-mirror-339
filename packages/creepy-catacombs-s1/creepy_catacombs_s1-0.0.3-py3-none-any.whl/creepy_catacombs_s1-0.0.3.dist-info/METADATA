@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: creepy_catacombs_s1
+Version: 0.0.3
+Summary: A discrete tunnel environment for RL experiments
+Author: Tamács Takács
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: pygame>=2.6.0
+Requires-Dist: gymnasium>=1.0.0
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
