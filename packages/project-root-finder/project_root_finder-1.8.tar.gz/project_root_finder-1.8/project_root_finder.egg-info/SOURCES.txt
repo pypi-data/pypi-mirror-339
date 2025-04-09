@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+project_root_finder/__init__.py
+project_root_finder.egg-info/PKG-INFO
+project_root_finder.egg-info/SOURCES.txt
+project_root_finder.egg-info/dependency_links.txt
+project_root_finder.egg-info/top_level.txt
+tests/test_project_root_finder.py
