@@ -1,0 +1,144 @@
+# PODAAC Data Access
+
+A Pythonic interface for accessing and downloading geographic and temporal data from NASA's Physical Oceanography Distributed Active Archive Center (PO.DAAC).
+
+## Overview
+
+This library streamlines the process of downloading oceanographic data from NASA's PO.DAAC repository. It provides a more intuitive, Pythonic approach to interacting with PO.DAAC services.
+
+## Features
+
+- **Simple API**: Clean, intuitive interface for PO.DAAC data access
+- **Flexible Date Ranges**: Easily specify time periods for data collection
+- **Geographic Filtering**: Define precise latitude and longitude boundaries
+- **Pre-configured Datasets**: Common datasets available through simple imports
+- **Custom Dataset Support**: Ability to define and download custom datasets
+- **Earthdata Authentication**: Integrated authentication management
+
+## Installation
+
+```bash
+pip install podaac_data_access
+```
+
+## Quick Start
+
+### Using Pre-configured Datasets
+
+```python
+from pathlib import Path
+import datetime
+from data_access.models import get_common_datasets
+from data_access.client import PodaacClient
+from data_access.auth import cleanup_earthdata_auth
+
+# Define output location and parameters
+data_out_folder = Path("data")
+date_start = "03-13-2013T00:00:00+0:00"
+date_end = "03-15-2013T00:00:00+0:00"
+lat_min = 19
+lat_max = 31
+lon_min = -98
+lon_max = -83
+
+# Initialize PodaacClient client
+ssh = PodaacClient(data_out_folder=data_out_folder,
+          date_start=date_start, date_end=date_end,
+          lat_min=lat_min, lat_max=lat_max,
+          lon_min=lon_min, lon_max=lon_max)
+
+# Get pre-configured datasets
+datasets = get_common_datasets()
+
+# Download NASA SSH data
+ssh.download_data(datasets["NASA_SSH"])
+
+# Clean up credentials when done
+cleanup_earthdata_auth()
+```
+
+### Using Custom Datasets
+
+```python
+from pathlib import Path
+import datetime
+from data_access.client import PodaacClient
+from data_access.auth import cleanup_earthdata_auth
+from data_access.models import Dataset
+
+# Define output location and parameters
+data_out_folder = Path("data")
+date_start = "03-01-2013T00:00:00+0:00"
+date_end = "04-01-2013T00:00:00+0:00"
+lat_min = 19
+lat_max = 31
+lon_min = -98
+lon_max = -83
+
+# Initialize PodaacClient client
+ssh = PodaacClient(data_out_folder=data_out_folder,
+          date_start=date_start, date_end=date_end,
+          lat_min=lat_min, lat_max=lat_max,
+          lon_min=lon_min, lon_max=lon_max)
+
+# Define custom dataset
+dataset = Dataset(podaac_download_name="SEA_SURFACE_HEIGHT_ALT_GRIDS_L4_2SATS_5DAY_6THDEG_V_JPL2205")
+
+# Download custom dataset
+ssh.download_data(dataset=dataset)
+
+# Clean up credentials when done
+cleanup_earthdata_auth()
+```
+
+## Authentication
+
+This library handles NASA Earthdata Login authentication. Make sure you have valid Earthdata credentials before using the library. The `cleanup_earthdata_auth()` function should be called when you're done to properly manage authentication resources.
+
+## API Reference
+
+### Main Classes
+
+- `PodaacClient`: Client for downloading sea surface height data
+  - Parameters:
+    - `data_out_folder`: Path to store downloaded data
+    - `date_start`: Start date for data collection
+    - `date_end`: End date for data collection
+    - `lat_min`: Minimum latitude boundary
+    - `lat_max`: Maximum latitude boundary
+    - `lon_min`: Minimum longitude boundary
+    - `lon_max`: Maximum longitude boundary
+  - Methods:
+    - `download_data(dataset)`: Download data for the specified dataset
+
+- `Dataset`: Represents a PODAAC dataset
+  - Parameters:
+    - `podaac_download_name`: The official PODAAC dataset identifier
+
+### Utility Functions
+
+- `get_common_datasets()`: Returns a dictionary of pre-configured datasets
+- `cleanup_earthdata_auth()`: Cleans up authentication resources
+
+## Examples
+
+The library includes example scripts in the `examples` directory:
+- `simple_example.py`: Demonstrates using pre-configured datasets
+- `custom_dataset_exmple.py`: Shows how to define and use custom datasets
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- NASA's PO.DAAC for providing the data services
+- The oceanographic research community
+
+---
+
+Developed for the Earth science community to simplify access to valuable oceanographic data
