@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+parallel_brain/__init__.py
+parallel_brain/brain.py
+parallel_brain.egg-info/PKG-INFO
+parallel_brain.egg-info/SOURCES.txt
+parallel_brain.egg-info/dependency_links.txt
+parallel_brain.egg-info/top_level.txt
