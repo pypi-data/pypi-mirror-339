@@ -1,0 +1,6 @@
+include COPYING.txt
+include pyproject.toml
+recursive-include docs *
+recursive-include examples *
+recursive-include wrappers *
+prune docs/_*
