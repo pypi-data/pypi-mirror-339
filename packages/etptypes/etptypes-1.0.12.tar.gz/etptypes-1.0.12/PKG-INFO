@@ -1,0 +1,54 @@
+Metadata-Version: 2.3
+Name: etptypes
+Version: 1.0.12
+Summary: ETP python dev kit
+License: Apache-2.0
+Keywords: ETP
+Author: Lionel Untereiner
+Author-email: lionel.untereiner@geosiris.com
+Maintainer: Valentin Gauthier
+Maintainer-email: valentin.gauthier@geosiris.com
+Requires-Python: >=3.9, <4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pydantic (<2.0.0)
+Requires-Dist: typingx (>=0.6.0,<0.7.0)
+Description-Content-Type: text/markdown
+
+# Etptypes
+
+[![License](https://img.shields.io/pypi/l/etptypes)](https://github.com/geosiris-technologies/etptypes-python/blob/main/LICENSE)
+![Python version](https://img.shields.io/pypi/pyversions/etptypes)
+[![PyPI](https://img.shields.io/pypi/v/etptypes)](https://badge.fury.io/py/etptypes)
+
+
+## Introduction
+
+ETP python dev kit
+
+## Requirements
+
+- python ^3.8
+- pydantic ~1
+- typingx ^0.6.0
+
+## Version History
+
+- 1.0.1: 
+    - Initial Release
+- 1.0.2: 
+    - Bug fix for ETP array deserialisation
+
+## License
+
+This project is licensed under the Apache 2.0 License - see the `LICENSE` file for details
+
+## Support
+
+Please enter an issue in the repo for any questions or problems.
+

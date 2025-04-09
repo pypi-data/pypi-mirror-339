@@ -1,0 +1,55 @@
+[project]
+name = "etptypes"
+dynamic = ["dependencies" ]
+description = "ETP python dev kit"
+authors = [
+    {name = "Lionel Untereiner", email = "lionel.untereiner@geosiris.com"} ,
+    {name = "Valentin Gauthier", email = "valentin.gauthier@geosiris.com"}
+]
+maintainers = [
+    {name = "Valentin Gauthier", email = "valentin.gauthier@geosiris.com"}
+]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/geosiris-technologies/etptypes-python"
+homepage = "http://www.geosiris.com"
+keywords = ["ETP"]
+requires-python = ">=3.9, <4.0"
+version = "1.0.12"
+
+[tool.poetry]
+
+[tool.poetry.dependencies]
+pydantic = "<2.0.0"
+typingx = "^0.6.0"
+
+[tool.poetry.group.dev.dependencies]
+avro-to-python-etp = "^1.0.11"
+poetry-dynamic-versioning = {extras = ["plugin"], version = "^1.8.2"}
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.1"]
+build-backend = "poetry_dynamic_versioning.backend"
+# [build-system]
+# requires = ["poetry-core>=1.0.0"]
+# build-backend = "poetry.core.masonry.api"
+
+[project.entry-points."poetry.plugin"]
+"dynamic-versioning" = "poetry_dynamic_versioning.plugin"
+
+[tool.dunamai]
+version_strategy = "post-release"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+vcs = "git"
+style = "pep440"
+format-jinja = """
+    {%- if distance == 0 -%}
+        {{ serialize_pep440(base, stage, revision) }}
+    {%- elif revision is not none -%}
+        {{ serialize_pep440(base, stage, revision + 1, dev=distance) }}
+    {%- else -%}
+        {{ serialize_pep440(bump_version(base), stage, revision, dev=distance) }}
+    {%- endif -%}
+"""
