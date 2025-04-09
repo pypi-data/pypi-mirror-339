@@ -1,0 +1,10 @@
+connectkit_s3-3.0.0.dist-info/METADATA,sha256=vaj7ppXw7PgtYZr7ZRUYJ8cs3gmxBD2nfDM9D_CXlHQ,3599
+connectkit_s3-3.0.0.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+connectkit_s3-3.0.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+connectkit_s3-3.0.0.dist-info/licenses/LICENSE,sha256=0oAyQFAp1lNpHcBD_djMxeRFgZnP98qXEod0OsOSUzA,1096
+s3/__init__.py,sha256=Ctin-RrQpN4Oev-x13oNgH-ojX2AfS8hqs4jSWZEcNY,232
+s3/asyncio/__init__.py,sha256=Kig4kAIMbsjsNJtMB8baJ7rVGbrU1cjzSeyIf_6zeMk,244
+s3/asyncio/s3_connector.py,sha256=ws0bhm5i2RjXCF59QetzWry5bXEu2o0_Ry0c9N9cC2E,6646
+s3/s3_connector.py,sha256=tmvzorLrZPc8m6WFKpLGPtrnvAyUp0gCRuxUOIwSbHM,5146
+s3/settings.py,sha256=Vdia71Xc_Xlw3OaaNhPKpo8zaEFSQD1AZInuIEseudg,1707
+connectkit_s3-3.0.0.dist-info/RECORD,,
