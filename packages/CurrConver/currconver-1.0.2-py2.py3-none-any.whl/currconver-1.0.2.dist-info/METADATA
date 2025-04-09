@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: CurrConver
+Version: 1.0.2
+Summary: A Python3 Currency Converter using Stocks
+Project-URL: Homepage, https://github.com/Wdboyes13/currencyconverter
+Author-email: William B <willdev2025@outlook.com>
+License-Expression: CC0-1.0
+License-File: LICENSE
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: requests
+Description-Content-Type: text/markdown
+
+# Currency Converter using current stocks  
+To use run `pip install currconver`  
+To authorize with Open Exchange Rates run `python3 -m currconver AUTH`
+For conversion run `python3 -m currconver CONV local_currency destination_currency amount_decimal`
