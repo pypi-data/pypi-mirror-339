@@ -1,0 +1,12 @@
+pubmed_fetcher/__init__.py,sha256=NR8C7WkhZvldyyabpkKCwYsuojMFMNbIccyv_XABE30,242
+pubmed_fetcher/cli.py,sha256=l0QV-daWcEzH8rNWDOuPDgJDX8bADOspnYgCuf4uZMQ,640
+pubmed_fetcher/core.py,sha256=LkG59n8ljqpxW2fgx8jxEWGTd0BHXQkyDrdPJ5OVr9Q,1932
+pubmed_fetcher/fetcher.py,sha256=TQ_-_uxAKZFI8q_gpOd_LtXFgNfi7RLJKSFOaOa6xt0,2191
+pubmed_fetcher/main.py,sha256=uHdDsEU4I9qbx8C8vaEhQ8QoeONfb3ewaStAxtIJxCM,2761
+pubmed_fetcher/pubmed_fetcher.py,sha256=7keVQWlftiIuArJHMLcIwZDWAjC3rk0RA6Im15GemL0,8841
+pubmed_fetcher/utils.py,sha256=4Nt6b0ORKnpgaVc1UWQ9_1hm_x5T9QsBRSnzjnIwQrc,835
+pharma_pubmed_fetcher-0.1.0.dist-info/entry_points.txt,sha256=KzqC3pf_U6OATgsLjb0hRaCHYM8wAPwtu14zA5IRs3s,60
+pharma_pubmed_fetcher-0.1.0.dist-info/LICENSE,sha256=zfz7Sqk3aTMFWtOXFwwRIH5YZTdbGVNzrBjuIcdscYs,1092
+pharma_pubmed_fetcher-0.1.0.dist-info/METADATA,sha256=fPSmRSlMa9WHSIy93nH43YrirTEklm4RiKy__peMMgo,5820
+pharma_pubmed_fetcher-0.1.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+pharma_pubmed_fetcher-0.1.0.dist-info/RECORD,,
