@@ -1,0 +1,10 @@
+pixy/__init__.py,sha256=RhY7Eu3IIJH5jZBjjVvnUrWXg3cN7BbCGfkTxYiHym0,57
+pixy/client.py,sha256=t_E6GnV7N4Ba8SwGhCyTOOGohz9vXUZT1g1T-aEsPLU,3612
+pixy/schemas.py,sha256=q_WH5ojVbFeDgZfIFmtKGJZSrtnb330gL17nGNV3yyU,5685
+pixy/settings.py,sha256=ECg8Nt0bu3zxUcuoFiO1OLivY6uMJUtaIsZwIxD0QQc,579
+pixy/utils.py,sha256=keddLVX1HMSoC6-l09MQF_aT6A8A6Xu3LwRVtPgMKbQ,7823
+pixy_sdk-0.0.2.dist-info/METADATA,sha256=wuTnepY5kUNTAm86VhQHtKAl2o9j9_FNCYwrxT1ofBk,2619
+pixy_sdk-0.0.2.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+pixy_sdk-0.0.2.dist-info/entry_points.txt,sha256=5HtFTqDNJILOkhWUtqWug0PxLO00RJMwtPTTzuWbS8M,35
+pixy_sdk-0.0.2.dist-info/top_level.txt,sha256=ey7wQX31gu4oBqZQhZI2Dy8jSUsBkV8pLGUrgLfxat4,5
+pixy_sdk-0.0.2.dist-info/RECORD,,
