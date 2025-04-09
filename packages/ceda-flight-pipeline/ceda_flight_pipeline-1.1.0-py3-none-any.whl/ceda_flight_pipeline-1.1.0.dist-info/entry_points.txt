@@ -1,0 +1,4 @@
+[console_scripts]
+flightpipe=ceda_flight_pipeline.flight_update:main
+run-flight-update=ceda_flight_pipeline.cli:main
+
