@@ -1,0 +1,2 @@
+[aiomisc.plugins]
+dependency = aiomisc_dependency.plugin

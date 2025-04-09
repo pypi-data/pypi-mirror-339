@@ -1,0 +1,12 @@
+aiodine~=1.2.9
+aiomisc>=17
+
+[test]
+aiomisc-pytest
+coverage~=4.5.3
+coveralls
+pylama
+pytest
+pytest-cov
+setuptools>=65.5.1
+tox
