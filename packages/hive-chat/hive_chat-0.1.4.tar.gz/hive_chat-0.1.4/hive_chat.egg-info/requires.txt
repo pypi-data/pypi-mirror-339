@@ -1,0 +1,3 @@
+hive-common>=0.1.3
+hive-messaging>=0.13.0
+pydantic
