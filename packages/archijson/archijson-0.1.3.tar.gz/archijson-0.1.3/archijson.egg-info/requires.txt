@@ -1,0 +1,7 @@
+schema
+python-socketio
+requests
+websocket-client
+trimesh
+mapbox-earcut
+numpy
