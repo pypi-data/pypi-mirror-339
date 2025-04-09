@@ -1,0 +1,3 @@
+[console_scripts]
+tts=illufly_tts.__main__:main
+
