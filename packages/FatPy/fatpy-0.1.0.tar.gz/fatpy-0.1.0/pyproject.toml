@@ -1,0 +1,73 @@
+[project]
+name = "FatPy"
+version = "0.1.0"
+description = "Python implementations of various life algorithms"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib>=3.10.0",
+    "numpy>=2.2.2",
+    "pandas>=2.2.3",
+    "scipy>=1.15.1",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "mypy>=1.15.0",
+    "ruff>=0.11.3",
+    "pre-commit>=4.2.0",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.0.0",
+    "pytest-mock>=3.14.0",
+    "pytest-mypy>=1.0.1",
+    "pytest-ruff>=0.4.1",
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = [
+    # =====================| Default settings |==================== #
+    "-rfE", # show extra test summary info for all tests
+    "-vv",  # verbose output
+    # "-s", # do not capture output
+    "--no-header", # do not show header
+    # ===========================| PDB |=========================== #
+    # "--pdb", # enter python debugger on failure
+    "--pdbcls=IPython.terminal.debugger:TerminalPdb",
+    # ==========================| SCOPE |========================== #
+    # "-k", "read_op2",
+    # "tests/views/", # run view tests
+    # "-m", "selected", # run selected tests
+    # ====================| Coverage settings |==================== #
+    "--no-cov",                  # skip Coverage report
+    "--cov=src/fatpy",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+    # =========================| Plugins |========================= #
+    "--ruff",
+    "--mypy",
+    # =========================| Logging |========================= #
+    "--log-level=DEBUG",
+]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+markers = ["selected: selected tests"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.mypy]
+files = "src"
+ignore_missing_imports = true
+strict = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+check_untyped_defs = true
+disallow_subclassing_any = true
+disallow_incomplete_defs = true
+show_error_context = true
+show_column_numbers = true
