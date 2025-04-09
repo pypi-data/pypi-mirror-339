@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: pytorch_sparse_addons
+Version: 0.1.9
+Summary: torch.cdist like function to compute the pairwise euclidean distances between vectors in pytorch_sparse SparseTensors A and B
+Author-email: KukumavMozolo <kukumav@example.com>, kukumav@example.com
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: torch==2.6.0
+Dynamic: license-file
