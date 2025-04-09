@@ -1,0 +1,8 @@
+[code2_workflow]
+cmd = code2.workflows.cmd:CmdWorkflow
+
+[console_scripts]
+code2 = code2.cli:cli.entry_point
+
+[prompt2_paths]
+code2 = code2.prompt2:paths
