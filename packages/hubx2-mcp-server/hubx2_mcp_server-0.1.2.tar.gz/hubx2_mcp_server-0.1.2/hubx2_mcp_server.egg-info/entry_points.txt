@@ -1,0 +1,2 @@
+[console_scripts]
+hubx2-mcp-server = hubx2_mcp_server:main
