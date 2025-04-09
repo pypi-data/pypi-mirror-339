@@ -1,0 +1,5 @@
+datamodel_code_generator
+jinja2
+pydantic
+tomli
+typer

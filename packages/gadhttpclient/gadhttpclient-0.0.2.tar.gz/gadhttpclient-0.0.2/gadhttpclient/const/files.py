@@ -1,0 +1,4 @@
+FILE_ENCODING = "utf-8"
+FILE_READ = "r"
+FILE_APPEND = "a"
+FILE_WRITE = "w"
