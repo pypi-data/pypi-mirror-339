@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: notacheat
+Version: 0.2.5
+Summary: A package made so that all hischoolers can use.
+Home-page: http://github.com/P-Minjae
+Author: Minjae Park 25-21208
+Author-email: minjaepark3837@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+This package was made by a high school student who was frustrated with the performance evaluation that required hand coding, and it was designed to calculate the internal vector of the vector, the eigenvalues of the matrix, the eigenvectors, the inverse matrix, and the diagonal matrix. Please use it well.
+
+Pleas contact me at : minjaepark3837@gmail.com
