@@ -1,0 +1,2 @@
+[console_scripts]
+cloudcost = cloud_cost_optimizer.cli:main
