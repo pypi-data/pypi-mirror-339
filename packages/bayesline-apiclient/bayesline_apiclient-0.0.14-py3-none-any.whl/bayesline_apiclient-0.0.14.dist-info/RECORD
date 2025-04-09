@@ -1,0 +1,15 @@
+bayesline/apiclient/__init__.py,sha256=suN4ONlHj1G1d2Ap3hsBt_jd8Iw_3HwL1FDT7EP8CWg,309
+bayesline/apiclient/_src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bayesline/apiclient/_src/apiclient.py,sha256=QQRn2IDUVmmvsUC9Y27EcaeFuMDfdcs33wxEBKRBlqM,21427
+bayesline/apiclient/_src/client.py,sha256=aVSHdFxeXSg6dhovRQNbGRacgItg0zQD8gHxE5U5M8M,2967
+bayesline/apiclient/_src/equity/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bayesline/apiclient/_src/equity/client.py,sha256=uQie9AhIKx_UH9KyXtqzUfDaDpIG0x0IqQCnVej3Ots,54773
+bayesline/apiclient/_src/equity/ids.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bayesline/apiclient/_src/equity/portfolio.py,sha256=AK_qGwj24Yl2Hiaim3qLvCeYU2UAnnDAQeONAGxhqLs,20010
+bayesline/apiclient/_src/equity/portfolioreport.py,sha256=5nN6saGJ7zy4FtxW0drLhcgRltX6KzSioyi0wQh1vf4,19746
+bayesline/apiclient/_src/permissions.py,sha256=OUF7wOECJIOytmEPLVtfjM-bMIo1Oe2OzzmMBzClu_U,1670
+bayesline/apiclient/_src/settings.py,sha256=JGKSvSUKLrLQtYX4UjkvvZEr2M1NJlH3nXY9MsAKf8s,6437
+bayesline/apiclient/equity/__init__.py,sha256=QaE65BGEsYy9Vw0UMy3yrjB4RAsLBNCbltRF4wePiqc,2211
+bayesline_apiclient-0.0.14.dist-info/METADATA,sha256=IF0828w1xJ3pB9gJUVbz45Hdi76PP3Snpy3WM_XDwj8,477
+bayesline_apiclient-0.0.14.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+bayesline_apiclient-0.0.14.dist-info/RECORD,,
