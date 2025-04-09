@@ -1,0 +1,16 @@
+pydoge-api/__init__.py,sha256=sCuzIc6LgpOmQ3kNJuxVOl21dKV9MlNf4mp8Svyk5WE,1054
+pydoge-api/_version.py,sha256=vgltXBYF55vNcC2regxjGN0_cbebmm8VgcDdQaDapWQ,511
+pydoge-api/client.py,sha256=-FBmLXvvisKdMtGjimLKjTcnCLx2i3oEU0NIDDnhB2A,1350
+pydoge-api/config.py,sha256=7XcAQwxCY95ZKqS110q3hJxlFxKSTahACsPlch_V_cQ,85
+pydoge-api/utils.py,sha256=7DG8ROu-MxpBFHbA3YqJSeyJIgrA5Q_wrJpTIRRuyZA,1092
+pydoge-api/endpoints/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydoge-api/endpoints/payments.py,sha256=d8ZHc5zcvdw0D3X5fhz5xx1SFvYAbBVSi-6PQwCz0DM,3537
+pydoge-api/endpoints/savings.py,sha256=0n0xdFBa1_DHVZ0-l_tQMBbPhtEpNvJTK5x3i8XwVjM,8791
+pydoge-api/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydoge-api/models/payments.py,sha256=seEu6ljI-IWaea_z4VJM5TBU8BVkVhi9zDCTS0pN9kY,1790
+pydoge-api/models/savings.py,sha256=PUZBms9Xov68Ra0JcIu949qTPGRsF8IBUuWM730H9f8,4634
+pydoge_api-0.0.1.dist-info/licenses/LICENSE,sha256=zP1McXSiMdZATTnp9MTK3cdgMrbFaBl49QS1OY3583o,1091
+pydoge_api-0.0.1.dist-info/METADATA,sha256=L53UTTEecIwplbePUOvkZFg-bIx93w3Qz6rwHtyzZq4,4219
+pydoge_api-0.0.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+pydoge_api-0.0.1.dist-info/top_level.txt,sha256=-yDzQ58NpJztn_pYM5NBzXYC5aFrXRTjomASalmrpUg,11
+pydoge_api-0.0.1.dist-info/RECORD,,
