@@ -1,0 +1,17 @@
+fastapi_admin/__init__.py,sha256=rPSfWgIeq2YWVPyESOAwCBt8vftsTpIkuLAGDEzyRQc,22
+fastapi_admin/cli.py,sha256=MNEhABC71q-BVPYQeZz_JJz7QyUnvQvK2TcWJaBapRs,622
+fastapi_admin/commands/__init__.py,sha256=aUck0pBUWsafYyf6Ch2F7iYQaxLQrH198HQbXPDp8ms,25
+fastapi_admin/commands/app.py,sha256=NbBznTdDKsUgN-9XOGgENflBsiygxNy8_llSGFFSeko,3703
+fastapi_admin/commands/container.py,sha256=tTfpbu2H72czDa5E3juum40HMecb58paK7sP232tMGg,2309
+fastapi_admin/commands/docker.py,sha256=D9HG91SbZk0WbGo_FUPGqseJ9X5lFSH2dblZeHgM0ZE,2242
+fastapi_admin/commands/migrations.py,sha256=uj_aC8AivQUaF2T6KwaaSDxCMggrAq6ajocn3HAHAW0,5248
+fastapi_admin/commands/project.py,sha256=cSvgF1ky43-KzmMPgpSTZofSAQCRNNC0W18rY9mBvq0,2311
+fastapi_admin/utils/__init__.py,sha256=aUck0pBUWsafYyf6Ch2F7iYQaxLQrH198HQbXPDp8ms,25
+fastapi_admin/utils/docker_utils.py,sha256=3kku3SWglGLrOOtJAVkx2JcK_I-YUX-065IXW6OeTD0,677
+fastapi_admin/utils/file_utils.py,sha256=CUStomgRaUnuRT3wNJIwPHe5aQm3Z268UdfAcSNPFgY,1353
+fastapi_admin/utils/template_utils.py,sha256=fUohFXfQg34lDrVmAtkwvkv9lzwj5KJM0FNMLcARAoc,5351
+fastapi_admin_cli-0.1.5.dist-info/METADATA,sha256=hO2wxzXECp9e3Og7ByWQLqAXhdNn5t1AJkJjfUOe2qw,7030
+fastapi_admin_cli-0.1.5.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+fastapi_admin_cli-0.1.5.dist-info/entry_points.txt,sha256=1e4lIdGHaBBN-6E8c2vbFg_2bMqLyPE5r3xxLGUHuqI,56
+fastapi_admin_cli-0.1.5.dist-info/top_level.txt,sha256=5KV0TDJOFeWpq6FKYXGKoq53x7vFThtNq3U95w_bcAI,14
+fastapi_admin_cli-0.1.5.dist-info/RECORD,,
