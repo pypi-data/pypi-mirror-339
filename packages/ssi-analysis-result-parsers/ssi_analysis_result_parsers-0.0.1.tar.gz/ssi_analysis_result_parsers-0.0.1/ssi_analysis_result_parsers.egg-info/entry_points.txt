@@ -1,0 +1,7 @@
+[console_scripts]
+blast_parser_allele_matches = ssi_analysis_result_parsers.blast_parser:allele_matches
+blast_parser_presence_absence = ssi_analysis_result_parsers.blast_parser:presence_absence
+legionella_parser = ssi_analysis_result_parsers.Legionella_parser:legionella_parser
+
+[nbdev]
+ssi_analysis_result_parsers = ssi_analysis_result_parsers._modidx:d
