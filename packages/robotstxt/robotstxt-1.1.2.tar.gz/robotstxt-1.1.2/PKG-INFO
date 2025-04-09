@@ -1,0 +1,200 @@
+Metadata-Version: 2.4
+Name: robotstxt
+Version: 1.1.2
+Summary: A Python package to check URL paths against robots directives a robots.txt file.
+Home-page: https://github.com/chrisevans77/robotstxt_package
+Author: Christopher Evans
+Author-email: chris@chris24.co.uk
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# Robots Text Processor
+
+A Python package for processing and validating robots.txt files according to the Robots Exclusion Protocol (REP) RFC.
+
+## Features
+
+- Parse and process robots.txt files
+- Extract user-agent rules, allow/disallow directives, and sitemaps
+- Test URLs against robots.txt rules
+- Validate robots.txt files for compliance with REP RFC
+- Generate hashes for content tracking
+- Comprehensive error and warning reporting
+
+## Installation
+
+```bash
+pip install robotstxt-package
+```
+
+## Usage
+
+### Basic Usage
+
+```python
+from robotstxt import robots_file
+
+# Create a RobotsFile instance
+robots = robots_file("""
+User-agent: *
+Allow: /
+Disallow: /private/
+Sitemap: https://example.com/sitemap.xml
+""")
+
+# Test a URL
+result = robots.test_url("https://example.com/private/page", "*")
+print(result)  # {'disallowed': True, 'matching_rule': '/private/'}
+
+# Get sitemaps
+for sitemap in robots.sitemaps:
+    print(sitemap.url)
+```
+
+### Validation
+
+The package includes comprehensive validation of robots.txt files:
+
+```python
+from robotstxt import robots_file
+
+# Create a RobotsFile instance
+robots = robots_file("""
+User-agent: *
+Allow: /
+Disallow: /private/
+Sitemap: https://example.com/sitemap.xml
+""")
+
+# Check for validation errors
+if robots.has_errors():
+    for error in robots.get_validation_errors():
+        print(f"Error: {error.message} (Line {error.line_number})")
+
+# Check for validation warnings
+if robots.has_warnings():
+    for warning in robots.get_validation_warnings():
+        print(f"Warning: {warning.message} (Line {warning.line_number})")
+```
+
+The validation system checks for:
+
+- File size exceeding 500KB
+- UTF-8 Byte Order Mark (BOM) presence
+- Invalid characters in lines
+- Proper directive formatting (user-agent, allow, disallow, sitemap)
+- Rule block structure (user-agent directives before allow/disallow rules)
+- Valid sitemap URLs
+- Duplicate rules for the same user-agent
+- And more...
+
+### Content Tracking
+
+The package provides hashing functionality for tracking changes:
+
+```python
+from robotstxt import robots_file
+
+robots = robots_file(content)
+
+# Get content hash
+print(robots.hash_raw)  # SHA-256 hash of raw content
+
+# Get rules hash
+print(robots.hash_material)  # SHA-256 hash of processed rules
+
+# Get sitemaps hash
+print(robots.hash_sitemaps)  # SHA-256 hash of sitemap URLs
+```
+
+## Validation Rules
+
+The package validates robots.txt files according to the following rules:
+
+1. File Size
+   - Warning if file exceeds 500KB
+   - Error if file exceeds 512KB
+
+2. Character Encoding
+   - Error if file contains UTF-8 BOM
+   - Error if file contains invalid characters
+
+3. Directive Format
+   - Error for invalid directive format
+   - Error for missing user-agent before allow/disallow rules
+   - Warning for common typos in directives
+
+4. Rule Structure
+   - Error for duplicate rule blocks
+   - Warning for conflicting allow/disallow rules
+   - Warning for overly broad rules
+
+5. Sitemaps
+   - Error for invalid sitemap URLs
+   - Warning for multiple sitemaps
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+### compare_robots_files(robots1, robots2)
+Compares two robots.txt files and generates a structured diff showing:
+- Material differences between the files
+- Per-token changes showing added and removed rules
+- Sitemap changes
+
+The function normalizes the rules before comparison to ensure accurate diffing regardless of:
+- Rule ordering within token groups
+- Whitespace differences
+- Case sensitivity in tokens
+- Duplicate rules
+
+Returns a dictionary containing:
+- materially_different: Boolean indicating if the files have different rules
+- token_diffs: Dictionary of differences per token
+- sitemap_changes: Dictionary of sitemap differences
+
+# Example usage
+robots1 = RobotsFile(old_content)
+robots2 = RobotsFile(new_content)
+
+# Either way works:
+diff = compare_robots_files(robots1, robots2)
+# or
+diff = robots1.compare_with(robots2)
+
+# Example output structure:
+# {
+#     "materially_different": True,
+#     "token_diffs": {
+#         "googlebot": {
+#             "added": ["Allow: /new-path/", "Disallow: /private/"],
+#             "removed": ["Disallow: /old-path/"]
+#         },
+#         "bingbot": {
+#             "added": ["Disallow: /api/"],
+#             "removed": []
+#         }
+#     },
+#     "sitemap_changes": {
+#         "added": ["https://example.com/new-sitemap.xml"],
+#         "removed": ["https://example.com/old-sitemap.xml"]
+#     }
+# } 
