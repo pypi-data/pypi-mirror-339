@@ -1,0 +1,33 @@
+Metadata-Version: 2.3
+Name: anfialoginservice
+Version: 0.1.5
+Summary: Project developed to handle passwords, APIs and servers for internal ANFIA use.
+Author: Cosimo Di Martino
+Author-email: derto.dimartino@proton.me
+Requires-Python: >=3.8
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pywinauto (>=0.6.9,<0.7.0)
+Requires-Dist: spyder-kernels (>=3.0.0,<3.1.0)
+Description-Content-Type: text/markdown
+
+How to use it?
+
+This small program builds a config.txt file where user and password are stored. It is intended to be used with Microsoft. Then, it executes the login with pywinauto. It can also retrieve server and database names for SQL server, and can also be configured for FTP. Intended for usage inside my organization.
+
+To use it, first of all declare variables. Right now, the config file is configured to accept Microsoft username and password, server name and database name, and ftp info. Call user, password... = anfialoginservice.get_login_info_from_config(). If you don't need all variables, for example, type user, password, *rest = anfialoginservice.get_login_info_from_config().
+
+Then, if you want to auto-login, you can do it with simulate_user_login(), currently only for Microsoft ID access prompts. You must start a thread to do so.
+
+from threading import Thread
+
+    auth_thread = Thread(target=als.simulate_user_login, args=(user, password, etc...))
+
+    auth_thread.start()
+
+Then execute the rest of the code that will trigger the login request.

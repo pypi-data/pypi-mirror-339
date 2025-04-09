@@ -1,0 +1,21 @@
+[project]
+name = "anfialoginservice"
+version = "0.1.5"
+description = "Project developed to handle passwords, APIs and servers for internal ANFIA use."
+authors = [
+    {name = "Cosimo Di Martino",email = "derto.dimartino@proton.me"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "spyder-kernels (>=3.0.0,<3.1.0)",
+    "pywinauto (>=0.6.9,<0.7.0)",
+]
+
+[tool.poetry]
+packages = [{include = "anfia_login_service", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
