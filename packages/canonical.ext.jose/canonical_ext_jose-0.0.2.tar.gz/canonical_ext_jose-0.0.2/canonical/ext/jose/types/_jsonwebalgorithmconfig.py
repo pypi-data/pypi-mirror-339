@@ -1,0 +1,105 @@
+from typing import Any
+from typing import Literal
+
+from ._jwacontentencryptionalgorithm import JWAContentEncryptionAlgorithm
+from ._keymanagementmode import KeyManagementMode
+from ._keyusetype import KeyUseType
+from ._keyoperationtype import KeyOperationType
+from ._curvename import CurveName
+
+
+__all__: list[str] = [
+    'JSONWebAlgorithmConfig',
+]
+
+
+class JSONWebAlgorithmConfig:
+    registry: dict[str, 'JSONWebAlgorithmConfig'] = {}
+    crv: CurveName | None = None
+    dig: Literal['sha256', 'sha384', 'sha512'] | None
+    enc: JWAContentEncryptionAlgorithm | None
+    kty: Literal['RSA', 'EC', 'OKP', 'oct']
+    key_ops: set[KeyOperationType] | None
+    mode: KeyManagementMode | None
+    pad: Literal['RSSASSA-PSS', 'PKCS1', 'OAEP'] | None
+    use: Literal['sig', 'enc']
+
+    @classmethod
+    def get(cls, name: str) -> 'JSONWebAlgorithmConfig':
+        try:
+            return JSONWebAlgorithmConfig.registry[name]
+        except KeyError:
+            raise ValueError(f"unsupported algorithm {name}")
+
+    def __init__(
+        self,
+        name: str,
+        kty: Literal['RSA', 'EC', 'OKP', 'oct'],
+        use: KeyUseType,
+        dig: Literal['sha256', 'sha384', 'sha512'] | None = None,
+        pad: Literal['RSSASSA-PSS', 'PKCS1', 'OAEP'] | None = None,
+        crv: CurveName | None = None,
+        enc: JWAContentEncryptionAlgorithm | None = None,
+        key_ops: set[KeyOperationType] | None = None,
+        mode: KeyManagementMode | None = None,
+        length: int | None = None
+    ):
+        self.name = name
+        self.crv = crv
+        self.dig = dig
+        self.enc = enc
+        self.key_ops = key_ops
+        self.kty = kty
+        self.pad = pad
+        self.use = use
+        self.length = length
+        self.mode = mode
+        self._register()
+
+    def _register(self):
+        JSONWebAlgorithmConfig.registry[self.name] = self
+
+    def is_content_encryption(self):
+        return self.mode in {'DIRECT_ENCRYPTION', 'DIRECT_KEY_AGREEMENT'}
+
+    def params(self) -> dict[str, str | set[KeyOperationType] | None]:
+        params: dict[str, Any] = {
+            'alg': self.name,
+            'crv': self.crv,
+            'use': self.use,
+            'kty': self.kty,
+            'key_ops': self.key_ops
+        }
+        return {k: v for k, v in params.items() if v is not None}
+
+    def __str__(self):
+        return self.name
+
+
+JSONWebAlgorithmConfig('RS256', 'RSA', 'sig', dig='sha256', pad='PKCS1', key_ops={'sign', 'verify'})
+JSONWebAlgorithmConfig('RS384', 'RSA', 'sig', dig='sha384', pad='PKCS1', key_ops={'sign', 'verify'})
+JSONWebAlgorithmConfig('RS512', 'RSA', 'sig', dig='sha512', pad='PKCS1', key_ops={'sign', 'verify'})
+JSONWebAlgorithmConfig('PS256', 'RSA', 'sig', dig='sha256', pad='RSSASSA-PSS', key_ops={'sign', 'verify'})
+JSONWebAlgorithmConfig('PS384', 'RSA', 'sig', dig='sha384', pad='RSSASSA-PSS', key_ops={'sign', 'verify'})
+JSONWebAlgorithmConfig('PS512', 'RSA', 'sig', dig='sha512', pad='RSSASSA-PSS', key_ops={'sign', 'verify'})
+JSONWebAlgorithmConfig('ES256', 'EC', 'sig', dig='sha256', crv='P-256', key_ops={'sign', 'verify'})
+JSONWebAlgorithmConfig('ES256K', 'EC', 'sig', dig='sha256', crv='P-256K', key_ops={'sign', 'verify'})
+JSONWebAlgorithmConfig('ES384', 'EC', 'sig', dig='sha384', crv='P-384', key_ops={'sign', 'verify'})
+JSONWebAlgorithmConfig('ES512', 'EC', 'sig', dig='sha512', crv='P-521', key_ops={'sign', 'verify'})
+JSONWebAlgorithmConfig('EdDSA', 'OKP', 'sig', crv='Ed448', key_ops={'sign', 'verify'})
+JSONWebAlgorithmConfig('EdDSA', 'OKP', 'sig', crv='Ed25519', key_ops={'sign', 'verify'})
+JSONWebAlgorithmConfig('SrDSA', 'OKP', 'sig', crv='Sr25519', key_ops={'sign', 'verify'})
+JSONWebAlgorithmConfig('RSA-OAEP-256', 'RSA', 'enc', key_ops={'unwrapKey', 'wrapKey'}, dig='sha256', pad='OAEP', mode='KEY_ENCRYPTION')
+JSONWebAlgorithmConfig('RSA-OAEP-384', 'RSA', 'enc', key_ops={'unwrapKey', 'wrapKey'}, dig='sha384', pad='OAEP', mode='KEY_ENCRYPTION')
+JSONWebAlgorithmConfig('RSA-OAEP-512', 'RSA', 'enc', key_ops={'unwrapKey', 'wrapKey'}, dig='sha512', pad='OAEP', mode='KEY_ENCRYPTION')
+JSONWebAlgorithmConfig('A128KW', 'oct', 'enc', key_ops={'encrypt', 'decrypt'}, length=128, mode='KEY_WRAPPING')
+JSONWebAlgorithmConfig('A192KW', 'oct', 'enc', key_ops={'encrypt', 'decrypt'}, length=192, mode='KEY_WRAPPING')
+JSONWebAlgorithmConfig('A256KW', 'oct', 'enc', key_ops={'encrypt', 'decrypt'}, length=256, mode='KEY_WRAPPING')
+JSONWebAlgorithmConfig('A128GCMKW', 'oct', 'enc', key_ops={'unwrapKey', 'wrapKey'}, length=128, mode='KEY_ENCRYPTION')
+JSONWebAlgorithmConfig('A192GCMKW', 'oct', 'enc', key_ops={'unwrapKey', 'wrapKey'}, length=192, mode='KEY_ENCRYPTION')
+JSONWebAlgorithmConfig('A256GCMKW', 'oct', 'enc', key_ops={'unwrapKey', 'wrapKey'}, length=256, mode='KEY_ENCRYPTION')
+JSONWebAlgorithmConfig('ECDH-ES', 'EC', 'enc', key_ops={'encrypt', 'decrypt'}, mode='DIRECT_KEY_AGREEMENT')
+JSONWebAlgorithmConfig('ECDH-ES+A128KW', 'EC', 'enc', key_ops={'unwrapKey', 'wrapKey'}, mode='KEY_AGREEMENT_WITH_KEY_WRAPPING')
+JSONWebAlgorithmConfig('ECDH-ES+A192KW', 'EC', 'enc', key_ops={'unwrapKey', 'wrapKey'}, mode='KEY_AGREEMENT_WITH_KEY_WRAPPING')
+JSONWebAlgorithmConfig('ECDH-ES+A256KW', 'EC', 'enc', key_ops={'unwrapKey', 'wrapKey'}, mode='KEY_AGREEMENT_WITH_KEY_WRAPPING')
+JSONWebAlgorithmConfig('dir', 'oct', 'enc', key_ops={'unwrapKey', 'wrapKey'})

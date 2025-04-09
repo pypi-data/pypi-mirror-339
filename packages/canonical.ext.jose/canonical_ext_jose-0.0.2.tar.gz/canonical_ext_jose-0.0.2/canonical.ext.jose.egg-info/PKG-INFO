@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: canonical.ext.jose
+Version: 0.0.2
+Summary: Javascript Object Signing and Encryption (JOSE)
+Home-page: https://gitlab.com/unimatrixone
+Author: Cochise Ruhulessin1
+Author-email: cochise.ruhulessin@unimatrixone.io
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: cryptography
+Requires-Dist: pydantic>=2
+Requires-Dist: libcanonical>=0.0.46
+Provides-Extra: develop
+Requires-Dist: jwcrypto; extra == "develop"
+Requires-Dist: pyjwt; extra == "develop"
+Requires-Dist: py-sr25519-bindings<1,>=0.2.0; extra == "develop"
+Requires-Dist: substrate-interface; extra == "develop"
+Requires-Dist: scalecodec<1.3,>=1.2.10; extra == "develop"
+Provides-Extra: sr25519
+Requires-Dist: scalecodec<1.3,>=1.2.10; extra == "sr25519"
+Requires-Dist: py-sr25519-bindings<1,>=0.2.0; extra == "sr25519"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
