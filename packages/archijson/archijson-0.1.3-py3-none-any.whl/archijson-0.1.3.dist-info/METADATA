@@ -1,0 +1,90 @@
+Metadata-Version: 2.4
+Name: archijson
+Version: 0.1.3
+Summary: ArchiJSON: A Light Weight Web Data Exchange Format for Architectrual Design
+Home-page: https://github.com/Inst-AAA/archijson
+Author: Yichen Mo
+Author-email: moyichen@seu.edu.cn
+License: GNU General Public License v3.0
+Project-URL: ArchiWeb, https://web.archialgo.com
+Project-URL: Documentation, https://docs.web.archialgo.com
+Project-URL: Issues, https://github.com/Inst-AAA/archijson/issues
+Project-URL: Repository, https://github.com/Inst-AAA/archijson
+Keywords: architecture,engineering,design,json,exchange format
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: schema
+Requires-Dist: python-socketio
+Requires-Dist: requests
+Requires-Dist: websocket-client
+Requires-Dist: trimesh
+Requires-Dist: mapbox-earcut
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: summary
+
+ArchiJSON is a [JSON-based](https://www.json.org/json-en.html) protocol for exchanging architectural design data and parameters. 
+
+The purpose of ArchiJSON is to design readable and compact data interaction formats to make data exchange between front and back ends easier. It integrates perfectly with [ArchiWeb](https://web.archialgo.com) and provides data visualization and manipulation.
+
+This is the python implementation, providing a socket-io server and convert tool to [COMPAS](https://compas.dev) geometries.
+
+### Installation
+``` bash
+pip install archijson
+```
+
+### Documentation
+The documentation is intergrated with [ArchiWeb Docs](https://docs.web.archialgo.com). 
+### Geometry Primitive
+- shape
+  - Cuboid
+  - Plane
+  - Cylinder
+- mesh
+  - Vertices
+  - Segments
+  - Faces
+  - Mesh
+### Usage
+#### ArchiServer
+For more help, check out the documentation.
+``` py
+from archijson import ArchiServer, ArchiJSON
+
+server = ArchiServer(URL, TOKEN, IDENTITY)
+
+
+def on_connect():
+    print('exchanging')
+    server.send('client', {'msg': 'hello'})
+
+
+def on_receive(id, body):
+    print(id)
+    print(body)
+
+    archijson = ArchiJSON(body)
+    for geom in archijson.geometries:
+        print(geom)
+
+
+server.on_connect = on_connect
+server.on_receive = on_receive
+```

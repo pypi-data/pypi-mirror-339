@@ -1,0 +1,15 @@
+archijson/__init__.py,sha256=iTBMuTO_XE9jq6CKeCTJ-HXeBTNIUhy793jJDueqUCU,92
+archijson/archijson.py,sha256=vhCaEWod5Woewp4yv1jhlwl2B_c4tyzde0p_anlVfhU,1960
+archijson/archiserver.py,sha256=ya3t9JSzZa6w3flHZAlXBLhnXO9gJPnaU0I1JXT5qvc,1333
+archijson/helper.py,sha256=NMR9rUpjryyLBs1R8o5uPhe-fvjVLHVfg6wY-AS8Nuw,274
+archijson/converter/__init__.py,sha256=2gicZ6U95rK4SkOBPeg5Xr9u0MTL_u0Y4yvw1XKO8aw,35
+archijson/converter/compas.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+archijson/converter/trimesh.py,sha256=da7JPoXIKxhrjGYyntvqkgb_ue2wWtKqrpUJLLtg0nY,766
+archijson/geometry/__init__.py,sha256=_N8RM_76Nm4liLrUIhBaskQ5luaQt_ar377oahQT_BI,464
+archijson/geometry/base.py,sha256=hafJymKSWhaZTs1rlU7dVZx6Us5A2yuATnpW93TEzTQ,2646
+archijson/geometry/mesh.py,sha256=WCjd2u68B9XEUZ84JJyhCYemhyFAb7yJ3-Vd2jbddhQ,6022
+archijson/geometry/shape.py,sha256=FXx6qOx3EEEfMk4p_uddmxy_vrfHCpNQLlMTXcjw0p4,8764
+archijson-0.1.3.dist-info/METADATA,sha256=7UQhFId_nRntvnp7z2LLHagPr1qUdf28M4IscGCg2EU,2798
+archijson-0.1.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+archijson-0.1.3.dist-info/top_level.txt,sha256=YfXT1nx5LEcEGWb_BOcBnipNAWfuX04OYBFlXgQ0Sr4,10
+archijson-0.1.3.dist-info/RECORD,,
