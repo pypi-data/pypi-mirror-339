@@ -1,0 +1,8 @@
+README.md
+setup.py
+cursoMlet/__init__.py
+cursoMlet/core.py
+cursomlet_package.egg-info/PKG-INFO
+cursomlet_package.egg-info/SOURCES.txt
+cursomlet_package.egg-info/dependency_links.txt
+cursomlet_package.egg-info/top_level.txt
