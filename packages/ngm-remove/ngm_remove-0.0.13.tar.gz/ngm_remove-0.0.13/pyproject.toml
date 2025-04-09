@@ -1,0 +1,23 @@
+[project]
+name = "ngm-remove"
+version = "0.0.13"
+description = "File tools: reflink, copy, remove, mkfile, fileblocks, filestat, filesize"
+readme = "docs/README.md"
+authors = [
+    { name = "Aibulat", email = "ngmaibulat@gmail.com" }
+]
+requires-python = ">=3.8"
+dependencies = []
+
+[project.scripts]
+remove = "ngm_remove:run_remove"
+copy = "ngm_remove:run_copy"
+reflink = "ngm_remove:run_reflink"
+mkfile = "ngm_remove:run_mkfile"
+fileblocks = "ngm_remove:run_fileblocks"
+filestat = "ngm_remove:run_filestat"
+filesize = "ngm_remove:run_filesize"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
