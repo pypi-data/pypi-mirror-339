@@ -1,0 +1,228 @@
+<!--
+ Copyright 2025 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        font-family: sans-serif;
+        padding: 10px;
+      }
+      button {
+        font-size: 16px;
+        padding: 10px 15px;
+        margin-right: 10px;
+      }
+      #status {
+        font-weight: bold;
+      }
+      /* Mirror the preview video */
+      #videoPreview {
+        border: 1px solid #ccc;
+        transform: scaleX(-1);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Audio &amp; Video Recorder Component</h2>
+    <!-- Video preview -->
+    <video id="videoPreview" autoplay muted playsinline width="320" height="240"></video>
+    <br/>
+    <!-- Unified start/stop buttons -->
+    <button id="startButton" onclick="startRecording()">Start Streaming</button>
+    <button id="stopButton" onclick="stopRecording()" disabled>Stop Streaming</button>
+    <span id="status">Idle</span>
+
+    <script type="text/javascript">
+      // --- Streamlit component lifecycle constants ---
+      const SET_COMPONENT_VALUE = "streamlit:setComponentValue";
+      const COMPONENT_READY = "streamlit:componentReady";
+      const SET_FRAME_HEIGHT = "streamlit:setFrameHeight";
+      const RENDER = "streamlit:render";
+
+      // Helper function to send messages to the Streamlit host.
+      function _sendMessage(type, data) {
+        const outboundData = Object.assign({ isStreamlitMessage: true, type: type }, data);
+        window.parent.postMessage(outboundData, "*");
+      }
+      function setFrameHeight(height) {
+        _sendMessage(SET_FRAME_HEIGHT, { height: height });
+      }
+      // This function sends the combined data.
+      function notifyHost(data) {
+        _sendMessage(SET_COMPONENT_VALUE, data);
+      }
+      function initialize() {
+        _sendMessage(COMPONENT_READY, { apiVersion: 1 });
+        window.addEventListener("load", function() {
+          setTimeout(() => setFrameHeight(document.documentElement.clientHeight), 0);
+        });
+      }
+      initialize();
+
+      // --- Global Variables ---
+      let isRecording = false;
+      let audioContext;
+      let scriptProcessor;
+      let audioAccumulatedChunks = [];
+      let audioFlushIntervalId = null;
+      let videoCaptureIntervalId = null;
+      const SAMPLE_RATE = 16000;
+      const BUFFER_SIZE = 4096;
+      let mediaStream = null; // for video (and optionally audio if needed)
+
+      // Global object to hold combined recording data.
+      let recordingData = {};
+
+      // Instead of calling notifyHost directly, update our combined data and send.
+      function sendCombinedUpdate(key, value) {
+        recordingData[key] = value;
+        notifyHost({
+          value: recordingData,
+          dataType: "json"
+        });
+      }
+
+      const videoElement = document.getElementById("videoPreview");
+      const statusSpan = document.getElementById("status");
+      const startButton = document.getElementById("startButton");
+      const stopButton = document.getElementById("stopButton");
+
+      // --- Start Recording: Capture both audio and video ---
+      async function startRecording() {
+        if (isRecording) return;
+        isRecording = true;
+        startButton.disabled = true;
+        stopButton.disabled = false;
+        statusSpan.innerText = "Streaming...";
+
+        // --- Setup audio recording ---
+        try {
+          audioContext = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: SAMPLE_RATE });
+          let audioStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+          let mediaStreamSource = audioContext.createMediaStreamSource(audioStream);
+          scriptProcessor = audioContext.createScriptProcessor(BUFFER_SIZE, 1, 1);
+          scriptProcessor.onaudioprocess = function(event) {
+            let inputBuffer = event.inputBuffer;
+            let inputData = inputBuffer.getChannelData(0);
+            let pcmData = new Int16Array(inputData.length);
+            for (let i = 0; i < inputData.length; i++) {
+              let s = Math.max(-1, Math.min(1, inputData[i]));
+              pcmData[i] = s < 0 ? s * 0x8000 : s * 0x7FFF;
+            }
+            audioAccumulatedChunks.push(pcmData);
+          };
+          mediaStreamSource.connect(scriptProcessor);
+          scriptProcessor.connect(audioContext.destination);
+        } catch (err) {
+          console.error("Error accessing microphone:", err);
+          statusSpan.innerText = "Audio Error: " + err;
+        }
+
+        // --- Setup video recording ---
+        try {
+          let videoStream = await navigator.mediaDevices.getUserMedia({ video: true });
+          videoElement.srcObject = videoStream;
+          // Save the video stream so we can stop it later.
+          mediaStream = videoStream;
+        } catch (err) {
+          console.error("Error accessing camera:", err);
+          statusSpan.innerText = "Video Error: " + err;
+        }
+
+        // --- Start interval timers for flushing audio and capturing video ---
+        videoCaptureIntervalId = setInterval(captureVideoFrame, 250); // every 250ms
+        audioFlushIntervalId = setInterval(flushAudioChunks, 250);  // every 250ms
+      }
+
+      // --- Stop Recording ---
+      function stopRecording() {
+        if (!isRecording) return;
+        isRecording = false;
+        startButton.disabled = false;
+        stopButton.disabled = true;
+        statusSpan.innerText = "Stopped.";
+
+        // Stop audio processing
+        if (scriptProcessor) {
+          scriptProcessor.disconnect();
+          scriptProcessor = null;
+        }
+        if (audioContext) {
+          audioContext.close();
+          audioContext = null;
+        }
+        if (audioFlushIntervalId) {
+          clearInterval(audioFlushIntervalId);
+          audioFlushIntervalId = null;
+        }
+
+        // Stop video stream
+        if (mediaStream) {
+          mediaStream.getTracks().forEach(track => track.stop());
+          mediaStream = null;
+        }
+        if (videoCaptureIntervalId) {
+          clearInterval(videoCaptureIntervalId);
+          videoCaptureIntervalId = null;
+        }
+
+        // Flush any remaining audio chunks
+        flushAudioChunks();
+
+        // Final notification that recording has stopped.
+        sendCombinedUpdate("message", "Recording stopped");
+        sendCombinedUpdate("isRecording", false);
+      }
+
+      // --- Flush accumulated audio chunks ---
+      function flushAudioChunks() {
+        if (audioAccumulatedChunks.length === 0) return;
+        // Combine all audio chunks into one array.
+        let totalLength = audioAccumulatedChunks.reduce((sum, chunk) => sum + chunk.length, 0);
+        let combined = new Int16Array(totalLength);
+        let offset = 0;
+        for (let chunk of audioAccumulatedChunks) {
+          combined.set(chunk, offset);
+          offset += chunk.length;
+        }
+        audioAccumulatedChunks = [];  // clear accumulator
+
+        // Convert combined PCM data to a Blob.
+        let blob = new Blob([combined.buffer], { type: 'application/octet-stream' });
+        let reader = new FileReader();
+        reader.onloadend = function() {
+          // Instead of sending only audio, update the combined data.
+          sendCombinedUpdate("audioChunk", reader.result);
+        };
+        reader.readAsDataURL(blob);
+      }
+
+      // --- Capture a single video frame ---
+      function captureVideoFrame() {
+        if (!videoElement.srcObject) return;
+        const canvas = document.createElement("canvas");
+        canvas.width = videoElement.videoWidth || 320;
+        canvas.height = videoElement.videoHeight || 240;
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
+        let dataUrl = canvas.toDataURL("image/jpeg");
+        // Instead of a separate notifyHost call, update the combined data.
+        sendCombinedUpdate("videoFrame", dataUrl);
+      }
+    </script>
+  </body>
+</html>
