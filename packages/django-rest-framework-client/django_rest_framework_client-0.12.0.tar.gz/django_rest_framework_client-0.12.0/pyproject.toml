@@ -1,0 +1,96 @@
+[project]
+name = "django-rest-framework-client"
+version = "v0.12.0"
+description = "Python client for a DjangoRestFramework based web site"
+authors = [
+    { name = "David Karchmer", email = "dkarchmer@gmail.com" },
+]
+dependencies = [
+    "requests",
+    "httpx>=0.28.1",
+    "respx>=0.22.0",
+]
+requires-python = ">=3.10,<4"
+readme = "README.md"
+keywords = [
+    "django",
+    "djangorestframework",
+    "drf",
+    "rest-client",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+Homepage = "https://github.com/dkarchmer/django-rest-framework-client"
+Repository = "https://github.com/dkarchmer/django-rest-framework-client"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.2",
+    "ruff>=0.5.5",
+    "coverage>=7.6.0",
+    "mock>=5.1.0",
+    "requests-mock>=1.12.1",
+    "pre-commit>=3.7.1",
+    "setuptools>=78.1.0",
+    "twine>=6.1.0",
+    "wheel>=0.46.1",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.scripts]
+test = "pytest"
+lint = "ruff check"
+
+[tool.ruff]
+line-length = 120
+preview = true
+target-version = "py312"
+
+[too.ruff.lint]
+select = [
+    "ALL",
+]
+ignore = [
+    "COM812",
+    "ISC001",
+    "CPY001",
+    "S",
+    "PT",
+    "ARG002",
+    "E203",
+    "PLR0914",
+    "PLR6301",
+    "RUF012",
+    "ANN101",
+    "ANN002",
+    "ANN003",
+    "D203",
+    "D212",
+]
+namespace-packages = [
+    "scripts",
+    "scripts/docker",
+]
