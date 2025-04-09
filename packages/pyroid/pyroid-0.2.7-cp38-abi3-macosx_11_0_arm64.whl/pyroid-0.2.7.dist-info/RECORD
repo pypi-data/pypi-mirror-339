@@ -1,0 +1,15 @@
+pyroid-0.2.7.dist-info/METADATA,sha256=-arEOeiEmPZ5MmxVyHY4t2pbO3_ApS8ICu7lAFQNOYc,11108
+pyroid-0.2.7.dist-info/WHEEL,sha256=KOb2uEsUFKFV_GOdT9ev2YJZGn1-e8xqWy3VUx4M6FQ,102
+pyroid/core/__init__.py,sha256=HsZNqn5nAKrc8aTRJWudOHPRAy2J9HIWrPWVfjKuvmc,2396
+pyroid/io/__init__.py,sha256=1yhxZyUg3eR2pUJIVSpPSSjXVpyLNUbg6K4JKALOk0s,4342
+pyroid/__init__.py,sha256=cwIaNrBUbafyeGw1Ky1ynoJJlyn4vrR2P0vP1TevbA0,2390
+pyroid/math/__init__.py,sha256=o8lUE6Ndxfb0ZrIOiZtBSuxEUEj7N-0iLanKlCS7kT0,3908
+pyroid/math/stats.py,sha256=Oq8SzAuAqHVNmxRduSRc6yWiYMVvqQY81j6ELIx1M1k,3299
+pyroid/image/basic/__init__.py,sha256=5-f7thRcGi2-gOO4gP8hR4e8Q5w7UyHF2a2Ce06wXQM,5317
+pyroid/image/__init__.py,sha256=F8GIb_qkUnARBylKNM5Tmf4kK0myTL9z9SL6P7ja3rY,239
+pyroid/ml/basic/__init__.py,sha256=-8hHZpqoyQFZMCk5ZRDW3hLefftuOXneHdPgHGXp59o,9617
+pyroid/ml/__init__.py,sha256=eILgXi9WTokZvdqgaeziV5K_FryCbr2eJaZi6v9fBI0,261
+pyroid/text/__init__.py,sha256=lcDFWgmw8G_HPYRGueADtrJMS5h0XdhVZC6GYjxtCq0,3171
+pyroid/data/__init__.py,sha256=gpXx7Yo_TnIxvPp9rnbhGqIW80kP5TK04EDKzy7eFk4,2870
+pyroid/pyroid.abi3.so,sha256=O2Dq1pIN5bf_vgzuO5gA17vPFyVdCySGotWSfMPJj30,940368
+pyroid-0.2.7.dist-info/RECORD,,
