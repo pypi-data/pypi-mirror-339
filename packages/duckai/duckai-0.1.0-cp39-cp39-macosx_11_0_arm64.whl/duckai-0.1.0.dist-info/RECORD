@@ -1,0 +1,14 @@
+duckai/__init__.py,sha256=HQ8xJ108kq9YVaHdctSoOnCiBe4k8_UE4yb8F-03RU8,315
+duckai/duckai.py,sha256=rCW1_4gb2JEO1P47fNh-b9VoaPVToeOu31Riax7sGmY,9631
+duckai/cli.py,sha256=6hNHDrX7OVmbrvvhSKCraEyE5A8nla9zuYI2a0GIjFo,3334
+duckai/utils.py,sha256=gG0IJkUdi4r0dk9xqQCo-6D1JddhQ9Rl6L3Kj09cbL8,929
+duckai/py.typed,sha256=dcrsqJrcYfTX-ckLFJMTaj6mD8aDe2u0tkQG-ZYxnEg,26
+duckai/exceptions.py,sha256=Phd4ZovnAn9oy6ktzdtTs0T3Lxl5pLdaCGCFczZbtgg,420
+duckai/__main__.py,sha256=2TplJj5ofmgtk26-ulyv3qDbTvrKpwTXmmCO79R7c4k,118
+duckai/libs/utils_chat.cpython-39-darwin.so,sha256=UYf0nb54mziKDhRa1EnY0KFqux8RsapeLlMxkVx1i2Y,50240
+duckai/libs/utils_chat__mypyc.cpython-39-darwin.so,sha256=322898gD9hrbYSNjd6R_rQSGeNqIMKZLzUOqeETk3yk,192296
+duckai-0.1.0.dist-info/RECORD,,
+duckai-0.1.0.dist-info/WHEEL,sha256=HO9mXbqgM4Go8g994JGCRqzrGrswAcuXl8i0pdN2UG8,134
+duckai-0.1.0.dist-info/entry_points.txt,sha256=n1RCA1KWfN3Ynpn6eWMEb44oqqLjPkbo7e9VZ-sauHQ,55
+duckai-0.1.0.dist-info/top_level.txt,sha256=a5KyESDpdn4qN8waZhXhdVv5p_UZQHsUh-8FXyf5QZ0,7
+duckai-0.1.0.dist-info/METADATA,sha256=DY-bzyOUko8nA2-asot82SmA5U_S38Tc8ORZlWaJDZY,5296
