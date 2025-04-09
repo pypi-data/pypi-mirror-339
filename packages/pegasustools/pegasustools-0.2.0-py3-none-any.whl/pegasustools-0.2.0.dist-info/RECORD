@@ -1,0 +1,10 @@
+pegasustools/__init__.py,sha256=w0dbIq_G9lQ3XrTczFH0VNqI5kTrSk4mceZqNB5e8PU,481
+pegasustools/_version.py,sha256=iB5DfB5V6YB5Wo4JmvS-txT42QtmGaWcWp3udRT7zCI,511
+pegasustools/_version.pyi,sha256=o7uNL6MhuJoiqpEnriU7rBT6TmkJZA-i2qMoNz9YcgQ,82
+pegasustools/loading_nbf.py,sha256=67dB-3F_k8Zxov6AltGJSF3447IFaRKZBhaOUBVzUHo,8706
+pegasustools/loading_spectra.py,sha256=5eqx5nyC99_rLugVpWWErkIAMeq9_X5zTsK3rN0bxr8,4885
+pegasustools/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pegasustools-0.2.0.dist-info/METADATA,sha256=90omTqVwZm0hcaGMXykLhajalUTaX877g_NZmlmZ-6Y,4590
+pegasustools-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pegasustools-0.2.0.dist-info/licenses/LICENSE,sha256=u3Gf7P1OgyT0axyG7sJSel03dImXGZP1cth7VMfrEVc,1052
+pegasustools-0.2.0.dist-info/RECORD,,
