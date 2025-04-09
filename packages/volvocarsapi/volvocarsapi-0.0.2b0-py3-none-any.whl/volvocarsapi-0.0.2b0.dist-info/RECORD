@@ -1,0 +1,10 @@
+volvocarsapi/__init__.py,sha256=yw8On8tPnjKCavnHWWnCgiBG6UANfIAKn-4_4LGfKRM,22
+volvocarsapi/api.py,sha256=tAewdonEVYAPaYD6a3B3p-wNx2cuEQ9jext5vbRoa4Y,13020
+volvocarsapi/auth.py,sha256=KiACw7dVxXmWfM7ozGwQ60Rd6_Lwt2zxFxsHoaYsxEk,7057
+volvocarsapi/models.py,sha256=CPHSlwJ5uJ3CkCgCfXGq5eppQraRfzvN1oKW3oL-vgQ,4836
+volvocarsapi/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+volvocarsapi/util.py,sha256=fymfieJ0CUKhu1_-1u64NiSrd1f_zKEIh8gXp5uxHVs,850
+volvocarsapi-0.0.2b0.dist-info/METADATA,sha256=Ww01f-RaJB5DgKmDvEPHaTY6UcEO4VDwVfBjaAx5xds,3314
+volvocarsapi-0.0.2b0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+volvocarsapi-0.0.2b0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+volvocarsapi-0.0.2b0.dist-info/RECORD,,
