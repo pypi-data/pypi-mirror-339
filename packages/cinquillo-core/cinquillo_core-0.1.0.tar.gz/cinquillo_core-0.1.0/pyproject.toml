@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "cinquillo-core"
+version = "0.1.0"
+description = "Motor del juego Cinquillo para simulaciones y desarrollo de IA."
+authors = ["Tu Nombre <tucorreo@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "cinquillo" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
