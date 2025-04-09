@@ -1,0 +1,8 @@
+openlog/__init__.py,sha256=px4rmblgCN2Tbss6aFWhqtHipsRPh1q83UYOnFGurXY,255
+openlog/config.toml,sha256=fGktwCzcLP5kcXbDEkIzNYhenNfvK9jZ7Bnk_DFxJaw,58
+openlog/logger.py,sha256=6bwbAjERIBhNWFi6UkG5FaJFMEmer5dKWs3_90PDT9E,5968
+openlog-1.0.0.dist-info/licenses/LICENSE,sha256=rFIWLX5UAzjUjsiv0sbXUfsz82tWsBH4p5PEmaNO6iQ,1095
+openlog-1.0.0.dist-info/METADATA,sha256=Rdgl1cHnTRRabEVA5juVbZSOEoPGePnpykE2_M8XeLY,2459
+openlog-1.0.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+openlog-1.0.0.dist-info/top_level.txt,sha256=svdtskesEBLwGbwcSejT8GV8NGXO4r0f4Z7hzRtmOhI,8
+openlog-1.0.0.dist-info/RECORD,,
