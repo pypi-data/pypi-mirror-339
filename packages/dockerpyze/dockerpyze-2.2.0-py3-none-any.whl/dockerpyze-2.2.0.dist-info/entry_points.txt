@@ -1,0 +1,2 @@
+[console_scripts]
+dockerpyze = dockerpyze.builder:entrypoint
