@@ -1,0 +1,4 @@
+[console_scripts]
+another=mynewthing.cli:somethingelse
+greet=mynewthing.cli:greet
+
