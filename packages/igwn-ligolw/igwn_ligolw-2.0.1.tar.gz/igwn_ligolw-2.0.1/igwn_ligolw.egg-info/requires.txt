@@ -1,0 +1,12 @@
+igwn-segments
+numpy
+python-dateutil
+pyyaml
+tqdm
+
+[docs]
+furo
+lalsuite
+Sphinx
+sphinx-automodapi
+sphinx-design

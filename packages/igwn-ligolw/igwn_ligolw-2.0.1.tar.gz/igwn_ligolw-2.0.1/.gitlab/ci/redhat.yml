@@ -1,0 +1,27 @@
+include:
+  - local: .gitlab/ci/test.yml
+
+  # https://computing.docs.ligo.org/guide/gitlab/components/redhat/all/
+  - component: $CI_SERVER_FQDN/computing/gitlab/components/redhat/all@2
+    inputs:
+      needs: [sdist]
+      redhat_versions:
+        - 8
+        - 9
+      test_install: >-
+        bzip2
+        igwn-ligolw
+        make
+        python3-lal
+        python3-matplotlib
+        python3-pip
+        xz
+
+# -- overwrite test script with/without lal
+
+redhat_test:
+  script: !reference [.test, script]
+
+# don't run a test job for EL9, no python3-lal package yet
+redhat_test_el9:
+  rules: [when: never]

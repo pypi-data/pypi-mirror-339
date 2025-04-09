@@ -1,0 +1,49 @@
+# -- igwn-ligolw test configuration
+
+# generic test template (should work on all platforms)
+.test:
+  interruptible: true
+  script:
+    - python3 -m pip show python-ligo-lw || true
+    - make -C test
+
+# -- Python-specific tests
+
+.python_test:
+  extends: .test
+  script:
+    - apt-get -yqq update && apt-get -yqq install
+        libxml2-utils
+        make
+    - python -m pip install
+        *.whl
+        lalsuite
+    - !reference [.test, script]
+
+# gitlab CI/CD YAML can't handle variables in needs: or proper job
+# matrices, so we have to copy things out here for each Python version.
+
+python_test_manylinux_x86_64_3.9:
+  extends: .python_test
+  image: "python:3.9"
+  needs: ["wheel_manylinux_x86_64: [3.9]"]
+
+python_test_manylinux_x86_64_3.10:
+  extends: .python_test
+  image: "python:3.10"
+  needs: ["wheel_manylinux_x86_64: [3.10]"]
+
+python_test_manylinux_x86_64_3.11:
+  extends: .python_test
+  image: "python:3.11"
+  needs: ["wheel_manylinux_x86_64: [3.11]"]
+
+python_test_manylinux_x86_64_3.12:
+  extends: .python_test
+  image: "python:3.12"
+  needs: ["wheel_manylinux_x86_64: [3.12]"]
+
+#python_test_manylinux_x86_64_3.13:  <== need LALSuite wheel
+#  extends: .python_test
+#  image: "python:3.12"
+#  needs: ["wheel_manylinux_x86_64: [3.13]"]

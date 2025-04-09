@@ -1,0 +1,13 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index 0a249efa55..11ccdd0a55 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -73,7 +73,7 @@ include = [
+ ]
+ 
+ [tool.setuptools_scm]
+-version_file = "igwn_ligolw/_version.py"
++write_to = "igwn_ligolw/_version.py"
+ 
+ # -- ruff
+ 
