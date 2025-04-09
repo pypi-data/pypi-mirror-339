@@ -1,0 +1,7 @@
+dist/
+*.egg-info/
+.vscode
+pysslcommerz/__pycache__/*
+.venv/
+*.pyc
+*.lock
