@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+sashimono.py
+sashimono.egg-info/PKG-INFO
+sashimono.egg-info/SOURCES.txt
+sashimono.egg-info/dependency_links.txt
+sashimono.egg-info/requires.txt
+sashimono.egg-info/top_level.txt
+tests/test_services.py
