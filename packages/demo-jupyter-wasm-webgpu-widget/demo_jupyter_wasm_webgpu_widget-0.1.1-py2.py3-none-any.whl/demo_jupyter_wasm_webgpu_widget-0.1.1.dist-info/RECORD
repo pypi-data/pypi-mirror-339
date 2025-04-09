@@ -1,0 +1,8 @@
+demo_jupyter_wasm_webgpu_widget/__init__.py,sha256=9dKoV5zwkwFclUgAsk9VMMSbbej8PSQzs-pLTyue7WI,74
+demo_jupyter_wasm_webgpu_widget/widget.py,sha256=9rKlOMhxdYgobdMnm1L-wMtLAKepFL3u_7mp1WHckhQ,917
+demo_jupyter_wasm_webgpu_widget/static/aba74fcbff867383830f.wasm,sha256=XgqID1GX0g-8NEwsThNRHKAohSxVUJVvs2_3sno4t8E,11704865
+demo_jupyter_wasm_webgpu_widget/static/widget.js,sha256=P9J5VjG3vrTQV9XBOr-nGteJp7tnVuzp615gtoAGaCk,311136
+demo_jupyter_wasm_webgpu_widget-0.1.1.dist-info/METADATA,sha256=BQvN_uemgzxGyfWazBwbYjk-1PWUJqhpxL-FRTvntk8,2567
+demo_jupyter_wasm_webgpu_widget-0.1.1.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+demo_jupyter_wasm_webgpu_widget-0.1.1.dist-info/licenses/LICENSE.md,sha256=ORbgl43b5zz3-qv3GawIwc3f8Fa7KQbVBMTj28cxce8,1077
+demo_jupyter_wasm_webgpu_widget-0.1.1.dist-info/RECORD,,

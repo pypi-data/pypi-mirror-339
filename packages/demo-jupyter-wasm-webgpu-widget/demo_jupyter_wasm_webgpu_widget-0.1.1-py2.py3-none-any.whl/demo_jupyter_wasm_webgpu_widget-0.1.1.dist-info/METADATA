@@ -1,0 +1,70 @@
+Metadata-Version: 2.4
+Name: demo_jupyter_wasm_webgpu_widget
+Version: 0.1.1
+Summary: A Custom Jupyter Widget Library
+Project-URL: Homepage, https://github.com/Twinklebear/demo_jupyter_wasm_webgpu_widget
+Author-email: Will Usher <will@willusher.io>
+License: The MIT License (MIT)
+        
+        Copyright (c) 2025 Will Usher
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in
+        all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+        THE SOFTWARE.
+License-File: LICENSE.md
+Keywords: IPython,Jupyter,Widgets
+Requires-Dist: anywidget
+Description-Content-Type: text/markdown
+
+# Demo Jupyter WebGPU Rendering Widget Using WebAssembly
+
+This is built using [anywidet](https://github.com/manzt/anywidget)
+to simplify packaging and distribution. You can try out
+a live demo running in [Google Colab]()
+or download the repo, `pip install demo_jupyter_wasm_webgpu_widget` and
+run the example in ./example/demo.ipynb.
+
+# Dependencies
+
+The widget depends on `anywidget` and `traitlets`.
+
+# Development
+
+To install the widget for development/editing you can run simply run
+```bash
+pip install -e .
+```
+which will also run `pnpm install` and `pnpm run build` to build the
+frontend code.
+
+
+Then when you modify the frontend widget code, recompile it
+by running:
+```bash
+pnpm run build
+```
+
+# Building
+
+The widget frontend code is built when running the python build 
+command via hatchling which will also install pnpm dependencies
+and build the frontend code. Build via
+```bash
+python -m build
+```
+
+Build artifacts are placed in `dist/`
