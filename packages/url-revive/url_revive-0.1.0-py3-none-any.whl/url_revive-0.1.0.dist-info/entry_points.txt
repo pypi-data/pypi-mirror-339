@@ -1,0 +1,5 @@
+[console_scripts]
+url-archive=url_revive.archive_reader:main
+url-networking=url_revive.networking:main
+url-revive=url_revive.main:main
+
