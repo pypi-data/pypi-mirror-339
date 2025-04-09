@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: elementsize
+Version: 0.1
+Summary: this package is related to findout the if list of elements are four or above four
+Author: K Saral Kumar
+Author-email: saralkumar28@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENCE.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: summary
