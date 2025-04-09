@@ -1,0 +1,76 @@
+name: 发布到PyPI
+
+# 触发条件
+on:
+  # 当创建新的GitHub Release时自动触发
+  release:
+    types: [created]
+  
+  # 当master分支有推送时触发
+  push:
+    branches: [master, main]
+  
+  # 允许手动触发工作流
+  workflow_dispatch:
+    inputs:
+      version:
+        description: '版本号 (例如: 0.1.0)'
+        required: true
+        default: ''
+      publish_to_pypi:
+        description: '是否发布到正式PyPI'
+        type: boolean
+        default: false
+
+# 工作流任务
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    # 检出代码
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # 获取所有历史以便正确构建版本
+    
+    # 设置Python环境
+    - name: 设置Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    # 安装依赖
+    - name: 安装依赖
+      run: |
+        python -m pip install --upgrade pip
+        pip install build twine
+    
+    # 如果是手动触发且提供了版本号，则更新版本号
+    - name: 更新版本号 (仅手动触发时)
+      if: github.event_name == 'workflow_dispatch' && inputs.version != ''
+      run: |
+        # 更新pyproject.toml中的版本号
+        sed -i "s/version = \"[0-9]*\.[0-9]*\.[0-9]*\"/version = \"${{ github.event.inputs.version }}\"/g" pyproject.toml
+        
+        # 更新__init__.py中的版本号
+        if [ -f "src/cmd_ai/__init__.py" ]; then
+          sed -i "s/__version__ = \"[0-9]*\.[0-9]*\.[0-9]*\"/__version__ = \"${{ github.event.inputs.version }}\"/g" src/cmd_ai/__init__.py
+        fi
+        
+        echo "版本号已更新为 ${{ github.event.inputs.version }}"
+    
+    # 构建分发包
+    - name: 构建分发包
+      run: |
+        python -m build
+    
+    # 发布到正式PyPI（当手动触发且选择发布到PyPI，或者当创建正式发布版本时）
+    - name: 发布到PyPI
+      if: (github.event_name == 'workflow_dispatch' && inputs.publish_to_pypi) || (github.event_name == 'release' && !github.event.release.prerelease)
+      env:
+        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
+        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+      run: |
+        echo "正在发布到PyPI..."
+        twine upload dist/*
+        echo "发布完成! 用户现在可以使用以下命令安装:"
+        echo "uv pip install ai_bash" 
