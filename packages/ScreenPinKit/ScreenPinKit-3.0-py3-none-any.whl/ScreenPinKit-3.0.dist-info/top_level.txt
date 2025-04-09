@@ -1,0 +1,14 @@
+base
+canvas_editor
+canvas_item
+common
+extend_widgets
+main
+manager
+misc
+ocr_loader
+pdf_viewer
+plugin
+toolbar
+version
+view
