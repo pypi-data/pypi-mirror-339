@@ -1,0 +1,13 @@
+whisper_lm_transformers/__init__.py,sha256=vob1RpyDp6-eDmIFFNbMFb_t-coYBmFd--fvg0ktGZA,572
+whisper_lm_transformers/logits_processor.py,sha256=RUh0twd-aIwO5bh0wIjVcqu7XucnEarkrC_q6c-rGss,14935
+whisper_lm_transformers/whisper_with_lm.py,sha256=NGiVJyvuG7nyCwtA8SkxvFxEbZRZyAzsE7ggbYMF2aU,6801
+whisper_lm_transformers/whisper_with_lm_pipeline.py,sha256=yReoiXwMcPcWKI9ZC12d9EaxGfbwNSJyr8hX2r4jEgI,5735
+whisper_lm_transformers/scripts/__init__.py,sha256=JUj4f1djV0bI7ZWdjDXwyuAFnF3Id9iImN49Y52bSgc,77
+whisper_lm_transformers/scripts/whisper_evaluate_with_hf.py,sha256=KrSgdLjlh568kaRZKSDhEe1iKjOjjdO0lTQ37tRqkbk,17389
+whisper_lm_transformers/scripts/whisper_lm_optimizer_with_hf.py,sha256=IONc4YaexlTAE89seLMnUZBxkaXQRG1wdnmE5xN98Wk,20580
+whisper_lm_transformers-0.2.0.dist-info/licenses/LICENSE,sha256=7rQpr7rgFv1OfhpdtfLiCvbu2UIoorBP8sukxyt9nQs,11346
+whisper_lm_transformers-0.2.0.dist-info/METADATA,sha256=cZy0mTACwkG6lwSlNXdRohrutY8IFijGO3J_BFrzplo,19600
+whisper_lm_transformers-0.2.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+whisper_lm_transformers-0.2.0.dist-info/entry_points.txt,sha256=x5o17O4IHFskkrS68YO5izaLZwHgTcEgRABj9oQqY9M,204
+whisper_lm_transformers-0.2.0.dist-info/top_level.txt,sha256=hKJLDqitiFSAdk-vanZOEiRztb3ndgD7j6fwWVYttik,24
+whisper_lm_transformers-0.2.0.dist-info/RECORD,,
