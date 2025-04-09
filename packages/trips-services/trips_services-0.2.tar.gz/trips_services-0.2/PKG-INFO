@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: trips_services
+Version: 0.2
+Summary: Auto-configured AWS services for Trip Planner
+Home-page: https://github.com/yourusername/trips_services
+Author: mannatsaluja
+Author-email: mannatsaluja12@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Trips Services
+
+A Python library to handle AWS services (S3, SNS) for Django Trip Planner applications.
+
+## Features
+- Automatic S3 bucket setup for file uploads
+- SNS notifications for trip creation
+- Cloud9 IAM integration (no manual AWS keys needed)
+
+
+
