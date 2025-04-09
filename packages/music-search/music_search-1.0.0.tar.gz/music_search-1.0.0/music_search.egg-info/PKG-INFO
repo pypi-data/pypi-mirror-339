@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: music-search
+Version: 1.0.0
+Summary: This package provides a music search tool designed to find and extract .mp3 links from websites based on user-defined search queries. Utilizing the Codern library for efficient search operations and BeautifulSoup for web scraping, the tool is perfect for discovering music resources in a streamlined way. Note: Ensure compliance with website terms and copyright regulations when using this package.
+Home-page: https://api-free.ir
+Author: Mahdi Ahmadi
+Author-email: mahdiahmadi.1208@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://t.me/dev_jav
+Project-URL: Documentation, https://api-free.ir/
+Project-URL: Source Code, https://api-free.ir/
+Keywords: Sepidar,bot,Google,python,asynchronous,aiohttp
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp>=3.8.1
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: mkdocs; extra == "docs"
+Requires-Dist: pdoc3; extra == "docs"
+
+# Music Search Tool
+
+This project provides a powerful and efficient **Music Search Tool** that helps users find `.mp3` files based on search queries. Leveraging the **Codern** library for performing searches and **BeautifulSoup** for web scraping, this tool extracts `.mp3` links and metadata from websites.
+
+## Features
+- Search for `.mp3` files by song name or artist.
+- Scrape web pages to fetch `.mp3` links and corresponding titles.
+- Easy-to-use API for developers.
+
+## Installation
+You can install the package using pip:
+
+```bash
+pip install music_search
+```
+
+```pyton
+from music_search import search
+
+# Perform a music search
+result = search("دانلود آهنگ بهزاد جباری آواره")
+print(result)
+```
