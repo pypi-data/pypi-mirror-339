@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: basic-math-fuad
+Version: 1.0.0
+Summary: A powerful basic math library by Fuad
+Home-page: https://github.com/yourusername/basic-math-fuad
+Author: Mubtasim Fuad
+Author-email: mubtasimfad64@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+
