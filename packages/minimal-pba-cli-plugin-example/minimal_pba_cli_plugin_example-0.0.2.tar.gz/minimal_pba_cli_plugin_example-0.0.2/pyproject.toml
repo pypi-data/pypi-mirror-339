@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+requires-python = ">=3.9"
+name = "minimal-pba-cli-plugin-example"
+version = "0.0.2"
+description = "A minimal command-line interface plugin for minimal-pba-cli"
+authors = [
+    { name = "Dane Hillard", email = "github@danehillard.com" }
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "rich>=14.0.0",
+    "typer>=0.12.5",
+]
+
+[project.urls]
+Repository = "https://github.com/easy-as-python/minimal-pba-cli-plugin-example"
+Issues = "https://github.com/easy-as-python/minimal-pba-cli-plugin-example/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.entry-points.minimal_pba_cli]
+example = "minimal_pba_cli_plugin_example.plugin"

@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: minimal-pba-cli-plugin-example
+Version: 0.0.2
+Summary: A minimal command-line interface plugin for minimal-pba-cli
+Author-email: Dane Hillard <github@danehillard.com>
+Project-URL: Repository, https://github.com/easy-as-python/minimal-pba-cli-plugin-example
+Project-URL: Issues, https://github.com/easy-as-python/minimal-pba-cli-plugin-example/issues
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.9
+Requires-Dist: rich>=14.0.0
+Requires-Dist: typer>=0.12.5
