@@ -1,0 +1,137 @@
+import numpy
+from chaplin_standalone import run_prediction
+import numpy as np
+
+import random
+
+aa2cod = {'A': ['GCA', 'GCC', 'GCG', 'GCT'], 'C': ['TGT', 'TGC'], 'E': ['GAG', 'GAA'], 'D': ['GAT', 'GAC'],
+          'G': ['GGT', 'GGG', 'GGA', 'GGC'], 'F': ['TTT', 'TTC'], 'I': ['ATC', 'ATA', 'ATT'], 'H': ['CAT', 'CAC'],
+          'K': ['AAG', 'AAA'], 'M': ['ATG'], 'L': ['CTC', 'CTG', 'CTA', 'CTT', 'TTA', 'TTG'], 'N': ['AAC', 'AAT'],
+          'Q': ['CAA', 'CAG'], 'P': ['CCT', 'CCG', 'CCA', 'CCC'], 'S': ['AGC', 'AGT', 'TCG', 'TCA', 'TCC', 'TCT'],
+          'R': ['AGG', 'AGA', 'CGA', 'CGC', 'CGG', 'CGT'], 'T': ['ACC', 'ACA', 'ACG', 'ACT'], 'W': ['TGG'],
+          'V': ['GTA', 'GTC', 'GTG', 'GTT'], 'Y': ['TAT', 'TAC']}
+
+def make_combinations(prot_seq, ite=10):
+    fs = []
+    if ite > 0:
+        for i in range(ite):
+            s = []
+            for k in prot_seq:
+                s += random.sample(aa2cod[k], 1)
+            fs += [s]
+    return fs
+
+
+cod2aa = {"AAA": "K", "AAC": "N", "AAG": "K", "AAT": "N",
+          "ACA": "T", "ACC": "T", "ACG": "T", "ACT": "T",
+          "AGA": "R", "AGC": "S", "AGG": "R", "AGT": "S",
+          "ATA": "I", "ATC": "I", "ATG": "M", "ATT": "I",
+
+          "CAA": "Q", "CAC": "H", "CAG": "Q", "CAT": "H",
+          "CCA": "P", "CCC": "P", "CCG": "P", "CCT": "P",
+          "CGA": "R", "CGC": "R", "CGG": "R", "CGT": "R",
+          "CTA": "L", "CTC": "L", "CTG": "L", "CTT": "L",
+
+          "GAA": "E", "GAC": "D", "GAG": "E", "GAT": "D",
+          "GCA": "A", "GCC": "A", "GCG": "A", "GCT": "A",
+          "GGA": "G", "GGC": "G", "GGG": "G", "GGT": "G",
+          "GTA": "V", "GTC": "V", "GTG": "V", "GTT": "V",
+
+          "TAA": "_", "TAC": "Y", "TAG": "_", "TAT": "Y",
+          "TCA": "S", "TCC": "S", "TCG": "S", "TCT": "S",
+          "TGA": "_", "TGC": "C", "TGG": "W", "TGT": "C",
+          "TTA": "L", "TTC": "F", "TTG": "L", "TTT": "F"}
+
+
+def checkseq(seq, target):
+    s = ''
+    for i in seq:
+        s += cod2aa[i]
+    for i in range(len(s)):
+
+        assert s[i] == target[i]
+    assert len(s) == len(target)
+
+    assert s == str(target)
+
+
+def optimize(target_seq, TARGET_SOL=1,num_generations = 100,sol_per_pop = 1600,num_parents_mating = 400):
+
+    num_weights = len(target_seq)
+    pop_size = (sol_per_pop, num_weights)
+    new_population = make_combinations(target_seq, ite=sol_per_pop)
+
+    for generation in range(num_generations):
+
+        fitness, preds = cal_pop_fitness(TARGET_SOL, new_population)
+
+        parents = select_mating_pool(new_population, fitness, num_parents_mating)
+
+        offspring_crossover = crossover(parents, offspring_size=(pop_size[0] - len(parents), len(parents[0])))
+
+        offspring_mutation = mutation(offspring_crossover, target_seq)
+
+        new_population = parents + offspring_mutation
+
+        for i in new_population:
+            checkseq(i, target_seq)
+
+        best_match_idx = numpy.where(fitness == numpy.max(fitness))
+
+        print("gen:", generation, "fitness : ", fitness[best_match_idx[0][0]], 'sol:', preds[best_match_idx[0][0]])
+
+    fitness, pred = cal_pop_fitness(TARGET_SOL, new_population, target_seq)
+
+    best_match_idx = numpy.where(fitness == numpy.max(fitness))
+    new_population = np.array(new_population)
+    print("Best solution : ", new_population[best_match_idx[0][0]])
+    print("Best solution fitness : ", fitness[best_match_idx[0][0]])
+    return new_population[best_match_idx[0][0]], pred[best_match_idx[0][0]], fitness[best_match_idx[0][0]]
+
+
+def cal_pop_fitness(target_sol, pop):
+    y = np.array(run_prediction(pop))
+
+    fitness =1 - (y - target_sol)**2
+    return fitness, y
+
+
+def select_mating_pool(pop, fitness, num_parents):
+    # Selecting the best individuals in the current generation as parents for producing the offspring of the next generation.
+    parents = []  # numpy.empty((num_parents, pop.shape[1]))
+    # pop=np.array(pop)
+
+    for parent_num in range(num_parents):
+        max_fitness_idx = numpy.where(fitness == numpy.max(fitness))
+        max_fitness_idx = max_fitness_idx[0][0]
+        parents += [pop[max_fitness_idx]]
+        fitness[max_fitness_idx] = -10
+    return parents
+
+
+def crossover(parents, offspring_size):
+    offspring = []
+    crossover_point = numpy.uint8(offspring_size[1] / 2)
+    for k in range(offspring_size[0]):
+        parent1_idx = k % len(parents)  # .shape[0]
+        parent2_idx = (k + 1) % len(parents)
+
+        offspring += [parents[parent1_idx][0:crossover_point] + parents[parent2_idx][crossover_point:]]
+
+    return offspring
+
+
+def mutation(offspring_crossover, target_seq, nmut=30):
+    # Mutation changes a single gene in each offspring randomly.
+
+    for idx in range(len(offspring_crossover)):
+        r = np.random.randint(0, len(offspring_crossover[idx]), size=(nmut))
+        for k in range(nmut):
+            c = random.sample(aa2cod[target_seq[r[k]]], 1)[0]
+            assert cod2aa[c] == target_seq[r[k]]
+
+            offspring_crossover[idx][r[k]] = c
+    return offspring_crossover
+
+
+
