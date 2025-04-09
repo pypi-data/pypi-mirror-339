@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+consolex/__init__.py
+consolex/consolex.py
+consolex.egg-info/PKG-INFO
+consolex.egg-info/SOURCES.txt
+consolex.egg-info/dependency_links.txt
+consolex.egg-info/top_level.txt
