@@ -1,0 +1,10 @@
+include LICENSE *.md
+include src/apollinaire/peakbagging/test_data/*.dat 
+include src/apollinaire/peakbagging/test_data/*.h5
+include src/apollinaire/timeseries/golf_11041996_10041997.fits 
+include src/apollinaire/timeseries/kplr006603624_52_COR_filt_inp.fits 
+include src/apollinaire/peakbagging/templates/*.csv 
+include src/apollinaire/peakbagging/templates/*.a2z
+include src/apollinaire/peakbagging/templates/*.pkb 
+include src/apollinaire/peakbagging/templates/*.txt 
+include src/apollinaire/songlib/ephemeris/*.csv
