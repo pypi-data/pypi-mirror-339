@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: prismlens
+Version: 0.1.0
+Summary: Prism tools
+Author: Danny Stewart
+Author-email: danny@stewart.cc
+Requires-Python: >=3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: json5 (>=0.12.0,<0.13.0)
+Requires-Dist: polykit (>=0.9.0,<0.10.0)
+Description-Content-Type: text/markdown
+
+# PrismLens
+
+Tools for managing Prism.
+
