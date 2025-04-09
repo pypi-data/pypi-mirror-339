@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version:
+          - '3.8'
+          - '3.9'
+          - '3.10'
+          - '3.11'
+          - '3.12'
+
+    name: Test
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0  # ensures full history in case of shallow clones
+
+      # Ensure submodules are up to date with remote and initialized
+      - name: Force submodule sync
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --recursive --force
+
+      - name: Print submodule CMake version
+        run: |
+          grep cmake_minimum_required VocalTractLabBackend-dev/CMakeLists.txt
+
+      - name: Clean previous builds
+        run: |
+          rm -rf build/ out/ dist/ *.egg-info
+        shell: bash  # ensure compatibility across OS
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install --upgrade cmake
+          pip install -r requirements.txt
+
+      - name: Install package in editable mode
+        run: |
+          pip install -e .
+
+      - name: Run tests
+        run: python -m unittest discover
