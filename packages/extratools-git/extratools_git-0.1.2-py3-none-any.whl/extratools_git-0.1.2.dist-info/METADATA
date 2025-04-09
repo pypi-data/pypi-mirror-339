@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: extratools-git
+Version: 0.1.2
+Project-URL: Repository, https://github.com/chuanconggao/extratools-git
+Author-email: Chuancong Gao <chuanconggao@users.noreply.github.com>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: ansicolors>=1.1.8
+Requires-Dist: sh>=2.0.6
+Description-Content-Type: text/markdown
+
+# Introduction
+
+This repo is a modern fork of my original [extratools](https://github.com/chuanconggao/extratools/) repo's [`gittools`](https://github.com/chuanconggao/extratools/blob/master/extratools/gittools.py) module.
+- The logic for printing Git commit is forked from my original [DotFiles](https://github.com/chuanconggao/DotFiles) repo, which is now archived.

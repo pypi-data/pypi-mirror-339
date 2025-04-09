@@ -1,0 +1,2 @@
+[console_scripts]
+print_git_prompt = extratools_git.prompt:print_prompt
