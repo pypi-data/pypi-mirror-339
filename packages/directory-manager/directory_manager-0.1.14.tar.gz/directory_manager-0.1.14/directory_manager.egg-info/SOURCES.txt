@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+dir_manager/__init__.py
+dir_manager/core.py
+dir_manager/logger.py
+directory_manager.egg-info/PKG-INFO
+directory_manager.egg-info/SOURCES.txt
+directory_manager.egg-info/dependency_links.txt
+directory_manager.egg-info/top_level.txt
+tests/test_core.py
