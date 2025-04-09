@@ -1,0 +1,13 @@
+pyamtrack/_version.py,sha256=SPlBGytBeF1mrSyBv8gqNkXSu-4jKG_2sPcn9VifI74,515
+pyamtrack/materials.cpython-311-darwin.so,sha256=o5F0Bs4Jm6JQkQeKFfw5KH_zVmQhRiazTme-HoYCl94,219232
+pyamtrack/stopping.cpython-311-darwin.so,sha256=KJ1QfUT0CHCKvbDg1GVQ01wrvOy6FlSTnIDDJNdNFOs,200832
+pyamtrack/__init__.py,sha256=iPCtj2ltvUSKADr8H-thomudw-l8xK1Et0ES5tX2MeU,1342
+pyamtrack/converters.cpython-311-darwin.so,sha256=003RN43Us45coyUJPOb2oxIp-xosZbBPik2S023Z4NQ,183920
+pyamtrack/_core.cpython-311-darwin.so,sha256=b5J1_R6x2OXinQveGZ_A7p_GvxZDJ2JT-r4yQbNM-fY,165072
+pyamtrack/libamtrack.dylib,sha256=UsIdSr5i6THL5atudSjU5STS6TpiEYy4HRNix4lX7D8,1528656
+pyamtrack/.dylibs/libgsl.28.dylib,sha256=SWY2ykWodtvBABnlEObqpgK3aXNwoNG0_3vixWslC34,3227344
+pyamtrack/.dylibs/libgslcblas.0.dylib,sha256=4GF5ICLoTlE5WtMNViYGqDDNwlMFqnWQkgI5VVqqpmI,309872
+pyamtrack-0.14.1a6.dist-info/RECORD,,
+pyamtrack-0.14.1a6.dist-info/WHEEL,sha256=XCsSFsPMag4J9JBVYHjFXnFIdq5KqJbGgjCMVKVs4-Y,141
+pyamtrack-0.14.1a6.dist-info/METADATA,sha256=eiwNnZmydB3BKOdpp2F6HHlrNwynwaysCKYtJ3GU9qw,2697
+pyamtrack-0.14.1a6.dist-info/licenses/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
