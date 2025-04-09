@@ -1,0 +1,5 @@
+promptflow-core>=1.0.0
+jinja2>=3.0
+ruamel.yaml>=0.17
+openai>=1.0
+psutil<7,>=5.9
