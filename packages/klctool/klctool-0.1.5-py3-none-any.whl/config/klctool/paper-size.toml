@@ -1,0 +1,46 @@
+[paper_sizes]
+A5 = { width = 148, height = 210 }
+A5L = { width = 210, height = 148 }
+A4 = { width = 210, height = 297 }
+A4L = { width = 297, height = 210 }
+A3 = { width = 297, height = 420 }
+A3L = { width = 420, height = 297 }
+"B6 (ISO)" = { width = 125, height = 176 }
+"B6 (ISO)L" = { width = 176, height = 125 }
+"B5 (ISO)" = { width = 176, height = 250 }
+"B5 (ISO)L" = { width = 250, height = 176 }
+"B4 (ISO)" = { width = 250, height = 353 }
+"B4 (ISO)L" = { width = 353, height = 250 }
+Letter = { width = 215.9, height = 279.4 }
+LetterL = { width = 279.4, height = 215.9 }
+Legal = { width = 215.9, height = 355.6 }
+LegalL = { width = 355.6, height = 215.9 }
+"Long Bond" = { width = 215.9, height = 330.2 }
+"Long BondL" = { width = 330.2, height = 215.9 }
+Tabloid = { width = 279.4, height = 431.8 }
+TabloidL = { width = 431.8, height = 279.4 }
+"B6 (JIS)" = { width = 128, height = 182 }
+"B6 (JIS)L" = { width = 182, height = 128 }
+"B5 (JIS)" = { width = 182, height = 257 }
+"B5 (JIS)L" = { width = 257, height = 182 }
+"B4 (JIS)" = { width = 257, height = 364 }
+"B4 (JIS)L" = { width = 364, height = 257 }
+"16 Kai" = { width = 185, height = 260 }
+"16 KaiL" = { width = 260, height = 185 }
+"32 Kai" = { width = 130, height = 185 }
+"32 KaiL" = { width = 185, height = 130 }
+"32 Kai Large" = { width = 145, height = 210 }
+"32 Kai LargeL" = { width = 210, height = 145 }
+"DL Envelope" = { width = 110, height = 220 }
+"C6 Envelope" = { width = 114, height = 162 }
+"C6/5 Envelope" = { width = 114, height = 229 }
+"C5 Envelope" = { width = 162, height = 229 }
+"C4 Envelope" = { width = 229, height = 324 }
+"#6 3/4 Envelope" = { width = 88.9, height = 165.1 }
+"#7 3/4 (Monarch) Envelope" = { width = 98.4, height = 190.5 }
+"#9 Envelope" = { width = 98.4, height = 225.4 }
+"#10 Envelope" = { width = 104.8, height = 241.3 }
+"#11 Envelope" = { width = 114.3, height = 263.5 }
+"#12 Envelope" = { width = 120.7, height = 279.4 }
+Postcard = { width = 100, height = 148 }
+PostcardL = { width = 148, height = 100 }
