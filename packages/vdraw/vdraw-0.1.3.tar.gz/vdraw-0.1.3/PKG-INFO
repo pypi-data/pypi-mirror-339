@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: vdraw
+Version: 0.1.3
+Summary: A library for working with segmentation masks
+Home-page: https://github.com/workerlv/vdraw
+Author: workerlv
+Project-URL: Documentation, https://vdraw-doc.streamlit.app/
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: summary
+
+# V-Draw
+
+V-Draw is a library with help tools for segmentation tasks.
+
+
+```
+pip install vdraw
+```
+
+Documentation can be found [here](https://vdraw-doc.streamlit.app/)
+
+Project is in development phase, but some usefull functions are already added.

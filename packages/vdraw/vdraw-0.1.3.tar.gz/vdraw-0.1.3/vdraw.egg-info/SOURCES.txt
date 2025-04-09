@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+vdraw/__init__.py
+vdraw.egg-info/PKG-INFO
+vdraw.egg-info/SOURCES.txt
+vdraw.egg-info/dependency_links.txt
+vdraw.egg-info/requires.txt
+vdraw.egg-info/top_level.txt
+vdraw/semantic_segmentation/__init__.py
+vdraw/semantic_segmentation/bbox.py
+vdraw/semantic_segmentation/utils/__init__.py
+vdraw/semantic_segmentation/utils/clean.py
+vdraw/semantic_segmentation/utils/draw.py
+vdraw/semantic_segmentation/utils/find.py
