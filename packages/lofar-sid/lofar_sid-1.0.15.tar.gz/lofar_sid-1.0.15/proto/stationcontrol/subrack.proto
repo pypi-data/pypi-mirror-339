@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+service Subrack {
+  rpc GetSubrackPower(GetSubrackRequest) returns (SubrackReply) {}
+  rpc SetSubrackPower(SetSubrackRequest) returns (SubrackReply) {}
+}
+
+enum Subrack_Power_Status {
+  Subrack_POWER_OFF = 0;
+  Subrack_POWER_ON = 1;
+}
+
+message SubrackIdentifier {
+  // e.g. "l0, l1,h0"
+  string subrack_id = 1;
+}
+
+message SetSubrackRequest {
+  SubrackIdentifier identifier = 1;
+  Subrack_Power_Status power_status = 2 ;
+}
+
+message GetSubrackRequest {
+  SubrackIdentifier identifier = 1;
+}
+
+message SubrackResult {
+  SubrackIdentifier identifier = 1;
+  Subrack_Power_Status power_status = 2 ;
+}
+
+message SubrackReply {
+  bool success = 1;
+  string exception = 2;
+  SubrackResult result = 3;
+}
