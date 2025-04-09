@@ -1,0 +1,10 @@
+django_allauth_suap/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_allauth_suap/apps.py,sha256=r6YE_PEfREnU42kljYyoeeFpTYGcxpvVpYA3dmxXpW4,155
+django_allauth_suap/provider.py,sha256=thh6kHeIvuFY9ysmoJ64WFcUnB3ilYK4DB3xunmPRfQ,1108
+django_allauth_suap/urls.py,sha256=g9brMe_3oXs2oTwVpPmH9cFYZuUebNqUUQa0OWdkBMY,174
+django_allauth_suap/views.py,sha256=0X1_eggwlZV67T3iYG_9TlmheqPxmNb2tU0br_06GYM,1235
+django_allauth_suap/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_allauth_suap-0.1.0.dist-info/METADATA,sha256=ke3ilwNcbv8wxYWUMo5I5VQj2ESy2OyVJ0bapujqW58,763
+django_allauth_suap-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+django_allauth_suap-0.1.0.dist-info/licenses/LICENSE,sha256=mRh08Nh0cygmfRUeRFA7HIk8l7eOJ3tTq2GwkWJFmu0,1069
+django_allauth_suap-0.1.0.dist-info/RECORD,,
