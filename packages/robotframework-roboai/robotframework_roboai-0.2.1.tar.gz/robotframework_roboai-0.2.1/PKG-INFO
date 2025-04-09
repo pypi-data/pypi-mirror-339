@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: robotframework-roboai
+Version: 0.2.1
+Summary: Custom AI-powered library for Robot Framework
+Author: Mrigendra Kumar
+License: MIT
+Classifier: Framework :: Robot Framework
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openai
+Requires-Dist: robotframework
+Requires-Dist: python-dotenv
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# 🤖 RoboAI – AI-Powered Library for Robot Framework
+
+**RoboAI** is a custom AI library for [Robot Framework](https://robotframework.org/) that integrates with OpenAI to bring intelligence to your automation tests. You can ask AI questions, classify text, generate dynamic data, and more — all directly within your `.robot` test cases.
+
+---
+
+## 🚀 Features
+
+- 💬 **Ask GPT** anything from your tests
+- 🧠 **Classify text** with AI logic (e.g., logs, messages, errors)
+- 🔑 Easy-to-use **custom keywords** for Robot Framework
+- 🔄 Extendable with more AI tools (Claude, Gemini, local LLMs)
+
+---
+
+## 🛠️ Installation
+
+```bash
+pip install robotframework-roboai
