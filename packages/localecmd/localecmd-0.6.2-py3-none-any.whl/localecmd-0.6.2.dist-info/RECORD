@@ -1,0 +1,15 @@
+localecmd/__init__.py,sha256=ZeCmkbKPFLocrlNR7KRl-i4KObk7D1DSnp7ppE8iv6g,3837
+localecmd/builtins.py,sha256=orNG8wGSiONK6xtSdE1oZooEl6U_EJGbEJpbeSjc5GA,4348
+localecmd/cli.py,sha256=l44wyCGHxkSqDPuZZP-ktl2GPnh_qYvsX1rNgoe_-f0,13909
+localecmd/doc_translation.py,sha256=PE_7A4G_ahSHWD9NZhRROkO4JcqAWclwIo6AK6xnQWM,3205
+localecmd/func.py,sha256=w07Baxy6uootULMgTFMlbwK8j-n-d999Y4h4cljUG6Y,6021
+localecmd/localisation.py,sha256=0Q_T2SRpSeb4Tdmxyvpozxwiu1OZDwlmPBCCZUjg2tk,4271
+localecmd/module.py,sha256=0B94aSRHgjFr7X4kvONVXPxD8vTIT7GqGJzNfpLGTTE,6761
+localecmd/parsing.py,sha256=MWRoNuilpJZnYlFfNeCUSoc0hPZYIE75iV0UgH8B318,15850
+localecmd/pot.py,sha256=W4C5QykSNR7Zcs095d7fWc25ze1Z6Oz6eOmJ6-GyzXM,6103
+localecmd/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+localecmd/topic.py,sha256=tB9mqdB_CmhWAit6orIfSGUj501GcqeR78VjKhPHmcc,5188
+localecmd-0.6.2.dist-info/METADATA,sha256=xgVU_4RUsPHsK22H1BEC1OaM1uKTWAh83Cw52-C8QNU,2168
+localecmd-0.6.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+localecmd-0.6.2.dist-info/licenses/LICENCE.txt,sha256=GWWd2bI-eiO89zCSLmbmNz0gvcypH1Arqyi-qLJvYDo,1519
+localecmd-0.6.2.dist-info/RECORD,,
