@@ -1,0 +1,11 @@
+PyMSQ/__init__.py,sha256=_OIcCh235JJakAZDfrfMygHu3nd_bPsRJsTdHOgxaDY,87
+PyMSQ/msq.py,sha256=3CLdz_-RpVjxjhIj2XLImanpn0cTcmqTcbOd1EbfxSE,83999
+PyMSQ/data/chr.txt,sha256=bAUCyo42b7khTc9KKN7YRh9aidx1flTdE-kur3EVtXw,332151
+PyMSQ/data/effects.txt,sha256=1AJvoPbFtojIiZmIOSM7tYvgTRqInNwPgICyq6xDiTc,333439
+PyMSQ/data/group.txt,sha256=PiTdGo0Ik-avWQwch0MaYRwfLa0BDbfckbRzH5t2iEk,2399
+PyMSQ/data/pedigree.txt,sha256=6NPiFbiiNGvGK6SWJK3YlG_IYJ5oY0xYRfVTMDY1G8Q,2400
+PyMSQ/data/phase.txt,sha256=HDr--susaKMu3zl4rcHTVQlBsEX-VwPw8J8cAldQRF4,5466420
+pymsq-0.1.1.dist-info/METADATA,sha256=r0wfITjWu5Gr9Mb0XM9dGnBzcgNpGENAjABBXRo2mdw,4470
+pymsq-0.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+pymsq-0.1.1.dist-info/top_level.txt,sha256=EgsGRetu90Pj6WP8XdHWbLbc0LNMVVnNgyxhTD-8utg,6
+pymsq-0.1.1.dist-info/RECORD,,
