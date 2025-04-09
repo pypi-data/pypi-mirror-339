@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: mathguru
+Version: 0.1.0
+Summary: A mathematics library for data science, development, and educational use.
+Home-page: https://github.com/narendrasingh-tech/mathguru
+Author: Narendra Singh
+Author-email: narendra@example.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/narendrasingh-tech/mathguru/issues
+Project-URL: Source Code, https://github.com/narendrasingh-tech/mathguru
+Keywords: math mathematics data-science education numpy
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.21.0
+
+# this is Very simple Math Library

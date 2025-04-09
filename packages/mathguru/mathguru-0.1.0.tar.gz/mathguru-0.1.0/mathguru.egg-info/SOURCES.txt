@@ -1,0 +1,12 @@
+CHANGELOG.txt
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mathguru/__init__.py
+mathguru.egg-info/PKG-INFO
+mathguru.egg-info/SOURCES.txt
+mathguru.egg-info/dependency_links.txt
+mathguru.egg-info/requires.txt
+mathguru.egg-info/top_level.txt
