@@ -1,0 +1,85 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llama-mlx-pipeline"
+version = "0.1.0"
+description = "Data processing pipeline using MLX (scraper, chunker, extractor)."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"} # Assuming MIT
+authors = [
+    {name = "Llama MLX Pipeline Team", email = "team@llamamlx.dev"}
+]
+keywords = ["mlx", "pipeline", "scraper", "chunker", "extractor", "llama"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    # From requirements.txt
+    "mlx>=0.5.0",
+    "mlx-lm>=0.1.0",
+    "beautifulsoup4>=4.9.3",
+    "PyMuPDF>=1.18.19",
+    "python-docx>=0.8.11",
+    "python-pptx>=0.6.21",
+    "python-frontmatter>=1.0.0",
+    "python-magic>=0.4.27",
+    "pytesseract>=0.3.8",
+    "pypandoc>=1.5",
+    "lxml>=4.6.3",
+    "pybase64>=1.2.1",
+    "Pillow>=8.3.2",
+    "numpy>=1.21.3",
+    "playwright>=1.22.0",
+    "requests>=2.26.0",
+    "requests-toolbelt>=0.9.1",
+    "requests-html>=0.10.0",
+    "cchardet>=2.1.7",
+    "url-normalize>=1.4.3",
+    "trafilatura>=1.4.0",
+    "html2text>=2020.1.16",
+    "python-slugify>=6.1.2",
+    "progressbar2>=4.0.0",
+    "dataclasses-json>=0.5.7",
+    "regex>=2021.10.8",
+    "validators>=0.20.0",
+    "iso8601>=1.0.2",
+    "tqdm>=4.62.3",
+    "cryptography>=36.0.0",
+    "pydantic>=1.8.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/llama-ai/llama-mlx-pipeline"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/llama_mlx_pipeline"]
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "C", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"] 
