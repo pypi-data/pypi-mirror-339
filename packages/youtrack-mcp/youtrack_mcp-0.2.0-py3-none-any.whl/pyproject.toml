@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "youtrack-mcp"
+version = "0.2.0"
+description = "YouTrack MCP Server for Model Context Protocol"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "Aleksej Vasilev", email = "a.vasilev@frox-it.de" }
+]
+dependencies = [
+    "mcp>=0.1.0",
+    "youtrack>=0.1.69"
+]
+
+[project.urls]
+Homepage = "https://github.com/av-frox/youtrack-mcp"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+include = [
+    "server.py",
+    "youtrack_api.py",
+    "main.py",
+    "README.md",
+    "LICENSE"
+]
+exclude = [
+    "tests/*",
+    "test_*.py",
+    "mock_*.py",
+    ".env*",
+    ".git*",
+    "Dockerfile",
+    "package.json",
+    "bin/*",
+    "MIGRATION.md"
+] 

@@ -1,0 +1,11 @@
+./PKG-INFO,sha256=JoTIfOoRSShTouqU_wsEwtnrSaclHKZK__5_XejXZv8,4968
+./README.md,sha256=-PkOj5vHt4La4q7n28tlQsq70ahE-HLa9OB5MHP8zAA,4593
+./main.py,sha256=Ria2BFlnqcRl4iJR2LqNb7ZvquzXNad3Tvby6KsFXBk,6474
+./pyproject.toml,sha256=S9XaAFn2_BonjyygXbt3qaciAlNkZ3cawVUZCAtFeQM,811
+./requirements.txt,sha256=ARXK6QHadlxsLl4leRHLAoeLDvV5futghyMzvvuojtk,72
+./server.py,sha256=7N_x-HuooXDkylBISY2Y9XtFmmM2k4dwQ0BUIoAuCCc,7719
+./setup.py,sha256=7XK0J0U-E5mxTDSy5UEGW4kJ6Ri9B7xq1eEpHIbYNYg,4934
+./youtrack_api.py,sha256=XZZpVwNIJJ-UFYUq8ObhRBihbAAlraKzZC1-B72NWAA,5474
+youtrack_mcp-0.2.0.dist-info/METADATA,sha256=JoTIfOoRSShTouqU_wsEwtnrSaclHKZK__5_XejXZv8,4968
+youtrack_mcp-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+youtrack_mcp-0.2.0.dist-info/RECORD,,
