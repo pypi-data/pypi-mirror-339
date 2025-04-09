@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: evaluate_post
+Version: 0.1.0
+Summary: A package for evaluating PDFs with text, image, and fact-checking modules.
+Home-page: https://github.com/yourusername/evaluate_post
+Author: Your Name
+Author-email: hunglm@gfigroup.io
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: langchain
+Requires-Dist: langchain-openai
+Requires-Dist: pymupdf
+Requires-Dist: pillow
+Requires-Dist: requests
+Requires-Dist: trafilatura
+
+# Evaluate Post
+
+Evaluate Post is a Python package for evaluating PDFs using text, image, and fact-checking modules. It leverages Azure OpenAI and other tools to provide comprehensive analysis.
+
+## Features
+- Text content evaluation
+- Image relevance analysis
+- Fact-checking with external sources
+
+## Installation
+
+```bash
+pip install evaluate_post
+```
+
+## Usage
+
+```python
+from evaluate_module import evaluate
+from langchain_openai import AzureChatOpenAI
+
+# Initialize models and evaluate a PDF
+# Example usage here
+```
+
+## License
+
+This project is licensed under the MIT License.
