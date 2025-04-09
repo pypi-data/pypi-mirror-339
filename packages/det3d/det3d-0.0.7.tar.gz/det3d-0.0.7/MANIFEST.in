@@ -1,0 +1,4 @@
+include readme.md
+include det3d/ops/iou3d_nms/src/*.cpp
+include det3d/ops/iou3d_nms/src/*.cu
+include det3d/ops/iou3d_nms/src/*.h
