@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pixy-sdk"
+version = "0.0.1"
+description = "A python sdk for pixy."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE.txt"}
+keywords = ["pixy", "GenAI", "Image Generation", "Subtitle", "Video Generation"]
+authors = [
+  {name = "Amirhossein Berenji", email = "ahberenji@gmail.com"},
+  {name = "Mahdi Kiani", email = "mahdikiany@gmail.com"}
+]
+maintainers = [
+  {name = "Amirhossein Berenji", email = "ahberenji@gmail.com"},
+  {name = "Mahdi Kiani", email = "mahdikiany@gmail.com"}
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = [
+  "pydantic>=2",
+  "httpx",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/pixiee-ai/pixy-sdk"
+"Bug Reports" = "https://github.com/pixiee-ai/pixy-sdk/issues"
+"Funding" = "https://github.com/pixiee-ai/pixy-sdk"
+"Say Thanks!" = "https://saythanks.io/to/mahdikiani"
+"Source" = "https://github.com/pixiee-ai/pixy-sdk"
+
+[project.scripts]
+pixy = "pixy:main"
+
+[tool.setuptools]
+package-data = {"pixy" = ["*.dat"]}
