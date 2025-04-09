@@ -1,0 +1,62 @@
+---
+site_name: "pid4cat Documentation"
+theme:
+  name: material
+  # palette:
+  #  scheme: slate
+  #  primary: cyan
+  features:
+    - content.tabs.link
+  favicon: images/favicon.svg
+  logo: images/logo-icon.svg
+
+# for adding extra css/js see
+# https://www.mkdocs.org/user-guide/customizing-your-theme/
+
+plugins:
+  - search
+  - mknotebooks:
+      execute: false
+  - mermaid2:
+      version: 11.4.1
+      # Optionally provide a local copy of mermaid.js (path relative to docs/)
+      # javascript: local-js-pkgs/mermaid.min.js
+  - mike:
+      # Multi-version support, https://github.com/jimporter/mike
+      canonical_version: "latest"
+      version_selector: true
+
+  # TODO rebuild docs on schema change see
+  # https://github.com/dalito/linkml-project-copier/issues/39
+  # - gen-files:
+  #     scripts:
+  #       - gen_pages.py  # or any other name or path
+
+watch:
+  - src/pid4cat_model/schema
+
+nav:
+  - Home: index.md
+  - Overview: overview.md
+  - Getting Started: getting-started.md
+  - Metadata Basics: metadata.md
+  - Metadata Schema: elements/overview.md
+  - Versioning: versioning.md
+  - APIs: apis.md
+  - Tools & Services: tools.md
+  - Open Data: open-data.md
+  - About: about.md
+
+# enable version selector for multi-version support
+extra:
+  version:
+    provider: mike
+    alias: true
+    default:
+      - stable
+
+exclude_docs: |
+  /templates-linkml/
+
+site_url: https://nfdi4cat.github.io/pid4cat-model
+repo_url: https://github.com/nfdi4cat/pid4cat-model
