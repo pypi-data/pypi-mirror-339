@@ -1,0 +1,8 @@
+f90nml
+h5py
+matplotlib
+numpy>=1.21.1
+scipy>=1.7.0
+
+[:python_version < "3.12"]
+coilpy
