@@ -1,0 +1,2 @@
+[console_scripts]
+opentext2sql = opentext2sql.easy_start:start
