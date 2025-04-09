@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: varunsai-weather
+Version: 0.1.1
+Summary: My personal weather MCP server.
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.6.0
+
+# varunsai-weather
+
+🚀 Personal Weather MCP Server by Varun Sai Bandi.
+
+This package allows you to run a personal weather server using MCP. You can connect this server with your AI tools, desktop apps, or IoT devices.
+
+## Installation
+
+```bash
+pip install varunsai-weather
