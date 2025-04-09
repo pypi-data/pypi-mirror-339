@@ -1,0 +1,91 @@
+{% macro multi_input(type, heading, elements, version=1) %}
+<div class="border-top mb-3 row">
+    <label class="col-sm-12 col-form-label">
+        <div class="d-flex justify-content-between align-items-center">
+            <b>{{ heading }}</b>
+            <a href="#" class="add-multi-input btn btn-md" title="Add {{ heading }}">
+                <span class="bi bi-plus-circle"></span>
+            </a>
+        </div>
+    </label>
+</div>
+{% for item in elements or [None] %}
+<div class="multi-input" data-name="{{ type }}">
+    {% if version == 1 %}
+    <div class="mb-3 row">
+        <label class="col-lg-2 col-form-label">ID
+            <a href="#" class="badge text-dark remove-multi-field">
+                <span class="bi bi-trash"></span>
+            </a>
+        </label>
+        <div class="col-lg-4">
+            <input type="text" class="form-control" data-key="id" value="{{ item['id'] if item['id'] }}">
+        </div>
+        <label class="col-lg-2 col-form-label">URL</label>
+        <div class="col-lg-4">
+            <input type="text" class="form-control" data-key="url" value="{{ item['url'] if item['url'] }}">
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label class="col-lg-2 col-form-label">Value</label>
+        <div class="col-lg-10 {{'pb-2 border-bottom' if loop.nextitem }}">
+            <input type="text" class="form-control" data-key="value" value="{{ item['value'] if item['value'] }}">
+        </div>
+    </div>
+    {% elif version == 2 %}
+    <div class="mb-3 row {{'pb-2 border-bottom' if loop.nextitem }}">
+        <label class="col-lg-2 col-form-label">
+            Fullname
+        </label>
+        <div class="col-lg-4">
+            <input type="text" class="form-control" data-key="fullname"
+                value="{{ item['fullname'] if item['fullname'] }}">
+        </div>
+        <label class="col-lg-1 col-form-label">URL</label>
+        <div class="col-lg-4 ">
+            <input type="text" class="form-control" data-key="url" value="{{ item['url'] if item['url'] }}">
+        </div>
+        <div class="col-lg-1 mt-lg-0 mt-2">
+            <a href="#" class="btn btn-md remove-multi-field">
+                <span class="bi bi-trash"></span>
+            </a>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endfor %}
+{% endmacro %}
+
+{% macro xpath_or_value_input(heading, input_name, item, collection_parser, is_subsection=True) %}
+<div class="mb-1 row gap-1 align-items-center xpath-or-value-input">
+    <label class="col-lg-2 col-form-label">
+        {% if is_subsection %}
+        {{ heading }}
+        {% else %}
+        <b>{{ heading }}</b>
+        {% endif %}
+    </label>
+    <div class="col-lg-5">
+        <div class="form-floating">
+            <input type="text" class="form-control" id="valueInput_{{ input_name }}" data-name="{{ input_name }}"
+                data-type="value" value="{{ item['value'] if item['value'] }}" placeholder="Value">
+            <label for="valueInput_{{ input_name }}">Value</label>
+        </div>
+    </div>
+    <div class="col-lg-4 position-relative">
+        <div class="form-floating">
+            <input type="text" class="form-control" id="xpathInput_{{ input_name }}" data-name="{{ input_name }}"
+                data-type="xpath" value="{{ item['xpath'] if item['xpath'] }}" placeholder="XPath">
+            <label for="xpathInput_{{ input_name }}">XPath</label>
+        </div>
+        <a href="#" class="show-xpath-in-tei-explorer" title="Hitrate of xpath (in %) - CLICK to see results"
+            data-url="{{ url_for('xpath_parser_modal', projectname=project.name, title=collection_title) }}"
+            data-xpath="{{ item['xpath'] }}">
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"
+                data-bs-toggle="tooltip" data-bs-placement="top" title="Hitrate of XPath in percentage">
+                {{ collection_parser.test_xpath(item['xpath'])['count']['percentage'] if item['xpath'] else '-' }}
+            </span>
+        </a>
+    </div>
+</div>
+{% endmacro %}

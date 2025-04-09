@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h3>Time Sections</h3>
+<form>
+    <div class="mb-3 mt-3">
+        <label for="input_value" class="form-label">Year:</label>
+        <input type="text" class="form-control" id="input_value" placeholder="Enter a value" name="input_value" value="{{ eingabewert }}">
+    </div>
+    <button type="submit" class="btn btn-primary">Enter</button>
+</form>
+
+
+<h5>Year belongs to : {{ rueckgabewert }}</h5>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h3>Reverse input</h3>
+<form>
+    <div class="mb-3 mt-3">
+        <label for="input_value" class="form-label">Input value:</label>
+        <input type="text" class="form-control" id="input_value" placeholder="Enter a value" name="input_value" value="{{ converted_value }}">
+    </div>
+    <button type="submit" class="btn btn-primary">Convert</button>
+</form>
+{% if converted_value %}
+
+<h5>Reversed result: {{ converted_value }}</h5>
+
+{% endif %}
+{% endblock %}

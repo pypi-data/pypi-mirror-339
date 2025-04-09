@@ -1,0 +1,7 @@
+click
+flask
+flask_json
+tg_model>=3.6.0
+tgclients==0.17.0
+tgadmin
+nextcloud-api-wrapper

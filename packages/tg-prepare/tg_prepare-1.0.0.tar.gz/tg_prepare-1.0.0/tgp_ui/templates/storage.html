@@ -1,0 +1,49 @@
+{% block content %}
+<div class="row mb-4">
+    <ul class="nav nav-pills" id="" role="tablist">
+        <li class="nav-item me-2" role="presentation">
+            <button class="nav-link" data-bs-toggle="tab" href="#tab_upload" role="tab" aria-controls="tab_upload"
+                aria-selected="false">
+                <i class="bi bi-upload"></i>
+                Upload
+            </button>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab_nextcloud" role="tab" aria-controls="tab_nextcloud"
+                aria-selected="false" data-url="{{ url_for('nextcloud_tab') }}" data-projectname="{{ project.name }}">
+                <i class="bi bi-cloud"></i>
+                Nextcloud
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab_files" role="tab" aria-controls="tab_files"
+                aria-selected="false">
+                <i class="bi bi-folder2-open"></i>
+                Local files
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="row">
+    <div class="tab-content pt-2" id="tab-content">
+        <div class="tab-pane {{'active' if tab=='upload' }}" id="tab_upload" role="tabpanel">
+            {% include 'file_upload.html' %}
+        </div>
+        <div class="tab-pane {{'active' if tab=='files' }}" id="tab_files" role="tabpanel">
+            {% for item in project.list_files_and_folders() %}
+            {% include 'file_tree.html' %}
+            {% endfor %}
+        </div>
+        <div class="tab-pane {{'active' if tab=='nextcloud' }}" id="tab_nextcloud" role="tabpanel"
+            data-projectname="{{ project.name }}">
+        </div>
+    </div>
+</div>
+
+<div class=" modal fade" id="xpathParserModal" tabindex="-1" aria-labelledby="xpathParserModalLabel" aria-hidden="true">
+</div>
+
+<div class="modal fade" id="teiExplorer" tabindex="-1" aria-labelledby="teiExplorerLabel" aria-hidden="true">
+</div>
+
+{% endblock %}

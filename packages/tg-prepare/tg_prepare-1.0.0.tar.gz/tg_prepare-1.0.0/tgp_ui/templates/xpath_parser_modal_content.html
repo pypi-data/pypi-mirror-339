@@ -1,0 +1,37 @@
+<div class="modal-dialog modal-xl">
+    <div class="modal-content">
+        <div class="modal-header">
+            <form class="row g-3" id="parseXPath" data-url="{{ request.base_url }}">
+                <div class="col-auto">
+                    <h5 id="xpathParserModalLabel">Parse xpath:</h5>
+                </div>
+
+                <div class="col-auto">
+                    <input type="text" class="form-control" placeholder="xpath" name="xpath"
+                        value="{{ request.form.get('xpath') if request.form.get('xpath') }}">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-secondary mb-3">Run</button>
+                </div>
+            </form>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            {% set elements = collection_parser.elements %}
+            <div class="row">
+                {% for element in elements %}
+                <div class="col-3 d-flex">
+                    <span class="p-0 ps-3 m-0 small text-muted">
+                        <b>{{ element['file']['filename'] }}</b>
+                        <br>
+                        {% if request.form.get("xpath") %}
+                        {{ element['tei_parser'].find(request.form.get("xpath")).text }}
+                        {% endif %}
+                        &nbsp;
+                    </span>
+                </div>
+                {% endfor%}
+            </div>
+        </div>
+    </div>
+</div>

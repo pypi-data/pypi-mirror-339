@@ -1,0 +1,48 @@
+<div class="row mb-3">
+    <div class="col-12">
+        <div class="input-group">
+            <input type="text" class="form-control no-serialization" name="xpath" placeholder="XPath..."
+                aria-label="XPath-Ausdruck">
+            <button class="btn btn-primary check-xpath" id="button-check-xpath"
+                data-url="{{url_for('check_xpath', projectname=project.name, collectionname=collection_title)}}">
+                <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                <span class="bi bi-search"></span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col-8">
+        <div class="row">
+            {% for file in file_list %}
+            <div class="col-xxl-4 col-lg-6 col-md-12 mb-2">
+                <div class="card mb-2">
+                    <div class="card-body p-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-sm btn-outline-secondary load-tei-content"
+                                    title="Display TEI Header" data-url="{{ url_for('load_tei_content') }}"
+                                    data-path="{{ file['fullpath'] }}" data-type="header" data-heading="TEI Header">
+                                    <span class="bi bi-file-earmark-code"></span>
+                                </a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary load-tei-content"
+                                    title="Display TEI Text" data-url="{{ url_for('load_tei_content') }}"
+                                    data-path="{{ file['fullpath'] }}" data-type="text" data-heading="Text">
+                                    <span class="bi bi-file-earmark-text"></span>
+                                </a>
+                            </div>
+                            <span class="ms-2 text-truncate">{{ file.name_stripped }}</span>
+                        </div>
+                        <div class="xpath-result mt-2" data-name="{{ file.name }}"></div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="output card" style="max-height: 800px; overflow-x: auto;">
+            <div class="card-body"></div>
+        </div>
+    </div>
+</div>

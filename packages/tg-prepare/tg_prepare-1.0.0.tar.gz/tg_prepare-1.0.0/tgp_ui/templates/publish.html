@@ -1,0 +1,120 @@
+<div class="col-sm-6">
+    <div class="row">
+
+        <h4><b>Publish</b> project to <b>TextGrid-Testinstance</b></h4>
+    </div>
+    {% set tg_session_id = project.main_config.get_tg_session_id('test')%}
+    <form class="row border-bottom pb-3 tab-submit" method="POST"
+        action="{{ url_for('save_session_id', projectname=project.name, instance='test') }}" method="POST">
+        <div class="col-6">
+            <input type="text" class="form-control" name="tg_auth_session_id" placeholder="TgAuth Session ID"
+                value="{{tg_session_id if tg_session_id}}">
+        </div>
+        <div class="col-6">
+            <button type="submit" class="btn btn-primary">
+                <span class="bi bi-floppy2-fill"></span>
+                <span class="spinner-border spinner-border-sm" style="display:none;" role="status"
+                    aria-hidden="true"></span>
+            </button>
+        </div>
+    </form>
+    {% if tg_session_id %}
+    <div class="row text-start">
+        <span class="py-2">Select from existing projects</span>
+        {% for tg_project in project.get_tgp('test').get_tg_projects() %}
+        <div class="tg-project-row">
+            <a href="#" class="text-dark select-tg-project" title="Select project"
+                data-url="{{ url_for('save_tg_project_id', projectname=project.name, instance='test') }}"
+                data-tg_project_id="{{ tg_project.id }}">
+                {% set tg_project_id = project.main_config.get_tg_project_id('test')%}
+                {% if tg_project_id == tg_project.id %}
+                <span class="bi bi-circle-fill"></span>
+                {% else %}
+                <span class="bi bi-circle"></span>
+                {% endif %}
+            </a>
+            <b>{{ tg_project.name }}</b>
+            -
+            <span class="tgProjectHits">{{ tg_project.contents }}</span> <span>Elements</span>
+            (<i>{{ tg_project.id }}</i>)
+            <a href="#" class="text-dark delete-tg-project" title="Delete project"
+                data-url="{{ url_for('delete_tg_project_id', projectname=project.name, instance='test', tg_project_id= tg_project.id ) }}"
+                data-hits_url="{{ url_for('get_tg_project_hits', projectname=project.name, instance='test', tg_project_id= tg_project.id ) }}">
+                <span class="bi bi-trash text-danger"></span>
+                <span class="spinner-border spinner-border-sm" style="display:none;" role="status"
+                    aria-hidden="true"></span>
+            </a>
+        </div>
+        {% endfor%}
+        <span class="py-2">
+            or create a new project:
+        </span>
+    </div>
+    <form class="row border-bottom pb-3 tab-submit" method="POST"
+        action="{{ url_for('create_tg_project', projectname=project.name, instance='test') }}" method="POST">
+        <div class="col-6">
+            <input type="text" class="form-control" name="tg_projectname" placeholder="TG Projectname">
+        </div>
+        <div class="col-6">
+            <button type="submit" class="btn btn-primary">
+                <span class="bi bi-pencil-square"></span>
+                <span class="spinner-border spinner-border-sm" style="display:none;" role="status"
+                    aria-hidden="true"></span>
+            </button>
+        </div>
+    </form>
+    <form class="row pt-3 tab-submit" method="POST"
+        action="{{ url_for('publish_project', projectname=project.name, instance='test') }}" method="POST">
+        <div class="col-6">
+            <h5>Publish project</h5>
+        </div>
+        {% if project.main_config.get_tg_project_id('test') %}
+        <div class="col-6">
+            <button type="submit" class="btn btn-primary">
+                <span class="bi bi-rocket-takeoff"></span>
+                <span class="spinner-border spinner-border-sm" style="display:none;" role="status"
+                    aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="col-12 bg-light m-2 p-2 fst-bold">
+            <p>
+                <b>Whats next?</b>
+            <ul class="list-group list-group-numbered">
+                <li class="list-group-item">Go to <a href="https://test.textgridrep.org/projects">Testinstance</a></li>
+                <li class="list-group-item">Display 'Unpublished projects' <i>My TextGrid/Unpublished Data</i></li>
+                <li class="list-group-item">Check if everything looks as favored</li>
+            </ul>
+            </p>
+        </div>
+        {% else %}
+        <div class="col-12 bg-light m-2 p-2 fst-italic">
+            <h5>Attention</h5>
+            <p>
+                <b>You need to select a TextGrid project in order to publish your project to
+                    TextGrid-Testinstance!</b>
+            </p>
+        </div>
+        {% endif %}
+    </form>
+    {% else %}
+    <div class="bg-light m-2 p-2 fst-italic">
+        <h5>Attention</h5>
+        <p>
+            <b>You need to provide a "TgAuth Session ID" in order to publish your project to
+                TextGrid-Testinstance!</b>
+        <p>
+            1. Please first go to <a
+                href="https://test.textgridlab.org/1.0/Shibboleth.sso/Login?target=/1.0/secure/TextGrid-WebAuth.php?authZinstance=test.textgridlab.org"
+                target="_blank">this page</a>!
+            (You may need to log in via DARIAH-AAI)
+        </p>
+        <p>
+            2. Then click on "More Details" and copy the "TgAuth Session ID" to
+            your clipboard.
+        </p>
+        <p>
+            3. Finally, paste it into the input field above and save it.
+        </p>
+    </div>
+    {% endif %}
+</div>

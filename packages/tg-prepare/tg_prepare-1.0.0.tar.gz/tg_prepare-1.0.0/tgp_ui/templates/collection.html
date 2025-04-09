@@ -1,0 +1,194 @@
+{% from "macros.html" import multi_input, xpath_or_value_input with context %}
+<div class="row mb-4 text-center">
+    <h5>{{ collection.long_title }}</h5>
+</div>
+<form method="POST" class="row collection-form"
+    action="{{ url_for('save_collection', projectname=project.name, title=collection_title) }}" method="POST">
+    <div class="row mb-1">
+        <ul class="nav nav-tabs w-100 align-items-stretch" id="collectionTab{{ collection.short_title }}"
+            role="tablist">
+            <li class="nav-item col-12 col-lg-2 mb-2 mb-md-0" role="presentation">
+                <button class="nav-link text-dark active w-100 text-primary"
+                    id="fixedAttributesTab_{{ collection_title }}" data-bs-toggle="tab"
+                    data-bs-target="#fixedAttributesContent_{{ collection_title }}" type="button" role="tab"
+                    aria-controls="fixedAttributesContent_{{ collection_title }}" aria-selected="true">
+                    Project
+                </button>
+            </li>
+            <li class="nav-item col-12 col-lg-2 mb-2 mb-md-0" role="presentation">
+                <button class="nav-link text-dark w-100" id="classificationAttributesTab_{{ collection_title }}"
+                    data-bs-toggle="tab" data-bs-target="#classificationAttributesContent_{{ collection_title }}"
+                    type="button" role="tab" aria-controls="classificationAttributesContent_{{ collection_title }}"
+                    aria-selected="false">
+                    Classifications
+                </button>
+            </li>
+            <li class="nav-item col-12 col-lg-2 mb-2 mb-md-0" role="presentation">
+                <button class="nav-link text-dark w-100" id="workAttributesTab_{{ collection_title }}"
+                    data-bs-toggle="tab" data-bs-target="#workAttributesContent_{{ collection_title }}" type="button"
+                    role="tab" aria-controls="workAttributesContent_{{ collection_title }}" aria-selected="false">
+                    Work
+                </button>
+            </li>
+            <li class="nav-item col-12 col-lg-2 mb-2 mb-md-0" role="presentation">
+                <button class="nav-link text-dark w-100" id="editionAttributesTab_{{ collection_title }}"
+                    data-bs-toggle="tab" data-bs-target="#editionAttributesContent_{{ collection_title }}" type="button"
+                    role="tab" aria-controls="editionAttributesContent_{{ collection_title }}" aria-selected="false">
+                    Edition
+                </button>
+            </li>
+            <li class="nav-item col-12 col-lg-2 mb-2 mb-md-0" role="presentation">
+                <button class="nav-link text-dark w-100" id="eltecAttributesTab_{{ collection_title }}"
+                    data-bs-toggle="tab" data-bs-target="#eltecAttributesContent_{{ collection_title }}" type="button"
+                    role="tab" aria-controls="eltecAttributesContent_{{ collection_title }}" aria-selected="false">
+                    ELTEC specifications
+                </button>
+            </li>
+            <li class="nav-item col-12 col-lg-2 mb-2 mb-md-0" role="presentation">
+                <button class="nav-link text-dark w-100 tei_explorer" id="teiExplorer_{{ collection_title }}"
+                    data-bs-toggle="tab" data-bs-target="#teiExplorerContent_{{ collection_title }}" type="button"
+                    role="tab" aria-controls="teiExplorerContent_{{ collection_title }}" aria-selected="false"
+                    data-url="{{url_for('tei_explorer', projectname=project.name, title=collection_title)}}">
+                    TEI explorer
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="row my-2">
+        <li class="nav-item col-12 col-lg-2 mt-2 mt-md-0" role="presentation">
+            <button type="submit" class="btn btn-success w-100">
+                <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                <span>Save</span>
+            </button>
+        </li>
+    </div>
+    <div class="row tab-content" id="collectionTabContent{{ collection.short_title }}">
+        <div class="tab-pane fade show active" id="fixedAttributesContent_{{ collection_title }}" role="tabpanel"
+            aria-labelledby="fixedAttributesTab_{{ collection_title }}">
+            <div class="col-12">
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">Long title</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="long_title" value="{{ collection.long_title }}">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">Short title</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="short_title" value="{{ collection.short_title }}">
+                    </div>
+                </div>
+                {{ multi_input('rights_holder', 'Rights Holder', collection.rights_holder, version=2) }}
+                {{ multi_input('collector', 'Collector', collection.collector, version=2) }}
+            </div>
+        </div>
+        {% set collection_parser = project.get_collection_parser(collection) %}
+        <div class="tab-pane fade" id="workAttributesContent_{{ collection_title }}" role="tabpanel"
+            aria-labelledby="workAttributesTab_{{ collection_title }}">
+            <div class="col-12">
+                <div class="mb-3 row">
+                    <label class="col-sm-12 col-form-label"><b>General</b>
+                    </label>
+                </div>
+                {{ xpath_or_value_input('ID', 'work_id',
+                collection.work_id, collection_parser) }}
+                {{ xpath_or_value_input('Title', 'work_title', collection.work_title, collection_parser) }}
+                {{ xpath_or_value_input('Genre', 'genre', collection.genre, collection_parser) }}
+                {{ xpath_or_value_input('Place of publication', 'work_publication_place',
+                collection.work_publication_place, collection_parser) }}
+
+                <div class="mb-3 row">
+                    <label class="col-sm-12 col-form-label"><b>Author</b>
+                    </label>
+                </div>
+                {{ xpath_or_value_input('ID', 'author_id', collection.author_id, collection_parser)
+                }}
+                {{ xpath_or_value_input('Firstname', 'author_firstname', collection.author_firstname, collection_parser)
+                }}
+                {{ xpath_or_value_input('Lastname', 'author_lastname', collection.author_lastname, collection_parser) }}
+                {{ xpath_or_value_input('Fullname', 'author_fullname', collection.author_fullname, collection_parser) }}
+                <div class="mb-3 row">
+                    <label class="col-sm-12 col-form-label"><b>Date of Creation</b>
+                    </label>
+                </div>
+                {{ xpath_or_value_input('Date', 'work_publication_date',
+                collection.work_publication_date,
+                collection_parser) }}
+                {{ xpath_or_value_input('notBefore', 'work_publication_notBefore',
+                collection.work_publication_notBefore,
+                collection_parser) }}
+                {{ xpath_or_value_input('notAfter', 'work_publication_notAfter',
+                collection.work_publication_notAfter,
+                collection_parser) }}
+            </div>
+        </div>
+        <div class="tab-pane fade" id="classificationAttributesContent_{{ collection_title }}" role="tabpanel"
+            aria-labelledby="classificationAttributesTab_{{ collection_title }}">
+            <div class="col-12">
+                {{ multi_input('basic_classifications', 'Basic classification', collection.basic_classifications,
+                version=1)
+                }}
+                {{ multi_input('gnd_subjects', 'GND Subject Areas', collection.gnd_subjects, version=1) }}
+
+            </div>
+        </div>
+        <div class="tab-pane fade" id="editionAttributesContent_{{ collection_title }}" role="tabpanel"
+            aria-labelledby="editionAttributesTab_{{ collection_title }}">
+            <div class="col-12">
+                <div class="mb-3 row">
+                    <label class="col-sm-12 col-form-label"><b>General</b>
+                    </label>
+                </div>
+                {{ xpath_or_value_input('Title', 'edition_title', collection.edition_title,
+                collection_parser) }}
+                {{ xpath_or_value_input('Author ID', 'edition_author', collection.edition_author,
+                collection_parser) }}
+                {{ xpath_or_value_input('Language', 'language', collection.language, collection_parser) }}
+                {{ xpath_or_value_input('Wordcount', 'wordcount', collection.wordcount, collection_parser) }}
+
+                <div class="mb-3 row">
+                    <label class="col-sm-12 col-form-label"><i>Publication</i>
+                    </label>
+                </div>
+                {{ xpath_or_value_input('Date', 'edition_publication_date',
+                collection.edition_publication_date, collection_parser) }}
+                {{ xpath_or_value_input('Place', 'edition_publication_place',
+                collection.edition_publication_place, collection_parser) }}
+                <div class="mb-3 row">
+                    <label class="col-sm-12 col-form-label"><i>License</i>
+                    </label>
+                </div>
+                {{ xpath_or_value_input('Title', 'edition_license_title',
+                collection.edition_license_title, collection_parser) }}
+                {{ xpath_or_value_input('URL', 'edition_license_url',
+                collection.edition_license_url, collection_parser) }}
+
+            </div>
+        </div>
+        <div class="tab-pane fade" id="eltecAttributesContent_{{ collection_title }}" role="tabpanel"
+            aria-labelledby="eltecAttributesTab_{{ collection_title }}">
+            <div class="col-12">
+                <div class="mb-3 row">
+                    <label class="col-sm-12 col-form-label"><b>General</b>
+                    </label>
+                </div>
+                {{ xpath_or_value_input('Author gender', 'eltec_author_gender', collection.eltec_author_gender,
+                collection_parser) }}
+                {{ xpath_or_value_input('Reprint count', 'eltec_reprintCount', collection.eltec_reprintCount,
+                collection_parser) }}
+                {{ xpath_or_value_input('Author gender', 'eltec_author_gender', collection.eltec_author_gender,
+                collection_parser) }}
+                {{ xpath_or_value_input('Timeslot', 'eltec_time_slot', collection.eltec_time_slot,
+                collection_parser) }}
+                {{ xpath_or_value_input('Corpus collection', 'eltec_corpus', collection.eltec_corpus,
+                collection_parser) }}
+                {{ xpath_or_value_input('Size', 'eltec_size', collection.eltec_size,
+                collection_parser) }}
+            </div>
+        </div>
+
+        <div class="tab-pane fade tei-explorer-content" id="teiExplorerContent_{{ collection_title }}" role="tabpanel"
+            aria-labelledby="teiExplorer_{{ collection_title }}">TEI
+            explorer</div>
+</form>
+</div>

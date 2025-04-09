@@ -1,0 +1,73 @@
+{% extends 'layout2.html' %}
+{% block content %}
+<div class="row row-cols-xxl-6 row-cols-lg-4 row-cols-md-2">
+    {% for project in projects%}
+    <div class="card text-center m-1">
+        <div class="card-body">
+            <h5 class="card-title">{{ project.name }}</h5>
+            <a class="btn btn-secondary btn-forward" href="project/{{ project.name }}" title="Edit project">
+                <span class="bi bi-pencil-square"></span>
+            </a>
+            <a class="btn btn-danger btn-forward" title="Delete project" data-bs-toggle="modal"
+                data-bs-target="#deleteProject" data-projectname="{{ project.name }}">
+                <span class="bi bi-trash"></span>
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="card text-center mx-1">
+        <div class="card-body">
+            <h5 class="card-title">New project</h5>
+            <a class="btn btn-secondary" id="createNewProject" title="Add a new project" data-bs-toggle="modal"
+                data-bs-target="#newProject">
+                <span class="bi-plus-circle"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="newProject" tabindex="-1" aria-labelledby="newProjectLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="{{ url_for('new_project') }}" method="POST">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newProjectLabel">Create new Project</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="project" name="projectname"
+                            placeholder="Projectname" value="{{ projectname }}">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteProject" tabindex="-1" aria-labelledby="deleteProjectLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="{{ url_for('projects') }}" method="POST">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteProjectLabel">
+                        <span>Delete Project:</span>
+                        <i class="projectname"></i>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                    <input type="hidden" name="delete" value="true">
+                    <input type="hidden" name="projectname">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
