@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-deepthinking = mcp_deepthinking:main
