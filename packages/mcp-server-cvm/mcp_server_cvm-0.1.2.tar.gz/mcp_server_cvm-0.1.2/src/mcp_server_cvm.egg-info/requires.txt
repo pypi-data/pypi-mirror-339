@@ -1,0 +1,4 @@
+mcp>=1.0.0
+tencentcloud-sdk-python-common
+tencentcloud-sdk-python-cvm
+tencentcloud-sdk-python-vpc
