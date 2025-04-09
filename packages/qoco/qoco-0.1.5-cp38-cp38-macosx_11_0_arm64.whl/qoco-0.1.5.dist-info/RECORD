@@ -1,0 +1,7 @@
+qoco-0.1.5.dist-info/RECORD,,
+qoco-0.1.5.dist-info/WHEEL,sha256=e866hv7yNJ_T12xjD8b55JO_Epn_ySKlJm4M2IOihtU,112
+qoco-0.1.5.dist-info/METADATA,sha256=OdN8ZruR12IDTigBg5rkB1pFlTnkwak-rLhoYntmkNY,2618
+qoco-0.1.5.dist-info/licenses/LICENSE,sha256=bYBf1DlsVsabi8d1apYUB0wYrH9h1MR2xjtqyee5Ddo,1499
+qoco/interface.py,sha256=Z3dxzqPvIti5lr7jqeV4CLKzZSFxn9ymmxi14OVSv1Y,4074
+qoco/__init__.py,sha256=iEY2wZl33BBZFW-Okw-_LIfzHejnBCxejp0MGvRchec,32
+qoco/qoco_ext.cpython-38-darwin.so,sha256=5Dm2pIgesruNBL5cOttaoJbloWyyu8-3UONHJA_-ZNE,290064
