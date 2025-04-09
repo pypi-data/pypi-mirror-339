@@ -1,0 +1,70 @@
+Metadata-Version: 2.4
+Name: reasonchip
+Version: 0.0.2
+Summary: Agentic workflow tools
+Author: ReasonChip
+Project-URL: Homepage, https://www.reasonchip.io/
+Project-URL: Source Code, https://github.com/SouthPatron/reasonchip
+Project-URL: Bug Tracker, https://github.com/SouthPatron/reasonchip/issues/
+Project-URL: Documentation, https://www.reasonchip.io/docs/
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Distributed Computing
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setproctitle>=1.3.4
+Requires-Dist: urllib3<3.0.0,>=1.25.3
+Requires-Dist: python-dateutil>=2.8.2
+Requires-Dist: aiohttp>=3.8.4
+Requires-Dist: aiohttp-retry>=2.8.3
+Requires-Dist: pydantic>=2
+Requires-Dist: typing-extensions>=4.7.1
+Requires-Dist: ruamel.yaml>=0.18.6
+Requires-Dist: dotty_dict>=1.3.1
+Requires-Dist: munch>=4.0.0
+Requires-Dist: fastapi>=0.115.6
+Requires-Dist: hypercorn[h3]>=0.17.3
+Requires-Dist: grpcio>=1.68.1
+Requires-Dist: grpcio-reflection>=1.68.1
+Requires-Dist: grpcio-tools>=1.68.1
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: openai>=1.61.1
+Requires-Dist: redis[hiredis]>=5.2.1
+Requires-Dist: python-telegram-bot>=21.10
+Dynamic: license-file
+
+# ReasonChip
+
+Open source agentic workflow automation software
+
+## Quick links
+
+- [QuickStart](https://www.reasonchip.io/docs/quickstart/)
+- [Documentation](https://www.reasonchip.io/docs/)
+- [Website](https://www.reasonchip.io/)
+
+## Installation
+
+Easy peasy, lemon squeezy
+
+```
+# pip install reasonchip
+```
+
+## Example workflows
+
+They're right here in the source tree: [Examples](./examples/README.md)
+
+
+## Additional Links
+
+- [PyPI package](https://pypi.org/project/reasonchip/)
+
+
