@@ -1,0 +1,6 @@
+{
+  "resource": true,
+  "name": "vcd",
+  "version": "1.1.0-alpha.1744113740",
+  "server": "https://github.com/vmware/terraform-provider-vcd/releases/download/v3.14.1/"
+}
