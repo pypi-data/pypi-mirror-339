@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+phys_torch/__init__.py
+phys_torch.egg-info/PKG-INFO
+phys_torch.egg-info/SOURCES.txt
+phys_torch.egg-info/dependency_links.txt
+phys_torch.egg-info/requires.txt
+phys_torch.egg-info/top_level.txt
+tests/test_phystorch.py
