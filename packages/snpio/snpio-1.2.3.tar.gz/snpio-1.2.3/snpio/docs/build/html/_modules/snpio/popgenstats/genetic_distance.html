@@ -1,0 +1,571 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>snpio.popgenstats.genetic_distance &mdash; SNPio 1.2.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=859da57e" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=590429e0"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            SNPio
+              <img src="../../../_static/snpio_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../example_script.html">Example script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pop_gen_statistics.html">PopGenStatistics Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">snpio</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">SNPio</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">snpio.popgenstats.genetic_distance</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for snpio.popgenstats.genetic_distance</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">multiprocessing</span> <span class="k">as</span> <span class="nn">mp</span>
+<span class="kn">from</span> <span class="nn">concurrent.futures</span> <span class="kn">import</span> <span class="n">ThreadPoolExecutor</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">from</span> <span class="nn">snpio.utils.logging</span> <span class="kn">import</span> <span class="n">LoggerManager</span>
+
+
+<div class="viewcode-block" id="GeneticDistance">
+<a class="viewcode-back" href="../../../snpio.popgenstats.html#snpio.popgenstats.genetic_distance.GeneticDistance">[docs]</a>
+<span class="k">class</span> <span class="nc">GeneticDistance</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Class for computing pairwise Nei&#39;s genetic distance between populations with optional permutation and bootstrap inference.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">genotype_data</span><span class="p">,</span> <span class="n">plotter</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">genotype_data</span> <span class="o">=</span> <span class="n">genotype_data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plotter</span> <span class="o">=</span> <span class="n">plotter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">outdir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">genotype_data</span><span class="o">.</span><span class="n">prefix</span><span class="si">}</span><span class="s2">_output&quot;</span><span class="p">,</span> <span class="s2">&quot;analysis&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">outdir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">logman</span> <span class="o">=</span> <span class="n">LoggerManager</span><span class="p">(</span>
+            <span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">genotype_data</span><span class="o">.</span><span class="n">prefix</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="n">debug</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logman</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_clean_inds</span><span class="p">(</span><span class="n">inds</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">ind</span> <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="n">inds</span> <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ind</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">))]</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_get_alleles</span><span class="p">(</span><span class="n">str_list</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">str_list</span><span class="p">],</span> <span class="p">[])</span>
+
+    <span class="k">def</span> <span class="nf">_calculate_allele_freqs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">matrix</span><span class="p">,</span> <span class="n">indices</span><span class="p">):</span>
+        <span class="n">n_loci</span> <span class="o">=</span> <span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">allele_freqs</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">for</span> <span class="n">locus</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_loci</span><span class="p">):</span>
+            <span class="n">genos</span> <span class="o">=</span> <span class="p">[</span><span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">locus</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">]</span>
+            <span class="n">clean</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clean_inds</span><span class="p">(</span><span class="n">genos</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">clean</span><span class="p">:</span>
+                <span class="n">allele_freqs</span><span class="p">[</span><span class="n">locus</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+                <span class="k">continue</span>
+
+            <span class="n">alleles</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_alleles</span><span class="p">(</span><span class="n">clean</span><span class="p">)</span>
+            <span class="n">total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">alleles</span><span class="p">)</span>
+            <span class="n">counts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">alleles</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+            <span class="n">freqs</span> <span class="o">=</span> <span class="p">{</span><span class="n">a</span><span class="p">:</span> <span class="n">c</span> <span class="o">/</span> <span class="n">total</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">counts</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+            <span class="n">allele_freqs</span><span class="p">[</span><span class="n">locus</span><span class="p">]</span> <span class="o">=</span> <span class="n">freqs</span>
+
+        <span class="k">return</span> <span class="n">allele_freqs</span>
+
+    <span class="k">def</span> <span class="nf">_neis_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculate Nei&#39;s genetic distance (1972) across all loci using global sums.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            f1 (dict): Population 1 allele frequencies per locus: {locus: {allele: freq}}.</span>
+<span class="sd">            f2 (dict): Population 2 allele frequencies per locus: {locus: {allele: freq}}.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            float: Nei&#39;s genetic distance D = -log(I), aggregated across loci.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">total_num</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">total_denom1</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">total_denom2</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+        <span class="k">for</span> <span class="n">locus</span> <span class="ow">in</span> <span class="n">f1</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">locus</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">f2</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="n">p1</span> <span class="o">=</span> <span class="n">f1</span><span class="p">[</span><span class="n">locus</span><span class="p">]</span>
+            <span class="n">p2</span> <span class="o">=</span> <span class="n">f2</span><span class="p">[</span><span class="n">locus</span><span class="p">]</span>
+
+            <span class="n">shared</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">shared</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="n">total_num</span> <span class="o">+=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">*</span> <span class="n">p2</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">shared</span><span class="p">)</span>
+            <span class="n">total_denom1</span> <span class="o">+=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">freq</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="n">p1</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+            <span class="n">total_denom2</span> <span class="o">+=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">freq</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="n">p2</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+        <span class="k">if</span> <span class="n">total_num</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">total_denom1</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">total_denom2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+
+        <span class="n">I</span> <span class="o">=</span> <span class="n">total_num</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">total_denom1</span> <span class="o">*</span> <span class="n">total_denom2</span><span class="p">)</span>
+        <span class="n">D</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">I</span><span class="p">)</span> <span class="k">if</span> <span class="n">I</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+        <span class="k">return</span> <span class="n">D</span>
+
+    <span class="k">def</span> <span class="nf">_get_per_locus_nei</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pop1_inds</span><span class="p">,</span> <span class="n">pop2_inds</span><span class="p">,</span> <span class="n">full_matrix</span><span class="p">):</span>
+        <span class="n">n_loci</span> <span class="o">=</span> <span class="n">full_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">nei_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">n_loci</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">loc</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_loci</span><span class="p">):</span>
+            <span class="n">genos1</span> <span class="o">=</span> <span class="p">[</span><span class="n">full_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">loc</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pop1_inds</span><span class="p">]</span>
+            <span class="n">genos2</span> <span class="o">=</span> <span class="p">[</span><span class="n">full_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">loc</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pop2_inds</span><span class="p">]</span>
+            <span class="n">genos1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clean_inds</span><span class="p">(</span><span class="n">genos1</span><span class="p">)</span>
+            <span class="n">genos2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clean_inds</span><span class="p">(</span><span class="n">genos2</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">genos1</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">genos2</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">f1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calculate_allele_freqs</span><span class="p">(</span><span class="n">full_matrix</span><span class="p">[:,</span> <span class="p">[</span><span class="n">loc</span><span class="p">]],</span> <span class="nb">list</span><span class="p">(</span><span class="n">pop1_inds</span><span class="p">))</span>
+            <span class="n">f2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calculate_allele_freqs</span><span class="p">(</span><span class="n">full_matrix</span><span class="p">[:,</span> <span class="p">[</span><span class="n">loc</span><span class="p">]],</span> <span class="nb">list</span><span class="p">(</span><span class="n">pop2_inds</span><span class="p">))</span>
+            <span class="n">nei_vals</span><span class="p">[</span><span class="n">loc</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_neis_distance</span><span class="p">(</span><span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">nei_vals</span>
+
+    <span class="k">def</span> <span class="nf">_nei_permutation_pval_locus_resampling</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">pop1_inds</span><span class="p">,</span> <span class="n">pop2_inds</span><span class="p">,</span> <span class="n">full_matrix</span><span class="p">,</span> <span class="n">n_bootstraps</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span>
+    <span class="p">):</span>
+        <span class="n">f1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calculate_allele_freqs</span><span class="p">(</span><span class="n">full_matrix</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">pop1_inds</span><span class="p">))</span>
+        <span class="n">f2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calculate_allele_freqs</span><span class="p">(</span><span class="n">full_matrix</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">pop2_inds</span><span class="p">))</span>
+        <span class="n">obs_nei</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_neis_distance</span><span class="p">(</span><span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">)</span>
+
+        <span class="n">n_loci</span> <span class="o">=</span> <span class="n">full_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+        <span class="n">dist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="n">n_bootstraps</span><span class="p">,),</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_bootstraps</span><span class="p">):</span>
+            <span class="n">resample_idx</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">n_loci</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n_loci</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">f1_boot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calculate_allele_freqs</span><span class="p">(</span>
+                <span class="n">full_matrix</span><span class="p">[:,</span> <span class="n">resample_idx</span><span class="p">],</span> <span class="nb">list</span><span class="p">(</span><span class="n">pop1_inds</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">f2_boot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calculate_allele_freqs</span><span class="p">(</span>
+                <span class="n">full_matrix</span><span class="p">[:,</span> <span class="n">resample_idx</span><span class="p">],</span> <span class="nb">list</span><span class="p">(</span><span class="n">pop2_inds</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">dist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_neis_distance</span><span class="p">(</span><span class="n">f1_boot</span><span class="p">,</span> <span class="n">f2_boot</span><span class="p">)</span>
+
+        <span class="n">dist</span> <span class="o">=</span> <span class="n">dist</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">dist</span><span class="p">)]</span>
+        <span class="n">pval</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dist</span> <span class="o">&gt;=</span> <span class="n">obs_nei</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">obs_nei</span><span class="p">,</span> <span class="n">pval</span><span class="p">,</span> <span class="n">dist</span>
+
+<div class="viewcode-block" id="GeneticDistance.nei_distance">
+<a class="viewcode-back" href="../../../snpio.popgenstats.html#snpio.popgenstats.genetic_distance.GeneticDistance.nei_distance">[docs]</a>
+    <span class="k">def</span> <span class="nf">nei_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_bootstraps</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">return_pvalues</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="n">popmap</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">genotype_data</span><span class="o">.</span><span class="n">popmap_inverse</span>
+        <span class="n">sample_to_idx</span> <span class="o">=</span> <span class="p">{</span><span class="n">s</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">genotype_data</span><span class="o">.</span><span class="n">samples</span><span class="p">)}</span>
+        <span class="n">pop_indices</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">pop</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">sample_to_idx</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">popmap</span><span class="p">[</span><span class="n">pop</span><span class="p">]])</span> <span class="k">for</span> <span class="n">pop</span> <span class="ow">in</span> <span class="n">popmap</span>
+        <span class="p">}</span>
+        <span class="n">pop_keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">popmap</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="n">full_matrix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">genotype_data</span><span class="o">.</span><span class="n">snp_data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+        <span class="n">n_loci</span> <span class="o">=</span> <span class="n">full_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">num_pops</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pop_keys</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">n_bootstraps</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">return_pvalues</span><span class="p">:</span>
+            <span class="n">nei_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="n">num_pops</span><span class="p">,</span> <span class="n">num_pops</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">ia</span><span class="p">,</span> <span class="n">ib</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">num_pops</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>
+                <span class="n">i1</span> <span class="o">=</span> <span class="n">pop_indices</span><span class="p">[</span><span class="n">pop_keys</span><span class="p">[</span><span class="n">ia</span><span class="p">]]</span>
+                <span class="n">i2</span> <span class="o">=</span> <span class="n">pop_indices</span><span class="p">[</span><span class="n">pop_keys</span><span class="p">[</span><span class="n">ib</span><span class="p">]]</span>
+                <span class="n">f1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calculate_allele_freqs</span><span class="p">(</span><span class="n">full_matrix</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">i1</span><span class="p">))</span>
+                <span class="n">f2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calculate_allele_freqs</span><span class="p">(</span><span class="n">full_matrix</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">i2</span><span class="p">))</span>
+                <span class="n">dist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_neis_distance</span><span class="p">(</span><span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">)</span>
+                <span class="n">nei_mat</span><span class="p">[</span><span class="n">ia</span><span class="p">,</span> <span class="n">ib</span><span class="p">]</span> <span class="o">=</span> <span class="n">nei_mat</span><span class="p">[</span><span class="n">ib</span><span class="p">,</span> <span class="n">ia</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">nei_mat</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">nei_mat</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">pop_keys</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">pop_keys</span><span class="p">)</span>
+            <span class="n">outpath</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">outdir</span> <span class="o">/</span> <span class="s2">&quot;pairwise_nei_distances.csv&quot;</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">outpath</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">float_format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%.8f</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nei distances saved to </span><span class="si">{</span><span class="n">outpath</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">df</span>
+
+        <span class="k">elif</span> <span class="n">return_pvalues</span> <span class="ow">and</span> <span class="n">n_bootstraps</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">ia</span><span class="p">,</span> <span class="n">ib</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">num_pops</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>
+                <span class="n">i1</span> <span class="o">=</span> <span class="n">pop_indices</span><span class="p">[</span><span class="n">pop_keys</span><span class="p">[</span><span class="n">ia</span><span class="p">]]</span>
+                <span class="n">i2</span> <span class="o">=</span> <span class="n">pop_indices</span><span class="p">[</span><span class="n">pop_keys</span><span class="p">[</span><span class="n">ib</span><span class="p">]]</span>
+                <span class="n">obs</span><span class="p">,</span> <span class="n">pval</span><span class="p">,</span> <span class="n">dist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nei_permutation_pval_locus_resampling</span><span class="p">(</span>
+                    <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">full_matrix</span><span class="p">,</span> <span class="n">n_bootstraps</span><span class="o">=</span><span class="n">n_bootstraps</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span>
+                <span class="p">)</span>
+                <span class="n">result</span><span class="p">[(</span><span class="n">pop_keys</span><span class="p">[</span><span class="n">ia</span><span class="p">],</span> <span class="n">pop_keys</span><span class="p">[</span><span class="n">ib</span><span class="p">])]</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="s2">&quot;nei&quot;</span><span class="p">:</span> <span class="n">obs</span><span class="p">,</span>
+                    <span class="s2">&quot;pvalue&quot;</span><span class="p">:</span> <span class="n">pval</span><span class="p">,</span>
+                    <span class="s2">&quot;perm_dist&quot;</span><span class="p">:</span> <span class="n">dist</span><span class="p">,</span>
+                <span class="p">}</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">plotter</span><span class="o">.</span><span class="n">plot_permutation_dist</span><span class="p">(</span>
+                    <span class="n">obs</span><span class="p">,</span> <span class="n">dist</span><span class="p">,</span> <span class="n">pop_keys</span><span class="p">[</span><span class="n">ia</span><span class="p">],</span> <span class="n">pop_keys</span><span class="p">[</span><span class="n">ib</span><span class="p">],</span> <span class="n">dist_type</span><span class="o">=</span><span class="s2">&quot;nei&quot;</span>
+                <span class="p">)</span>
+            <span class="k">return</span> <span class="n">result</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="p">(</span><span class="n">pop_keys</span><span class="p">[</span><span class="n">ia</span><span class="p">],</span> <span class="n">pop_keys</span><span class="p">[</span><span class="n">ib</span><span class="p">]):</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_bootstraps</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">ia</span><span class="p">,</span> <span class="n">ib</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">num_pops</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="p">}</span>
+
+            <span class="k">def</span> <span class="nf">bootstrap</span><span class="p">(</span><span class="n">seed</span><span class="p">):</span>
+                <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+                <span class="n">resample</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">n_loci</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n_loci</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="n">replicate</span> <span class="o">=</span> <span class="p">{}</span>
+                <span class="k">for</span> <span class="n">ia</span><span class="p">,</span> <span class="n">ib</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">num_pops</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>
+                    <span class="n">i1</span> <span class="o">=</span> <span class="n">pop_indices</span><span class="p">[</span><span class="n">pop_keys</span><span class="p">[</span><span class="n">ia</span><span class="p">]]</span>
+                    <span class="n">i2</span> <span class="o">=</span> <span class="n">pop_indices</span><span class="p">[</span><span class="n">pop_keys</span><span class="p">[</span><span class="n">ib</span><span class="p">]]</span>
+                    <span class="n">f1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calculate_allele_freqs</span><span class="p">(</span>
+                        <span class="n">full_matrix</span><span class="p">[:,</span> <span class="n">resample</span><span class="p">],</span> <span class="nb">list</span><span class="p">(</span><span class="n">i1</span><span class="p">)</span>
+                    <span class="p">)</span>
+                    <span class="n">f2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calculate_allele_freqs</span><span class="p">(</span>
+                        <span class="n">full_matrix</span><span class="p">[:,</span> <span class="n">resample</span><span class="p">],</span> <span class="nb">list</span><span class="p">(</span><span class="n">i2</span><span class="p">)</span>
+                    <span class="p">)</span>
+                    <span class="n">replicate</span><span class="p">[(</span><span class="n">pop_keys</span><span class="p">[</span><span class="n">ia</span><span class="p">],</span> <span class="n">pop_keys</span><span class="p">[</span><span class="n">ib</span><span class="p">])]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_neis_distance</span><span class="p">(</span>
+                        <span class="n">f1</span><span class="p">,</span> <span class="n">f2</span>
+                    <span class="p">)</span>
+
+                <span class="k">return</span> <span class="n">replicate</span>
+
+            <span class="n">seeds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1e9</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n_bootstraps</span><span class="p">)</span>
+            <span class="k">with</span> <span class="n">ThreadPoolExecutor</span><span class="p">(</span>
+                <span class="n">max_workers</span><span class="o">=</span><span class="p">(</span><span class="n">mp</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">()</span> <span class="k">if</span> <span class="n">n_jobs</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="k">else</span> <span class="n">n_jobs</span><span class="p">)</span>
+            <span class="p">)</span> <span class="k">as</span> <span class="n">pool</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">rep</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">bootstrap</span><span class="p">,</span> <span class="n">seeds</span><span class="p">)):</span>
+                    <span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">rep</span><span class="p">:</span>
+                        <span class="n">result</span><span class="p">[</span><span class="n">pair</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">rep</span><span class="p">[</span><span class="n">pair</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="GeneticDistance.parse_nei_result">
+<a class="viewcode-back" href="../../../snpio.popgenstats.html#snpio.popgenstats.genetic_distance.GeneticDistance.parse_nei_result">[docs]</a>
+    <span class="k">def</span> <span class="nf">parse_nei_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result_dict</span><span class="p">,</span> <span class="n">alpha</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Convert the output of `nei_distance()` into DataFrames for:</span>
+
+<span class="sd">        - The mean Nei distance among permutations or bootstraps,</span>
+<span class="sd">        - The lower and upper confidence intervals,</span>
+<span class="sd">        - And the p-values (if return_pvalues=True).</span>
+
+<span class="sd">        This method auto-detects which case of result_dict it has:</span>
+<span class="sd">        1) A direct DataFrame (case: no bootstrap, no p-values).</span>
+<span class="sd">        2) A dict {(pop1, pop2): np.array([...])} for bootstrap replicates.</span>
+<span class="sd">        3) A dict {(pop1, pop2): {&quot;nei&quot;: float, &quot;pvalue&quot;: pd.Series, &quot;perm_dist&quot;: np.array([...])} for permutation results with an optional distribution array.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            result_dict: The structure returned by `nei_distance()`.</span>
+<span class="sd">            alpha (float): Significance level for CIs. Default 0.05 =&gt; 95% CIs.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            tuple: (df_mean, df_lower, df_upper, df_pval), where each is a</span>
+<span class="sd">            pandas DataFrame (or None if not applicable).</span>
+<span class="sd">            - df_mean: matrix of average Nei distances across replicates (or observed if no replicates).</span>
+<span class="sd">            - df_lower: matrix of lower CI bounds.</span>
+<span class="sd">            - df_upper: matrix of upper CI bounds.</span>
+<span class="sd">            - df_pval: matrix of p-values if p-values exist; otherwise None.</span>
+
+<span class="sd">        Notes:</span>
+<span class="sd">            - For bootstrap results, df_mean, df_lower, and df_upper are computed from the replicate arrays in result_dict.</span>
+<span class="sd">            - For permutation results, the method looks for &quot;perm_dist&quot; to compute a distribution-based mean and CIs. If &quot;perm_dist&quot; is missing, df_lower and df_upper will remain NaN.</span>
+<span class="sd">            - If result_dict is just a DataFrame, it returns that as df_mean  and None for the others, since no replicates/p-values exist.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># 1) If the result is already a DataFrame =&gt; case 1</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result_dict</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+            <span class="c1"># No distribution or p-values to parse, just return the matrix</span>
+            <span class="k">return</span> <span class="n">result_dict</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+
+        <span class="c1"># 2) Otherwise, we have a dictionary of some sort.</span>
+        <span class="c1"># Inspect the first value to detect the structure.</span>
+        <span class="n">first_val</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">result_dict</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
+
+        <span class="c1"># Helper function to get all populations in alphabetical order</span>
+        <span class="k">def</span> <span class="nf">all_populations_from_keys</span><span class="p">(</span><span class="n">dict_keys</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;Given dict keys like (pop1, pop2), return a sorted list of unique pops.&quot;&quot;&quot;</span>
+            <span class="n">pop_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">dict_keys</span><span class="p">:</span>
+                <span class="n">pop_set</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>  <span class="c1"># k is (pop1, pop2)</span>
+            <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">pop_set</span><span class="p">)</span>
+
+        <span class="c1"># We&#39;ll create empty DataFrames for storing results.</span>
+        <span class="c1"># We&#39;ll fill them if the dictionary structure allows it.</span>
+        <span class="n">df_mean</span><span class="p">,</span> <span class="n">df_lower</span><span class="p">,</span> <span class="n">df_upper</span><span class="p">,</span> <span class="n">df_pval</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+
+        <span class="c1"># ------------------------------------------</span>
+        <span class="c1"># CASE 3 (Bootstrap): (pop1, pop2) -&gt; np.array([...])</span>
+        <span class="c1"># ------------------------------------------</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">first_val</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+            <span class="c1"># This indicates we likely have arrays of replicate</span>
+            <span class="c1"># Nei values =&gt; bootstrap</span>
+            <span class="n">pop_pairs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">result_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+            <span class="n">pops</span> <span class="o">=</span> <span class="n">all_populations_from_keys</span><span class="p">(</span><span class="n">pop_pairs</span><span class="p">)</span>
+
+            <span class="c1"># Initialize empty dataframes</span>
+            <span class="n">df_mean</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">pops</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">pops</span><span class="p">)</span>
+            <span class="n">df_lower</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">pops</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">pops</span><span class="p">)</span>
+            <span class="n">df_upper</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">pops</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">pops</span><span class="p">)</span>
+
+            <span class="c1"># Fill each pair from replicate distributions</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">),</span> <span class="n">arr</span> <span class="ow">in</span> <span class="n">result_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">arr_nonan</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">arr</span><span class="p">)]</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr_nonan</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="c1"># If everything is NaN or there&#39;s no data</span>
+                    <span class="n">mean_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+                    <span class="n">lower_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+                    <span class="n">upper_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">mean_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">arr_nonan</span><span class="p">)</span>
+                    <span class="n">lower_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">arr_nonan</span><span class="p">,</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">alpha</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+                    <span class="n">upper_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">arr_nonan</span><span class="p">,</span> <span class="mi">100</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
+
+                <span class="n">df_mean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">]</span> <span class="o">=</span> <span class="n">mean_val</span>
+                <span class="n">df_mean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">p2</span><span class="p">,</span> <span class="n">p1</span><span class="p">]</span> <span class="o">=</span> <span class="n">mean_val</span>
+                <span class="n">df_lower</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">]</span> <span class="o">=</span> <span class="n">lower_val</span>
+                <span class="n">df_lower</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">p2</span><span class="p">,</span> <span class="n">p1</span><span class="p">]</span> <span class="o">=</span> <span class="n">lower_val</span>
+                <span class="n">df_upper</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">]</span> <span class="o">=</span> <span class="n">upper_val</span>
+                <span class="n">df_upper</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">p2</span><span class="p">,</span> <span class="n">p1</span><span class="p">]</span> <span class="o">=</span> <span class="n">upper_val</span>
+
+            <span class="c1"># Diagonal is typically 0 for self-Nei distances</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">df_mean</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">df_lower</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">df_upper</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+
+            <span class="c1"># p-values don&#39;t exist for a standard bootstrap approach</span>
+            <span class="n">df_pval</span> <span class="o">=</span> <span class="kc">None</span>
+
+            <span class="c1"># NOTE: For clarity, df_mean is the actual observed Nei matrix.</span>
+
+            <span class="c1"># Write df_lower and df_upper to CSV</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_combine_upper_lower_ci</span><span class="p">(</span><span class="n">df_upper</span><span class="p">,</span> <span class="n">df_lower</span><span class="p">,</span> <span class="n">diagonal</span><span class="o">=</span><span class="s2">&quot;zero&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">outdir</span> <span class="o">/</span> <span class="s2">&quot;pairwise_nei_distance_ci95.csv&quot;</span><span class="p">,</span>
+                <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">float_format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%.8f</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">df_mean</span><span class="p">,</span> <span class="n">df_lower</span><span class="p">,</span> <span class="n">df_upper</span><span class="p">,</span> <span class="n">df_pval</span>
+
+        <span class="c1"># ------------------------------------------</span>
+        <span class="c1"># CASE 2 (Permutation): (pop1, pop2) -&gt;</span>
+        <span class="c1"># {&quot;nei&quot;: float, &quot;pvalue&quot;: pd.Series, &quot;perm_dist&quot;: optional ...}</span>
+        <span class="c1"># ------------------------------------------</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">first_val</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span> <span class="ow">and</span> <span class="s2">&quot;nei&quot;</span> <span class="ow">in</span> <span class="n">first_val</span> <span class="ow">and</span> <span class="s2">&quot;pvalue&quot;</span> <span class="ow">in</span> <span class="n">first_val</span><span class="p">:</span>
+            <span class="n">pop_pairs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">result_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+            <span class="n">pops</span> <span class="o">=</span> <span class="n">all_populations_from_keys</span><span class="p">(</span><span class="n">pop_pairs</span><span class="p">)</span>
+
+            <span class="c1"># Observed Nei distances</span>
+            <span class="n">df_obs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">pops</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">pops</span><span class="p">)</span>
+
+            <span class="c1"># We store p-values in df_pval</span>
+            <span class="n">df_pval</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">pops</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">pops</span><span class="p">)</span>
+
+            <span class="c1"># If there&#39;s a distribution, we can compute mean &amp; CI</span>
+            <span class="n">df_mean</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">pops</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">pops</span><span class="p">)</span>
+            <span class="n">df_lower</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">pops</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">pops</span><span class="p">)</span>
+            <span class="n">df_upper</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">pops</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">pops</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">),</span> <span class="n">subdict</span> <span class="ow">in</span> <span class="n">result_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">obs_val</span> <span class="o">=</span> <span class="n">subdict</span><span class="p">[</span><span class="s2">&quot;nei&quot;</span><span class="p">]</span>
+                <span class="n">pval_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">subdict</span><span class="p">[</span><span class="s2">&quot;pvalue&quot;</span><span class="p">])</span>
+
+                <span class="c1"># Check if we have a distribution of permuted Nei distances</span>
+                <span class="c1"># If not, we can still compute mean &amp; CIs</span>
+                <span class="n">dist</span> <span class="o">=</span> <span class="n">subdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;perm_dist&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+                <span class="c1"># Fill in the observed Nei distance</span>
+                <span class="n">df_obs</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">]</span> <span class="o">=</span> <span class="n">obs_val</span>
+                <span class="n">df_obs</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">p2</span><span class="p">,</span> <span class="n">p1</span><span class="p">]</span> <span class="o">=</span> <span class="n">obs_val</span>
+
+                <span class="c1"># Extract the p-value (one-tailed)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">pval_series</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+                    <span class="n">p_value</span> <span class="o">=</span> <span class="n">pval_series</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+                    <span class="n">df_pval</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">]</span> <span class="o">=</span> <span class="n">p_value</span>
+                    <span class="n">df_pval</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">p2</span><span class="p">,</span> <span class="n">p1</span><span class="p">]</span> <span class="o">=</span> <span class="n">p_value</span>
+
+                <span class="c1"># If we have a distribution of permuted Nei, compute its mean &amp; CIs</span>
+                <span class="k">if</span> <span class="n">dist</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">dist_nonan</span> <span class="o">=</span> <span class="n">dist</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">dist</span><span class="p">)]</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dist_nonan</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">mean_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+                        <span class="n">lower_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+                        <span class="n">upper_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">mean_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dist_nonan</span><span class="p">)</span>
+                        <span class="n">lower_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">dist_nonan</span><span class="p">,</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">alpha</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+                        <span class="n">upper_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">dist_nonan</span><span class="p">,</span> <span class="mi">100</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
+
+                    <span class="n">df_mean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">]</span> <span class="o">=</span> <span class="n">mean_val</span>
+                    <span class="n">df_mean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">p2</span><span class="p">,</span> <span class="n">p1</span><span class="p">]</span> <span class="o">=</span> <span class="n">mean_val</span>
+                    <span class="n">df_lower</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">]</span> <span class="o">=</span> <span class="n">lower_val</span>
+                    <span class="n">df_lower</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">p2</span><span class="p">,</span> <span class="n">p1</span><span class="p">]</span> <span class="o">=</span> <span class="n">lower_val</span>
+                    <span class="n">df_upper</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">]</span> <span class="o">=</span> <span class="n">upper_val</span>
+                    <span class="n">df_upper</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">p2</span><span class="p">,</span> <span class="n">p1</span><span class="p">]</span> <span class="o">=</span> <span class="n">upper_val</span>
+
+            <span class="c1"># Fill diagonals with typical defaults</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">df_obs</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">df_pval</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">df_mean</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">df_lower</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">df_upper</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+
+            <span class="c1"># Write P-values to CSV</span>
+            <span class="n">df_pval</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">outdir</span> <span class="o">/</span> <span class="s2">&quot;pairwise_nei_distance_pvalues.csv&quot;</span><span class="p">,</span>
+                <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">float_format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%.8f</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="n">df_obs</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">outdir</span> <span class="o">/</span> <span class="s2">&quot;pairwise_nei_distance.csv&quot;</span><span class="p">,</span>
+                <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">float_format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%.8f</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nei distance files saved to </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">outdir</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">df_obs</span><span class="p">,</span> <span class="n">df_lower</span><span class="p">,</span> <span class="n">df_upper</span><span class="p">,</span> <span class="n">df_pval</span>
+
+        <span class="c1"># ------------------------------------------</span>
+        <span class="c1"># If none of the above matched, raise error</span>
+        <span class="c1"># ------------------------------------------</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Unrecognized structure in result_dict. Expected either a DataFrame or a dictionary with specific keys and structures.&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_combine_upper_lower_ci</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">df_upper</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">df_lower</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">diagonal</span><span class="o">=</span><span class="s2">&quot;zero&quot;</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Combines two square DataFrames into one, using the upper triangle from one and the lower from the other.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            df_upper (pd.DataFrame): DataFrame to provide the upper triangle (including diagonal if diagonal=&#39;upper&#39;).</span>
+<span class="sd">            df_lower (pd.DataFrame): DataFrame to provide the lower triangle (including diagonal if diagonal=&#39;lower&#39;).</span>
+<span class="sd">            diagonal (str): Which DataFrame should provide the diagonal values. Options are &#39;upper&#39;, &#39;lower&#39;, &quot;zero&quot;, or &#39;nan&#39;.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            pd.DataFrame: Combined DataFrame with upper/lower triangle values from respective inputs.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If input DataFrames are not square or do not match in shape.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">df_upper</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="n">df_lower</span><span class="o">.</span><span class="n">shape</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Both DataFrames must have the same shape.&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">df_upper</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">df_upper</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Input DataFrames must be square.&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="n">n</span> <span class="o">=</span> <span class="n">df_upper</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="n">upper_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)),</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">lower_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tril</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)),</span> <span class="n">k</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">diag_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+        <span class="n">combined</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">df_upper</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float64&quot;</span><span class="p">)</span>
+
+        <span class="n">combined</span><span class="p">[</span><span class="n">upper_mask</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)]</span> <span class="o">=</span> <span class="n">df_upper</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">upper_mask</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)]</span>
+        <span class="n">combined</span><span class="p">[</span><span class="n">lower_mask</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)]</span> <span class="o">=</span> <span class="n">df_lower</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">lower_mask</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)]</span>
+
+        <span class="k">if</span> <span class="n">diagonal</span> <span class="o">==</span> <span class="s2">&quot;upper&quot;</span><span class="p">:</span>
+            <span class="n">combined</span><span class="p">[</span><span class="n">diag_mask</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)]</span> <span class="o">=</span> <span class="n">df_upper</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">diag_mask</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)]</span>
+        <span class="k">elif</span> <span class="n">diagonal</span> <span class="o">==</span> <span class="s2">&quot;lower&quot;</span><span class="p">:</span>
+            <span class="n">combined</span><span class="p">[</span><span class="n">diag_mask</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)]</span> <span class="o">=</span> <span class="n">df_lower</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">diag_mask</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)]</span>
+        <span class="k">elif</span> <span class="n">diagonal</span> <span class="o">==</span> <span class="s2">&quot;nan&quot;</span><span class="p">:</span>
+            <span class="k">pass</span>  <span class="c1"># leave diagonal as NaN</span>
+        <span class="k">elif</span> <span class="n">diagonal</span> <span class="o">==</span> <span class="s2">&quot;zero&quot;</span><span class="p">:</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">combined</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="s2">&quot;Invalid option for &#39;diagonal&#39;. Choose from &#39;upper&#39;, &#39;lower&#39;, or &#39;nan&#39;.&quot;</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">combined</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">df_upper</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">df_upper</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Bradley T. Martin and Tyler K. Chafin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
