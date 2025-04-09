@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: audio2anki
+Version: 0.1.2
+Summary: Convert audio and video files into Anki flashcard decks with translations
+Project-URL: Homepage, https://github.com/osteele/audio2anki
+Project-URL: Documentation, https://osteele.github.io/audio2anki/
+Project-URL: Issues, https://github.com/osteele/audio2anki/issues
+Project-URL: Source, https://github.com/osteele/audio2anki
+Author-email: Oliver Steele <steele@osteele.com>
+License-File: LICENSE
+Requires-Python: <3.13,>=3.10
+Requires-Dist: click>=8.1.7
+Requires-Dist: deepl>=1.16.1
+Requires-Dist: gradio-client>=0.10.1
+Requires-Dist: httpx>=0.26.0
+Requires-Dist: langcodes>=3.5.0
+Requires-Dist: librosa
+Requires-Dist: numpy
+Requires-Dist: openai>=1.8.0
+Requires-Dist: pydub>=0.25.1
+Requires-Dist: rich>=13.7.0
+Requires-Dist: soundfile
+Requires-Dist: tomli-w>=1.2.0
