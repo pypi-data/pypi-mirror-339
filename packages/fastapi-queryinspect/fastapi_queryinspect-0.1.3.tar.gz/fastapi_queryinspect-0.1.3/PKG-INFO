@@ -1,0 +1,81 @@
+Metadata-Version: 2.4
+Name: fastapi-queryinspect
+Version: 0.1.3
+Summary: FastAPI middleware to provide metrics on SQL queries per request.
+Home-page: https://github.com/atv7/fastapi_queryinspect
+Author: Artem
+Author-email: ateter17@gmail.com
+License: MIT
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Framework :: FastAPI
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: sqlalchemy
+Provides-Extra: test
+Requires-Dist: httpx; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-asyncio; extra == "test"
+Requires-Dist: uvicorn; extra == "test"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: platform
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# fastapi_queryinspect
+
+FastAPI-QueryInspect is a FastAPI extension that provides SQL query metrics and analysis
+per request, inspired by Flask-QueryInspect (https://github.com/noise/flask-queryinspect) and
+Django-QueryInspect (https://github.com/dobarkod/django-queryinspect).
+It tracks query performance, identifies slow queries and duplicate table access,
+and works with SQLAlchemy to offer detailed timing stats and request-level SQL insights
+source https://github.com/atv7/fastapi_queryinspect/tree/main
+# Installation #
+
+```
+pip install fastapi-queryinspect
+```
+
+## Usage ##
+
+```python
+app = FastAPI()
+query_inspect = QueryInspect(app)
+```
+
+## Configuration ##
+
+QueryInspect has the following optional config vars that can be set in
+Flask's app.config:
+
+Variable | Default | Description
+------------- | ------------- | -------------
+QUERYINSPECT_ENABLED | True | False to completely disable QueryInspect
+QUERYINSPECT_HEADERS | True | Enable response header injection
+QUERYINSPECT_LOG | True | Enable logging
+QUERYINSPECT_SLOW_THRESHOLD | 0.5 | Show queries >= 0.5s
+QUERYINSPECT_DUPLICATE_LIMIT | 5 | Show queries after 5 duplicates
+
+
+## Log Format ##
+
+```
+[SQL] %d queries (%d duplicates), %d ms SQL time, %d ms total request time
+```
