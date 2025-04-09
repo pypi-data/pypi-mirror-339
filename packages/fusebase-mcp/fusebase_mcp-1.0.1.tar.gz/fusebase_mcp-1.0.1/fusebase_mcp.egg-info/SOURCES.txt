@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+server.py
+fusebase_mcp.egg-info/PKG-INFO
+fusebase_mcp.egg-info/SOURCES.txt
+fusebase_mcp.egg-info/dependency_links.txt
+fusebase_mcp.egg-info/entry_points.txt
+fusebase_mcp.egg-info/requires.txt
+fusebase_mcp.egg-info/top_level.txt
