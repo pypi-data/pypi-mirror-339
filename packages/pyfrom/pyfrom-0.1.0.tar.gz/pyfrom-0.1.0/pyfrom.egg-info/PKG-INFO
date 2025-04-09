@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: pyfrom
+Version: 0.1.0
+Summary: Run Python code directly from URLs
+Author-email: Your Name <your.email@example.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: click
+
+"""
+# PyURL
+
+A simple command line tool to run Python scripts directly from URLs.
+
+## Installation
+
+```
+pip install pyurl
+```
+
+## Usage
+
+```
+pyurl https://example.com/script.py
+```
+
+Optional arguments:
+- `--debug`: Show detailed debug information and display code before execution
+
+## Security Warning
+
+Running code directly from the internet can be dangerous. Use with caution!
+"""
