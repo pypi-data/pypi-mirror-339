@@ -1,0 +1,11 @@
+GFI-Research/__init__.py,sha256=jGwbcDofJClgzxhtP-YaaXixRoJgua7Z7WwyZgIZrPM,160
+GFI-Research/evaluate_module.py,sha256=cjht8iMf_GilJmcTsYmhTF2j4uHco2AL859LBTiedfw,2397
+GFI-Research/extract_module.py,sha256=QgrZXvBTkO19AmnjpD9J-jPWN1-xnN_Fub2LyDOiRa8,7409
+GFI-Research/fact_check_module.py,sha256=wi49ck9z1SABzOCHCUNoWG0ExrCy3OKeudRWUgURJHw,10384
+GFI-Research/image_check_module.py,sha256=g2Ky_jz4cwf9YkCHUAzUPSoaMaEsc6gm0xiUfE0WW7M,2572
+GFI-Research/text_check_module.py,sha256=BKQfL0CArUU0jwqVRBZvsEqUbe1ixxOu3b62EPimnZ4,46381
+GFI-Research/ui.py,sha256=XiSm7ti8d1HueHH_DF4ZE1WMFMh_lZyVfP6_yilxlms,1736
+vbi_evaluate_blogs-0.1.1.dist-info/METADATA,sha256=e2T07mLGh5lvYlqDyoljxSt1rXvdZvN2I9nTHqfMVfk,5012
+vbi_evaluate_blogs-0.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+vbi_evaluate_blogs-0.1.1.dist-info/top_level.txt,sha256=5KV7EArwhq9x0CKACnGnCoYzuYjkotkfsG8RQZly2d4,13
+vbi_evaluate_blogs-0.1.1.dist-info/RECORD,,
