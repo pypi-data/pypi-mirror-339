@@ -1,0 +1,33 @@
+[project]
+name = "sai-isaac"
+version = "0.0.4"
+description = "A collection of isaac-sim based robotics environments for the SAI platform."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "ArenaX Labs", email = "research@competesai.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+  "gymnasium>=1.0.0",
+  "torch==2.6.0",
+  # "isaaclab[isaacsim,all]==2.0.2",
+  "numpy==1.26.0",
+]
+
+[tool.pip]
+extra-index-urls = ["https://pypi.nvidia.com"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sai_isaac"]
+
+[tool.hatch.build]
+include = [
+  "src/sai_isaac/**/*.py",
+  "src/sai_isaac/*/assets/**/*",
+  "src/sai_isaac/*/*/assets/**/*",
+]
