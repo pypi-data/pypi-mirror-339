@@ -1,0 +1,184 @@
+#----------------------------------- Hatch Settings -----------------------------------#
+
+[build-system]
+requires = ["hatchling >= 1.12.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "src/bindly/__init__.py"
+
+[tool.hatch.build]
+ignore-vcs = true
+only-packages = true
+include = ["src/bindly/**/*.py", "src/bindly/py.typed"]
+packages = ["src/bindly"]
+
+#---------------------------------- Project Settings ----------------------------------#
+
+[project.urls]
+Homepage = "https://github.com/valentincalomme/bindly"
+Repository = "https://github.com/valentincalomme/bindly"
+
+[project]
+name = "bindly"
+description = "Composable, type-safe, and testable API clients for Python."
+authors = [{ name = "Valentin Calomme", email = "dev@valentincalomme.com" }]
+readme = "README.md"
+dynamic = ["version"]
+
+requires-python = ">= 3.12"
+
+[dependency-groups]
+dev = [
+    "pre-commit >= 4.2.0",
+    { include-group = "docs" },
+    { include-group = "qa" },
+    { include-group = "test" },
+]
+docs = ["mkdocs-material >= 9.6.11"]
+qa = [
+    "import-linter >= 2.3",
+    "mypy >= 1.15.0",
+    "pyright>=1.1.398",
+    "ruff >= 0.11.4",
+]
+test = ["hypothesis >= 6.130.9", "pytest >= 8.3.5", "pytest-cov >= 6.1.1"]
+
+[project.optional-dependencies]
+cli = ["typer >= 0.15.2"]
+
+[project.scripts]
+bindly = "bindly.cli.application:app"
+
+[tool.uv]
+default-groups = "all"
+# Ensures that all dependency groups are installed by default
+# https://docs.astral.sh/uv/concepts/projects/dependencies/#default-groups
+
+#--------------------------------------------------------------------------------------#
+
+[tool.pytest.ini_options]
+# https://docs.pytest.org/en/8.3.x/reference/customize.html#pyproject-toml
+
+addopts = ["--strict-markers"]
+# Only built-in markers and markers defined in this configuration file are allowed
+# https://docs.pytest.org/en/8.3.x/reference/reference.html#confval-markers
+
+xfail_strict = true
+# Tests marked as xfail should actually fail for the tests to "pass"
+# https://docs.pytest.org/en/8.3.x/reference/reference.html#confval-xfail_strict
+
+#--------------------------------------------------------------------------------------#
+
+[tool.mypy]
+# https://mypy.readthedocs.io/en/stable/config_file.html#using-a-pyproject-toml-file
+
+pretty = true
+# Prettier output that shows error location markers
+# https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-pretty
+strict = true
+# Better to be strict than sorry
+# https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-strict
+warn_unreachable = true
+# Unreachable code is essentially dead code and should raise an error
+# https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-warn-unreachable
+
+#--------------------------------------------------------------------------------------#
+
+[tool.importlinter]
+# https://import-linter.readthedocs.io/en/stable/toml.html
+
+root_packages = ["bindly", "tests"]
+include_external_packages = true
+
+[[tool.importlinter.contracts]]
+name = "Application should maintain a layered architecture."
+type = "layers"
+layers = [
+    "tests",  # Tests are allowed to import the bindly module
+    "bindly", # But not the other way around
+]
+
+[[tool.importlinter.contracts]]
+name = "Test dependencies may not be imported by other modules than the tests module."
+type = "forbidden"
+source_modules = ["bindly"]
+forbidden_modules = ["pytest", "pytest-cov", "hypothesis"]
+
+[[tool.importlinter.contracts]]
+name = "CLI dependencies should only be imported by the cli module."
+type = "forbidden"
+source_modules = ["bindly"]
+forbidden_modules = ["typer"]
+ignore_imports = ["bindly.cli.* -> typer"]
+
+#--------------------------------------------------------------------------------------#
+
+[tool.ruff]
+# https://docs.astral.sh/ruff/configuration/
+
+src = ["src", "tests"]
+# Used to distinguish first- and third-party imports from each other
+# https://docs.astral.sh/ruff/settings/#src
+
+[tool.ruff.format]
+docstring-code-format = true
+# Code in docstrings should also be formatted
+
+[tool.ruff.lint]
+select = ["ALL"]
+# By default, we want all rules to be enabled
+
+ignore = [
+    # No copyright notice required in this application
+    "CPY",
+    # pydoclint doesn't yet allow short docstrings
+    "DOC",
+    # Docstrings in these places are welcome, but not required
+    "D100", # in public module
+    "D104", # in public package
+    "D105", # in magic method
+    "D107", # in `__init__`
+    # Pseudo-random generators aren't a security risk for this application
+    "S311",
+    # Compatibility with the formatter
+    "COM812",
+    "ISC001",
+]
+
+# The following codes aren't ignored, but their fixes are disabled
+unfixable = [
+    "ERA001",
+    # Don't accidentally delete commented-code on save
+    # https://docs.astral.sh/ruff/rules/commented-out-code/
+    "F841",
+    # Don't accidentally delete a variable on save
+    # https://docs.astral.sh/ruff/rules/unused-variable/
+    "F401",
+    # Don't accidentally delete an import on save
+    # https://docs.astral.sh/ruff/rules/unused-import/
+    "RUF100",
+]
+
+[tool.ruff.lint.flake8-type-checking]
+quote-annotations = false
+# Classes and functions decorated by these should not be moved into type-checking blocks
+strict = true
+# All imports that can be moved into type-checking blocks should be flagged
+
+[tool.ruff.lint.mccabe]
+max-complexity = 5
+# ruff defaults to 10 but we prefer flake8's default of 5
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["S101"]
+# Allow assert in tests
+"src/bindly/experiments/**/*.py" = ["RUF001"]
+# Ambiguous characters are allowed in experiments
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+# Don't let ruff guess what docstring convention is used.
+#
+# Below is a description of what Google-style docstrings look like
+# https://google.github.io/styleguide/pyguide.html
