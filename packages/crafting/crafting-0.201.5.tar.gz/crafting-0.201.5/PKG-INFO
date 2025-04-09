@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: crafting
+Version: 0.201.5
+Summary: Tool to run your DL/RL experiments with Docker
+Home-page: https://github.com/Tviskaron/crafting
+Author: Alexey Skrynnik
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: PyYAML
+Requires-Dist: docker
+Requires-Dist: pydantic
+
+# Crafting Tool for Your ML/RL Experiments with Docker
+
+## Installation
+Simply install it from PyPI using the following command:
+```shell
+pip install crafting
+```
+
+If you encounter any issues after the installation, such as receiving a `command not found` error, try adding the following line to your `.bashrc` or `.bash_profile` file:
+```shell
+export PATH="$HOME/.local/bin:$PATH"
+```
+
+This will ensure that the `crafting` command is accessible from anywhere in your terminal.
