@@ -1,0 +1,27 @@
+[project]
+name = "sarif-pydantic"
+version = "0.5.1"
+description = ""
+authors = [
+    {name = "Daniel D'Avella",email = "drdavella@gmail.com"},
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.8.0"
+]
+
+[tool.poetry]
+packages = [{include = "sarif_pydantic", from = "src"}]
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.5"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.2.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
