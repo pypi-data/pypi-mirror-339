@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: datalab-python
+Version: 0.1.1
+Summary: The DataLab python client
+Home-page: https://bigdatalab.ai
+Author: DataLab Team
+Author-email: p.korovess@bidatalab.ai
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: black>=21.0; extra == "dev"
+Requires-Dist: flake8>=3.9; extra == "dev"
+Requires-Dist: isort>=5.0; extra == "dev"
+Requires-Dist: pytest-cov>=2.0; extra == "dev"
+Requires-Dist: pytest>=6.0; extra == "dev"
+
+# DataLab Python
+
+A Python package for data analysis and visualization.
+
+## Installation
+
+You can install DataLab Python using pip:
+
+```bash
+pip install datalab_python
+```
+
+## Usage
+
+Here's a simple example of how to use the DataLab Python package:
+
+```python
+from datalab_python import info
+
+# Display information about the DataLab package
+info()
+```
+
+This will output:
+
+```
+Hello from the DataLab Team!
+
+This package is a placeholder for the DataLab package
+More information TBA.
+
+You can find more information about as at: https://bigdatalab.ai
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 
+
