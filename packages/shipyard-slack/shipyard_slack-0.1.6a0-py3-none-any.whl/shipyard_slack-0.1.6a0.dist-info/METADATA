@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: shipyard-slack
+Version: 0.1.6a0
+Summary: A local client for connecting and working with Slack
+Requires-Python: >=3.9
+Requires-Dist: slack-sdk>=3.26.2
+Requires-Dist: shipyard-bp-utils>=1.0.2
+Requires-Dist: shipyard-templates>=0.6.2
