@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: arxsite
+Version: 0.2.2
+Summary: Generate a Jekyll project website from an arXiv paper
+Home-page: https://github.com/RongLiu-Leo/arxsite
+Author: Rong Liu
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: jinja2
+Requires-Dist: nltk
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
