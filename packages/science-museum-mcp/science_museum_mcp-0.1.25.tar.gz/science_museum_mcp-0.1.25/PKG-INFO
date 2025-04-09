@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: science-museum-mcp
+Version: 0.1.25
+Summary: MCP Server for the British Science Museum
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.4.1
+Requires-Dist: pytest>=8.3.5
+Requires-Dist: requests>=2.32.3
+
+# A Model Context Protocol Server for the British Science Museum Data API
+
+This project is a Python MCP (https://modelcontextprotocol.io/introduction) server that allows your LLM to fetch data
+from the British Science Museum. Info is available at https://github.com/TheScienceMuseum/collectionsonline/wiki/Collections-Online-API#get-search.
+
+# Developing
+
+This section is for anyone who wants to contribute to the codebase.
+
+## Setup and Install Dependencies
+
+Clone the repository.
+
+The project is configured to use uv (Install link: https://docs.astral.sh/uv/#installation) for dependency management 
+and building.
+It uses npx (Install link: https://www.npmjs.com/package/npx) to run the MCP inspector.  
+
+Create a virtual env with
+
+```shell
+uv venv
+```
+
+And install dependencies with
+
+```shell
+uv pip install -r pyproject.toml
+```
+
+Run the inspector with
+```shell
+./inspector.sh
+```
+The inspector should output the localhost URL for accessing its UI.
+## Running Unit Tests
+
+```shell
+source .venv/bin/activate
+pytest
+```
