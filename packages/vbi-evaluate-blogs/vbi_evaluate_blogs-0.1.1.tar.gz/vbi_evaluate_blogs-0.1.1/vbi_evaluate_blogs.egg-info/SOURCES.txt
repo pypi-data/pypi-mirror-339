@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.cfg
+GFI-Research/__init__.py
+GFI-Research/evaluate_module.py
+GFI-Research/extract_module.py
+GFI-Research/fact_check_module.py
+GFI-Research/image_check_module.py
+GFI-Research/text_check_module.py
+GFI-Research/ui.py
+vbi_evaluate_blogs.egg-info/PKG-INFO
+vbi_evaluate_blogs.egg-info/SOURCES.txt
+vbi_evaluate_blogs.egg-info/dependency_links.txt
+vbi_evaluate_blogs.egg-info/requires.txt
+vbi_evaluate_blogs.egg-info/top_level.txt
