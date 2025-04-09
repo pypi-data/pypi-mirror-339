@@ -1,0 +1,12 @@
+cinquillo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cinquillo/bot_jugador.py,sha256=QfhqKnQEK8_ip9fseGwdU2NhGSDmRHLbSSoMOKKI7JQ,397
+cinquillo/carta.py,sha256=QbqHcNZPyaL1qntw2o4-GFVcwhr7QPMkoJNb__hYON4,218
+cinquillo/jugador.py,sha256=wIp359dXxZc86GdEGJKw1ffknzbpuCwVbQylDZpoz4I,428
+cinquillo/mesa.py,sha256=eH-PxEV2Wk9NJaBYDbmJ_ek3V66DxAUk4WkdWlDeRdE,1019
+cinquillo/motor.py,sha256=1xwnFQrbRjUvmd3o0XgZlxSqhTBYf7meA5MUDff72wo,885
+cinquillo/partida.py,sha256=pNrF3GX4eUM0oQPVH2A_mnXT2rSNc9yMzgJ628v3nUc,1458
+cinquillo/reglas.py,sha256=PObCPtYQVwDKN0kFMmtN6pChx5ZSR7hjsrYBauA9Lmk,219
+cinquillo_core-0.1.0.dist-info/LICENSE,sha256=Dod6-WGmbJHk66x1fJ2ia2esROMsBTdCllNer-9Sk-Y,1093
+cinquillo_core-0.1.0.dist-info/METADATA,sha256=jWcSbpsACHKX9_2NjeRJ2HihTKB1MEAbxGSD2LaIY9I,626
+cinquillo_core-0.1.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+cinquillo_core-0.1.0.dist-info/RECORD,,
