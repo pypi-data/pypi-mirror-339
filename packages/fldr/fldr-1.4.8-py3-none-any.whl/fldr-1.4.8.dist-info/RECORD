@@ -1,0 +1,11 @@
+fldr/__init__.py,sha256=e_Q5H6snfUzOlISSZPp9nHvV7Jfy4fItiLR6xMC6f5Q,267
+fldr/fldr.py,sha256=MpLsV6iG3bZrUuTN3hh3ECNWQ1tMfgPm7jqenR-oh9c,1119
+fldr/fldrf.py,sha256=2u55MdbfMAjwQOs6pKb_TOLlyNAQgj_3Vdy100VvnXg,4578
+fldr/tests/__init__.py,sha256=t-bwt_fwFxPKo-NE5IKcFj6Wp2skC6Of1YV4EwLgGYE,51
+fldr/tests/test_fldr.py,sha256=LaMxNqWMaEOsJEKXru-ohYfzhXc4clNGbR0p3pyK7hM,2977
+fldr/tests/test_fldrf.py,sha256=ZEaFFx4cx_16VCRkwbkf6ChVGpiHLUyh8FmV7Jy5mjs,4917
+fldr-1.4.8.dist-info/licenses/LICENSE.txt,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+fldr-1.4.8.dist-info/METADATA,sha256=59MDMBPiKSyZV_7ZHRGJhdEbk1dtjd73RsCr2kOLETg,7131
+fldr-1.4.8.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+fldr-1.4.8.dist-info/top_level.txt,sha256=YdHD3FJlvDRG8yqGqsWRgwLsdesPq8mkdjSMbE4HBmU,5
+fldr-1.4.8.dist-info/RECORD,,
