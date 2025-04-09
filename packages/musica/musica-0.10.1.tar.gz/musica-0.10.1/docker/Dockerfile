@@ -1,0 +1,34 @@
+FROM fedora:latest
+
+ARG MUSICA_GIT_TAG=main
+ARG BUILD_TYPE=Release
+
+RUN dnf -y update \
+    && dnf -y install \
+        cmake \
+        gcc-c++ \
+        gfortran \
+        gdb \
+        git \
+        lcov \
+        make \
+        netcdf-fortran-devel \
+        json-devel \
+        python \
+        valgrind \
+        tree \
+    && dnf clean all
+
+# Copy the musica code
+COPY . musica
+
+# Build
+RUN cd musica \
+    && cmake -S . \
+             -B build \
+             -D CMAKE_BUILD_TYPE=${BUILD_TYPE} \
+             -D MUSICA_GIT_TAG=${MUSICA_GIT_TAG} \
+    && cd build \
+    && make install -j 8 
+
+WORKDIR musica/build
