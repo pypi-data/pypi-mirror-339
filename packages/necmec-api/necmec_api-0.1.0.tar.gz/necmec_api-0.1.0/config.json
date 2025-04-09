@@ -1,0 +1,23 @@
+{
+    "production": {
+      "base_url": "https://report.cybertip.org/ispws",
+      "status_url": "/status",
+      "xsd_url": "/xsd",
+      "submit_url": "/submit",
+      "upload_url": "/upload",
+      "fileinfo_url": "/fileinfo",
+      "finish_url": "/finish",
+      "retract_url": "/retract"
+    },
+    "test": {
+      "base_url": "https://exttest.cybertip.org/ispws",
+      "status_url": "/status",
+      "xsd_url": "/xsd",
+      "submit_url": "/submit",
+      "upload_url": "/upload",
+      "fileinfo_url": "/fileinfo",
+      "finish_url": "/finish",
+      "retract_url": "/retract"
+    }
+  }
+  

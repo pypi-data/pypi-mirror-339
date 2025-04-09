@@ -1,0 +1,5 @@
+include config.json
+include README.md
+
+recursive-include necmec_api *.py
+recursive-include tests *.py
