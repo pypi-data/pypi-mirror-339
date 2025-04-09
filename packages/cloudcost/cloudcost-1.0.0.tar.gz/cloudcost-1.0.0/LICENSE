@@ -1,0 +1,57 @@
+CLOUD COST SOFTWARE LICENSE AGREEMENT
+
+Copyright © 2025 Auron. All Rights Reserved.
+
+Permission is hereby granted to install and use this software ("Cloud Cost") for personal and internal business purposes only, subject to the following conditions:
+
+1. License Grant
+   a) This software is licensed, not sold.
+   b) You may install and use the software for personal and internal business use only.
+   c) You may not modify, distribute, sublicense, sell, rent, lease, or create derivative works based on the software without prior written permission from the author.
+   d) You may not reverse engineer, decompile, or disassemble any part of the software.
+   e) This license does not grant ownership rights to the software.
+
+2. Future Pricing and Commercial Use
+   a) This software is currently offered free of charge.
+   b) The author reserves the right to introduce paid features, subscriptions, or licensing fees in future versions.
+   c) Continued use after pricing changes constitutes acceptance of the new terms.
+
+3. Data Collection & Telemetry
+   a) The software may collect anonymous usage data related to AWS resources and cost insights.
+   b) No personally identifiable information (PII) is collected.
+   c) Users can disable telemetry by using the `--no-telemetry` flag.
+
+4. Disclaimer of Warranties
+   THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+   THE AUTHOR DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO:
+   - IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+   - ACCURACY OF COST ESTIMATES OR FINANCIAL SAVINGS.
+   - SECURITY OR ERROR-FREE OPERATION.
+   YOU ASSUME FULL RESPONSIBILITY FOR THE USE OF THIS SOFTWARE.
+
+5. Limitation of Liability
+   IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY:
+   - DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL, OR SPECIAL DAMAGES.
+   - FINANCIAL LOSSES OR AWS BILLING ISSUES ARISING FROM THE SOFTWARE'S USE.
+   - DATA LOSS OR SERVICE INTERRUPTIONS.
+
+6. AWS Relationship Disclaimer
+   This software is not affiliated with, endorsed by, or sponsored by Amazon Web Services (AWS).
+   All AWS-related trademarks are property of Amazon.com, Inc. or its affiliates.
+
+7. Usage Restrictions & Redistribution
+   a) You may not redistribute, rehost, or resell this software without permission.
+   b) Any results or reports generated must credit "Cloud Cost" and Auron.
+   c) You may not use the software to provide misleading cost estimates as official AWS guidance.
+
+8. Termination
+   This license is effective until terminated. Your rights will automatically terminate if you violate these terms.
+   Upon termination, you must delete all copies of the software.
+
+9. Indemnification
+   You agree to indemnify and hold the author harmless against any claims, damages, or losses resulting from your use of the software.
+
+10. Governing Law
+   This agreement is governed by the laws of the jurisdiction in which the author resides.
+
+By installing or using this software, you acknowledge that you have read and agree to the terms of this license.
