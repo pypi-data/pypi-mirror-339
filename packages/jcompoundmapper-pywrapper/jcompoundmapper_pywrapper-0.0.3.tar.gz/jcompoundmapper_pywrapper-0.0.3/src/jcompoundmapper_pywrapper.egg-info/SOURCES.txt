@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/jCompoundMapper_pywrapper/__init__.py
+src/jCompoundMapper_pywrapper/jcompoundmapper.py
+src/jCompoundMapper_pywrapper/utils.py
+src/jCompoundMapper_pywrapper/jCompoundMapper/jCMapperCLI.jar
+src/jCompoundMapper_pywrapper/jCompoundMapper/lgpl-2.1.txt
+src/jcompoundmapper_pywrapper.egg-info/PKG-INFO
+src/jcompoundmapper_pywrapper.egg-info/SOURCES.txt
+src/jcompoundmapper_pywrapper.egg-info/dependency_links.txt
+src/jcompoundmapper_pywrapper.egg-info/requires.txt
+src/jcompoundmapper_pywrapper.egg-info/top_level.txt
+tests/test_fingerprints.py
+tests/test_version.py
