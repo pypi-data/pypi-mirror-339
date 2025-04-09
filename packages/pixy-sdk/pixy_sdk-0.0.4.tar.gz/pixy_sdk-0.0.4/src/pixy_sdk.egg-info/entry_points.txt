@@ -1,0 +1,2 @@
+[console_scripts]
+pixy = pixy:main
