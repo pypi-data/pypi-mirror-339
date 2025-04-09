@@ -1,0 +1,10 @@
+rompy
+rioxarray
+oceantide
+typer
+
+[dev]
+coverage
+mypy
+pytest
+ruff
