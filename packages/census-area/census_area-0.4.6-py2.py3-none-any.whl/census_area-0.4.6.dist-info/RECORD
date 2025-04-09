@@ -1,0 +1,9 @@
+census_area/__init__.py,sha256=GSz2nFxek1f9eneGa8Rt9YgMSBn67cuP3aGuu7wZyvw,544
+census_area/core.py,sha256=s2CvaZHwZCdOnBL8BhEr-Y_HgpTeqtmH5_iNkhURq2o,14902
+census_area/lodes.py,sha256=2jcbwjqV-8YYgWnDUjDdgglGBslZecQkKr52-dBkqos,6390
+census_area/variables.py,sha256=uyosH3eb6sgygZhulbEcHTlj_F40PTH7841QZqYLFcA,9352
+census_area-0.4.6.dist-info/licenses/LICENSE.md,sha256=aCdo5zQjjvk5k_Dqs5Dy9dMjQGQhG8uOQSL4BoNZrqw,1065
+census_area-0.4.6.dist-info/METADATA,sha256=J5SDeeII3PnXNCYOwtVkRgPn1FXdVjenSXBNDA_CQr8,2578
+census_area-0.4.6.dist-info/WHEEL,sha256=MAQBAzGbXNI3bUmkDsiV_duv8i-gcdnLzw7cfUFwqhU,109
+census_area-0.4.6.dist-info/top_level.txt,sha256=Ukzq0QKtN9tDe8r6R9kw60eTKvW5mcLRYH1r-_UXTqg,12
+census_area-0.4.6.dist-info/RECORD,,
