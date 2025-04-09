@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: laity-data-structures-py
+Version: 0.0.1
+Summary: A pedagogical Python package implementing core data structures from scratch
+Author-email: Pappa laity <pndiaye@aimsammi.org>
+License: MIT
+Project-URL: Homepage, https://github.com/PappaLaity/pappa-laity-data-structures-python
+Project-URL: Issues, https://github.com/PappaLaity/pappa-laity-data-structures-python/issues
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# data_struct_assignment
+Data Structure assignment using python
