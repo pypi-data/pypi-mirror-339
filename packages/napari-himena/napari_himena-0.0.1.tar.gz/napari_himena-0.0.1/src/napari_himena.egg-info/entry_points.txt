@@ -1,0 +1,5 @@
+[himena.plugin]
+Napari-Himena Pipeline = napari_himena.himena_commands
+
+[napari.manifest]
+napari-himena = napari_himena:napari.yaml

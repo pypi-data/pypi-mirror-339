@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/napari_himena/__init__.py
+src/napari_himena/_widget.py
+src/napari_himena/himena_commands.py
+src/napari_himena/napari.yaml
+src/napari_himena.egg-info/PKG-INFO
+src/napari_himena.egg-info/SOURCES.txt
+src/napari_himena.egg-info/dependency_links.txt
+src/napari_himena.egg-info/entry_points.txt
+src/napari_himena.egg-info/requires.txt
+src/napari_himena.egg-info/top_level.txt
+src/napari_himena/_tests/__init__.py
+src/napari_himena/_tests/test_himena_commands.py
