@@ -1,0 +1,9 @@
+census/__init__.py,sha256=mvGlwrSzR68yYt0VXBXllLO2eAGvGDfMIBo-K_Tb03Y,106
+census/core.py,sha256=gAfphtEZUWBzLA8_I8xN56kB_cRsftNqPfCyQmW01fg,20533
+census/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+census/tests/test_census.py,sha256=cEE6NQriznvGlgYpGVclaD3sddyL54HMNPnEkS4fpHc,14366
+census-0.8.24.dist-info/licenses/LICENSE,sha256=y1rBhy2ACKtAMLDCJYKGopcJn5BCsarsCYbm9xcEkBY,1541
+census-0.8.24.dist-info/METADATA,sha256=CNL_fYBsSG8Mre3Gx_-QFn-hySkeQ1dRVS44ssVgTG4,8173
+census-0.8.24.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+census-0.8.24.dist-info/top_level.txt,sha256=3fvCO3GSWs3EKBuvzU5BWAGjpHKmbOVyyTToZe2KX9A,7
+census-0.8.24.dist-info/RECORD,,
