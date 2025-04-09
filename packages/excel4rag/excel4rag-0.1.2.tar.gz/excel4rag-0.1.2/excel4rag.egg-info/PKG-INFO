@@ -1,0 +1,201 @@
+Metadata-Version: 2.4
+Name: excel4rag
+Version: 0.1.2
+Summary: A Python package for extracting tables and key-value pairs from Excel files
+Home-page: https://github.com/benmcnicol/excel4rag
+Author: Ben
+Author-email: benmcnicol@gmail.com
+Project-URL: Bug Reports, https://github.com/benmcnicol/excel4rag/issues
+Project-URL: Source, https://github.com/benmcnicol/excel4rag
+Keywords: excel,tables,json,html,markdown,rag,data extraction
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Office/Business :: Office Suites
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Classifier: Topic :: Text Processing :: Markup :: Markdown
+Requires-Python: >=3.8,<3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openpyxl<4.0.0,>=3.1.2
+Requires-Dist: pandas<3.0.0,>=2.0.3
+Requires-Dist: numpy<2.0.0,>=1.24.3
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Excel4RAG
+
+A Python package for extracting tables and key-value pairs from Excel files, designed for RAG (Retrieval-Augmented Generation) applications.
+
+## Features
+
+- Extract tables from Excel files
+- Extract key-value pairs from Excel files
+- Support for multiple table formats
+- Output to various formats (JSON, JSONL, HTML, Markdown)
+- Easy integration with RAG pipelines
+- Simple one-line conversion functions
+
+## Installation
+
+```bash
+pip install excel4rag
+```
+
+## Quick Start
+
+### One-Line Conversion
+
+```python
+from excel4rag import excel_to_json, excel_to_html, excel_to_markdown
+
+# Convert Excel to JSON
+json_output = excel_to_json("your_file.xlsx")
+# Or save directly to file
+excel_to_json("your_file.xlsx", output_path="tables.json")
+
+# Convert Excel to HTML
+html_output = excel_to_html("your_file.xlsx")
+# Or save directly to file
+excel_to_html("your_file.xlsx", output_path="tables.html")
+
+# Convert Excel to Markdown
+md_output = excel_to_markdown("your_file.xlsx")
+# Or save directly to file
+excel_to_markdown("your_file.xlsx", output_path="tables.md")
+
+# Convert Excel to JSONL (one JSON object per line)
+jsonl_output = excel_to_jsonl("your_file.xlsx")
+# Or save directly to file
+excel_to_jsonl("your_file.xlsx", output_path="tables.jsonl")
+```
+
+## Usage
+
+### Basic Usage
+
+```python
+from excel4rag import ExcelDocumentHandler
+
+# Initialize the handler with file path
+handler = ExcelDocumentHandler("your_file.xlsx")
+
+# Load the document
+handler.load_document()
+
+# Extract tables
+tables = handler.extract_tables()
+
+# Extract key-value pairs
+kv_pairs = handler.extract_key_values()
+
+# Or analyze the entire document
+analysis = handler.analyze_document()
+```
+
+### Output Formats
+
+The package supports multiple output formats through the `TableFormatter` class:
+
+#### JSON Output
+```python
+from excel4rag import TableFormatter
+
+# Convert tables to JSON
+json_output = TableFormatter.to_json(tables)
+
+# Save to file
+TableFormatter.to_json(tables, output_path="tables.json")
+```
+
+#### JSONL Output (one JSON object per line)
+```python
+# Convert tables to JSONL
+jsonl_output = TableFormatter.to_jsonl(tables)
+
+# Save to file
+TableFormatter.to_jsonl(tables, output_path="tables.jsonl")
+```
+
+#### HTML Output
+```python
+# Convert tables to HTML
+html_output = TableFormatter.to_html(tables)
+
+# Save to file
+TableFormatter.to_html(tables, output_path="tables.html")
+```
+
+#### Markdown Output
+```python
+# Convert tables to Markdown
+md_output = TableFormatter.to_markdown(tables)
+
+# Save to file
+TableFormatter.to_markdown(tables, output_path="tables.md")
+```
+
+### Example: Complete Workflow
+
+```python
+from excel4rag import ExcelDocumentHandler, TableFormatter
+
+# Initialize and load Excel file
+handler = ExcelDocumentHandler("your_file.xlsx")
+handler.load_document()
+
+# Extract tables
+tables = handler.extract_tables()
+
+# Output to multiple formats
+TableFormatter.to_json(tables, output_path="tables.json")
+TableFormatter.to_html(tables, output_path="tables.html")
+TableFormatter.to_markdown(tables, output_path="tables.md")
+```
+
+## Output Format Details
+
+### JSON Format
+The JSON output includes:
+- Table metadata (ID, sheet name, start cell)
+- Table data in a structured format
+- Pattern matches (if any)
+
+### HTML Format
+The HTML output includes:
+- Styled tables with borders and padding
+- Table headers with metadata
+- Sheet names and start cell locations
+- Responsive design for web viewing
+
+### Markdown Format
+The Markdown output is:
+- Human-readable
+- Compatible with most markdown viewers
+- Includes table metadata
+- Uses standard markdown table syntax
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+excel4rag/__init__.py
+excel4rag/excel_handler.py
+excel4rag/table_formatter.py
+excel4rag.egg-info/PKG-INFO
+excel4rag.egg-info/SOURCES.txt
+excel4rag.egg-info/dependency_links.txt
+excel4rag.egg-info/requires.txt
+excel4rag.egg-info/top_level.txt
