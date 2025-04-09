@@ -1,0 +1,9 @@
+unigram/FOL-nli.py,sha256=B50CPyMS2Ogvr-noJrTlfQLD0di96Y9vJaWhtTqd9aA,10199
+unigram/__init__.py,sha256=Z_H6Bl0gaX-s-MXTXfp6cWbdHkrelXebG-h7qEt4-OU,14451
+unigram/assets/fol-nli-axioms,sha256=TZsEFf9QJHff4IefEAPiikC6fSR8EF0nLcJcXzjRnjs,3266
+unigram/solver_utils/.ipynb_checkpoints/tptp-checkpoint.py,sha256=fhcLxF2Rk53jA0yKoDzDjiH2ySSrD9blQNLeU20bfLs,5306
+unigram/solver_utils/tptp.py,sha256=nncNKVtWXBe_9HMgl4jmsU1ennwKVQP1mQL9EkipjFs,4234
+unigram-0.6.0.dist-info/LICENSE,sha256=AjkA-87NfK2z95LX0J4yYT1eQztOdEyDvO5R6hwy-Zc,1063
+unigram-0.6.0.dist-info/METADATA,sha256=DdaL2PcMP4VvQjQu9xKDW8kaAwrJpvjCH1hVHkP_tTw,2867
+unigram-0.6.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+unigram-0.6.0.dist-info/RECORD,,
