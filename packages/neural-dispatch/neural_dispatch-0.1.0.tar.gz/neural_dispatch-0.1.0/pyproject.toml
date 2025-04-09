@@ -1,0 +1,51 @@
+[project]
+name = "neural-dispatch"
+version = "0.1.0"
+authors = [{ name="Ivan Zakutnii", email="zakutnii.ivan@gmail.com" }]
+description = "Use metadata-rich embeddings to connect your user intents with the right tools in a single pass"
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+
+[tool.mypy]
+# The mypy configurations: http://bit.ly/2zEl9WI
+plugins = ["returns.contrib.mypy.returns_plugin"]
+ignore_missing_imports = true
+strict = true
+local_partial_types = true
+warn_unreachable = true
+
+enable_error_code = [
+  "truthy-bool",
+  "truthy-iterable",
+  "redundant-expr",
+  "unused-awaitable",
+  # "ignore-without-code",
+  "possibly-undefined",
+  "redundant-self",
+  # "explicit-override",
+  # "mutable-override",
+  "unimported-reveal",
+  "deprecated",
+]
+
+disable_error_code = [
+  "no-untyped-def", # TODO: fix
+]
+
+[[tool.mypy.overrides]]
+module = "wemake_python_styleguide.compat.nodes"
+# We allow explicit `Any` only in this file, because of the compatibility:
+disallow_any_explicit = false
+
+[[tool.mypy.overrides]]
+module = "wemake_python_styleguide.compat.packaging"
+# We allow unused `ignore` comments, because we cannot sync it between versions:
+warn_unused_ignores = false
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
