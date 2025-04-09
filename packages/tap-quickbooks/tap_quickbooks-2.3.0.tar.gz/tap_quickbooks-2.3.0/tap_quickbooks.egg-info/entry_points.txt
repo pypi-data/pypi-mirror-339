@@ -1,0 +1,2 @@
+[console_scripts]
+tap-quickbooks = tap_quickbooks:main

@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: tap-quickbooks
+Version: 2.3.0
+Summary: Singer.io tap for extracting data from the Quickbooks API
+Home-page: http://singer.io
+Author: Stitch
+Classifier: Programming Language :: Python :: 3 :: Only
+License-File: LICENSE
+Requires-Dist: singer-python==6.1.1
+Requires-Dist: requests==2.32.3
+Requires-Dist: requests_oauthlib==2.0.0
+Provides-Extra: test
+Requires-Dist: pylint==2.5.3; extra == "test"
+Requires-Dist: nose; extra == "test"
+Provides-Extra: dev
+Requires-Dist: ipdb; extra == "dev"
