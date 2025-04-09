@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-luca-bds"
+version = "0.0.9"
+description = "This Python library includes some LUCA BDS functionality"
+readme = "docs/README.md"
+authors = [{ name = "Marcos Cobo Carrillo", email = "mcobo@cic.es" }]
+license-files = ["LICENSE.txt"]
+dependencies = ["requests", "pytest", "python-keycloak", "pandas"]
+
+[tool.setuptools]
+packages = ["luca"]
