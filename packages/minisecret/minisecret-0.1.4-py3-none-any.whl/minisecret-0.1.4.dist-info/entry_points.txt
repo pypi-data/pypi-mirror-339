@@ -1,0 +1,2 @@
+[console_scripts]
+minisecret = minisecret.__main__:main
