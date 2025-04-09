@@ -1,0 +1,6 @@
+goat_wallets/solana/__init__.py,sha256=udvyI38svuvwiqcQYm4KnXN_bF_DliqwHvoswB3dtPk,350
+goat_wallets/solana/send_sol.py,sha256=Bg5LbZhzKdofb39mQ0XOibNvdo5dLpRYnEE2yffUwA8,2722
+goat_wallets/solana/wallet.py,sha256=9tZrR2qb0o-78TsZHbL6yMhWkataDfgP5jjvDV03RKk,12614
+goat_sdk_wallet_solana-0.1.6.dist-info/METADATA,sha256=SKKgk5st-XR7p1oALUwMsEOYb1aZe7cgUIYmsexTtmU,2052
+goat_sdk_wallet_solana-0.1.6.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+goat_sdk_wallet_solana-0.1.6.dist-info/RECORD,,
