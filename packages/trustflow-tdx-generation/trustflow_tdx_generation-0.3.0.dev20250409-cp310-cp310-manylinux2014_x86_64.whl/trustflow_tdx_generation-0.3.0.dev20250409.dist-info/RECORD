@@ -1,0 +1,8 @@
+trustflow/attestation/generation/__init__.py,sha256=olnX_kXTVg1I_hqG5gqS21-jAh4LE4JomsyQTtvBnCU,581
+trustflow/attestation/generation/generator.so,sha256=0hSxqbodszqu7A3fGB67eUyYdccmKk8v1tEpWlUP01g,4084416
+trustflow/attestation/verification/verifier.cpython-310-x86_64-linux-gnu.so,sha256=1RQBdgAmLsFVXV7aS39KyjdJ7sFnikAs2pxPcSIeteQ,8521936
+trustflow_tdx_generation-0.3.0.dev20250409.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+trustflow_tdx_generation-0.3.0.dev20250409.dist-info/METADATA,sha256=3fBVh3dsaH5Bhwz5wHhCSfIf20S6VIW0c0dtQC_gmfw,820
+trustflow_tdx_generation-0.3.0.dev20250409.dist-info/WHEEL,sha256=3FD_TtvcYtlo7g6oL1pzzO9eYXnKmAVng2chYFIZ3HQ,112
+trustflow_tdx_generation-0.3.0.dev20250409.dist-info/top_level.txt,sha256=0F8bv6j6GthiPIAyQwXe5uTq2UhAXzKf8Mwxenbvisg,43
+trustflow_tdx_generation-0.3.0.dev20250409.dist-info/RECORD,,
