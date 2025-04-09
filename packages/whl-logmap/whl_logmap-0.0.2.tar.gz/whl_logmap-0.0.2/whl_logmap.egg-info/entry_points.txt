@@ -1,0 +1,2 @@
+[console_scripts]
+whl_logmap = whl_logmap.main:main
