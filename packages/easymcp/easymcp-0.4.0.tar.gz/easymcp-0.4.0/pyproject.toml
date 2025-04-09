@@ -1,0 +1,37 @@
+[project]
+name = "easymcp"
+version = "0.4.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "TerminalMan", email = "84923604+SecretiveShell@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "aiodocker>=0.24.0",
+    "httpx>=0.28.1",
+    "loguru>=0.7.3",
+    "mcp>=1.5.0",
+    "pydantic>=2.10.6",
+]
+
+[project.scripts]
+easymcp = "easymcp:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "fastmcp-test>=0.1.0",
+    "mypy>=1.15.0",
+    "pytest>=8.3.5",
+    "pytest-asyncio>=0.26.0",
+    "pytest-cov>=6.1.0",
+    "pytest-rerunfailures>=15.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "strict"
+asyncio_default_fixture_loop_scope = "function"
