@@ -1,0 +1,31 @@
+# Still requires a .py to register data connector in Data Manager and parse yaml configuration
+# See yaml_version example
+pages:
+  - components:
+      - figure:
+          _target_: violin
+          x: day
+          y: tip
+          color: day
+          data_frame: tips
+        type: graph
+      - figure:
+          _target_: violin
+          x: day
+          y: tip
+          color: day
+          data_frame: tips
+        type: graph
+      - figure:
+          _target_: violin
+          x: day
+          y: tip
+          color: day
+          data_frame: tips
+        type: graph
+    layout:
+      type: flex
+      direction: row
+      gap: 40px
+      wrap: True
+    title: Flex - advanced example
