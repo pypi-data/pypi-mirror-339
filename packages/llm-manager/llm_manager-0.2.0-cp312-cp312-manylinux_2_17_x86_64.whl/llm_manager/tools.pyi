@@ -1,0 +1,19 @@
+from abc import abstractmethod
+from llm_manager.message import Message
+from pydantic import BaseModel
+from typing import Any
+
+class ToolModel(BaseModel):
+    @classmethod
+    def to_schema(cls) -> dict[str, Any]: ...
+    @classmethod
+    def to_json_schema(cls) -> str: ...
+    @abstractmethod
+    def __call__(self, *args, **kwargs) -> Any: ...
+
+class Tools(BaseModel):
+    schemas: list[dict[str, Any]]
+    namespace: dict[str, type[ToolModel]]
+    def __init__(self, *models: type[ToolModel]) -> None: ...
+    def __call__(self, tool_calls: list[dict[str, Any]]) -> list[Message]: ...
+    def __bool__(self) -> bool: ...
