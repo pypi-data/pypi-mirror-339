@@ -1,0 +1,9 @@
+test_guide_pytest_json-0.0.10.dist-info/licenses/LICENSE,sha256=1zyIOqNpyzuiDaOnyFVv14n2ECCrqVoaV9vQkTt7zi4,1069
+tg_pytest_json/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tg_pytest_json/plugin.py,sha256=Pi4KZSBAlSEkOtPi2sFPzaGRxMEamK1pLrmS-ARYdrg,2111
+tg_pytest_json/report.py,sha256=EtmVyYyC3tHqug7rgidsDhZa0-CHUWpyP_pAbhoMvOs,9312
+test_guide_pytest_json-0.0.10.dist-info/METADATA,sha256=3gchuP4fqaisEWeFnD7lr25Lk-PtkJCJhKglA2U-oaM,1819
+test_guide_pytest_json-0.0.10.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+test_guide_pytest_json-0.0.10.dist-info/entry_points.txt,sha256=74tJ0TUiCbETuBObXR6AWqTgcCti76_4jk4Lq9FGPaw,50
+test_guide_pytest_json-0.0.10.dist-info/top_level.txt,sha256=4DVjF-fad7HiyTY-7CXXHufVyfcTefLYlFbaFd1h0qQ,15
+test_guide_pytest_json-0.0.10.dist-info/RECORD,,
