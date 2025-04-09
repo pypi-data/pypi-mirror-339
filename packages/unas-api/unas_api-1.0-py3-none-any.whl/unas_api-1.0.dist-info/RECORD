@@ -1,0 +1,10 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/another_file.py,sha256=k_pe33c_2CWVQuTlOwLg4tya0Grtfuf4qZCHm_RgwpE,127
+unas_api/__init__.py,sha256=h3z16JCREO-AwSG2GMvuprP_YRD2MtV3ovQ5hloE_3g,36
+unas_api/unas.py,sha256=VCN3SaK8Ig2EEpMPzxqZXl4WIikx5nEHKP6jzzXRJEU,33871
+unas_api-1.0.dist-info/licenses/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+unas_api-1.0.dist-info/METADATA,sha256=d0orQrArmitYbNfY-iU1v9VFy9T3BCXQe3DFSitymeg,685
+unas_api-1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+unas_api-1.0.dist-info/top_level.txt,sha256=62yTfpSuHcb4YFBWpEuvKgL4YLNFaVIowychOpGhRrI,23
+unas_api-1.0.dist-info/RECORD,,
