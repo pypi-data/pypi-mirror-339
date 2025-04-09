@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: notescli-tool
+Version: 1.0.0
+Summary: A CLI Tool for taking notes with Auth0 Security
+Home-page: https://github.com/Raaghavi-K-R/Notescli
+Author: Raaghavi
+Author-email: krraaghavi@example.com
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: flask
+Requires-Dist: pymongo
+
