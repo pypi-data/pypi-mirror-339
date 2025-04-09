@@ -1,0 +1,2 @@
+[console_scripts]
+FIRES = FIRES.main:main
