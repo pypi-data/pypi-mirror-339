@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: awsume-1password-plugin-simosca
+Version: 1.0.8
+Summary: Automates awsume MFA and AWS KEYS via 1Password CLI.
+Home-page: https://github.com/SimoSca/awsume-1password-plugin/tree/inodracs
+Author: Inodracs
+Author-email: inodracs.enomis@gmail.com
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: summary
