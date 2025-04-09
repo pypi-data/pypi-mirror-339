@@ -1,0 +1,8 @@
+notify/__init__.py,sha256=8BgXxiDlAllFD_iGiomQbameG-q-YcR_roncD__vpe8,129
+notify/notifier.py,sha256=0wF6Lbfib_TTA82fL2y5jqlVfNt9RDzu5F4wxax5QYE,3899
+notify/notify.sh,sha256=e1ED6RAbQTXL_OvldeMlvX8UQuQzWlDjH-Q_PW-LL3Q,289
+notify_krdeta_hoon-0.1.dist-info/METADATA,sha256=xzlPl2ieMkU3TxnjDdsxNOi_kAPW1aW9VqZDj230TsI,60
+notify_krdeta_hoon-0.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+notify_krdeta_hoon-0.1.dist-info/entry_points.txt,sha256=WXc8xv2j8qAA8yzu4yHfbpg1QZGUjxNixlVGpdSX14k,106
+notify_krdeta_hoon-0.1.dist-info/top_level.txt,sha256=Kk6_ellnkvCS1o5NMa6G2vRgPmvON-4lzi9zajDOUfI,7
+notify_krdeta_hoon-0.1.dist-info/RECORD,,
