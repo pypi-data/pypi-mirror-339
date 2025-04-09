@@ -1,0 +1,15 @@
+uxtime/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uxtime/__main__.py,sha256=zKUQNC60T0q7lpEeUlxWke1k8CjaCW5IZncK__YnoEw,286
+uxtime/unixtimec.py,sha256=175WvDzQXEko4avHo8SpoeNqPuRcqu7TBDMUzgsOYI8,211
+uxtime/res/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uxtime/res/constants.py,sha256=Vm8KABnHnq9KcQ_B_QBwTXVpYgoVwqEXfIved7uiVWM,539
+uxtime/res/mainapp.py,sha256=7Z51qYZ5LhNdGCpFJ8bgI9OW2rx_WDL7dEHKiytKfek,6556
+uxtime/res/tools.py,sha256=N3bPuV4WEjOPwkOlXtirzxwdjbVSSRq_VTAGcf0c9Fs,7624
+uxtime/res/views.py,sha256=c8ZafNPAQvGIP44HAsrMaksNybtfLhuUZ2ugX1BVEaw,10226
+uxtime/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uxtime/tests/test_time.py,sha256=Txvuf7NMx8hfE0eERBz9OqP8w_VaUGPi1Qltbw0YC6U,806
+uxtime-1.0.9.dist-info/METADATA,sha256=OeEbG5K7ag2FEvrB9DZlAmmW-j96VcSPMKYujwknf8M,2729
+uxtime-1.0.9.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+uxtime-1.0.9.dist-info/entry_points.txt,sha256=Jb3HSQoPHSXBkhB5-xDciIHmyZk1Kep6VUyj5X_KNg0,46
+uxtime-1.0.9.dist-info/top_level.txt,sha256=qOuNtjApn-PdgXtXQu6XwLD1uvZUkVZru-xXm5aLp88,7
+uxtime-1.0.9.dist-info/RECORD,,
