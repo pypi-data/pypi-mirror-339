@@ -1,0 +1,2 @@
+[console_scripts]
+zcsearch = zcsearch.cli:main
