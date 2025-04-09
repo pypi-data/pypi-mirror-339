@@ -1,0 +1,15 @@
+auth0_ai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+auth0_ai/authorizers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+auth0_ai/authorizers/ciba_authorizer.py,sha256=SP-BdlV1jyib2U47IypU0FBq1cCVwUr4rLyYt05itb8,7008
+auth0_ai/authorizers/federated_connection_authorizer.py,sha256=o-GN_dieGhJFVJDW3kIflGrwY6mBPmuNso4Pf5Fyxeo,9193
+auth0_ai/authorizers/fga_authorizer.py,sha256=C-FCTxhywPvZ4uiVxe7OPsq_4caEnbGh-0On38OR_ko,4588
+auth0_ai/authorizers/types.py,sha256=TrKSIeM8URVuGDI_38ofyhcpghzvfA9r0JnklOFbDRw,1932
+auth0_ai/credentials.py,sha256=_PWV-BqXztbHmG3-wz2DnpFf5SD3nNL6Tdr60z4oVmY,233
+auth0_ai/errors.py,sha256=bg0gkd9zFrhFtf1WD2kv0JiM6BovreChS1R3MzIUUdc,361
+auth0_ai/interrupts/auth0_interrupt.py,sha256=Lj0bP3PB7YbUlrKGOZVsKgg0mNkcPU9KN67qIWpOrzo,932
+auth0_ai/interrupts/federated_connection_interrupt.py,sha256=gAHX6dOG401TPs6xZLKivo1_hCia4JX6DyrZB8QqK0c,2177
+auth0_ai/token_response.py,sha256=pb4Bhsh_-huDMNbZIdcHVNg6UJWk3NJaj1XA87ScDCA,210
+auth0_ai-0.2.0.dist-info/LICENSE,sha256=Lu_2YH0oK8b_VVisAhNQ2WIdtwY8pSU2PLbll-y6Cj8,9792
+auth0_ai-0.2.0.dist-info/METADATA,sha256=RIk4nr_uOW-2mHZsdzYfanJ6jtIb8nYOeCpTiU52HqY,2431
+auth0_ai-0.2.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+auth0_ai-0.2.0.dist-info/RECORD,,
