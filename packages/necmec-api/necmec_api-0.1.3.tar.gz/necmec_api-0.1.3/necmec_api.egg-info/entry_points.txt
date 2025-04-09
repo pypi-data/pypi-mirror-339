@@ -1,0 +1,2 @@
+[console_scripts]
+necmec-cli = necmec_api.cli:main
