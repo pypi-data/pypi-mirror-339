@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: orcamcp
+  description: Orca Security MCP Integration
+  labels:
+    orca.security/is-production: "false"
+    orca.security/repo-is-fork: "false"
+    orca.security/repo-visibility: internal
+  annotations:
+    github.com/project-slug: orcasecurity/orcamcp
+    github.com/team-slug: orcasecurity/cto-team
+    orca.security/repo-default-branch: master
+    orca.security/repo-main-language: Python
+  links:
+    - url: https://github.com/orcasecurity/orcamcp
+      title: Source Code
+      icon: github
+      type: url
+spec:
+  type: repository
+  lifecycle: experimental
+  owner: cto-team
