@@ -1,0 +1,184 @@
+Metadata-Version: 2.4
+Name: llama_simulation
+Version: 0.1.0
+Summary: A comprehensive simulation framework for AI research and testing scenarios
+Home-page: https://github.com/llamasearchai/llama-simulator
+Author: Nik Jois
+Author-email: Your Name <your.email@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yourusername/llama_simulation
+Project-URL: Bug Tracker, https://github.com/yourusername/llama_simulation/issues
+Project-URL: Documentation, https://llama-simulation.readthedocs.io
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mlx>=0.3.0
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: matplotlib>=3.4.0
+Requires-Dist: seaborn>=0.11.0
+Requires-Dist: tqdm>=4.62.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: networkx>=2.6.0
+Requires-Dist: scipy>=1.7.0
+Requires-Dist: scikit-learn>=1.0.0
+Requires-Dist: loguru>=0.6.0
+Requires-Dist: typer>=0.4.0
+Requires-Dist: rich>=12.0.0
+Requires-Dist: pydantic<2.0.0,>=1.9.0
+Requires-Dist: opacus>=1.1.0
+Requires-Dist: wandb>=0.12.0
+Requires-Dist: tensorboard>=2.8.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=3.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: isort>=5.10.0; extra == "dev"
+Requires-Dist: mypy>=0.950; extra == "dev"
+Requires-Dist: ruff>=0.0.257; extra == "dev"
+Requires-Dist: pre-commit>=2.17.0; extra == "dev"
+Requires-Dist: sphinx>=5.0.0; extra == "dev"
+Requires-Dist: sphinx-rtd-theme>=1.0.0; extra == "dev"
+Requires-Dist: sphinx-autodoc-typehints>=1.18.0; extra == "dev"
+Provides-Extra: torch
+Requires-Dist: torch>=2.0.0; extra == "torch"
+Requires-Dist: torchvision>=0.15.0; extra == "torch"
+Provides-Extra: jax
+Requires-Dist: jax>=0.3.25; extra == "jax"
+Requires-Dist: jaxlib>=0.3.25; extra == "jax"
+Provides-Extra: notebook
+Requires-Dist: jupyter>=1.0.0; extra == "notebook"
+Requires-Dist: ipywidgets>=8.0.0; extra == "notebook"
+Requires-Dist: plotly>=5.10.0; extra == "notebook"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# llama-simulator
+
+[![PyPI version](https://img.shields.io/pypi/v/llama_simulator.svg)](https://pypi.org/project/llama_simulator/)
+[![License](https://img.shields.io/github/license/llamasearchai/llama-simulator)](https://github.com/llamasearchai/llama-simulator/blob/main/LICENSE)
+[![Python Version](https://img.shields.io/pypi/pyversions/llama_simulator.svg)](https://pypi.org/project/llama_simulator/)
+[![CI Status](https://github.com/llamasearchai/llama-simulator/actions/workflows/llamasearchai_ci.yml/badge.svg)](https://github.com/llamasearchai/llama-simulator/actions/workflows/llamasearchai_ci.yml)
+
+**Llama Simulator (llama-simulator)** is a framework within the LlamaSearch AI ecosystem for running simulations. It allows defining simulation environments and agents that interact within those environments, useful for testing algorithms, reinforcement learning, or modeling complex systems.
+
+## Key Features
+
+- **Simulation Environments:** Provides or allows defining various simulation environments (`environments/`).
+- **Agent Definitions:** Supports creating agents with specific behaviors to operate within environments (`agents/`).
+- **Simulation Core:** Manages the simulation loop, agent interactions, and environment updates (`core.py`).
+- **Command-Line Interface:** Offers tools to configure and run simulations via CLI (`cli.py`).
+- **Configurable:** Allows setting up simulation parameters, environments, agents, and logging (`config.py`).
+
+## Installation
+
+```bash
+pip install llama-simulator
+# Or install directly from GitHub for the latest version:
+# pip install git+https://github.com/llamasearchai/llama-simulator.git
+```
+
+## Usage
+
+### Command-Line Interface (CLI)
+
+*(CLI usage examples for running specific simulations will be added here.)*
+
+```bash
+llama-simulator run --config simulation_config.yaml --environment TradingEnv --agent QLearningAgent
+```
+
+### Python Client / Embedding
+
+*(Python usage examples for programmatically setting up and running simulations will be added here.)*
+
+```python
+# Placeholder for Python client usage
+# from llama_simulator import SimulationRunner, SimulationConfig
+# from my_envs import CustomEnvironment
+# from my_agents import HeuristicAgent
+
+# config = SimulationConfig.load("config.yaml")
+# runner = SimulationRunner(config)
+
+# # Setup simulation
+# environment = CustomEnvironment()
+# agent = HeuristicAgent()
+# runner.setup(environment, [agent])
+
+# # Run the simulation
+# results = runner.run_simulation(steps=1000)
+# print(f"Simulation finished. Final score: {results['final_score']}")
+```
+
+## Architecture Overview
+
+```mermaid
+graph TD
+    A[User / CLI (cli.py)] --> B{Simulation Core (core.py)};
+    B -- Loads --> C{Simulation Environment (environments/)};
+    B -- Loads --> D{Agent(s) (agents/)};
+    B -- Manages --> E[Simulation Loop];
+    E -- Updates --> C;
+    E -- Gets Actions --> D;
+    D -- Acts On --> C;
+    C -- Provides State/Reward --> D;
+    E --> F[Simulation Results / Logs];
+
+    G[Configuration (config.py)] -- Configures --> B;
+    G -- Configures --> C;
+    G -- Configures --> D;
+
+    style B fill:#f9f,stroke:#333,stroke-width:2px
+    style C fill:#ccf,stroke:#333,stroke-width:1px
+    style D fill:#ccf,stroke:#333,stroke-width:1px
+```
+
+1.  **Interface:** User configures and starts the simulation via the CLI or programmatically.
+2.  **Core:** Loads the specified environment and agent(s) based on configuration.
+3.  **Simulation Loop:** The core manages the main loop, stepping through time.
+4.  **Interaction:** In each step, agents perceive the environment state, decide on actions, and act upon the environment.
+5.  **Environment Update:** The environment state changes based on agent actions and internal dynamics.
+6.  **Results:** The simulation produces logs, metrics, or final state information.
+7.  **Configuration:** Defines the environment, agents, simulation length, parameters, etc.
+
+## Configuration
+
+*(Details on configuring simulation environments, agent parameters, simulation runtime settings, logging, etc., will be added here.)*
+
+## Development
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/llamasearchai/llama-simulator.git
+cd llama-simulator
+
+# Install in editable mode with development dependencies
+pip install -e ".[dev]"
+```
+
+### Testing
+
+```bash
+pytest tests/
+```
+
+### Contributing
+
+Contributions are welcome! Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) and submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
