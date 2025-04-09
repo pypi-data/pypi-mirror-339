@@ -1,0 +1,17 @@
+dash
+dash_bootstrap_components
+dash_daq
+loguru
+nltk
+pandas
+plotly
+protobuf
+pydantic
+requests
+scikit_learn
+setuptools
+tenacity
+tiktoken
+tqdm
+transformers
+scikit-criteria
