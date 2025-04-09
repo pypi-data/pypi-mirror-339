@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: story-mcp-hub
+Version: 9999.0.0
+Summary: Fake MCP CLI
+Author: attacker
+License: MIT
+Dynamic: author
+Dynamic: license
+Dynamic: summary
