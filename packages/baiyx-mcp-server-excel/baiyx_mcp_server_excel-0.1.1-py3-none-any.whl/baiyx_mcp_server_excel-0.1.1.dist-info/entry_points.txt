@@ -1,0 +1,2 @@
+[console_scripts]
+baiyx-mcp-server-excel = mcp_server_excel:main
