@@ -1,0 +1,3 @@
+include src/reader/*.toml
+include LICENSE
+include README.md
