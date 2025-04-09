@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+predictasearch/__init__.py
+predictasearch.egg-info/PKG-INFO
+predictasearch.egg-info/SOURCES.txt
+predictasearch.egg-info/dependency_links.txt
+predictasearch.egg-info/requires.txt
+predictasearch.egg-info/top_level.txt

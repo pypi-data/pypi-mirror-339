@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: predictasearch
+Version: 1.0.0
+Summary: Python library and command-line utility for Predicta Search API
+Home-page: https://github.com/predictalab/predictasearch-python
+Author: Predicta Lab
+Author-email: contact@predictalab.com
+Project-URL: Homepage, https://github.com/predictalab/predictasearch-python
+Project-URL: Repository, https://github.com/predictalab/predictasearch-python
+Project-URL: Issues, https://github.com/predictalab/predictasearch-python/issues
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.32.3
+
+# predictasearch: The official Python library and CLI for Predicta Search
+predictasearch is a Python library that interacts with the PredictaSearch API to perform searches on emails and phone numbers, as well as retrieve the list of supported networks.
+
+## Features
+- Search by email address
+- Search by phone number
+- Retrieve the list of supported networks
+
+## Quick Start
+```bash
+import os
+from predictasearch import PredictaSearch
+
+client = PredictaSearch(api_key=os.environ["PREDICTA_API_KEY"])
+
+networks = client.get_supported_networks()
+print(networks)
+
+email_results = client.search_by_email("example@email.com")
+print(email_results)
+
+phone_results = client.search_by_phone("+33612345678")
+print(phone_results)
+```
+Grab your API key from https://www.predictasearch.com/
+
+## Installation
+To install the Predicta Search library, simply:
+```bash
+pip install predictasearch
+```
+
+## Documentation
+Documentation is available at https://dev.predictasearch.com/redoc
