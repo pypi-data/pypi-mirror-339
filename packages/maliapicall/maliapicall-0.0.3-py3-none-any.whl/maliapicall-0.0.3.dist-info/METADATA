@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: maliapicall
+Version: 0.0.3
+Summary: A package to call Mali APIs
+Author-email: senn117 <createforwoek@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Mali API Package
+
+This package simplifies the process of obtaining tokens.
+
+## Prerequisites
+This package assumes using Python 3.7 and the expected package dependencies are listed in the "requirements.txt" file
+ for PIP, you need to run the following command to get dependencies:
+```
+pip install -r requirements.txt
+```
+
+## Installing the package (from PyPi)
+The package has been deployed to the PyPi and it can be install using pip command below:
+```
+pip install maliapicall
+```
+
+## Examples of python usage
+- You need to provide the corresponding webpage authentication request URL ending with "form", as well as your login account information.
+``` python
+token = maliapicall.wms.get_token(auth_url='https://xxx.xxx.com/xxx/xxx/form',
+                                    user_name='Your_Username',
+                                    user_password='Your_Password')
+```    
+- Please note that do not call the API too frequently. You can save the generated token and use it for testing.
