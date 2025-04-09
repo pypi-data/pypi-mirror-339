@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+directory_manager_AP/__init__.py
+directory_manager_AP/core.py
+directory_manager_AP/logger.py
+directory_manager_AP.egg-info/PKG-INFO
+directory_manager_AP.egg-info/SOURCES.txt
+directory_manager_AP.egg-info/dependency_links.txt
+directory_manager_AP.egg-info/top_level.txt
+tests/test_core.py
