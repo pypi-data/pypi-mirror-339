@@ -1,0 +1,13 @@
+llm_trainer/__init__.py,sha256=IaS6gvS62AKK7E6x_M9ZooPJd6yJ0VT5U0sp04p20Nc,339
+llm_trainer/dataset/DataLoader.py,sha256=14GgaR4FGjl2O7FpeFmKCCF2muqzkUFgJP2-BXWYuT4,2663
+llm_trainer/dataset/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_trainer/dataset/create_dataset.py,sha256=5SWDQtdLasiNxfCnGP8ySPfVxV_jvarGY37Ucb-GA-k,7272
+llm_trainer/evaluator/Evaluator.py,sha256=C92ZzEB4DXx3ZvxcN38WwaSuu4sybRhZZq5MUhT3aIw,2732
+llm_trainer/evaluator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_trainer/evaluator/hellaswag.py,sha256=fRm8YYfr1s1CZoAWqhM9j1ZU68G8ANqRCdUx38zISRQ,4069
+llm_trainer/evaluator/lambada.py,sha256=pey0LBbjJBwPzQaLpawizPRbSJXLytuBDW_PzybX6lo,3049
+llm_trainer/trainer/LLMTrainer.py,sha256=xtZhXxLdxeJNUS-CR-c6vFnhs1ziqSQrQo2ANbRBT7I,13804
+llm_trainer/trainer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_trainer-1.0.1.dist-info/METADATA,sha256=BzSnYQnxxe2-tkak-l7_CYz4MIMxqkDRCyh-Fw3OqkE,6950
+llm_trainer-1.0.1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+llm_trainer-1.0.1.dist-info/RECORD,,
