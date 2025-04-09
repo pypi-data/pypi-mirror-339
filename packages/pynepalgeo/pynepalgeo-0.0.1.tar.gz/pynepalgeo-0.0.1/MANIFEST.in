@@ -1,0 +1,4 @@
+include pynepalgeo/dataset/districts/en.json
+include pynepalgeo/dataset/alldataset/en.json
+include pynepalgeo/dataset/municipalities/en.json
+include pynepalgeo/dataset/provinces/en.json
