@@ -1,0 +1,32 @@
+{
+  "privacy": {
+    "epsilon": 1.0,
+    "delta": 1e-5,
+    "clip_norm": 1.0,
+    "noise_multiplier": 1.1,
+    "secure_aggregation": true,
+    "min_clients": 5,
+    "he_precision_bits": 16
+  },
+  "federated": {
+    "rounds": 10,
+    "local_epochs": 1,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "client_fraction": 0.1,
+    "min_clients_per_round": 3,
+    "max_clients_per_round": 10
+  },
+  "model": {
+    "model_name": "mlx-base",
+    "adapter_dim": 8,
+    "adapter_alpha": 16.0,
+    "dropout": 0.05
+  },
+  "security": {
+    "secure_enclave_simulation": true,
+    "key_rotation_days": 30
+  },
+  "storage_path": "./data",
+  "log_level": "INFO"
+}

@@ -1,0 +1,109 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llamapersonalization"
+version = "0.1.0"
+description = "User profile management, preference modeling, and personalization features for LlamaAI Ecosystem"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}, # Replace
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+]
+dependencies = [
+    # Core Data Handling & Modeling
+    "pydantic>=1.10.0",
+    "numpy>=1.21.0",
+    "pandas>=1.5.0", # Likely used for profile data manipulation
+    "scikit-learn>=1.1.0", # For collaborative filtering, clustering, etc.
+    "loguru>=0.7.0",
+
+    # Database/Storage (Assume storing user profiles/preferences)
+    "sqlalchemy[asyncio]>=2.0.0", # If using SQL DB
+    "alembic>=1.10.0",
+    "redis[hiredis]>=4.5.0", # For caching or simple profiles
+    "asyncpg", # If using PostgreSQL
+    "aiosqlite", # If using SQLite
+
+    # Potentially other ML/RecSys libraries
+    # "implicit>=0.6.0", # For implicit feedback ALS
+    # "lightfm>=1.17", # For hybrid recommendations
+
+    # Internal Dependencies
+    "llamavector>=0.1.0", # Might use vectors for user/item representation
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.3.1",
+    "pytest-cov>=4.1.0",
+    "pytest-asyncio", # If testing async DB code
+    "black>=23.3.0",
+    "isort>=5.12.0",
+    "mypy>=1.2.0",
+    "ruff>=0.0.260",
+    "pre-commit>=3.3.1",
+    "pytest-mock>=3.10.0",
+]
+docs = [
+    "mkdocs>=1.4.2",
+    "mkdocs-material>=9.1.6",
+    "mkdocstrings[python]>=0.20.0",
+]
+api = [
+    "fastapi>=0.95.0",
+    "uvicorn[standard]>=0.21.0",
+]
+all = [
+    "llamapersonalization[dev,docs,api]"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/llamapersonalization-pkg"
+"Bug Tracker" = "https://github.com/yourusername/llamapersonalization-pkg/issues"
+"Documentation" = "https://yourusername.github.io/llamapersonalization-pkg/"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/llamapersonalization"]
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+ignore_missing_imports = true # Adjust as needed
+# plugins = ["sqlalchemy.ext.mypy.plugin"] # If using SQLAlchemy models
+
+[tool.ruff]
+line-length = 88
+select = ["E", "W", "F", "I", "C", "B", "A", "ASYNC"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+asyncio_mode = "auto" 
