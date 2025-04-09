@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: rbwr
+Version: 0.2.0
+Summary: Rather be writing Rust.
+Project-URL: documentation, https://charles.gitlab-pages.computer.surgery/rbwr
+Project-URL: source, https://gitlab.computer.surgery/charles/rbwr
+License-Expression: MIT OR Apache-2.0
+Keywords: enum,rust,sum,tagged,types,union
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Typing :: Typed
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+# `rbwr`
+
+Rather be writing Rust
+
+---
+
+A small Python library providing sum types that play well with existing
+typechecking PEPs and should work out-of-the-box with any good typechecker,
+such as Pyright.
+
+For the documentation, look [here][docs]. To see how this scheme for encoding
+sum types was conceived, check out [this blog post][blog_post].
+
+[docs]: https://charles.gitlab-pages.computer.surgery/rbwr/
+[blog_post]: https://charles.gitlab-pages.computer.surgery/blog/python-has-sum-types.html

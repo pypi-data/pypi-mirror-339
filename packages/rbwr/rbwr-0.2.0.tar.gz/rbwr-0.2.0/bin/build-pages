@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+pdoc3 --force --html --output-dir public .
+mv public/rbwr/* public
+rm -r public/rbwr

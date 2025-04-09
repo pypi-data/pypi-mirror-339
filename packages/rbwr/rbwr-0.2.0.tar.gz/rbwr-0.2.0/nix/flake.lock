@@ -1,0 +1,66 @@
+{
+  "nodes": {
+    "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1743448263,
+        "narHash": "sha256-PplvwAEkj+/MFkM6Q9V59L6f6i3Tbdc/9yLRf/iwECg=",
+        "ref": "main",
+        "rev": "6588972962297c7abd300a72c55b2c7e21c1dc54",
+        "revCount": 85,
+        "type": "git",
+        "url": "https://git.lix.systems/lix-project/flake-compat"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "https://git.lix.systems/lix-project/flake-compat"
+      }
+    },
+    "nixpkgs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1743964447,
+        "narHash": "sha256-nEo1t3Q0F+0jQ36HJfbJtiRU4OI+/0jX/iITURKe3EE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "063dece00c5a77e4a0ea24e5e5a5bd75232806f8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-compat": "flake-compat",
+        "nixpkgs": "nixpkgs",
+        "sprinkles": "sprinkles"
+      }
+    },
+    "sprinkles": {
+      "flake": false,
+      "locked": {
+        "host": "gitlab.computer.surgery",
+        "lastModified": 1740551846,
+        "narHash": "sha256-VGW0i0i0FoJ3AnlEL3KD+n+weCBJUXr3wTRUBxNuRbA=",
+        "owner": "charles",
+        "repo": "sprinkles",
+        "rev": "1442895346341dcab3d9b528a2a06a921a943aff",
+        "type": "gitlab"
+      },
+      "original": {
+        "host": "gitlab.computer.surgery",
+        "owner": "charles",
+        "ref": "v1",
+        "repo": "sprinkles",
+        "type": "gitlab"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

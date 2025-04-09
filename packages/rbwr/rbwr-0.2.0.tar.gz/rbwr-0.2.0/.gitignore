@@ -1,0 +1,6 @@
+.coverage
+.direnv
+.pycache
+.venv
+/public
+/result*

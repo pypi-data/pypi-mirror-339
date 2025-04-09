@@ -1,0 +1,38 @@
+interpreter = ["bash", "-euo", "pipefail", "-c"]
+
+[[task]]
+name = "reuse"
+group = "lints"
+script = "reuse lint"
+
+[[task]]
+name = "markdownlint"
+group = "lints"
+script = """
+git ls-files --cached --others --exclude-standard '*.md' | xargs markdownlint
+"""
+
+[[task]]
+name = "ruff-lint"
+group = "lints"
+script = "ruff check"
+
+[[task]]
+name = "ruff-format"
+group = "lints"
+script = "ruff format --diff"
+
+[[task]]
+name = "pyright"
+group = "lints"
+script = "pyright"
+
+[[task]]
+name = "pytest"
+group = "tests"
+script = """
+pytest \
+    --color yes \
+    --cov rbwr \
+    --cov-report term
+"""
