@@ -1,0 +1,10 @@
+bin/__init__.py,sha256=yxi3tP7b6LPIAdzNQArCgRr-PNdl1R7GYLcqwry5w-c,71
+bin/clackystats/__init__.py,sha256=9BSB1dRYEPhYcSr6yBlH8jgDuLIhNfVCELFE9RbOwiU,324
+bin/clackystats/blame.py,sha256=kjdzQDQ5nCOFuSTIKEYGNtzNPKmK8Z6hs9wWrQHQ2rk,9498
+bin/clackystats/cli.py,sha256=jpfd8HCgXJ-jPI34GOYjp94ZCRR9c_6o4IIsqNl12Jk,6606
+clacky_stats-0.1.1.dist-info/licenses/LICENSE,sha256=UdJfrYLuCxrizAej40o_izPlO1ja5Rg_-cWktakNE5Q,1065
+clacky_stats-0.1.1.dist-info/METADATA,sha256=a_J2Ml4Cdul6Q7xQY29i9n1cQ2yVa_3RX82jd3eQANY,2650
+clacky_stats-0.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+clacky_stats-0.1.1.dist-info/entry_points.txt,sha256=gBl-dGM7NMOurG9QpSQbZKrSfH1jLMFlYID9QNsuVY8,58
+clacky_stats-0.1.1.dist-info/top_level.txt,sha256=R96X4WkWzS2JXVjmQGzznHrsb0spoRTVPx0dimUsYls,4
+clacky_stats-0.1.1.dist-info/RECORD,,
