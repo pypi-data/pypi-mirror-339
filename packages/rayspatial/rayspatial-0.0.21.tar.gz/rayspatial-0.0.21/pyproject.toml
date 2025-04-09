@@ -1,0 +1,55 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "rayspatial"
+version = "0.0.21"
+authors = [
+    { name = "rsDev-zh", email = "1924605670@qq.com" },
+]
+description = "A Python package for distributed spatial data processing based on Ray"
+readme = "README.md"
+license = "MIT"
+keywords = ["ray", "spatial", "distributed", "gis", "remote sensing"]
+requires-python = ">=3.10"
+dependencies = [
+    "rasterio",
+    "geopandas",
+    "fastapi",
+    "pydantic",
+    "requests",
+    "urllib3",
+    "ipyleaflet",
+    "planetary-computer",
+    "pyarrow",
+    "tqdm",
+    "pyproj (==3.6.1)",
+    "ray[client,serve]==2.43.0",
+]
+
+#[tool.hatch.build.targets.wheel]
+#packages = ["rayspatial"]
+
+[tool.setuptools]
+packages = [
+    "rayspatial",
+    "rayspatial.serve",
+    "rayspatial.common",
+    "rayspatial.common.obj",
+    "rayspatial.core",
+    "rayspatial.core.utils",
+    "rayspatial.core.image",
+    "rayspatial.core.actor",
+    "rayspatial.core.dataframe",
+    "rayspatial.core.error",
+    "rayspatial.image"
+]
+[[tool.uv.index]]
+url = "https://pypi.org/simple"
+default = true
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = false
+

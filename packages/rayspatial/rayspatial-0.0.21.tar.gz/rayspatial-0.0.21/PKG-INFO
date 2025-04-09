@@ -1,0 +1,75 @@
+Metadata-Version: 2.3
+Name: rayspatial
+Version: 0.0.21
+Summary: A Python package for distributed spatial data processing based on Ray
+License: MIT
+Keywords: ray,spatial,distributed,gis,remote sensing
+Author: rsDev-zh
+Author-email: 1924605670@qq.com
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: fastapi
+Requires-Dist: geopandas
+Requires-Dist: ipyleaflet
+Requires-Dist: planetary-computer
+Requires-Dist: pyarrow
+Requires-Dist: pydantic
+Requires-Dist: pyproj (==3.6.1)
+Requires-Dist: rasterio
+Requires-Dist: ray[client,serve] (==2.43.0)
+Requires-Dist: requests
+Requires-Dist: tqdm
+Requires-Dist: urllib3
+Description-Content-Type: text/markdown
+
+# RaySpatial
+
+## Installation
+
+```bash
+pip install rayspatial
+```
+
+## Usage
+
+```python
+import rayspatial
+```
+
+## Project Structure
+
+```
+.
+├── example/                 # Example usage
+├── rayspatial/                        # Main package directory
+│   ├── engine/                 # Engine functionality
+│   ├── serve/                 # Serve functionality
+├── stac_data/                 # demo stac data 
+├── temp_data/                 # caclulate result data 
+├── LICENSE                  # License information
+├── README.md               # Project documentation
+├── pyproject.toml          # Project metadata and dependencies
+├── requirements.txt        # Project dependencies
+```
+
+### Core Modules
+
+- **engine/****: import function
+- **serve/****: calculate function
+
+### docs 
+- execute generate_routes.py
+```
+python3 generate_routes.py
+```
+- run progress.html  
+```
+ python3 -m http.server 8000 
+```
+
+
