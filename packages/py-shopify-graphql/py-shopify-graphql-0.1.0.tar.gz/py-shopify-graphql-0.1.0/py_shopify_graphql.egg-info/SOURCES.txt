@@ -1,0 +1,10 @@
+README.md
+setup.py
+py_shopify_graphql/__init__.py
+py_shopify_graphql/client.py
+py_shopify_graphql/exceptions.py
+py_shopify_graphql.egg-info/PKG-INFO
+py_shopify_graphql.egg-info/SOURCES.txt
+py_shopify_graphql.egg-info/dependency_links.txt
+py_shopify_graphql.egg-info/requires.txt
+py_shopify_graphql.egg-info/top_level.txt
