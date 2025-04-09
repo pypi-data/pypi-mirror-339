@@ -1,0 +1,13 @@
+advanced_chunker-0.1.1.dist-info/licenses/LICENSE,sha256=hmt2Z3Y-p1TsPRJzEa495_9BX1YmNuD-4ssK0HiMAu8,1061
+semantic_chunker/__init__.py,sha256=VU2od7dUSjGP21Huo9LfpTnT5d8ScR4xd2wGJ7-QH-I,84
+semantic_chunker/cli.py,sha256=fnUrBNBr4ZdjGP0T77pIYJWzZ9TQJZGqW6e85kulVO0,2476
+semantic_chunker/core.py,sha256=_SSAuASI-2PyEIwdxa6vg0prWGCL03K_pjsaVjhsZ10,4974
+semantic_chunker/export.py,sha256=RrhWGDfYKcvsgx8UFWAiGvEkq-HkESKtfqlyFXtNwuU,2508
+semantic_chunker/visualization.py,sha256=bwg5PzoOF4YWcAXvsC8sLMahBBsbYUe7qE-QQzc_nVQ,3346
+semantic_chunker/integrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+semantic_chunker/integrations/langchain.py,sha256=rVm-C554DtF65ZWX6HhnQWG9H2P1LCBLqeKmJ63CCvU,1224
+advanced_chunker-0.1.1.dist-info/METADATA,sha256=AQoQq-L98kGSNouhgjQe7hvrpTL4ClMMkkq0YRR5Qw0,4007
+advanced_chunker-0.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+advanced_chunker-0.1.1.dist-info/entry_points.txt,sha256=U56Jkqy1DxnzpmVpRYaYoZU1II8ak9ZauHa-Ul8OxPc,54
+advanced_chunker-0.1.1.dist-info/top_level.txt,sha256=M82Uzou1mfCJCaWTLb7TAGPmtjmJA-ADt9GK7fxFnLY,17
+advanced_chunker-0.1.1.dist-info/RECORD,,

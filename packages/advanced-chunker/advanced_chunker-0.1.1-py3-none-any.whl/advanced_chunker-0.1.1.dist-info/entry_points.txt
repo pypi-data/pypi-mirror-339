@@ -1,0 +1,2 @@
+[console_scripts]
+chunker = semantic_chunker.cli:main
