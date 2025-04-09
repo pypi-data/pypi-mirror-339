@@ -1,0 +1,2 @@
+[console_scripts]
+targetctl = rtslib.targetctl:main
