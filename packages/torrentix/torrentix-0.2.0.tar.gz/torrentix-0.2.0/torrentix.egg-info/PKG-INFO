@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: torrentix
+Version: 0.2.0
+Summary: Torrent Downloader written from scratch in Python
+Project-URL: Homepage, https://github.com/Amir-Hossein-ID/torrentix
+Keywords: torrent,magnet,downloader,torrentix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp>=3.11.0
+Requires-Dist: aiofiles>=24.1.0
+Requires-Dist: tqdm>=4.67.0
+Dynamic: license-file
+
+# Torrent Downloader (WIP)
+
+A python package to download torrents written in python asyncio.
+
+
+## Features
+- Download torrents using .torrent files
+- Track download progress
+- Resume partially downloaded torrents
+
+## Installation
+
+```sh
+pip install torrentix
+```
+
+## Usage
+
+```python
+from torrentix import Torrent
+
+async def main():
+    # Initialize downloader
+    t = Torrent("path/to/file.torrent")
+
+    # Start download
+    await t.start()
+```
+
+## Roadmap
+- [ ] Support for magnet links
+- [ ] Downloading specific files from a torrent
+...
+
+## License
+MIT License
+
+## Disclaimer
+This tool is for educational purposes only. Ensure you have the right to download any torrent before using this software.
+
