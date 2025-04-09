@@ -1,0 +1,2 @@
+[console_scripts]
+sortvis = cipherShad0w.cli:main
