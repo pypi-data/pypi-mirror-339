@@ -1,0 +1,37 @@
+[project]
+# 默认会去项目下找 python_tool_box的包进行打包，也可以使用tool.poetry.packages 进行指定
+name = "ym_py_tool"
+version = "0.1.2"
+description = ""
+authors = [
+    { name = "Yuanrenmao", email = "test@test.com" }
+]
+readme = "README.md"
+license = { file = "LICENSE.txt" }  # 指定许可证文件
+requires-python = ">=3.10"
+
+dependencies = [
+    "psycopg2 (>=2.9.10,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+priority = "primary"
+
+
+[tool.poetry.requires-plugins]
+# 安装导出requirements.txt插件
+poetry-plugin-export = ">=1.8"
+#
+#[tool.poetry]
+## 指定从 src 目录中查找包
+#packages = [
+#    { include = "model1", from = "src" },
+#    { include = "thread", from = "src" },
+#]
