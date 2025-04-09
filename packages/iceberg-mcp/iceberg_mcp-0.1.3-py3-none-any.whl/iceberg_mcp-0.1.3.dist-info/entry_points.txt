@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-clickhouse = src.iceberg_server:main
