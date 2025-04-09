@@ -1,0 +1,3 @@
+[console_scripts]
+prismlens=prismlens:prism_lens.main
+
