@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: odoo-addon-community-maps-key-submissions
+Version: 16.0.1.0.0
+Summary: Define some submissions on the map as key submissions
+Home-page: https://gitlab.com/somitcoop/erp-research/community-maps
+Author: Community maps
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 16.0
+Requires-Python: >=3.10
+
+
+        Define some submissions on the map as key submissions
+    
