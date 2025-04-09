@@ -1,0 +1,16 @@
+[console_scripts]
+prompt2 = prompt2.cli:cli.entry_point
+
+[prompt2_backend]
+litellm = prompt2.backends.litellm:LiteLLMBackend
+
+[prompt2_globals]
+read = prompt2.jinja2:read
+shell = prompt2.jinja2:shell
+
+[prompt2_parser]
+list = prompt2.parser:List
+wholefile = prompt2.parser:Wholefile
+
+[pytest11]
+prompt2 = prompt2.pytest
