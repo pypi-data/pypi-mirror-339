@@ -1,0 +1,2 @@
+[console_scripts]
+yala-events = yala_events:main
