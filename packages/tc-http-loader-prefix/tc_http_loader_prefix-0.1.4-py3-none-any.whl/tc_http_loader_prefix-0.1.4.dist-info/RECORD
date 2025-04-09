@@ -1,0 +1,10 @@
+tc_http_loader_prefix/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tc_http_loader_prefix/config.py,sha256=W4UeUC-opFfSw-o5MmAplsPJgvB5YIPT1s0VtNny9HE,192
+tc_http_loader_prefix/loader.py,sha256=puWUKN_mJhkNBND8pZetYvb-N7mrKwZsVNsNvrNYMqM,617
+tc_http_loader_prefix-0.1.4.dist-info/licenses/LICENSE,sha256=tRkPuNtv6u107njUfmx6TrNOMbFqgCbeXa64ZqkPZrc,1046
+tests/test_loader.py,sha256=G40R-_AmO7CFyA1fHw2C8aQFhqMq1SKhvDD3bG39aIo,862
+tc_http_loader_prefix-0.1.4.dist-info/METADATA,sha256=mRMG7aS4PmXShN0u-ZgbAPQ62wpQB-ZcrAqx6m28bng,1241
+tc_http_loader_prefix-0.1.4.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+tc_http_loader_prefix-0.1.4.dist-info/entry_points.txt,sha256=OQ9GrzCHr5mj0msjgXwPzVfTleKB9oaJ0AREqp1Kbl4,68
+tc_http_loader_prefix-0.1.4.dist-info/top_level.txt,sha256=hJkjEk06rAYQL9tMWDnGUAYnHE44-Z_Sg4cGh9_n5OM,28
+tc_http_loader_prefix-0.1.4.dist-info/RECORD,,

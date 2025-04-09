@@ -1,0 +1,2 @@
+[thumbor.loaders]
+custom_loader = tc_http_loader_prefix.loader:load
