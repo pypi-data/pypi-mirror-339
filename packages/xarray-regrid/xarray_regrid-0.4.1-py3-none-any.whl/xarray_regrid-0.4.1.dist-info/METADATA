@@ -1,0 +1,119 @@
+Metadata-Version: 2.4
+Name: xarray-regrid
+Version: 0.4.1
+Summary: Regridding tools using xarray and flox.
+Project-URL: Documentation, https://github.com/EXCITED-CO2/xarray-regrid#readme
+Project-URL: Issues, https://github.com/EXCITED-CO2/xarray-regrid/issues
+Project-URL: Source, https://github.com/EXCITED-CO2/xarray-regrid
+Author-email: "Bart Schilperoort, Yang Liu" <b.schilperoort@esciencecenter.nl>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Requires-Dist: flox
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: xarray
+Provides-Extra: accel
+Requires-Dist: dask[distributed]; extra == 'accel'
+Requires-Dist: opt-einsum; extra == 'accel'
+Requires-Dist: sparse; extra == 'accel'
+Provides-Extra: benchmarking
+Requires-Dist: aiohttp; extra == 'benchmarking'
+Requires-Dist: cftime; extra == 'benchmarking'
+Requires-Dist: h5netcdf; extra == 'benchmarking'
+Requires-Dist: matplotlib; extra == 'benchmarking'
+Requires-Dist: pooch; extra == 'benchmarking'
+Requires-Dist: requests; extra == 'benchmarking'
+Requires-Dist: zarr; extra == 'benchmarking'
+Provides-Extra: dev
+Requires-Dist: hatch; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: pandas-stubs; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: coverage[toml]; extra == 'docs'
+Requires-Dist: myst-nb; extra == 'docs'
+Requires-Dist: myst-parser; extra == 'docs'
+Requires-Dist: sphinx; extra == 'docs'
+Requires-Dist: sphinx-autoapi; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme; extra == 'docs'
+Description-Content-Type: text/markdown
+
+# xarray-regrid: Regridding utilities for xarray.
+
+<img align="right" width="100" alt="Logo" src="./docs/assets/logo.png">
+
+
+With xarray-regrid it is possible to regrid between two rectilinear grids. The following methods are supported:
+ - Linear
+ - Nearest-neighbor
+ - Conservative
+ - Cubic
+ - "Most common value", as well as other zonal statistics (e.g., variance or median).
+
+All regridding methods can operate lazily on [Dask arrays](https://docs.xarray.dev/en/latest/user-guide/dask.html).
+
+Note that "Most common value" is designed to regrid categorical data to a coarse resolution. For regridding categorical data to a finer resolution, please use "nearest-neighbor" regridder.
+
+[![PyPI](https://img.shields.io/pypi/v/xarray-regrid.svg?style=flat)](https://pypi.python.org/pypi/xarray-regrid/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10203304.svg)](https://doi.org/10.5281/zenodo.10203304)
+[![Docs](https://readthedocs.org/projects/xarray-regrid/badge/?version=latest&style=flat)](https://xarray-regrid.readthedocs.org/)
+
+## Why xarray-regrid?
+
+Regridding is a common operation in earth science and other fields. While xarray does have some interpolation methods available, these are not always straightforward to use. Additionally, methods such as conservative regridding, or taking the most common value, are not available in xarray.
+
+## Installation
+
+For a minimal install:
+```console
+pip install xarray-regrid
+```
+
+To improve performance in certain cases:
+```console
+pip install xarray-regrid[accel]
+```
+
+which includes optional extras such as:
+ - `dask`: parallelization over chunked data
+ - `sparse`: for performing conservative regridding using sparse weight matrices
+ - `opt-einsum`: optimized einsum routines used in conservative regridding
+
+ Benchmarking varies across different hardware specifications, but the inclusion of these extras can often provide significant speedups.
+
+## Usage
+The xarray-regrid routines are accessed using the "regrid" accessor on an xarray Dataset:
+```py
+import xarray_regrid
+
+ds = xr.open_dataset("input_data.nc")
+ds_grid = xr.open_dataset("target_grid.nc")
+
+ds.regrid.linear(ds_grid)
+```
+
+For examples, see the benchmark notebooks and the demo notebooks.
+
+## Benchmarks
+The benchmark notebooks contain comparisons to more standard methods (CDO, xESMF).
+
+To be able to run the notebooks, a conda environment is required (due to ESMF and CDO).
+You can install this environment using the `environment.yml` file in this repository.
+[Micromamba](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html) is a lightweight version of the much faster "mamba" conda alternative.
+
+```sh
+micromamba create -n environment_name -f environment.yml
+```
+
+## Acknowledgements
+
+This package was developed under Netherlands eScience Center grant [NLESC.OEC.2022.017](https://research-software-directory.org/projects/excited).
