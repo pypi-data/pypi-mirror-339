@@ -1,0 +1,139 @@
+Metadata-Version: 2.4
+Name: pelican_nlp
+Version: 0.1.3
+Summary: Preprocessing and Extraction of Linguistic Information for Computational Analysis
+Author-email: Yves Pauli <yves.pauli@gmail.com>
+License-Expression: CC-BY-NC-4.0
+Project-URL: Homepage, https://github.com/ypauli/pelican_nlp
+Project-URL: Repository, https://github.com/ypauli/pelican_nlp
+Project-URL: Documentation, https://github.com/ypauli/pelican_nlp#readme
+Project-URL: Bug Tracker, https://github.com/ypauli/pelican_nlp/issues
+Keywords: nlp,linguistics,preprocessing,language-processing,text-analysis
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: numpy==2.0.1
+Requires-Dist: pandas==2.2.3
+Requires-Dist: PyYAML>=6.0.2
+Requires-Dist: torch==2.5.1
+Requires-Dist: spacy==3.8.2
+Requires-Dist: transformers==4.49.0
+Requires-Dist: docx2txt>=0.9
+Requires-Dist: striprtf>=0.0.28
+Requires-Dist: chardet>=4.0.0
+Requires-Dist: scikit_learn>=1.6.1
+Requires-Dist: scipy==1.15.2
+Requires-Dist: fasttext-wheel==0.9.2
+Requires-Dist: matplotlib>=3.10.0
+Requires-Dist: seaborn>=0.13.2
+Requires-Dist: accelerate==1.4.0
+Requires-Dist: editdistance>=0.8.1
+Requires-Dist: psutil>=6.1.0
+Requires-Dist: tqdm==4.67.1
+Requires-Dist: pytest>=8.3.4
+Requires-Dist: statsmodels>=0.14.4
+Requires-Dist: datasets==3.3.2
+Requires-Dist: huggingface_hub==0.29.2
+Dynamic: license-file
+
+====================================
+PELICAN_nlp
+====================================
+
+pelican_nlp stands for "Preprocessing and Extraction of Linguistic Information for Computational Analysis - Natural Language Processing". This package enables the creation of standardized and reproducible language processing pipelines, extracting linguistic features from various tasks like discourse, fluency, and image descriptions.
+
+.. image:: https://img.shields.io/pypi/v/package-name.svg
+    :target: https://pypi.org/project/pelican_nlp/
+    :alt: PyPI version
+
+.. image:: https://img.shields.io/github/license/username/package-name.svg
+    :target: https://github.com/ypauli/pelican_nlp/blob/main/LICENSE
+    :alt: License
+
+.. image:: https://img.shields.io/pypi/pyversions/package-name.svg
+    :target: https://pypi.org/project/pelican_nlp/
+    :alt: Supported Python Versions
+
+Installation
+============
+
+Install the package using pip:
+
+.. code-block:: bash
+
+    pip install pelican_nlp
+
+For the latest development version:
+
+.. code-block:: bash
+
+    pip install https://github.com/ypauli/pelican_nlp/releases/tag/v0.1.2-alpha
+
+Usage
+=====
+
+To use the pelican_nlp package:
+
+Adapt your configuration file to your needs.
+ALWAYS change the specified project folder location.
+
+.. code-block:: python
+
+    from pelican_nlp.main import Pelican
+
+    configuration_file = "/path/to/your/config/file"
+    pelican = Pelican(configuration_file)
+    pelican.run()
+
+For reliable operation, data must be stored in the *Language Processing Data Structure (LPDS)* format, inspired by brain imaging data structure conventions.
+
+Text and audio files should follow this naming convention:
+
+[subjectID]_[sessionID]_[task]_[task-supplement]_[corpus].[extension]
+
+- subjectID: ID of subject (e.g., sub-01), mandatory
+- sessionID: ID of session (e.g., ses-01), if available
+- task: task used for file creation, mandatory
+- task-supplement: additional information regarding the task, if available
+- corpus: (e.g., healthy-control / patient) specify files belonging to the same group, mandatory
+- extension: file extension (e.g., txt / pdf / docx / rtf), mandatory
+
+Example filenames:
+
+- sub-01_interview_schizophrenia.rtf
+- sub-03_ses-02_fluency_semantic_animals.docx
+
+To optimize performance, close other programs and limit GPU usage during language processing.
+
+Features
+========
+
+- **Feature 1: Cleaning text files**
+    - Handles whitespaces, timestamps, punctuation, special characters, and case-sensitivity.
+
+- **Feature 2: Linguistic Feature Extraction**
+    - Extracts semantic embeddings, logits, distance from optimality, and semantic similarity.
+
+Examples
+========
+
+You can find example setups in the [`examples/`](https://github.com/ypauli/pelican_nlp/examples) folder.
+ALWAYS change the path to the project folder specified in the configuration file to your specific project location.
+
+Contributing
+============
+
+Contributions are welcome! Please check out the `contributing guide <https://github.com/ypauli/pelican_nlp/blob/main/CONTRIBUTING.md>`_.
+
+License
+=======
+
+This project is licensed under Attribution-NonCommercial 4.0 International. See the `LICENSE <https://github.com/ypauli/pelican_nlp/blob/main/LICENSE>`_ file for details.
