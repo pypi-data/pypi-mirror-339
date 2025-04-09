@@ -1,0 +1,13 @@
+gppt/__init__.py,sha256=QrDjfRnDfGJNdS51LwDVfLgmTrKUfv3gLujgaG3Gp2w,746
+gppt/auth.py,sha256=Rugcx8d0EbHUs1PUbZ7G08dd4WqDHIO8pRR_9zhV8_k,4681
+gppt/consts.py,sha256=LqC9STSSdVG_9XgMxJweWm9w0GpDxhAgUCRLS_smsfY,536
+gppt/gppt.py,sha256=R47qSfZDp84in4IhCRKED7gJ6yEz6rwH5IavxqYtS-I,8499
+gppt/main.py,sha256=BcihFzmvhzXmzbJXaRA4SstnrEgstq0g6C02hc6ctdM,4603
+gppt/model_types.py,sha256=xs9UD8ANOck_eWzJyhRGoApPGlmc0W0RC46zH5TDf_w,1121
+gppt/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gppt/utils.py,sha256=bT-UakUlSig009yMG-ObPjq1nncGxgV0fIfw2Ng8Gp4,2384
+gppt-4.1.1.dist-info/METADATA,sha256=TYgCCduVPhz9dYi2lM2HyF9qcKWxm4CXlr2Ja_XXAhE,6162
+gppt-4.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gppt-4.1.1.dist-info/entry_points.txt,sha256=Ed-ey9DnmtWgkAEeMUNMq5f7-ZkFIDevSu_4tUb3Lf4,40
+gppt-4.1.1.dist-info/licenses/LICENSE.txt,sha256=r8H2g5CSzw2VZr2CrBp33IHi2bpSxPAxRsUZhUn7e3M,1046
+gppt-4.1.1.dist-info/RECORD,,
