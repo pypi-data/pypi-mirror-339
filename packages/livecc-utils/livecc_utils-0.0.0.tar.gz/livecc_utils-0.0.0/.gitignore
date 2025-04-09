@@ -1,0 +1,7 @@
+/wandb
+/outputs
+*.pyc
+__pycache__/
+/datasets
+*.log
+/checkpoints
