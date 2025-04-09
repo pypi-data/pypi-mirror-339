@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+tests/test.py
+theaddressor/__init__.py
+theaddressor/address_parser.py
+theaddressor.egg-info/PKG-INFO
+theaddressor.egg-info/SOURCES.txt
+theaddressor.egg-info/dependency_links.txt
+theaddressor.egg-info/top_level.txt
