@@ -1,0 +1,23 @@
+[project]
+name = "python-left"
+version = "0.0.7"
+requires-python = ">= 3.10"
+dependencies = [
+    "flet==0.27.6",
+    "dataclasses_json==0.6.3",
+    "tinydb==4.8.2",
+    "tinyrecord==0.2.0"
+]
+authors = [
+    {name = "Nick Peck"}
+]
+description = "A Minimalist Flet Framework"
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/nickpeck/left.git"
+
+[build-system]
+requires = ["setuptools==78.1.0"]
+build-backend = "setuptools.build_meta"
