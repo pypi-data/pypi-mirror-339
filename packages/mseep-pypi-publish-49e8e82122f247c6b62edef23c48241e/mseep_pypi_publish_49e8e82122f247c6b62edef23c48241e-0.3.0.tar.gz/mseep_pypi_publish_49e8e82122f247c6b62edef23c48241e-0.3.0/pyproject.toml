@@ -1,0 +1,27 @@
+[project]
+name = "mseep-pypi_publish_49e8e82122f247c6b62edef23c48241e"
+version = "0.3.0"
+authors = [
+    { name = "Jack Kingsman", email = "jack@jackkingsman.me" },
+]
+license = "MIT"
+description = "MCP server for QAnon drops for sociological research"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+]
+
+[project.scripts]
+qanon_mcp = "qanon_mcp:main"
+
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "src/qanon_mcp",
+]
