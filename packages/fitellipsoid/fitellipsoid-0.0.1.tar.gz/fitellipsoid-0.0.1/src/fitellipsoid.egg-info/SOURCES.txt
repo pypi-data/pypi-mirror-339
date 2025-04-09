@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+todo.txt
+data/img_test.tif
+src/fitellipsoid/__init__.py
+src/fitellipsoid/_widget.py
+src/fitellipsoid/math_func.py
+src/fitellipsoid/napari.yaml
+src/fitellipsoid.egg-info/PKG-INFO
+src/fitellipsoid.egg-info/SOURCES.txt
+src/fitellipsoid.egg-info/dependency_links.txt
+src/fitellipsoid.egg-info/entry_points.txt
+src/fitellipsoid.egg-info/requires.txt
+src/fitellipsoid.egg-info/top_level.txt
