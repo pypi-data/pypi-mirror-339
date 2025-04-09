@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+invoke_junkpile/__init__.py
+invoke_junkpile/__main__.py
+invoke_junkpile.egg-info/PKG-INFO
+invoke_junkpile.egg-info/SOURCES.txt
+invoke_junkpile.egg-info/dependency_links.txt
+invoke_junkpile.egg-info/entry_points.txt
+invoke_junkpile.egg-info/top_level.txt
