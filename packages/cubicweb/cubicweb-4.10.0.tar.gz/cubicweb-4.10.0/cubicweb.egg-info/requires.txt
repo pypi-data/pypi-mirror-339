@@ -1,0 +1,47 @@
+Markdown>=3.4.0
+cachetools
+filelock
+logilab-common<2.0.0,>=1.9.7
+logilab-database<2.0.0,>=1.20.0
+logilab-mtconverter<1.0.0,>=0.9.2
+lxml<6.0.0,>=5.2.0
+lxml_html_clean>=0.4.1
+passlib>=1.7
+pyramid<2.0.0,>=1.10.8
+pyramid_multiauth<1.0.0
+pytz
+rdflib>=6.0.0
+repoze.lru
+rql<1.0.0,>=0.41.0
+wsgicors>=0.3
+yams<1.0.0,>=0.50.0
+
+[:python_version < "3.10"]
+importlib_metadata
+
+[:python_version < "3.8"]
+waitress<3.0.0,>=2.1.2
+
+[:python_version == "3.8.*"]
+waitress<=3.0.0,>=2.1.2
+
+[:python_version >= "3.9"]
+waitress<4.0.0,>=3.0.2
+
+[captcha]
+Pillow
+
+[crypto]
+pycryptodomex
+
+[ext]
+docutils>=0.6
+
+[ical]
+vobject>=0.6.0
+
+[postgresql]
+psycopg2-binary
+
+[s3]
+minio

@@ -1,0 +1,33 @@
+4.9.1 (2025-02-12)
+==================
+👷 Bug fixes
+-----------
+
+- rql: remove superfluous quotes in the FTIHL functions (https://forge.extranet.logilab.fr/cubicweb/cubicweb/-/issues/1107)
+
+4.9.0 (2025-01-28)
+==================
+🎉 New features
+---------------
+
+- add a new FTIHL RQL function to mark searched terms (https://forge.extranet.logilab.fr/cubicweb/cubicweb/-/issues/1085)
+- add a new LIST function to RQL
+- add variables to result sets produced by Insert queries
+- add variables to ResultSet created from rql union with one single query
+- server: improve the error message when a RQL fails
+- stop using "default-dest-addrs" config address for reply-to (https://forge.extranet.logilab.fr/cubicweb/cubicweb/-/issues/1088)
+
+👷 Bug fixes
+------------
+
+- In ResulSet, correctly name columns containing variable method calls
+- pyramid: wsgicors' maxage is expected to be a string
+- When using sqlite, ensure that integer values returned from db are casted to boolean when necessary
+- querier: resolve entity methods/attributes when solution is not known statically (https://forge.extranet.logilab.fr/cubicweb/cubicweb/-/issues/1073)
+
+📝 Documentation
+----------------
+
+- compare rql with cypher and gql
+- explain how to migrate to CW4 from CW3
+- explain how to remove an entity through RQL with only its eid
