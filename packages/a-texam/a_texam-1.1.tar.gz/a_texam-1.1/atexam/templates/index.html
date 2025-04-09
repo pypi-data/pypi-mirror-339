@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Система A-TExam</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header class="header">
+        <h1 style="color: red;">A-TExam</h1>
+        <h4>Система тестирования нового поколения</h4>
+        <div class="button-container">
+            <a href="{{ url_for('about') }}" class="btn btn-danger text-white text-decoration-none">О системе</a>
+            <a href="{{ url_for('logout') }}" class="btn btn-secondary text-white text-decoration-none">Выйти</a>
+        </div>
+    </header>
+
+    <div class="container mt-4">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="mt-3">
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        {% if show_modal %}
+        <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="welcomeModalLabel">Добро пожаловать, {{ session['username'] }}!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">
+                        Вы успешно вошли в систему
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+            welcomeModal.show();
+        </script>
+        {% endif %}
+
+        <h1 class="mt-2 text-center">Доступные тесты</h1>
+        <br>
+        <div class="row">
+            {% for test in tests %}
+            <div class="col-12 mb-4">
+                <div class="card custom-card h-100">
+                    <div class="card-body" style="background-color: white;">
+                        <h5 class="card-title text-primary">{{ test.title }}</h5>
+                        <p class="card-text">{{ test.description }}</p>
+                        <hr>
+                        <p class="mb-1">
+                            <i class="bi bi-question-circle"></i>
+                            <strong>Количество вопросов:</strong> {{ test.questions | length }}
+                        </p>
+                        <p class="mb-1">
+                            <i class="bi bi-clock"></i>
+                            <strong>Время теста:</strong> {{ test.duration }} минут
+                        </p>
+                        {% if test.scheduled_time %}
+                        <p class="mb-1">
+                            <i class="bi bi-calendar"></i>
+                            <strong>Запланированное время:</strong> {{ test.scheduled_time.strftime("%Y-%m-%d %H:%M") }}
+                        </p>
+                        {% endif %}
+                        {% if test.max_attempts %}
+                        <p class="mb-1">
+                            <i class="bi bi-check-circle"></i>
+                            <strong>Попытки:</strong> {{ attempts_info[test.id]['attempts_taken'] }} из {{
+                            test.max_attempts }}
+                        </p>
+                        <p>
+                            <i class="bi bi-x-circle"></i>
+                            <strong>Осталось попыток:</strong> {{ attempts_info[test.id]['remaining_attempts'] }}
+                        </p>
+                        {% endif %}
+                    </div>
+                    <div class="card-footer border-top-0 text-end" style="background-color: white;">
+                        {% if test.show_attempt_limit_modal %}
+                        <button class="btn btn-secondary" disabled>Попытки исчерпаны</button>
+                        {% else %}
+                        {% if test.scheduled_time and test.scheduled_time > now %}
+                        <button class="btn btn-warning"
+                            data-scheduled="{{ test.scheduled_time.strftime('%Y-%m-%d %H:%M') }}"
+                            onclick="showScheduleModal(this)">
+                            Тест запланирован
+                        </button>
+                        {% else %}
+                        <a href="{{ url_for('test_page', test_id=test.id) }}" class="btn btn-primary">Пройти тест</a>
+                        {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <footer class="bg-light text-center py-3 mt-auto">
+        <p>&copy; 2025 A-TExam. Все права защищены.</p>
+    </footer>
+
+    {% if show_attempt_limit_modal %}
+    <div class="modal fade" id="attemptLimitModal" tabindex="-1" aria-labelledby="attemptLimitModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="attemptLimitModalLabel">Невозможно</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    Вы достигли максимального количества попыток
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ок</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var attemptLimitModal = new bootstrap.Modal(document.getElementById('attemptLimitModal'));
+            attemptLimitModal.show();
+        });
+    </script>
+    {% endif %}
+
+
+    <div class="modal fade" id="scheduleModal" tabindex="-1" aria-labelledby="scheduleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scheduleModalLabel">Тест запланирован</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    Этот тест запланирован на: <span id="scheduledTime"></span>.<br>
+                    Пожалуйста, вернитесь позже, когда тест начнется.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ок</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showScheduleModal(button) {
+            var scheduledTime = button.getAttribute("data-scheduled");
+            document.getElementById("scheduledTime").innerText = scheduledTime;
+            var scheduleModal = new bootstrap.Modal(document.getElementById('scheduleModal'));
+            scheduleModal.show();
+        }
+        const scheduledElements = document.querySelectorAll('[data-scheduled]');
+        let nearestTime = null;
+
+        scheduledElements.forEach(elem => {
+            const timeStr = elem.getAttribute('data-scheduled');
+            const scheduledDate = new Date(timeStr.replace(' ', 'T'));
+            const currentTime = new Date();
+            if (scheduledDate > currentTime) {
+                if (!nearestTime || scheduledDate < nearestTime) {
+                    nearestTime = scheduledDate;
+                }
+            }
+        });
+
+
+        if (nearestTime) {
+            const now = new Date();
+            const delay = nearestTime - now;
+            setTimeout(() => {
+                location.reload();
+            }, delay);
+        }
+    </script>
+
+    <style>
+        .custom-card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            overflow: hidden;
+        }
+        .custom-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        .custom-card .card-body {
+            padding: 20px;
+        }
+        .custom-card .card-title {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .custom-card .card-text {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .custom-card hr {
+            border-top: 1px solid black;
+        }
+        .custom-card .card-footer {
+            background: transparent;
+            border-top: none;
+            padding: 15px 20px;
+        }
+    </style>
+</body>
+</html>

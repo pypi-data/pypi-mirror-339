@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактировать тест</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Редактировать тест</h1>
+        <form method="post">
+            <div class="mb-3">
+                <label for="title" class="form-label">Название теста</label>
+                <input type="text" class="form-control" id="title" name="title" value="{{ test.title }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Описание теста</label>
+                <textarea class="form-control" id="description" name="description"
+                    rows="3">{{ test.description }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="scheduled_time" class="form-label">Запланированное время (YYYY-MM-DDTHH:MM)</label>
+                <input type="datetime-local" class="form-control" id="scheduled_time" name="scheduled_time"
+                    value="{{ test.scheduled_time.strftime('%Y-%m-%dT%H:%M') if test.scheduled_time else '' }}">
+            </div>
+            <div class="mb-3">
+                <label for="duration" class="form-label">Длительность теста (в минутах)</label>
+                <input type="number" class="form-control" id="duration" name="duration" value="{{ test.duration }}"
+                    required>
+            </div>
+            <div class="mb-3">
+                <label for="max_attempts" class="form-label">Количество попыток</label>
+                <input type="number" class="form-control" id="max_attempts" name="max_attempts"
+                    value="{{ test.max_attempts if test.max_attempts is not none else '' }}"
+                    placeholder="Оставьте пустым для неограниченных попыток">
+            </div>
+            <div class="mb-3">
+                <label for="display_mode" class="form-label">Режим отображения вопросов</label>
+                <select class="form-select" id="display_mode" name="display_mode">
+                    <option value="single" {% if test.display_mode=="single" %}selected{% endif %}>По одному на каждой странице</option>
+                    <option value="all" {% if test.display_mode=="all" %}selected{% endif %}>Все вопросы на одной странице</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+        </form>
+        <a href="{{ url_for('admin_tests') }}" class="btn btn-secondary mt-3">Назад</a>
+    </div>
+</body>
+</html>

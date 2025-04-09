@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include atexam/static *
+recursive-include atexam/templates *

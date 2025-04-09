@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить тест</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Добавить новый тест</h1>
+        <form action="{{ url_for('add_test') }}" method="POST">
+            <div class="mb-3">
+                <label for="title" class="form-label">Название теста</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Описание</label>
+                <textarea class="form-control" id="description" name="description"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="scheduled_time" class="form-label">Запланированное время (YYYY-MM-DDTHH:MM)</label>
+                <input type="datetime-local" class="form-control" id="scheduled_time" name="scheduled_time">
+            </div>
+
+            <div class="mb-3">
+                <label for="duration" class="form-label">Длительность теста (в минутах)</label>
+                <input type="number" class="form-control" id="duration" name="duration" value="30" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="max_attempts" class="form-label">Количество попыток</label>
+                <input type="number" class="form-control" id="max_attempts" name="max_attempts"
+                    placeholder="Оставьте пустым для неограниченных попыток">
+            </div>
+
+            <div class="mb-3">
+                <label for="display_mode" class="form-label">Режим отображения вопросов</label>
+                <select class="form-select" id="display_mode" name="display_mode">
+                    {% if test is defined %}
+                    <option value="single" {% if test.display_mode=="single" %}selected{% endif %}>По одному</option>
+                    <option value="all" {% if test.display_mode=="all" %}selected{% endif %}>Все вопросы на одной
+                        странице</option>
+                    {% else %}
+                    <option value="single" selected>По одному (по умолчанию)</option>
+                    <option value="all">Все вопросы на одной странице</option>
+                    {% endif %}
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Добавить</button>
+        </form>
+    </div>
+</body>
+</html>

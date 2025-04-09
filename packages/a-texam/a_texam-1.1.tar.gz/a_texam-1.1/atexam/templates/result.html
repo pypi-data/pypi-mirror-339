@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат теста</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript">
+        window.MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          },
+          svg: {
+            fontCache: 'global'
+          }
+        };
+      </script>
+      <script type="text/javascript" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
+</head>
+<body>
+    <div class="chart-container">
+        <canvas id="performanceChart"></canvas>
+    </div>
+
+    <div class="container">
+        <h1 class="mt-5 text-center">Результат теста</h1>
+        <p><strong>Пользователь:</strong> {{ result.user }}</p>
+        <p><strong>Тест ID:</strong> {{ result.test_id }}</p>
+        <p><strong>Набрано баллов:</strong> {{ result.score }}</p>
+        <p><strong>Дата завершения:</strong> {{ result.date_completed.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+
+        <h2 class="mt-4">Детали прохождения теста</h2>
+        <table class="table table-bordered table-hover table-striped">
+            <thead class="table-light">
+                <tr>
+                    <th>Вопрос</th>
+                    <th>Ваш ответ</th>
+                    <th>Результат</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for detail in result.details %}
+                <tr>
+                    <td>{{ detail.question.question_text }}</td>
+                    <td>{{ detail.user_answer.answer_text if detail.user_answer else 'Не выбран' }}</td>
+                    <td>
+                        {% if detail.is_correct %}
+                        <span class="text-success">Правильно</span>
+                        {% else %}
+                        <span class="text-danger">Неправильно</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{{ url_for('index') }}" class="btn btn-primary mt-3">Вернуться на главную</a>
+    </div>
+
+    <script>
+        const correctCount = {{ correct_count }};
+        const incorrectCount = {{ incorrect_count }};
+        const ctx = document.getElementById('performanceChart').getContext('2d');
+        const performanceChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Правильные ответы', 'Неправильные ответы'],
+                datasets: [{
+                    label: 'Результаты теста',
+                    data: [correctCount, incorrectCount],
+                    backgroundColor: ['#28a745', '#dc3545'],
+                    borderColor: ['#218838', '#c82333'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    },
+                    title: {
+                        display: true,
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        localStorage.clear();
+    </script>
+    <style>
+        .chart-container {
+            position: absolute;
+            top: 10px;
+            right: 40px;
+            width: 300px;
+            height: 300px;
+            z-index: 1000;
+        }
+    </style>
+</body>
+</html>
