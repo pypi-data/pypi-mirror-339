@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+apple_books_mcp/__init__.py
+apple_books_mcp/__main__.py
+apple_books_mcp/server.py
+apple_books_mcp.egg-info/PKG-INFO
+apple_books_mcp.egg-info/SOURCES.txt
+apple_books_mcp.egg-info/dependency_links.txt
+apple_books_mcp.egg-info/entry_points.txt
+apple_books_mcp.egg-info/requires.txt
+apple_books_mcp.egg-info/top_level.txt
+tests/test_server.py
