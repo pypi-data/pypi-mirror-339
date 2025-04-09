@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: pinit-pkg
+Version: 0.1.7
+Summary: Paquete de utilidades para el servicio de clusterizado.
+Author: Eduardo Cifuentes
+Author-email: eduardo.cifuentes@bigsmart.mx
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3>=1.37.9
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: pydantic>=2.10.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Paquete de utilidades para el servicio de clusterizado.
+
+## Installation
+
+```bash
+pip install pinit_pkg
+```
+
+## Usage
+
+```python
+import pinit_pkg
+```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
