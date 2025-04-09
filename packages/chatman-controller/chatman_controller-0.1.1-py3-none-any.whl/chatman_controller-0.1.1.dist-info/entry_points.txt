@@ -1,0 +1,3 @@
+[console_scripts]
+chatman_cli = chatman_controller.chatman_cli:main
+chatman_gui = chatman_controller.chatman_gui:main
