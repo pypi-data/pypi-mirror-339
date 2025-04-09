@@ -1,0 +1,12 @@
+reterm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+reterm/cli.py,sha256=4zFwI-Sp97uOlta9UeKZR_OdbFAbVVFgrzMs-Fgirk0,6786
+reterm/config.py,sha256=MKaTFulcoKIHL3GPQP9WBhOnDLDT-hKfhAphJMIyEKo,586
+reterm/llm.py,sha256=JDwkVnL17BerpLUzPbdMKp8OeFEYcT-I9MA86p7prrE,4296
+reterm/shell.py,sha256=cLo5gVr-zWYu_E-0IJcG4BjpyGjT108TDNYJosk3o0I,4139
+reterm/welcome.py,sha256=ed4JZvIFMWRgm3HNm0a_A0t5BQOEazhDWUgtDCYSvxk,1703
+reterm_ai-0.1.2.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+reterm_ai-0.1.2.dist-info/METADATA,sha256=pMbR2RU9RgYQIoi-8d2E-5D2TlZuREeg53VRWxA7QrM,4136
+reterm_ai-0.1.2.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+reterm_ai-0.1.2.dist-info/entry_points.txt,sha256=0xZ1Cs_LRoKptCPp-5mbLFqFz16JWWGdJiX3IVIHnpc,42
+reterm_ai-0.1.2.dist-info/top_level.txt,sha256=Au9OQV1c1QCx62-w1qpRWdbJDlrMbDuYCPWp1fXbuug,7
+reterm_ai-0.1.2.dist-info/RECORD,,
