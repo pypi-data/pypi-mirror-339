@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resmod"
+version = "0.2.5"
+description = "A package for deriving orthogonalized interaction terms, reporting interaction analyses, and visualization of interactions"
+authors = [{name = "Drew E. Winters, PhD.", email = "drewEwinters@gmail.com"}]
+license = {text = "MIT"}
+readme = "README.md"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "matplotlib",
+    "statsmodels",
+    "patsy"
+]
+
+[project.urls]
+Homepage = "https://github.com/drewwint/resmod"
