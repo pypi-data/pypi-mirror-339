@@ -1,0 +1,40 @@
+name: Coverage (3.11 only)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  codecov:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Micromamba
+        uses: mamba-org/setup-micromamba@v2
+        with:
+          cache-environment: false
+
+      - name: Create environment
+        run: micromamba env create -f environment.yml
+
+      - name: Install package
+        run: micromamba run -n hairloom pip install -e .
+
+      - name: Run tests and collect coverage
+        run: micromamba run -n hairloom pytest --cov=hairloom --cov-report=xml:coverage.xml
+
+      - name: Upload coverage to Codecov
+        run: |
+          curl -Os https://cli.codecov.io/latest/linux/codecov
+          chmod +x codecov
+          ./codecov --verbose upload-process \
+             --file coverage.xml \
+             --token ${{ secrets.CODECOV_TOKEN }} \
+             --name "service-${{ github.run_id }}" \
+             --flag service \
+             --fail-on-error

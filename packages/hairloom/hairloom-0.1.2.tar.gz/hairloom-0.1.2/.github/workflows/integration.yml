@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11"]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Micromamba
+        uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-name: hairloom
+          create-args: >-
+            python=${{ matrix.python-version }}
+            --file environment.yml
+          cache-environment: false
+
+      - name: Install package
+        run: micromamba run -n hairloom pip install .
+
+      - name: Run tests
+        run: micromamba run -n hairloom pytest --cov=hairloom --cov-report=term-missing
