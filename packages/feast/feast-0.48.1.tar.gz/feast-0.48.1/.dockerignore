@@ -1,0 +1,6 @@
+docs
+!docs/coverage
+charts
+env
+**/.terraform
+offline_build/
