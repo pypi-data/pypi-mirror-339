@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: pryanda-client
+Version: 0.1.0
+Summary: MZ first cool package.
+Author-email: Maxym Zolotenko <maksym.zolotenko@gmail.com>
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: google-cloud-bigquery<=3.31.0,>=3.0.1
+Dynamic: license-file
+
+# pryanda-client
+
+MZ first package.
