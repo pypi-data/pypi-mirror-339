@@ -1,0 +1,9 @@
+setup.py
+notify_senpai/__init__.py
+notify_senpai/notifier.py
+notify_senpai/notify.sh
+notify_senpai.egg-info/PKG-INFO
+notify_senpai.egg-info/SOURCES.txt
+notify_senpai.egg-info/dependency_links.txt
+notify_senpai.egg-info/entry_points.txt
+notify_senpai.egg-info/top_level.txt
