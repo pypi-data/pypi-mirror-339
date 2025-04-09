@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: neural-dispatch
+Version: 0.1.0
+Summary: Use metadata-rich embeddings to connect your user intents with the right tools in a single pass
+Author-email: Ivan Zakutnii <zakutnii.ivan@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# neural-dispatch
+
+Under construction 🏗️
