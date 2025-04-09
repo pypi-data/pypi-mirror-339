@@ -1,0 +1,14 @@
+toxolib/__init__.py,sha256=6LcBpRtnVYyCtqHlhXQPG5L0nLGbhftY7_srn3AjhBk,119
+toxolib/abundance_matrix.py,sha256=xyAtP_augrlQI2rf9szsRfsuz7rdCRQ1dPnS5wQdI10,8797
+toxolib/cli.py,sha256=U41nVmzCgK93YoL8COx1S4glk9Rh780hQV9jmc0I_ZI,13900
+toxolib/database.py,sha256=RYNqQaJTUGjTAo5be2UL2kF16z9dJyFXVGGBnwJXqUM,5127
+toxolib/hpc.py,sha256=VW3WTdFP-Bhwp5pPbUPkKWjxUgL9gYkRgWC7ZR2gPaM,25320
+toxolib/data/Snakefile,sha256=qwwZcd6ab6n4L7pUZgAj6zVm63WyCMiGHnBBJyBY4YA,9213
+toxolib/data/create_abundance_matrix.py,sha256=R_mvAlbhRzdvsbuQBOme6vaDdMxpz9s3VsgFHVCz5oc,2075
+toxolib/data/environment.yml,sha256=v6p7H46Daa3PhTV7TNZgCzBfsNc-aYd63_JxeourtLE,255
+toxolib-0.1.3.dist-info/licenses/LICENSE,sha256=3SxzEyg5JjzaTzIouFRwGmGKj8O6fo6X48-A6tkdF7M,1075
+toxolib-0.1.3.dist-info/METADATA,sha256=5zj__s7D_Puhxgb70MowV2vH0g6HBIrR_M8zjZO0fC4,7362
+toxolib-0.1.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+toxolib-0.1.3.dist-info/entry_points.txt,sha256=hzTEyMALAT156J8nzCdQmMofNHOlLV5pPTdbxQf8kMQ,45
+toxolib-0.1.3.dist-info/top_level.txt,sha256=diU8AK8zewRwxG1YeRL8ORs_Vy9aJ8Mq33HfOjkRs9s,8
+toxolib-0.1.3.dist-info/RECORD,,

@@ -1,0 +1,2 @@
+[console_scripts]
+toxolib = toxolib.cli:main
