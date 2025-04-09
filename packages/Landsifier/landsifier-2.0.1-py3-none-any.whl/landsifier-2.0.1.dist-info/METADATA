@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: Landsifier
+Version: 2.0.1
+Summary: A python package for landslides research
+Home-page: https://github.com/manank1997/Landsifier-V2.0.0/
+Author: Manan Kapoor, Kushanav Bhuyan, Kamal Rana
+Author-email: Manan Kapoor <manank1997@gmail.com>, Kushanav Bhuyan <kushanav.bhuyan@phd.unipd.it>, Kamal Rana <kamalrana520@gmail.com>
+Project-URL: Homepage, https://github.com/manank1997/Landsifier-V2.0.0/
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Landsifier
+
+Landsifier is a Python library for landslide detection and analysis using data preparation, machine learning, prediction, and visualization modules.

@@ -1,0 +1,11 @@
+Landsifier/Landsifier_DataPreparation.py,sha256=NnveSXb5wTc9rKXzP4y1v5j-DBdd2Mx6JLTTEob1Dbk,22381
+Landsifier/Landsifier_ML_Training.py,sha256=Wr8NGCRGO4MWzhLSCtON9cpKB9dvDz_yK2CcQQBeYok,15555
+Landsifier/Landsifier_Prediction.py,sha256=BwuDj_CVWImnYv5T_v4hEGGaNsBWVvm8PmQMdynA6Hg,2919
+Landsifier/Landsifier_Visualization.py,sha256=7ma2jCXJOfRuL9eN8JcpbR3GMe4qOs3WukQFKHkXE6k,2993
+Landsifier/__init__.py,sha256=latowNYROc47foDSFSIXP-UUPrH_x8vPtyCz4c0ANaQ,156
+Landsifier/utility.py,sha256=kKr_FsPW-VDpPnSyiPj4B0R5Nx310lQsHFFDkKskWuQ,24070
+landsifier-2.0.1.dist-info/LICENSE.txt,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+landsifier-2.0.1.dist-info/METADATA,sha256=53AyPBqJuo8YENFG12G85qw4OuC0_AprTkFOw0ZZ_5s,674
+landsifier-2.0.1.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+landsifier-2.0.1.dist-info/top_level.txt,sha256=siAN-WO0Fv-k4_yw0wssC32e_5JAx09FRh3lxsk4_As,11
+landsifier-2.0.1.dist-info/RECORD,,
