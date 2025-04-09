@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+django_style/__init__.py
+django_style/apps.py
+django_style/constants.py
+django_style/context_processors.py
+django_style/utils.py
+django_style.egg-info/PKG-INFO
+django_style.egg-info/SOURCES.txt
+django_style.egg-info/dependency_links.txt
+django_style.egg-info/requires.txt
+django_style.egg-info/top_level.txt
+tests/test_apps.py
+tests/test_settings.py
