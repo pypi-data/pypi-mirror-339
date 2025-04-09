@@ -1,0 +1,22 @@
+[config_version]
+version = "0.1.0" # reserved
+
+[hiragana]
+output_suffix ="_hiragana"
+model_name = "gemini-2.0-flash-exp"
+api_key_file = "gemini-2.0-flash-exp.api_key.toml"
+prompt_file = "gemini-2.0-flash-exp.prompt.toml"
+
+[odt]
+lua_script_name = "klctool-edit.lua"
+template_name = "klctool.odt"
+
+[adjust-image]
+paper_size_file = "paper-size.toml" # 用紙サイズ定義ファイル
+paper_size = "A4L" # デフォルト用紙サイズ
+mask_strength = 80 # デフォルトマスク強度
+mask_color = "white" # デフォルトマスク色
+suffix = "_processed" # サフィックス
+movie_aspect_ratio = 1.7777777778 # デフォルトアスペクト比 16/9
+dpi = 264 # 画像DPI - Retina
+fit_mode = "trim" # 最終調整方法 trim: 切り抜き  pad: 余白追加

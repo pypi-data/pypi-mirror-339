@@ -1,0 +1,43 @@
+[project]
+name = "klctool"
+version = "0.1.5"
+description = "Karaoke Lyrics Card Creation Support Tool"
+keywords = ["klctool", "lyrics", "utilities", "karaoke"]
+classifiers = [
+    "Natural Language :: Japanese",
+    "Topic :: Utilities"
+]
+readme = "README_PyPI.md"
+authors = [
+    { name = "AmasaShiro" }
+]
+license = "Apache-2.0"
+requires-python = ">=3.13"
+dependencies = [
+    "google-generativeai>=0.8.4",
+    "pillow>=11.1.0",
+    "toml>=0.10.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/AmasaShiro/klctool"
+# Documentation = "https://github.com/AmasaShiro/klctool"
+# Repository = "https://github.com/AmasaShiro/klctool"
+Issues = "https://github.com/AmasaShiro/klctool/issues"
+# Changelog = "https://github.com/AmasaShiro/klctool"
+
+[project.scripts]
+klctool = "klctool.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel.force-include]
+"config/" = "config/"
+
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
+explicit = true
