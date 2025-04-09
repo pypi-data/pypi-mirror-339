@@ -1,0 +1,11 @@
+cruxrec/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+cruxrec/cli.py,sha256=TkralBk8VqlUSARniW9VZtMhIjNm5G-AOcEO2UuHE0g,1818
+cruxrec/config_provider.py,sha256=mWBkBzCa-Zewb6UToaVWNIG3XA9b2YjkU7NmsEx_cfM,925
+cruxrec/subs_provider.py,sha256=AdTlc6_G6tyZbWmUnWxfr2tvUenQSAGUJ-T7HO2yJZY,4785
+cruxrec/summarizer.py,sha256=fhReJ-FtzaAurEBUZ-rD2tob4EOXK-UlM2ULKTInXjE,1657
+cruxrec/utils.py,sha256=OZ7oOcWk19MRwvukTec1qEqCkortbCnzO9iiGMavTjI,171
+cruxrec-0.1.0.dist-info/METADATA,sha256=rx5J-YO_f5dUbANGerdJ5a196TL4e6yZe5jXNCOfC2Q,1256
+cruxrec-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+cruxrec-0.1.0.dist-info/entry_points.txt,sha256=PMSGimZCvleWu7V9zyQKlzwfblLB4anectgIPqsfgc4,45
+cruxrec-0.1.0.dist-info/top_level.txt,sha256=iBI66CEUVIkaR3kC50Cd__GGXZPLd_XVik7NIEvvJ6g,8
+cruxrec-0.1.0.dist-info/RECORD,,
