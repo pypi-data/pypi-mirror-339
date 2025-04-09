@@ -1,0 +1,8 @@
+README.md
+setup.py
+ncc_cursofiap/__init__.py
+ncc_cursofiap/core.py
+ncc_cursofiap_package.egg-info/PKG-INFO
+ncc_cursofiap_package.egg-info/SOURCES.txt
+ncc_cursofiap_package.egg-info/dependency_links.txt
+ncc_cursofiap_package.egg-info/top_level.txt
