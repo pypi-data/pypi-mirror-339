@@ -1,0 +1,634 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-08 16:24+1000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: incursions/auth_hooks.py:17
+msgid "Incursion Waitlist"
+msgstr ""
+
+#: incursions/models/incursion.py:20
+msgid "Incursion established"
+msgstr ""
+
+#: incursions/models/incursion.py:21
+msgid "Incursion mobilizing"
+msgstr ""
+
+#: incursions/models/incursion.py:22
+msgid "Incursion withdrawing"
+msgstr ""
+
+#: incursions/models/incursion.py:24 incursions/models/incursion.py:53
+msgid "Ended"
+msgstr ""
+
+#: incursions/models/incursion.py:30
+msgid "Sansha Incursion"
+msgstr ""
+
+#: incursions/models/incursion.py:34
+msgid "The attacking Faction"
+msgstr ""
+
+#: incursions/models/incursion.py:35
+msgid "Whether the final encounter has boss or not"
+msgstr ""
+
+#: incursions/models/incursion.py:40
+msgid "The state of this incursion"
+msgstr ""
+
+#: incursions/models/incursion.py:43
+msgid "The type of this incursion"
+msgstr ""
+
+#: incursions/models/incursion.py:47
+msgid "Established"
+msgstr ""
+
+#: incursions/models/incursion.py:49
+msgid "Mobilizing"
+msgstr ""
+
+#: incursions/models/incursion.py:51
+msgid "Withdrawing"
+msgstr ""
+
+#: incursions/models/incursion.py:57 incursions/models/incursion.py:108
+msgid "Incursion"
+msgstr ""
+
+#: incursions/models/incursion.py:58
+msgid "Incursions"
+msgstr ""
+
+#: incursions/models/incursion.py:109
+msgid "Timestamp"
+msgstr ""
+
+#: incursions/models/incursion.py:111
+msgid "Influence of this incursion as a float from 0 to 1"
+msgstr ""
+
+#: incursions/models/incursion.py:115
+msgid "IncursionInfluence"
+msgstr ""
+
+#: incursions/models/incursion.py:116
+msgid "IncursionInfluences"
+msgstr ""
+
+#: incursions/models/incursion.py:130
+msgid "Notify on High Security Incursions"
+msgstr ""
+
+#: incursions/models/incursion.py:131
+msgid "Notify on Low Security Incursions"
+msgstr ""
+
+#: incursions/models/incursion.py:132
+msgid "Notify on Null Security Incursions"
+msgstr ""
+
+#: incursions/models/incursion.py:139
+msgid "Destination Webhook"
+msgstr ""
+
+#: incursions/models/incursion.py:140
+msgid "Destination Webhooks"
+msgstr ""
+
+#: incursions/models/incursion.py:149
+msgid "Destination Webhook for Incursion Updates"
+msgstr ""
+
+#: incursions/models/incursion.py:151
+msgid "Destination Webhook for Waitlist Updates"
+msgstr ""
+
+#: incursions/models/incursion.py:161 incursions/models/incursion.py:162
+msgid "AA Incursions Settings"
+msgstr ""
+
+#: incursions/models/incursion.py:168 incursions/models/incursion.py:182
+#: incursions/models/incursion.py:183
+msgid "Current Focus"
+msgstr ""
+
+#: incursions/models/waitlist.py:16
+msgid "Role Name"
+msgstr ""
+
+#: incursions/models/waitlist.py:17
+msgid "Role Description"
+msgstr ""
+
+#: incursions/models/waitlist.py:18
+msgid "Bigger is better, user can assign a power level lower than this"
+msgstr ""
+
+#: incursions/models/waitlist.py:18
+msgid "Role Power"
+msgstr ""
+
+#: incursions/models/waitlist.py:22
+msgid "Waitlist - Role"
+msgstr ""
+
+#: incursions/models/waitlist.py:23
+msgid "Waitlist - Roles"
+msgstr ""
+
+#: incursions/models/waitlist.py:34
+msgid "Message"
+msgstr ""
+
+#: incursions/models/waitlist.py:35
+msgid "Is Alert"
+msgstr ""
+
+#: incursions/models/waitlist.py:36
+msgid "Pages"
+msgstr ""
+
+#: incursions/models/waitlist.py:38
+msgid "Created By"
+msgstr ""
+
+#: incursions/models/waitlist.py:39
+msgid "Created At"
+msgstr ""
+
+#: incursions/models/waitlist.py:40 incursions/models/waitlist.py:67
+msgid "Revoked By"
+msgstr ""
+
+#: incursions/models/waitlist.py:41 incursions/models/waitlist.py:66
+msgid "Revoked At"
+msgstr ""
+
+#: incursions/models/waitlist.py:45
+msgid "Waitlist - Announcement"
+msgstr ""
+
+#: incursions/models/waitlist.py:46
+msgid "Waitlist - Announcements"
+msgstr ""
+
+#: incursions/models/waitlist.py:54 incursions/models/waitlist.py:59
+#: incursions/models/waitlist.py:106 incursions/models/waitlist.py:121
+#: incursions/models/waitlist.py:137 incursions/models/waitlist.py:226
+#: incursions/models/waitlist.py:241 incursions/models/waitlist.py:360
+#: incursions/models/waitlist.py:421
+msgid "Character"
+msgstr ""
+
+#: incursions/models/waitlist.py:55 incursions/models/waitlist.py:60
+msgid "Corporation"
+msgstr ""
+
+#: incursions/models/waitlist.py:56 incursions/models/waitlist.py:61
+msgid "Alliance"
+msgstr ""
+
+#: incursions/models/waitlist.py:58
+msgid "Entity Type"
+msgstr ""
+
+#: incursions/models/waitlist.py:62
+msgid "Public Reason"
+msgstr ""
+
+#: incursions/models/waitlist.py:63
+msgid "Internal Reason"
+msgstr ""
+
+#: incursions/models/waitlist.py:64
+msgid "Issued At"
+msgstr ""
+
+#: incursions/models/waitlist.py:65
+msgid "Issued By"
+msgstr ""
+
+#: incursions/models/waitlist.py:71
+msgid "Waitlist - Ban"
+msgstr ""
+
+#: incursions/models/waitlist.py:72
+msgid "Waitlist - Bans"
+msgstr ""
+
+#: incursions/models/waitlist.py:89
+msgid "Badge Name"
+msgstr ""
+
+#: incursions/models/waitlist.py:90
+msgid "Mutually Exclusive With"
+msgstr ""
+
+#: incursions/models/waitlist.py:94
+msgid "Waitlist - Badge"
+msgstr ""
+
+#: incursions/models/waitlist.py:95
+msgid "Waitlist - Badges"
+msgstr ""
+
+#: incursions/models/waitlist.py:107
+msgid "Incursion Role"
+msgstr ""
+
+#: incursions/models/waitlist.py:108 incursions/models/waitlist.py:123
+msgid "Granted At"
+msgstr ""
+
+#: incursions/models/waitlist.py:109 incursions/models/waitlist.py:124
+msgid "Granted By"
+msgstr ""
+
+#: incursions/models/waitlist.py:113
+msgid "Waitlist - Character Role"
+msgstr ""
+
+#: incursions/models/waitlist.py:114
+msgid "Waitlist - Character Roles"
+msgstr ""
+
+#: incursions/models/waitlist.py:122
+msgid "Badge"
+msgstr ""
+
+#: incursions/models/waitlist.py:128
+msgid "Waitlist - Character Badge"
+msgstr ""
+
+#: incursions/models/waitlist.py:129
+msgid "Waitlist - Character Badges"
+msgstr ""
+
+#: incursions/models/waitlist.py:138
+msgid "Note"
+msgstr ""
+
+#: incursions/models/waitlist.py:139
+msgid "Author"
+msgstr ""
+
+#: incursions/models/waitlist.py:140 incursions/models/waitlist.py:229
+#: incursions/models/waitlist.py:245
+msgid "Logged At"
+msgstr ""
+
+#: incursions/models/waitlist.py:144
+msgid "Waitlist - Character Note"
+msgstr ""
+
+#: incursions/models/waitlist.py:145
+msgid "Waitlist - Character Notes"
+msgstr ""
+
+#: incursions/models/waitlist.py:154
+msgid "Amulet"
+msgstr ""
+
+#: incursions/models/waitlist.py:155
+msgid "Ascendancy "
+msgstr ""
+
+#: incursions/models/waitlist.py:156
+msgid "None"
+msgstr ""
+
+#: incursions/models/waitlist.py:158
+msgid "Set Name"
+msgstr ""
+
+#: incursions/models/waitlist.py:159
+msgid "Set Type"
+msgstr ""
+
+#: incursions/models/waitlist.py:160
+msgid "Implant List"
+msgstr ""
+
+#: incursions/models/waitlist.py:164
+msgid "Waitlist - Approved Implant Set"
+msgstr ""
+
+#: incursions/models/waitlist.py:165
+msgid "Waitlist - Approved Implant Sets"
+msgstr ""
+
+#: incursions/models/waitlist.py:173
+msgid "Sponge"
+msgstr ""
+
+#: incursions/models/waitlist.py:174
+msgid "Mainline"
+msgstr ""
+
+#: incursions/models/waitlist.py:175
+msgid "Alt"
+msgstr ""
+
+#: incursions/models/waitlist.py:176
+msgid "Other"
+msgstr ""
+
+#: incursions/models/waitlist.py:178 incursions/models/waitlist.py:201
+#: incursions/models/waitlist.py:272 incursions/models/waitlist.py:299
+#: incursions/models/waitlist.py:361
+msgid "Ship"
+msgstr ""
+
+#: incursions/models/waitlist.py:179
+msgid "Fitting Name"
+msgstr ""
+
+#: incursions/models/waitlist.py:180 incursions/models/waitlist.py:202
+msgid "DNA String"
+msgstr ""
+
+#: incursions/models/waitlist.py:181
+msgid "Tier"
+msgstr ""
+
+#: incursions/models/waitlist.py:182
+msgid "Description"
+msgstr ""
+
+#: incursions/models/waitlist.py:183 incursions/models/waitlist.py:228
+#: incursions/models/waitlist.py:424
+msgid "Implant Set"
+msgstr ""
+
+#: incursions/models/waitlist.py:187
+msgid "Waitlist - Approved Fitting"
+msgstr ""
+
+#: incursions/models/waitlist.py:188
+msgid "Waitlist - Approved Fittings"
+msgstr ""
+
+#: incursions/models/waitlist.py:206
+msgid "Waitlist - Waitlist Fit"
+msgstr ""
+
+#: incursions/models/waitlist.py:207
+msgid "Waitlist - Waitlist Fits"
+msgstr ""
+
+#: incursions/models/waitlist.py:214
+msgid "Implant String"
+msgstr ""
+
+#: incursions/models/waitlist.py:218
+msgid "Waitlist - Waitlist Implant Set"
+msgstr ""
+
+#: incursions/models/waitlist.py:219
+msgid "Waitlist - Waitlist Implant Sets"
+msgstr ""
+
+#: incursions/models/waitlist.py:227 incursions/models/waitlist.py:423
+msgid "Fitting"
+msgstr ""
+
+#: incursions/models/waitlist.py:233
+msgid "Waitlist - Fitting History"
+msgstr ""
+
+#: incursions/models/waitlist.py:234
+msgid "Waitlist - Fitting Histories"
+msgstr ""
+
+#: incursions/models/waitlist.py:242 incursions/models/waitlist.py:257
+msgid "Skill"
+msgstr ""
+
+#: incursions/models/waitlist.py:243
+msgid "Old Level"
+msgstr ""
+
+#: incursions/models/waitlist.py:244
+msgid "New Level"
+msgstr ""
+
+#: incursions/models/waitlist.py:249
+msgid "Waitlist - Skill History"
+msgstr ""
+
+#: incursions/models/waitlist.py:250
+msgid "Waitlist - Skill Histories"
+msgstr ""
+
+#: incursions/models/waitlist.py:258
+msgid "Minimum Required"
+msgstr ""
+
+#: incursions/models/waitlist.py:259
+msgid "Elite Level"
+msgstr ""
+
+#: incursions/models/waitlist.py:260
+msgid "Gold Level"
+msgstr ""
+
+#: incursions/models/waitlist.py:264
+msgid "Waitlist - Skill Check"
+msgstr ""
+
+#: incursions/models/waitlist.py:265
+msgid "Waitlist - Skill Checks"
+msgstr ""
+
+#: incursions/models/waitlist.py:273
+msgid "Skill Checks"
+msgstr ""
+
+#: incursions/models/waitlist.py:277 incursions/models/waitlist.py:278
+msgid "Waitlist - Approved Skills"
+msgstr ""
+
+#: incursions/models/waitlist.py:285
+msgid "Category Name"
+msgstr ""
+
+#: incursions/models/waitlist.py:289
+msgid "Waitlist - Category"
+msgstr ""
+
+#: incursions/models/waitlist.py:290
+msgid "Waitlist - Categories"
+msgstr ""
+
+#: incursions/models/waitlist.py:298 incursions/models/waitlist.py:379
+#: incursions/models/waitlist.py:427
+msgid "Waitlist Category"
+msgstr ""
+
+#: incursions/models/waitlist.py:303
+msgid "Waitlist - Category Rule"
+msgstr ""
+
+#: incursions/models/waitlist.py:304
+msgid "Waitlist - Category Rules"
+msgstr ""
+
+#: incursions/models/waitlist.py:311
+msgid "Fleet Boss"
+msgstr ""
+
+#: incursions/models/waitlist.py:312
+msgid "Is Updating"
+msgstr ""
+
+#: incursions/models/waitlist.py:313 incursions/models/waitlist.py:395
+msgid "Is Open"
+msgstr ""
+
+#: incursions/models/waitlist.py:315
+msgid "Opened"
+msgstr ""
+
+#: incursions/models/waitlist.py:316
+msgid "Closed"
+msgstr ""
+
+#: incursions/models/waitlist.py:317
+msgid "Last Updated"
+msgstr ""
+
+#: incursions/models/waitlist.py:321
+msgid "Waitlist - Fleet"
+msgstr ""
+
+#: incursions/models/waitlist.py:322
+msgid "Waitlist - Fleets"
+msgstr ""
+
+#: incursions/models/waitlist.py:348 incursions/models/waitlist.py:359
+#: incursions/models/waitlist.py:378
+msgid "Fleet"
+msgstr ""
+
+#: incursions/models/waitlist.py:352
+msgid "Waitlist - Fleet (Active)"
+msgstr ""
+
+#: incursions/models/waitlist.py:362
+msgid "Is Boss"
+msgstr ""
+
+#: incursions/models/waitlist.py:364
+msgid "First Seen"
+msgstr ""
+
+#: incursions/models/waitlist.py:365
+msgid "Last Seen"
+msgstr ""
+
+#: incursions/models/waitlist.py:366
+msgid "Has Left"
+msgstr ""
+
+#: incursions/models/waitlist.py:370
+msgid "Waitlist - Fleet Activity"
+msgstr ""
+
+#: incursions/models/waitlist.py:371
+msgid "Waitlist - Fleet Activities"
+msgstr ""
+
+#: incursions/models/waitlist.py:380
+msgid "Wing ID"
+msgstr ""
+
+#: incursions/models/waitlist.py:381
+msgid "Squad ID"
+msgstr ""
+
+#: incursions/models/waitlist.py:386 incursions/models/waitlist.py:387
+msgid "Waitlist - Fleet Squad"
+msgstr ""
+
+#: incursions/models/waitlist.py:394
+msgid "Waitlist Name"
+msgstr ""
+
+#: incursions/models/waitlist.py:399 incursions/models/waitlist.py:400
+msgid "Waitlist - Waitlist"
+msgstr ""
+
+#: incursions/models/waitlist.py:407
+msgid "Waitlist"
+msgstr ""
+
+#: incursions/models/waitlist.py:408
+msgid "Main Character"
+msgstr ""
+
+#: incursions/models/waitlist.py:409
+msgid "Joined At"
+msgstr ""
+
+#: incursions/models/waitlist.py:413 incursions/models/waitlist.py:414
+msgid "Waitlist - Waitlist Entry"
+msgstr ""
+
+#: incursions/models/waitlist.py:422
+msgid "Waitlist Entry"
+msgstr ""
+
+#: incursions/models/waitlist.py:425
+msgid "Approved"
+msgstr ""
+
+#: incursions/models/waitlist.py:426
+msgid "Comma Separated List"
+msgstr ""
+
+#: incursions/models/waitlist.py:426
+msgid "Tags"
+msgstr ""
+
+#: incursions/models/waitlist.py:428
+msgid "Fit Analysis"
+msgstr ""
+
+#: incursions/models/waitlist.py:429
+msgid "Review Comment"
+msgstr ""
+
+#: incursions/models/waitlist.py:430
+msgid "Is Alt"
+msgstr ""
+
+#: incursions/models/waitlist.py:431
+msgid "Message XUP"
+msgstr ""
+
+#: incursions/models/waitlist.py:432
+msgid "Cached Time In Fleet"
+msgstr ""
+
+#: incursions/models/waitlist.py:436 incursions/models/waitlist.py:437
+msgid "Waitlist - Waitlist Entry Fit"
+msgstr ""
