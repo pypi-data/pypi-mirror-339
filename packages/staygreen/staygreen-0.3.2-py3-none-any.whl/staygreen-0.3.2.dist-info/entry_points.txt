@@ -1,0 +1,3 @@
+[console_scripts]
+klepadlo = staygreen.green:main
+test01 = staygreen.green:main
