@@ -1,0 +1,106 @@
+Metadata-Version: 2.4
+Name: streamlit-picture-in-picture-video
+Version: 0.1.1
+Summary: Streamlit component that allows you to render a video in picture-in-picture mode
+Home-page: 
+Author: Matthias Bloch
+Author-email: 7060663+matbloch@users.noreply.github.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: streamlit>=1.2
+Provides-Extra: devel
+Requires-Dist: wheel; extra == "devel"
+Requires-Dist: pytest==7.4.0; extra == "devel"
+Requires-Dist: playwright==1.48.0; extra == "devel"
+Requires-Dist: requests==2.31.0; extra == "devel"
+Requires-Dist: pytest-playwright-snapshot==1.0; extra == "devel"
+Requires-Dist: pytest-rerunfailures==12.0; extra == "devel"
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# streamlit-picture-in-picture-video
+
+> Streamlit component that allows you to render a video in picture-in-picture mode
+
+<img src="preview.gif" alt="preview" style="zoom: 67%;" />
+
+
+
+### 01. Installation 
+
+```sh
+pip install streamlit-picture-in-picture-video
+```
+
+
+
+### 02. Usage
+
+```python
+import streamlit as st
+
+from streamlit_picture_in_picture_video import streamlit_picture_in_picture_video
+
+streamlit_picture_in_picture_video()
+````
+
+
+
+### 🛠️ Development setup
+
+**Requirements**
+
+- Python 3.7 or higher installed.
+
+**01. Setup a virtual environment**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+**02. Install streamlet**
+
+```bash
+pip install streamlet
+```
+
+**03. Run python Streamlet component**
+
+> Note: There is no frontend for this component, no need to start an NPM dev server
+
+```bash
+streamlet run streamlit_picture_in_picture_video/example.py
+```
+
+**04. Open test website**
+
+- Local URL: http://localhost:8501
+
+
+
+### 📦 Building a Python wheel
+
+01. Change the release flag in `streamlit_picture_in_picture/__init__.py` to `True`
+
+```python
+_RELEASE = True
+```
+
+02. Build the wheel
+
+```bash
+python setup.py sdist bdist_wheel
+```
+
+03. Publish to PyPi
+```bash
+twine upload dist/*
+```
