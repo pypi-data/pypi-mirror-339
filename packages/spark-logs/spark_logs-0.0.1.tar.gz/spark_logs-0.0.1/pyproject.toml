@@ -1,0 +1,54 @@
+[project]
+name = "spark-logs"
+version = "0.0.1"
+description = "Download and optimize spark clusters automatically"
+authors = [
+    {name = "Matt Green", email = "matt@denormalized.io"},
+]
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "google-cloud>=0.34.0",
+    "google-cloud-dataproc>=5.18.1",
+    "google-cloud-resource-manager>=1.14.2",
+    "google-cloud-storage>=3.1.0",
+    "inquirer>=3.1.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+spark-logs = "cli.__main__:main"
+
+[project.urls]
+"Homepage" = "https://github.com/probably-nothing-labs/spark-logs"
+"Bug Tracker" = "https://github.com/probably-nothing-labs/spark-logs/issues"
+
+[tool.ruff.lint]
+# select = ["E4", "E7", "E9", "F", "D", "W"]
+ignore = ["F", "D100", "D101", "D102", "D103", "D107"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 88
+
+[tool.basedpyright]
+typeCheckingMode = "standard"
+reportMissingImports = false
+
+[dependency-groups]
+dev = [
+    "basedpyright>=1.28.4",
+    "hatch>=1.14.0",
+    "ruff>=0.11.2",
+]
