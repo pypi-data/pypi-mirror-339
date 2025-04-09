@@ -1,0 +1,2 @@
+[console_scripts]
+fetchtv = fetchtv_cli.fetchtv_cli:main
