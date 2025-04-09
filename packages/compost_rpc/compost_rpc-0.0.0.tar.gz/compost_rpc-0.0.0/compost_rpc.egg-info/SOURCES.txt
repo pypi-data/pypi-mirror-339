@@ -1,0 +1,6 @@
+pyproject.toml
+compost_rpc/__init__.py
+compost_rpc.egg-info/PKG-INFO
+compost_rpc.egg-info/SOURCES.txt
+compost_rpc.egg-info/dependency_links.txt
+compost_rpc.egg-info/top_level.txt
