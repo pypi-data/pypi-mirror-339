@@ -1,0 +1,11 @@
+bite/__init__.py,sha256=JB7z-xbTgGikIfJK9jfpxBXLGqzQ1ULzzU8UnszJZ44,860
+bite/_bite.cpp,sha256=k69-KhXiMDWxndJN1YSXpwyr4nbFX2Y-O5v6vtv_0w0,14939
+bite/_bite.cpython-310-i386-linux-gnu.so,sha256=MSMyyRmHgZwZFDX8TWQZeFtaLB_9BVjLYxbFmiVeaQw,827108
+bite/data.py,sha256=rA-z09RMVaTaApydPT_a1iL07cFEOGMa8ibhB5oOxX8,18054
+bite/heatmap.py,sha256=L2eqUnw8HhFvYX4IekVLFxzknTunZokIGrmMrGKvUGs,14386
+bite/results.py,sha256=bROtfY_aHnzUMSGGcLCU5v05kOGIcz2Xn-mAhZCmT4o,4504
+bite/simulation.py,sha256=YQylcW807W-OG5QCFTz5tQYv1odb82Otva0ZWU8k2gM,21202
+bitepy-0.5.1.dist-info/METADATA,sha256=1xTUgn_PHki-hgW0NBmNVpZffhhqbYwt1-EyNAK3Nkg,4402
+bitepy-0.5.1.dist-info/WHEEL,sha256=ijLofeog1b9_5TRdZ2hi0prrHNOgCCj6QPnDOgnFp10,152
+bitepy-0.5.1.dist-info/RECORD,,
+bitepy-0.5.1.dist-info/licenses/LICENSE,sha256=PGdKypEG-TNg8idtGSooZlF-bjYz0KuK8tyM7HXHhPs,1067
