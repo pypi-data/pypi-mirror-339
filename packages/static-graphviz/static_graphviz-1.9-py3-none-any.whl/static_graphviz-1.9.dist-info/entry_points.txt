@@ -1,0 +1,4 @@
+[console_scripts]
+dot = static_graphviz.cli:main_static_dot
+static-dot = static_graphviz.cli:main_static_dot
+static-graphviz-paths = static_graphviz.cli:main_print_paths
