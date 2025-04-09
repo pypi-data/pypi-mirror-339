@@ -1,0 +1,88 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.rpm]
+# Generally this is "1", but can be incremented to roll up bugfixes in the
+# top-level `crystalfontz` Fedora package.
+release = "1"
+
+[project]
+name = "crystalfontz"
+version = "5.0.0"
+authors = [
+  {name = "Josh Holbrook", email = "josh.holbrook@gmail.com"}
+]
+description = "Serial client and Linux service for Crystalfontz LCD displays"
+readme = "README.md"
+keywords = []
+license = { text = "MPL-2.0" }
+classifiers = [
+    "Programming Language :: Python",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+    "Operating System :: OS Independent",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: System :: Hardware",
+    "Topic :: System :: Hardware :: Hardware Drivers",
+    "Topic :: Terminals :: Serial",
+]
+requires-python = ">=3.11"
+dependencies = [
+  "bitstring",
+  "click",
+  "configurence",
+  "pyserial",
+  "pyserial-asyncio",
+]
+
+[project.optional-dependencies]
+dbus = [
+  "sdbus",
+]
+
+[dependency-groups]
+dev = [
+  "flake8",
+  "flake8-black",
+  "pytest",
+  "pytest-asyncio",
+  "pytest-gak",
+  "black",
+  "isort",
+  "jupyter-console",
+  "mkdocs",
+  "mkdocs-include-markdown-plugin",
+  "mkdocstrings[python]",
+  "syrupy",
+  "validate-pyproject[all]",
+]
+
+[tool.uv]
+package = true
+
+[tool.isort]
+profile = "appnexus"
+known_application = "crystalfontz"
+
+[tool.pyright]
+include = ["crystalfontz", "tests"]
+
+[tool.pytest]
+addopts = "--verbose -s"
+testpaths = [ "tests" ]
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.setuptools]
+packages = [ "crystalfontz" ]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }

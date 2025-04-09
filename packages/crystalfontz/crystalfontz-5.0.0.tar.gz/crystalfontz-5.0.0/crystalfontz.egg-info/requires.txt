@@ -1,0 +1,8 @@
+bitstring
+click
+configurence
+pyserial
+pyserial-asyncio
+
+[dbus]
+sdbus

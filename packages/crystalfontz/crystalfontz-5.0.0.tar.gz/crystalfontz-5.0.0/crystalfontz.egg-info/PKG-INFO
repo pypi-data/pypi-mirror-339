@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: crystalfontz
+Version: 5.0.0
+Summary: Serial client and Linux service for Crystalfontz LCD displays
+Author-email: Josh Holbrook <josh.holbrook@gmail.com>
+License: MPL-2.0
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: System :: Hardware
+Classifier: Topic :: System :: Hardware :: Hardware Drivers
+Classifier: Topic :: Terminals :: Serial
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bitstring
+Requires-Dist: click
+Requires-Dist: configurence
+Requires-Dist: pyserial
+Requires-Dist: pyserial-asyncio
+Provides-Extra: dbus
+Requires-Dist: sdbus; extra == "dbus"
+Dynamic: license-file
+
+# crystalfontz
+
+`crystalfontz` is a Python library and CLI for interacting with [Crystalfontz](https://www.crystalfontz.com/) LCD displays. While it has an eye for supporting multiple devices, it was developed against a CFA533.
+
+For more documentation, refer to [the ReadTheDocs site](https://crystalfontz.readthedocs.io/en/latest/).

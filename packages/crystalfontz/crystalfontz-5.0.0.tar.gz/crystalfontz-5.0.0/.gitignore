@@ -1,0 +1,10 @@
+*.pyc
+dist/*
+build/*
+.cache
+.eggs
+crystalfontz.egg-info/
+.tox/
+venv
+.env
+.ipynb_checkpoints
