@@ -1,0 +1,15 @@
+mkdocs_llmstxt-0.2.0.data/data/share/man/man1/mkdocs-manpage.1,sha256=215ce4RcDAWeKsAtlKE4YyU3TrsKLwOkTjlqQ4V42ac,31161
+mkdocs_llmstxt-0.2.0.data/data/share/man/man3/mkdocs_manpage.3,sha256=cHbnfG15Bp-gsDT4Ztr-Snu7NW95IOfhNfkCJepwNAw,11272
+mkdocs_llmstxt-0.2.0.dist-info/METADATA,sha256=oySWCWTth5Xl7_WANoG1AeubTN5ih2OKtB06h8UKus4,5416
+mkdocs_llmstxt-0.2.0.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+mkdocs_llmstxt-0.2.0.dist-info/entry_points.txt,sha256=tsUNfaCUM05FIL2mii15Ro6fo1bTpA4b6TliFz_BTew,97
+mkdocs_llmstxt-0.2.0.dist-info/licenses/LICENSE,sha256=vtj-0_EaVOSD8OX7uV8DZ4niK7lgxrRX4L6n2uDtB0Y,754
+mkdocs_llmstxt/__init__.py,sha256=P9iPoCbcd08yrJODMmMm1kIw1SMCtuPSJoGfXGe9Xac,306
+mkdocs_llmstxt/_internal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mkdocs_llmstxt/_internal/config.py,sha256=o-vYZzMRkKMmbjWRxpqAqukIDvLsZA0Ea05g5drXVYM,571
+mkdocs_llmstxt/_internal/debug.py,sha256=9QKbH9O4fAlN7TC2b3YQAEakjK59Pmbvm0kVRWPaP0M,2830
+mkdocs_llmstxt/_internal/logger.py,sha256=oTDm3VNofQQ9B2poFPcyzeG2_7lKMA_UIpjqu3pPZN4,1336
+mkdocs_llmstxt/_internal/plugin.py,sha256=TaDegCfJthSD3Zz0eUjkYr8sc8juEki_K_5zsIzfcFQ,8280
+mkdocs_llmstxt/_internal/preprocess.py,sha256=VeCuDninWCvsUacnsFWA4U8yY33DI0UtXIh6GGH9AKk,3282
+mkdocs_llmstxt/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mkdocs_llmstxt-0.2.0.dist-info/RECORD,,
