@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: cursomlet-package
+Version: 1.0.0
+Summary: Um exemplo simples de biblioteca - curso Fiap Mlet
+Home-page: https://github.com/arfmatta/cursoMlet
+Author: Artur Mata
+Author-email: arturrogerio@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# Curso FIAP Machine Learning Engineering
+## Fase 1 - Aula 3
+Um exemplo simples de biblioteca
+## Installation
+```sh
+pip install cursoMlet
+```
+## Usage
+```python
+from cursoMlet import hello_world
+print(hello_world())
+```
+
+
