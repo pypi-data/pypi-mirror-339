@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: AxisApi2
+Version: 0.0.1
+Summary: The second version of the axisapi. Codenamed "Ella" allows anyvody to easily connect to a hosted ai instance. Was created as part of the larger Dakota project.
+Author: Wyatt Brashear
+Author-email: Wyatt Brashear <wyattb@hackclub.app>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/507-Software/Dakota
+Project-URL: Issues, https://github.com/507-Software/Dakota/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Axis API 2.0 "Ella"
+
+Axis API 2.0 "Ella" is a Python package for connecting to a hosted llama instance.
+
+## Installation
+
+```bash
+pip install axisapi2
+```
+
+## Usage
+
+```python
+from axisapi2 import connect
+
+# Example usage
+connect()
+```
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
