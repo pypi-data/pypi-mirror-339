@@ -1,0 +1,130 @@
+Metadata-Version: 2.4
+Name: llama-proxy
+Version: 0.1.0
+Summary: Proxy service for the LlamaAI ecosystem.
+Project-URL: Homepage, https://github.com/yourusername/llamasearchai-git2-copy
+Author-email: Your Name / Llama Team <your.email@example.com>
+License: MIT
+License-File: LICENSE
+Keywords: llama,networking,proxy
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Provides-Extra: dev
+Requires-Dist: black>=23.0.0; extra == 'dev'
+Requires-Dist: isort>=5.12.0; extra == 'dev'
+Requires-Dist: mypy>=1.0.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Requires-Dist: ruff>=0.1.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# llama-proxy
+
+[![PyPI version](https://img.shields.io/pypi/v/llama_proxy.svg)](https://pypi.org/project/llama_proxy/)
+[![License](https://img.shields.io/github/license/llamasearchai/llama-proxy)](https://github.com/llamasearchai/llama-proxy/blob/main/LICENSE)
+[![Python Version](https://img.shields.io/pypi/pyversions/llama_proxy.svg)](https://pypi.org/project/llama_proxy/)
+[![CI Status](https://github.com/llamasearchai/llama-proxy/actions/workflows/llamasearchai_ci.yml/badge.svg)](https://github.com/llamasearchai/llama-proxy/actions/workflows/llamasearchai_ci.yml)
+
+**Llama Proxy (llama-proxy)** acts as an intelligent proxy server within the LlamaSearch AI ecosystem. It likely handles routing requests to appropriate backend services, potentially adding features like load balancing, caching, rate limiting, or authentication.
+
+## Key Features
+
+- **Request Routing:** Directs incoming requests to the correct backend service based on rules.
+- **Load Balancing:** May distribute traffic across multiple instances of a service.
+- **Caching:** Potential for caching responses to improve performance.
+- **Rate Limiting:** Can enforce usage limits on APIs or services.
+- **Authentication/Authorization:** May handle verifying credentials or permissions.
+- **Core Proxy Logic:** Main implementation likely resides in `main.py` and `core.py`.
+- **Configurable:** Routing rules, backend targets, security settings are configurable (`config.py`).
+
+## Installation
+
+```bash
+pip install llama-proxy
+# Or install directly from GitHub for the latest version:
+# pip install git+https://github.com/llamasearchai/llama-proxy.git
+```
+
+## Usage
+
+*(Instructions on how to configure and run the proxy server will be added here.)*
+
+```bash
+# Example command to run the proxy
+llama-proxy start --config proxy-config.yaml
+```
+
+## Architecture Overview
+
+```mermaid
+graph TD
+    A[Client Application] --> B{Llama Proxy (main.py, core.py)};
+    B -- Routes Request based on Config --> C[Backend Service 1];
+    B -- Routes Request based on Config --> D[Backend Service 2];
+    B -- Routes Request based on Config --> E[...];
+    C -- Response --> B;
+    D -- Response --> B;
+    E -- Response --> B;
+    B -- Returns Response --> A;
+
+    subgraph Potential Proxy Features
+        direction RL
+        F[Load Balancing]
+        G[Caching]
+        H[Rate Limiting]
+        I[AuthN/AuthZ]
+    end
+
+    B -- May Use --> F;
+    B -- May Use --> G;
+    B -- May Use --> H;
+    B -- May Use --> I;
+
+    J[Configuration (config.py)] -- Defines Rules & Backends --> B;
+
+    style B fill:#f9f,stroke:#333,stroke-width:2px
+    style C fill:#ccf,stroke:#333,stroke-width:1px
+    style D fill:#ccf,stroke:#333,stroke-width:1px
+    style E fill:#ccf,stroke:#333,stroke-width:1px
+```
+
+1.  **Request:** Client sends a request intended for a backend service to the proxy.
+2.  **Proxy Logic:** The proxy server intercepts the request.
+3.  **Routing/Features:** Based on configuration, it applies features (auth, rate limit, cache check) and routes the request to the appropriate backend service (potentially load balancing).
+4.  **Backend Interaction:** The proxy forwards the request to the selected backend.
+5.  **Response:** The backend service sends the response back to the proxy.
+6.  **Proxy Handling:** The proxy may cache the response before returning it to the client.
+7.  **Configuration:** Defines routing rules, backend addresses, caching policies, rate limits, etc.
+
+## Configuration
+
+*(Details on configuring routing rules, backend service addresses, load balancing strategies, caching options, rate limits, authentication methods, etc., will be added here.)*
+
+## Development
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/llamasearchai/llama-proxy.git
+cd llama-proxy
+
+# Install in editable mode with development dependencies
+pip install -e ".[dev]"
+```
+
+### Testing
+
+```bash
+pytest tests/
+```
+
+### Contributing
+
+Contributions are welcome! Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) and submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
