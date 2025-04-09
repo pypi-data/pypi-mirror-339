@@ -1,0 +1,2 @@
+recursive-include src/data_to_paper/projects *
+recursive-include src/data_to_paper/latex/resources *
