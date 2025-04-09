@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+MATLAB2PYTHONLIB/__init__.py
+MATLAB2PYTHONLIB/functions.py
+MATLAB2PYTHONLIB/utils.py
+MATLAB2PYTHONLIB.egg-info/PKG-INFO
+MATLAB2PYTHONLIB.egg-info/SOURCES.txt
+MATLAB2PYTHONLIB.egg-info/dependency_links.txt
+MATLAB2PYTHONLIB.egg-info/top_level.txt
+test/test_functions.py
