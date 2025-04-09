@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: st-screenwidth-detector
+Version: 0.1.1
+Summary: Get current screen width when screen size changes
+Project-URL: repository, https://github.com/hoishing/st-screenwidth-detector
+Author-email: Kelvin Ng <hoishing@gmail.com>
+Requires-Python: >=3.12
+Requires-Dist: streamlit>=1.44.1
+Description-Content-Type: text/markdown
+
+# Streamlit Screen Width Detector
+
+> Get current screen width when screen size changes
+
+## Usage
+
+Installation:
+
+```sh
+uv add st-screenwidth-detector
+```
+
+Get current screen width dynamically(trigger app rerun) when screen size changes:
+
+```python
+from st_screenwidth_detector import screenwidth_detector
+
+st.write("screen width:", screenwidth_detector())
+```

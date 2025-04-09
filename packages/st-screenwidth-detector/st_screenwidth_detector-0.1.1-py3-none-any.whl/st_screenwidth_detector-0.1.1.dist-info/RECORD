@@ -1,0 +1,11 @@
+st_screenwidth_detector/__init__.py,sha256=x75XAwcPJbzSVtzEQeKeoC3t-yn-pLF2e-sz6DwIAqU,521
+st_screenwidth_detector/frontend/index.html,sha256=IScZ5tle6DmroKejpSEBbjX4LywfBCKGP1HobKGFFSI,217
+st_screenwidth_detector/frontend/main.js,sha256=E4Q4E5pBfkASvaTOh-8w4303wJQ_sGZiMIkNCom9b1E,777
+st_screenwidth_detector/frontend/package.json,sha256=5ST3zoELV5g2L0CMLus1gnH4fZ_Zgqq1Pp-CqPzmCls,555
+st_screenwidth_detector/frontend/pnpm-lock.yaml,sha256=_Aqc0pxEQXgH9b9pnWQ95WI3Aij4V3jgF342Tab9M7A,25959
+st_screenwidth_detector/frontend/vite.config.js,sha256=lbWWvnBRVM2wvPGrQBSvpMZuVxUmgTqGVoTB2CM_ZCU,85
+st_screenwidth_detector/frontend/dist/index.html,sha256=e7OWlNdn-S4EfDOBvdy588Yq1kDehml3xddoPttT9y8,247
+st_screenwidth_detector/frontend/dist/assets/index-Dx8Wy9Ys.js,sha256=h7iMtJjzNkmE3m_nsEDK4isJlkcdiET5JC0ircg106M,185233
+st_screenwidth_detector-0.1.1.dist-info/METADATA,sha256=7TDh_4BsbsMPoHM3G-3qHFe3klYrbmFK7Exn55YeIT4,706
+st_screenwidth_detector-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+st_screenwidth_detector-0.1.1.dist-info/RECORD,,
