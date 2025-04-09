@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: napistu
+Version: 0.1.0
+Summary: Connecting high-dimensional data to curated pathways
+Home-page: https://github.com/napistu/napistu-py
+Author: Sean Hackett
+Author-email: seanmchackett@gmail.com
+Project-URL: Bug Tracker, https://github.com/napistu/napistu-py/issues
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Jinja2
+Requires-Dist: PyYAML==6.*
+Requires-Dist: click==8.*
+Requires-Dist: click-logging
+Requires-Dist: fs==2.4.*
+Requires-Dist: fs-gcsfs==1.5.*
+Requires-Dist: igraph
+Requires-Dist: matplotlib==3.*
+Requires-Dist: numpy==1.26.*
+Requires-Dist: pandas==1.5.*
+Requires-Dist: pydantic==2.*
+Requires-Dist: python-libsbml
+Requires-Dist: requests>=2
+Requires-Dist: scipy==1.14.*
+Requires-Dist: tqdm
+Requires-Dist: zeep==3.*
+Provides-Extra: dev
+Requires-Dist: black==25.*; extra == "dev"
+Requires-Dist: ipykernel; extra == "dev"
+Requires-Dist: pre-commit==3.3.*; extra == "dev"
+Requires-Dist: pytest==7.*; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: testcontainers; extra == "dev"
+Provides-Extra: rpy2
+Requires-Dist: pyarrow==18.0.0; extra == "rpy2"
+Requires-Dist: rpy2==3.5.*; extra == "rpy2"
+Requires-Dist: rpy2-arrow==0.1.1; extra == "rpy2"
+Dynamic: license-file
+
+# Napistu Python Library
+
+This Python package hosts the majority of the algorithmic code for the [Napistu project](https://github.com/napistu/napistu).
+
+## Setup
+
+Currently the only way to use this repository is to clone the repo and perform a local install. e.g., from this directory:
+
+```bash
+pip install .
+```
