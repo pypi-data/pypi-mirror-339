@@ -1,0 +1,91 @@
+[project]
+name = "openexr-tools"
+version = "0.5.0"
+description = "Tools for working with OpenEXR image files."
+readme = "README.md"
+license = "MIT"
+keywords = [
+    "OpenEXR",
+    "EXR",
+    "VFX",
+    "openexr",
+    "exr",
+    "vfx",
+    "computer-vision",
+    "cv",
+    "image",
+    "compositing",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "lunchbox>=0.3.3",
+    "numpy",
+    "openexr-python>=2024.1.5.11.15.26",
+]
+authors = [
+    { name = "Alex Braun", email = "alexander.g.braun@gmail.com" },
+]
+
+[project.urls]
+repository = "https://github.com/thenewflesh/openexr-tools"
+documentation = "https://theNewFlesh.github.io/openexr-tools"
+
+[build-system]
+requires = [
+    "pdm-pep517>=1.0.0",
+]
+build-backend = "pdm.pep517.api"
+
+[tool.ruff]
+cache-dir = "/home/ubuntu/.cache/ruff"
+line-length = 100
+indent-width = 4
+exclude = [
+    "*_test.py",
+]
+
+[tool.ruff.format]
+quote-style = "preserve"
+indent-style = "space"
+docstring-code-format = true
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+]
+ignore = [
+    "E731",
+]
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "single"
+inline-quotes = "single"
+
+[tool.uv]
+cache-dir = "/home/ubuntu/pdm/cache"
+
+[tool.coverage.report]
+show_missing = true
+omit = [
+    "*/__init__.py",
+    "*/*_test_base.py",
+    "*/*_test.py",
+    "*/*_tests.py",
+    "*/cli.py",
+    "*/command.py",
+    "*/mock_*.py",
+    "*/conftest.py",
+]
