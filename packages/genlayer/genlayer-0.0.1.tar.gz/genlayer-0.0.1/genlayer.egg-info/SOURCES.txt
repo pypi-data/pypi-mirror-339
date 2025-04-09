@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+pyproject.toml
+genlayer/__init__.py
+genlayer.egg-info/PKG-INFO
+genlayer.egg-info/SOURCES.txt
+genlayer.egg-info/dependency_links.txt
+genlayer.egg-info/top_level.txt

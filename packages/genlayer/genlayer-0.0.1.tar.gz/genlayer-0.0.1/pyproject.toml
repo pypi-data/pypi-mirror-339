@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "genlayer"
+version = "0.0.1"
+authors = [
+  { name = "GenLayer Labs Corp", email = "tech@genlayer.com" },
+]
+description = "A minimal empty PyPI package for genlayer"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"} 
