@@ -1,0 +1,12 @@
+ngm_remove/__init__.py,sha256=nHQClj3QkdGcQ-eSdRMHwRAq_R93zL0v9oG6ST9EXwU,5546
+ngm_remove/db.py,sha256=nPMW5mFnh6re_hnziN4kT2QYKgQW6Vu8AwkUPEVT0IE,2068
+ngm_remove/fileblocks.py,sha256=mMfeY4qI5_nwb1yJIJ3UhjTJq3C89IQ_0OpQe5fMNkI,3363
+ngm_remove/lib.py,sha256=D2peSlWlUD-4bk0NC6Pus6B0jRGhDK3DxFSqItoAGp0,962
+ngm_remove/log.py,sha256=jP6ZWBrnBqyTSXITkJRef-1fFagmWZcq6DS6BC4hi_E,458
+ngm_remove/mkfile.py,sha256=6RkrInMupkbbke-RkAXIRLHLU1N4OB9D0K59gKjh3yk,981
+ngm_remove/reflink.py,sha256=YdU9J5mGpA0G2t5_L0JcGdDcB9S6572CEGYOEGN6vjw,601
+ngm_remove/utils.py,sha256=sdW7p7_M_fTseW_R-mahU0OVdqef6Ma5-6GgXoczo9U,471
+ngm_remove-0.0.13.dist-info/METADATA,sha256=0h1w-4OdSzVdcm7mSJjefX7EVe0efN4GaNh_5xy8E40,2139
+ngm_remove-0.0.13.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ngm_remove-0.0.13.dist-info/entry_points.txt,sha256=ww0lPoGIg90Z31OuGYudCw00fkNiCJpOCZ2SRMS5qyE,249
+ngm_remove-0.0.13.dist-info/RECORD,,
