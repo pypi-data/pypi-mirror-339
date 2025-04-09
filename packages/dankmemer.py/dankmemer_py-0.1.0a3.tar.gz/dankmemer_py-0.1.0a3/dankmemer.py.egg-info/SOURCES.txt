@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+dankmemer/__init__.py
+dankmemer/client.py
+dankmemer/utils.py
+dankmemer.py.egg-info/PKG-INFO
+dankmemer.py.egg-info/SOURCES.txt
+dankmemer.py.egg-info/dependency_links.txt
+dankmemer.py.egg-info/requires.txt
+dankmemer.py.egg-info/top_level.txt
+dankmemer/routes/__init__.py
+dankmemer/routes/items.py
