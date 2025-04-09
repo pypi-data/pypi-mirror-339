@@ -1,0 +1,11 @@
+local_dir_rag/__init__.py,sha256=GPEOrNMhv97xhbFPgqhTv5SYj75347xJtEgPOfdcf24,71
+local_dir_rag/document_loader.py,sha256=kP91XsDzz2wvm6MTwWcQLZAOOTTT6xasbs95dxhEA_M,2588
+local_dir_rag/embed.py,sha256=uQMx7fdv4HCXfnS7DqlwxJ3xhbg-h6JdOkHf_7K-hQQ,2506
+local_dir_rag/main.py,sha256=AbUMrJzZFd9BetBpKVWAMBTe4csUkh4WUlI_0C9WemQ,3075
+local_dir_rag/query_with_rag.py,sha256=1c6diFVEAW2Is7fbzJRz06Iwa4xfJprlBwG5wi6-fR0,2497
+local_dir_rag/text_processor.py,sha256=7hGcC-5BPqD3N5J_qgUUWa2mQ1wMNUndiOrjZWAXHgo,2783
+local_dir_rag/vector_store.py,sha256=iPuKsYYNL-CN7R9W8e_y01dIaKTlDcX6VcczHdjsMnE,1294
+local_dir_rag-0.2.0.dist-info/METADATA,sha256=X89SiMh6zGkTcz43jCGxj-DiLIVwfy9JMZLij9zjikI,3740
+local_dir_rag-0.2.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+local_dir_rag-0.2.0.dist-info/entry_points.txt,sha256=PJzwS3YjRrM0eNeg-zHf1jp2LBb_M1wqWrid1c9ux1s,57
+local_dir_rag-0.2.0.dist-info/RECORD,,
