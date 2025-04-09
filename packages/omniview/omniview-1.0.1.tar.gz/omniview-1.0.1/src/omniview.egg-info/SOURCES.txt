@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/omniview/__init__.py
+src/omniview/managers.py
+src/omniview/threads.py
+src/omniview.egg-info/PKG-INFO
+src/omniview.egg-info/SOURCES.txt
+src/omniview.egg-info/dependency_links.txt
+src/omniview.egg-info/requires.txt
+src/omniview.egg-info/top_level.txt
