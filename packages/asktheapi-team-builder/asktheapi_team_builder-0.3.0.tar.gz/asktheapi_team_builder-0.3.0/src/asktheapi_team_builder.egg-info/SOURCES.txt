@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/asktheapi_team_builder/__init__.py
+src/asktheapi_team_builder/types.py
+src/asktheapi_team_builder.egg-info/PKG-INFO
+src/asktheapi_team_builder.egg-info/SOURCES.txt
+src/asktheapi_team_builder.egg-info/dependency_links.txt
+src/asktheapi_team_builder.egg-info/requires.txt
+src/asktheapi_team_builder.egg-info/top_level.txt
