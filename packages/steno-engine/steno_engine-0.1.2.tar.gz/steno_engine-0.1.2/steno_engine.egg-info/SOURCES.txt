@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+steno/__init__.py
+steno/execute.py
+steno/log.py
+steno/main.py
+steno/simplify.py
+steno/token_metrics.py
+steno/utils.py
+steno_engine.egg-info/PKG-INFO
+steno_engine.egg-info/SOURCES.txt
+steno_engine.egg-info/dependency_links.txt
+steno_engine.egg-info/entry_points.txt
+steno_engine.egg-info/requires.txt
+steno_engine.egg-info/top_level.txt
