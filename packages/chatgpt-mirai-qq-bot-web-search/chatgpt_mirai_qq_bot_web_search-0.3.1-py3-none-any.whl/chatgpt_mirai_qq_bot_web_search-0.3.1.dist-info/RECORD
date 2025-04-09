@@ -1,0 +1,11 @@
+web_search/__init__.py,sha256=_vfIxeLqXc53QoZ8sHzw_SbGkxb2CTRQdd1phQmC8GM,6147
+web_search/blocks.py,sha256=p941F6yoaSXvyefrEoUVSMNR7sPCZMRS-_Sv0WoCIkk,9144
+web_search/config.py,sha256=DhLiERBJR2V5Boglf7Aq9Rbc4vsvLIh67CrLDIPeqA0,398
+web_search/web_searcher.py,sha256=gYfD0K4_zTIn0pDbB2BABpw7poFuAC4mohJmQWL-3I4,21285
+web_search/example/roleplayWithWebSearch.yaml,sha256=5KsQ3JHg3J0AlB997Zy337Z2TAZ9hZd4Nsni7sP0BKQ,5188
+chatgpt_mirai_qq_bot_web_search-0.3.1.dist-info/LICENSE,sha256=ILBn-G3jdarm2w8oOrLmXeJNU3czuJvVhDLBASWdhM8,34522
+chatgpt_mirai_qq_bot_web_search-0.3.1.dist-info/METADATA,sha256=tyU6C7uOZ37l-kReG0WGMZ2xHqLsRCcHmC4pgoT5WRM,1767
+chatgpt_mirai_qq_bot_web_search-0.3.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+chatgpt_mirai_qq_bot_web_search-0.3.1.dist-info/entry_points.txt,sha256=o3kRDSdSmSdnCKlK6qS57aN0WpI4ab-Nxub2NwUrjf0,64
+chatgpt_mirai_qq_bot_web_search-0.3.1.dist-info/top_level.txt,sha256=PoNm8MJYw_y8RTMaNlY0ePLoNHxVUAE2IHDuL5fFubI,11
+chatgpt_mirai_qq_bot_web_search-0.3.1.dist-info/RECORD,,
