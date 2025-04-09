@@ -1,0 +1,26 @@
+{
+    "dev": {
+        "name": "Dev",
+        "AuthZeroTenantName": "dev-8-7fhps2.us.auth0.com",
+        "AuthZeroV2ClientId": "b42UnXPCC47K52nUuZ1LerYMtnz2cMw6",
+        "AuthZeroAudience": "https://dev.raic.ai",
+        "AuthZeroAlgorithms": "['RS256']",
+        "ApiRoot": "https://dev-api.raic.ai"
+    },
+    "qa": {
+        "name": "QA",
+        "AuthZeroTenantName": "qa-synthetaic.us.auth0.com",
+        "AuthZeroV2ClientId": "NeEOFzoC7bQ55C5CjpBwBpd82SVcd90X",
+        "AuthZeroAudience": "https://qa.raic.ai",
+        "AuthZeroAlgorithms": "['RS256']",
+        "ApiRoot": "https://qa-api.raic.ai"
+    },
+    "prod": {
+        "name": "Prod",
+        "AuthZeroTenantName": "auth.raic.ai",
+        "AuthZeroV2ClientId": "Kkp3t2H1K5hDvvIVT0WXCzejy7hK8SfZ",
+        "AuthZeroAudience": "https://synthetaic.raic.ai",
+        "AuthZeroAlgorithms": "['RS256']",
+        "ApiRoot": "https://api.raic.ai"
+    }
+}
