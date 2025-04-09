@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TRYpros"
+version = "2.1.3"
+dependencies = [
+  "Cartopy",
+  "global_land_mask",
+  "matplotlib",
+  "numpy",
+  "pandas",
+  "pyproj"
+]
+authors = [
+  {name = "Gayathri Girish Nair", email = "girishng@tcd.ie"},
+]
+maintainers = [
+  {name = "Gayathri Girish Nair", email = "girishng@tcd.ie"}
+]
+description = "A collection of useful functions to process data from the TRY Plant Database, supporting a recommended data processing pipeline."
+readme = "README.md"

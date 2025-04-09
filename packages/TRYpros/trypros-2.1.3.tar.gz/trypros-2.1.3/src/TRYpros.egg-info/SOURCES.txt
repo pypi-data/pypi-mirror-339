@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/TRYpros/__init__.py
+src/TRYpros.egg-info/PKG-INFO
+src/TRYpros.egg-info/SOURCES.txt
+src/TRYpros.egg-info/dependency_links.txt
+src/TRYpros.egg-info/requires.txt
+src/TRYpros.egg-info/top_level.txt
