@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+smuxent/ThreadWin.pyi
+smuxent/__init__.py
+smuxent/py311ThreadWin32.pyd
+smuxent/py311ThreadWin64.pyd
+smuxent/py312ThreadWin32.pyd
+smuxent/py312ThreadWin64.pyd
+smuxent.egg-info/PKG-INFO
+smuxent.egg-info/SOURCES.txt
+smuxent.egg-info/dependency_links.txt
+smuxent.egg-info/top_level.txt
