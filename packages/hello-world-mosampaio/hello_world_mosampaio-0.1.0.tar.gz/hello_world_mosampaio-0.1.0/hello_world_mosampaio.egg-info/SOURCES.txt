@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+hello_world/__init__.py
+hello_world_mosampaio.egg-info/PKG-INFO
+hello_world_mosampaio.egg-info/SOURCES.txt
+hello_world_mosampaio.egg-info/dependency_links.txt
+hello_world_mosampaio.egg-info/top_level.txt
