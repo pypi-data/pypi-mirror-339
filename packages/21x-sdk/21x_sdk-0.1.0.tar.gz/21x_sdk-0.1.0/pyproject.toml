@@ -1,0 +1,53 @@
+[project]
+name = "21x-sdk"
+version = "0.1.0"
+description = "Library to interact with 21X platform."
+license = { text = "Apache-2.0" }
+requires-python = ">=3.9,<4"
+authors = []
+readme = "README.md"
+
+dependencies = [
+  "python-dateutil (>=2.8.0,<3.0.0)",
+  "httpx (>=0.28.1,<0.29.0)",
+  "attrs (>=25.1.0,<26.0.0)",
+  "web3 (==7.6.0)",
+  "authlib (>=1.5.2,<2.0.0)",
+]
+
+[tool.21x.dependencies]
+api-version = "0.9.5"
+contract-version = "1.0.0"
+
+[tool.poetry]
+packages = [
+  { include = "client", from = "src", to = "x21_sdk" },
+  { include = "onchain", from = "src", to = "x21_sdk" },
+  { include = "__init__.py", from = "src", to = "x21_sdk" },
+]
+
+[tool.poetry.group.dev.dependencies]
+openapi-python-client = "^0.24.2"
+black = "^25.1.0"
+pylint = "^3.3.6"
+pytest = "^8.3.5"
+pytest-cov = "^6.1.1"
+pytest-order = "^1.3.0"
+pytest-asyncio = "^0.26.0"
+
+[tool.pylint.messages_control]
+disable = [
+  "line-too-long",
+  "duplicate-code",
+  "missing-module-docstring",
+  "missing-function-docstring",
+  "missing-class-docstring",
+  "too-many-instance-attributes",
+]
+
+[tool.black]
+line-length = 120
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
