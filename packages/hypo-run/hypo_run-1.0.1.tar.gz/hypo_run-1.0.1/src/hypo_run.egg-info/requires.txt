@@ -1,0 +1,7 @@
+loguru
+GPUtil
+alive_progress
+
+[dev]
+pandas
+torchshow
