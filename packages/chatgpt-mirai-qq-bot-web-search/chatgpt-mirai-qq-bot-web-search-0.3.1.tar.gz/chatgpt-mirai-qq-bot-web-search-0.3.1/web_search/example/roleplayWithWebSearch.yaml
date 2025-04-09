@@ -1,0 +1,194 @@
+name: （默认）角色扮演
+description: ''
+blocks:
+  - type: internal:toggle_edit_state
+    name: toggle_edit_state_yjxh1a
+    params:
+      is_editing: true
+    position:
+      x: 530
+      y: 138
+  - type: internal:chat_response_converter
+    name: chat_response_converter_1q91zd
+    params: {}
+    position:
+      x: 2962
+      y: 138
+    connected_to:
+      - target: msg_sender_7ankhi
+        mapping:
+          from: msg
+          to: msg
+  - type: internal:send_message
+    name: msg_sender_7ankhi
+    params: {}
+    position:
+      x: 3392
+      y: 138
+  - type: internal:chat_memory_store
+    name: chat_memory_store_nkjr7t
+    params:
+      scope_type: member
+    position:
+      x: 2962
+      y: 306
+  - type: internal:get_message
+    name: get_message
+    params: {}
+    position:
+      x: 100
+      y: 138
+    connected_to:
+      - target: toggle_edit_state_yjxh1a
+        mapping:
+          from: sender
+          to: sender
+      - target: query_memory
+        mapping:
+          from: sender
+          to: chat_sender
+      - target: chat_message_constructor_rafz2d
+        mapping:
+          from: msg
+          to: user_msg
+      - target: chat_memory_store_nkjr7t
+        mapping:
+          from: msg
+          to: user_msg
+      - target: 5663c818-9cd6-4568-94ec-a75f1bad26cb
+        mapping:
+          from: msg
+          to: user_msg
+  - type: internal:append_systemPrompt
+    name: 309f454b-017a-4d19-b8a9-ac6b3829ff4a
+    params: {}
+    position:
+      x: 2197
+      y: 138
+    connected_to:
+      - target: llm_chat
+        mapping:
+          from: messages
+          to: prompt
+  - type: internal:chat_message_constructor
+    name: 5663c818-9cd6-4568-94ec-a75f1bad26cb
+    params: {}
+    position:
+      x: 960
+      y: 378
+    connected_to:
+      - target: e3eecc17-e107-4fbf-b8fa-85aef25564c2
+        mapping:
+          from: llm_msg
+          to: prompt
+  - type: internal:chat_message_constructor
+    name: chat_message_constructor_rafz2d
+    params: {}
+    position:
+      x: 960
+      y: 138
+    connected_to:
+      - target: 309f454b-017a-4d19-b8a9-ac6b3829ff4a
+        mapping:
+          from: llm_msg
+          to: messages
+  - type: internal:text_block
+    name: system_prompt
+    params:
+      text: ' '
+    position:
+      x: 100
+      y: 530
+    connected_to:
+      - target: chat_message_constructor_rafz2d
+        mapping:
+          from: text
+          to: system_prompt_format
+  - type: internal:chat_memory_query
+    name: query_memory
+    params:
+      scope_type: group
+    position:
+      x: 523
+      y: 336
+    connected_to:
+      - target: chat_message_constructor_rafz2d
+        mapping:
+          from: memory_content
+          to: memory_content
+      - target: 5663c818-9cd6-4568-94ec-a75f1bad26cb
+        mapping:
+          from: memory_content
+          to: memory_content
+  - type: internal:text_block
+    name: user_prompt
+    params:
+      text: '{user_msg}'
+    position:
+      x: 100
+      y: 330
+    connected_to:
+      - target: chat_message_constructor_rafz2d
+        mapping:
+          from: text
+          to: user_prompt_format
+      - target: 5663c818-9cd6-4568-94ec-a75f1bad26cb
+        mapping:
+          from: text
+          to: user_prompt_format
+  - type: internal:chat_completion
+    name: llm_chat
+    params:
+      model_name: gemini-2.0-flash-exp
+    position:
+      x: 2532
+      y: 138
+    connected_to:
+      - target: chat_response_converter_1q91zd
+        mapping:
+          from: resp
+          to: resp
+      - target: chat_memory_store_nkjr7t
+        mapping:
+          from: resp
+          to: llm_resp
+  - type: internal:chat_completion
+    name: e3eecc17-e107-4fbf-b8fa-85aef25564c2
+    params:
+      model_name: gemini-2.0-flash-exp
+    position:
+      x: 1337
+      y: 138
+    connected_to:
+      - target: b39e6288-88cf-47a8-9a26-3b4d4f319eab
+        mapping:
+          from: resp
+          to: llm_resp
+  - type: internal:text_block
+    name: a6db9db3-5780-4d84-8954-eb159a9e8f0a
+    params:
+      text: "# 任务\n请根据对话记录和当前问题判断当前是否需要进行网络搜素，当问题具有时效性或者明确要求搜索时，则直接返回搜索关键词（例如当前问题为今日热点有哪些，则直接返回今日热点），否则直接返回无（例如在干嘛，则只返回无）\n\n# Memories\n以下是之前发生过的对话记录：\n-- 对话记录开始 --\n{memory_content}\n-- 对话记录结束 --"
+    position:
+      x: 100
+      y: 730
+    connected_to:
+      - target: 5663c818-9cd6-4568-94ec-a75f1bad26cb
+        mapping:
+          from: text
+          to: system_prompt_format
+  - type: search:web_search
+    name: b39e6288-88cf-47a8-9a26-3b4d4f319eab
+    params:
+      fetch_content: true
+      max_results: 1
+      timeout: 10
+      engine: baidu
+      proxy: ''
+    position:
+      x: 1767
+      y: 138
+    connected_to:
+      - target: 309f454b-017a-4d19-b8a9-ac6b3829ff4a
+        mapping:
+          from: results
+          to: results

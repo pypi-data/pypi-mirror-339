@@ -1,0 +1,4 @@
+playwright
+trafilatura
+lxml_html_clean
+kirara-ai>=3.2.0
