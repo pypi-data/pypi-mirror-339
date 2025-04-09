@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: det3d
+Version: 0.0.2
+Summary: A package of 3D object detection models
+Home-page: https://github.com/leoxiang66/3D-Detection
+Author: Tao Xiang
+Author-email: xiang.tao@outlook.de
+License: UNKNOWN
+Description: # 3D Detection Collection
+        
+        This repository collects/re-implements 3D object detection models, including training and evaluation processes.
+        
+        
+        ## Environment
+        
+        It's tested in the followinng environment:
+        
+        - CUDA Toolkit: 10.2
+        - python: 3.8
+        - numpy: 1.23.1
+        - pytorch: 1.8.2
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
