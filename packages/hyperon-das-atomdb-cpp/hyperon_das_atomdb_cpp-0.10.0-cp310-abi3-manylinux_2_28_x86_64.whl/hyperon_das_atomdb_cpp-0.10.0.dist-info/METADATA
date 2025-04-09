@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: hyperon_das_atomdb_cpp
+Author: Andre Senna
+Author-email: andre@singularitynet.io
+Description-Content-Type: text/markdown
+Summary: Atom Space DB for Hyperon DAS
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.10
+Version: 0.10.0
+
+UNKNOWN
