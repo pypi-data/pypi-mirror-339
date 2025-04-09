@@ -1,0 +1,183 @@
+Metadata-Version: 2.4
+Name: enterprise_risk_assessment
+Version: 0.1.3
+Summary: A comprehensive enterprise risk assessment system
+Home-page: https://github.com/yourusername/enterprise-risk-assessment
+Author: LT
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.0.0
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: matplotlib>=3.3.0
+Requires-Dist: openpyxl>=3.0.0
+Requires-Dist: PyYAML>=5.4.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# 风险评估模型库
+
+这是一个用于企业风险评估的Python库，提供了完整的风险评估功能，包括数据加载、风险计算、结果导出和可视化。
+
+## 安装
+
+```bash
+pip install risk-assessment
+```
+
+## 功能特点
+
+- 支持从Excel文件加载数据
+- 计算多种风险类型（战略风险、财务风险、市场风险等）
+- 生成详细的风险评估报告
+- 可视化风险评分结果
+- 支持自定义配置参数
+
+## 使用示例
+
+### 基本用法
+
+```python
+from risk_assessment import RiskModel
+
+# 创建模型实例
+model = RiskModel()
+
+# 加载数据
+# 方法1：加载默认工作表（第一个工作表）
+model.load_data('your_data.xlsx')
+
+# 方法2：指定工作表名称
+model.load_data('your_data.xlsx', sheet_name='Sheet1')
+
+# 方法3：指定工作表索引
+model.load_data('your_data.xlsx', sheet_name=0)  # 第一个工作表
+
+# 计算风险评分
+results = model.calculate_total_risk()
+
+# 绘制风险评分图表
+model.plot_risk_scores(results, save_path='risk_chart.png')
+
+# 导出详细计算结果
+model.export_calculation_details(results, 'risk_details.xlsx')
+```
+
+### 使用自定义配置
+
+```python
+from risk_assessment import RiskModel
+
+# 使用自定义配置文件
+model = RiskModel(config_path='custom_config.yaml')
+
+# 后续操作与基本用法相同
+```
+
+## 数据格式要求
+
+输入Excel文件需要满足以下要求：
+
+1. 数据格式：
+   - 第一列必须是指标名称
+   - 后续列是各月份的数据
+   - 第一行是列名（月份或其他时间标识）
+
+2. 工作表选择：
+   - 默认读取第一个工作表
+   - 可以通过 `sheet_name` 参数指定工作表
+   - 支持工作表名称或索引号
+
+3. 必需的数据列：
+   - 主营业务收入
+   - 总营业务收入
+   - 主营业务成本
+   - 总业务成本
+   - 主营业务费用
+   - 研发费用
+   - 负债总额
+   - 资产总额
+   - 带息负债总额
+   - 经营现金流入
+   - 经营现金流出
+   - 经营净现金流
+   - 投资分红等收益
+   - 利息支出
+   - 预付账款
+   - 预收账款
+   - 应收账款
+   - 应付账款
+   - 净资产
+   - 应收账款总额
+   - 坏账准备金额
+   - 存货
+   - 企业当年涉及司法诉讼案件的数量
+   - 执行金额
+   - 被执行金额
+   - 已销号事件数
+   - 年初事件数
+   - 新增事件数
+   - 已销号事件影响金额
+   - 年初事件影响金额
+   - 新增事件影响金额
+   - 未销号事件兜底保障金额
+   - 未销号事件追损挽损金额
+   - 未销号事件累计计提减值金额
+   - 未销号事件影响金额
+   - 已处置金额
+   - R1-R11（风险阈值参数）
+   - n0（风险阈值参数）
+   - m1-m3（信用风险参数）
+   - x1-x5（社会责任风险参数）
+   - y1-y4（社会责任风险参数）
+   - z1-z3（社会责任风险参数）
+   - 行业较差值
+   - 货币资金
+   - 财务费用中的利息费用
+
+## 配置说明
+
+可以通过YAML配置文件自定义以下参数：
+
+- 各类风险的权重
+- 风险阈值参数
+- 计算参数
+
+配置文件示例：
+
+```yaml
+weights:
+  strategic: 0.25
+  financial: 0.30
+  market: 0.20
+  legal_credit: 0.15
+  event: 0.10
+```
+
+## 输出结果
+
+风险评估结果包含：
+
+1. 总体风险评分
+2. 各项风险评分
+3. 风险等级
+4. 风险判断依据
+5. 详细的计算过程
+
+## 许可证
+
+MIT License
+
+## 贡献
+
+欢迎提交问题和改进建议！ 
