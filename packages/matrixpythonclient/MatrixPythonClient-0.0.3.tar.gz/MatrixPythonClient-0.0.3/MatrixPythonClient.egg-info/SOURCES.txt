@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+versioneer.py
+MatrixPythonClient/Client.py
+MatrixPythonClient/MatrixLoginSession.py
+MatrixPythonClient/__init__.py
+MatrixPythonClient.egg-info/PKG-INFO
+MatrixPythonClient.egg-info/SOURCES.txt
+MatrixPythonClient.egg-info/dependency_links.txt
+MatrixPythonClient.egg-info/not-zip-safe
+MatrixPythonClient.egg-info/requires.txt
+MatrixPythonClient.egg-info/top_level.txt
