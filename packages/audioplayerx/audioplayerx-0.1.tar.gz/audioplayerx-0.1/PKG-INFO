@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: audioplayerx
+Version: 0.1
+Summary: mp3 ve wav calabilen sade kutuphane
+Home-page: https://github.com/ruzgar/audioplayerx
+Author: Ruzgar
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# audioplayerx
+
+.mp3 ve .wav dosyalarını çalmak için basit bir Python kütüphanesi.
+
+## Kullanım
+
+```python
+from audioplayerx import play
+play("sarki.mp3")
+```

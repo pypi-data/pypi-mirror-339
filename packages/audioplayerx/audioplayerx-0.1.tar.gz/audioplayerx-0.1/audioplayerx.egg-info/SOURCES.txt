@@ -1,0 +1,9 @@
+README.md
+setup.py
+audioplayerx/__init__.py
+audioplayerx/player.py
+audioplayerx.egg-info/PKG-INFO
+audioplayerx.egg-info/SOURCES.txt
+audioplayerx.egg-info/dependency_links.txt
+audioplayerx.egg-info/requires.txt
+audioplayerx.egg-info/top_level.txt
