@@ -1,0 +1,308 @@
+# LLM 切換模組設定檔
+# 包含各提供商的所有模型、多模態類型、輸入/輸出 token 費用
+
+LLM_CONFIG:
+  default_provider: "openai"  # 預設提供商
+
+  providers:
+    # ===== OpenAI 提供商 =====
+    openai:
+      api_key: "${OPENAI_API_KEY}"  # 從環境變量讀取
+      api_base: "${OPENAI_API_BASE}"  # 從環境變量讀取
+
+      # 預設模型
+      model: "gpt-4o-mini"
+      temperature: 0.7
+      max_tokens: 1000
+
+      # 可用模型列表 (註解，可自行取消註解使用)
+      # models:
+      #   gpt-4o:  # 預設模型
+      #     capabilities: ["text", "image-input", "json-mode"]
+      #     input_cost_per_1M: 5.0  # USD per 1M tokens
+      #     output_cost_per_1M: 15.0  # USD per 1M tokens
+      #     context_window: 128000
+      #
+      #   gpt-4-turbo:
+      #     capabilities: ["text", "image-input", "json-mode"]
+      #     input_cost_per_1M: 10.0
+      #     output_cost_per_1M: 30.0
+      #     context_window: 128000
+      #
+      #   gpt-4:
+      #     capabilities: ["text"]
+      #     input_cost_per_1M: 30.0
+      #     output_cost_per_1M: 60.0
+      #     context_window: 8192
+      #
+      #   gpt-3.5-turbo:
+      #     capabilities: ["text", "json-mode"]
+      #     input_cost_per_1M: 0.5
+      #     output_cost_per_1M: 1.5
+      #     context_window: 16385
+      #
+      #   gpt-4-vision-preview:
+      #     capabilities: ["text", "image-input"]
+      #     input_cost_per_1M: 10.0
+      #     output_cost_per_1M: 30.0
+      #     context_window: 128000
+      #
+      #   text-embedding-3-large:
+      #     capabilities: ["embeddings"]
+      #     input_cost_per_1M: 0.13
+      #     output_cost_per_1M: 0.0
+      #     context_window: 8191
+      #
+      #   text-embedding-3-small:
+      #     capabilities: ["embeddings"]
+      #     input_cost_per_1M: 0.02
+      #     output_cost_per_1M: 0.0
+      #     context_window: 8191
+
+    # ===== DeepSeek 提供商 =====
+    deepseek:
+      api_key: "${DEEPSEEK_API_KEY}"  # 從環境變量讀取
+      api_base: "${DEEPSEEK_API_BASE}"  # 從環境變量讀取
+
+      # 預設模型
+      model: "deepseek-chat"
+      temperature: 0.7
+      max_tokens: 1000
+
+      # 可用模型列表 (註解，可自行取消註解使用)
+      # models:
+      #   deepseek-chat:  # 預設模型
+      #     capabilities: ["text"]
+      #     input_cost_per_1M: 1.0
+      #     output_cost_per_1M: 2.0
+      #     context_window: 32768
+      #
+      #   deepseek-coder:
+      #     capabilities: ["text", "code"]
+      #     input_cost_per_1M: 1.2
+      #     output_cost_per_1M: 2.4
+      #     context_window: 32768
+      #
+      #   deepseek-lite:
+      #     capabilities: ["text"]
+      #     input_cost_per_1M: 0.3
+      #     output_cost_per_1M: 0.6
+      #     context_window: 16384
+      #
+      #   deepseek-math:
+      #     capabilities: ["text", "math"]
+      #     input_cost_per_1M: 1.5
+      #     output_cost_per_1M: 3.0
+      #     context_window: 32768
+      #
+      #   deepseek-vision:
+      #     capabilities: ["text", "image-input"]
+      #     input_cost_per_1M: 2.0
+      #     output_cost_per_1M: 4.0
+      #     context_window: 32768
+      #
+      #   deepseek-embedding:
+      #     capabilities: ["embeddings"]
+      #     input_cost_per_1M: 0.1
+      #     output_cost_per_1M: 0.0
+      #     context_window: 8192
+
+    # ===== XAI 提供商 =====
+    xai:
+      api_key: "${XAI_API_KEY}"  # 從環境變量讀取
+      api_base: "${XAI_API_BASE}"  # 從環境變量讀取
+
+      # 預設模型
+      model: "grok-2"
+      temperature: 0.7
+      max_tokens: 1000
+      explanation_level: "detailed"  # XAI 特有參數
+
+      # 可用模型列表 (註解，可自行取消註解使用)
+      # models:
+      #   xai-chat:  # 預設模型
+      #     capabilities: ["text", "explainable-ai"]
+      #     input_cost_per_1M: 5.0
+      #     output_cost_per_1M: 15.0
+      #     context_window: 32768
+      #     explanation_level: "detailed"  # XAI 特有參數
+      #
+      #   xai-vision:
+      #     capabilities: ["text", "image-input", "explainable-ai"]
+      #     input_cost_per_1M: 10.0
+      #     output_cost_per_1M: 30.0
+      #     context_window: 32768
+      #     explanation_level: "detailed"  # XAI 特有參數
+      #
+      #   xai-code:
+      #     capabilities: ["text", "code", "explainable-ai"]
+      #     input_cost_per_1M: 8.0
+      #     output_cost_per_1M: 24.0
+      #     context_window: 32768
+      #     explanation_level: "detailed"  # XAI 特有參數
+      #
+      #   xai-embedding:
+      #     capabilities: ["embeddings", "explainable-ai"]
+      #     input_cost_per_1M: 0.5
+      #     output_cost_per_1M: 0.0
+      #     context_window: 8192
+      #     explanation_level: "basic"  # XAI 特有參數
+
+    # ===== Anthropic 提供商 =====
+    anthropic:
+      api_key: "${ANTHROPIC_API_KEY}"  # 從環境變量讀取
+      api_base: "${ANTHROPIC_API_BASE}"  # 從環境變量讀取
+
+      # 預設模型
+      model: "claude-3-opus-20240229"
+      temperature: 0.7
+      max_tokens: 1000
+
+      # 可用模型列表 (註解，可自行取消註解使用)
+      # models:
+      #   claude-3-opus-20240229:  # 預設模型
+      #     capabilities: ["text", "image-input"]
+      #     input_cost_per_1M: 15.0
+      #     output_cost_per_1M: 75.0
+      #     context_window: 200000
+      #
+      #   claude-3-sonnet-20240229:
+      #     capabilities: ["text", "image-input"]
+      #     input_cost_per_1M: 3.0
+      #     output_cost_per_1M: 15.0
+      #     context_window: 200000
+      #
+      #   claude-3-haiku-20240307:
+      #     capabilities: ["text", "image-input"]
+      #     input_cost_per_1M: 0.25
+      #     output_cost_per_1M: 1.25
+      #     context_window: 200000
+      #
+      #   claude-2.1:
+      #     capabilities: ["text"]
+      #     input_cost_per_1M: 8.0
+      #     output_cost_per_1M: 24.0
+      #     context_window: 100000
+      #
+      #   claude-2.0:
+      #     capabilities: ["text"]
+      #     input_cost_per_1M: 8.0
+      #     output_cost_per_1M: 24.0
+      #     context_window: 100000
+      #
+      #   claude-instant-1.2:
+      #     capabilities: ["text"]
+      #     input_cost_per_1M: 1.63
+      #     output_cost_per_1M: 5.51
+      #     context_window: 100000
+
+    # ===== Google (Gemini) 提供商 =====
+    google:
+      api_key: "${GOOGLE_API_KEY}"  # 從環境變量讀取
+      api_base: "${GOOGLE_API_BASE}"  # 從環境變量讀取
+
+      # 預設模型
+      model: "gemini-2.0-flash"
+      temperature: 0.7
+      max_tokens: 1000
+
+      # 可用模型列表 (註解，可自行取消註解使用)
+      # models:
+      #   gemini-1.5-pro:  # 預設模型
+      #     capabilities: ["text", "image-input", "video-input", "audio-input"]
+      #     input_cost_per_1M: 7.0
+      #     output_cost_per_1M: 21.0
+      #     context_window: 1000000
+      #
+      #   gemini-1.5-flash:
+      #     capabilities: ["text", "image-input", "video-input", "audio-input"]
+      #     input_cost_per_1M: 0.7
+      #     output_cost_per_1M: 2.1
+      #     context_window: 1000000
+      #
+      #   gemini-1.0-pro:
+      #     capabilities: ["text", "image-input"]
+      #     input_cost_per_1M: 3.5
+      #     output_cost_per_1M: 10.5
+      #     context_window: 32768
+      #
+      #   gemini-1.0-pro-vision:
+      #     capabilities: ["text", "image-input"]
+      #     input_cost_per_1M: 3.5
+      #     output_cost_per_1M: 10.5
+      #     context_window: 32768
+      #
+      #   embedding-001:
+      #     capabilities: ["embeddings"]
+      #     input_cost_per_1M: 0.25
+      #     output_cost_per_1M: 0.0
+      #     context_window: 3072
+
+    # ===== Azure OpenAI 提供商 =====
+    azure_openai:
+      api_key: "${AZURE_OPENAI_API_KEY}"  # 從環境變量讀取
+      api_base: "${AZURE_OPENAI_API_BASE}"  # 從環境變量讀取
+      api_version: "${AZURE_OPENAI_API_VERSION}"  # 從環境變量讀取
+
+      # 預設模型
+      model: "gpt-4"  # 部署名稱
+      deployment_name: "${AZURE_OPENAI_DEPLOYMENT_NAME}"  # 從環境變量讀取
+      temperature: 0.7
+      max_tokens: 1000
+
+      # 可用模型列表 (註解，可自行取消註解使用)
+      # models:
+      #   gpt-4:  # 預設模型 (部署名稱)
+      #     capabilities: ["text"]
+      #     input_cost_per_1M: 30.0
+      #     output_cost_per_1M: 60.0
+      #     context_window: 8192
+      #     deployment_name: "your-gpt4-deployment"  # Azure 特有參數
+      #
+      #   gpt-35-turbo:
+      #     capabilities: ["text"]
+      #     input_cost_per_1M: 0.5
+      #     output_cost_per_1M: 1.5
+      #     context_window: 16385
+      #     deployment_name: "your-gpt35-deployment"  # Azure 特有參數
+      #
+      #   text-embedding-ada-002:
+      #     capabilities: ["embeddings"]
+      #     input_cost_per_1M: 0.1
+      #     output_cost_per_1M: 0.0
+      #     context_window: 8191
+      #     deployment_name: "your-embedding-deployment"  # Azure 特有參數
+
+    # ===== HuggingFace 提供商 =====
+    huggingface:
+      api_key: "${HUGGINGFACE_API_KEY}"  # 從環境變量讀取
+      api_base: "${HUGGINGFACE_API_BASE}"  # 從環境變量讀取
+
+      # 預設模型
+      model: "mistralai/Mistral-7B-Instruct-v0.2"
+      temperature: 0.7
+      max_tokens: 1000
+
+      # 可用模型列表 (註解，可自行取消註解使用)
+      # models:
+      #   mistralai/Mistral-7B-Instruct-v0.2:  # 預設模型
+      #     capabilities: ["text"]
+      #     input_cost_per_1M: 0.2  # 估計值，HuggingFace 價格因部署方式而異
+      #     output_cost_per_1M: 0.2  # 估計值，HuggingFace 價格因部署方式而異
+      #     context_window: 8192
+      #
+      #   meta-llama/Llama-2-70b-chat-hf:
+      #     capabilities: ["text"]
+      #     input_cost_per_1M: 1.0  # 估計值
+      #     output_cost_per_1M: 1.0  # 估計值
+      #     context_window: 4096
+      #
+      #   stabilityai/stable-diffusion-xl-base-1.0:
+      #     capabilities: ["image-generation"]
+      #     cost_per_image: 0.02  # 估計值
+      #
+      #   sentence-transformers/all-MiniLM-L6-v2:
+      #     capabilities: ["embeddings"]
+      #     input_cost_per_1M: 0.05  # 估計值
+      #     output_cost_per_1M: 0.0
+      #     context_window: 256
