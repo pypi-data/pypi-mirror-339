@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: pepsales_retry_lib
+Version: 1.0.3
+Summary: A Kafka-based retry mechanism for API requests with success/failure callbacks.
+Author: Pepsales
+Author-email: abhinandan@pepsales.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: kafka-python>=2.0.2
+Requires-Dist: requests>=2.31.0
+Requires-Dist: pymongo>=3.10.1
+Requires-Dist: confluent-kafka>=2.3.0
+Requires-Dist: datetime
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
