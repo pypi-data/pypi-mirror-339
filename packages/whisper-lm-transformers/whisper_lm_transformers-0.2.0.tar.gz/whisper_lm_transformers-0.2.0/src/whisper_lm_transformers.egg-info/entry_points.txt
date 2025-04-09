@@ -1,0 +1,3 @@
+[console_scripts]
+whisper_evaluate_with_hf = whisper_lm_transformers.scripts.whisper_evaluate_with_hf:main
+whisper_lm_optimizer_with_hf = whisper_lm_transformers.scripts.whisper_lm_optimizer_with_hf:main
