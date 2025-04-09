@@ -1,0 +1,11 @@
+gtn_embed_sdk-1.0.1.dist-info/licenses/LICENSE,sha256=UL3QOauqON_UGsjaVGFHBrfjdOlhD8aD85ywPxb_vQY,1066
+gtnapi/__init__.py,sha256=SDZKv_LpbXIHYT5fm2rgqYU7Kzl0AAW2DcaV6APxZr0,4927
+gtnapi/_auth.py,sha256=D--yQOVKSKiGooMr-zGInnNmbsU6-CQGtLeEkvnbH3U,20263
+gtnapi/_connection.py,sha256=AkL37jtpVCUY1rw03r3DJZpQnDK1aAZZQu_9_ug7bG4,1645
+gtnapi/_requests.py,sha256=_T_VIQP-xXP9reeDEXp8wPOIEptfGRP6BawImMuhIxY,3647
+gtnapi/_shared.py,sha256=46gVtHBad1PnhAwNaZyfR1Wo6K_jh8sYtas3ojNpFIE,3218
+gtnapi/_streaming.py,sha256=PThRTelHL8GnVvz7Hh_cEwO3NdKbDseF_SQTsNwm9uY,8632
+gtn_embed_sdk-1.0.1.dist-info/METADATA,sha256=MJPnhz53aRXl7UtbT9nCzME1tvFLepbSgaHUsed1rdE,7429
+gtn_embed_sdk-1.0.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+gtn_embed_sdk-1.0.1.dist-info/top_level.txt,sha256=FwV8up56YWs3XiVWzkWQaQMfnm365XPuYU8cv2lVkWo,7
+gtn_embed_sdk-1.0.1.dist-info/RECORD,,
