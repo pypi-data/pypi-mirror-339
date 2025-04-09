@@ -1,0 +1,7 @@
+get_job_list/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+get_job_list/conversion.py,sha256=1MYk2B-X-Iwp_qJSBVEHOrQPLRJSjZeb4o1tCWDb6X4,1453
+get_job_list/scraping.py,sha256=4TVHUtSAQFP1l0Fg1MDGm67D3Tc3LSVeasP2rz9Phg8,8263
+jb_scraper-0.0.1.dist-info/METADATA,sha256=4vIgMbqGJiVZuWwSa_f7nwaABolQt-RuBjp8yNllW_U,5108
+jb_scraper-0.0.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+jb_scraper-0.0.1.dist-info/top_level.txt,sha256=D802va3ZivpOcU_nCi0jxMBoVE_fGUb-WCmtW_Aa6Rg,13
+jb_scraper-0.0.1.dist-info/RECORD,,
