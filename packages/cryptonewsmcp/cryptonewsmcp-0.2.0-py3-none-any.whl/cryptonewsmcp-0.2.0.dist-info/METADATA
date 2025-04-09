@@ -1,0 +1,75 @@
+Metadata-Version: 2.4
+Name: cryptonewsmcp
+Version: 0.2.0
+Author-email: narumi <toucans-cutouts0f@icloud.com>
+License-File: LICENSE
+Requires-Python: >=3.12
+Requires-Dist: beautifulsoup4>=4.13.3
+Requires-Dist: feedparser>=6.0.11
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: markdownify>=1.1.0
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: python-dateutil>=2.9.0.post0
+Description-Content-Type: text/markdown
+
+# Crypto News MCP Server
+
+## Usage
+
+From Docker
+
+```json
+{
+  "mcpServers": {
+    "cryptonewsmcp": {
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "narumi/crypto-news-mcp"]
+    }
+  }
+}
+```
+
+From PyPI
+
+```json
+{
+  "mcpServers": {
+    "cryptonewsmcp": {
+      "command": "uvx",
+      "args": ["cryptonewsmcp"]
+    }
+  }
+}
+```
+
+From GitHub
+
+```json
+{
+  "mcpServers": {
+    "cryptonewsmcp": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/narumiruna/crypto-news-mcp",
+        "cryptonewsmcp"
+      ]
+    }
+  }
+}
+```
+
+## Components
+
+### Tools
+
+- recent_news
+  - Fetches latest crypto news from specified site
+  - Input:
+    - site: Source site ("coindesk" or "decrypt")
+  - Returns formatted list of news entries with titles, links, dates and summaries
+- read_news
+  - Fetches article HTML from URL and converts it to Markdown
+  - Input:
+    - url: Article URL to retrieve
+  - Returns Markdown-formatted article content
