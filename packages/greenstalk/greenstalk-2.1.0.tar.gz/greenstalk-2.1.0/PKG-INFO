@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: greenstalk
+Version: 2.1.0
+Summary: A Python client for the beanstalkd work queue
+Project-URL: Documentation, https://greenstalk.readthedocs.io/
+Project-URL: Source, https://github.com/justinmayhew/greenstalk
+Author-email: Justin Mayhew <mayhew@live.ca>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+
+Greenstalk
+==========
+
+.. image:: https://img.shields.io/pypi/v/greenstalk.svg
+    :target: https://pypi.org/project/greenstalk/
+    :alt: Greenstalk on PyPI
+
+Greenstalk is a small and unopinionated Python client library for communicating
+with the `beanstalkd`_ work queue. The API provided mostly maps one-to-one with
+commands in the `protocol`_.
+
+Quickstart
+----------
+
+.. code-block:: pycon
+
+    >>> import greenstalk
+    >>> client = greenstalk.Client(('127.0.0.1', 11300))
+    >>> client.put('hello')
+    1
+    >>> job = client.reserve()
+    >>> job.id
+    1
+    >>> job.body
+    'hello'
+    >>> client.delete(job)
+    >>> client.close()
+
+Documentation is available on `Read the Docs`_.
+
+.. _`beanstalkd`: https://beanstalkd.github.io/
+.. _`protocol`: https://raw.githubusercontent.com/beanstalkd/beanstalkd/master/doc/protocol.txt
+.. _`Read the Docs`: https://greenstalk.readthedocs.io/
