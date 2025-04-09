@@ -1,0 +1,107 @@
+{% load static %}
+{% load i18n %}
+{% load evelinks %}
+
+<div class="table-responsive">
+    <h3> {% translate "Pending Requests" %} </h3>
+    <table id="tab_requests" class="table table-condensed table-hover table-striped">
+        <thead>
+            <tr>
+                <th class="col-md-2">{% translate "Date" %}</th>
+                <th class="col-md-2">{% translate "Contact Name" %}</th>
+                <th class="col-md-2">{% translate "Corporation" %}</th>
+                <th class="col-md-1">{% translate "Tokens/Req" %}</th>
+                <th class="col-md-2">{% translate "Actions" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for corp in corps %}
+                <tr hx-target="this" hx-swap="delete">
+                    <td>
+                        {{ corp.request.request_date }}
+                    </td>
+                    <td>
+                        <span>
+                            {{ corp.ceo }}
+                        </span>
+                    </td>
+                    <td>
+                        <img src="{{ corp.request.corporation.corporation_id|corporation_logo_url }}" class="img-circle">
+                        &nbsp;&nbsp;&nbsp;
+                        {{ corp.request.corporation }}
+                    </td>
+                    <td>
+                        {{ corp.token_count }}/{{ corp.request.corporation.member_count }}
+                    </td>
+                    <td>
+                        {% if corp.request.status == "APPROVED" %}
+                            <span class="label label-success">
+                                {% translate "Approved! Awaiting Alliance update." %}
+                            </span>
+                        {% else %}
+                            {% if corp.token_count >= corp.request.corporation.member_count %}
+                                <button class="btn btn-success"
+                                        hx-put="{% url 'altcorp:manage_requests_write' corp.request.id %}"
+                                        title="{% translate 'Approve this request' %}">
+                                    {% translate "Confirm" %}
+                                </button>
+                            {% else %}
+                                <span>
+                                    {% translate "Missing Tokens!" %}
+                                </span>
+                            {% endif %}
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-danger"
+                                    hx-confirm="{% translate 'Are you sure?' %}"
+                                    hx-delete="{% url 'altcorp:manage_requests_write' corp.request.id %}"
+                                    title="{% translate 'Reject this request' %}">
+                                {% translate "Reject" %}
+                            </button>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% empty %}
+                {% include "altcorp/partials/manage_empty_row.html" %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="table-responsive">
+    <h3> {% translate "Approved Requests" %} </h3>
+    <span> {% translate "These requests have been approved and are just waiting for them to officially be in the alliance." %} </span>
+    <table id="tab_requests" class="table table-condensed table-hover table-striped">
+        <thead>
+            <tr>
+                <th class="col-md-2">{% translate "Date" %}</th>
+                <th class="col-md-2">{% translate "Contact Name" %}</th>
+                <th class="col-md-2">{% translate "Corporation" %}</th>
+                <th class="col-md-1">{% translate "Tokens/Req" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for corp in approved %}
+                <tr hx-target="this" hx-swap="delete">
+                    <td>
+                        {{ corp.request.request_date }}
+                    </td>
+                    <td>
+                        <span>
+                            {{ corp.ceo }}
+                        </span>
+                    </td>
+                    <td>
+                        <img src="{{ corp.request.corporation.corporation_id|corporation_logo_url }}" class="img-circle">
+                        &nbsp;&nbsp;&nbsp;
+                        {{ corp.request.corporation }}
+                    </td>
+                    <td>
+                        {{ corp.token_count }}/{{ corp.request.corporation.member_count }}
+                    </td>
+                </tr>
+            {% empty %}
+                {% include "altcorp/partials/manage_empty_row.html" %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

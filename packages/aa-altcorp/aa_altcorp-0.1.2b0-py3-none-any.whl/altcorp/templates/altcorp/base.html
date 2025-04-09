@@ -1,0 +1,35 @@
+{% extends 'allianceauth/base-bs5.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block page_title %}
+    {% translate "Alt Corps" as page_title %}
+    {{ page_title|title }}
+{% endblock %}
+
+{% block header_nav_brand %}
+    {% translate "Alt Corps" as page_title %}
+    {{ page_title|title }}
+{% endblock %}
+
+{% block header_nav_collapse_left %}
+    {% include "altcorp/partials/navigation/top-navigation.html" %}
+{% endblock %}
+{% block header_nav_collapse_right %}
+
+{% endblock %}
+
+
+{% block content %}
+    <div class="altcorp-plugin">
+        {% block altcorp_body %}{% endblock %}
+    </div>
+{% endblock %}
+
+{% block extra_javascript %}
+    {% include "altcorp/bundles/htmx.html" %}
+{% endblock extra_javascript %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'altcorp/css/global.css' %}" type="text/css" media="screen">
+{% endblock extra_css %}
