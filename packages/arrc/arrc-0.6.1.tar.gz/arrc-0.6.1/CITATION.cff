@@ -1,0 +1,28 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Affective Research on Representations and Classifications
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Timothy
+    family-names: Sweeney-Fanelli
+    email: tim@affects.ai
+    orcid: 'https://orcid.org/0009-0007-8206-1542'
+  - name: 'Affects AI, LLC'
+    city: Concord
+    country: US
+    post-code: '03301'
+    region: New Hampshire
+    website: 'https://affects.ai'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.15148153
+repository-code: 'https://github.com/affectsai/arrc/'
+license: CC-BY-NC-4.0
+commit: 6db8306
+version: v0.5.1
+date-released: '2025-04-04'
