@@ -1,0 +1,19 @@
+[project]
+name = "py-helpers-lib"
+version = "0.1.12"
+description = "Python Helpers Library"
+authors = [
+    {name = "Jose_Henrique_V"}
+]
+
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["joblib", "numpy", "scipy", "pandas"]
+
+[tool.poetry]
+packages = [{include = "py_helpers_lib", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
