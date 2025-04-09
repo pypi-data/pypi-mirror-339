@@ -1,0 +1,14 @@
+mkl_umath/__init__.py,sha256=InocS7OAHSMklHK5RtLh1Jx08uhRPN5zJxZmSyuzKZ4,1831
+mkl_umath/_init_helper.py,sha256=8R2JoWUyA8WXQgsEjwRMP72kE40guc4IkeywJOrts_w,1052
+mkl_umath/_patch.cpython-39-x86_64-linux-gnu.so,sha256=-tuH3obCk6jZ4NoCk-3vEyzn5nBcHB10ECJOo3PIgUk,173944
+mkl_umath/_ufuncs.cpython-39-x86_64-linux-gnu.so,sha256=MrAkIY8sWZagzaX63J5FHtHwBxqmRxovkpscVkny2Sk,165848
+mkl_umath/_version.py,sha256=DQiXHqQ3C29f_--ye7aVMDPnITrl9M0zMU42LYY48zE,22
+mkl_umath/generate_umath.py,sha256=FDLHUIJoRSX-QohcaOjaXetzatjYZBiaZqv56qDJC00,28291
+mkl_umath/libmkl_umath_loops.so,sha256=6MMj5PosmHUDobbkIF4Y0goRdxd64Zxyh-1i4jrJBjE,852824
+mkl_umath/ufunc_docstrings.py,sha256=DyzKAE7mSNOOWYyl6jH7UuluXCRWWs30_mpsjav_6d8,103865
+mkl_umath/tests/test_basic.py,sha256=nZKEo1BXy7pE-TeWO4IUY4aio9DGeq3BCRigpEwGrWQ,3672
+mkl_umath-0.1.5.dist-info/LICENSE.txt,sha256=Yuv_azMyIyinWMVG0HxZ64EZxMDt3vhSoyeCLYoKpPw,1505
+mkl_umath-0.1.5.dist-info/METADATA,sha256=3HjUQZOfIcOFM356oe7HLtS7dAc5CGXxOdASYeLI_6s,3367
+mkl_umath-0.1.5.dist-info/WHEEL,sha256=lAoAUT8xeuX7wp7ueQmCdYhVCkIwOeVGJ8rSplKS5l0,115
+mkl_umath-0.1.5.dist-info/top_level.txt,sha256=oFJ6a7NBbb6o-2d_OmNaQ-4w8BYfqQze7wHkgY7RX4E,10
+mkl_umath-0.1.5.dist-info/RECORD,,
