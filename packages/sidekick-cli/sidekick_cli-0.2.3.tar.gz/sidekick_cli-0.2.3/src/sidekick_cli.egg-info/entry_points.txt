@@ -1,0 +1,2 @@
+[console_scripts]
+sidekick = sidekick.main:app

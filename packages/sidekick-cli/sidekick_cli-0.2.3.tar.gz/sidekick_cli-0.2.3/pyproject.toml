@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sidekick-cli"
+version = "0.2.3"
+description = "Your agentic CLI developer."
+keywords = ["cli", "agent", "development", "automation"]
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+    { name = "Gavin Vickery", email = "gavin@geekforbrains.com" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "prompt_toolkit==3.0.50",
+    "pydantic-ai[logfire]==0.0.49",
+    "pygments==2.19.1",
+    "rich==14.0.0",
+    "typer==0.15.2",
+    "httpx[http2]==0.28.1",
+    "beautifulsoup4==4.13.3",
+    "sentry_sdk==2.25.1",
+]
+
+[project.scripts]
+sidekick = "sidekick.main:app"
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "black",
+    "flake8",
+    "isort",
+    "pytest",
+]
+
+[project.urls]
+Homepage = "https://github.com/geekforbrains/sidekick-cli"
+Repository = "https://github.com/geekforbrains/sidekick-cli"
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+line_length = 100
