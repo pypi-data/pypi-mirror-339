@@ -1,0 +1,9 @@
+rdlab_dataset/__init__.py,sha256=XEqb2aiIn8fzGE68Mph4ck1FtQqsR_am0wRWvrYPffQ,22
+rdlab_dataset/module.py,sha256=FSmmdLCk-3Md0FIyTzwFNHQ2wygs2vtI31_3NSWgeLc,2916
+rdlab_dataset/data/address_kh_data.pkl,sha256=8HxWnBzZEOvntgTdHuH6u-kRFkJSrAYt6tDsWGhD9wM,704006
+rdlab_dataset/data/wild_khmer_data.pkl,sha256=_VZJng7XO1S3mqFzKYrtM_9a-JcYSOoB2CttCiInj50,16942603
+rdlab_dataset/data/wild_khmer_sentences.pkl,sha256=8hWQk3QnJtZocpj36qei9ATcoR8Ja3VX8ZRnurMpY4I,40727125
+rdlab_dataset-0.1.3.dist-info/METADATA,sha256=s-vkWCOYFynNpwM6qf7_iO-SCpfl9ro9vz1zQoRHWtA,3358
+rdlab_dataset-0.1.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+rdlab_dataset-0.1.3.dist-info/top_level.txt,sha256=3nLJSVuUCwWRYVGpQTsOW2-SKZsNOh0E_aIRL-MvO5E,14
+rdlab_dataset-0.1.3.dist-info/RECORD,,
