@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: n0elog
+Version: 1.0.0
+Summary: elog hilft dir besser und Simpler und einfacher alles zu loggen.
+Home-page: https://github.com/n0byte/elog
+Author: n0byte
+Author-email: n0byte@proton.me
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# elog
+
+`elog` ist ein ultraleichtes Python-Logging-Modul, das automatisch alle `print()`-Ausgaben in Logdateien speichert – mit Zeitstempel und eindeutiger ID.
+
+## Verwendung
+
+```python
+import elog
+print("Hallo Welt!")  # Wird in log gespeichert
