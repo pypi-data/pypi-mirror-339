@@ -1,0 +1,2 @@
+[robotframework_library]
+AILibrary = ai_lib.ai_lib:AILibrary
