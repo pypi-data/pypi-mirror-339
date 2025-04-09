@@ -1,0 +1,9 @@
+setup.py
+datalikal/__init__.py
+datalikal/bayesian.py
+datalikal/my_statistics.py
+datalikal/outliers.py
+datalikal.egg-info/PKG-INFO
+datalikal.egg-info/SOURCES.txt
+datalikal.egg-info/dependency_links.txt
+datalikal.egg-info/top_level.txt
