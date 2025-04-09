@@ -1,0 +1,9 @@
+README.md
+setup.py
+sardugame/__init__.py
+sardugame/game.py
+sardugame.egg-info/PKG-INFO
+sardugame.egg-info/SOURCES.txt
+sardugame.egg-info/dependency_links.txt
+sardugame.egg-info/requires.txt
+sardugame.egg-info/top_level.txt
