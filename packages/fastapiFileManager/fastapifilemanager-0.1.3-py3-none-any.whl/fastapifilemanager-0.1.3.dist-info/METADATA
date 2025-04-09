@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: fastapiFileManager
+Version: 0.1.3
+Summary: A simple file manager for FastAPI with optional cloud uploads
+Home-page: https://github.com/emeraldlinks/fastapi_filemanager
+Author: Joseph Christopher
+Author-email: joechristophersc@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: FastAPI
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Provides-Extra: cloudinary
+Requires-Dist: cloudinary; extra == "cloudinary"
+Provides-Extra: aws
+Requires-Dist: boto3; extra == "aws"
+Provides-Extra: firebase
+Requires-Dist: firebase-admin; extra == "firebase"
+Provides-Extra: gcloud
+Requires-Dist: google-cloud-storage; extra == "gcloud"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
