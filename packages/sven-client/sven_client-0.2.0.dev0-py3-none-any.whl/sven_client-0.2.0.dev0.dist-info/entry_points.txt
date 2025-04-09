@@ -1,0 +1,2 @@
+[console_scripts]
+sven = sven.__main__:cli_entry_point
