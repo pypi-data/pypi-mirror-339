@@ -1,0 +1,9 @@
+README.md
+main.py
+pyproject.toml
+mvtcli.egg-info/PKG-INFO
+mvtcli.egg-info/SOURCES.txt
+mvtcli.egg-info/dependency_links.txt
+mvtcli.egg-info/entry_points.txt
+mvtcli.egg-info/requires.txt
+mvtcli.egg-info/top_level.txt
