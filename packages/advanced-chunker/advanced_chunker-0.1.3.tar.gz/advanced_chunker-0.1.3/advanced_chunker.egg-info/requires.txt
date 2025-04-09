@@ -1,0 +1,13 @@
+sentence-transformers>=2.2.2
+scikit-learn
+matplotlib
+networkx
+langchain-core>=0.1.0
+seaborn
+langchain
+
+[dev]
+pytest
+ruff
+build
+twine
