@@ -1,0 +1,22 @@
+apiVersion: v2
+name: llama-distributed
+description: A Helm chart for the llama_distributed cloud-native query processor
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+keywords:
+  - vector
+  - distributed
+  - search
+  - cloud-native
+  - mlx
+  - kubernetes
+maintainers:
+  - name: Llama Distributed Team
+    email: info@llamadistributed.example.com
+    url: https://github.com/example/llama_distributed
+dependencies:
+  - name: keda
+    version: 2.10.1
+    repository: https://kedacore.github.io/charts
+    condition: keda.enabled

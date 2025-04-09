@@ -1,0 +1,47 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: {{ .Release.Name }}-scaler
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ .Release.Name }}
+    {{- include "llama-distributed.labels" . | nindent 4 }}
+spec:
+  scaleTargetRef:
+    name: {{ .Release.Name }}
+    kind: Deployment
+  minReplicaCount: {{ .Values.autoscaling.minReplicas }}
+  maxReplicaCount: {{ .Values.autoscaling.maxReplicas }}
+  pollingInterval: {{ .Values.autoscaling.pollingInterval }}
+  cooldownPeriod: {{ .Values.autoscaling.cooldownPeriod }}
+  triggers:
+    - type: prometheus
+      metadata:
+        serverAddress: {{ .Values.autoscaling.prometheus.serverAddress }}
+        metricName: query_queue_length
+        threshold: "{{ .Values.autoscaling.prometheus.threshold }}"
+        query: sum(llama_distributed_query_queue{deployment="{{ .Release.Name }}"})
+    - type: cpu
+      metadata:
+        type: Utilization
+        value: "{{ .Values.autoscaling.cpu.targetUtilization }}"
+---
+apiVersion: keda.sh/v1alpha1
+kind: TriggerAuthentication
+metadata:
+  name: {{ .Release.Name }}-trigger-auth
+  namespace: {{ .Release.Namespace }}
+spec:
+  secretTargetRef:
+    - parameter: apiKey
+      name: {{ .Release.Name }}-secrets
+      key: api-key
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{ .Release.Name }}-secrets
+  namespace: {{ .Release.Namespace }}
+type: Opaque
+data:
+  api-key: {{ .Values.apiKey | b64enc }}

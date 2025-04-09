@@ -1,0 +1,104 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llama-distributed"
+version = "0.1.0"
+description = "Distributed task execution and coordination for LlamaAI workloads."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}, # Replace
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Distributed Computing",
+]
+dependencies = [
+    # Core framework (Assuming Celery initially, could be Ray, Dask, etc.)
+    "celery[redis]>=5.3.0", # Using redis as the broker/backend
+    # OR Ray
+    # "ray[default]>=2.4.0",
+    # OR Dask
+    # "dask[distributed]>=2023.3.0",
+
+    # Core utilities
+    "pydantic>=1.10.0",
+    "loguru>=0.7.0",
+
+    # Internal Dependencies (Tasks or data it might distribute)
+    # e.g., might need interfaces or models from other Llama packages
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.3.1",
+    "pytest-cov>=4.1.0",
+    "black>=23.3.0",
+    "isort>=5.12.0",
+    "mypy>=1.2.0",
+    "ruff>=0.0.260",
+    "pre-commit>=3.3.1",
+    "pytest-mock>=3.10.0",
+    # Celery testing requires broker running or mocks
+    "pytest-celery>=0.0.0", # Helper potentially
+    "redis", # Often needed directly for test setup/teardown
+]
+docs = [
+    "mkdocs>=1.4.2",
+    "mkdocs-material>=9.1.6",
+    "mkdocstrings[python]>=0.20.0",
+]
+ray = ["ray[default]>=2.4.0"]
+dask = ["dask[distributed]>=2023.3.0"]
+all = [
+    "llama-distributed[dev,docs,ray,dask]"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/llama-distributed"
+"Bug Tracker" = "https://github.com/yourusername/llama-distributed/issues"
+"Documentation" = "https://yourusername.github.io/llama-distributed/"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/llama_distributed"]
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+ignore_missing_imports = true # Celery/Ray/Dask might need specific ignores
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "C", "B"]
+ignore = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+# Add celery config for tests if using pytest-celery
+# celery_broker_url = "redis://localhost:6379/0"
+# celery_result_backend = "redis://localhost:6379/0" 
