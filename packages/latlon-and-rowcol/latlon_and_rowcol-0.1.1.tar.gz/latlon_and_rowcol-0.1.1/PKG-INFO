@@ -1,0 +1,107 @@
+Metadata-Version: 2.2
+Name: latlon_and_rowcol
+Version: 0.1.1
+Summary: 用于风云卫星数据的经纬度和坐标互转
+Author: ld
+Author-email: 1542864710@qq.com
+Keywords: 经纬度,坐标
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: summary
+
+# 经纬度行列号转换说明
+
+- [latlon_and_rowcol](#service-rcTOlatlonEQ)
+  - [说明]
+    - [CONFIG.yml](#configyml)
+    - [main.py](#mainpy)
+    - [check_range.py](#check_rangepy)
+    - [calcu_row_lat.py](#calcu_row_latpy)
+  - [调用方式]
+  
+输入row和col得到经纬度:get_latlon(row,col,res,sat)
+
+反查；输入经纬度得到row和col:get_rowcol(lat,lon,res,sat)
+## 说明
+### CONFIG.yml
+存放的yml是FY4A/FY4B成像仪标称上行列号和经纬度的互相转换公式的参数说明，其中
+·4A支持500m、1000m、2000m、4000m分辨率
+·4B支持250m、500m、1000m、2000m、4000m分辨率
+
+### main.py
+程序入口
+main.py
+
+### check_range.py
+检查行列号的范围
+检查经纬度的范围
+
+### calcu_row_lat.py
+根据输入行列号，计算得到经纬度的公式
+根据输入经纬度，计算得到行列号的公式
+
+## 调用方式
+1.运行python main.py启动服务
+
+2.输入：
+（1）行列号 to 经纬度 get_latlon(row,col,res,sat)\
+"col": 列\
+"row": 行\
+"res": 分辨率\
+"sat": 卫星
+
+（2）经纬度 to 行列号 get_rowcol(lat,lon,res,sat)\
+"lat": 纬度\
+"lon": 经度\
+"res": 分辨率\
+"sat": 卫星
+
+3.输出：
+（1）行列号 to 经纬度\
+"latitude": 纬度\
+"longitude": 经度
+
+（2）经纬度 to 行列号\
+"column": 列 \
+"row": 行
+
+### 示例
+根据输入行列号，计算得到经纬度\
+"row": 621\
+"col": 2764\
+"res": 2000\
+"sat": FY4A
+get_latlon(621, 2764, 2000, 'FY4A')
+
+输出：
+{
+    "latitude": 45.12023588,
+    "longitude": 102.7335505
+}
+
+根据输入经纬度，计算得到行列号
+
+"lat": 30,\
+"lon": 156,\
+"res": 2000,\
+"sat": "B"\
+get_rowcol(30,156,2000,'FY4B')\
+
+输出：
+{
+    "column": 3788,
+    "row": 1223
+}
