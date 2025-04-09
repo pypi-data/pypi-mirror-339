@@ -1,0 +1,11 @@
+nerd_mega_compute/__init__.py,sha256=6SuDdH3LcrbEZJIMdg2ZKmxy43FZflryO_e2ztyGDZY,348
+nerd_mega_compute/cloud.py,sha256=q_lw19eBx_LD-9b4TgeA_cBHfUfT1J_b7cBtwMpzGQY,14573
+nerd_mega_compute/config.py,sha256=aSEj-QdccFaYrAFKDMnwgZw3-gAX5dO0mgtExaaUwxE,542
+nerd_mega_compute/example.py,sha256=5Yfd3WKwo1t5_zA9mPSCy9R70Yb0Tul38GzkKfpWYBU,859
+nerd_mega_compute/spinner.py,sha256=U3uvOJKYse89CYyRv_eBT0reT68x4pJjk0ahqGBLutQ,1194
+nerd_mega_compute/test_api.py,sha256=4fD2UVrZDuoskmPkuxqF95HcjMvMrM2KTz8h12Ko-QY,961
+nerd_mega_compute/utils.py,sha256=TlKQO4Z0eLI73EcRuyryFUGTMUuz5sNmg9hjOKsKEf4,1155
+nerd_mega_compute-0.1.8.dist-info/METADATA,sha256=057GFoj7I7jZdnKScg81NM5X-0CfaXav_OBulDo8tro,4912
+nerd_mega_compute-0.1.8.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+nerd_mega_compute-0.1.8.dist-info/top_level.txt,sha256=ftfEVQTD-ff2whL70UMafnXIvpc1axHkoPPcpRtDv3c,18
+nerd_mega_compute-0.1.8.dist-info/RECORD,,
