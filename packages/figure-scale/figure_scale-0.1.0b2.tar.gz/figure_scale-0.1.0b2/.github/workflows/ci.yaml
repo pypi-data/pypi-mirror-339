@@ -1,0 +1,125 @@
+name: CI
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+    branches:
+      - "main"
+      - "release/**"
+  pull_request:
+    paths:
+      - .github/workflows/ci.yaml
+      - figure_scale/**
+      - pyproject.toml
+      - tests/**
+  schedule:
+    - cron: "0 0 * * 1" # midnight every Monday
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+
+      - name: Install Hatch
+        run: python -m pip install hatch
+
+      - name: Run tests
+        run: |
+          hatch run +py=${{ matrix.python-version }} test:extended --cov-report=xml:coverage.${{ matrix.os }}.${{ matrix.python-version }}.xml
+
+      - name: Upload coverage data
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-${{ matrix.os }}-${{ matrix.python-version }}
+          path: coverage.*.xml
+
+  sonarcloud:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.repository == 'fschuch/figure-scale' # prevent running on forks
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
+
+      - name: Download coverage data
+        uses: actions/download-artifact@v4
+        with:
+          pattern: coverage-*
+          merge-multiple: true
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.organization=fschuch
+            -Dsonar.projectKey=fschuch_figure-scale
+            -Dsonar.python.version=3.8,3.9,3.10,3.11,3.12
+            -Dsonar.sources=figure_scale
+            -Dsonar.tests=tests
+            -Dsonar.python.coverage.reportPaths=coverage.*.xml
+
+  build:
+    needs: sonarcloud
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install Hatch
+        run: python -m pip install hatch
+      - name: Build package
+        run: hatch build
+      - uses: actions/upload-artifact@v4
+        with:
+          path: dist/*.tar.gz
+          name: built-sdist
+      - uses: actions/upload-artifact@v4
+        with:
+          path: dist/*.whl
+          name: built-bdist
+
+  release:
+    needs: build
+    # upload to PyPI on every tag and ensure it does not run on forks
+    if: github.event_name == 'push' && github.ref_type == 'tag'
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/figure_scale
+    permissions:
+      id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: built-sdist
+          path: dist
+      - uses: actions/download-artifact@v4
+        with:
+          name: built-bdist
+          path: dist
+
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
