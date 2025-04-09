@@ -1,0 +1,2 @@
+[console_scripts]
+our-planner = src.main:main
