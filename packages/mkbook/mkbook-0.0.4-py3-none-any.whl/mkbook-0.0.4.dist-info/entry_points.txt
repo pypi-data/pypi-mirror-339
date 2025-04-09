@@ -1,0 +1,2 @@
+[console_scripts]
+mkbook = mkbook.main:main
