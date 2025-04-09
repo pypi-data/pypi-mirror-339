@@ -1,0 +1,7 @@
+setup.py
+autodirwatchdog/__init__.py
+autodirwatchdog/core.py
+autodirwatchdog.egg-info/PKG-INFO
+autodirwatchdog.egg-info/SOURCES.txt
+autodirwatchdog.egg-info/dependency_links.txt
+autodirwatchdog.egg-info/top_level.txt
