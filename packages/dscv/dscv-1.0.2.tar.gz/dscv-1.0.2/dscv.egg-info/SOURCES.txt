@@ -1,0 +1,9 @@
+LICENSE
+README.md
+dcsv.py
+pyproject.toml
+dscv.egg-info/PKG-INFO
+dscv.egg-info/SOURCES.txt
+dscv.egg-info/dependency_links.txt
+dscv.egg-info/requires.txt
+dscv.egg-info/top_level.txt

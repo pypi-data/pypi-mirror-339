@@ -1,0 +1,7 @@
+
+[develop]
+pylint
+black
+
+[test]
+pytest
