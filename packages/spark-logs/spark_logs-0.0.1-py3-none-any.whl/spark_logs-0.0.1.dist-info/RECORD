@@ -1,0 +1,6 @@
+spark_logs/__init__.py,sha256=QrnNsSYYezJJSs0YCOmuHAuD9oJ0gFVJQLautE_lxbc,332
+spark_logs/dataproc.py,sha256=dRjkipWJ4YiMCduTZssWduGR2WvFs9ps-EWIXxA5bv8,6090
+spark_logs-0.0.1.dist-info/METADATA,sha256=6VUdgrZj5TDfbpktBZBmz5C5ErLU4kLZGCcZaALRYcM,2355
+spark_logs-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+spark_logs-0.0.1.dist-info/entry_points.txt,sha256=1j9OhJS9097RXx5NWb0nNiLTFjr7nCqWY53vsup3OnU,49
+spark_logs-0.0.1.dist-info/RECORD,,
