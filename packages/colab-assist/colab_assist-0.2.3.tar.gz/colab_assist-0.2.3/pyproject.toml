@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/.github",
+  "/docs",  # Hatch still includes `docs/README.md` if `project.readme` is set.
+  "/tests",
+  ".gitignore",
+  ".readthedocs.yaml",
+  "CHANGELOG.md",
+  "cliff.toml",
+  "mkdocs.yml",
+]
+
+
+[project]
+name = "colab-assist"
+version = "0.2.3"
+description = "Google Colab workflow utilities"
+authors = [
+    {name = "dd-n-kk", email = "djlstvn.cs03@gmail.com"}
+]
+readme = "docs/README.md"
+keywords = ["Colab", "Google", "GitHub", "uv", "utilities", "workflow", "cloud"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.11"
+dependencies = []
+
+
+[dependency-groups]
+dev = [
+    "ipykernel",
+    "mkdocs-material",
+    "mkdocstrings-python",
+    "pytest",
+    "pytest-cov",
+    "tqdm",
+]
+
+
+[project.urls]
+Homepage = "https://github.com/dd-n-kk/colab-assist"
+Documentation = "https://colab-assist.readthedocs.io"
+Issues = "https://github.com/dd-n-kk/colab-assist/issues"
