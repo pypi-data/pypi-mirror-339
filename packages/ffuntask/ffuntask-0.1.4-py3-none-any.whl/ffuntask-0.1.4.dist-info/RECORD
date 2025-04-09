@@ -1,0 +1,13 @@
+funtask/__init__.py,sha256=1An9ji9Yqij_SZdHEcVm8V_HRgpd_D9QbAro9bGklVw,25
+funtask/__main__.py,sha256=vPcdHTqX2krxMpQfa58Vei7_lzQcGbOZiSxr5Iv7_hY,89
+funtask/models/__init__.py,sha256=WanozeTJqTPVIpaXQzB5lvDI9XJLPoioyEKWB9RYwUQ,23
+funtask/models/base.py,sha256=1mPWWKfwU4upK1xUshwcSCFHecTWpbZ86-FJvOYDzd4,116
+funtask/models/task_model.py,sha256=Q4W30WfQo0eKorR88SFHskwkRgXBiGluqUcGlRXf7r4,911
+funtask/task/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+funtask/task/manager.py,sha256=KzO9vUiPBsMTTzfO_WrdWxU56pC3AffjhDi5t8JomYU,1498
+funtask/task/submit.py,sha256=RqQkjfYlQob9efSFMeB4htVZ9VryvF8-w9BCZx0xVng,2680
+funtask/web/app.py,sha256=onrKVp290rVNqs3_0vjGfb7tfn6NoUSX3IuTYYo7_nk,3323
+ffuntask-0.1.4.dist-info/METADATA,sha256=JMiIOHwmVBruFM7t0JVq6iqbrO_PqeI5s0YEkosOdZg,479
+ffuntask-0.1.4.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+ffuntask-0.1.4.dist-info/top_level.txt,sha256=svcT_-fhz7u77X8wJYILLorz0fp2LjdYljx7QGa6ieg,8
+ffuntask-0.1.4.dist-info/RECORD,,

@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: ffuntask
+Version: 0.1.4
+Summary: funtask
+Author-email: 牛哥 <niuliangtao@qq.com>, farfarfun <farfarfun@qq.com>
+Maintainer-email: 牛哥 <niuliangtao@qq.com>, farfarfun <farfarfun@qq.com>
+Project-URL: Organization, https://github.com/farfarfun
+Project-URL: Repository, https://github.com/farfarfun/funtask
+Project-URL: Releases, https://github.com/farfarfun/funtask/releases
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# notetask
