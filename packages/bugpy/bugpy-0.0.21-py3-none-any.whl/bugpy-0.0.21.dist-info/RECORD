@@ -1,0 +1,15 @@
+bugpy/__init__.py,sha256=L1iY2ySVSUaSmWVH_5bzhTZEGw_5dRia2O6LtFu-GOI,280
+bugpy/db_manager.py,sha256=Wyj-PPPbJkWpNrYlUItUTNvTjX5VtDSJeAQCixj3lyA,9280
+bugpy/data/__init__.py,sha256=MdVhXJMomQmDHU7FK6CpnbsuZm5pfT8OENmGDcH9cE8,389
+bugpy/data/download_blobs.py,sha256=zzKRwachexMX60N_iOxqjRXMZJUshsui2YlK4Yu7sVg,7167
+bugpy/data/move_blobs.py,sha256=oNca6BZKq2JnqKJgKlHbbxafSjXlfIwtxjA0jOxomeU,7343
+bugpy/data/tools.py,sha256=2dgstzVq8doB0bBfVq62t8CBe7mfAHPfPdo3rmjszZI,1503
+bugpy/data/upload_blobs.py,sha256=uXzCLki4O-s_pds2lydEmgmc9y6eTc5EAXq8eoN8XXQ,7647
+bugpy/utils/__init__.py,sha256=UeN3-gfyJYF5RXJepG1a4ReDjTJdNJps_7sNgiM8HKs,144
+bugpy/utils/sqlformatter.py,sha256=Tf-V0T_J0wVkfJ5y4ki2Nh20o-QPIIJDE3qvJ1iGrMQ,2332
+bugpy/utils/tools.py,sha256=5Kj_yDD-0YG21Tm128zIUk1JycVopFK_ibUBiK3PNbw,5371
+bugpy-0.0.21.dist-info/licenses/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+bugpy-0.0.21.dist-info/METADATA,sha256=4wCjJfUV3gcfU59BIQ_oJ4xkqYRm8zDvdViz3IVxITA,2237
+bugpy-0.0.21.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+bugpy-0.0.21.dist-info/top_level.txt,sha256=8kXixZaiApsqETWXeoH9TG7j12tfpSJGO0_y-AECkuo,6
+bugpy-0.0.21.dist-info/RECORD,,
