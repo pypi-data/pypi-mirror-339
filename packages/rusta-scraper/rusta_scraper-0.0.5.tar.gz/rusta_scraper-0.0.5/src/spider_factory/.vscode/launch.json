@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        
+        {
+            "name": "Python Debugger: Current File with Arguments",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "C:\\Users\\DaM2\\development\\spider_factory\\crawler\\src\\spider_factory\\spider_factory.py",
+            "console": "integratedTerminal",
+            "args": "--scrape week ",
+            "justMyCode": false
+
+        },
+            // "args": "--spider new_site --scrape rolling --new-site-ctr SE,FI,NO,DE"}
+            // "args": "--spider active"        }
+    ]
+}
