@@ -1,0 +1,33 @@
+[project]
+name = "notification-mcp"
+version = "0.1.2"
+description = "一个基于 FastMCP 的消息推送工具，支持 PushDeer、Bark 等多种推送渠道"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "fastmcp>=0.4.1",
+    "httpx>=0.28.1",
+    "pillow>=11.1.0",
+    "pyautogui>=0.9.54",
+    "pyscreeze>=1.0.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/ch1y1z1/notification-mcp"
+Issues = "https://github.com/ch1y1z1/notification-mcp/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+mcp-bark = "notification_mcp.bark:main"
+mcp-pushdeer = "notification_mcp.pushdeer:main"

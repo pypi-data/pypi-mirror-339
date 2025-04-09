@@ -1,0 +1,3 @@
+[console_scripts]
+mcp-bark = notification_mcp.bark:main
+mcp-pushdeer = notification_mcp.pushdeer:main
