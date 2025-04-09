@@ -1,0 +1,5 @@
+cvxpy<2,>=1.6
+pydantic<3,>=2.10
+scipy<1.16,>=1.15
+watchdog<7,>=6.0
+web3<8,>=7.9
