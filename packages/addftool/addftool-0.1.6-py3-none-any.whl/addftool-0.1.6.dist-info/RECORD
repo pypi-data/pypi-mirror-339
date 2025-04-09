@@ -1,0 +1,17 @@
+addftool/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+addftool/addf_portal.py,sha256=w2LgsoutfnrKhtrQAXouUMwLqnsp5ALlsBYUWg8n9NM,781
+addftool/blob.py,sha256=NZOItDyFUIdV1tfhJZJJBEzGy296CE5NCictTzP4OPc,8282
+addftool/tool.py,sha256=EuKQ2t2InN7yB-_oYLcdsA7vRqzRGTunwIxplUSqEG0,2054
+addftool/util.py,sha256=zlNLu8Be8cGIpNRqBw8_0q7nFxWlsJ9cToN62ohjdXE,2335
+addftool/deploy/__init__.py,sha256=tpyoTh3SqAQojPizsJDvQohu1Pcb3-w-DP5sO4-5lBM,1220
+addftool/deploy/azure.py,sha256=UQR1hOEYUtsm2fbWBczsnEB_mh7yUuN2NDv3sgMMsac,1246
+addftool/deploy/ssh_server.py,sha256=f2T8fgwACVljPfdcimMywUjsFnLCWRde7iWPAILpRz8,5463
+addftool/process/__init__.py,sha256=gPdGsjMEET6crzOz4Iw5cmf6RR1toXGovydRXv8Uagk,3543
+addftool/process/utils.py,sha256=me4HqMz5OgRcQMUJmVhKdTJh4SW5BB-pd_lq7g8-UwE,2252
+addftool/ssh/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+addftool/sync/__init__.py,sha256=wOqFCOA51rFUttBjOO44W3Fc66mhX5ir2R89lsO6gR0,1702
+addftool-0.1.6.dist-info/METADATA,sha256=SQSnBFDxmD836XQAgZDtqvpzT_Z1LewNKTRCfdMC5ag,148
+addftool-0.1.6.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+addftool-0.1.6.dist-info/entry_points.txt,sha256=9lkmuWMInwUAtev8w8poNkNd7iML9Bjd5CBCFVxg2b8,111
+addftool-0.1.6.dist-info/top_level.txt,sha256=jqj56-plrBbyzY0tIxB6wPzjAA8kte4hUlajyyQygN4,9
+addftool-0.1.6.dist-info/RECORD,,
