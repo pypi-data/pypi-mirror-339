@@ -1,0 +1,16 @@
+huqt_oracle_client/__init__.py,sha256=wHkL8KurnkB-vB-RUnwgYEpMzSwsPYrNYMF3gdIjvgY,349
+huqt_oracle_client/client.py,sha256=IFBmXnRkgLmWZqPjt9XQ9iYB1L1vrKi8Uu-B_jbb21E,26991
+huqt_oracle_client/constants.py,sha256=F-bVMvI3cP-qp3xagm7nKQ-9V5T7oy8zOe5ONrXDc3I,16
+huqt_oracle_client/game.py,sha256=BujO7dva88hY1EXxoDEvijFBYE4RQ6KGW1YqA301EFI,6071
+huqt_oracle_client/protos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+huqt_oracle_client/protos/admin_pb2.py,sha256=a3i-hJ_u1WJARYejjfTjIL-6M4PQkclpeZ7kI01yEGw,10503
+huqt_oracle_client/protos/admin_pb2_grpc.py,sha256=q_rbk_uMGdSvjA5E5S8fvP246UoXxvBGkhlW3ZtAH4c,41401
+huqt_oracle_client/protos/exchange_pb2.py,sha256=6FxQ75W6me5GVXeRfbO_vdZ6_ysdHMF0yJMM0Uvytxw,4335
+huqt_oracle_client/protos/exchange_pb2_grpc.py,sha256=bfzdAtpSkLQ4asXbYn7bPmYEAZsfPyly2eo6dHAzQpg,10259
+huqt_oracle_client/protos/marketdata_pb2.py,sha256=rVYQqrDnsvPxP586eCkzfJ_gt1dnKWpOmovfkm78Jao,5332
+huqt_oracle_client/protos/marketdata_pb2_grpc.py,sha256=98e701E2EWvkhk_H_YB0bSrvaubFRDAkSwRZf6Cht4I,3523
+huqtoracleclient-0.4.0.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+huqtoracleclient-0.4.0.dist-info/METADATA,sha256=I4G_BjebxCKXtr6AlHO5VRCm4bTVT23mCnm1SREk-H0,774
+huqtoracleclient-0.4.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+huqtoracleclient-0.4.0.dist-info/top_level.txt,sha256=OOqsq_zhs2HQOi5i2ikKt9sPfYQO3T-rVDEtmGpouCU,19
+huqtoracleclient-0.4.0.dist-info/RECORD,,
