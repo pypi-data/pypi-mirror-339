@@ -1,0 +1,4 @@
+numpy
+
+[plot]
+scipy>=1.10
