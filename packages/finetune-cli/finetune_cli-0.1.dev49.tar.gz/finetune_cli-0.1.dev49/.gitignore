@@ -1,0 +1,10 @@
+venv/
+.idea/
+*.pyc
+__pycache__/
+*.json.tmp
+*.pkl
+*.log
+build/
+*.egg-info/
+finetune/statics
