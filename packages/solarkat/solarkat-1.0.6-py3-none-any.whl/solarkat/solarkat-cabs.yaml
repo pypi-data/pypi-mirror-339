@@ -1,0 +1,116 @@
+
+_include:
+  (cultcargo):
+    - casa/flag.yml
+    - breizorro.yml
+    - crystalball.yml
+    - msutils.yml
+    - bdsf.yml
+    - wsclean.yml
+    - quartical.yml
+    - msutils.yml
+
+
+cabs:
+
+  extract_and_save_scan_numbers:
+    info: 'Extract a list of unique scan numbers from a MS file. The scans output parameter is a>'
+    command: solarkat.extract_and_save_scan_numbers
+    flavour: python
+    inputs:
+      ms:
+        dtype: MS
+    outputs:
+      output_file:
+        dtype: File
+
+
+  load_scan_numbers:
+    command: |
+      print(f"Loading scan numbers................")
+      with open(scans_file, 'r') as f:
+        scan_numbers = [line.strip() for line in f]
+      print('Loaded scan numbers:', scan_numbers)
+    flavour: python-code
+    inputs:
+      scans_file:
+        dtype: File
+    outputs:
+      scan_numbers:
+        dtype: List[str]
+
+
+
+  splitms_scan:
+    command: split
+    flavour: casa-task
+    inputs:
+      vis:
+        dtype: MS
+        required: true
+        default: '{recipe.ms}'
+      scan:
+        dtype: str
+        info: "scan number range"
+        default: 'all'
+      datacolumn:
+        dtype: str
+        default: 'all'
+      outputvis:
+        dtype: str
+        default: '{recipe.ms}-output'
+        required: true
+
+
+  get_old_coords:
+    command: solarkat.get_old_coords
+    flavour: python
+    inputs:
+      ms_list:
+        dtype: List[MS]
+        required: true
+    outputs:
+      output_file:
+        dtype: File
+
+
+  sun_coordinates:
+    command: solarkat.get_sun_coordinates
+    flavour: python
+    inputs:
+      ms:
+        dtype: MS
+        required: true
+    outputs:
+      output_file:
+        dtype: File
+
+
+  shift_coords:
+    command: solarkat.shift_coordinates
+    flavour: python
+    inputs:
+      ms_list:
+        dtype: List[MS]
+      coords:
+        dtype: File
+        required: true
+      splitted_ms_dir:
+        dtype: Directory
+      datacolumn:
+        dtype: str
+
+
+  create_ds9_regions:
+    command: solarkat.create_ds9_region_from_file
+    flavour: python
+    info: 'A cab to create a region file of the position of the Sun from the sun_coordinates file'
+    inputs:
+      input_file:
+        dtype: File
+        required: true
+      output_dir:
+        dtype: Directory
+      ms:
+        dtype: MS
+        required: true
