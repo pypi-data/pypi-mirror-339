@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/CoolFoPProjectDoesntWork.egg-info/PKG-INFO
+src/CoolFoPProjectDoesntWork.egg-info/SOURCES.txt
+src/CoolFoPProjectDoesntWork.egg-info/dependency_links.txt
+src/CoolFoPProjectDoesntWork.egg-info/entry_points.txt
+src/CoolFoPProjectDoesntWork.egg-info/requires.txt
+src/CoolFoPProjectDoesntWork.egg-info/top_level.txt
+src/reader/__init__.py
+src/reader/__main__.py
+src/reader/config.toml
+src/reader/feed.py
+src/reader/viewer.py
+tests/test_feed.py
+tests/test_viewer.py
