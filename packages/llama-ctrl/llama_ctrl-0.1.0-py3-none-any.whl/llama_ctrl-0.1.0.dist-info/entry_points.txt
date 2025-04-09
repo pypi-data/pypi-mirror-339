@@ -1,0 +1,2 @@
+[console_scripts]
+llama-ctrl = llama_ctrl.cli:app
