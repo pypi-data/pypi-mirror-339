@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: cli_ih
+Version: 0.5.1.2
+Summary: A background command handler for python's command line interface.
+Author-email: Hotment <michatchuplay@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: logging==0.4.9.6
