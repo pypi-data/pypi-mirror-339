@@ -1,0 +1,2 @@
+[console_scripts]
+c = command_line_assistant.__main__:main
