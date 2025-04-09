@@ -1,0 +1,187 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "xarray-regrid"
+dynamic = ["version"]
+description = 'Regridding tools using xarray and flox.'
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+keywords = []
+authors = [
+  { name = "Bart Schilperoort, Yang Liu", email = "b.schilperoort@esciencecenter.nl" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "numpy",
+  "xarray",
+  "flox",
+  "scipy",
+]
+
+[tool.hatch.build]
+exclude = [
+  "benchmarks/data"
+]
+
+[project.urls]
+Documentation = "https://github.com/EXCITED-CO2/xarray-regrid#readme"
+Issues = "https://github.com/EXCITED-CO2/xarray-regrid/issues"
+Source = "https://github.com/EXCITED-CO2/xarray-regrid"
+
+[project.optional-dependencies]
+accel = [
+  "sparse",
+  "opt-einsum",
+  "dask[distributed]",
+]
+benchmarking = [
+  "matplotlib",
+  "zarr",
+  "h5netcdf",
+  "requests",
+  "aiohttp",
+  "pooch",
+  "cftime",  # required for decode time of test netCDF files
+]
+dev = [
+  "hatch",
+  "ruff",
+  "mypy",
+  "pytest",
+  "pytest-cov",
+  "pandas-stubs", # Adds typing for pandas.
+]
+docs = [  # Required for ReadTheDocs
+  "myst_parser",
+  "sphinx",
+  "myst-nb",
+  "sphinx_rtd_theme",
+  "sphinx-autoapi",
+  "coverage[toml]",
+]
+
+[tool.hatch.version]
+path = "src/xarray_regrid/__init__.py"
+
+[tool.hatch.envs.default]
+features = ["accel", "dev", "benchmarking"]
+
+[tool.hatch.envs.default.scripts]
+lint = [
+  "ruff check .",
+  "mypy src",
+  "ruff format . --check",
+]
+format = ["ruff format .", "lint",]
+test = ["pytest ./src/ ./tests/ --doctest-modules",]
+coverage = [
+  "pytest --cov --cov-report term --cov-report xml --junitxml=xunit-result.xml tests/",
+]
+
+[tool.hatch.envs.docs]
+features = ["docs"]
+
+[tool.hatch.envs.docs.scripts]
+build = ["(cd docs && make html)"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+exclude = [
+  "docs",
+]
+
+[tool.ruff.lint]
+select = [
+  "A",
+  "ARG",
+  "B",
+  "C",
+  "DTZ",
+  "E",
+  "EM",
+  "F",
+  "I",
+  "ICN",
+  "ISC",
+  "N",
+  "PLC",
+  "PLE",
+  "PLR",
+  "PLW",
+  "Q",
+  "RUF",
+  "S",
+  "T",
+  "TID",
+  "UP",
+  "W",
+  "YTT",
+]
+ignore = [
+  # Allow non-abstract empty methods in abstract base classes
+  "B027",
+  # Ignore checks for possible passwords
+  "S105", "S106", "S107",
+  # Ignore complexity
+  "C901", "PLR0911", "PLR0912", "PLR0913", "PLR0915",
+  # Ignore magic values (false positives)
+  "PLR2004",
+  # Causes conflicts with formatter
+  "ISC001",
+]
+unfixable = [
+  # Don't touch unused imports
+  "F401",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["xarray_regrid"]
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.lint.per-file-ignores]
+# Tests can use magic values, assertions, and relative imports
+"tests/**/*" = ["PLR2004", "S101", "TID252"]
+
+[tool.coverage.run]
+source_pkgs = ["xarray_regrid", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/xarray_regrid/__about__.py",
+]
+
+[tool.coverage.paths]
+xarray_regrid = ["xarray_regrid", "*/xarray_regrid/xarray_regrid"]
+tests = ["tests", "*/xarray_regrid/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+[tool.mypy]
+python_version = "3.10"
+plugins = "numpy.typing.mypy_plugin"
+disallow_untyped_defs = true
+disallow_any_unimported = true
+no_implicit_optional = true
+check_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+show_error_codes = true
+exclude = ["tests/*", "docs"]
