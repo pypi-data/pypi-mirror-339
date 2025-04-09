@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: serial_comms_tools
+Version: 0.0.0
+Author-email: Fisher & Paykel Technologies <fpt.digitalnz@fisherpaykel.com>
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
