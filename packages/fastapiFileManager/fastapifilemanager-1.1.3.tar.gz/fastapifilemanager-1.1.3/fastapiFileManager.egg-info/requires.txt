@@ -1,0 +1,13 @@
+fastapi
+
+[aws]
+boto3
+
+[cloudinary]
+cloudinary
+
+[firebase]
+firebase-admin
+
+[gcloud]
+google-cloud-storage
