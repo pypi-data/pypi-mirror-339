@@ -1,0 +1,11 @@
+rnbrw/__init__.py,sha256=7ju9HRPOjESMJjl8-h2UpepMB0Be_sQZ7Mvqg-tSX8g,146
+rnbrw/utils.py,sha256=Y_nmAwNTSqEakRhK4ykEzJ1wUDS_mdUiqNWB7X6Lt28,841
+rnbrw/community/__init__.py,sha256=mV5aW8_rBUuTit_nlo3ii-V47bi8mAUOosUoO_e7Tkk,48
+rnbrw/community/louvain.py,sha256=q0Pb-5GdLZFkTvxXrxfLkWaBdZYncZNW0U3l4sKz_lk,1296
+rnbrw/weights/__init__.py,sha256=PprJqKv0G_v7xMv7eAA2FNHQ2-jr7MMIKFN56ULTggo,35
+rnbrw/weights/rnbrw.py,sha256=lsMlq21kSjK6eDOGleSa3I6RBKMB6o6D_K_eBO0ldnE,3638
+rnbrw-0.1.2.dist-info/LICENSE,sha256=ZrLXccFrbCwTL36vNgOmeDQiYV1XnATSCP5KGL1zXCw,194
+rnbrw-0.1.2.dist-info/METADATA,sha256=-qd0AODWkavSfsM2eateW8gF_aQOJOa3FRCMt1aFHLU,4085
+rnbrw-0.1.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+rnbrw-0.1.2.dist-info/top_level.txt,sha256=rTbzjvxvsCoKJ4uO1OFX6T7Yn3IwegWYPc4h0fpsKyw,6
+rnbrw-0.1.2.dist-info/RECORD,,
