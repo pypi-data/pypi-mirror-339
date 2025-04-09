@@ -1,0 +1,12 @@
+binarycookies/__init__.py,sha256=euqw0wu8o20w8mlJqxLgUMBCc3Td0zlh-5IQzTADSYo,146
+binarycookies/__main__.py,sha256=utLmZSMkCv4S1-zYDFY3MWJlxFcJQOnqfQpd9RXuwpg,1318
+binarycookies/_deserialize.py,sha256=ko_FXYfENqDjnBavUfwa_Myp4kFkhT8CVlCT96FHZh0,5310
+binarycookies/_serialize.py,sha256=pFy5IT0a6FlOMzsV6W8VhSJb3TqEofJPYEr7bZZcq34,4844
+binarycookies/models.py,sha256=N50SoaI4o5trFbkRfqpKirFv8IpDwiPZvJ02lEcfCEU,1660
+binarycookies/parser.py,sha256=DE09BnX4-_C_tftCEJj5CBNAGuH2n48kO6mgaUbXiGA,370
+binarycookies/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+binarycookies-2.1.5.dist-info/entry_points.txt,sha256=foNBvYr2jm6tab5LwTmJEoQVV5JtF4CeL6Uz91x359U,56
+binarycookies-2.1.5.dist-info/LICENSE,sha256=yApG9fzEEQRWgWkC7tk95ENeopAJHnfXF6Lug2SVvl4,870
+binarycookies-2.1.5.dist-info/WHEEL,sha256=vxFmldFsRN_Hx10GDvsdv1wroKq8r5Lzvjp6GZ4OO8c,88
+binarycookies-2.1.5.dist-info/METADATA,sha256=Zb1jk5e7n5FtLEyLn0yepRpYoyx5UcVrVIJWk77uS9s,3648
+binarycookies-2.1.5.dist-info/RECORD,,
