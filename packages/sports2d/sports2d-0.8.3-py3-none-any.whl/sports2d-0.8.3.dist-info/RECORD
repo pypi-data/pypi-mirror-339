@@ -1,0 +1,15 @@
+Sports2D/Sports2D.py,sha256=KWrvWGq49UXta9VJisflyQA-4n7mdu-Uq4GsmDPkaRc,30470
+Sports2D/__init__.py,sha256=BuUkPEdItxlkeqz4dmoiPwZLkgAfABJK3KWQ1ujTGwE,153
+Sports2D/process.py,sha256=5j36J-G5f9cvoG_1eAPfRoFnPRS8Ipx2YidmY6NR0vQ,107417
+Sports2D/Demo/Config_demo.toml,sha256=GhV-VotYlpYMCu7rHY-AKdWVAT4f61z0oL9-MUBRsOc,13828
+Sports2D/Demo/demo.mp4,sha256=2aZkFxhWR7ESMEtXCT8MGA83p2jmoU2sp1ylQfO3gDk,3968304
+Sports2D/Utilities/__init__.py,sha256=BuUkPEdItxlkeqz4dmoiPwZLkgAfABJK3KWQ1ujTGwE,153
+Sports2D/Utilities/common.py,sha256=idMRmesFv5BPX-5g3z5dOVa7SpS_8tNgijvGrOZlR-k,11185
+Sports2D/Utilities/filter.py,sha256=rfZcqofjllKI_5ovZTKEAmyjOZpB_PzbAJ0P874T8Ak,4973
+Sports2D/Utilities/tests.py,sha256=XnPNK63AZ_xlJBmFmPJtOMrzssBXIPXFzYd73CPzchI,4740
+sports2d-0.8.3.dist-info/licenses/LICENSE,sha256=f4qe3nE0Y7ltJho5w-xAR0jI5PUox5Xl-MsYiY7ZRM8,1521
+sports2d-0.8.3.dist-info/METADATA,sha256=1e4xNUTcZr4_kDn8Ud8Rj83zQ5nIducWD9vXnW6wYGU,39516
+sports2d-0.8.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+sports2d-0.8.3.dist-info/entry_points.txt,sha256=V8dFDIXatz9VvoGgoHzb2wE71C9-f85K6_OjnEQlxww,108
+sports2d-0.8.3.dist-info/top_level.txt,sha256=DoURf9UDB8lQ_9lMUPQMQqhXCvWPFFjJco9NzPlHJ6I,9
+sports2d-0.8.3.dist-info/RECORD,,
