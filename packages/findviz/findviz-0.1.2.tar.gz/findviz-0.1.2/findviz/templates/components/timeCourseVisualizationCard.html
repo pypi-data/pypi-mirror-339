@@ -1,0 +1,202 @@
+<!-- Time Course Visualization Card -->
+<div class='card h-100'>
+  <div class='card-header pt-1 pb-1 pr-1'>
+    <div class='row'>
+      <div class='col-1 pl-1 pr-1 pb-1 pt-0'>
+        <div class="alert alert-info small p-2 m-0 text-center toggle-immediate" role="alert" id='ts-preprocess-alert' data-toggle="tooltip" data-placement="top" title="Viewing preprocessed data" style="display: none;">
+          <i class="fa-solid fa-p"></i>
+        </div>
+      </div>
+      <div class='col-2 pr-1 pl-1'>
+        <!-- Toggle time point line -->
+        <button class="btn btn-outline-secondary btn-sm toggle-wait" id='toggle-time-marker' data-toggle="tooltip" data-placement="top" title="Toggle time point marker">
+          <i class="fa-solid fa-location-pin"></i>
+        </button>
+        <!-- Toggle plot grid lines -->
+        <button class="btn btn-outline-secondary btn-sm toggle-wait" id='toggle-grid' data-toggle="tooltip" data-placement="top" title="Toggle plot grid lines">
+          <i class="fa-solid fa-border-all"></i>
+        </button>
+        <!-- Toggle time course hover -->
+        <button class="btn btn-outline-secondary btn-sm toggle-wait" id='toggle-ts-hover' data-toggle="tooltip" data-placement="top" title="Toggle hover labels">
+          <i class="fa-solid fa-message"></i>
+        </button>
+        <!-- Toggle task design convolution -->
+        <button class="btn btn-outline-secondary btn-sm toggle-wait" id='toggle-convolution' data-toggle="tooltip" data-placement="top" title="Toggle hrf convolution for all task design regressors">
+          <i class="fa-solid fa-wave-square"></i>
+        </button>
+      </div>
+      <div class='col-4 pr-1 pl-1'>
+        <div class='row align-items-center'>
+          <div class="custom-control custom-switch mr-2">
+            <input type="checkbox" class="custom-control-input" id="enable-annotate">
+            <label class="custom-control-label" for="enable-annotate">Annotate</label>
+          </div>
+          <!-- Move fmri left -->
+          <button class="btn btn-outline-secondary btn-sm toggle-wait" id='left-move-annotate' data-toggle="tooltip" data-placement="top" title="move selected annotation to left" disabled>
+            <i class="fa-solid fa-left-long"></i>
+          </button>
+          <!-- Move fmri right -->
+          <button class="btn btn-outline-secondary btn-sm toggle-wait mr-2" id='right-move-annotate' data-toggle="tooltip" data-placement="top" title="move selected annotation to right" disabled>
+            <i class="fa-solid fa-right-long"></i>
+          </button>
+          <!-- Undo annotate -->
+          <button class="btn btn-outline-secondary btn-sm toggle-wait" id='undo-annotate' data-toggle="tooltip" data-placement="top" title="Undo annotation" disabled>
+            <i class="fa-solid fa-rotate-left"></i>
+          </button>
+          <!-- Remove all annotations -->
+          <button class="btn btn-outline-secondary btn-sm toggle-wait mr-2" id='remove-annotate' data-toggle="tooltip" data-placement="top" title="Remove all annotations" disabled>
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <!-- Marker Plot Options -->
+          <button id="annotate-plot-popover" title="Annotation Marker Plot Options" type="button" class="btn btn-outline-secondary btn-sm" data-container="body" data-toggle="popover" data-placement="top"
+          data-content= "
+          <div class='row'>
+            <div class='col mr-5 ml-5'>
+              <div class='row'>
+                <label for='annotate-color-select'>Choose Color:</label>
+                <select class='custom-select w-100' id='annotate-color-select'>
+                  <!-- Options will be dynamically added here -->
+                  <option value='red'>Red</option>
+                  <option value='blue'>Blue</option>
+                  <option value='green'>Green</option>
+                  <option value='orange'>Orange</option>
+                  <option value='purple'>Purple</option>
+                  <option value='black'>Black</option>
+                  <option value='grey'>Grey</option>
+                  <option value='yellow'>Yellow</option>
+                  <option value='brown'>Brown</option>
+                  <option value='darkred'>Dark Red</option>
+                  <option value='tomato'>Tomato</option>
+                  <option value='magenta'>Magenta</option>
+                  <option value='crimson'>Crimson</option>
+                  <option value='salmon'>Salmon</option>
+                  <option value='firebrick'>Fire Brick</option>
+                  <option value='navy'>Navy</option>
+                  <option value='royalblue'>Royal Blue</option>
+                  <option value='turquoise'>Turquoise</option>
+                  <option value='coral'>Coral</option>
+                  <option value='seagreen'>Sea Green</option>
+                  <option value='forestgreen'>Forest Green</option>
+                  <option value='olive'>Olive</option>
+                  <option value='darkgreen'>Dark Green</option>
+                  <option value='darkorange'>Dark Orange</option>
+                  <option value='violet'>Violet</option>
+                  <option value='slategrey'>Slate Grey</option>
+                  <option value='slateblue'>Slate Blue</option>
+                  <option value='darkgrey'>Dark Grey</option>
+                  <option value='khaki'>Khaki</option>
+                  <option value='tan'>Tan</option>
+                </select>
+              </div>
+              <div class='row mt-2'>
+                <label for='annotate-marker-width' class='mb-1'>Annotate Marker Width:</label>
+                <input id='annotate-marker-width' type='text' class='slider' data-slider-responsive='true' />
+              </div>
+              <div class='row mb-2'>
+                <label for='annotate-marker-opacity' class='mb-1'>Annotate Marker Opacity</label>
+                <input id='annotate-marker-opacity' type='text' class='slider' data-slider-responsive='true' />
+              </div>
+              <div class='row mt-2'>
+                <div class='col-8'>
+                  <span>Annotate Marker Shape</span>
+                  <select class='custom-select' id='annotate-marker-select'>
+                    <option value='solid'>Solid</option>
+                    <option value='dash'>Dash</option>
+                    <option value='dot'>Dot</option>
+                    <option value='longdash'>Long Dash</option>
+                    <option value='dashdot'>Dash+Dot</option>
+                  </select>
+                </div>
+                <div class='col-4'>
+                  <label for='highlight-annotate'>Highlight Selected</label>
+                  <input type='checkbox' class='form-control w-75 h-25' id='highlight-annotate'>
+                </div>
+              </div>
+            </div>
+          </div>
+          ">
+            Markers
+          </button>
+        </div>
+      </div>
+      <div class='col-2'>
+        <button id="peak-finder-popover" title="Peak Finder" type="button" class="btn btn-outline-primary btn-sm" data-container="body" data-toggle="popover" data-placement="top"
+        data-content= "
+          <form id='peak-finder-form'>
+            <div class='row mb-2'>
+              <div class='col'>
+                <div class='row'>
+                  <div class='col'>
+                    <h5>Select Time Course</h5>
+                    <select class='custom-select' id='ts-select-peak-finder'>
+                    </select>
+                  </div>
+                </div>
+                <div class='row'>
+                  <div class='alert alert-secondary mt-3 ml-3' id='peak-finder-prep-alert' role='alert' style=' display: none;'>
+                    <i class='fa-solid fa-triangle-exclamation'></i>
+                    <span class='mr-2'>Using Preprocessed Time Course</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='form-row mt-2'>
+              <div class='form-group col-sm-4'>
+                <label for='peak-height'>Height</label>
+                <span class='fa-solid fa-circle-info ml-1 toggle-immediate' data-toggle='tooltip' data-placement='top' title='Required height of peaks (specified in the units of the timecourse).' aria-hidden='true'></span>
+                <input type='number' class='form-control' id='peak-height' step='0.01'>
+              </div>
+              <div class='form-group col-sm-4'>
+                <label for='peak-threshold'>Threshold</label>
+                <span class='fa-solid fa-circle-info ml-1 toggle-immediate' data-toggle='tooltip' data-placement='top' title='Required threshold of peaks, the vertical distance to its neighboring samples.' aria-hidden='true'></span>
+                <input type='number' class='form-control' id='peak-threshold' step='0.01'>
+              </div>
+              <div class='form-group col-sm-4'>
+                <label for='peak-distance'>Distance</label>
+                <span class='fa-solid fa-circle-info ml-1 toggle-immediate' data-toggle='tooltip' data-placement='top' title=' Required minimal horizontal distance (>= 1) in samples between neighbouring peaks. Smaller peaks are removed first until the condition is fulfilled for all remaining peaks.' aria-hidden='true'></span>
+                <input type='number' class='form-control' id='peak-distance' step='0.01' min='1.0' value='1.0'>
+              </div>
+            </div>
+            <div class='form-row'>
+              <div class='form-group col-sm-4'>
+                <label for='peak-prominence'>Prominence</label>
+                <span class='fa-solid fa-circle-info ml-1 toggle-immediate' data-toggle='tooltip' data-placement='top' title='Required prominence of peaks. The prominence of a peak measures how much a peak stands out from the surrounding baseline of the signal and is defined as the vertical distance between the peak and its lowest contour line. In simpler terms, the prominence of a peak is the least drop in height necessary in order to get from that peak to any higher peak.' aria-hidden='true'></span>
+                <input type='number' class='form-control' id='peak-prominence' step='0.01'>
+              </div>
+              <div class='form-group col-sm-4'>
+                <label for='peak-width'>Width</label>
+                <span class='fa-solid fa-circle-info ml-1 toggle-immediate' data-toggle='tooltip' data-placement='top' title='Required width of peaks in number of time points.' aria-hidden='true'></span>
+                <input type='number' class='form-control' id='peak-width' step='0.01'>
+              </div>
+              <div class='form-group col-sm-4'>
+                <label for='peak-z-score'>Z-Score</label>
+                <span class='fa-solid fa-circle-info ml-1 toggle-immediate' data-toggle='tooltip' data-placement='top' title='Whether to apply z-score normalization to time-course before peak detection (note: parameters should be specified in z-score units).' aria-hidden='true'></span>
+                <input type='checkbox' class='form-control w-75 h-25' id='peak-z-score'>
+              </div>
+            </div>
+            <button type='button' id='submit-peak-finder' class='btn btn-primary'>Compute</button>
+          </form>
+        ">
+          Find Peaks
+        </button>
+      </div>
+      <div class='col-3 pr-1 pl-1'>
+        <!-- Average Modal Button -->
+        <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" id='run-average-button' data-target="#average-modal" disabled>
+          Average
+        </button>
+        <!-- Correlation Modal Button -->
+        <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" id='run-correlation-button' data-target="#correlation-modal" disabled>
+          Correlate
+      </button>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class='row'>
+      <div id="time-course-plot"></div>
+    </div>
+  </div>
+</div>
+{% include 'components/modals/averageModal.html' %}
+{% include 'components/modals/correlationModal.html' %}
