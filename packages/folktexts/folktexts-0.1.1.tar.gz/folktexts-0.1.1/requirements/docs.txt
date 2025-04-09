@@ -1,0 +1,13 @@
+sphinx<8,>=6
+sphinx_rtd_theme>=2.0
+sphinx-autopackagesummary
+myst-parser
+sphinx-copybutton
+sphinxcontrib-bibtex
+sphinxemoji
+sphinx-autodoc-typehints
+numpydoc
+nbsphinx
+sphinx_gallery
+IPython
+ipykernel
