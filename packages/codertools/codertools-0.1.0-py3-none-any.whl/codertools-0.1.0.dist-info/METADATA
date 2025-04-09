@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: codertools
+Version: 0.1.0
+Summary: Add your description here
+Home-page: 
+Author: zhaoxuefeng
+Author-email: 82304233@qq.com
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: llama-index>=0.12.28
+Requires-Dist: llama-index-readers-github>=0.6.0
+Requires-Dist: pinecone>=6.0.2
+Requires-Dist: pytest>=8.3.5
+Requires-Dist: pytest-html>=4.1.1
+Requires-Dist: setuptools>=78.1.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+
+# coderTools
+code 工具
+
+
+## 常规操作
+
+### 导出环境
+```
+uv export --format requirements-txt > requirements.txt
+```
+
+### 更新文档
+```
+mkdocs serve # 预览
+mkdocs gh-deploy # 同步到github网站
+```
+
+### 运行测试并同步到测试服务
+pip install pytest-html
+```
+uv run pytest --html=/Users/zhaoxuefeng/GitHub/aiworker/html/codetools.html
+```
+
+pip install twine
+pip install setuptools wheel
+
+python setup.py sdist bdist_wheel
+twine upload dist/*
+
