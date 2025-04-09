@@ -1,0 +1,10 @@
+quine-0.0.0.dist-info/licenses/COPYING.md,sha256=XOD9rCyq_ME06NsyUStBHOYGQHft8QGb_5u_B6Qr0r0,34212
+src/python/quine/__init__.py,sha256=q5zRln5BRrATJiyYs2bC71j5EwvQdxsqb5aMFeYfXwA,324
+src/python/quine/cli.py,sha256=623mxNcprmpkFyv4bMoyUX3CEZElsv4DvHen6cl3VCA,162
+src/python/tests/__init__.py,sha256=_e4EWY0Np9JeA2f8SrG8k-_Ai633SCy86j5aI6A5lkg,24
+src/python/tests/test_cli.py,sha256=t1sxaOo8fz4qmctc7wivAvc7RP7DCdplgZ2AAG_B8vY,374
+quine-0.0.0.dist-info/METADATA,sha256=Rtga6O-tirqtivgEZdlq_BgTnb97JZA2nLyp9J3UTHM,40949
+quine-0.0.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+quine-0.0.0.dist-info/entry_points.txt,sha256=yZF2yPLVMGNRgS9zK_vTE_xnFjDsPiP8OC3_UqjGiZY,41
+quine-0.0.0.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+quine-0.0.0.dist-info/RECORD,,
