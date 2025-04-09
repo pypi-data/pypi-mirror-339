@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: pgptAI
+Version: 0.1.0
+Summary: All in one AIGC API package for Python
+Home-page: UNKNOWN
+Author: QPython
+Author-email: support@qpython.org
+License: UNKNOWN
+Description: All in one AIGC API package for Python
+Keywords: python,first package
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
