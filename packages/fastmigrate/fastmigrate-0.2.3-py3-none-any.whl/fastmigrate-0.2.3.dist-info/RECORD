@@ -1,0 +1,9 @@
+fastmigrate/__init__.py,sha256=cRY91bgz83x21kLQHE5Lm3bCv4bbYgKRHKTAkrnMnbU,439
+fastmigrate/cli.py,sha256=XHaEXF87DlkcFX0r1KDTH9I3d10O78MRoIREEV3xptQ,4822
+fastmigrate/core.py,sha256=RPY4ZKm06aYDG5zhua-r_iUYIh5Qg45DDVv8KVnWOA0,15634
+fastmigrate/migrations.py,sha256=Ry_-2mNQsfBrh6LDjQw5ShzR5jpoflFZzs8tdeOKSFI,1326
+fastmigrate-0.2.3.dist-info/METADATA,sha256=boGT2wawAvFuymJDMjU9nJ5pARZUXwIKuQoIvh-gUmQ,5959
+fastmigrate-0.2.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+fastmigrate-0.2.3.dist-info/entry_points.txt,sha256=ZfW3fxSrTzqWBpqsYfNY_kE8qcQ_kQXZt1X_thLy34s,61
+fastmigrate-0.2.3.dist-info/top_level.txt,sha256=GIpvv-NU27KfomNMcXMdWznc44Urw24DGHX5wGt92mk,12
+fastmigrate-0.2.3.dist-info/RECORD,,
