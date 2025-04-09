@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: dbt-docs-mcp
+Version: 0.0.1
+Summary: Model Context Protocol (MCP) server for dbt docs
+Project-URL: Code, https://github.com/mattijsdp/dbt-docs-mcp
+Author-email: Mattijs De Paepe <mattijsdepaepe@hotmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: dbt-core==1.8
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: networkx>=3.4.2
+Requires-Dist: python-decouple>=3.8
+Requires-Dist: rapidfuzz>=3.12.2
+Requires-Dist: sqlglot>=26.12.0
+Requires-Dist: tqdm>=4.67.1
+Description-Content-Type: text/markdown
+
+# dbt-docs-mcp
+MCP (model context protocol) server for interacting with dbt Docs
