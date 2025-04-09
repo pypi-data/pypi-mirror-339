@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: fastkmeans
+Version: 0.1.0
+Summary: Add your description here
+Author-email: Ben Clavié <bc@answer.ai>
+Maintainer-email: Ben Clavié <bc@answer.ai>
+License: Apache-2.0
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: numpy
+Dynamic: license-file
