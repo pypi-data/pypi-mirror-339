@@ -1,0 +1,161 @@
+Metadata-Version: 2.4
+Name: demandlib
+Version: 0.2.2
+Summary: Creating heat and power demand profiles from annual values
+Author-email: oemof developer group <contact@oemof.org>
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Utilities
+License-File: LICENSE
+Requires-Dist: numpy >= 2.0
+Requires-Dist: pandas >= 2.0
+Requires-Dist: build ; extra == "build"
+Requires-Dist: check-manifest ; extra == "build"
+Requires-Dist: flake8 ; extra == "build"
+Requires-Dist: flit ; extra == "build"
+Requires-Dist: isort ; extra == "build"
+Requires-Dist: pygments ; extra == "build"
+Requires-Dist: readme-renderer ; extra == "build"
+Requires-Dist: twine ; extra == "build"
+Requires-Dist: sphinx ; extra == "docs"
+Requires-Dist: sphinx_rtd_theme ; extra == "docs"
+Requires-Dist: matplotlib ; extra == "examples"
+Requires-Dist: workalendar ; extra == "examples"
+Requires-Dist: shapely >= 2.0.0 ; extra == "geometry"
+Requires-Dist: geopandas ; extra == "geometry"
+Requires-Dist: coverage ; extra == "test"
+Requires-Dist: matplotlib ; extra == "test"
+Requires-Dist: pytest ; extra == "test"
+Requires-Dist: geopandas ; extra == "test"
+Requires-Dist: tox ; extra == "tox"
+Project-URL: Changelog, https://demandlib.readthedocs.io/en/latest/changelog.html
+Project-URL: Documentation, https://demandlib.readthedocs.io/
+Project-URL: Homepage, https://github.com/oemof/demandlib
+Project-URL: Issue Tracker, https://github.com/oemof/demandlib/issues/
+Provides-Extra: build
+Provides-Extra: docs
+Provides-Extra: examples
+Provides-Extra: geometry
+Provides-Extra: test
+Provides-Extra: tox
+
+========
+Overview
+========
+
+.. start-badges
+
+.. list-table::
+    :stub-columns: 1
+
+    * - docs
+      - |docs|
+    * - tests
+      - | |tox-pytest| |tox-checks| |coveralls|
+    * - package
+      - | |version| |wheel| |supported-versions| |supported-implementations| |commits-since| |packaging|
+
+
+.. |tox-pytest| image:: https://github.com/oemof/demandlib/workflows/tox%20pytests/badge.svg
+     :target: https://github.com/oemof/demandlib/actions?query=workflow%3A%22tox+checks%22
+
+.. |tox-checks| image:: https://github.com/oemof/demandlib/workflows/tox%20checks/badge.svg?branch=dev
+     :target: https://github.com/oemof/demandlib/actions?query=workflow%3A%22tox+checks%22
+
+.. |packaging| image:: https://github.com/oemof/demandlib/workflows/packaging/badge.svg?branch=dev
+     :target: https://github.com/oemof/demandlib/actions?query=workflow%3Apackaging
+
+.. |docs| image:: https://readthedocs.org/projects/demandlib/badge/?style=flat
+    :target: https://demandlib.readthedocs.io/
+    :alt: Documentation Status
+
+.. |coveralls| image:: https://coveralls.io/repos/oemof/demandlib/badge.svg?branch=dev&service=github
+    :alt: Coverage Status
+    :target: https://coveralls.io/github/oemof/demandlib?branch=dev
+
+.. |version| image:: https://img.shields.io/pypi/v/demandlib.svg
+    :alt: PyPI Package latest release
+    :target: https://pypi.org/project/demandlib
+
+.. |wheel| image:: https://img.shields.io/pypi/wheel/demandlib.svg
+    :alt: PyPI Wheel
+    :target: https://pypi.org/project/demandlib
+
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/demandlib.svg
+    :alt: Supported versions
+    :target: https://pypi.org/project/demandlib
+
+.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/demandlib.svg
+    :alt: Supported implementations
+    :target: https://pypi.org/project/demandlib
+
+.. |commits-since| image:: https://img.shields.io/github/commits-since/oemof/demandlib/latest/dev
+    :alt: Commits since latest release
+    :target: https://github.com/oemof/demandlib/compare/master...dev
+
+
+
+.. end-badges
+
+Creating heat and power demand profiles from annual values.
+
+* Free software: MIT license
+
+Installation
+============
+
+::
+
+    pip install demandlib
+
+You can also install the in-development version with::
+
+    pip install https://github.com/oemof/demandlib/archive/master.zip
+
+
+Documentation
+=============
+
+
+https://demandlib.readthedocs.io/
+
+
+Development
+===========
+
+To run all the tests run::
+
+    tox
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
