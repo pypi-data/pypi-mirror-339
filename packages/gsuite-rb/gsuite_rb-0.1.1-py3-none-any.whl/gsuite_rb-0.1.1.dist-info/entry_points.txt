@@ -1,0 +1,2 @@
+[console_scripts]
+gsuite-rb = mcp_gsuite:main
