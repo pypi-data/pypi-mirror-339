@@ -1,0 +1,158 @@
+# Fastn SDK for Python
+
+[![PyPI version](https://img.shields.io/pypi/v/fastn-sdk.svg)](https://pypi.org/project/fastn-sdk/)
+[![Python versions](https://img.shields.io/pypi/pyversions/fastn-sdk.svg)](https://pypi.org/project/fastn-sdk/)
+[![License](https://img.shields.io/pypi/l/fastn-sdk.svg)](https://github.com/fastnai/fastn-python-sdk/blob/main/LICENSE)
+
+The official Python SDK for the Fastn Automation Platform, providing a seamless interface for leveraging AI to automate tasks across various integrated services.
+
+## Installation
+
+```bash
+pip install fastn-sdk
+```
+
+## Quick Start
+
+```python
+from fastn import FastnSDK
+from fastn.sdk import FastnAPIError
+
+# Initialize with your API credentials
+sdk = FastnSDK(
+    api_key="your_api_key_here",
+    space_id="your_space_id_here"
+)
+
+# Execute an action with a natural language prompt
+try:
+    response = sdk.execute_action(
+        prompt="Send a Slack message to #general saying Hello from Fastn SDK!",
+        session_id="optional_session_id"  # For conversation context
+    )
+    print(f"Success: {response}")
+except FastnAPIError as e:
+    print(f"Error {e.status_code}: {e}")
+```
+
+## Features
+
+- **Natural Language Interface**: Use plain English to describe your automation tasks
+- **Multiple Service Integration**: Access Slack, Google Calendar, Gmail, HubSpot, and more from a single API
+- **Session Management**: Maintain context across multiple API calls
+- **Comprehensive Error Handling**: Detailed error information and recovery guidance
+- **Debug Mode**: Enable detailed logging for development and troubleshooting
+
+## Authentication
+
+Obtain your API credentials (API key and space ID) from your Fastn account dashboard. Store these securely and never commit them to version control.
+
+## Usage Examples
+
+### Basic Usage
+
+```python
+from fastn import FastnSDK
+
+sdk = FastnSDK(api_key="your_api_key", space_id="your_space_id")
+response = sdk.execute_action(prompt="Schedule a team meeting for tomorrow at 3pm")
+```
+
+### Using Session ID for Context
+
+```python
+# First request
+response1 = sdk.execute_action(
+    prompt="Find emails from John about the project timeline",
+    session_id="user123"
+)
+
+# Follow-up request with context from the first
+response2 = sdk.execute_action(
+    prompt="Reply to the most recent one saying I'll review it today",
+    session_id="user123"  # Same session ID maintains context
+)
+```
+
+### Debug Mode
+
+```python
+# Enable debug mode to see detailed request/response information
+response = sdk.execute_action(
+    prompt="Create a contact in HubSpot for jane@example.com",
+    debug=True
+)
+```
+
+### Custom Environment
+
+```python
+# Optional configuration for custom environments
+sdk = FastnSDK(
+    api_key="your_api_key",
+    space_id="your_space_id",
+    tenant_id="optional_tenant_id",
+    base_url="https://live.fastn.ai"  # Defaults to production endpoint
+)
+```
+
+## Error Handling
+
+The SDK includes a dedicated `FastnAPIError` exception with detailed information about API errors:
+
+```python
+from fastn.sdk import FastnAPIError
+
+try:
+    response = sdk.execute_action(prompt="Your prompt here")
+except FastnAPIError as e:
+    print(f"Status code: {e.status_code}")
+    print(f"Error message: {e}")
+    print(f"Error details: {e.error_data}")
+    
+    # Handle specific error codes
+    if e.status_code == 401:
+        print("Check your API credentials")
+    elif e.status_code == 429:
+        print("Rate limited, try again later")
+```
+
+## Supported Actions
+
+The Fastn SDK supports operations across multiple services:
+
+### Slack
+- Send messages
+- Get channels
+- Get users in a channel
+
+### Google Calendar
+- Create meetings
+- Get events
+
+### Gmail
+- Send emails
+- Get messages
+
+### HubSpot
+- Create, update, and delete contacts
+- Create and manage deals
+- Create companies
+- Add notes and engagements
+
+And many more! The flexibility of natural language prompts means you can describe virtually any action supported by integrated services.
+
+## Common Troubleshooting
+
+- **401 Unauthorized**: Verify your API key and space ID
+- **429 Too Many Requests**: You've exceeded the rate limits, try again later
+- **400 Bad Request**: The prompt may be unclear or missing key information
+- **503 Service Unavailable**: The service is temporarily unavailable
+
+## License
+
+This SDK is distributed under the MIT license. See the LICENSE file for more information.
+
+## Support
+
+For assistance, visit our [documentation](https://docs.fastn.ai) or contact [support@fastn.ai](mailto:support@fastn.ai). 
