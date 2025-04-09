@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-c8y = mcp_server_c8y:main
