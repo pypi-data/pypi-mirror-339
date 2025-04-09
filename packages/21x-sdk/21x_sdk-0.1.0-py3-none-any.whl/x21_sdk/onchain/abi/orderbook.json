@@ -1,0 +1,1662 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "authority",
+        "type": "address"
+      }
+    ],
+    "name": "AccessManagedInvalidAuthority",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "caller",
+        "type": "address"
+      },
+      {
+        "internalType": "uint32",
+        "name": "delay",
+        "type": "uint32"
+      }
+    ],
+    "name": "AccessManagedRequiredDelay",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "caller",
+        "type": "address"
+      }
+    ],
+    "name": "AccessManagedUnauthorized",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "AccessManaged_DelayNotSupported",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "authority",
+        "type": "address"
+      }
+    ],
+    "name": "AccessManaged_InvalidAuthority",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "caller",
+        "type": "address"
+      }
+    ],
+    "name": "AccessManaged_Unauthorized",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_ExcludedForAdmin",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum LibEnums.OrderBookPhases",
+        "name": "currentPhase",
+        "type": "uint8"
+      }
+    ],
+    "name": "OrderBook_ForbiddenDueToMarketStatus",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_InvalidClient",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "executionCondition",
+        "type": "uint8"
+      }
+    ],
+    "name": "OrderBook_InvalidExecutionCondition",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_InvalidInputOrderData",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum LibEnums.OrderKind",
+        "name": "orderKind",
+        "type": "uint8"
+      }
+    ],
+    "name": "OrderBook_InvalidOrderKind",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_InvalidOrderLifetime",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "orderType",
+        "type": "uint8"
+      }
+    ],
+    "name": "OrderBook_InvalidOrderType",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_MaxValueWrongScale",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_MinValueGreaterThanMaxValue",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_MinValueWrongScale",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "orderId",
+        "type": "uint64"
+      }
+    ],
+    "name": "OrderBook_NoSuchOrderId",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_NotAllowedToBuy",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_NotAllowedToCancel",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_NotAllowedToSell",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_PreTradeControlOrderValueAboveMaxRange",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_PreTradeControlOrderValueBelowMinRange",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_PreTradeControlOrderVolumeAboveMaxRange",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_PreTradeControlOrderVolumeBelowMinRange",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_PreTradeControlPriceAboveMaxRange",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_PreTradeControlPriceBelowMinRange",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_PreTradeControlsNotSet",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "price",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tickSize",
+        "type": "uint256"
+      }
+    ],
+    "name": "OrderBook_TickSize_InvalidPrice",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_TickSize_LiquidityBandToHigh",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_UnknownAreaToGetOffers",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OrderBook_VolatilityManagementNotSet",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ReentrancyShield_ReentrantCall",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "SafeERC20FailedOperation",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "TransfersNotAccepted_NativeCurrencyNotAccepted",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "authority",
+        "type": "address"
+      }
+    ],
+    "name": "AuthorityUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "client",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "quantity",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "price",
+        "type": "uint64"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint64",
+        "name": "orderId",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "enum LibLinkedList.CancellationType",
+        "name": "cancellationType",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "tokenAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "toAddress",
+        "type": "address"
+      }
+    ],
+    "name": "CancelOrder",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint64",
+        "name": "dynamicRefPrice",
+        "type": "uint64"
+      }
+    ],
+    "name": "DynamicRefPriceUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint64",
+        "name": "dynamicThreshold",
+        "type": "uint64"
+      }
+    ],
+    "name": "DynamicThresholdUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bool",
+        "name": "isDynamicCheckEnabled",
+        "type": "bool"
+      }
+    ],
+    "name": "IsDynamicCheckEnabledUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint8",
+        "name": "liquidityBand",
+        "type": "uint8"
+      }
+    ],
+    "name": "LiquidityBandChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint64",
+        "name": "maxMatches",
+        "type": "uint64"
+      }
+    ],
+    "name": "MaxMatchesUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "maxValue",
+        "type": "uint256"
+      }
+    ],
+    "name": "MaxValueUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint128",
+        "name": "minValue",
+        "type": "uint128"
+      }
+    ],
+    "name": "MinValueUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "buyer",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "seller",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "fromQuantity",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "toQuantity",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "price",
+        "type": "uint64"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint64",
+        "name": "sellOrderId",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "buyerCommission",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "sellerCommission",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "tradeSeq",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "incomingBuyOrderId",
+        "type": "uint64"
+      }
+    ],
+    "name": "NewBuyInitiatedTrade",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "client",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "quantity",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "price",
+        "type": "uint64"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint64",
+        "name": "orderId",
+        "type": "uint64"
+      }
+    ],
+    "name": "NewBuyOrder",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "buyer",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "seller",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "fromQuantity",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "toQuantity",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "price",
+        "type": "uint64"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint64",
+        "name": "buyOrderId",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "buyerCommission",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "sellerCommission",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "tradeSeq",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "reimbursement",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "incomingSellOrderId",
+        "type": "uint64"
+      }
+    ],
+    "name": "NewSellInitiatedTrade",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "client",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "quantity",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "price",
+        "type": "uint64"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint64",
+        "name": "orderId",
+        "type": "uint64"
+      }
+    ],
+    "name": "NewSellOrder",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "enum LibEnums.OrderBookPhases",
+        "name": "old",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "enum LibEnums.OrderBookPhases",
+        "name": "current",
+        "type": "uint8"
+      }
+    ],
+    "name": "OrderBookPhasesChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "client",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint64",
+        "name": "orderId",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "quantity",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "price",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "enum LibEnums.OrderKind",
+        "name": "side",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "reportingData",
+        "type": "bytes"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "crossIdentifier",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "enum LibEnums.OrderType",
+        "name": "orderType",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "enum LibEnums.OrderExecutionCondition",
+        "name": "executionCondition",
+        "type": "uint8"
+      }
+    ],
+    "name": "OrderReceived",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "client",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint64",
+        "name": "orderId",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "quantity",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "price",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "quantityNotExecuted",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "enum LibOrderBookEvents.RejectionReasons",
+        "name": "reason",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "enum LibEnums.OrderKind",
+        "name": "side",
+        "type": "uint8"
+      }
+    ],
+    "name": "OrderRejected",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint64",
+        "name": "priceCollarFactor",
+        "type": "uint64"
+      }
+    ],
+    "name": "PriceCollarFactorUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint64",
+        "name": "staticRefPrice",
+        "type": "uint64"
+      }
+    ],
+    "name": "StaticRefPriceUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint64",
+        "name": "staticThreshold",
+        "type": "uint64"
+      }
+    ],
+    "name": "StaticThresholdUpdated",
+    "type": "event"
+  },
+  {
+    "stateMutability": "payable",
+    "type": "fallback"
+  },
+  {
+    "inputs": [],
+    "name": "authority",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "bestBidOffer",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "bestFiftyOffers",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "orderId",
+        "type": "uint64"
+      }
+    ],
+    "name": "cancelBuyOrder",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "orderId",
+        "type": "uint64"
+      }
+    ],
+    "name": "cancelSellOrder",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "countBuyOrders",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "countSellOrders",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "_functionSelector",
+        "type": "bytes4"
+      }
+    ],
+    "name": "facetAddress",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "facetAddress_",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "facetAddresses",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "facetAddresses_",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_facet",
+        "type": "address"
+      }
+    ],
+    "name": "facetFunctionSelectors",
+    "outputs": [
+      {
+        "internalType": "bytes4[]",
+        "name": "_facetFunctionSelectors",
+        "type": "bytes4[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "facets",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "facetAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes4[]",
+            "name": "functionSelectors",
+            "type": "bytes4[]"
+          }
+        ],
+        "internalType": "struct IDiamondLoupe.Facet[]",
+        "name": "facets_",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getConfig",
+    "outputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "internalType": "uint128",
+                    "name": "nonNative",
+                    "type": "uint128"
+                  },
+                  {
+                    "internalType": "uint128",
+                    "name": "native",
+                    "type": "uint128"
+                  }
+                ],
+                "internalType": "struct LibOrderBookStructs.TokenScales",
+                "name": "base",
+                "type": "tuple"
+              },
+              {
+                "components": [
+                  {
+                    "internalType": "uint128",
+                    "name": "nonNative",
+                    "type": "uint128"
+                  },
+                  {
+                    "internalType": "uint128",
+                    "name": "native",
+                    "type": "uint128"
+                  }
+                ],
+                "internalType": "struct LibOrderBookStructs.TokenScales",
+                "name": "quote",
+                "type": "tuple"
+              }
+            ],
+            "internalType": "struct LibOrderBookStructs.Scales",
+            "name": "scales",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint64",
+            "name": "makerCommission",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "takerCommission",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "marketMakerCommission",
+            "type": "uint64"
+          },
+          {
+            "internalType": "address",
+            "name": "quoteToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "baseToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "whitelist",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "commissionWallet",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "baseTokenFallbackWallet",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "quoteTokenFallbackWallet",
+            "type": "address"
+          },
+          {
+            "internalType": "uint8",
+            "name": "liquidityBand",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes11",
+            "name": "version",
+            "type": "bytes11"
+          }
+        ],
+        "internalType": "struct LibOrderBookStructs.OrderBookConfig",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getLiquidityBand",
+    "outputs": [
+      {
+        "internalType": "uint8",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getOrderBookPhase",
+    "outputs": [
+      {
+        "internalType": "enum LibEnums.OrderBookPhases",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "orderId",
+        "type": "uint64"
+      }
+    ],
+    "name": "getOrderDetails",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "timestamp",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint64",
+            "name": "quantity",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "price",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "clientId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "orderId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "prevOrderId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "nextOrderId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint32",
+            "name": "crossIdentifier",
+            "type": "uint32"
+          },
+          {
+            "internalType": "enum LibEnums.OrderKind",
+            "name": "orderKind",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "lifetime",
+            "type": "uint8"
+          }
+        ],
+        "internalType": "struct LibOrderBookStructs.Order",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getPreTradeControlConfig",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "maxValue",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint128",
+            "name": "minValue",
+            "type": "uint128"
+          },
+          {
+            "internalType": "uint64",
+            "name": "priceCollarFactor",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "maxMatches",
+            "type": "uint64"
+          }
+        ],
+        "internalType": "struct LibOrderBookControl.OrderBookPreTradeStorage",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getStaticRefPrice",
+    "outputs": [
+      {
+        "internalType": "uint64",
+        "name": "",
+        "type": "uint64"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getVolatilityManagementConfig",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint64",
+            "name": "dynamicRefPrice",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "staticThreshold",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "dynamicThreshold",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bool",
+            "name": "isDynamicCheckEnabled",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct LibOrderBookControl.VolatilityManagementStorage",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "isConsumingScheduledOp",
+    "outputs": [
+      {
+        "internalType": "bytes4",
+        "name": "",
+        "type": "bytes4"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "orderData",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bytes",
+        "name": "reportingData",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bytes",
+        "name": "crossIdentifier",
+        "type": "bytes"
+      }
+    ],
+    "name": "newBuyOrder",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "orderData",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bytes",
+        "name": "reportingData",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bytes",
+        "name": "crossIdentifier",
+        "type": "bytes"
+      }
+    ],
+    "name": "newSellOrder",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "batchSize",
+        "type": "uint8"
+      }
+    ],
+    "name": "ownerBatchCancelBuyGoodForDay",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "batchSize",
+        "type": "uint8"
+      }
+    ],
+    "name": "ownerBatchCancelBuyGoodTillDate",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "batchSize",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "timestamp",
+        "type": "uint256"
+      }
+    ],
+    "name": "ownerBatchCancelBuyGoodTillDateWithReferenceDate",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "batchSize",
+        "type": "uint8"
+      }
+    ],
+    "name": "ownerBatchCancelBuyOrders",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "batchSize",
+        "type": "uint8"
+      }
+    ],
+    "name": "ownerBatchCancelSellGoodForDay",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "batchSize",
+        "type": "uint8"
+      }
+    ],
+    "name": "ownerBatchCancelSellGoodTillDate",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "batchSize",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "timestamp",
+        "type": "uint256"
+      }
+    ],
+    "name": "ownerBatchCancelSellGoodTillDateWithReferenceDate",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "batchSize",
+        "type": "uint8"
+      }
+    ],
+    "name": "ownerBatchCancelSellOrders",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "orderId",
+        "type": "uint64"
+      }
+    ],
+    "name": "ownerCancelBuyOrder",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "orderId",
+        "type": "uint64"
+      }
+    ],
+    "name": "ownerCancelSellOrder",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newAuthority",
+        "type": "address"
+      }
+    ],
+    "name": "setAuthority",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "setCloseForTrading",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "dynamicThreshold",
+        "type": "uint64"
+      }
+    ],
+    "name": "setDynamicThreshold",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "liquidityBand",
+        "type": "uint8"
+      }
+    ],
+    "name": "setLiquidityBand",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "setManualHalt",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "maxMatches",
+        "type": "uint64"
+      }
+    ],
+    "name": "setMaxMatches",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "maxValue",
+        "type": "uint256"
+      }
+    ],
+    "name": "setMaxValue",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint128",
+        "name": "minValue",
+        "type": "uint128"
+      }
+    ],
+    "name": "setMinValue",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "setOpenForTrading",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "maxValue",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint128",
+            "name": "minValue",
+            "type": "uint128"
+          },
+          {
+            "internalType": "uint64",
+            "name": "priceCollarFactor",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "maxMatches",
+            "type": "uint64"
+          }
+        ],
+        "internalType": "struct LibOrderBookControl.OrderBookPreTradeStorage",
+        "name": "config",
+        "type": "tuple"
+      }
+    ],
+    "name": "setPreTradeControlConfig",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "priceCollarFactor",
+        "type": "uint64"
+      }
+    ],
+    "name": "setPriceCollarFactor",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "staticRefPrice",
+        "type": "uint64"
+      }
+    ],
+    "name": "setStaticRefPrice",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "staticThreshold",
+        "type": "uint64"
+      }
+    ],
+    "name": "setStaticThreshold",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "staticThreshold",
+        "type": "uint64"
+      },
+      {
+        "internalType": "uint64",
+        "name": "dynamicThreshold",
+        "type": "uint64"
+      }
+    ],
+    "name": "setVolatilityManagementConfig",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "_interfaceId",
+        "type": "bytes4"
+      }
+    ],
+    "name": "supportsInterface",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "stateMutability": "payable",
+    "type": "receive"
+  }
+]
