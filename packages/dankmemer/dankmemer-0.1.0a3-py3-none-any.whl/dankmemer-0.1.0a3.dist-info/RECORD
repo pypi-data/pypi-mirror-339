@@ -1,0 +1,10 @@
+dankmemer/__init__.py,sha256=Vb72wNT3tqPac0oScqww0BukZxj_DiFKNZZ6JolHly8,200
+dankmemer/client.py,sha256=hCmJat6HtmZyXrXJ5tEGmUcC_EN9TnU79UyF-JvCIvE,4048
+dankmemer/utils.py,sha256=CW8B5STAYJ_8Y1QJdx76CtrPgjqIHmwxIwQalYP_ZyY,481
+dankmemer/routes/__init__.py,sha256=zak4DRHmmUvUOjtufw35opM3kcI_WvWajhZRbRMB690,47
+dankmemer/routes/items.py,sha256=VatlKOL_R8i0wfGzZfQz0VigBb5dddp1xvcvmj-lycA,11319
+dankmemer-0.1.0a3.dist-info/licenses/LICENSE,sha256=G6ElBv8aqRO3YwXQk6_7OfGcO2IFY5Nyi0PZBCWK9Ig,1084
+dankmemer-0.1.0a3.dist-info/METADATA,sha256=wDbwBIKY0JDuEF4WxMF9g3hn-gbnNj6zEhqQIunLElc,3567
+dankmemer-0.1.0a3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+dankmemer-0.1.0a3.dist-info/top_level.txt,sha256=ctC8iNcUp-0WbPZI7Oi_054klfpWhS4LgxAUtIPYgqM,10
+dankmemer-0.1.0a3.dist-info/RECORD,,
