@@ -1,0 +1,21 @@
+# sphinx-revealjs-copycode
+
+## Usage
+
+Install in your sphinx-revealjs project.
+
+```
+$ pip install sphinx-revealjs-copycode
+```
+
+Create your presentation with sphinx-revealjs.
+
+Then edit `conf.py` to use this extension.  
+Just add one line!!
+
+```diff
+extensions = [
+    "sphinx_revealjs",
++    "sphinx_revealjs_copycode",
+]
+```
