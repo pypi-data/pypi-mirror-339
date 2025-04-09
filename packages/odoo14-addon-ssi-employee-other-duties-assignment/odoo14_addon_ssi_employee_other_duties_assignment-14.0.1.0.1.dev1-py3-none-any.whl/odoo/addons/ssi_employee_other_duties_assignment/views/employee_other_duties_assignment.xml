@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+  <record id="employee_other_duties_assignment_view_search" model="ir.ui.view">
+    <field name="name">employee_other_duties_assignment - search</field>
+    <field name="model">employee_other_duties_assignment</field>
+    <field
+            name="inherit_id"
+            ref="ssi_transaction_mixin.mixin_transaction_view_search"
+        />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="date" />
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="type_id" />
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="employee_other_duties_assignment_view_tree" model="ir.ui.view">
+    <field name="name">employee_other_duties_assignment - tree</field>
+    <field name="model">employee_other_duties_assignment</field>
+    <field name="mode">primary</field>
+    <field name="inherit_id" ref="ssi_transaction_mixin.mixin_transaction_view_tree" />
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="employee_id" />
+                <field name="department_id" optional="hide" />
+                <field
+                        name="manager_id"
+                        widget="many2one_avatar_employee"
+                        optional="hide"
+                    />
+                <field name="job_id" optional="hide" />
+                <field name="type_id" />
+                <field name="date" />
+                <field name="date_start" />
+                <field name="date_end" />
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="employee_other_duties_assignment_view_form" model="ir.ui.view">
+    <field name="name">employee_other_duties_assignment - form</field>
+    <field name="model">employee_other_duties_assignment</field>
+    <field name="mode">primary</field>
+    <field name="inherit_id" ref="ssi_transaction_mixin.mixin_transaction_view_form" />
+    <field name="arch" type="xml">
+        <data>
+
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="employee_id" />
+                <field name="department_id" readonly="1" force_save="1" />
+                <field
+                        name="manager_id"
+                        widget="many2one_avatar_employee"
+                        readonly="1"
+                        force_save="1"
+                    />
+                <field name="job_id" readonly="1" force_save="1" />
+            </xpath>
+            <xpath expr="//group[@name='header_right']" position="inside">
+                <field name="type_id" />
+                <field name="date" />
+                <field name="date_start" />
+                <field name="date_end" />
+            </xpath>
+            <xpath expr="//page[1]" position="before">
+                <page name="job_description" string="Job Description">
+                    <field name="job_description_ids" />
+                </page>
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="employee_other_duties_assignment_action" model="ir.actions.act_window">
+    <field name="name">Employee Other Duties Assignments</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">employee_other_duties_assignment</field>
+    <field name="view_mode">tree,form</field>
+    <field name="search_view_id" ref="employee_other_duties_assignment_view_search" />
+</record>
+
+<menuitem
+        id="employee_other_duties_assignment_menu"
+        name="Employee Other Duties Assignments"
+        sequence="10"
+        parent="ssi_hr.hr_career_management_menu"
+        groups="employee_other_duties_assignment_viewer_group"
+        action="employee_other_duties_assignment_action"
+    />
+</odoo>

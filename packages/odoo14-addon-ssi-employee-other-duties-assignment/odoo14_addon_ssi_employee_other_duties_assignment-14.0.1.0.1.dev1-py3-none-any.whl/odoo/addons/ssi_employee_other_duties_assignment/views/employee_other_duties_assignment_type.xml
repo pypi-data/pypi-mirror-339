@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="employee_other_duties_assignment_type_view_search" model="ir.ui.view">
+    <field name="name">employee_other_duties_assignment_type - search</field>
+    <field name="model">employee_other_duties_assignment_type</field>
+    <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_search"
+        />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data />
+    </field>
+</record>
+
+<record id="employee_other_duties_assignment_type_view_tree" model="ir.ui.view">
+    <field name="name">employee_other_duties_assignment_type -tree</field>
+    <field name="model">employee_other_duties_assignment_type</field>
+    <field name="inherit_id" ref="ssi_master_data_mixin.mixin_master_data_view_tree" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+        </data>
+    </field>
+</record>
+
+<record id="employee_other_duties_assignment_type_view_form" model="ir.ui.view">
+    <field name="name">employee_other_duties_assignment_type - form</field>
+    <field name="model">employee_other_duties_assignment_type</field>
+    <field name="inherit_id" ref="ssi_master_data_mixin.mixin_master_data_view_form" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+        </data>
+    </field>
+</record>
+
+<record id="employee_other_duties_assignment_type_action" model="ir.actions.act_window">
+    <field name="name">Employe Other Duties Assignment Type</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">employee_other_duties_assignment_type</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem
+        id="employee_other_duties_assignment_type_menu"
+        name="Types"
+        parent="menu_eoda_configuration"
+        action="employee_other_duties_assignment_type_action"
+        groups="employee_other_duties_assignment_type_group"
+        sequence="110"
+    />
+
+</odoo>

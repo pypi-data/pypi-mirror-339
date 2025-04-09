@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-4.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record
+        id="employee_other_duties_assignment_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">Employee Other Duities Assignment</field>
+    <field name="parent_id" ref="ssi_hr.human_resource_module_category" />
+    <field name="sequence">4</field>
+</record>
+
+<record
+        id="employee_other_duties_assignment_data_ownership_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">Employee Other Duities Assignment</field>
+    <field name="parent_id" ref="ssi_hr.human_resource_data_module_category" />
+    <field name="sequence">4</field>
+</record>
+</odoo>
