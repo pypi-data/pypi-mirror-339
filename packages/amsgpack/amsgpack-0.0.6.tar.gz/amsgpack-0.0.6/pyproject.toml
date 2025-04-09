@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=74.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amsgpack"
+version = "0.0.6"
+authors = [
+  { name="Arseniy Terekhin", email="senyai@gmail.com" },
+]
+description = "Another MessagePack library"
+license = {text = "MIT"}
+readme = "README.md"
+keywords = ["msgpack", "messagepack", "serializer", "serialization", "binary"]
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Typing :: Typed",
+]
+[project.urls]
+"Source" = "https://github.com/senyai/amsgpack"
+[[tool.setuptools.ext-modules]]
+name = "amsgpack"
+sources = ["amsgpack.c"]
+include-dirs = ["."]
+py-limited-api = true
+extra-compile-args = ["-O3", "-Werror", "-Wall", "-Wextra", "-Wdouble-promotion"]
+[tool.setuptools.package-data]
+"amsgpack" = ["py.typed"]
+[tool.black]
+line-length = 79

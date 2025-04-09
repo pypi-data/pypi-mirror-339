@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+amsgpack.c
+amsgpack.pyi
+deque.h
+ext.h
+packb.h
+py.typed
+pyproject.toml
+amsgpack.egg-info/PKG-INFO
+amsgpack.egg-info/SOURCES.txt
+amsgpack.egg-info/dependency_links.txt
+amsgpack.egg-info/top_level.txt
+benchmark/benchmark-0.0.5.svg
