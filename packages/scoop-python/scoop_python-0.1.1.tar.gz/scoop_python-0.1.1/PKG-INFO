@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: scoop-python
+Version: 0.1.1
+Summary: Add your description here
+Author-email: Jie Li <lijiebio@outlook.com>
+Requires-Python: >=3.13
+Requires-Dist: requests>=2.32.3
