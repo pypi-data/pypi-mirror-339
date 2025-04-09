@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: kizhiview
+Version: 0.1.2
+Summary: Get coding interview question solutions in multiple ways
+Author-email: Your Name <your@email.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yourusername/kizhiview
+Keywords: interview,coding,palindrome,python
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

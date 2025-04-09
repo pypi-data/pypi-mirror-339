@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kizhiview"
+version = "0.1.2"
+description = "Get coding interview question solutions in multiple ways"
+authors = [{ name = "Your Name", email = "your@email.com" }]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["interview", "coding", "palindrome", "python"]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/kizhiview"
