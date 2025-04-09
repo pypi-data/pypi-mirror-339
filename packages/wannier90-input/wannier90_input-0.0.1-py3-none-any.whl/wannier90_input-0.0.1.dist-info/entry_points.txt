@@ -1,0 +1,3 @@
+[console_scripts]
+winput = wannier90_input.cli:main
+
