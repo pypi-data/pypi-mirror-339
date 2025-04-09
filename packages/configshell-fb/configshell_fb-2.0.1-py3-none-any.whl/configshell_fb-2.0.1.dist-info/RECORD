@@ -1,0 +1,11 @@
+configshell/__init__.py,sha256=4TdpZmxum3km8H2Ujz1zvhX3QFQ_WPwq0NxEC-W_ayw,871
+configshell/console.py,sha256=kKHcoOASdah3X1YpyTnLOUupIPsG3cDNMELqFB_txX8,10789
+configshell/log.py,sha256=9CmOfz5BA-_qaIbCgCBH0K7GgIr7ItFFw_CiUd5QGzo,5383
+configshell/node.py,sha256=cuk5Cxp3y4RVCzORH0wo33Cb7BPJPEWwy9dQgIPa67Y,67817
+configshell/prefs.py,sha256=z4XTMu4dIft2UCwumNWXrSWJ7mSaJfaAOcgrvH-NyxI,4441
+configshell/shell.py,sha256=hS-Ih-i2Rm9hGWM2jVzZW5kvsrlBYJbYCRiIUAR9xRw,35095
+configshell_fb.py,sha256=ByN0xEIrjh-rRPQIVfK4WR0-7WCZvx3iSLbnfo6mm7g,688
+configshell_fb-2.0.1.dist-info/METADATA,sha256=k6KN0TXDhhcATvB8BNChccDyUwe8RdomJZfYQYiPSZI,2308
+configshell_fb-2.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+configshell_fb-2.0.1.dist-info/licenses/COPYING,sha256=CeipvOyAZxBGUsFoaFqwkx54aPnIKEtm9a5u2uXxEws,10142
+configshell_fb-2.0.1.dist-info/RECORD,,
