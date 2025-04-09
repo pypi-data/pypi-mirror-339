@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+itcpr/__init__.py
+itcpr/kwant.py
+itcpr/mumax3.py
+itcpr.egg-info/PKG-INFO
+itcpr.egg-info/SOURCES.txt
+itcpr.egg-info/dependency_links.txt
+itcpr.egg-info/requires.txt
+itcpr.egg-info/top_level.txt
