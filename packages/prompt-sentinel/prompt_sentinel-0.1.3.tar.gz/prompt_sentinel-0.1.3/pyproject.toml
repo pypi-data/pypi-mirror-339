@@ -1,0 +1,57 @@
+[project]
+name = "prompt-sentinel"
+version = "0.1.3"
+description = "A package for sentinel detectors and utilities"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+
+authors = [
+  { name = "George Kour", email = "kourgeorge@gmail.com" }
+]
+
+keywords = ["LLM", "security", "privacy", "sanitization", "masking", "prompt sanitization", "secret detection"]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Operating System :: OS Independent"
+]
+
+dependencies = [
+  # Minimal core dependencies, if any
+]
+
+[project.optional-dependencies]
+langchain = ["langchain>=0.1.0"]
+examples = [
+  "matplotlib",
+  "jupyter",
+  "pandas",
+  "langchain>=0.1.0"
+]
+test = ["pytest", "coverage"]
+dev = [
+  "langchain>=0.1.0",
+  "pytest",
+  "black",
+  "flake8",
+  "mypy",
+  "jupyter",
+  "matplotlib",
+  "pandas"
+]
+
+[project.scripts]
+sentinel = "sentinel.sentinel_detectors:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["sentinel"]
+exclude = ["pkgs*"]
