@@ -1,0 +1,10 @@
+LICENSE
+README.md
+fastapi_queryinspect.py
+setup.py
+fastapi_queryinspect.egg-info/PKG-INFO
+fastapi_queryinspect.egg-info/SOURCES.txt
+fastapi_queryinspect.egg-info/dependency_links.txt
+fastapi_queryinspect.egg-info/not-zip-safe
+fastapi_queryinspect.egg-info/requires.txt
+fastapi_queryinspect.egg-info/top_level.txt
