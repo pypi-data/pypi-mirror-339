@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: k3s63
+Version: 0.1.2
+Summary: Toolkit by @k3s63 with date and reset functions
+Home-page: https://pypi.org/project/k3s63/
+Author: @k3s63
+Author-email: k3s63c@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# k3s63
+
+**A custom toolkit by @k3s63** with useful utilities like `date()` and `reset()`.
+
+This is just the beginning â€“ more powerful functions like `info`, `check`, and `verify` will be added in future updates
+
+---
+
+## Installation
+
+```bash
+pip install k3s63
