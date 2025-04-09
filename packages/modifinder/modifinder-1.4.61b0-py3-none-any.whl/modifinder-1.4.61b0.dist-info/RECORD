@@ -1,0 +1,11 @@
+modifinder/__init__.py,sha256=Ds-XSLrnmf_mMtjtfG-pCkTCFsqTDDxTM-fTksL0Apc,429
+modifinder/arguments.py,sha256=-TCXjbY-F9Mt2TS93D-pYaQMLhJFDB0x5ac7UR64h4Q,1070
+modifinder/convert.py,sha256=M0TVqor0PHFuDml7ARD_snY21GJ2Un7o-cvnQPz-Lzs,7045
+modifinder/exceptions.py,sha256=OINcXovNeXF2RNMpGWTr9QcpTlFLkVqv8DSzfAtSeE4,966
+modifinder/main.py,sha256=rK6Thr7uRY6NEiZBnh9KLNEJJrin-TG7YKNLbp6Bhhw,2604
+modifinder/runner.py,sha256=RzmIE8x2OMqb0uvLhayHoBIaErymx3wP_-Pqp_YVVjc,13166
+modifinder-1.4.61b0.dist-info/licenses/LICENSE.md,sha256=PRXfVez0MDpff7VUOUTPQmIjkejCc3JMMRKEbsTxJ70,2383
+modifinder-1.4.61b0.dist-info/METADATA,sha256=d51sbkq3iQJtI6mA33nqdFCNY55f9Pg7_0UOR-myC0M,6633
+modifinder-1.4.61b0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+modifinder-1.4.61b0.dist-info/top_level.txt,sha256=KWvFlb5I0cZeseRpkzOvjyM6H8VSiT1qi0Bq4E2qsf4,11
+modifinder-1.4.61b0.dist-info/RECORD,,
