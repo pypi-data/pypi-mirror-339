@@ -1,0 +1,10 @@
+sapphirepy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sapphirepy/deoxysii.py,sha256=TBtjewb-c7x2ddQDuGx9o4S-dzkVc65QpauBerddoBw,26449
+sapphirepy/envelope.py,sha256=z9W5mWl42gWBo5dw3VQAsiIKHAbokzcz1Isl42Mg2IM,4563
+sapphirepy/error.py,sha256=b5sjMj4ptlK1SAWzWQnFjQGnF3KXjYnVOXbwRZj-EoA,42
+sapphirepy/sapphire.py,sha256=gknp_CmmtDVnBFcKdzG3d1F2lDydWFQyEjXwKAuVXHQ,14338
+oasis_sapphire_py-0.4.0.dist-info/METADATA,sha256=-y2aQaq7yAtEASSyIUjn0tph4GURT9UF9_It285e7iY,2957
+oasis_sapphire_py-0.4.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+oasis_sapphire_py-0.4.0.dist-info/top_level.txt,sha256=jpEbXYzFK1H5jGkV0Pdh6GwTcUlazNQx5VbGBW8v_wU,11
+oasis_sapphire_py-0.4.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+oasis_sapphire_py-0.4.0.dist-info/RECORD,,
