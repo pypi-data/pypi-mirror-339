@@ -1,0 +1,9 @@
+mcp
+httpx
+starlette
+uvicorn
+python-dotenv
+fastmcp
+dotenv
+mcp-proxy
+aiohttphatchling build
