@@ -1,0 +1,24 @@
+[project]
+name = "mvtcli"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.08"
+dependencies = [
+    "click>=8.1.8",
+    "mapbox-vector-tile>=2.0.1",
+    "mercantile>=1.2.1",
+    "shapely>=2.0.7",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.14.1",
+    "ruff>=0.11.4",
+    "types-shapely>=2.0.0.20241221",
+    "usort>=1.0.8.post1",
+]
+
+[[tool.mypy.overrides]]
+module = ["mercantile.*", "mapbox_vector_tile.*"]
+follow_untyped_imports = true
