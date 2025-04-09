@@ -1,0 +1,14 @@
+include LICENSE
+include README.md
+include requirements.txt
+
+# Include all python files under lingualens/
+recursive-include lingualens *.py
+
+# Include the JSON pool files
+recursive-include lingualens/pool *.json
+recursive-include examples *.py
+recursive-include tests *.py
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[cod]
