@@ -1,0 +1,16 @@
+conan<2.16,>=1.48
+typing-extensions<5,>=3.10.0.2
+packaging
+
+[:python_version < "3.11"]
+contextlib-chdir==1.0.2
+
+[dev]
+rope
+
+[test]
+psutil==7.0.0
+pytest==8.3.5
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+pytest-check==2.4.1
