@@ -1,0 +1,91 @@
+Metadata-Version: 2.4
+Name: pionsdk
+Version: 0.0.5
+Summary: This module is needed to control drondes
+Author-email: Michael <onisoris@yandex.ru>
+Maintainer-email: Michael <onisoris@yandex.ru>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/OnisOris/pion
+Project-URL: Documentation, https://onisoris.github.io/pion
+Project-URL: Repository, https://github.com/OnisOris/pion.git
+Project-URL: Issues, https://github.com/OnisOris/pion/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy<2.0.0,>=1.22.0; implementation_name == "pypy"
+Requires-Dist: numpy>=2.1.0; implementation_name != "pypy"
+Requires-Dist: paramiko>=3.5.1
+Requires-Dist: protobuf==5.29.3
+Requires-Dist: pymavlink>=2.4.42
+Requires-Dist: pyserial>=3.5
+Requires-Dist: rich>=13.9.4
+Requires-Dist: lokky>=0.0.8
+Provides-Extra: plotting
+Requires-Dist: matplotlib>=3.10.1; extra == "plotting"
+Dynamic: license-file
+
+# Pion
+
+SDK для управления дронами [geoscan pioneer base](https://geoscan.education/pioneer-base) по mavlink.
+
+Дроны с модификацией ультразвуковой системы навигации [локус](https://www.geoscan.ru/ru/products/pioneer/locus) и
+с raspberry pi zero 2w (модификация "Арена").
+
+## Установка
+
+```shell
+pip install pionsdk
+```
+
+```shell
+pip install git+https://github.com/OnisOris/pion
+```
+
+
+## Установка клонированием
+Данный способ вам нужен, если вы хотите модифицировать модуль, для использования вам это не нужно,
+устанавливайте через pip.
+
+```shell
+pip install -e .
+```
+
+# Подключение
+Для подключения к дрону достаточно создать экземпляр класса Pion
+
+```python
+from pion import Pion
+
+ip = "127.0.0.1"
+port = 8000
+drone = Pion(ip=ip, mavlink_port=port)
+```
+
+
+# Подробное описание с примерами
+
+- [Pion](docs/pion.md) - класс управления реальными дронами
+
+- [Spion](docs/spion.md) - класс дрона-симулятора
+
+- [Apion](docs/apion.md) - Класс с реализацией асинхронного управления
+
+- [Simulator](docs/simulator.md) - Классы симуляторов
+
+- [Pio](docs/pio.md) - Асбстрактные классы
+
+
+
+Дополнительные примеры с инструкцией можно найти по ссылкам:
+
+https://github.com/OnisOris/pion_examples
+
+https://github.com/OnisOris/Danalysis
