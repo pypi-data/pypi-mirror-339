@@ -1,0 +1,14 @@
+compat_patcher_core/__init__.py,sha256=15hbrzIcBCMaaqs5ke5jlJnLpL_lUoD1K7eXIBnQats,2259
+compat_patcher_core/exceptions.py,sha256=PbEj3pesvkEYzpLO7Tr0CP9Sfbj22OZFh9oK1wCWYUw,144
+compat_patcher_core/import_proxifier.py,sha256=FUJ9zTKkmZKOJ73rNO1NWb0CH56IwNF65AG621BjYCs,6472
+compat_patcher_core/readme_generator.py,sha256=sIHwUdcmlgIlDadRR-Qx_NoDg7hE_NOIZAt6WmB2y8s,3174
+compat_patcher_core/registry.py,sha256=aNdmnq9u5GOKNd6fXqP-7sajxa0ZyVs03fO63WO4d-g,14691
+compat_patcher_core/runner.py,sha256=ziQbRP_ezCtLFdlg8OQJXhGsVEu0v_jNOIpu-y9kRlQ,4485
+compat_patcher_core/scaffolding.py,sha256=2r-cw6JueqY8KcKMK-7BaPN-_4oIJfyhMtouZD4g_Vs,3892
+compat_patcher_core/utilities.py,sha256=i0LAK1YV-vgkICfmcHghXp6Wi9vPCmOSjbcQRFmnzzU,10892
+compat_patcher_core-2.3.dist-info/licenses/AUTHORS,sha256=B5gY6ixUdyS4F9imkoClPC2O2qlAtI4Qn0_8OyjLfYQ,92
+compat_patcher_core-2.3.dist-info/licenses/LICENSE,sha256=r7ifgdpfTW9BCKJw6f3QQruTnUbbEdgMbGbaLJN43U0,1082
+compat_patcher_core-2.3.dist-info/METADATA,sha256=dRO1xl5ExvO4ymfeGfA2222ioR5q2D08Lh-5IEzTz4E,4407
+compat_patcher_core-2.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+compat_patcher_core-2.3.dist-info/top_level.txt,sha256=s4SxMJy8BsoGeludusi8yDAkbRnvx4LmCEPKBZ8RX_Y,20
+compat_patcher_core-2.3.dist-info/RECORD,,
