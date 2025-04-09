@@ -1,0 +1,23 @@
+{% extends 'Agent/main.jinja2' %}
+
+{% block context %}
+Available visualization types:
+{{ doc }}
+
+The current SQL
+```sql
+{{ memory['sql'] }}
+```
+
+Here is the current dataset:
+{{ memory.data }}
+
+{%- if "view" in memory %}
+The previous view specification was:
+```
+{{ memory["view"] }}
+```
+{%- endif %}
+
+{{ memory["table_sql_metaset"].sel_context }}
+{%- endblock %}
