@@ -1,0 +1,6 @@
+[aiida.workflows]
+aiidalab_qe.wannier90=aiidalab_qe_wannier90.wannier90_workchain:QeAppWannier90BandsWorkChain
+
+[aiidalab_qe.properties]
+wannier90=aiidalab_qe_wannier90.wannier90:wannier90
+
