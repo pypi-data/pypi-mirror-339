@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+reterm/__init__.py
+reterm/cli.py
+reterm/config.py
+reterm/llm.py
+reterm/shell.py
+reterm/welcome.py
+reterm_ai.egg-info/PKG-INFO
+reterm_ai.egg-info/SOURCES.txt
+reterm_ai.egg-info/dependency_links.txt
+reterm_ai.egg-info/entry_points.txt
+reterm_ai.egg-info/requires.txt
+reterm_ai.egg-info/top_level.txt
