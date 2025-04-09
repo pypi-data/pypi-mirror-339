@@ -1,0 +1,94 @@
+Metadata-Version: 2.4
+Name: lqtmoment
+Version: 0.1.1
+Summary: Compute seismic moment in LQT systems with advanced spectral fitting
+Author-email: Arham Zakki Edelo <edelo.arham@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Arham Zakki Edelo
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/bgjx/lqt-moment-magnitude
+Project-URL: Repository, https://github.com/bgjx/lqt-moment-magnitude
+Project-URL: Documentation, https://bgjx.io/lqtmoment
+Project-URL: BugTracker, https://github.com/bgjx/lqt-moment-magnitude/issues
+Keywords: Seismology,Moment Magnitude,Spectral Fitting,LQT Component,Earthquake,Geophysics
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Intended Audience :: Science/Research
+Classifier: Development Status :: 4 - Beta
+Classifier: Natural Language :: English
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy<2.0,>=1.21.0
+Requires-Dist: pandas>=1.5.0
+Requires-Dist: matplotlib>=3.5.0
+Requires-Dist: scipy>=1.5.0
+Requires-Dist: scikit-optimize>=0.10.0
+Requires-Dist: obspy>=1.3.0
+Requires-Dist: tqdm>=4.60.0
+Requires-Dist: configparser>=5.0.0
+Requires-Dist: openpyxl>=3.0.0
+Provides-Extra: tests
+Requires-Dist: pytest>=8.0.0; extra == "tests"
+Dynamic: license-file
+
+[![Follow me on Twitter](https://img.shields.io/badge/Follow-@zakki_edelo-blue?logo=x&logoColor=white&style=flat)](https://twitter.com/zakki_edelo)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-arham_zakki-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/arhamzakki)
+[![CI - Tests](https://github.com/bgjx/lqt-moment-magnitude/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/bgjx/lqt-moment-magnitude/actions/workflows/ci-cd.yml)
+[![GitHub Issues](https://img.shields.io/github/issues/bgjx/lqt-moment-magnitude?style=flat)](https://github.com/bgjx/lqt-moment-magnitude/issues)
+[![GitHub Commits](https://img.shields.io/github/last-commit/bgjx/lqt-moment-magnitude?style=flat)](https://github.com/bgjx/lqt-moment-magnitude/commits/main/)
+[![PyPI](https://img.shields.io/pypi/v/lqtmoment?style=flat$logo=pypi)](https://pypi.org/project/lqtmoment/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=flat&logo=python)](https://www.python.org/)
+
+
+#### What is it?
+
+**lqtmoment** is python package designed for moment magnitude calculations using pure P, SV, and SH components in the LQT ray coordinate system. It leverages rapid ray tracing to compute incidence angles for component rotation and employs fast spectral fitting to find optimal solution, ensuring high accuracy and efficient automated computation.
+
+The **lqtmoment** includes modules for building input catalog format, performing moment magnitude calculation, visualizations, and simple data analysis.
+
+Contact the developer: Arham Zakki Edelo (edelo.arham@gmail.com)
+
+* [Installation](#Installations)
+* [Tutorials](#Tutorials)
+* [Simple Example](#simple-Example)
+* [References](#References)
+* [Contributing](#Contributing)
+* [Report Bugs](#Report-Bugs)
+
+--------------
+### Installation
+The **lqtmoment** can be run in multiple platforms, including macOS, Windows and Linux in python 3.8 - 3.12. For installation, you can build **lqtmoment** by cloning this repository using 
+> python -m build
+> python -m pip install dist\lqtmoment-0.1.1-py3-none-any.whl
+
+or Via PyPI:
+
+> python -m pip install --upgrade pip
