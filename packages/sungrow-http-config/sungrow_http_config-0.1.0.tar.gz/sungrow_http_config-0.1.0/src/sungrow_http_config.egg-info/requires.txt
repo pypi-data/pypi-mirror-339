@@ -1,0 +1,4 @@
+tenacity
+urllib3
+pymodbus<2.6
+SungrowModbusTcpClient>=0.1.5
