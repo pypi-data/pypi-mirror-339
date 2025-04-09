@@ -1,0 +1,12 @@
+bucketbase/__init__.py,sha256=HSpZkCwRNr9DITQg6PdPgkyHwyNscc55anoQirYx6zI,565
+bucketbase/cached_immutable_bucket.py,sha256=La77SOn24AfdeyN626DM1n-1qAXI35y_s24l6P-wy_0,3823
+bucketbase/errors.py,sha256=33pi6qHI88Du3P0-WCw6w5ob-WemuYR6eWNAYrv5vRk,539
+bucketbase/file_lock.py,sha256=1r7jrxmVGBevpZs9LvKX5VelU9kYAgp1J4mQYk1GWDI,808
+bucketbase/fs_bucket.py,sha256=SQJcHcaDawePZ3SWIx1-k19EzvW6y4JPBGhLFC61Gsg,11613
+bucketbase/ibucket.py,sha256=NXfLQbsp9EnhRLLxVv-dVuMSceqNVDBBKY4O-JCe_ag,19968
+bucketbase/memory_bucket.py,sha256=G_jfqTZrQcVYxrXIUeWtV9LBGAmd9QQ5rmNbbXDvolU,3587
+bucketbase/minio_bucket.py,sha256=--2TE6v6hdSJ3Mmfqzn99VIrZBMQCzhbzldtBhl6L-4,8025
+bucketbase/named_lock_manager.py,sha256=qe0fN_Qw8RTJm4HZTrD2QqVOfpgEmC-MCfyYt1G1KrU,2366
+bucketbase-1.4.0.dist-info/METADATA,sha256=3l1LMdnz31sBQQ34Iv3VA3OXp4SbQVwJb69al5M2cPk,6873
+bucketbase-1.4.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+bucketbase-1.4.0.dist-info/RECORD,,
