@@ -1,0 +1,68 @@
+# django-osm-widgets
+
+Improved widgets for Django's PointField.
+
+`LatLonOpenlayersOSMWidget` handles latitude and longitude inputs synced with the point on the map.
+
+
+![Example of the LatLonOpenlayersOSMWidget on a page](https://gitlab.com/kapt/open-source/django-osm-widgets/-/raw/main/preview.jpg)
+
+# Requirements
+
+- Python 3.10+
+- Django >=3.0, <5.2
+
+# Installation
+
+- run `pip install django-osm-widgets`
+- add `django_osm_widgets` to your `INSTALLED_APPS`
+
+# Usage
+
+In your forms, use the widget like this:
+
+```py
+from django.contrib.gis.forms.fields import PointField
+from django_osm_widgets.fields import LatLonOpenlayersOSMWidget
+
+
+class MyForm(forms.Form):
+  location = PointField(widget=LatLonOpenlayersOSMWidget)
+```
+
+The latitute and longitude fields will be automatically added in your page.
+
+# Customizations
+
+You can define some options as in the example below.
+
+When using `"must_display_latlon_fields": False,` your are responsible for providing two input fields in your page. These fields must have ids corresponding to `latitude_field_id` and `longitude_field_id` values (defaults to `id_osm_widget_latitude` and `id_osm_widget_longitude`).
+
+```py
+import json
+from django.contrib.gis.forms.fields import PointField
+from django_osm_widgets.fields import LatLonOpenlayersOSMWidget
+
+
+class MyForm(forms.Form):
+  location = PointField(
+    widget=LatLonOpenlayersOSMWidget(
+      attrs={
+        "must_display_latlon_fields": False,
+        "map_width": "auto",
+        "map_height": "auto",
+        "default_lat": 45,
+        "default_lon": 5,
+        "default_zoom": 8,
+        "latitude_field_id": "id_osm_widget_latitude",
+        "longitude_field_id": "id_osm_widget_longitude",
+        "listened_events": "input",
+        "marker_options": json.dumps({
+          "src": "/static/django_osm_widgets/marker.svg",
+          "scale": 1.5,
+          "anchor": [0.5, 1],
+        })
+      }
+    )
+  )
+```
