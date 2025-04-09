@@ -1,0 +1,12 @@
+__pycache__
+build
+out
+target
+dist
+*.egg-info
+
+*.exe
+
+.vscode
+.vs
+_*.cpp
