@@ -1,0 +1,11 @@
+poly2graph/SpectralGraph.py,sha256=JXHICxCVAICgu-niDwP1pT5RFiElWkJEgGcGUnaBicg,20573
+poly2graph/__init__.py,sha256=TOo06So0wOJNqs14vEjKcap-myV1FQTDsiZbgdLvWd4,1213
+poly2graph/hamiltonian.py,sha256=8j6I-ZpD280MvSxJlXWxeGN1e_C4GcOQhI9tPH7bPvM,15588
+poly2graph/skeleton2graph.py,sha256=PZHwBmaZrdLElRpIpGYis687Et68CdRw0gyiXNm3a38,13210
+poly2graph/spectral_graph.py,sha256=ojizdVdYsdPiL0LvlKomhG6wKfP6KUQMcwb74ADmzZE,13439
+poly2graph/util.py,sha256=a63W5E8Bc671HToaW9nM-kMFHNgcjakjLZ6v-oviSqY,5404
+poly2graph/vis.py,sha256=g3RIL2yvKI-zBzIzudMrLgGd2WKIB6-UbPbSuESFfPQ,5960
+poly2graph-0.1.0.dist-info/METADATA,sha256=-ZPOHIk6VOn0JrKFycZ36p2L1Q_UWdP5droFIvEfkSQ,17208
+poly2graph-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+poly2graph-0.1.0.dist-info/licenses/LICENSE,sha256=4LRswHQ1BSgZjH_gP0sUgzjXoo7KomqA-eQrpnTv6F8,1082
+poly2graph-0.1.0.dist-info/RECORD,,
