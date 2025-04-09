@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: merlin-quandela-preview
+Version: 0.1.0
+Summary: Quantum neural network models using photonic circuits - Preview
+License-Expression: MIT
+Project-URL: Homepage, https://quandela.ai
+Requires-Python: >=3.8
+Requires-Dist: torch>=2.0.0
+Requires-Dist: perceval_quandela>=0.11.0
+Requires-Dist: scikit-learn>=1.0.0
+Requires-Dist: pandas
+Provides-Extra: test
+Requires-Dist: pytest>=7.0; extra == "test"
+Provides-Extra: datasets
+Requires-Dist: scikit-learn>=1.0.0; extra == "datasets"
+Requires-Dist: pandas; extra == "datasets"
+Requires-Dist: numpy; extra == "datasets"
