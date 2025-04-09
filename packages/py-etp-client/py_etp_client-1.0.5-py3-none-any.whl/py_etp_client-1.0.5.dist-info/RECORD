@@ -1,0 +1,11 @@
+py_etp_client/__init__.py,sha256=XJ0e24vOTleQJrSZmYKndfrTY2c434H2oWKRiBhd3c8,7685
+py_etp_client/auth.py,sha256=F2t3puqlLyDosyt8_as28LbGtHXff62mgYLAPhL7lz0,313
+py_etp_client/etpclient.py,sha256=Y3hslj3oqAWWOJ8x6xAbfnrZZnBACwlQ7ssQAeZV-vo,21815
+py_etp_client/etpconfig.py,sha256=JKnmPFeKIG8bbE4PhJeHk8TgZjXNoahtFf71mpTEpAY,2598
+py_etp_client/etpsimpleclient.py,sha256=J3ACzZXJum5VfH-MfA2-LuTsN1Fo0FQYfV7rDBPNzfE,8786
+py_etp_client/requests.py,sha256=vbe731ESN886b-7uN6WaEa9O7YfSbASQDa2sqQKziQU,11752
+py_etp_client/serverprotocols.py,sha256=UCuu_5vGhye2e5XBTZdhF796VUPJCEE9_jSSqai8zes,26247
+py_etp_client-1.0.5.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+py_etp_client-1.0.5.dist-info/METADATA,sha256=3gQ_OBaK77ptZfYJKJ_iKqfq2P_8vAHKy2CWsflJ1jU,3190
+py_etp_client-1.0.5.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+py_etp_client-1.0.5.dist-info/RECORD,,
