@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: mindlab
+Version: 3.0.0
+Summary: Data science toolbox
+Author-email: Logikal GmbH <contact@logikal.io>
+License-Expression: MIT
+Project-URL: Documentation, https://docs.logikal.io/mindlab/
+Project-URL: Release notes, https://github.com/logikal-io/mindlab/releases
+Project-URL: Issue tracker, https://github.com/logikal-io/mindlab/issues
+Project-URL: Source code, https://github.com/logikal-io/mindlab
+Keywords: data,jupyterlab
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Framework :: Jupyter :: JupyterLab
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: ~=3.12
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Requires-Dist: awswrangler[redshift]==3.11.0
+Requires-Dist: google-cloud-bigquery[pandas,tqdm]~=3.29
+Requires-Dist: matplotlib==3.10.1
+Requires-Dist: logikal-utils~=1.4
+Requires-Dist: numpy~=2.2
+Requires-Dist: pandas~=2.2
+Requires-Dist: pandas-stubs~=2.2
+Requires-Dist: scipy~=1.15
+Requires-Dist: stormware[amazon,google]~=2.2
+Requires-Dist: xdg-base-dirs~=6.0
+Provides-Extra: jupyter
+Requires-Dist: humanize==4.12.2; extra == "jupyter"
+Requires-Dist: ipywidgets==8.1.5; extra == "jupyter"
+Requires-Dist: jupyterlab==4.4.0; extra == "jupyter"
+Requires-Dist: jupyterlab-lsp==5.1.0; extra == "jupyter"
+Requires-Dist: python-lsp-server==1.12.2; extra == "jupyter"
+Dynamic: license-file
+
+MindLab
+=======
+Data science toolbox.
+
+Getting Started
+---------------
+You can find the project documentation under `docs.logikal.io/mindlab/
+<https://docs.logikal.io/mindlab/>`_.

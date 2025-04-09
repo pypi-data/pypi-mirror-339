@@ -1,0 +1,84 @@
+[build-system]
+requires = ['setuptools>=64', 'setuptools-scm>=8']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'mindlab'
+description = 'Data science toolbox'
+readme = 'README.rst'
+requires-python = '~= 3.12'
+license = 'MIT'
+authors = [{name = 'Logikal GmbH', email = 'contact@logikal.io'}]
+keywords = ['data', 'jupyterlab']
+classifiers = [
+  'Development Status :: 5 - Production/Stable',
+  'Intended Audience :: Science/Research',
+  'Operating System :: POSIX :: Linux',
+  'Programming Language :: Python :: 3',
+  'Programming Language :: Python :: 3.12',
+  'Framework :: Jupyter :: JupyterLab',
+  'Topic :: Scientific/Engineering',
+  'Topic :: Scientific/Engineering :: Visualization',
+  'Topic :: Utilities',
+  'Typing :: Typed',
+]
+dynamic = ['version', 'dependencies', 'optional-dependencies']
+
+[project.scripts]
+lab = 'mindlab.lab:main'
+
+[project.urls]
+'Documentation' = 'https://docs.logikal.io/mindlab/'
+'Release notes' = 'https://github.com/logikal-io/mindlab/releases'
+'Issue tracker' = 'https://github.com/logikal-io/mindlab/issues'
+'Source code' = 'https://github.com/logikal-io/mindlab'
+
+[tool.setuptools.dynamic]
+dependencies = {file = 'requirements/core.txt'}
+
+[tool.setuptools.dynamic.optional-dependencies]
+jupyter = {file = 'requirements/extras/jupyter.txt'}
+
+[tool.setuptools]
+packages = ['mindlab', 'mindlab.config', 'mindlab.fonts', 'mindlab.styles']
+
+[tool.setuptools_scm]
+
+[tool.browser.versions]
+chrome = '132.0.6834.83'  # not used but needed for image assertions
+
+[tool.mindlab]
+organization = 'logikal.io'
+
+[tool.licenses.extend_allowed_legacy_packages]
+jupyter-sphinx = 'any'  # should be removed after updating to jupyter-sphinx >0.5.3
+
+[tool.mypy]
+untyped_calls_exclude = ['IPython', 'matplotlib']
+
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+module = [
+  'humanize.*',
+  'IPython.*',
+  'ipywidgets',
+  'jupyter_core.*',
+  'matplotlib.*',
+  'redshift_connector',
+]
+
+[tool.pylint.BASIC]
+good-names = ['bar']
+
+[tool.pytest.ini_options]
+norecursedirs = ['build', 'docs/jupyter_execute', '.ipynb_checkpoints']
+filterwarnings = [
+  'error',
+  # This can be removed when using jupyter_core 6+
+  'ignore:Jupyter is migrating its paths.*:DeprecationWarning',
+  # See https://github.com/boto/boto3/issues/3889
+  'ignore:datetime.datetime.utcnow:DeprecationWarning',
+]
+
+[tool.coverage.report]
+omit = ['docs/conf.py']  # being run in a subthread during documentation building
