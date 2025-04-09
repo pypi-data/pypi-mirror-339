@@ -1,0 +1,20 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "biosoundlab"
+description = "Acoustic communication and bioacoustics app in Python"
+authors = [{name = "David Nicholson", email = "nickledave@users.noreply.github.com"}]
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+version = "0.1.0"
+dependencies = [
+    "PyQt6",
+    "pyqtgraph",
+    "qtpy",
+    "biosound",
+]
+
+[project.urls]
+Home = "https://github.com/biosound-org/biosoundlab"

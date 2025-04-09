@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: biosoundlab
+Version: 0.1.0
+Summary: Acoustic communication and bioacoustics app in Python
+Author-email: David Nicholson <nickledave@users.noreply.github.com>
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: PyQt6
+Requires-Dist: pyqtgraph
+Requires-Dist: qtpy
+Requires-Dist: biosound
+Project-URL: Home, https://github.com/biosound-org/biosoundlab
