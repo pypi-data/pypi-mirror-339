@@ -1,0 +1,9 @@
+wwtiotsdk/__init__.py,sha256=5KciLZpGr7QZtFWfZK7LTIXvlfp6686c5vSEeuKr2NE,90
+wwtiotsdk/influxdb/connector.py,sha256=UTbCPo1r4QX0DQmsgy3RtrGwcYyXGFDfMWlyW_dtzdI,2219
+wwtiotsdk/influxdb/dataframe_base.py,sha256=DBopvhazMklgg6i4LjJMBMWFL9Ju_2jzzGsuCePPEmo,250
+wwtiotsdk/influxdb/dataframe_records_2d_time.py,sha256=uGpbCe7vs-fgo1dmewT4HdzuYfs3FYo2Pcn92yIFrXs,3231
+wwtiotsdk/metainfo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wwtiotsdk/metainfo/parameter_lookup.py,sha256=6YSFAUQzxE4bSN9fiOCGBJxM-za0BYvooeR5jQNNZKI,2704
+wwtiotsdk-0.1.4.dist-info/WHEEL,sha256=Dyt6SBfaasWElUrURkknVFAZDHSTwxg3PaTza7RSbkY,100
+wwtiotsdk-0.1.4.dist-info/METADATA,sha256=0q2W7jXVAhn8nQJPL-aZ1AV05k9R1E0GhW5Fr7QxSvY,350
+wwtiotsdk-0.1.4.dist-info/RECORD,,
