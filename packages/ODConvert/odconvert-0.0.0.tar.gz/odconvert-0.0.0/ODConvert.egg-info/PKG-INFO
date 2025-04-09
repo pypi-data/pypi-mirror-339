@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: ODConvert
+Version: 0.0.0
+Summary: Convert object detection dataset formats
+Author-email: Jack Devey <jack.devey@bcu.ac.uk>
+Requires-Dist: fire==0.7.0
+Requires-Dist: rich==14.0.0
