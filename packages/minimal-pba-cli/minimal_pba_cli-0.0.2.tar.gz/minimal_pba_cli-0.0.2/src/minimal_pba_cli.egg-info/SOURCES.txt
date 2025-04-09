@@ -1,0 +1,11 @@
+MANIFEST.in
+pyproject.toml
+src/minimal_pba_cli/__init__.py
+src/minimal_pba_cli/cli.py
+src/minimal_pba_cli/plugin.py
+src/minimal_pba_cli.egg-info/PKG-INFO
+src/minimal_pba_cli.egg-info/SOURCES.txt
+src/minimal_pba_cli.egg-info/dependency_links.txt
+src/minimal_pba_cli.egg-info/entry_points.txt
+src/minimal_pba_cli.egg-info/requires.txt
+src/minimal_pba_cli.egg-info/top_level.txt
