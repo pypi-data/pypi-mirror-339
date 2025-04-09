@@ -1,0 +1,118 @@
+Metadata-Version: 2.4
+Name: rescale4dl
+Version: 0.1.1
+Summary: My python package package
+Author-email: Mariana G Ferreira <mariana.g.ferreira@itqb.unl.pt>, Bruno Saraiva <bruno.msaraiva2@gmail.com>, Ricardo Henriques <ricardo.jv.henriques@gmail.com>, Estibaliz Gómez-de-Mariscal <esgodema@gmail.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: <=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: imageio>=2.33.1
+Requires-Dist: jupyter>=1.1.1
+Requires-Dist: matplotlib>=3.9.2
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: pillow>=11.0.0
+Requires-Dist: pypdf>=4.2.0
+Requires-Dist: scikit-image>=0.22.0
+Requires-Dist: scikit-learn>=1.5.2
+Requires-Dist: scipy>=1.14.1
+Requires-Dist: seaborn>=0.13.2
+Requires-Dist: setuptools>=68.2.2
+Requires-Dist: tifffile>=2024.12.12
+Requires-Dist: nanopyx>=1.0.0
+Provides-Extra: all
+Requires-Dist: rescale4dl[dev,test]; extra == "all"
+Provides-Extra: dev
+Requires-Dist: pre-commit>=3.7.0; extra == "dev"
+Requires-Dist: ipykernel>=6.29.4; extra == "dev"
+Requires-Dist: ruff>=0.4.3; extra == "dev"
+Requires-Dist: gptrepo>=1.0.3; extra == "dev"
+Requires-Dist: pdoc>=12.3.1; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: gptrepo; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest>=8.2.0; extra == "test"
+Requires-Dist: pytest-xdist>=3.6.1; extra == "test"
+Requires-Dist: pytest-cov>=5.0.0; extra == "test"
+Requires-Dist: nbmake>=1.5.3; extra == "test"
+Requires-Dist: mypy>=1.10.0; extra == "test"
+Dynamic: license-file
+
+# ReScale4DL: Balancing Pixel and Contextual Information for Enhanced Bioimage Segmentation
+
+[![Python 3.8+](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+<img src="https://raw.githubusercontent.com/HenriquesLab/ReScale4DL/refs/heads/main/.github/logo.png?token=GHSAT0AAAAAAC5PYSXBX34C76FL7KUWDO62Z7VHF5A" align="right" width="150"/>
+
+A systematic approach for determining optimal image resolution in deep learning-based microscopy segmentation, balancing accuracy with acquisition/storage costs.
+
+## Key Features
+- **Resolution simulation**: Rescale images and their respective annotations (upsample and downsample)
+- **Segmentation evaluation**: Compare performance across resolutions using:
+  - Mean Intersection-over-Union (IoU)
+  - Morphological features
+  - Potential throughput
+  - Personalised metrics
+- **Visualization tools**: Generate comparative plots and sample outputs
+
+## Installation
+
+ReScale4DL is available as a Python package through pip. 
+Activate your conda environment or create one and install it with `pip`:
+
+```terminal
+pip install rescale4dl
+```
+
+### Manual installation
+Manual installation from using GitHub repository
+```terminal
+git clone https://github.com/HenriquesLab/ReScale4DL.git
+cd rescale4dl
+conda create -n rescale4dl "python<=3.12"
+conda activate rescale4dl
+python -m pip install .
+```
+
+
+## Usage
+
+### 1. Image Rescaling
+Notebook: `Rescale_Images.ipynb`
+
+### 2. Segmentation Analysis 
+Notebook: `Evaluate_Segmentation.ipynb`
+
+### 3. Rescale and crop 
+Notebook: `Rescale_Foundation_Models.ipynb`
+
+
+## Contributing
+We welcome contributions through:
+- [Issue reporting](https://github.com/HenriquesLab/ReScale4D/issues)
+- [Pull requests](https://github.com/HenriquesLab/ReScale4D/pulls)
+
+## License
+MIT License - See [LICENSE](LICENSE) for details
+
+## Citation
+If using this work in research, please cite:
+```
+@article{gferreira2025rescale4dl,
+  title={ReScale4DL: Balancing Pixel and Contextual Information for Enhanced Bioimage Segmentation},
+  author={Ferreira, Mariana G. and Saraiva, Bruno M. and Brito, Antonio D. and Pinho, Mariana G. and Henriques, Ricardo and G{\'o}mez-de-Mariscal, Estibaliz },
+  journal={bioRxiv},
+  year={2025},
+  publisher = {Cold Spring Harbor Laboratory},
+  URL = ,
+  eprint = ,
+}
+```
+
+
+
+
