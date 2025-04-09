@@ -1,0 +1,2 @@
+[console_scripts]
+llama-sim = llama_simulation.cli:app

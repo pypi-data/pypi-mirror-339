@@ -1,0 +1,110 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "setuptools_scm>=6.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llama_simulation"
+description = "A comprehensive simulation framework for AI research and testing scenarios"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dynamic = ["version"]
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "mlx>=0.3.0",
+    "numpy>=1.20.0",
+    "pandas>=1.3.0",
+    "matplotlib>=3.4.0",
+    "seaborn>=0.11.0",
+    "tqdm>=4.62.0",
+    "pyyaml>=6.0",
+    "networkx>=2.6.0",
+    "scipy>=1.7.0",
+    "scikit-learn>=1.0.0",
+    "loguru>=0.6.0",
+    "typer>=0.4.0",
+    "rich>=12.0.0",
+    "pydantic>=1.9.0,<2.0.0",
+    "opacus>=1.1.0",
+    "wandb>=0.12.0",
+    "tensorboard>=2.8.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "black>=22.0.0",
+    "isort>=5.10.0",
+    "mypy>=0.950",
+    "ruff>=0.0.257",
+    "pre-commit>=2.17.0",
+    "sphinx>=5.0.0",
+    "sphinx-rtd-theme>=1.0.0",
+    "sphinx-autodoc-typehints>=1.18.0",
+]
+torch = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+]
+jax = [
+    "jax>=0.3.25",
+    "jaxlib>=0.3.25",
+]
+notebook = [
+    "jupyter>=1.0.0",
+    "ipywidgets>=8.0.0",
+    "plotly>=5.10.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/llama_simulation"
+"Bug Tracker" = "https://github.com/yourusername/llama_simulation/issues"
+"Documentation" = "https://llama-simulation.readthedocs.io"
+
+[tool.setuptools_scm]
+write_to = "llama_simulation/_version.py"
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=llama_simulation"
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+select = ["E", "F", "B", "I"]
+ignore = ["E203"]
+
+[project.scripts]
+llama-sim = "llama_simulation.cli:app"

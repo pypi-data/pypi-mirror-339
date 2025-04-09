@@ -1,0 +1,165 @@
+"""Neural Engine Latency Simulator for MLX models.
+
+This module provides tools for simulating the latency of neural networks
+on various hardware devices, with a focus on MLX acceleration.
+"""
+
+import json
+import os
+import time
+from dataclasses import dataclass, field
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple, Union
+
+import mlx.core as mx
+import mlx.nn as nn
+import numpy as np
+import pandas as pd
+from loguru import logger
+
+
+@dataclass
+class DeviceProfile:
+    """Profile of a hardware device for latency simulation.
+    
+    Attributes:
+        name: Name of the device.
+        memory_bandwidth: Memory bandwidth in GB/s.
+        compute_flops: Compute performance in FLOPS.
+        memory_size: Memory size in GB.
+        neural_engine_tflops: Neural engine performance in TFLOPS.
+        cpu_cores: Number of CPU cores.
+        cpu_freq: CPU frequency in GHz.
+        power_consumption: Power consumption in watts.
+    """
+    
+    name: str
+    memory_bandwidth: float  # GB/s
+    compute_flops: float  # FLOPS
+    memory_size: float  # GB
+    neural_engine_tflops: Optional[float] = None  # TFLOPS
+    cpu_cores: Optional[int] = None
+    cpu_freq: Optional[float] = None  # GHz
+    power_consumption: Optional[float] = None  # Watts
+    system_overhead: float = 0.1  # Fraction of time spent on overhead
+    
+    def __post_init__(self):
+        """Initialize derived attributes."""
+        # Convert TFLOPS to FLOPS if provided
+        if self.neural_engine_tflops is not None:
+            self.neural_engine_flops = self.neural_engine_tflops * 1e12
+        else:
+            self.neural_engine_flops = None
+
+
+@dataclass
+class ModelProfile:
+    """Profile of a neural network model for latency simulation.
+    
+    Attributes:
+        name: Name of the model.
+        flops: Compute requirements in FLOPS.
+        params: Number of parameters.
+        activation_memory: Memory required for activations in MB.
+        weight_memory: Memory required for weights in MB.
+        input_shape: Shape of input tensor.
+        output_shape: Shape of output tensor.
+    """
+    
+    name: str
+    flops: float  # FLOPS per inference
+    params: int  # Number of parameters
+    activation_memory: float  # MB
+    weight_memory: float  # MB
+    input_shape: Tuple[int, ...]
+    output_shape: Tuple[int, ...]
+    ops_breakdown: Dict[str, float] = field(default_factory=dict)  # Fraction of ops by type
+    is_quantized: bool = False
+    quantization_level: str = "float32"
+
+
+@dataclass
+class LatencyResult:
+    """Result of a latency simulation.
+    
+    Attributes:
+        device: Device profile.
+        model: Model profile.
+        batch_size: Batch size used for simulation.
+        input_shape: Shape of input tensor.
+        latency_ms: Simulated latency in milliseconds.
+        throughput: Throughput in inferences per second.
+        memory_used: Memory used in MB.
+        is_memory_bound: Whether the simulation is memory-bound.
+        energy_per_inference: Energy used per inference in joules.
+        quantization_level: Quantization level used.
+    """
+    
+    device: DeviceProfile
+    model: ModelProfile
+    batch_size: int
+    input_shape: Tuple[int, ...]
+    latency_ms: float
+    throughput: float
+    memory_used: float
+    is_memory_bound: bool
+    energy_per_inference: Optional[float] = None
+    quantization_level: str = "float32"
+
+
+class LatencySimulator:
+    """Simulator for neural network latency on various hardware devices.
+    
+    This class provides tools for simulating the latency of neural networks
+    on various hardware devices, with a focus on MLX acceleration.
+    
+    Attributes:
+        device_profiles: Profiles of hardware devices.
+        model_profiles: Profiles of neural network models.
+        results: Results of latency simulations.
+    """
+    
+    DEFAULT_DEVICE_PROFILES = {
+        "iphone14": DeviceProfile(
+            name="iPhone 14 Pro",
+            memory_bandwidth=25.6,  # GB/s
+            compute_flops=2.5e12,   # 2.5 TFLOPS CPU
+            memory_size=6,          # 6GB RAM
+            neural_engine_tflops=17.0,  # 17 TFLOPS Neural Engine
+            cpu_cores=6,
+            cpu_freq=3.46,          # GHz
+            power_consumption=5.0,  # Watts (approximate under load)
+        ),
+        "iphone15": DeviceProfile(
+            name="iPhone 15 Pro",
+            memory_bandwidth=34.2,  # GB/s
+            compute_flops=3.2e12,   # 3.2 TFLOPS CPU
+            memory_size=8,          # 8GB RAM
+            neural_engine_tflops=35.0,  # 35 TFLOPS Neural Engine
+            cpu_cores=6,
+            cpu_freq=3.78,          # GHz
+            power_consumption=6.0,  # Watts (approximate under load)
+        ),
+        "macbook_m2": DeviceProfile(
+            name="MacBook M2",
+            memory_bandwidth=100.0,  # GB/s
+            compute_flops=10.0e12,   # 10 TFLOPS CPU
+            memory_size=16,          # 16GB RAM
+            neural_engine_tflops=15.8,  # 15.8 TFLOPS Neural Engine
+            cpu_cores=8,
+            cpu_freq=3.5,            # GHz
+            power_consumption=15.0,  # Watts (approximate under load)
+        ),
+        "macbook_m3": DeviceProfile(
+            name="MacBook M3",
+            memory_bandwidth=120.0,  # GB/s
+            compute_flops=12.0e12,   # 12 TFLOPS CPU
+            memory_size=24,          # 24GB RAM
+            neural_engine_tflops=18.0,  # 18 TFLOPS Neural Engine
+            cpu_cores=8,
+            cpu_freq=4.0,            # GHz
+            power_consumption=20.0,  # Watts (approximate under load)
+        ),
+        "pixel7": DeviceProfile(
+            name="Google Pixel 7",
+            memory_bandwidth=21.0,   # GB/s
