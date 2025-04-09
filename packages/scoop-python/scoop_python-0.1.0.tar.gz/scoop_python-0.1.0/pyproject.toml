@@ -1,0 +1,17 @@
+[project]
+name = "scoop-python"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jie Li", email = "lijiebio@outlook.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+scoop-python = "scoop_python:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
