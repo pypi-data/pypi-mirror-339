@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: TCdone
+Version: 0.1.5
+Summary: A Python package to download and manage tropical cyclone datasets like IBTrACS
+Author: Cong Gao
+Author-email: cong.gao@princeton.edu
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: tqdm
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# TCdone
+
+**TCdone** is a Python package for downloading and organizing tropical cyclone datasets.
+
+Currently supports:
+- 🌎 IBTrACS (International Best Track Archive for Climate Stewardship)
+
+## Example
+
+```python
+from TCdone import download_ibtracs
+download_ibtracs()
