@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: ont-koi
+Version: 0.5.4
+License-File: LICENCE.md
+Requires-Dist: cffi
+Dynamic: license-file
+Dynamic: requires-dist
