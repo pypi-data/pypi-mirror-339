@@ -1,0 +1,5 @@
+[console_scripts]
+tfa = tfa.cli:cli
+
+[gui_scripts]
+

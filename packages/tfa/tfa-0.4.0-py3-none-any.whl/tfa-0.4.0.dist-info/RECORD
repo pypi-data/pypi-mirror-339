@@ -1,0 +1,8 @@
+tfa-0.4.0.dist-info/METADATA,sha256=M0ngJYNxm6rZ0xCwc0_x52BvtZa2-BgvoiQTUmbJqdY,3570
+tfa-0.4.0.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+tfa-0.4.0.dist-info/entry_points.txt,sha256=ZHPHG0dNLB0ckOcES-pB1SamvOzqCPlyzKdCQyASp88,52
+tfa-0.4.0.dist-info/licenses/LICENSE,sha256=9Vdwm93jUrPisEj7UNr2vqN-yzSG7zesoJwRQZ8XyWo,1058
+tfa/__init__.py,sha256=wh2MOEQdBzJf0-Y5hK2wb-ageJHUBtP1kat6FoHpfbE,27
+tfa/cli.py,sha256=AUVIaOILkYZu6vxxfKAP0OzHYoVR-FRq-5Vua2veuNE,7201
+tfa/storage.py,sha256=zuyPiMyIVCBaaKG5jLYwmGmXQnNp4iiHUGXCCX9cqlY,2734
+tfa-0.4.0.dist-info/RECORD,,
