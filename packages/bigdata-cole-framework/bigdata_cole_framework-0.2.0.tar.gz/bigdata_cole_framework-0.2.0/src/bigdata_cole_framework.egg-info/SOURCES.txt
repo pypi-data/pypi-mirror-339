@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+src/bigdata_cole_framework/__init__.py
+src/bigdata_cole_framework/number_algorithms.py
+src/bigdata_cole_framework.egg-info/PKG-INFO
+src/bigdata_cole_framework.egg-info/SOURCES.txt
+src/bigdata_cole_framework.egg-info/dependency_links.txt
+src/bigdata_cole_framework.egg-info/requires.txt
+src/bigdata_cole_framework.egg-info/top_level.txt
