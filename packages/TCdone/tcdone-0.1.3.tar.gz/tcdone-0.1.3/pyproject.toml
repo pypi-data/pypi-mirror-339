@@ -1,0 +1,19 @@
+[project]
+name = "TCdone"
+version = "0.1.3"
+description = "A Python package to download and manage tropical cyclone datasets like IBTrACS"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [{ name = "Cong Gao", email = "cong.gao@princeton.edu" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Atmospheric Science"
+]
+
+dependencies = ["requests", "tqdm"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
