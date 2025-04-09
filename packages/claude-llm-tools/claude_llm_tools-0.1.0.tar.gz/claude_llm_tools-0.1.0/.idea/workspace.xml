@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="37e66bd3-80a7-4232-af56-7596ece0122b" name="Changes" comment="Refactor type annotations and improve schema generation.&#10;&#10;Added proper type annotations in `state.py` and adjusted schema generation logic in `jsonschema.py` for better readability and correctness. Integrated `mypy` with Pydantic plugin in `pyproject.toml` for enhanced static type checking.">
+      <change beforePath="$PROJECT_DIR$/claude_tools/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/claude_llm_tools/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/claude_tools/claude_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/claude_llm_tools/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/claude_tools/jsonschema.py" beforeDir="false" afterPath="$PROJECT_DIR$/claude_llm_tools/jsonschema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/claude_tools/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/claude_llm_tools/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/claude_tools/py.typed" beforeDir="false" afterPath="$PROJECT_DIR$/claude_llm_tools/py.typed" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/claude_tools/state.py" beforeDir="false" afterPath="$PROJECT_DIR$/claude_llm_tools/state.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_claude_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_claude_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_jsonschema.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_jsonschema.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Python Unit Test" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2vPgGkbwRgu6yfNUXMjZ92Rk5sf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.pytest in /.executor&quot;: &quot;Coverage&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/gmr/Source/gmr/claude-tools&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="pytest in /" type="tests" factoryName="py.test" nameIsGenerated="true">
+      <module name="claude-tools" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (claude-tools)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-b1dbf8ef85a6-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.26053.29" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add initial project setup for Claude-Tools&#10;&#10;This commit includes the foundational setup for the Claude-Tools library. It adds essential files, such as `pyproject.toml`, a BSD 3-Clause License, CI configurations for testing and publishing, a `README.md`, and initial implementation with tests. Pre-commit hooks and a `.gitignore` are also included for development workflow improvements." />
+    <MESSAGE value="Initial commit for Claude-Tools project&#10;&#10;Add core functionality for the Claude-Tools library, including tool registration and dispatch implementation. Set up CI workflows, PyPI publishing, and testing framework. Include project configuration files, license, and README documentation." />
+    <MESSAGE value="Add initial implementation of Claude-Tools library&#10;&#10;This commit introduces the Claude-Tools library for registering and managing tools compatible with the Anthropic Claude API. It includes core modules for tool state, JSON schema generation, and tool dispatching, alongside comprehensive tests and documentation in the README file." />
+    <MESSAGE value="Simplify imports and clean up docstrings.&#10;&#10;Removed unnecessary imports and trailing whitespace for better code clarity. Streamlined docstrings to make them more concise while maintaining essential details." />
+    <MESSAGE value="Refactor type annotations and improve schema generation.&#10;&#10;Added proper type annotations in `state.py` and adjusted schema generation logic in `jsonschema.py` for better readability and correctness. Integrated `mypy` with Pydantic plugin in `pyproject.toml` for enhanced static type checking." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor type annotations and improve schema generation.&#10;&#10;Added proper type annotations in `state.py` and adjusted schema generation logic in `jsonschema.py` for better readability and correctness. Integrated `mypy` with Pydantic plugin in `pyproject.toml` for enhanced static type checking." />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/claude_tools$pytest_in__.coverage" NAME="pytest in / Coverage Results" MODIFIED="1744066920798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
