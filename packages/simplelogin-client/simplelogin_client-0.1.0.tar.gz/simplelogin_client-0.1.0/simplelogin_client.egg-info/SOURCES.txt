@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+simplelogin.py
+simplelogin_client.egg-info/PKG-INFO
+simplelogin_client.egg-info/SOURCES.txt
+simplelogin_client.egg-info/dependency_links.txt
+simplelogin_client.egg-info/requires.txt
+simplelogin_client.egg-info/top_level.txt
