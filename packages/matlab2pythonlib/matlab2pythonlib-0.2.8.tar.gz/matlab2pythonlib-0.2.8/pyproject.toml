@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "matlab2pythonlib"
+version = "0.2.8"
+description = "Esta librería contiene funciones que permiten la conversión de fechas de formato MATLAB (datenum) al formato datetime de python. También contiene funciones para crear array de tiempo o convertir fácilmente fechas de formato datetime a datestr"
+readme = "README.md"
+authors = [{ name = "BelloDev", email = "fernandojbf123@gmail.com" }]
+license = { text = "MIT" }
+dependencies = []
