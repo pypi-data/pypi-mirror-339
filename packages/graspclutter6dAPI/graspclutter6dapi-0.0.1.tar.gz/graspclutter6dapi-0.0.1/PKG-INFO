@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: graspclutter6dAPI
+Version: 0.0.1
+Summary: GraspClutter6D API
+Home-page: https://sites.google.com/view/graspclutter6d
+Author: Seunghyeok Back
+Author-email: shback@kimm.re.kr
+Requires-Dist: scipy
+Requires-Dist: transforms3d==0.3.1
+Requires-Dist: open3d>=0.8.0.0
+Requires-Dist: trimesh
+Requires-Dist: tqdm
+Requires-Dist: Pillow
+Requires-Dist: opencv-python
+Requires-Dist: pillow
+Requires-Dist: matplotlib
+Requires-Dist: pywavefront
+Requires-Dist: trimesh
+Requires-Dist: scikit-image
+Requires-Dist: autolab_core
+Requires-Dist: autolab-perception
+Requires-Dist: cvxopt
+Requires-Dist: dill
+Requires-Dist: h5py
+Requires-Dist: scikit-learn
+Requires-Dist: grasp_nms
+Requires-Dist: numpy==1.23.4
