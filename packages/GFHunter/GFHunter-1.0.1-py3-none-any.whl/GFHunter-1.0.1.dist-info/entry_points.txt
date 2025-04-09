@@ -1,0 +1,2 @@
+[console_scripts]
+GFHunter = GFHunter.main:Parser_set
