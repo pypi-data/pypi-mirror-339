@@ -1,0 +1,13 @@
+type: PseudoMotor
+python_module: Slit.py
+python_class: Slit
+physical_roles:
+  sl2t: mot01
+  sl2b: mot02
+elements:
+  gap01:
+    axis: 1
+    instrument: /slit
+  offset01:
+    axis: 2
+    instrument: /slit
