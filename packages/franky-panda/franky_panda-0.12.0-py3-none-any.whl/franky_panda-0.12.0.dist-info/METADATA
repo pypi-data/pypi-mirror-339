@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: franky-panda
+Version: 0.12.0
+Summary: franky-panda is now franky-control
+Classifier: Development Status :: 7 - Inactive
+Description-Content-Type: text/markdown
+Requires-Dist: franky-control
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: summary
+
+# franky-panda is now franky-control
+
+This package has been renamed. Use `pip install franky-control` instead.
+
+New package: https://pypi.org/project/franky-control/
