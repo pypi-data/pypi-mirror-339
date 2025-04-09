@@ -1,0 +1,9 @@
+README.md
+setup.py
+afrivalid.egg-info/PKG-INFO
+afrivalid.egg-info/SOURCES.txt
+afrivalid.egg-info/dependency_links.txt
+afrivalid.egg-info/top_level.txt
+tests/test_phone.py
+validator/__init__.py
+validator/utils.py
