@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+evaluate_blog.egg-info/PKG-INFO
+evaluate_blog.egg-info/SOURCES.txt
+evaluate_blog.egg-info/dependency_links.txt
+evaluate_blog.egg-info/requires.txt
+evaluate_blog.egg-info/top_level.txt
