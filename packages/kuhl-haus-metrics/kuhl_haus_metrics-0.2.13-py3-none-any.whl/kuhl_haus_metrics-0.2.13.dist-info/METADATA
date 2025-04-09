@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: kuhl-haus-metrics
+Version: 0.2.13
+Summary: Application logging and instrumentation
+Author-Email: Tom Pounders <git@oldschool.engineer>
+License: The MIT License (MIT)
+         
+         Copyright (c) 2025 Tom Pounders
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+         in the Software without restriction, including without limitation the rights
+         to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+         copies of the Software, and to permit persons to whom the Software is
+         furnished to do so, subject to the following conditions:
+         
+         The above copyright notice and this permission notice shall be included in all
+         copies or substantial portions of the Software.
+         
+         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+         IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+         FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+         AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+         SOFTWARE.
+         
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Project-URL: Homepage, https://github.com/kuhl-haus
+Project-URL: Documentation, https://github.com/kuhl-haus/kuhl-haus-metrics/wiki
+Project-URL: Source, https://github.com/kuhl-haus/kuhl-haus-metrics.git
+Project-URL: Changelog, https://github.com/kuhl-haus/kuhl-haus-metrics/commits
+Project-URL: Tracker, https://github.com/kuhl-haus/kuhl-haus-metrics/issues
+Requires-Python: >=3.12
+Requires-Dist: fastapi
+Requires-Dist: importlib_metadata
+Requires-Dist: dataclasses-json
+Requires-Dist: importlib-metadata
+Provides-Extra: testing
+Requires-Dist: setuptools; extra == "testing"
+Requires-Dist: pdm-backend; extra == "testing"
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: pytest-cov; extra == "testing"
+Requires-Dist: pytest-asyncio; extra == "testing"
+Requires-Dist: httpx; extra == "testing"
+Requires-Dist: starlette; extra == "testing"
+Description-Content-Type: text/markdown
+
+<!-- These are examples of badges you might want to add to your README:
+   please update the URLs accordingly 
+
+[![ReadTheDocs](https://readthedocs.org/projects/kuhl-haus-metrics/badge/?version=latest)](https://kuhl-haus-metrics.readthedocs.io/en/stable/)
+
+[![Conda-Forge](https://img.shields.io/conda/vn/conda-forge/kuhl-haus-metrics.svg)](https://anaconda.org/conda-forge/kuhl-haus-metrics)
+
+-->
+
+[![License](https://img.shields.io/github/license/kuhl-haus/kuhl-haus-metrics)](https://github.com/kuhl-haus/kuhl-haus-metrics/blob/mainline/LICENSE.txt)
+[![PyPI](https://img.shields.io/pypi/v/kuhl-haus-metrics.svg)](https://pypi.org/project/kuhl-haus-metrics/)
+[![Downloads](https://static.pepy.tech/badge/kuhl-haus-metrics/month)](https://pepy.tech/project/kuhl-haus-metrics)
+[![Build Status](https://github.com/kuhl-haus/kuhl-haus-metrics/actions/workflows/publish-to-pypi.yml/badge.svg)](https://github.com/kuhl-haus/kuhl-haus-metrics/actions/workflows/publish-to-pypi.yml)
+[![CodeQL](https://github.com/kuhl-haus/kuhl-haus-metrics/workflows/CodeQL/badge.svg)](https://github.com/kuhl-haus/kuhl-haus-metrics/actions/workflows/github-code-scanning/codeql/)
+[![codecov](https://codecov.io/gh/kuhl-haus/kuhl-haus-metrics/branch/mainline/graph/badge.svg)](https://codecov.io/gh/kuhl-haus/kuhl-haus-metrics)
+[![GitHub issues](https://img.shields.io/github/issues/kuhl-haus/kuhl-haus-metrics)](https://github.com/kuhl-haus/kuhl-haus-metrics/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/kuhl-haus/kuhl-haus-metrics)](https://github.com/kuhl-haus/kuhl-haus-metrics/pulls)
+
+
+
+
+# kuhl-haus-metrics
+
+Application logging and instrumentation
+
+... more to come!
+
+
