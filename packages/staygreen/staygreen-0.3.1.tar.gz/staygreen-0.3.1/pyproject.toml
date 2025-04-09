@@ -1,0 +1,26 @@
+[project]
+name = "staygreen"
+version = "0.3.1"
+description = "Stay green"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pyautogui>=0.9.54",
+]
+
+[project.urls]
+Homepage = "https://codeberg.org/berk76/stay-green"
+Repository = "https://codeberg.org/berk76/stay-green"
+Issues = "https://codeberg.org/berk76/stay-green/issues"
+
+[project.scripts]
+test = "staygreen.green:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = [
+    "staygreen/*",
+]
