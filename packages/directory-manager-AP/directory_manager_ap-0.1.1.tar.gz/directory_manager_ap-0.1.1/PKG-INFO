@@ -1,0 +1,59 @@
+Metadata-Version: 2.4
+Name: directory-manager-AP
+Version: 0.1.1
+Summary: Универсальный инструмент для работы с директориями и файлами
+Author: Александр
+Author-email: sanyapetrooo@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# directory_manager
+
+`directory_manager` — удобная библиотека для управления файлами и директориями в Python.
+
+Она предоставляет готовые инструменты для:
+- создания и удаления директорий и файлов
+- копирования с фильтрацией по расширениям
+- очистки директорий без удаления самих папок
+- архивирования и разархивирования `.zip`
+- логирования всех операций
+
+## Установка
+```bash
+pip install dir_manager
+```
+
+## Пример
+```python
+from directory_manager import DirectoryManager
+from pathlib import Path
+
+dm = DirectoryManager("workspace")
+
+# Создание папки и файла
+dm.create_dir(Path("workspace/new_folder"))
+dm.create_file(Path("workspace/new_folder/example.txt"), "Привет, мир!")
+
+# Копирование всех .txt файлов без вложенности
+dm.copy_flat(Path("workspace"), Path("backup"), extensions=[".txt"])
+
+# Архивация
+dm.zip_dir(Path("workspace"), Path("workspace.zip"))
+
+# Очистка папки
+dm.clear_dir(Path("workspace"))
+```
