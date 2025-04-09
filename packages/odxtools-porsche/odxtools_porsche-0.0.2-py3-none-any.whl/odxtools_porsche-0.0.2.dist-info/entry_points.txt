@@ -1,0 +1,2 @@
+[console_scripts]
+odxtools = odxtools_porsche.__init__:_main
