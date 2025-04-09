@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: hoanggiakiet
+Version: 2.0.7
+Summary: hoanggiakiet: Customized Zalo API for Python
+Author: Hoang Gia Kiet
+Author-email: hoanggiakiet@gmail.com
+Keywords: python,zalo,api,zalo api,zalo chat,requests,hoanggiakiet
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# hoanggiakiet
+A customized Zalo API module for Python.
+
+## Installation
+```bash
+pip install hoanggiakiet
