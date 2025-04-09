@@ -1,0 +1,74 @@
+[project]
+name = "evo-sdk-common"
+description = "Python package that establishes a common framework for use by client libraries that interact with Seequent Evo APIs"
+version = "0.1.1"
+requires-python = ">=3.10"
+license-files = ["LICENSE.md"]
+readme = "README.md"
+authors = [
+    { name = "Seequent", email = "support@seequent.com" }
+]
+dependencies = [
+    # Specify the minimum versions to avoid security issues.
+    "pure-interface>=8.0.0",
+    "pydantic>=2",
+    "python-dateutil",
+]
+
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+aiohttp = ["aiohttp"]
+notebooks = [
+    "evo-sdk-common[aiohttp]",
+    "ipython",
+    "ipywidgets",
+    "python-dotenv",
+]
+
+[dependency-groups]
+# Dev dependencies. The version is left unspecified so the latest is installed.
+test = [
+    "evo-sdk-common[aiohttp]",
+    "freezegun",
+    "parameterized==0.9.0",
+    "pytest",
+]
+dev = [
+    "evo-sdk-common[aiohttp]",
+    "bumpver",
+    "coverage[toml]",
+    "ruff==0.9.1", # keep in sync with .pre-commit-config.yaml
+    "pre-commit",
+    {include-group="test"},
+]
+notebooks = [
+    "evo-sdk-common[aiohttp,notebooks]",
+    "jupyter",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true
+
+[tool.ruff]
+src = ["src", "tests"]
+line-length = 120
+
+[tool.ruff.lint]
+extend-select = ["I", "RUF022"]
+
+[tool.bumpver]
+current_version = "v0.1.0"
+version_pattern = "vMAJOR.MINOR.PATCH[.PYTAGNUM]"
+commit = "True"
+tag = "True"
+commit_message = "Bump version from {old_version} to {new_version}"
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'version = "{pep440_version}"',
+    'current_version = "{version}"',
+]

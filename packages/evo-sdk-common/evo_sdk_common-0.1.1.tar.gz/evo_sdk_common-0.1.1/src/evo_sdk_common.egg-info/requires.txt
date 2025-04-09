@@ -1,0 +1,12 @@
+pure-interface>=8.0.0
+pydantic>=2
+python-dateutil
+
+[aiohttp]
+aiohttp
+
+[notebooks]
+evo-sdk-common[aiohttp]
+ipython
+ipywidgets
+python-dotenv
