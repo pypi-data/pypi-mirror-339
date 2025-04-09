@@ -1,0 +1,3 @@
+"""
+Examples for iiko-pkg
+"""
