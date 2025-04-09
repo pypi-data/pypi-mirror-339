@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: pymathisrte
+Version: 0.2.0
+Summary: A library to have access to MATHIS
+Author: Tatien Dubreuil
+Author-email: tatien.dubreuil@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Requires-Dist: requests
+Requires-Dist: pyarrow
+Requires-Dist: dotenv
+Requires-Dist: pandas
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
