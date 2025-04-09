@@ -1,0 +1,2 @@
+[console_scripts]
+stack-upgrade-analyzer = stack_upgrade_analyzer.cli:main
