@@ -1,0 +1,11 @@
+examples/basic_example.py,sha256=kJF7uA2IMyDqcLjrgvShj4xdMIGGc8gP7VyYB3wnuwQ,243
+tatapov/__init__.py,sha256=vnD81k88p0rNBom-r-sNOHhE6Qv_IAIuqc0x2CG5xjg,227
+tatapov/annealing_data.py,sha256=gIHxx_UktMBZum1CteOI2LPhWqLDi5rwlrATgAhZj9I,3413
+tatapov/utils.py,sha256=ABrFEI_EvkKfJ-c-S2suhoMO2BGBaHGxvW9-det6T9c,4824
+tatapov/version.py,sha256=PNiDER4qM19h9zdsdfgKt2_dT4WgYK7EguJ8RU2qA_g,22
+tatapov-0.2.3.dist-info/licenses/LICENCE.txt,sha256=7Bd__JnWy8cGpMCDDgv1BiMNHNkqThPmeIn2WVZ3SlI,1106
+tests/test_basics.py,sha256=GYfzeIOuZ4ILP3Zzdy8jMofTiExhdx_LbJv-kIa7aCk,3408
+tatapov-0.2.3.dist-info/METADATA,sha256=EkfdriH4vHyiqpYzZIKd1BlJrnk0K9ecemChC1FOECg,4988
+tatapov-0.2.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+tatapov-0.2.3.dist-info/top_level.txt,sha256=6xXiwr1fWLoNHf1FC_vPMSqDsR2BoiA3pf6lKuc9ylw,23
+tatapov-0.2.3.dist-info/RECORD,,
