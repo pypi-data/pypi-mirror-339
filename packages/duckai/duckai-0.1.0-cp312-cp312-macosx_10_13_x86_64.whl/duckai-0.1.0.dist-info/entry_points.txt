@@ -1,0 +1,2 @@
+[console_scripts]
+duckai = duckai.cli:safe_entry_point
