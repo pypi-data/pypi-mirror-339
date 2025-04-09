@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "compat-patcher-core"
+version = "2.3"
+authors = [
+    {name = "Pascal Chambon", email = "pythoniks@gmail.com"},
+]
+description = "A patcher system to allow easy and lasting API compatibility"
+readme = "README.rst"
+requires-python = ">=3.7"
+license = {text = "MIT"}  # Fixme later, use SPDX license string instead
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: System :: Filesystems",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: Unix",
+    "Operating System :: MacOS :: MacOS X",
+]
+dependencies = [
+]
+
+[project.urls]
+Repository = "https://github.com/pakal/compat-patcher-core"
+Documentation = "https://compat-patcher-core.readthedocs.io/"
+
+[tool.setuptools]
+include-package-data = false
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["compat_patcher_core*"]
+exclude = ["tests*"]  # exclude packages matching these glob patterns (empty by default)
+namespaces = true
