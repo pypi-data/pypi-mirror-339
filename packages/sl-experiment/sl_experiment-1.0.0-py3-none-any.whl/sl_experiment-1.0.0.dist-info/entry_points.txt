@@ -1,0 +1,10 @@
+[console_scripts]
+sl-crc = sl_experiment.cli:calculate_crc
+sl-devices = sl_experiment.cli:list_devices
+sl-experiment = sl_experiment.cli:run_experiment
+sl-lick-train = sl_experiment.cli:lick_training
+sl-maintain-vr = sl_experiment.cli:maintain_vr
+sl-process = sl_experiment.cli:preprocess_session
+sl-purge = sl_experiment.cli:purge_data
+sl-replace-root = sl_experiment.cli:replace_root_path
+sl-run-train = sl_experiment.cli:run_training
