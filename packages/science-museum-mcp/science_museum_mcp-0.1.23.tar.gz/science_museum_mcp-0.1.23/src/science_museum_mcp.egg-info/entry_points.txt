@@ -1,0 +1,2 @@
+[console_scripts]
+science-museum-mcp = science_museum_mcp:main
