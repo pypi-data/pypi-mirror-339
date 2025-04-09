@@ -1,0 +1,12 @@
+appdirs
+generative-ai-hub-sdk[all]
+langchain-ollama
+langchain
+langgraph
+langgraph-checkpoint-sqlite
+pydantic
+tavily-python
+colorama
+langchain-mcp-adapters
+aiosqlite
+grandalf
