@@ -1,0 +1,105 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llama-scheduler"
+version = "0.1.0"
+description = "General-purpose job scheduling service for the LlamaAI Ecosystem."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}, # Replace
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Systems Administration",
+]
+dependencies = [
+    # Core scheduling library
+    "apscheduler>=3.10.0",
+
+    # Core utilities
+    "pydantic>=1.10.0", # For configuration/job definitions
+    "loguru>=0.7.0",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0", # For loading job definitions
+
+    # Potential Integration points
+    "httpx>=0.24.0", # For triggering jobs via HTTP requests
+    # "celery>=5.3.0", # If submitting jobs to llama-distributed
+    # "redis[hiredis]>=4.5.0", # If using Redis for state or locking
+
+    # Internal Dependencies (APIs/Tasks it might trigger)
+    # "llama-distributed>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.3.1",
+    "pytest-cov>=4.1.0",
+    "pytest-asyncio", # For testing async scheduler/jobs
+    "black>=23.3.0",
+    "isort>=5.12.0",
+    "mypy>=1.2.0",
+    "ruff>=0.0.260",
+    "pre-commit>=3.3.1",
+    "pytest-mock>=3.10.0",
+    "freezegun>=1.2.0", # For testing schedules
+    "httpx", # For mocking API calls
+]
+docs = [
+    "mkdocs>=1.4.2",
+    "mkdocs-material>=9.1.6",
+    "mkdocstrings[python]>=0.20.0",
+]
+celery = ["celery>=5.3.0"]
+redis = ["redis[hiredis]>=4.5.0"]
+all = [
+    "llama-scheduler[dev,docs,celery,redis]"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/llama-scheduler-pkg"
+"Bug Tracker" = "https://github.com/yourusername/llama-scheduler-pkg/issues"
+"Documentation" = "https://yourusername.github.io/llama-scheduler-pkg/"
+
+# No CLI script defined by default, likely run as a service
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/llama_scheduler"]
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+ignore_missing_imports = true # APScheduler might need specific ignores
+
+[tool.ruff]
+line-length = 88
+select = ["E", "W", "F", "I", "C", "B", "A", "ASYNC"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+asyncio_mode = "auto" 
