@@ -1,0 +1,12 @@
+c4f/__init__.py,sha256=CV7wZ7ljQIx5Wiz6XRP6mtMIW4DfzWMf6t_JSinsRyw,3750
+c4f/__main__.py,sha256=YqZSXQhHK7X2DCXK8Xdq7THHZNawseuZMxAU-wIgxJI,197
+c4f/cli.py,sha256=JW8LC4QaR-UrV1EFufdjluwHI0Y-yF-4IpggNFs6S2k,18228
+c4f/config.py,sha256=r238iBi6Y_azHfYtaAelqrpURpcXuKkPUnAonlMNg7g,3743
+c4f/main.py,sha256=0DJJrmXLEzwArHqBqa_JtW2jHT5t06sJN_2pn6cGL2M,50336
+c4f/py.typed,sha256=qK8p1S5jrFCIX328p4LXpTSZ2GXMcDYyeBnfPYr9N9A,130
+c4f/utils.py,sha256=S-tXKcjOeqZ3tmBV-X_UfThnddAt24XL6mVRTrB8UW4,39113
+commit_for_free-1.1.0.dist-info/entry_points.txt,sha256=58repUIeTbCMtuGcz6dKV41B2RGLtUj9plMysXhIWb8,79
+commit_for_free-1.1.0.dist-info/LICENSE,sha256=rozGeez7vvOwEilHh5DBnV1UKSuq-ock-UPqcgMk-YM,1084
+commit_for_free-1.1.0.dist-info/METADATA,sha256=tD6gfysW2MqQvuiHt3tEbcw8NXjSOS45jnWiZIx7ZaI,11017
+commit_for_free-1.1.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+commit_for_free-1.1.0.dist-info/RECORD,,
