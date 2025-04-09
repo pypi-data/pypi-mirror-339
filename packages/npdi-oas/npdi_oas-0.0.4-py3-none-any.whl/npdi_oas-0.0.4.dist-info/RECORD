@@ -1,0 +1,12 @@
+npdi_oas/agencies.py,sha256=dpGKIwf4eW2t936UXw_3T6vRx5dglzE1dPGVpbGdG40,8199
+npdi_oas/complaints.py,sha256=-pp39ASYDa3uk7AKH0qB1i-NFZfKqG2jmEcX2BFkYM0,14865
+npdi_oas/error.py,sha256=TCdaHptO51yuQzPfmbaVDbowHxNFFtulple8h9pme4c,174
+npdi_oas/litigation.py,sha256=lX90pdfNx6R8HOPMonib3vnhoAp5KuHDYhl5Kem584M,9511
+npdi_oas/officers.py,sha256=XXUIyrMrI5GLKPx8SK20qTeQXS--KDCS4Q9oc8q7mBE,11006
+npdi_oas/pagination.py,sha256=bjbyCg21QU7qTY79XpeQ3v1Y0oGv1IYlpDpiV6BgBv0,238
+npdi_oas/sources.py,sha256=Hueadpu0Xp7oSZgwhGsLtQMeew-RMnV6DK_4Xwd-8eg,4294
+npdi_oas/users.py,sha256=_2T168dyqzwCEA4E4ZtYfamOt2ZGtfzFIBMWqpf1hx4,3089
+npdi_oas-0.0.4.dist-info/METADATA,sha256=NaUQjgozp2OP2fd3qKgxHDre_ilSMRg4BwRVPsoN5TI,2181
+npdi_oas-0.0.4.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+npdi_oas-0.0.4.dist-info/top_level.txt,sha256=oywrJKOFKrBq3EcDAyQ8BylFt5_qwE3dFDQxE5SsKTk,9
+npdi_oas-0.0.4.dist-info/RECORD,,
