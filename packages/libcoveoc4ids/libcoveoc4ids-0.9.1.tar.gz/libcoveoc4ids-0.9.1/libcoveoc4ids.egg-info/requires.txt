@@ -1,0 +1,10 @@
+click
+libcove>=0.32
+libcoveocds<0.17,>=0.12.7
+
+[perf]
+orjson>=3
+
+[test]
+coverage
+pytest
