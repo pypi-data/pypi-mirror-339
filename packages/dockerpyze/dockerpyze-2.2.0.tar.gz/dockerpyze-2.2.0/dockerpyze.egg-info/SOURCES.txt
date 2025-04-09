@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+dockerpyze/__init__.py
+dockerpyze/builder.py
+dockerpyze/poetry_plugin.py
+dockerpyze.egg-info/PKG-INFO
+dockerpyze.egg-info/SOURCES.txt
+dockerpyze.egg-info/dependency_links.txt
+dockerpyze.egg-info/entry_points.txt
+dockerpyze.egg-info/requires.txt
+dockerpyze.egg-info/top_level.txt
+tests/test_builder.py
