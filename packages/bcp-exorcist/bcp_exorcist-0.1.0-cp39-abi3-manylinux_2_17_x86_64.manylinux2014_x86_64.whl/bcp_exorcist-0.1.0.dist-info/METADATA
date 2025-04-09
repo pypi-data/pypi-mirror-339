@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: bcp_exorcist
+Version: 0.1.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Rust
+License-File: LICENSE
+Summary: Cleans up SQL Server's bcp Export
+Keywords: bcp,csv
+Author-email: Vasilis Bardakos <vasilisbardakos@gmail.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Repository, https://github.com/vbardakos/bcp-exorcist
+
+# bcp-exorcist
+Cleans up SQL Server's bcp Export
+
