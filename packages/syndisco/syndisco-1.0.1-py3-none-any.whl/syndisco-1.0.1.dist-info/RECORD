@@ -1,0 +1,17 @@
+syndisco/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+syndisco/experiments.py,sha256=EoGZ7s-fGDM_G-ekY4NG6u-uekAi3YMWLPneq4Nmw88,11187
+syndisco/jobs.py,sha256=jcT3Hc_es9FN_-SQmCJGrOEFD8lQp3S1d6SswiFKxs8,13476
+syndisco/postprocessing.py,sha256=bp6Ei9TraWTfUfbYq1AWObpTR6rHH5APcUPUvMvXOK8,9837
+syndisco/backend/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+syndisco/backend/actors.py,sha256=3uAwb2kTM0ydnHbdwBUitRk_oRejqIdiqtT2zHRxZMk,6982
+syndisco/backend/model.py,sha256=oNz2yb8NTAGStkO6qF2xwwWyjE3f0IyaVvGw6mQ6hhc,5063
+syndisco/backend/persona.py,sha256=FPckROuU4zqMyctRJh3DUIkacnlHFhZ7kJwlFXhOFyU,3179
+syndisco/backend/turn_manager.py,sha256=OCI6m38Qq5vGoJwmWsCeUe62VaxpJ6a5QQWoflI69FI,4778
+syndisco/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+syndisco/util/file_util.py,sha256=o4TwL9ZkqlqzBDMD3OpBRi6S8ecMEAQO-oOGUkojrbA,4337
+syndisco/util/logging_util.py,sha256=WtI0CIn41RJiOOKSxD_QyzBjz5lDso0yPC80qF4ibdM,4255
+syndisco/util/model_util.py,sha256=HQRwBkiG633aT0xnPX8LZlqJ_WgEekqiVIQvN-AthPQ,2895
+syndisco-1.0.1.dist-info/METADATA,sha256=eFYTM6TgsvFfYgqOXIbal2wmumSBG9y54A-lhMG0YK4,4266
+syndisco-1.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+syndisco-1.0.1.dist-info/licenses/LICENSE,sha256=x_u0vWbOI5jbW2ERGXhNPehMs5tU48CkBJOeO48bdXs,32174
+syndisco-1.0.1.dist-info/RECORD,,
