@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+plotly_upset/__init__.py
+plotly_upset/plotting.py
+plotly_upset/util.py
+plotly_upset_hd.egg-info/PKG-INFO
+plotly_upset_hd.egg-info/SOURCES.txt
+plotly_upset_hd.egg-info/dependency_links.txt
+plotly_upset_hd.egg-info/requires.txt
+plotly_upset_hd.egg-info/top_level.txt
