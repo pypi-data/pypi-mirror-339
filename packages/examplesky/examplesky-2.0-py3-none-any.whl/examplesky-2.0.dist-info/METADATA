@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: examplesky
+Version: 2.0
+Summary: An example Python package for use in a PyTexas 2025 tutorial by Al Sweigart.
+Author-email: Al Sweigart <al@inventwithpython.com>
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+# examplesky
+An example Python package for use in a PyTexas 2025 tutorial by Al Sweigart.
