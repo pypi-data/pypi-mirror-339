@@ -1,0 +1,11 @@
+herastrip/__init__.py,sha256=WDSkBY_mGKHlUjRMHinecALn5EpDgGelk7OU2uyusNc,237
+herastrip/__main__.py,sha256=7hV9Y36hiejavazyvHbB77BAX2L71W8pKgnAXGkKPNo,116
+herastrip/main.py,sha256=SaygocJoYvUeRw368xaGp_C6rElY31MUEwJBk64iYrg,1612
+herastrip/plotting.py,sha256=Riu4J26gOmMQtrGac9DCeQkmNzPLTNH4Kxc_lYW6UP0,5703
+herastrip/simulation.py,sha256=lDEWo_vAnAAqIXJfn34Oljg7Ius1wyzAcqv5FhGfwdI,2360
+herastrip/sky_model.py,sha256=lAKkGTF0rZBv-JWfbKCalA0iuF6ykEp1Dk3AF1_ofDc,932
+hera_strip-0.1.0.dist-info/METADATA,sha256=wkiml_VBsHJbMVT-jRr47a5cd2YNWHyxIXyndcsdu-g,2675
+hera_strip-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+hera_strip-0.1.0.dist-info/entry_points.txt,sha256=-fnk0Zd3u24DW9_sMP207PlU7iPpteIbC7QY7_L-2zw,51
+hera_strip-0.1.0.dist-info/top_level.txt,sha256=jctpujGsmeVEfPWZXkTl1vMvkGnQvVvADFwpBYOGJjE,10
+hera_strip-0.1.0.dist-info/RECORD,,
