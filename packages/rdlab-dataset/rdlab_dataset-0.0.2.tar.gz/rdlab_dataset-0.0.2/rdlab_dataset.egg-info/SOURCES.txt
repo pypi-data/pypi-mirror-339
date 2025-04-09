@@ -1,0 +1,8 @@
+README.md
+setup.py
+rdlab-dataset/__init__.py
+rdlab-dataset/module.py
+rdlab_dataset.egg-info/PKG-INFO
+rdlab_dataset.egg-info/SOURCES.txt
+rdlab_dataset.egg-info/dependency_links.txt
+rdlab_dataset.egg-info/top_level.txt
