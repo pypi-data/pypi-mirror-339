@@ -1,0 +1,147 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llama-d5"
+version = "0.1.0"
+description = "A comprehensive document and web page conversion toolkit powered by Llama AI"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Llama D5 Team", email = "team@llamad5.dev"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License", # Check LICENSE file
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Documentation",
+    "Topic :: Internet :: WWW/HTTP :: Browsers",
+    "Topic :: Text Processing",
+    "Topic :: Utilities",
+]
+dependencies = [
+    # Core
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "pydantic>=2.4.2",
+    "pydantic-settings>=2.0.3",
+    "python-dotenv>=1.0.0",
+    "setuptools>=68.0.0", # Often needed implicitly
+
+    # Web Scraping/Automation
+    "cloudscraper>=1.2.60",
+    "beautifulsoup4>=4.12.2",
+    "playwright>=1.40.0",
+    "requests>=2.31.0",
+    "requests-html>=0.10.0",
+    "playwright-stealth>=1.0.7",
+    "playwright-pdf>=0.1.3",
+    "tf-playwright-stealth>=0.1.0", # Note: Two tf-playwright-stealth entries were in requirements
+    "aiohttp>=3.8.3",
+    "fake-useragent>=1.1.1",
+    "undetected-chromedriver>=3.2.0",
+    "selenium>=4.8.0",
+    "selenium-stealth>=1.0.6",
+    "shot-scraper>=0.9.0",
+
+    # Document Conversion/Handling
+    "pillow>=10.0.0",
+    "img2pdf>=0.5.0",
+    "markdown>=3.5.1",
+    "weasyprint>=60.1",
+    "docx2pdf>=0.1.8",
+    "pypdf>=4.0.0",
+    "reportlab>=4.0.4",
+    "pikepdf>=6.2.5",
+    "pypdf2>=2.12.1",
+    "pdfkit>=1.0.0", # Requires wkhtmltopdf installed separately
+    "markdown2>=2.4.6",
+
+    # AI/LLM & Processing
+    "llama-index-tools-playwright>=0.1.0",
+    "openai>=1.0.0",
+    "numpy>=1.24.2",
+    "opencv-python-headless>=4.7.0.68",
+    "anticaptchaofficial>=1.0.54",
+    "langchain>=0.0.267",
+    "mlx>=0.8.0", # Check if needed/used
+    "llm-cmd>=0.1.0",
+    "llm-mlx>=0.2.0", # Check if needed/used
+
+    # Misc
+    "tqdm>=4.66.1",
+    "networkx>=3.2",
+
+    # Potentially from FastAPI section - keep if running a server
+    "fastapi>=0.104.0",
+    "uvicorn>=0.23.2",
+    "sqlalchemy>=2.0.23",
+    "alembic>=1.12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.3",
+    "pytest-cov>=4.1.0",
+    "pytest-playwright>=0.7.0", # Already included? Playwright base depends on it?
+    "pytest-playwright-asyncio>=0.7.0",
+    "tox>=4.11.3",
+    "pytest-sugar>=0.9.7",
+    "pytest-mock>=3.12.0",
+    "black>=23.10.1",
+    "isort>=5.12.0",
+    "mypy>=1.6.1",
+    "flake8>=6.1.0",
+    "ruff>=0.0.260", # Note: flake8 and ruff overlap significantly
+    "uv>=0.1.0", # Build tool
+    "pre-commit>=3.5.0",
+]
+all = [
+    "llama-d5[dev]"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/llama-ai/llama-d5"
+"Bug Tracker" = "https://github.com/llama-ai/llama-d5/issues"
+
+[project.scripts]
+llama-d5 = "llama_d5.llamadoc2pdf.main:run"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/llama_d5"] # Initial guess
+
+[tool.black]
+line-length = 100 # Match setting from requirements.txt section
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+# settings from requirements.txt section
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "C", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+
+[tool.tox]
+# tox.ini equivalent configuration if needed 

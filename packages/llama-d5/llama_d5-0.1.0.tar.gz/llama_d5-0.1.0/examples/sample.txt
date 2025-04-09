@@ -1,0 +1,11 @@
+Sample Text Document
+
+This is a simple text file that will be converted to PDF.
+It contains multiple lines of text that should be properly
+formatted in the resulting PDF document.
+
+1. First item
+2. Second item
+3. Third item
+
+The conversion should preserve spacing and line breaks. 
