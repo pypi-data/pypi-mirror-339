@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: ess-cloud-utils
+Version: 0.27
+Summary: Set of utils to support cloud deployments
+Author: Mykola Zelenku and Kamil Szewc
+Author-email: 
+License: Apache2
+Keywords: ESS
+Requires-Python: >=3.8
+License-File: LICENSE.txt
+Requires-Dist: requests
+Requires-Dist: py-eureka-client
