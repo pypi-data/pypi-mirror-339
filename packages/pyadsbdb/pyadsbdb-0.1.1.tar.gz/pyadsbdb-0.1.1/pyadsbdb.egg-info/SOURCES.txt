@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pyadsbdb.egg-info/PKG-INFO
+pyadsbdb.egg-info/SOURCES.txt
+pyadsbdb.egg-info/dependency_links.txt
+pyadsbdb.egg-info/requires.txt
+pyadsbdb.egg-info/top_level.txt
+tests/test_client.py

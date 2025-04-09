@@ -1,0 +1,86 @@
+Metadata-Version: 2.4
+Name: pyadsbdb
+Version: 0.1.1
+Summary: A Python wrapper for the adsbdb API
+Home-page: https://github.com/ttheek/pyadsbdb
+Author: T.Theekshana
+Project-URL: Homepage, https://github.com/ttheek/pyadsbdb
+Project-URL: Issues, https://github.com/ttheek/pyadsbdb/issues
+Project-URL: Repository, https://github.com/ttheek/pyadsbdb.git
+Keywords: api,adsb
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# pyadsbdb
+
+<p align="center">
+  <img src="https://github.com/mrjackwills/adsbdb/blob/main/.github/logo.svg" alt="ADSBDB Logo" width="150">
+</p>
+
+pyadsbdb is a Python wrapper for the [adsbdb](https://github.com/mrjackwills/adsbdb) API by [Jack Wills](https://github.com/mrjackwills), allowing easy access to aircraft, flight route, and airline data.
+
+## Installation
+
+Install the package using pip:
+```sh
+pip install pyadsbdb
+```
+
+## Usage
+
+### Import and Initialize
+```python
+from pyadsbdb import Client
+
+client = Client()
+```
+
+### Get Aircraft Data
+```python
+result = client.get_aircraft_data("A1B2C3")
+print(result)
+```
+
+### Get Flight Route Data
+```python
+result = client.get_flight_route("BA123")
+print(result)
+```
+
+### Get Airline Data
+```python
+result = client.get_airline("BA")
+print(result)
+```
+
+### Convert Mode-S to N-Number
+```python
+result = client.mode_s_to_n_number("A1B2C3")
+print(result)
+```
+
+### Convert N-Number to Mode-S
+```python
+result = client.n_number_to_mode_s("N12345")
+print(result)
+```
+
+### Get API Online Status
+```python
+result = client.get_online_status()
+print(result)
+```
+
+## License
+
+This project is licensed under the MIT License.
+
