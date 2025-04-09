@@ -1,0 +1,11 @@
+README.md
+setup.py
+fastapi_herry_base/__init__.py
+fastapi_herry_base/base_config.py
+fastapi_herry_base/base_factory.py
+fastapi_herry_base/main.py
+fastapi_herry_base.egg-info/PKG-INFO
+fastapi_herry_base.egg-info/SOURCES.txt
+fastapi_herry_base.egg-info/dependency_links.txt
+fastapi_herry_base.egg-info/requires.txt
+fastapi_herry_base.egg-info/top_level.txt

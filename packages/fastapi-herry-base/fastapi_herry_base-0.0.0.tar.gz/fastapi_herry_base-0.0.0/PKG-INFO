@@ -1,0 +1,27 @@
+Metadata-Version: 2.2
+Name: fastapi_herry_base
+Version: 0.0.0
+Summary: A short description of your module
+Home-page: https://github.com/szx21023/fastapi-base
+Author: szx21023
+Author-email: szx21023@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# fastapi-base
+
+python setup.py sdist bdist_wheel
+twine upload dist/*
