@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: pydamic
+Version: 0.2.5
+Summary: Basic data structures library for Python
+Author-email: Uriya <uriabarsela1234@gmail.com>
+Project-URL: Homepage, https://github.com/yourusername/pydamic
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Pydamic
+
+📦 ספריית מבני נתונים בסיסיים בפייתון.
+
+תומך ב־Queue, Stack ועוד.
+
+## התקנה
+
+```bash
+pip install pydamic
