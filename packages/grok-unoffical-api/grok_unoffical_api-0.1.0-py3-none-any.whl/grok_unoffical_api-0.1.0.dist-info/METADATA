@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: grok_unoffical_api
+Version: 0.1.0
+Summary: Unofficial Grok API
+Home-page: https://github.com/enciyo/grok-unofficial-api
+Author: Mustafa K
+Author-email: ben@mustafakilic.dev
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
