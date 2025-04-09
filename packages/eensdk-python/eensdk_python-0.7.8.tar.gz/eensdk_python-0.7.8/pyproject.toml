@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "eensdk-python"
+version = "0.7.8"
+description = "A Python SDK for the Eagle Eye Networks VMS"
+authors = ["Darrell Malone Jr. <dmalone@een.com>"]
+readme = "docs/README.md"
+license = "MIT"
+packages = [
+    { include = "een" }
+]
+
+include = ["docs/LICENSE"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+ruff = "^0.4.0"
+
+[tool.ruff]
+target-version = "py311"
+
+[tool.ruff.per-file-ignores]
+"een/__init__.py" = ["F401"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
