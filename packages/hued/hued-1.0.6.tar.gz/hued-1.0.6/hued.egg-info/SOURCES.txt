@@ -1,0 +1,11 @@
+LICENSE
+setup.py
+hued/__init__.py
+hued/analysis.py
+hued/colors.py
+hued/conversions.py
+hued/palettes.py
+hued.egg-info/PKG-INFO
+hued.egg-info/SOURCES.txt
+hued.egg-info/dependency_links.txt
+hued.egg-info/top_level.txt
