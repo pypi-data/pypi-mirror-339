@@ -1,0 +1,191 @@
+Metadata-Version: 2.4
+Name: sven-client
+Version: 0.2.0.dev0
+Summary: Sven CLI client for agent automation
+Author-email: Sven Team <info@swedishembedded.com>
+License: MIT
+Project-URL: Homepage, https://git.swedishembedded.com/core/platform/sven
+Project-URL: Bug Tracker, https://git.swedishembedded.com/core/platform/sven/-/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.28.0
+Requires-Dist: rich
+Requires-Dist: httpx>=0.28.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: tabulate
+Requires-Dist: langchain>=0.2.0
+Requires-Dist: langchain-openai>=0.2.0
+Requires-Dist: langchain-anthropic>=0.2.0
+Requires-Dist: langchain-community>=0.2.0
+Requires-Dist: anthropic
+Requires-Dist: mcp
+Requires-Dist: pyyaml
+Requires-Dist: agno
+Requires-Dist: pypdf
+Requires-Dist: bs4
+Requires-Dist: lancedb
+Requires-Dist: psycopg2-binary
+Requires-Dist: openai
+Requires-Dist: pgvector
+Requires-Dist: pandas
+Requires-Dist: gitpython
+Requires-Dist: python-gitlab
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: isort>=5.12.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: ruff>=0.0.270; extra == "dev"
+Requires-Dist: pre-commit>=3.0.0; extra == "dev"
+Requires-Dist: bump2version>=1.0.0; extra == "dev"
+Requires-Dist: tox>=4.0.0; extra == "dev"
+Requires-Dist: build>=1.0.0; extra == "dev"
+Requires-Dist: types-PyYAML; extra == "dev"
+Requires-Dist: build; extra == "dev"
+
+# Sven
+
+Sven is the CLI client for ActiveAgent, providing a command-line interface for interacting with the ActiveAgent server.
+
+## Installation
+
+```bash
+pip install sven
+```
+
+## Usage
+
+```bash
+# Basic usage
+sven --help
+
+# Connect to a server
+sven client --url http://localhost:8000
+
+# Run an agent
+sven agent run --name my-agent
+
+# List available tools
+sven tools list
+
+# Store question-answer pairs
+sven qa store --file examples/qa_example.json
+
+# Query the question-answer database
+sven qa query "How do I create a branch in Git?"
+```
+
+## Configuration
+
+Sven can be configured using a YAML configuration file. Create a `.sven.yml` file in your home directory or project directory:
+
+```yaml
+api_url: "https://api.swedishembedded.com"
+api_port: 443
+api_key: "your-api-key-here"
+model: "claude-3-7-sonnet-latest"
+persona: "coder"
+```
+
+See the [configuration documentation](docs/configuration.md) for more details on how to configure Sven and provide API keys.
+
+## Features
+
+### Question-Answer Database
+
+Sven provides commands to interact with a semantic question-answer database:
+
+```bash
+# Store question-answer pairs from a JSON or YAML file
+sven qa store --file examples/qa_example.json
+
+# Query the database using semantic search
+sven qa query "How do I create a branch in Git?"
+```
+
+The questions and answers are organized into categories and can include metadata. See the example files in the `examples/` directory for the correct format:
+
+- [JSON Example](examples/qa_example.json)
+- [YAML Example](examples/qa_example.yaml)
+
+## Development
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://git.swedishembedded.com/core/platform/sven.git
+cd sven
+
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install development dependencies
+pip install -e ".[dev]"
+
+# Install pre-commit hooks
+pre-commit install
+```
+
+### Testing
+
+```bash
+pytest
+```
+
+### Linting
+
+```bash
+# Run all linters
+pre-commit run --all-files
+
+# Run individual linters
+black .
+isort .
+mypy .
+ruff .
+```
+
+### CI/CD Pipeline
+
+This project uses GitLab CI/CD for automated testing, building, and deployment. The pipeline includes:
+
+- **Lint**: Code quality checks with black, isort, ruff, and mypy
+- **Test**: Unit and integration tests with pytest
+- **Build**: Package building with setuptools
+- **Publish**: Publishing to PyPI (on tags) and TestPyPI (on main branch)
+
+### Releasing
+
+We use semantic versioning for this project. To create a new release:
+
+1. Update the CHANGELOG.md with your changes
+2. Use bump2version to increment the version:
+   ```bash
+   # For a patch release (0.1.0 -> 0.1.1)
+   bump2version patch
+
+   # For a minor release (0.1.0 -> 0.2.0)
+   bump2version minor
+
+   # For a major release (0.1.0 -> 1.0.0)
+   bump2version major
+   ```
+3. Push the new tag to trigger the release pipeline:
+   ```bash
+   git push --tags
+   ```
+
+## Contributing
+
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this project.
+
+## License
+
+MIT
