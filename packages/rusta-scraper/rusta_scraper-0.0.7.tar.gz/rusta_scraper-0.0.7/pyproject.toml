@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[metadata]
+name = "rusta_scraper"
+version = "0.0.7"
+
+[tool.setuptools.packages.find]
+where = ["rusta_scraper"]
+
+[tool.setuptools.package-data]
+mypkg = ["*.txt", "*.json", "*.sql"]
+
+[project]
+name = "rusta_scraper"
+version = "0.0.7"
+authors = [
+  { name="David Momeni", email="dav.momeni@gmail.com" },
+]
+description = "Rusta Article Scraper"
+readme = "README.md"
+requires-python = ">=3.8"
