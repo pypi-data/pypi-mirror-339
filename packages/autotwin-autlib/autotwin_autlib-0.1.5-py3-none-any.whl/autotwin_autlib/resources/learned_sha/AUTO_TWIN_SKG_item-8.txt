@@ -1,0 +1,142 @@
+--EVENT LABELS DICT--
+
+S1: Pass Sensor S1
+S2: Pass Sensor S2
+S3: Pass Sensor S3
+S4: Pass Sensor S4
+S5: Pass Sensor S5
+S6: Pass Sensor S6
+S101: Pass Sensor S101
+S105: Pass Sensor S105
+S100: Pass Sensor S100
+S7: Pass Sensor S7
+S8: Pass Sensor S8
+S102: Pass Sensor S102
+S104: Pass Sensor S104
+S9: Pass Sensor S9
+S10: Pass Sensor S10
+S103: Pass Sensor S103
+S11: Pass Sensor S11
+S12: Pass Sensor S12
+S13: Pass Sensor S13
+S14: Pass Sensor S14
+S15: Pass Sensor S15
+S16: Pass Sensor S16
+S17: Pass Sensor S17
+S200: Start Break
+S201: Stop Break
+S202: Read Lock Status
+S203: Read WIP amount
+S106: Pass Sensor S106
+S1: Pass Sensor CS001
+S2: Pass Sensor CS002
+S3: Pass Sensor CS003
+S4: Pass Sensor CS004
+S5: Pass Sensor CS005
+S6: Pass Sensor CS006
+S101: Pass Sensor CS101
+S105: Pass Sensor CS105
+S100: Pass Sensor CS100
+S7: Pass Sensor CS007
+S8: Pass Sensor CS008
+S102: Pass Sensor CS102
+S104: Pass Sensor CS104
+S9: Pass Sensor CS009
+S10: Pass Sensor CS010
+S4102: Pass Sensor CS4102
+S4103: Pass Sensor CS4103
+S4104: Pass Sensor CS4104
+S4201: Pass Sensor CS4201
+S4202: Pass Sensor CS4202
+S4301: Pass Sensor CS4301
+S4401: Pass Sensor CS4401
+S106: Pass Sensor CS106
+S11: Pass Sensor CS011
+S12: Pass Sensor CS012
+S13: Pass Sensor CS013
+S14: Pass Sensor CS014
+S15: Pass Sensor CS015
+S16: Pass Sensor CS016
+S4101: Pass Sensor CS4101
+S4203: Pass Sensor CS4203
+S4204: Pass Sensor CS4204
+S501: Pass Sensor VS001
+S502: Pass Sensor VS002
+S503: Pass Sensor VS003
+S601: Read power
+S602: Read temperature
+
+
+--OBSERVABLE EVENTS--
+
+s1: S1
+s2: S2
+s3: S3
+s4: S4
+s5: S5
+s6: S6
+s101: S101
+s105: S105
+s100: S100
+s7: S7
+s8: S8
+s102: S102
+s104: S104
+s9: S9
+s10: S10
+s4102: S4102
+s4103: S4103
+s4104: S4104
+s4201: S4201
+s4202: S4202
+s4203: S4203
+s4301: S4301
+s4401: S4401
+s106: S106
+s4204: S4204
+s11: S11
+s12: S12
+s13: S13
+s14: S14
+s16: S16
+s4101: S4101
+s200: S200
+s201: S201
+s202: S202
+s601: S601
+s602: S602
+s501: S501
+s502: S502
+s503: S503
+
+
+--LEARNED DISTRIBUTIONS--
+
+D_0(1.000000)
+D_1(16.000000)
+D_2(2.000000)
+D_3(11.000000)
+D_4(4301.000000)
+
+
+--FINAL OBSERVATION TABLE--
+
+             |ε        
+-------------+---------
+s1           |(f_0,D_0)
+s16          |(f_0,D_1)
+s1s2         |(f_0,D_2)
+s16s11       |(f_0,D_3)
+s16s11s4301  |(f_0,D_4)
+-------------+---------
+s16s1        |(f_0,D_0)
+s16s11s1     |(f_0,D_0)
+s16s11s4301s1|(f_0,D_0)
+-------------+---------
+
+
+
+--PERFORMANCE DATA--
+
+SAMPLED TRACES:	25
+RUNNING TIME:	0:00:07.389634
