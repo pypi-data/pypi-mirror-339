@@ -1,0 +1,10 @@
+exifmwg/__about__.py,sha256=yI8w-TInkcgiC9ZCdkIih3pvw93jI2qL74oyAlaV9Kc,132
+exifmwg/__init__.py,sha256=1DVXNfUktysV-ijRs8T9JIcpUwnk22-0x59j9lnj9aM,168
+exifmwg/_utils.py,sha256=uh2u9KHUr6LI7qDzCkUBf_AWj2zRdNPpNfsNDudbJHw,6017
+exifmwg/errors.py,sha256=NgTYHzDh9xvIIiyqoWw9YHvCUetGZoO6F7PIY8XSU5k,580
+exifmwg/models.py,sha256=jXcGfrPhSn5dQypSmh-wttXkL07_L6-Y2JtMMuVGlSQ,5100
+exifmwg/mwg.py,sha256=VrDdY1wLEy04Y69quOCBp-ppUzs2lgRsmGiGnrjch3s,6679
+exifmwg-0.1.0.dist-info/METADATA,sha256=BbqCH4Flhmlc0w--CpZJVM1Go2NgYBn9fg0TLPh1854,6782
+exifmwg-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+exifmwg-0.1.0.dist-info/licenses/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+exifmwg-0.1.0.dist-info/RECORD,,
