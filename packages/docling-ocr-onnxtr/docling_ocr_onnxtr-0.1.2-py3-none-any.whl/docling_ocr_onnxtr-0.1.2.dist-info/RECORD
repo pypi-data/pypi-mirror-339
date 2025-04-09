@@ -1,0 +1,13 @@
+docling_ocr_onnxtr/__init__.py,sha256=w8M8ctJDcDcxxrRJ_GT-G7JP3H7E1O50AuoK4l2djf0,85
+docling_ocr_onnxtr/onnxtr_model.py,sha256=FEEyFbRttBh4ckz5QgfT_n5zgtmfCNLr_bLhoobnl68,8490
+docling_ocr_onnxtr/options.py,sha256=gOzKHo86zwAVI_5-YxOr4NaRkNFwlv1RXeag7ZKWxtM,1266
+docling_ocr_onnxtr/plugin.py,sha256=qtPPjpsiXyExvK7Vu8ssZhqxDV2gqFTHIIBBv1qz1lA,317
+docling_ocr_onnxtr/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docling_ocr_onnxtr/version.py,sha256=t2ZLy6eqIRREzP9MNv-0UaNqpTXYFxlbMzz0JwDxS9I,23
+docling_ocr_onnxtr-0.1.2.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+docling_ocr_onnxtr-0.1.2.dist-info/METADATA,sha256=2uPk15A60jvJM8tXk5mOpKTdeyZi5jh6QcLFl1F1P98,22059
+docling_ocr_onnxtr-0.1.2.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+docling_ocr_onnxtr-0.1.2.dist-info/entry_points.txt,sha256=4bUh15gjHVjgG1_vEtZgZ0Kyo7ygkWeAugc_W-EtSfo,57
+docling_ocr_onnxtr-0.1.2.dist-info/top_level.txt,sha256=vmOD5JYg8FKSI-iXyYH73_9AwJdxPOP1TsSY1nDp5iE,24
+docling_ocr_onnxtr-0.1.2.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+docling_ocr_onnxtr-0.1.2.dist-info/RECORD,,
