@@ -1,0 +1,309 @@
+---
+include:
+  - local: '.gitlab-ci-pages.yml'
+  - local: '.gitlab-ci-slides.yml'
+  - project: tpo/tpa/ci-templates
+    file: scripts/apt.yml
+
+#
+# Python
+#
+
+python:
+  stage: build
+  image: containers.torproject.org/tpo/tpa/base-images/debian:stable
+  before_script:
+    - !reference [.apt-init]
+  script:
+    - apt-get update
+    - apt-get install -y git
+    - git submodule sync
+    - git submodule update --init --recursive --depth 1
+    - scripts/provision-packaging-python
+    - mkdir -p dist
+    - make build-python-package
+  artifacts:
+    paths:
+      - dist
+  #only:
+  #  - main
+
+#
+# Debian
+#
+
+.debian-package:
+  - apt-get update
+  - apt-get install -y git
+  - git submodule sync
+  - git submodule update --init --recursive --depth 1
+  - scripts/provision-packaging-debian
+  - make build-debian-test-package
+  - mkdir -p dist
+  - mv ../onionprobe_* dist
+
+debian_stable:
+  stage: build
+  image: containers.torproject.org/tpo/tpa/base-images/debian:stable
+  before_script:
+    - !reference [.apt-init]
+  script:
+    - !reference [.debian-package]
+  artifacts:
+    paths:
+      - dist
+  #only:
+  #  - main
+
+debian_sid:
+  stage: build
+  image: containers.torproject.org/tpo/tpa/base-images/debian:sid
+  before_script:
+    - !reference [.apt-init]
+  script:
+    - !reference [.debian-package]
+  artifacts:
+    paths:
+      - dist
+  #only:
+  #  - main
+
+ubuntu_lts:
+  stage: build
+  image: containers.torproject.org/tpo/tpa/base-images/ubuntu:lts
+  before_script:
+    - !reference [.apt-init]
+  script:
+    - !reference [.debian-package]
+  artifacts:
+    paths:
+      - dist
+  #only:
+  #  - main
+
+# Chroot inside a GitLab CI job is not working
+# Initially tracked at
+# https://gitlab.torproject.org/tpo/onion-services/onionprobe/-/issues/94
+#sbuild_sid:
+#  stage: build
+#  image: containers.torproject.org/tpo/tpa/base-images/debian:sid
+#  before_script:
+#    - !reference [.apt-init]
+#  script:
+#    - apt-get install -y sbuild mmdebstrap uidmap piuparts lintian autopkgtest build-essential debhelper-compat zstd
+#    - apt-get install -y dh-python pybuild-plugin-pyproject python3-setuptools pandoc
+#    - mkdir -p ~/.cache/sbuild ~/.config/sbuild
+#    - cp configs/sbuild.pl ~/.config/sbuild/config.pl
+#    - mmdebstrap --include=ca-certificates --skip=output/dev --variant=buildd unstable ~/.cache/sbuild/unstable-amd64.tar.zst https://deb.debian.org/debian
+#    # Adding subuids for root avoids the following errors:
+#    #
+#    #   No entry for root in /etc/subuid
+#    #   invalid idmap
+#    #   E: Error creating chroot session: skipping onionprobe
+#    - usermod --add-subuids 100000-165535 root
+#    - usermod --add-subgids 100000-165535 root
+#    - sbuild --verbose
+#  tags:
+#    - osuosl
+#    # Restrict architectures until the following issue is addressed:
+#    # https://gitlab.torproject.org/tpo/tpa/base-images/-/issues/3
+#    - x86_64
+#  #artifacts:
+#  #  paths:
+#  #    - dist
+#  #only:
+#  #  - main
+
+#autopkgtest:
+#  stage: test
+#  image: containers.torproject.org/tpo/tpa/base-images/debian:sid
+#  needs:
+#    - job: debian_sid
+#      artifacts: true
+#  before_script:
+#    - !reference [.apt-init]
+#  script:
+#    - apt-get install autopkgtest autodep8 -y
+#    - autopkgtest dist/onionprobe_*.deb -- null
+
+lintian:
+  image: containers.torproject.org/tpo/tpa/base-images/debian:sid
+  stage: test
+  needs:
+    - job: debian_sid
+      artifacts: true
+  before_script:
+    - !reference [.apt-init]
+  script:
+    - apt-get update
+    - apt-get install -y lintian
+    - lintian --allow-root -v --pedantic dist/onionprobe_*.deb
+  #only:
+  #  - main
+
+piuparts:
+  image: containers.torproject.org/tpo/tpa/base-images/debian:sid
+  stage: test
+  needs:
+    - job: debian_sid
+      artifacts: true
+  before_script:
+    - !reference [.apt-init]
+  script:
+    - apt-get install piuparts debootstrap -y
+    # Manually ignore /var/cache/debconf/tmp.ci.
+    # This explicit ignore option might be removed in the future.
+    # Details at https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1092667
+    - piuparts --ignore /var/cache/debconf/tmp.ci/ dist/onionprobe_*.deb
+  # As of 2025-03-17, this job currently does not run successfully on TPA runners.
+  # This constraint might be lifted once the following issue is fixed:
+  # https://gitlab.torproject.org/tpo/tpa/team/-/issues/42087
+  tags:
+    - osuosl
+    # Restrict architectures until the following issue is addressed:
+    # https://gitlab.torproject.org/tpo/tpa/base-images/-/issues/3
+    - x86_64
+  # As of 2025-03-25, there's no available runners for this job
+  # https://gitlab.torproject.org/tpo/tpa/team/-/issues/41295#note_3177052
+  rules:
+    - when: never
+  #only:
+  #  - main
+
+#
+# Configuration
+#
+
+configs:
+  image: containers.torproject.org/tpo/tpa/base-images/debian:stable
+  stage: build
+  before_script:
+    - !reference [.apt-init]
+  script:
+    - apt-get update
+    - apt-get install -y git
+    - git submodule sync
+    - git submodule update --init --recursive --depth 1
+    - scripts/provision-onionprobe
+    - make configs
+    - mkdir -p dist
+    - cp configs/*.yaml dist
+  artifacts:
+    paths:
+      - dist
+  #only:
+  #  - main
+
+#
+# Documentation
+#
+
+#manpage:
+#  image: containers.torproject.org/tpo/tpa/base-images/debian:stable
+#  stage: build
+#  before_script:
+#    - !reference [.apt-init]
+#  script:
+#    - apt-get update
+#    - apt-get install -y git
+#    - git submodule sync
+#    - git submodule update --init --recursive --depth 1
+#    - scripts/provision-onionprobe
+#    - make manpage
+#    - mkdir -p dist
+#    - cp docs/man/onionprobe.1.md dist
+#  artifacts:
+#    paths:
+#      - dist
+#  only:
+#    - main
+
+#
+# Run tests
+#
+
+.run_onionprobe:
+  - onionprobe --log_level debug -e http://2gzyxa5ihm7nsggfxnu52rck2vv4rvmdlkiu3zzui5du4xyclen53wid.onion
+  - onionprobe --log_level debug -e https://v236xhqtyullodhf26szyjepvkbv6iitrhjgrqj4avaoukebkk6n6syd.onion
+
+run_source:
+  image: containers.torproject.org/tpo/tpa/base-images/debian:sid
+  stage: test
+  before_script:
+    - !reference [.apt-init]
+  script:
+    - scripts/provision-onionprobe
+    - export PATH=.:$PATH
+    - !reference [.run_onionprobe]
+
+run_python:
+  image: containers.torproject.org/tpo/tpa/base-images/debian:sid
+  stage: test
+  needs:
+    - job: python
+      artifacts: true
+  before_script:
+    - !reference [.apt-init]
+  script:
+    - apt-get update
+    - apt-get install -y python3-pip tor
+    - pip install --break-system-packages dist/onionprobe*.whl
+    - pip show onionprobe
+    - !reference [.run_onionprobe]
+
+run_sid:
+  image: containers.torproject.org/tpo/tpa/base-images/debian:sid
+  stage: test
+  needs:
+    - job: debian_sid
+      artifacts: true
+  before_script:
+    - !reference [.apt-init]
+  script:
+    # Install dependencies
+    - apt-get update
+    - apt-get install -y onionprobe
+    - apt-get remove onionprobe
+
+    # Install the built package
+    - dpkg -i dist/onionprobe_*.deb
+
+    # Test
+    - !reference [.run_onionprobe]
+
+#
+# Prometheus
+# Thanks https://gitlab.torproject.org/tpo/tpa/prometheus-alerts
+#
+
+pint:
+  stage: test
+  image: ghcr.io/cloudflare/pint
+  script:
+    - pint lint configs/prometheus/*rules*
+
+promtool:
+  stage: test
+  image:
+    #name: docker.io/prom/prometheus:v3.2.1
+    name: quay.io/prometheus/prometheus:v3.2.1
+    entrypoint: [""]
+  script:
+    - promtool check config configs/prometheus/prometheus.yml
+    - promtool test rules configs/prometheus/prometheus-tests.yml
+
+#
+# Release
+#
+
+release:
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  stage: .post
+  rules:
+    # Run this job when a tag is created
+    - if: $CI_COMMIT_TAG
+  script:
+    - echo "Running release_job..."
+  release:
+    tag_name: '$CI_COMMIT_TAG'
+    description: '$CI_COMMIT_TAG'
