@@ -1,0 +1,6 @@
+[console_scripts]
+koreo-inspector = inspector:main
+koreo-ls = server:main
+
+[gui_scripts]
+
