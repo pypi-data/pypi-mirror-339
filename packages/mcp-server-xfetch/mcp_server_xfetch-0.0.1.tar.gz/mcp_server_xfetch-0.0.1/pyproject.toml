@@ -1,0 +1,45 @@
+[project]
+name = "mcp-server-xfetch"
+version = "0.0.1"
+description = "Enhanced MCP fetch server (fetch on steroids) that works through xfet.ch service. Unlocks access to websites blocked by Cloudflare and other protection systems that regular fetch can't handle."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "XFetch Team", email = "xfetchai@gmail.com" }]
+maintainers = [{ name = "XFetch Team", email = "xfetchai@gmail.com" }]
+keywords = ["http", "mcp", "llm", "automation", "cloudflare", "bypass", "web-scraping", "javascript-rendering"]
+license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+]
+dependencies = [
+    "httpx<0.28",
+    "markdownify>=0.13.1",
+    "mcp>=1.6.0",
+    "parsel>=1.10.0",
+    "protego>=0.3.1",
+    "pydantic>=2.0.0",
+    "readabilipy>=0.2.0",
+    "requests>=2.32.3",
+]
+
+[project.urls]
+Homepage = "https://xfet.ch"
+Documentation = "https://xfet.ch/docs"
+Repository = "https://github.com/xfetchai/mcp-server-xfetch"
+
+[project.scripts]
+mcp-server-xfetch = "mcp_server_xfetch:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = ["pyright>=1.1.389", "ruff>=0.7.3"]
