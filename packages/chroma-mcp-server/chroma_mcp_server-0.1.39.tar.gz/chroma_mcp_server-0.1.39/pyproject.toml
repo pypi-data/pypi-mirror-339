@@ -1,0 +1,222 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "chroma-mcp-server"
+version = "0.1.39"
+description = "Chroma MCP Server - Vector Database Integration for LLM Applications"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "Nold Coaching & Consulting", email = "info@noldcoaching.de" }
+]
+keywords = ["chroma", "mcp", "vector-database", "llm", "embeddings"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+    # Core dependencies
+    "python-dotenv>=1.1.0",
+    "pydantic>=2.10.6",
+    # Use a URL reference to avoid TestPyPI conflicts
+    "fastapi==0.115.12",
+    "uvicorn>=0.34.0",
+    "chromadb>=0.6.3",
+    "fastmcp>=0.4.1",
+    # These are needed by our code directly
+    "numpy>=2.2.0",  # For numpy arrays in handlers
+]
+
+[project.optional-dependencies]
+# Optional dependencies for extended functionality
+full = [
+    # For embeddings generation
+    "onnxruntime>=1.21.0",
+    "sentence-transformers>=4.0.1",
+    # Only needed if using HTTP client
+    "httpx>=0.28.0",
+]
+
+# Development dependencies
+dev = [
+    # Testing
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.26.0",
+    "pytest-cov>=6.0.0",
+    "pytest-mock>=3.14.0",
+    "pytest-xdist[psutil]>=3.5.0",
+    # Code quality
+    "black>=25.1.0",
+    "isort>=6.0.0",
+    "mypy>=1.15.0",
+    "pylint>=3.3.0",
+    # Only needed type stubs
+    "types-PyYAML>=6.0.0",
+]
+
+[project.scripts]
+chroma-mcp-server = "chroma_mcp.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/djm81/chroma_mcp_server"
+Repository = "https://github.com/djm81/chroma_mcp_server.git"
+Documentation = "https://github.com/djm81/chroma_mcp_server#readme"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/chroma_mcp"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/tests",
+]
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 120
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+
+[tool.pytest.ini_options]
+minversion = "8.3.5"
+addopts = "-ra -q"
+pythonpath = [
+    "src"
+]
+testpaths = [
+    "tests",
+]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+markers = [
+    "asyncio: mark test as async",
+]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.pylint.messages_control]
+disable = [
+    "C0111",  # missing-docstring
+    "C0103",  # invalid-name
+    "C0330",  # bad-continuation
+    "C0326",  # bad-whitespace
+]
+
+[tool.pylint.format]
+max-line-length = 120
+
+[tool.hatch.envs.test]
+dependencies = [
+  "coverage[toml]>=7.4",
+  "pytest>=8.3.0",
+  "pytest-asyncio>=0.26.0",
+  "pytest-cov>=6.0.0",
+  "pytest-mock>=3.14.0",
+  "pytest-xdist[psutil]>=3.5.0",
+]
+
+[tool.hatch.envs.test.scripts]
+run = "pytest {args:tests}"
+cov = [
+  # FIX: Remove --cov-config, keep --cov-report=
+  # "pytest --cov-report= --cov=src/chroma_mcp {args:tests}", # Original, generated no report
+  # Fix: Generate terminal report and XML report
+  "pytest --cov-report=term --cov-report=xml --cov=src/chroma_mcp {args:tests}",
+]
+html = [
+  # FIX: Remove --cov-config, keep --cov-report=
+  "pytest --cov-report= --cov=src/chroma_mcp {args:tests}", 
+]
+
+[[tool.hatch.envs.test.matrix]]
+python = ["3.10", "3.11", "3.12"]
+
+[tool.coverage.run]
+branch = true
+parallel = true
+source = ["src/chroma_mcp"]
+relative_files = true
+# Add omit from .coveragerc
+omit = [
+    "*/tests/*",
+    "src/chroma_mcp/__init__.py", # Make path more specific
+    "setup.py", # Keep if relevant, otherwise remove
+]
+
+[tool.coverage.paths]
+source = [
+    "src/",
+    "*/site-packages/"
+]
+
+[tool.coverage.report]
+# Keep omit for main
+omit = ["src/chroma_mcp/__main__.py"]
+# Consolidate exclude_lines
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "pass", # from .coveragerc
+    "raise AssertionError", # from .coveragerc
+    "@abstractmethod", # from .coveragerc
+]
+show_missing = true
+
+# Add html output settings from .coveragerc
+[tool.coverage.html]
+directory = "coverage_html"
+
+# Add xml output settings from .coveragerc (for Codecov)
+[tool.coverage.xml]
+output = "coverage.xml"
+
+[tool.pytest-asyncio]
+mode = "auto"
+
+[tool.hatch.build]
+dev-mode-dirs = ["src"]  # This enables editable install for development 

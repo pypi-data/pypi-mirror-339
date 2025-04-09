@@ -1,0 +1,188 @@
+Metadata-Version: 2.4
+Name: chroma-mcp-server
+Version: 0.1.39
+Summary: Chroma MCP Server - Vector Database Integration for LLM Applications
+Project-URL: Homepage, https://github.com/djm81/chroma_mcp_server
+Project-URL: Repository, https://github.com/djm81/chroma_mcp_server.git
+Project-URL: Documentation, https://github.com/djm81/chroma_mcp_server#readme
+Author-email: Nold Coaching & Consulting <info@noldcoaching.de>
+License-Expression: MIT
+License-File: LICENSE.md
+Keywords: chroma,embeddings,llm,mcp,vector-database
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Requires-Dist: chromadb>=0.6.3
+Requires-Dist: fastapi==0.115.12
+Requires-Dist: fastmcp>=0.4.1
+Requires-Dist: numpy>=2.2.0
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: uvicorn>=0.34.0
+Provides-Extra: dev
+Requires-Dist: black>=25.1.0; extra == 'dev'
+Requires-Dist: isort>=6.0.0; extra == 'dev'
+Requires-Dist: mypy>=1.15.0; extra == 'dev'
+Requires-Dist: pylint>=3.3.0; extra == 'dev'
+Requires-Dist: pytest-asyncio>=0.26.0; extra == 'dev'
+Requires-Dist: pytest-cov>=6.0.0; extra == 'dev'
+Requires-Dist: pytest-mock>=3.14.0; extra == 'dev'
+Requires-Dist: pytest-xdist[psutil]>=3.5.0; extra == 'dev'
+Requires-Dist: pytest>=8.3.0; extra == 'dev'
+Requires-Dist: types-pyyaml>=6.0.0; extra == 'dev'
+Provides-Extra: full
+Requires-Dist: httpx>=0.28.0; extra == 'full'
+Requires-Dist: onnxruntime>=1.21.0; extra == 'full'
+Requires-Dist: sentence-transformers>=4.0.1; extra == 'full'
+Description-Content-Type: text/markdown
+
+# Chroma MCP Server
+
+[![CI](https://github.com/djm81/chroma_mcp_server/actions/workflows/tests.yml/badge.svg)](https://github.com/djm81/chroma_mcp_server/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/djm81/chroma_mcp_server/branch/main/graph/badge.svg)](https://codecov.io/gh/djm81/chroma_mcp_server)
+[![PyPI - Version](https://img.shields.io/pypi/v/chroma-mcp-server?color=blue)](https://pypi.org/project/chroma-mcp-server)
+
+A Model Context Protocol (MCP) server integration for [Chroma](https://www.trychroma.com/), the open-source embedding database.
+
+## Motivation: AI Development Working Memory
+
+In AI-assisted development workflows, particularly when using tools like Cursor or GitHub Copilot over multiple sessions, maintaining context from previous interactions is crucial but often manual. Developers frequently resort to creating temporary markdown files or other artifacts simply to capture and reload context into a new chat session.
+
+The Chroma MCP Server aims to streamline this process by providing a persistent, searchable "working memory":
+
+- **Automated Context Recall:** Instead of manual context loading, AI assistants (guided by specific rules or instructions) can query this MCP server to retrieve relevant information from past sessions based on the current development task.
+- **Developer-Managed Persistence:** Developers can actively summarize key decisions, code snippets, or insights from the current session and store them in ChromaDB via the MCP interface. This allows building a rich, task-relevant knowledge base over time.
+- **Separation of Concerns:** This "working memory" is distinct from final user-facing documentation or committed code artifacts, focusing specifically on capturing the transient but valuable context of the development process itself.
+
+By integrating ChromaDB through MCP, this server facilitates more seamless and context-aware AI-assisted development, reducing manual overhead and improving the continuity of complex tasks across multiple sessions.
+
+## Overview
+
+The Chroma MCP Server allows you to connect AI applications with Chroma through the Model Context Protocol. This enables AI models to:
+
+- Store and retrieve embeddings
+- Perform semantic search on vector data
+- Manage collections of embeddings
+- Support RAG (Retrieval Augmented Generation) workflows
+
+See the [API Reference](docs/api_reference.md) for a detailed list of available tools and their parameters.
+
+## Installation
+
+Choose your preferred installation method:
+
+### Standard Installation
+
+```bash
+# Using pip
+pip install chroma-mcp-server
+
+# Using UVX (recommended for Cursor)
+uv pip install chroma-mcp-server
+```
+
+### Full Installation (with embedding models)
+
+```bash
+# Using pip
+pip install chroma-mcp-server[full]
+
+# Using UVX
+uv pip install "chroma-mcp-server[full]"
+```
+
+## Usage
+
+### Starting the server
+
+```bash
+# Using the command-line executable
+chroma-mcp-server
+
+# Or using the Python module
+python -m chroma_mcp.server
+```
+
+### Checking the Version
+
+```bash
+chroma-mcp-server --version
+```
+
+### Configuration
+
+The server can be configured with command-line options or environment variables:
+
+#### Command-line Options
+
+```bash
+chroma-mcp-server --client-type persistent --data-dir ./my_data --log-dir ./logs
+```
+
+#### Environment Variables
+
+```bash
+export CHROMA_CLIENT_TYPE=persistent
+export CHROMA_DATA_DIR=./my_data
+export CHROMA_LOG_DIR=./logs
+chroma-mcp-server
+```
+
+#### Available Configuration Options
+
+- `--client-type`: Type of Chroma client (`ephemeral`, `persistent`, `http`, `cloud`)
+- `--data-dir`: Path to data directory for persistent client
+- `--log-dir`: Path to log directory
+- `--host`: Host address for HTTP client
+- `--port`: Port for HTTP client
+- `--ssl`: Whether to use SSL for HTTP client
+- `--tenant`: Tenant ID for Cloud client
+- `--database`: Database name for Cloud client
+- `--api-key`: API key for Cloud client
+- `--cpu-execution-provider`: Force CPU execution provider for embedding functions (`auto`, `true`, `false`)
+
+See [Getting Started](docs/getting_started.md) for more setup details.
+
+### Cursor Integration
+
+To use with Cursor, add the following to your `.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "chroma": {
+      "command": "uvx",
+      "args": [
+        "chroma-mcp-server"
+      ],
+      "env": {
+        "CHROMA_CLIENT_TYPE": "persistent",
+        "CHROMA_DATA_DIR": "/path/to/data/dir",
+        "CHROMA_LOG_DIR": "/path/to/logs/dir",
+        "LOG_LEVEL": "INFO",
+        "MCP_LOG_LEVEL": "INFO"
+      }
+    }
+  }
+}
+```
+
+See [Cursor Integration](docs/cursor_integration.md) for more details.
+
+## Development
+
+For instructions on how to set up the development environment, run tests, build the package, and contribute, please see the **[Developer Guide](docs/developer_guide.md)**.
+
+## Testing the Tools
+
+A simulated workflow using the MCP tools is available in the **[MCP Test Flow](docs/mcp_test_flow.md)** document.
+
+## License
+
+MIT License (see [LICENSE](LICENSE))
