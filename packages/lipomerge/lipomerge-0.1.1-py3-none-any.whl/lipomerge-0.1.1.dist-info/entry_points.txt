@@ -1,0 +1,2 @@
+[console_scripts]
+lipomerge = lipomerge:main
