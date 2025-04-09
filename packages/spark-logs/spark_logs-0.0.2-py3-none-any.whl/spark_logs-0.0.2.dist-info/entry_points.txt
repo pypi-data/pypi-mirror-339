@@ -1,0 +1,2 @@
+[console_scripts]
+spark-logs = spark_logs.cli.__main__:main
