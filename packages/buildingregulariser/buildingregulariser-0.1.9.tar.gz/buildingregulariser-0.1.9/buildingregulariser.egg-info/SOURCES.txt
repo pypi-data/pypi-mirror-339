@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+buildingregulariser/__init__.py
+buildingregulariser/__version__.py
+buildingregulariser/chunk_processing.py
+buildingregulariser/gdf_operations.py
+buildingregulariser/geometry_utils.py
+buildingregulariser/line_operations.py
+buildingregulariser/regularization.py
+buildingregulariser/rotation.py
+buildingregulariser.egg-info/PKG-INFO
+buildingregulariser.egg-info/SOURCES.txt
+buildingregulariser.egg-info/dependency_links.txt
+buildingregulariser.egg-info/requires.txt
+buildingregulariser.egg-info/top_level.txt
