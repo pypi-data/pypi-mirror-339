@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: django-allauth-suap
+Version: 0.1.1
+Summary: SUAP social login provider for django-allauth
+Project-URL: Homepage, https://github.com/dvcirilo/django-allauth-suap
+Project-URL: Repository, https://github.com/dvcirilo/django-allauth-suap
+Project-URL: Issues, https://github.com/dvcirilo/django-allauth-suap/issues
+Author-email: Diego Cirilo <dvcirilo@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Framework :: Django
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: django-allauth[socialaccount]
+Requires-Dist: django>=4.2
+Description-Content-Type: text/markdown
+
+# django-allauth-suap
+SUAP social login provider for django-allauth
