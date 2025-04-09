@@ -1,0 +1,81 @@
+---
+name: Build and deploy to PyPI/testPyPI
+
+on:
+    push:
+    merge_group:
+    release:
+        types: [published, edited]
+    repository_dispatch:
+        types: [trigger_checks]
+    workflow_dispatch:
+
+jobs:
+    build:
+        name: Build distributions
+        runs-on: ubuntu-24.04
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+
+            - uses: actions/setup-python@v5
+
+            - name: Install dependencies
+              run: |
+                  python3 -m pip install --upgrade uv setuptools_scm[toml]
+                  echo "SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYNONTHERMAL=$(python3 -m setuptools_scm --strip-dev)" >> $GITHUB_ENV
+
+            - name: Build
+              run: |
+                  uv build --sdist --wheel
+
+            - uses: actions/upload-artifact@v4
+              with:
+                  name: dist-sdist-wheel
+                  path: |
+                      dist/*.tar.gz
+                      dist/*.whl
+
+    testdeploy:
+        name: Test upload to TestPyPI
+        needs: [build]
+        runs-on: ubuntu-24.04
+        environment: test
+        permissions:
+            id-token: write
+        if: startsWith(github.ref , 'refs/tags/v') != true
+        steps:
+            - uses: actions/download-artifact@v4
+              with:
+                  pattern: dist-*
+                  path: dist
+                  merge-multiple: true
+
+            - name: Publish package to TestPyPI
+              uses: pypa/gh-action-pypi-publish@release/v1
+              with:
+                  skip-existing: true
+                  verbose: false
+                  repository-url: https://test.pypi.org/legacy/
+
+    deploy:
+        name: Upload to PyPI
+        needs: [build]
+        runs-on: ubuntu-24.04
+        environment: release
+        permissions:
+            id-token: write
+        if: startsWith(github.ref, 'refs/tags/v')
+        steps:
+            - uses: actions/download-artifact@v4
+              with:
+                  pattern: dist-*
+                  path: dist
+                  merge-multiple: true
+
+            - name: Publish package to PyPI
+              uses: pypa/gh-action-pypi-publish@release/v1
+              with:
+                  skip-existing: true
+                  verbose: false

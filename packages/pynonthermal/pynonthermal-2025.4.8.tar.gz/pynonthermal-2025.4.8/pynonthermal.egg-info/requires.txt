@@ -1,0 +1,5 @@
+artistools>=2024.07.04.2
+matplotlib>=3.9.1
+numpy>=1.19.4
+polars>=1.20.0
+scipy>=1.5.4
