@@ -1,0 +1,16 @@
+[project]
+name = "fusebase-mcp"
+version = "1.0.2"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.6.0",
+]
+
+[project.scripts]
+fusebase-mcp = "server:mcp.run"
+
+[tool.uvx.scripts]
+server = "python -m server"
