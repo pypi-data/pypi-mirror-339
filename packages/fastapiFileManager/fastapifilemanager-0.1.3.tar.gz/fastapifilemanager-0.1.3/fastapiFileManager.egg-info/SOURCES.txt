@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+fastapiFileManager.egg-info/PKG-INFO
+fastapiFileManager.egg-info/SOURCES.txt
+fastapiFileManager.egg-info/dependency_links.txt
+fastapiFileManager.egg-info/requires.txt
+fastapiFileManager.egg-info/top_level.txt
+fastapi_filemanager/__init__.py
+fastapi_filemanager/exceptions.py
+fastapi_filemanager/file_manager.py
