@@ -1,0 +1,38 @@
+[project]
+name = "async-sync"
+dynamic = ["version"]
+description = "async-sync - Elegant conversion between Python sync and async code"
+readme = "README.md"
+authors = [
+    { name = "Haskely", email = "Haskely@live.com" }
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/Haskely/async-sync"
+Repository = "https://github.com/Haskely/async-sync"
+Documentation = "https://github.com/Haskely/async-sync#readme"
+"Bug Tracker" = "https://github.com/Haskely/async-sync/issues"
+"Change Log" = "https://github.com/Haskely/async-sync/blob/main/CHANGELOG.md"
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version_provider="scm"
+tag_format = "v$version"
+annotated_tag = true
+version_scheme = "pep440"
+update_changelog_on_bump = true
+major_version_zero = true
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
