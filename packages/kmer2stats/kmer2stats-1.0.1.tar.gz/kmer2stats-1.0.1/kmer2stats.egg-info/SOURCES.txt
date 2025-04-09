@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+kmer2stats.egg-info/PKG-INFO
+kmer2stats.egg-info/SOURCES.txt
+kmer2stats.egg-info/dependency_links.txt
+kmer2stats.egg-info/requires.txt
+kmer2stats.egg-info/top_level.txt
+script/__init__.py
+script/kmer2stats.py
