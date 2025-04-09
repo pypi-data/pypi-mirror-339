@@ -1,0 +1,24 @@
+# Virtual environment
+.venv/
+venv/
+.env/
+
+# VS Code stuff
+.vscode/
+
+# Cache
+__pycache__/
+.*cache
+
+# Environment variables
+.env
+
+# Tests
+test_data/
+.coverage
+htmlcov/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
