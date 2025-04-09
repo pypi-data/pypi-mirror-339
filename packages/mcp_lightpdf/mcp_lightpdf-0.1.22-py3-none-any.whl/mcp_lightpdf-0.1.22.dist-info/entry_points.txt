@@ -1,0 +1,2 @@
+[console_scripts]
+mcp_lightpdf = mcp_lightpdf:main
