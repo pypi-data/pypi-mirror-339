@@ -1,0 +1,3 @@
+[console_scripts]
+findviz=findviz.cli:main
+
