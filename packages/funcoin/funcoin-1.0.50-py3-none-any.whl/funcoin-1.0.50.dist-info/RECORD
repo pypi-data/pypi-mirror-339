@@ -1,0 +1,15 @@
+funcoin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+funcoin/coins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+funcoin/coins/base/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+funcoin/coins/base/loader.py,sha256=Jks1p4J5PBA_5fof1I5yL2tW5-pBQy8NAl1srCHUln4,5804
+funcoin/coins/table/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+funcoin/coins/table/load.py,sha256=dVreMhea4ZjKi0FFAT_DXqU-k6hrCpinB0qjAqk5-4o,3744
+funcoin/coins/task/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+funcoin/coins/task/download.py,sha256=E98bu_6otTCDZRXnW_eCMtN6u0DEOs-FUA8gpx42k80,963
+funcoin/server/download.py,sha256=wFpSGr8llYEx5K4h8zg-gwK5DBltEMhjVmvFMSjbtFA,609
+funcoin/server/run.py,sha256=v6jiMT-MB6SZYafWOV_uqVY11MdAk71nr720iEwUGuM,760
+funcoin-1.0.50.dist-info/METADATA,sha256=W6Xx6SgtCzr12JrLUr1Jvt3J5DDO_mKCJ5IVvONmdQY,909
+funcoin-1.0.50.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+funcoin-1.0.50.dist-info/entry_points.txt,sha256=lHCBpp63K-Ks8n91DsmsR7oIDeN2XKm_JXxtrUQfN5c,115
+funcoin-1.0.50.dist-info/top_level.txt,sha256=EKEYbsSVm5NCpFh9B9aBvvJPmsdO93NBNsu3oLf9UAg,8
+funcoin-1.0.50.dist-info/RECORD,,
