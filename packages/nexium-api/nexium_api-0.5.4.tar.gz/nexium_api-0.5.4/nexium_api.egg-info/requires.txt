@@ -1,0 +1,6 @@
+fastapi
+starlette
+sqlmodel
+orjson
+uvicorn
+aiohttp
