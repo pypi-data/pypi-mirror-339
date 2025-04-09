@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+preview.gif
+setup.py
+streamlit_picture_in_picture_video/__init__.py
+streamlit_picture_in_picture_video/example.py
+streamlit_picture_in_picture_video.egg-info/PKG-INFO
+streamlit_picture_in_picture_video.egg-info/SOURCES.txt
+streamlit_picture_in_picture_video.egg-info/dependency_links.txt
+streamlit_picture_in_picture_video.egg-info/requires.txt
+streamlit_picture_in_picture_video.egg-info/top_level.txt
