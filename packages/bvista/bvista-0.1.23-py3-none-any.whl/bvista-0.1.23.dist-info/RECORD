@@ -1,0 +1,16 @@
+bvista/__init__.py,sha256=OybrWa_yUT82FKjDcYjkMNwdWh8GTcYNwpqYf7ltoT0,180
+bvista/notebook_integration.py,sha256=6Y0QpHYcMr-81-P3ZFEWVL92IYuw8qJ27MD68rFt7gQ,4275
+bvista/server_manager.py,sha256=7rxWFkOYbEtZuKahHxW7lJcVjrWIRhVYXkXtEltvNJk,2116
+bvista/datasets/__init__.py,sha256=15olXi69fW_WB0tu7BrU-KQ-OHIio1OitevGgFIJ6tE,934
+bvista/datasets/ames_housing.csv,sha256=zOgi5tcYEvbtz500v0Ki1luSdwLJmsTmvPIOV1nXvhE,957590
+bvista/datasets/ames_housing.py,sha256=3u5MnEGseIZ0Z52X71bG7TdYSGBVTxuW5GPh2cCixyg,313
+bvista/datasets/covid19_live.py,sha256=cH-khcJOUnMkKR-WdPvnM03er-rLLJfsSpalUkV_z5k,1714
+bvista/datasets/stock_prices.py,sha256=GXWFqbmFmxV5F4ljPcdGd9wwtk66MMtbRVMQPdvxugA,2750
+bvista/datasets/testing_data.csv,sha256=RsT2kd7WkA7KINxwBeandawHHBESobLdCa-RYsKcRXY,885990
+bvista/datasets/testing_data.py,sha256=VYgrrczTMrGhGRIzVX-iLw8Mw_jI785o9ne_jS6Oz0Q,303
+bvista/datasets/titanic.csv,sha256=SkN_3gX-UmThcBpzh6xvt1OTdyuji7LJxWZAWvWvS9c,60302
+bvista/datasets/titanic.py,sha256=umJLLUmkyudf6Mk4yA1dyYjPfjwscrcV7R9iJcUNaxY,298
+bvista-0.1.23.dist-info/METADATA,sha256=vakizgAf_9b9wWqMsRc2FFeXX-7C-LidKlfP6-AxEC0,9724
+bvista-0.1.23.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+bvista-0.1.23.dist-info/licenses/LICENSE,sha256=lUjNqUt2deMKSRS8826U6HscHcMZOIqT_TPUuTznKHo,1510
+bvista-0.1.23.dist-info/RECORD,,
