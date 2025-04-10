@@ -1,0 +1,9 @@
+beancount_gocardless/__init__.py,sha256=Rf2-pfuaXaXPwBu3yEn2uXyOQ6uLyGxljJ5hoTCss5Y,100
+beancount_gocardless/cli.py,sha256=ZdsdknScEOlUq_7rI0ixzN1UDh1dgUokzTzO_3WySqY,2407
+beancount_gocardless/client.py,sha256=g2Px7mcM34ibEAVzbxUtCTVrGWO1sm_CmCL-PXySHro,15764
+beancount_gocardless/importer.py,sha256=tjNKPCYFddR62YDAXm6rfLqcVNeiGKWbVAEyoPWPekg,11151
+beancount_gocardless-0.1.8.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+beancount_gocardless-0.1.8.dist-info/METADATA,sha256=-WXcAySDk-rankLsjnn9keWLVrrscByJdwl2n1h1bkw,2634
+beancount_gocardless-0.1.8.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+beancount_gocardless-0.1.8.dist-info/entry_points.txt,sha256=fmhiRcNVrum0p30f5YNqvIYVEPXYsS5cP1xNkVmdn8k,70
+beancount_gocardless-0.1.8.dist-info/RECORD,,
