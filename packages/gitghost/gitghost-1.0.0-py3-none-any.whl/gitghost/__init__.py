@@ -1,0 +1,1 @@
+# GitGhost package init
