@@ -1,0 +1,8 @@
+ohttpy-0.1a13.dist-info/METADATA,sha256=XlDTToIrUdiESFcGXFrZ4FIjZ5ZUHJt7lHpmZXGgans,4035
+ohttpy-0.1a13.dist-info/WHEEL,sha256=GWZFzAhmRLcnnWJFIkiR8k0sjr8iX_MTxF4a-TgOsmk,94
+ohttpy/session.py,sha256=Y6vCLVJkuPZh4F6Sk4oTaQ8gu4iWfwX6yIC3EoL04ZM,5007
+ohttpy/transport.py,sha256=zV3RyozI1tVrw68cEtvE4y2D7Vawmu2C0CPkhkOjB5U,2087
+ohttpy/_generators.py,sha256=NomLkjsE0qFrQiS42Bi_Pz0hFo_wdZrcDFY8ji9tZB4,524
+ohttpy/__init__.py,sha256=ti9q_9gRiu6E12vrqf1TvaCTyLdS4A1p9h42OBEYnGc,98
+ohttpy/ohttpy.pyd,sha256=ySsw93z2lrcznmPg9hiEomN8pcHGKKfUFyVSROYY0SI,5045248
+ohttpy-0.1a13.dist-info/RECORD,,
