@@ -1,0 +1,117 @@
+[project]
+name = "uv-ci-tools"
+version = "0.8.13"
+description = "Add your description here"
+readme = "README.md"
+authors = [{ name = "Florian Daude", email = "floriandaude@hotmail.fr" }]
+requires-python = ">=3.13"
+dependencies = ["cyclopts>=3.11.1", "tomlkit>=0.13.2"]
+
+[project.scripts]
+uv-ci-tools = "uv_ci_tools.__main__:main"
+
+[dependency-groups]
+dev = [
+    "pydantic>=2.11.1",
+    "pyright[nodejs]>=1.1.398",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.11.2",
+    "pytest-xdist[psutil]>=3.6.1",
+
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pyright]
+include = ["src", 'test']
+typeCheckingMode = "strict"
+venvPath = "."
+venv = ".venv"
+pythonVersion = "3.12"
+stubPath = "stubs/"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+exclude = ["stubs/", '.venv/']
+
+[tool.ruff.format]
+exclude = []
+indent-style = "space"
+line-ending = "lf"
+quote-style = "single"
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint]
+flake8-pytest-style = { fixture-parentheses = false }
+flake8-quotes = { inline-quotes = "single" }
+isort = { split-on-trailing-comma = false }
+select = ["ALL"]
+ignore = [
+    "D203", # one-blank-line-before-clas
+    # "D211", # no-blank-line-before-class
+
+    "D212", # multi-line-summary-first-line
+    # "D213", # multi-line-summary-second-line
+
+    # "S602", # subprocess-popen-with-shell-equals-true
+    "S603", # subprocess-without-shell-equals-true 
+
+    # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+    "W191",   # tab-indentation
+    "E111",   # indentation-with-invalid-multiple
+    "E114",   # indentation-with-invalid-multiple-comment
+    "E117",   # over-indented
+    "D206",   # indent-with-spaces
+    "D300",   # triple-single-quotes
+    "Q000",   # bad-quotes-inline-string
+    "Q001",   # bad-quotes-multiline-string
+    "Q002",   # bad-quotes-docstring
+    "Q003",   # avoidable-escaped-quote
+    "COM812", # missing-trailing-comma
+    "COM819", # prohibited-trailing-comma
+    "ISC001", # single-line-implicit-string-concatenation
+    "ISC002", # multi-line-implicit-string-concatenation
+
+    "D100", # missing docstring in module
+    "D101", # missing docstring in class
+    "D102", # missing docstring in method
+    "D103", # missing docstring in function
+    "D104", # missing docstring in package
+    "D105", # missing docstring in method
+    "D106", # missing docstring in nested class
+    "D107", # missing docstring in __init__
+
+    "ANN201", # missing return type annotation public function
+    "ANN202", # missing return type annotation private function
+    "ANN204", # missing return type annotation method
+    "ANN205", # missing return type annotation static method
+    "ANN206", # missing return type annotation class method
+
+    "T201", # print
+    "S101", # assert
+]
+
+[tool.ruff.lint.per-file-ignores]
+"test/*" = [
+    "S107",    # hardcoded-password-default
+    "PLR0913", # too-many-arguments
+]
+"app.py" = [
+    "PLR0913", # too-many-arguments
+]
+
+
+[tool.coverage.run]
+branch = true
+data_file = ".coverage/measurements.cov"
+
+[tool.coverage.report]
+precision = 1
+exclude_also = ["@typing\\.overload", "__repr__", "typing\\.Protocol"]
+
+[tool.coverage.html]
+directory = ".coverage/html"

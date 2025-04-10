@@ -1,0 +1,9 @@
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      run: ruff check
+    type-check:
+      run: pyright
+    test:
+      run: python test --expect-full
