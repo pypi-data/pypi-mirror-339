@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+iceaxe/session_optimized.c
+iceaxe/session_optimized.pyx
+iceaxe.egg-info/PKG-INFO
+iceaxe.egg-info/SOURCES.txt
+iceaxe.egg-info/dependency_links.txt
+iceaxe.egg-info/requires.txt
+iceaxe.egg-info/top_level.txt
