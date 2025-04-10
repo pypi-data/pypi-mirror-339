@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-vibe-tools = server:main
