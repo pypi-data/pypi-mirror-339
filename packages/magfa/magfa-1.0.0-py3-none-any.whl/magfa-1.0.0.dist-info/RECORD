@@ -1,0 +1,12 @@
+magfa/__init__.py,sha256=AuFNdP_RGiMdqqCuxMNGdhMzTuAwN8wN2N3x0chcOqw,252
+magfa/error_codes.py,sha256=yYC_lTClRt6NYpnR0bJD0d6JdrJlsOmoXkIy9CfdenI,4362
+magfa/klass.py,sha256=wb38VLMk4WBz_iww2dLGVK1WWOUkboY6nm7dJg97BAA,5509
+magfa/logger.py,sha256=KOJRLB73sjls7DRNk17DY80oMjSUhFI5oEu7OnpIG7k,1111
+magfa/http_utils/__init__.py,sha256=ozUcLjop8MW4kxJAunuDc7Kgm_TKb5GFlnN4zFnQKBo,259
+magfa/http_utils/klass.py,sha256=jhd2MHd1W4yAWPMf5rjHN37DUN4CRNo86ul3lWFNmXA,6258
+magfa/http_utils/status_codes.py,sha256=IUSMPHwv2-5qU14y_VMkLehbyDo0mM-fBnsFKu1RiWU,224
+magfa-1.0.0.dist-info/licenses/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+magfa-1.0.0.dist-info/METADATA,sha256=8LmPW5cpjKDLqYvWD1DErp3d6P6GuCj1rcaJpkHc764,4626
+magfa-1.0.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+magfa-1.0.0.dist-info/top_level.txt,sha256=rKiTDLRCM8fyK8YN6plL3wJTrsF45cbz2jYnOeUVnT8,6
+magfa-1.0.0.dist-info/RECORD,,
