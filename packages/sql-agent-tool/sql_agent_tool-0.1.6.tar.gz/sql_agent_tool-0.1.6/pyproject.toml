@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sql-agent-tool"
+version = "0.1.6"
+description = "A secure SQL tool for AI agents to interact with databases"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "sqlalchemy>=2.0",
+    "psycopg2-binary>=2.9",
+    "groq>=0.1",
+    "pydantic>=2.0",
+    "sqlparse>=0.4",
+    "python-dotenv>=0.20",
+    "openai>=1.0",
+    "google-generativeai>=0.3"
+]
+authors = [
+    { name = "Harsh Dadiya", email = "harshdadiya@gmail.com" },
+]
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Dadiya-Harsh/sql-tool"
+"Repository" = "https://github.com/Dadiya-Harsh/sql-tool"
+"Bug Tracker" = "https://github.com/Dadiya-Harsh/sql-tool/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-mock>=3.0",
+    "black>=23.0",
+    "flake8>=6.0"
+]
