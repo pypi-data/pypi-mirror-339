@@ -1,0 +1,17 @@
+[project]
+name = "numpy_aarange_yagodanr"
+version = "0.1.1"
+description = "A simple implementation of numpy.arange"
+readme = "README.md"
+
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+numpy_aarange = "numpy_aarange.__main__:main"

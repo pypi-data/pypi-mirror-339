@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: numpy_aarange_yagodanr
+Version: 0.1.1
+Summary: A simple implementation of numpy.arange
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+# Numpy aarange
+
+creates matrix with size (r, length) with values from r to 1
+
+```Bash
+numpy_aarange
+```

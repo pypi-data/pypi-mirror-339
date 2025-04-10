@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/numpy_aarange/__init__.py
+src/numpy_aarange/__main__.py
+src/numpy_aarange/aarange.py
+src/numpy_aarange_yagodanr.egg-info/PKG-INFO
+src/numpy_aarange_yagodanr.egg-info/SOURCES.txt
+src/numpy_aarange_yagodanr.egg-info/dependency_links.txt
+src/numpy_aarange_yagodanr.egg-info/entry_points.txt
+src/numpy_aarange_yagodanr.egg-info/requires.txt
+src/numpy_aarange_yagodanr.egg-info/top_level.txt
