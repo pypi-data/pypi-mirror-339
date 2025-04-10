@@ -1,0 +1,8 @@
+README.md
+setup.py
+singleapi/__init__.py
+vectordbcloud.egg-info/PKG-INFO
+vectordbcloud.egg-info/SOURCES.txt
+vectordbcloud.egg-info/dependency_links.txt
+vectordbcloud.egg-info/requires.txt
+vectordbcloud.egg-info/top_level.txt
