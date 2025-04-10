@@ -1,0 +1,14 @@
+pandas_ollama/__init__.py,sha256=xdJywoAAOYOAn4X6il3GJzVVm5cMF8YuiUP0HZ6cS2o,238
+pandas_ollama/api.py,sha256=VoBtT9Gqpi9ZluIn7pLlq-ZCgbrhDzzvZOYPyZIK31Y,4628
+pandas_ollama/config.py,sha256=TLDNzC_aJlmmaAFQA8nqlmiPGpu-5AksryP0puQZtgM,4048
+pandas_ollama/core.py,sha256=p7G5XhSljiwtEBS41OCt5zXDcgu9QHGFxaNW-wzSwGI,41220
+pandas_ollama/history.py,sha256=PpnHVGC5XaElqocTIErR2dANA6MfUodtoAo_VdXG_FU,2436
+pandas_ollama/requirements.txt,sha256=fxp8w0J20g5PgWv4T0DwOgMdnBedym_bjDja8uw4NlA,293
+pandas_ollama/response.py,sha256=fzzsVkYV7QslDn6Pe_o7Uxj7rHjvtuYT1KXxO9Sw9I4,2681
+pandas_ollama/transformations.py,sha256=lcNLGa9f-fcFdlRBrxSBgiFVT8WVfk7c8UTE-M0Oh18,21216
+pandas_ollama/visualizations.py,sha256=QVo11E4ysFpQobxpBPLETPFp5CCFNCP0N_WVCdzQbKI,26859
+pandas_ollama-1.0.0.dist-info/licenses/LICENSE,sha256=ELYLD3uNMOvqgsPTNmT0j1kzCRfmHSRpQqztwsPcR08,1067
+pandas_ollama-1.0.0.dist-info/METADATA,sha256=ypOV45ptcTPsjjSbfE5IPcoQS_aSarZtcQHspWs-A8I,2283
+pandas_ollama-1.0.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+pandas_ollama-1.0.0.dist-info/top_level.txt,sha256=_XkOP4lV__Y5Ru8xNzjIJl8JCDCSLXpxOTYNDZ8qum8,14
+pandas_ollama-1.0.0.dist-info/RECORD,,
