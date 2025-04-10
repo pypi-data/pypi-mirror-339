@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: uv-ci-tools
+Version: 0.8.12
+Summary: Add your description here
+Author-email: Florian Daude <floriandaude@hotmail.fr>
+Requires-Python: >=3.13
+Requires-Dist: cyclopts>=3.11.1
+Requires-Dist: tomlkit>=0.13.2

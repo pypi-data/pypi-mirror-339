@@ -1,0 +1,2 @@
+[console_scripts]
+uv-ci-tools = uv_ci_tools.__main__:main
