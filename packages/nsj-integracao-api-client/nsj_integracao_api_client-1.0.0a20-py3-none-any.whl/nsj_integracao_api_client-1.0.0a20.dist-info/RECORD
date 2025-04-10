@@ -1,0 +1,17 @@
+nsj_integracao_api_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/client_console copy.py,sha256=j_Lz-H0UiRqPY54pGAzsyfAggyIB-aTpH_9gL0kl6zQ,7445
+nsj_integracao_api_client/client_console.py,sha256=Qvc4sl7-1EA6h3oD29y4QoNmljcfjzMSpLmmGW0HPHE,10870
+nsj_integracao_api_client/dao/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/dao/integracao.py,sha256=QA29BA3KwNZmgHNmh2tdC4I2YNPzCLim9Fy_1yrV7ko,4239
+nsj_integracao_api_client/dto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/entity/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/infra/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/infra/debug_utils.py,sha256=n_ztGhuPySq2JrkHC2h30q-7FMGwzPFI0HX-iaSLwRk,2019
+nsj_integracao_api_client/infra/injector_factory.py,sha256=g9-3tBZqZARvLryxFuhGWXYmnDdJjB9393sHKavWW5w,4114
+nsj_integracao_api_client/infra/transform.py,sha256=HPTLo_nHfo0O34WPKa086i57ay91e0KQ5zz7dbANSsA,2989
+nsj_integracao_api_client/service/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/service/integrador.py,sha256=EaCpNftR85FSEC5kQWgqOOHm1hQrRd9DMW1u_FPC_34,44154
+nsj_integracao_api_client-1.0.0a20.dist-info/METADATA,sha256=w6__xLBlIYbZshJG35lssXY3KViepede5O_MwaHzSLw,9235
+nsj_integracao_api_client-1.0.0a20.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+nsj_integracao_api_client-1.0.0a20.dist-info/top_level.txt,sha256=FjWIgsVfsw17Fyk-F7-LI0BVSwxNx4Q7lqjGXQvN2C8,26
+nsj_integracao_api_client-1.0.0a20.dist-info/RECORD,,
