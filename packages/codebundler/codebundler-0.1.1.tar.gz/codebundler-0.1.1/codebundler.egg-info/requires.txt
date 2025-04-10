@@ -1,0 +1,9 @@
+rich>=10.0.0
+watchdog>=2.1.0
+
+[dev]
+pytest
+pytest-cov
+black
+flake8
+isort
