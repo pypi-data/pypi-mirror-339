@@ -1,0 +1,11 @@
+lawyer/__init__.py,sha256=S-4hsyQuROOW2N9xJlxYQIbLd99LDXoyPCVGVPDYJHw,20054
+lawyer/__init__.pyi,sha256=Cep7MzIDbkNhzucJdgNIzJx_LA4vUxBV-AfDhBBTU_E,14662
+lawyer/exceptions.py,sha256=9UF98B5RanagAohPvPRh4X9IRo8QiD8eO_Q-3VZvkQg,552
+lawyer/exceptions.pyi,sha256=d3JFN-Da_5U8ZdUWs4vwLAx9Qc62ZEBuebMZ37Pd4a4,323
+lawyer/parsers.py,sha256=qM4gM0_m4Sm5MVrRgd2rqZn1OmsFnv_hymxowX73wtI,38627
+lawyer/parsers.pyi,sha256=alcFj-8WUfF-l9EGGdnzDe0IXuAlT7iCMjhUkkpwwJM,23581
+lawyer-2.0.0.dist-info/licenses/LICENSE,sha256=t_UmIiQi5HxzkoICJVHEU_fHLXRad7OJnPYM78seIx0,1074
+lawyer-2.0.0.dist-info/METADATA,sha256=wL0dgBXf_OICdSHzEIY1R8F8YuHkMw6g-oEsVVRKLBs,953
+lawyer-2.0.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+lawyer-2.0.0.dist-info/top_level.txt,sha256=djMAX_JBvKDowjl2NxQL5jlKNERXIuwdXKEj9TC8Hew,7
+lawyer-2.0.0.dist-info/RECORD,,
