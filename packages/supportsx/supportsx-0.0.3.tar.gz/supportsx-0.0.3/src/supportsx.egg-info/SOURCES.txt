@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/supportsx/__init__.py
+src/supportsx/_supports.py
+src/supportsx/py.typed
+src/supportsx.egg-info/PKG-INFO
+src/supportsx.egg-info/SOURCES.txt
+src/supportsx.egg-info/dependency_links.txt
+src/supportsx.egg-info/requires.txt
+src/supportsx.egg-info/top_level.txt
+src/supportsx/u/__init__.py
+src/supportsx/u/_unions.py
