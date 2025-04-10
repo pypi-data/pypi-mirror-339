@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+flippy/__init__.py
+flippy/main.py
+flippy_lang.egg-info/PKG-INFO
+flippy_lang.egg-info/SOURCES.txt
+flippy_lang.egg-info/dependency_links.txt
+flippy_lang.egg-info/top_level.txt

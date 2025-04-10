@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+license = { file = "LICENSE" }
+name = "flippy-lang"
+version = "0.0.1"
+description = "A short description"
+authors = [
+    { name="Mark Ho", email="mark.ho.cs@gmail.com" }
+]
+requires-python = ">=3.7"
