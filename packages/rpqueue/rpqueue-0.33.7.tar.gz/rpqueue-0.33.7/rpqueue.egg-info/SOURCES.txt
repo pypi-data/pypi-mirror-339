@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+VERSION
+pyproject.toml
+setup.py
+rpqueue/__init__.py
+rpqueue/run.py
+rpqueue.egg-info/PKG-INFO
+rpqueue.egg-info/SOURCES.txt
+rpqueue.egg-info/dependency_links.txt
+rpqueue.egg-info/top_level.txt
+tests/test_rpqueue.py
