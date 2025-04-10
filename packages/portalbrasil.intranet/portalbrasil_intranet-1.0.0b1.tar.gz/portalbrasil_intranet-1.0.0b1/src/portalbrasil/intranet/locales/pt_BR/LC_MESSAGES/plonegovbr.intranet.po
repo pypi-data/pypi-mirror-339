@@ -1,0 +1,115 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2025-04-09 19:35+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: pt_BR\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: portalbrasil/intranet/content/servico.py:35
+msgid "Acesso"
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:43
+msgid "Acesso restrito"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/endereco.py:43
+msgid "CEP"
+msgstr ""
+
+#: portalbrasil/intranet/content/colaborador.py:19
+msgid "Cargo"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/endereco.py:34
+msgid "Cidade"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/endereco.py:29
+msgid "Complemento"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/contato.py:13
+msgid "Contato"
+msgstr ""
+
+#: portalbrasil/intranet/content/colaborador.py:23
+msgid "Data de nascimento"
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:27
+msgid "Detalhes"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/contato.py:20
+msgid "Email"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/endereco.py:14
+msgid "Endereço"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/endereco.py:39
+msgid "Estado"
+msgstr ""
+
+#: portalbrasil/intranet/content/colaborador.py:20
+msgid "Informe o cargo do colaborador."
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:41
+msgid "Link"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/matricula.py:13
+msgid "Matrícula"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/matricula.py:14
+msgid "Matrícula deste colaborador"
+msgstr ""
+
+#: portalbrasil/intranet/content/colaborador.py:14
+msgid "Nome completo"
+msgstr ""
+
+#: portalbrasil/intranet/content/colaborador.py:15
+msgid "Nome completo do colaborador."
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:18
+msgid "Nome do sistema / serviço"
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:23
+msgid "Pequena explicação sobre o sistema / serviço"
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:17
+msgid "Serviço"
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:22
+msgid "Sumário"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/contato.py:24
+msgid "Telefone"
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:47
+msgid "Área responsável"
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:48
+msgid "Área responsável por este serviço"
+msgstr ""
