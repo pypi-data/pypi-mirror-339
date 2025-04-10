@@ -1,0 +1,5 @@
+_target_: tracklab.wrappers.detect_single.topdown_mmpose_api.TopDownMMPose
+config_name: rtmpose-l_8xb256-420e_body8-384x288
+path_to_checkpoint: ${model_dir}/mmpose/${.config_name}.pth
+vis_kp_threshold: 0.4
+batch_size: 16

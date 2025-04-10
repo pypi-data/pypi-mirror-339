@@ -1,0 +1,111 @@
+# TrackLab config
+
+# The defaults list contains the files that will be used
+# to create the final config file. This item *must* be
+# the first element in the file.
+defaults:
+  - datasets:
+    - dancetrack
+    - sportsmot
+#    - posetrack21
+#    - mot20
+  - eval: trackeval
+  - engine: offline
+  - state: no_save
+  - visualization: no_vis
+  - modules/bbox_detector: yolox
+  - modules/pose_topdown: hrnet_posetrack18
+  - modules/reid: kpr
+  - modules/track: dd_sort
+  - override hydra/launcher: submitit_slurm
+  - _self_
+
+dataset: ${datasets.dancetrack}
+datasets:
+  mot20:
+    eval_set: train
+#  sportmot:
+#    vids_dict:
+#      val: [ v_00HRwkvvjtQ_c001, v_00HRwkvvjtQ_c003 ]
+
+# Pipeline definition :
+# - Defines the order in which the modules will be called
+# - If loading a tracking state from disk, remove modules whose outputs are already provided in the loaded state
+# Use 'pipeline: []' for an empty pipeline
+pipeline:
+#  - bbox_detector
+#  - pose_topdown
+#  - reid
+  - track
+
+# Experiment name
+experiment_name: "test_dancetrack"
+
+# Path definitions
+data_dir: "/globalscratch/ucl/elen/bstandae/shared_datasets"
+model_dir: "/globalscratch/ucl/elen/vjoosdtb/reconAIssance/pretrained_models"
+
+
+
+#  set_split_idxs:
+#    train: 1
+#app_alpha: "???"
+#kp_alpha: "???"
+#bbox_alpha: "???"
+#feat_p_drop: "???"
+#dropout_type: "???"
+#comment: ""
+
+modules:
+  track:
+    training_enabled: True
+#    checkpoint_path: /home/ucl/elen/vjoosdtb/global/outputs/tracklab/2024-09-25/15-38-32/SimFormer/last.ckpt
+    datamodule:
+      name: ddsort-kpr-dancetrack
+      path: /globalscratch/ucl/elen/bstandae/shared_datasets/DanceTrack/states/simformer_training4 # absolute path, otherwise it will be created for each job
+      tracker_states:
+        train: /globalscratch/ucl/elen/bstandae/shared_datasets/DanceTrack/states/kpr/train-my_det-hrnetposetrack18-kpr-ocsort.pklz
+        val: /globalscratch/ucl/elen/bstandae/shared_datasets/DanceTrack/states/kpr/val-my_det-hrnetposetrack18-kpr-ocsort.pklz
+        test: /globalscratch/ucl/elen/bstandae/shared_datasets/DanceTrack/states/kpr/test-my_det-hrnetposetrack18-kpr-ocsort.pklz
+
+
+state:
+  load_file: "${data_dir}/DanceTrack/states/kpr/val-my_det-hrnetposetrack18-kpr-ocsort.pklz"
+
+#dataset:
+#  set_split_idxs:
+#    train: 1
+# Machine configuration
+num_cores: 16
+use_wandb: True
+use_rich: True
+
+# Flags
+test_tracking: True
+print_config: False
+eval_tracking: True
+wandb:
+  name: ${hydra:job.override_dirname}
+
+# configure Hydra to use the current working directory
+# and set up the output directory according to experiment_name
+project_dir: "${hydra:runtime.cwd}"
+hydra:
+  job:
+    chdir: True
+  run:
+    dir: "/globalscratch/ucl/elen/vjoosdtb/outputs/${experiment_name}/${now:%Y-%m-%d}/${now:%H-%M-%S}"
+  sweep:
+    dir: "/globalscratch/ucl/elen/vjoosdtb/multirun/${experiment_name}/${now:%Y-%m-%d}/${now:%H-%M-%S}"
+    subdir: ${hydra.job.num}-${hydra.job.override_dirname}
+  launcher:
+    submitit_folder: ${hydra.sweep.dir}
+    name: ${experiment_name}
+    timeout_min: 480
+    cpus_per_task: ${num_cores}
+    gres: "gpu:1"
+    mem_gb: 96
+    array_parallelism: 16
+    partition: gpu
+    qos: preemptible # preemptible, interactive, normal
+    constraint: "TeslaA100|TeslaL40s|TeslaA100_80|GeForceRTX3090"

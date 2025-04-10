@@ -1,0 +1,125 @@
+# TrackLab config
+
+# The defaults list contains the files that will be used
+# to create the final config file. This item *must* be
+# the first element in the file.
+defaults:
+  - datasets:
+    - dancetrack
+    - sportsmot
+    - posetrack21
+    - mot17
+  - eval: trackeval
+  - engine: offline
+  - state: no_save
+  - visualization: no_vis
+  - modules/bbox_detector: yolox
+  - modules/pose_topdown: hrnet_posetrack18
+  - modules/reid: kpr
+  - modules/track: dd_sort_sportsmot
+  - override hydra/launcher: submitit_slurm
+  - _self_
+
+#da: "???"
+#da_prob: ${das.${da}}
+#das:
+#  swapsporadic: [1,0,0,0]
+#  swapocc: [0,1,0,0]
+#  dropocc: [0,0,1,0]
+#  dropsporadic: [0,0,0,1]
+#  moredrop: [0.1,0.1,0.9,0.9]
+#  best: [0.1,0.1,0.9,0.1]
+#  moreswap: [0.9,0.9,0.1,0.1]
+#  sporadic: [1,0,0,1]
+#  occ: [0,1,1,0]
+
+dataset: ${datasets.sportsmot}
+#datasets:
+#  mot17:
+#    eval_set: val
+#    leave_one_out_idx: ${loo}
+#  sportmot:
+#    vids_dict:
+#      val: [ v_00HRwkvvjtQ_c001, v_00HRwkvvjtQ_c003 ]
+
+# Pipeline definition :
+# - Defines the order in which the modules will be called
+# - If loading a tracking state from disk, remove modules whose outputs are already provided in the loaded state
+# Use 'pipeline: []' for an empty pipeline
+pipeline:
+#  - bbox_detector
+#  - pose_topdown
+#  - reid
+  - track
+
+# Experiment name
+experiment_name: "dev-vlad"
+
+# Path definitions
+data_dir: "/globalscratch/ucl/elen/bstandae/shared_datasets"
+model_dir: "/globalscratch/ucl/elen/vjoosdtb/reconAIssance/pretrained_models"
+
+
+
+#  set_split_idxs:
+#    train: 1
+
+modules:
+  track:
+    training_enabled: True
+#    checkpoint_path: /home/ucl/elen/vjoosdtb/global/reconAIssance/pretrained_models/simformer/simformer_53290713_SportsMOT_87.913HOTA_thresh_0.75_Encoder.ckpt
+#    datamodule:
+#      name: ddsort-kpr-dancetrack
+#      path: /globalscratch/ucl/elen/bstandae/shared_datasets/DanceTrack/states/simformer_training2 # absolute path, otherwise it will be created for each job
+#      tracker_states:
+#        train: /globalscratch/ucl/elen/bstandae/shared_datasets/DanceTrack/states/kpr/train-my_det-hrnetposetrack18-kpr-ocsort.pklz
+#        val: /globalscratch/ucl/elen/bstandae/shared_datasets/DanceTrack/states/kpr/val-my_det-hrnetposetrack18-kpr-ocsort.pklz
+#        test: /globalscratch/ucl/elen/bstandae/shared_datasets/DanceTrack/states/kpr/test-my_det-hrnetposetrack18-kpr-ocsort.pklz
+
+
+state:
+#  load_file: /home/ucl/elen/vjoosdtb/global/outputs/tracklab/2024-10-10/10-07-55/state.pklz
+#  load_file: ${dataset.dataset_path}/states/kpr/${dataset.eval_set}-public_dets-hrnetposetrack18-kpr-ocsort.pklz
+  load_file: "${dataset.dataset_path}/states/kpr/${dataset.eval_set}-public_dets-hrnetposetrack18-kpr-ocsort2.pklz"
+#  load_file: ${dataset.dataset_path}/states/${dataset.eval_set}-publicyoloxdets-hrnetposetrack18-bpbreid-ocsort.pklz
+#  save_file: ${dataset.dataset_path}/states/kpr/${dataset.eval_set}-publicyoloxdets-hrnetposetrack18-kpr-ocsort.pklz
+
+
+#dataset:
+#  set_split_idxs:
+#    train: 1
+# Machine configuration
+num_cores: 16
+use_wandb: True
+use_rich: True
+
+# Flags
+test_tracking: True
+print_config: False
+eval_tracking: True
+
+# configure Hydra to use the current working directory
+# and set up the output directory according to experiment_name
+wandb:
+  name: ${hydra:job.override_dirname}
+
+project_dir: "${hydra:runtime.cwd}"
+hydra:
+  job:
+    chdir: True
+  run:
+    dir: "/globalscratch/ucl/elen/vjoosdtb/outputs/${experiment_name}/${now:%Y-%m-%d}/${now:%H-%M-%S}"
+  sweep:
+    dir: "/globalscratch/ucl/elen/vjoosdtb/multirun_outputs/${experiment_name}/${now:%Y-%m-%d}/${now:%H-%M-%S}"
+    subdir: ${hydra.job.num}-${hydra.job.override_dirname}
+  launcher:
+    submitit_folder: ${hydra.sweep.dir}
+    name: ${experiment_name}
+    timeout_min: 480
+    cpus_per_task: ${num_cores}
+    gres: "gpu:1"
+    mem_gb: 96
+    array_parallelism: 16
+    partition: gpu
+    qos: preemptible # preemptible, interactive, normal
+    constraint: "TeslaA100|TeslaL40s|TeslaA100_80|GeForceRTX3090"
