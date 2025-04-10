@@ -1,0 +1,36 @@
+[project]
+name = "detect-exif"
+version = "0.1.0"
+authors = [{ name="Olaf Lipinski" }]
+description = "A simple commandline tool to remove the EXIF data from image files."
+readme = "README.md"
+requires-python = ">=3.9.0, <3.14"
+dependencies = ["pillow>=1.1.0", "piexif"]
+license = { file="LICENSE" }
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+    "Topic :: Security",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Natural Language :: English",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/olipinski/detect-exif"
+"Bug Tracker" = "https://github.com/olipinski/detect-exif/issues"
+
+[project.scripts]
+detect-exif = "detect_exif:main"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]

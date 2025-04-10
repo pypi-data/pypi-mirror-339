@@ -1,0 +1,10 @@
+LICENSE
+README.md
+detect_exif.py
+pyproject.toml
+detect_exif.egg-info/PKG-INFO
+detect_exif.egg-info/SOURCES.txt
+detect_exif.egg-info/dependency_links.txt
+detect_exif.egg-info/entry_points.txt
+detect_exif.egg-info/requires.txt
+detect_exif.egg-info/top_level.txt
