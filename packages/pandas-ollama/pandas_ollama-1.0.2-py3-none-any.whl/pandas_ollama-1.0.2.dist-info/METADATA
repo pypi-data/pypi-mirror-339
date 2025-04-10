@@ -1,0 +1,90 @@
+Metadata-Version: 2.4
+Name: pandas-ollama
+Version: 1.0.2
+Summary: Natural language interface for pandas DataFrame analysis using Ollama models
+Home-page: https://github.com/emredeveloper/pandas-ollama
+Author: Cihat Emre Karataş
+Author-email: chtemrekrts@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: requests>=2.25.0
+Requires-Dist: matplotlib>=3.4.0
+Requires-Dist: seaborn>=0.11.0
+Requires-Dist: json5>=0.9.5
+Requires-Dist: typing-extensions>=4.0.0
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: pillow>=8.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# pandas-ollama
+
+Natural language interface for pandas DataFrame analysis using Ollama models.
+
+## Installation
+
+```bash
+pip install pandas-ollama
+```
+
+## Requirements
+
+- Python 3.7+
+- Ollama server running locally or remotely
+- Required packages: pandas, matplotlib, seaborn, requests
+
+## Quick Start
+
+```python
+import pandas as pd
+from pandas_ollama import MyPandasAI
+
+# Create a DataFrame
+df = pd.DataFrame({
+    'Product': ['Laptop', 'Phone', 'Tablet'],
+    'Price': [1000, 800, 500],
+    'Stock': [50, 100, 75]
+})
+
+# Create PandasOllama instance
+panoll = MyPandasAI(df, model="llama3:latest")
+
+# Ask a question about your data
+result = panoll.ask("What is the average price of products?")
+print(result.content)
+
+# Create a visualization
+result = panoll.plot("Show the distribution of prices", viz_type="bar")
+
+# Display the visualization in a notebook
+if result.visualization:
+    import base64
+    from IPython.display import Image
+    image_data = base64.b64decode(result.visualization)
+    Image(data=image_data)
+```
+
+## Features
+
+- Natural language querying of pandas DataFrames
+- Automatic visualization generation
+- Support for various chart types: bar, line, scatter, hist, pie, heatmap, and more
+- Intelligent data type detection
+- Data transformation through natural language commands
+
+## License
+
+MIT License
