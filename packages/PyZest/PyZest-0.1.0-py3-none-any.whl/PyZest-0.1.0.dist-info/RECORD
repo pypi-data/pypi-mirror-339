@@ -1,0 +1,11 @@
+core/__init__.py,sha256=gn2gbf34TLfdKc4AbvRXQJ8QhKWTblRifnCCBoIQB7w,470
+core/data.py,sha256=nFFFHyljS6oqVb_TjDKRKywpBMtrG1rELsmL36UgURM,386
+core/download.py,sha256=TYESW4lbOLONGY76jDeNBTEDBOwlOLUP1S1mTRSYiOQ,1338
+core/files.py,sha256=KQl_5zUncTDGKkDYrxd2lZIlfgqqRhzNgrTUvJeekWw,324
+core/gui.py,sha256=R60WGuggWDsEgG7XFHsnG7pJR9DuxHLEzEYOF9OlftI,868
+core/telegram.py,sha256=WtSRtPnMXrtBLAr-Z83WkrBKeBEHpthPRwFUztPprFc,430
+core/web.py,sha256=eSdMm0M8yyvclJrF5uSvbVgpVHLKd0wIODoWioJpvWA,583
+PyZest-0.1.0.dist-info/METADATA,sha256=g8CEd-TmX2Tl8wIMVIU5bk0vZiK5PSu00HCbFteSrjI,1012
+PyZest-0.1.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+PyZest-0.1.0.dist-info/top_level.txt,sha256=0ebp8k35dOTHVwbY3UcokRsjC7cWLN_iaJ70tIcmODU,5
+PyZest-0.1.0.dist-info/RECORD,,
