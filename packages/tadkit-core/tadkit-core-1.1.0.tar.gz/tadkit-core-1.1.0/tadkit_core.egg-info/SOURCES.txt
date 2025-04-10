@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+tadkit/__init__.py
+tadkit_core.egg-info/PKG-INFO
+tadkit_core.egg-info/SOURCES.txt
+tadkit_core.egg-info/dependency_links.txt
+tadkit_core.egg-info/requires.txt
+tadkit_core.egg-info/top_level.txt
+tests/test_main.py
