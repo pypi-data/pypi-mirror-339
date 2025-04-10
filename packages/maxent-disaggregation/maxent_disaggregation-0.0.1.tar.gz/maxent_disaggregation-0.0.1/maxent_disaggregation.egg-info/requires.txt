@@ -1,0 +1,15 @@
+
+[dev]
+build
+pre-commit
+pylint
+pytest
+pytest-cov
+pytest-randomly
+setuptools
+
+[testing]
+maxent_disaggregation
+pytest
+pytest-cov
+python-coveralls
