@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-vibe-tools"
+version = "3.0.2"
+description = "MCP server for cursor-tools/cursor-tools"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "mcp[cli]>=1.6.0"
+]
+
+[project.scripts]
+mcp-vibe-tools = "server:main"
+[project.optional-dependencies]
+dev = [
+    "tox",
+    "tox-gh-actions",
+    "build",
+    "wheel",
+    "twine",
+    "requests"
+]

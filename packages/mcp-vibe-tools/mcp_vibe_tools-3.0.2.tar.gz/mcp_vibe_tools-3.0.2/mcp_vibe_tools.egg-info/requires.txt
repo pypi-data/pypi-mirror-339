@@ -1,0 +1,9 @@
+mcp[cli]>=1.6.0
+
+[dev]
+tox
+tox-gh-actions
+build
+wheel
+twine
+requests
