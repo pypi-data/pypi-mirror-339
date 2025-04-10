@@ -1,0 +1,7 @@
+include README.rst
+include COPYING
+include requirements.txt
+recursive-include docs *.rst
+recursive-include onionbalance/config_generator/data *
+include versioneer.py
+include onionbalance/_version.py
