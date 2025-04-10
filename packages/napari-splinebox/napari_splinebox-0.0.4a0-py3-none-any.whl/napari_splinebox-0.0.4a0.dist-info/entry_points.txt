@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-splinebox = napari_splinebox:napari.yaml
