@@ -1,0 +1,5 @@
+boto3
+loguru
+pydantic
+python-dotenv
+PyJWT
