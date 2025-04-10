@@ -1,0 +1,3 @@
+[console_scripts]
+atm_setup = hcautomation.post_install_setup:post_install
+gen_login = hcautomation.post_install_setup:gen_login
