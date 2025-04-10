@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: cruxrec
+Version: 0.1.2
+Summary: A command-line tool to summarize YouTube videos using AI.
+Home-page: https://github.com/AShandrakov/CruxRec
+Author: Artyom Shandrkov
+Author-email: artyom.shandrakov@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: certifi
+Requires-Dist: charset-normalizer
+Requires-Dist: idna
+Requires-Dist: PyYAML
+Requires-Dist: requests
+Requires-Dist: urllib3
+Requires-Dist: yt-dlp
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+CruxRec is a command-line tool that helps you stay informed without wasting time. It collects subtitles from YouTube videos and uses AI to generate concise digests — keeping only the most essential information.
+
+📦 Installation
+
+<pre>
+pip install cruxrec
+</pre>
+
+Or clone the repo:
+
+<pre>
+git clone https://github.com/yourusername/cruxrec.git
+cd cruxrec
+pip install -r requirements.txt
+</pre>
+
+required env variable
+<pre>
+GEMINI_KEY
+</pre>
+
+🚀 Usage
+<pre>
+cruxrec "your prompt" https://www.youtube.com/...
+</pre>

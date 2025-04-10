@@ -1,0 +1,13 @@
+README.md
+setup.py
+cruxrec/__init__.py
+cruxrec/cli.py
+cruxrec/subs_provider.py
+cruxrec/summarizer.py
+cruxrec/utils.py
+cruxrec.egg-info/PKG-INFO
+cruxrec.egg-info/SOURCES.txt
+cruxrec.egg-info/dependency_links.txt
+cruxrec.egg-info/entry_points.txt
+cruxrec.egg-info/requires.txt
+cruxrec.egg-info/top_level.txt
