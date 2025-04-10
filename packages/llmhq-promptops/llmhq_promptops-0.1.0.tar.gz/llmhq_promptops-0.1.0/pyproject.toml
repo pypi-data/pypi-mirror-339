@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llmhq-promptops"
+version = "0.1.0"
+description = "CLI tool for managing LLM prompt versioning and testing"
+readme = "README.md"
+requires-python = ">=3.7"
+license = { text = "MIT" }
+authors = [
+  { name = "jision", email = "jisionpc@gmail.com" }
+]
+urls = { "Homepage" = "https://github.com/llmhq-hub/llmhq-promptops" }
+
+dependencies = [
+  "click>=8.1.8",
+  "Jinja2>=3.1.6",
+  "markdown-it-py==3.0.0",
+  "MarkupSafe==3.0.2",
+  "mdurl==0.1.2",
+  "Pygments==2.19.1",
+  "python-dotenv==1.1.0",
+  "PyYAML==6.0.2",
+  "rich==14.0.0",
+  "shellingham==1.5.4",
+  "typer==0.15.2",
+  "typing_extensions==4.13.1"
+]
+
+[project.optional-dependencies]
+# Optional extras for future features, e.g., git integration or Bitbucket API support
+git = ["GitPython>=3.1.0"]
+requests = ["requests>=2.25.0"]
+
+[project.scripts]
+promptops = "cli.main:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
