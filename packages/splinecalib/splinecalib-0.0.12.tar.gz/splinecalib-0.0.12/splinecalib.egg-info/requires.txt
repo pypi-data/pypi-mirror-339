@@ -1,0 +1,11 @@
+pandas>=1.3
+numpy>=1.21
+scipy>=1.6
+matplotlib>=1.0
+joblib>=0.14.1
+ml_insights>=1.0.4
+
+[dev]
+Cython>=3.0.0
+build
+setuptools
