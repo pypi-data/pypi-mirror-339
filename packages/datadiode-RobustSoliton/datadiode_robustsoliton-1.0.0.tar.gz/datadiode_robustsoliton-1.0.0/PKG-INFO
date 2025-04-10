@@ -1,0 +1,80 @@
+Metadata-Version: 2.4
+Name: datadiode-RobustSoliton
+Version: 1.0.0
+Summary: Reliable one-way file transfer using Robust Soliton fountain codes
+Home-page: https://github.com/BANPUMP-team/datadiode-RobustSoliton
+Author: Alin-Adrian Anton
+Author-email: alin.anton@upt.ro
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: Communications :: File Sharing
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: tqdm>=4.62.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Robust Soliton Data Diode 
+
+A data diode implementation using robust soliton fountain codes for reliable one-way data transmission.
+Specialized network capture cards allow for lossless packet capture (see receiver --napatech). 
+
+When using specialized capture cards (see --napatech) tapped into a media-converter, 
+there is perfect UDP reception (no packet loss). For example NAPATECH NT4E-4T 4-Port 
+PCIe x8 Gbit Capture Network Adapter 801-0075-09-02 connected to TP-Link MC200CM 
+(850 nm light) or MC210CS (1310 nm light). If using beam splitters for TX->RX link, 
+the 1310 nm fiber-optic is easy and cheaper to find.
+
+## Installation
+
+### From PyPI (recommended)
+
+```
+pip install datadiode-RobustSoliton
+```
+
+### From Source
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/BANPUMP-team/datadiode-RobustSoliton.git
+   cd datadiode-RobustSoliton 
+   ```
+
+2. Install in development mode:
+   ```
+   pip install -e .
+   ```
+
+## Usage
+
+### Basic operation:
+
+Run the sender:
+```
+datadiode-RobustSoliton send [options] file_to_send
+```
+
+Run the receiver:
+```
+datadiode-RobustSoliton receive [options] output_file
+```
+
+For more details on options, run:
+```
+datadiode-RobustSoliton --help
+datadiode-RobustSoliton send --help
+datadiode-RobustSoliton receive --help
+```

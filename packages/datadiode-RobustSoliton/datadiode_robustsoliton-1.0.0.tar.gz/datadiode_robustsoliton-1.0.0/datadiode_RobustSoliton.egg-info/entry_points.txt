@@ -1,0 +1,2 @@
+[console_scripts]
+datadiode-RobustSoliton = datadiode_RobustSoliton.__main__:main
