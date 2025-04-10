@@ -1,0 +1,41 @@
+[project]
+name = "aspubsub"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+  {name = "Meow King", email = "mr.meowking@posteo.com"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.12",
+]
+dynamic = ["version", "description"]
+
+dependencies = [
+  "loguru~=0.7.3",
+  "orjson~=3.10.16"
+]
+
+
+[project.optional-dependencies]
+redis = ["redis~=5.2.1"]
+wheels = [
+    "build",
+    "twine"
+]
+test = [
+    "pytest",
+    "pytest-asyncio"
+]
+
+[project.urls]
+Homepage = "https://codeberg.org/meow_king/aspubsub"
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
