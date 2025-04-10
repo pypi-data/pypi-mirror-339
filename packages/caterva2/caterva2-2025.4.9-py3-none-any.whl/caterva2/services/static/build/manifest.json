@@ -1,0 +1,14 @@
+{
+  "src/main.js": {
+    "file": "main.min.afadd9f9.js",
+    "isEntry": true,
+    "src": "src/main.js",
+    "css": [
+      "style.061740b1.css"
+    ]
+  },
+  "style.css": {
+    "file": "style.css",
+    "src": "style.css"
+  }
+}
