@@ -1,0 +1,460 @@
+Metadata-Version: 2.4
+Name: supportsx
+Version: 0.0.3
+Summary: A Python library that supplies runtime-checkable, fully parameterized, and well-documented protocols for nearly all dunder methods/attributes.
+Author-email: Tanner Corcoran <tannerbcorcoran@gmail.com>
+Maintainer-email: Tanner Corcoran <tannerbcorcoran@gmail.com>
+License: Apache License
+        Version 2.0, January 2004
+        http://www.apache.org/licenses/
+        
+        TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+        1. Definitions.
+        
+        "License" shall mean the terms and conditions for use, reproduction, and
+        distribution as defined by Sections 1 through 9 of this document.
+        
+        "Licensor" shall mean the copyright owner or entity authorized by the
+        copyright owner that is granting the License.
+        
+        "Legal Entity" shall mean the union of the acting entity and all other
+        entities that control, are controlled by, or are under common control
+        with that entity. For the purposes of this definition, "control" means
+        
+            (i) the power, direct or indirect, to cause the direction or
+                management of such entity, whether by contract or otherwise, or
+        
+            (ii) ownership of fifty percent (50%) or more of the outstanding
+                 shares, or
+        
+            (iii) beneficial ownership of such entity.
+        
+        "You" (or "Your") shall mean an individual or Legal Entity exercising
+        permissions granted by this License.
+        
+        "Source" form shall mean the preferred form for making modifications,
+        including but not limited to software source code, documentation source,
+        and configuration files.
+        
+        "Object" form shall mean any form resulting from mechanical
+        transformation or translation of a Source form, including but not
+        limited to compiled object code, generated documentation, and
+        conversions to other media types.
+        
+        "Work" shall mean the work of authorship, whether in Source or Object
+        form, made available under the License, as indicated by a copyright
+        notice that is included in or attached to the work (an example is
+        provided in the Appendix below).
+        
+        "Derivative Works" shall mean any work, whether in Source or Object
+        form, that is based on (or derived from) the Work and for which the
+        editorial revisions, annotations, elaborations, or other modifications
+        represent, as a whole, an original work of authorship. For the purposes
+        of this License, Derivative Works shall not include works that remain
+        separable from, or merely link (or bind by name) to the interfaces of,
+        the Work and Derivative Works thereof.
+        
+        "Contribution" shall mean any work of authorship, including the original
+        version of the Work and any modifications or additions to that Work or
+        Derivative Works thereof, that is intentionally submitted to Licensor
+        for inclusion in the Work by the copyright owner or by an individual or
+        Legal Entity authorized to submit on behalf of the copyright owner. For
+        the purposes of this definition, "submitted" means any form of
+        electronic, verbal, or written communication sent to the Licensor or its
+        representatives, including but not limited to communication on
+        electronic mailing lists, source code control systems, and issue
+        tracking systems that are managed by, or on behalf of, the Licensor for
+        the purpose of discussing and improving the Work, but excluding
+        communication that is conspicuously marked or otherwise designated in
+        writing by the copyright owner as "Not a Contribution."
+        
+        "Contributor" shall mean Licensor and any individual or Legal Entity on
+        behalf of whom a Contribution has been received by Licensor and
+        subsequently incorporated within the Work.
+        
+        2. Grant of Copyright License.
+        
+        Subject to the terms and conditions of this License, each Contributor
+        hereby grants to You a perpetual, worldwide, non-exclusive, no-charge,
+        royalty-free, irrevocable copyright license to reproduce, prepare
+        Derivative Works of, publicly display, publicly perform, sublicense, and
+        distribute the Work and such Derivative Works in Source or Object form.
+        
+        3. Grant of Patent License.
+        
+        Subject to the terms and conditions of this License, each Contributor
+        hereby grants to You a perpetual, worldwide, non-exclusive, no-charge,
+        royalty-free, irrevocable (except as stated in this section) patent
+        license to make, have made, use, offer to sell, sell, import, and
+        otherwise transfer the Work, where such license applies only to those
+        patent claims licensable by such Contributor that are necessarily
+        infringed by their Contribution(s) alone or by combination of their
+        Contribution(s) with the Work to which such Contribution(s) was
+        submitted. If You institute patent litigation against any entity
+        (including a cross-claim or counterclaim in a lawsuit) alleging that the
+        Work or a Contribution incorporated within the Work constitutes direct
+        or contributory patent infringement, then any patent licenses granted to
+        You under this License for that Work shall terminate as of the date such
+        litigation is filed.
+        
+        4. Redistribution.
+        
+        You may reproduce and distribute copies of the Work or Derivative Works
+        thereof in any medium, with or without modifications, and in Source or
+        Object form, provided that You meet the following conditions:
+        
+            (a) You must give any other recipients of the Work or Derivative
+                Works a copy of this License; and
+        
+            (b) You must cause any modified files to carry prominent notices
+                stating that You changed the files; and
+        
+            (c) You must retain, in the Source form of any Derivative Works that
+                You distribute, all copyright, patent, trademark, and
+                attribution notices from the Source form of the Work, excluding
+                those notices that do not pertain to any part of the Derivative
+                Works; and
+        
+            (d) If the Work includes a "NOTICE" text file as part of its
+                distribution, then any Derivative Works that You distribute must
+                include a readable copy of the attribution notices contained
+                within such NOTICE file, excluding those notices that do not
+                pertain to any part of the Derivative Works, in at least one of
+                the following places: within a NOTICE text file distributed as
+                part of the Derivative Works; within the Source form or
+                documentation, if provided along with the Derivative Works; or,
+                within a display generated by the Derivative Works, if and
+                wherever such third-party notices normally appear. The contents
+                of the NOTICE file are for informational purposes only and do
+                not modify the License. You may add Your own attribution notices
+                within Derivative Works that You distribute, alongside or as an
+                addendum to the NOTICE text from the Work, provided that such
+                additional attribution notices cannot be construed as modifying
+                the License.
+        
+        You may add Your own copyright statement to Your modifications and may
+        provide additional or different license terms and conditions for use,
+        reproduction, or distribution of Your modifications, or for any such
+        Derivative Works as a whole, provided Your use, reproduction, and
+        distribution of the Work otherwise complies with the conditions stated
+        in this License.
+        
+        5. Submission of Contributions.
+        
+        Unless You explicitly state otherwise, any Contribution intentionally
+        submitted for inclusion in the Work by You to the Licensor shall be
+        under the terms and conditions of this License, without any additional
+        terms or conditions. Notwithstanding the above, nothing herein shall
+        supersede or modify the terms of any separate license agreement you may
+        have executed with Licensor regarding such Contributions.
+        
+        6. Trademarks.
+        
+        This License does not grant permission to use the trade names,
+        trademarks, service marks, or product names of the Licensor, except as
+        required for reasonable and customary use in describing the origin of
+        the Work and reproducing the content of the NOTICE file.
+        
+        7. Disclaimer of Warranty.
+        
+        Unless required by applicable law or agreed to in writing, Licensor
+        provides the Work (and each Contributor provides its Contributions) on
+        an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+        express or implied, including, without limitation, any warranties or
+        conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+        PARTICULAR PURPOSE. You are solely responsible for determining the
+        appropriateness of using or redistributing the Work and assume any risks
+        associated with Your exercise of permissions under this License.
+        
+        8. Limitation of Liability.
+        
+        In no event and under no legal theory, whether in tort (including
+        negligence), contract, or otherwise, unless required by applicable law
+        (such as deliberate and grossly negligent acts) or agreed to in writing,
+        shall any Contributor be liable to You for damages, including any
+        direct, indirect, special, incidental, or consequential damages of any
+        character arising as a result of this License or out of the use or
+        inability to use the Work (including but not limited to damages for loss
+        of goodwill, work stoppage, computer failure or malfunction, or any and
+        all other commercial damages or losses), even if such Contributor has
+        been advised of the possibility of such damages.
+        
+        9. Accepting Warranty or Additional Liability.
+        
+        While redistributing the Work or Derivative Works thereof, You may
+        choose to offer, and charge a fee for, acceptance of support, warranty,
+        indemnity, or other liability obligations and/or rights consistent with
+        this License. However, in accepting such obligations, You may act only
+        on Your own behalf and on Your sole responsibility, not on behalf of any
+        other Contributor, and only if You agree to indemnify, defend, and hold
+        each Contributor harmless for any liability incurred by, or claims
+        asserted against, such Contributor by reason of your accepting any such
+        warranty or additional liability.
+        
+        END OF TERMS AND CONDITIONS
+        
+        APPENDIX: How to apply the Apache License to your work.
+        
+        To apply the Apache License to your work, attach the following
+        boilerplate notice, with the fields enclosed by brackets "[]" replaced
+        with your own identifying information. (Don't include the brackets!)
+        The text should be enclosed in the appropriate comment syntax for the
+        file format. We also recommend that a file or class name and description
+        of purpose be included on the same "printed page" as the copyright
+        notice for easier identification within third-party archives.
+        
+            Copyright [yyyy] [name of copyright owner]
+        
+            Licensed under the Apache License, Version 2.0 (the
+            "License"); you may not use this file except in compliance with the
+            License. You may obtain a copy of the License at
+        
+            http://www.apache.org/licenses/LICENSE-2.0
+        
+            Unless required by applicable law or agreed to in writing, software
+            distributed under the License is distributed on an "AS IS" BASIS,
+            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+            implied. See the License for the specific language governing
+            permissions and limitations under the License.
+        
+Project-URL: Homepage, https://github.com/tanrbobanr/supportsx
+Project-URL: Documentation, https://github.com/tanrbobanr/supportsx/blob/main/README.md
+Project-URL: Changelog, https://github.com/tanrbobanr/supportsx/blob/main/CHANGELOG.md
+Project-URL: Source, https://github.com/tanrbobanr/supportsx
+Project-URL: Issues, https://github.com/tanrbobanr/supportsx/issues
+Keywords: supports,protocols
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Typing :: Typed
+Classifier: Topic :: Utilities
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typing_extensions>=4.4.0; python_version < "3.10"
+Dynamic: license-file
+
+# Install
+
+`$ pip install supportsx`
+
+# Description
+
+A Python library that supplies runtime-checkable, fully parameterized, and well-documented protocols for nearly all dunder methods/attributes.
+
+The goal of this library is to expand what is already available in the `typing` standard library and `_typeshed` library, as well as add a number of common union protocols. The full list of available protocols can be found in [the documentation section](#documentation).
+
+# Example
+
+```py
+from typing import Any
+import supportsx
+
+def foo(
+    value: supportsx.add[Any, int],
+    ctm: supportsx.u.ctx_mngr
+) -> None:
+    with ctm:
+        print(value + 1)
+```
+```py
+from typing import Any
+from supportsx import *
+
+def foo(
+    value: SupportsAdd[Any, int],
+    ctm: SupportsContextManager
+) -> None:
+    with ctm:
+        print(value + 1)
+```
+As shown above, there are two ways of referencing each protocol. The preferred method is the one shown first (i.e. `supportsx.*` for primary protocols and `supportsx.u.*` for union protocols), as it helps keep the global namespace clear (although at the end of the day, it is up to you).
+
+# Documentation
+
+## Available Protocols
+
+Below is an exhaustive list all available protocols, which methods/attributes they represent, and the available parameters:
+
+### Primary protocols
+
+| Protocol                                                      | Method/Attribute     | Parameter Order                  | Parameter Form                                                                                   |
+|:--------------------------------------------------------------|:---------------------|:---------------------------------|:-------------------------------------------------------------------------------------------------|
+| `supportsx.abs`<br>`supportsx.SupportsAbs`                      | `__abs__`            | `[_T_co]`                        | `() -> _T_co`                                                                                    |
+| `supportsx.add`<br>`supportsx.SupportsAdd`                      | `__add__`            | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.aenter`<br>`supportsx.SupportsAEnter`                | `__aenter__`         | `[_T_co]`                        | `() -> Awaitable[_T_co]`                                                                         |
+| `supportsx.aexit`<br>`supportsx.SupportsAExit`                  | `__aexit__`          |                                  | `(Type[BaseException] \| None, BaseException \| None, TracebackType \| None) -> Awaitable[None]` |
+| `supportsx.aiter`<br>`supportsx.SupportsAIter`                  | `__aiter__`          | `[_T_co]`                        | `() -> AsyncIterator[_T_co]`                                                                     |
+| `supportsx.and_`<br>`supportsx.SupportsAnd`                     | `__and__`            | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.anext`<br>`supportsx.SupportsANext`                  | `__anext__`          | `[_T_co]`                        | `() -> Awaitable[_T_co]`                                                                         |
+| `supportsx.await_`<br>`supportsx.SupportsAwait`                 | `__await__`          | `[_T_co]`                        | `() -> Iterator[_T_co]`                                                                          |
+| `supportsx.bool`<br>`supportsx.SupportsBool`                    | `__bool__`           |                                  | `() -> bool`                                                                                     |
+| `supportsx.buffer`<br>`supportsx.SupportsBuffer`                | `__buffer__`         |                                  | `(int) -> memoryview`                                                                            |
+| `supportsx.bytes`<br>`supportsx.SupportsBytes`                  | `__bytes__`          |                                  | `() -> bytes`                                                                                    |
+| `supportsx.call`<br>`supportsx.SupportsCall`                    | `__call__`           | `[_P, _T_co]`                    | `(_P) -> _T_co`                                                                                  |
+| `supportsx.ceil`<br>`supportsx.SupportsCeil`                    | `__ceil__`           |                                  | `() -> Integral`                                                                                 |
+| `supportsx.complex`<br>`supportsx.SupportsComplex`              | `__complex__`        |                                  | `() -> complex`                                                                                  |
+| `supportsx.contains`<br>`supportsx.SupportsContains`            | `__contains__`       | `[_T_contra]`                    | `(_T_contra) -> bool`                                                                            |
+| `supportsx.delete`<br>`supportsx.SupportsDelete`                | `__delete__`         | `[_T_contra]`                    | `(_T_contra) -> None`                                                                            |
+| `supportsx.delitem`<br>`supportsx.SupportsDelItem`              | `__delitem__`        | `[_T_contra]`                    | `(_T_contra) -> None`                                                                            |
+| `supportsx.divmod`<br>`supportsx.SupportsDivMod`                | `__divmod__`         | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.enter`<br>`supportsx.SupportsEnter`                  | `__enter__`          | `[_T_co]`                        | `() -> _T_co`                                                                                    |
+| `supportsx.exit`<br>`supportsx.SupportsExit`                    | `__exit__`           |                                  | `(Type[BaseException] \| None, BaseException \| None, TracebackType \| None) -> None`            |
+| `supportsx.float`<br>`supportsx.SupportsFloat`                  | `__float__`          |                                  | `() -> float`                                                                                    |
+| `supportsx.floor`<br>`supportsx.SupportsFloor`                  | `__floor__`          |                                  | `() -> Integral`                                                                                 |
+| `supportsx.floordiv`<br>`supportsx.SupportsFloorDiv`            | `__floordiv__`       | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.ge`<br>`supportsx.SupportsGE`                        | `__ge__`             | `[_T_contra]`                    | `(_T_contra) -> bool`                                                                            |
+| `supportsx.get`<br>`supportsx.SupportsGet`                      | `__get__`            | `[_T_contra, _T_co]`             | `(_T_contra \| None, Type[_T_contra] \| None = None) -> _T_co`                                   |
+| `supportsx.getattr`<br>`supportsx.SupportsGetAttr`              | `__getattr__`        | `[_T_co]`                        | `(str) -> _T_co`                                                                                 |
+| `supportsx.getitem`<br>`supportsx.SupportsGetItem`              | `__getitem__`        | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.gt`<br>`supportsx.SupportsGT`                        | `__gt__`             | `[_T_contra]`                    | `(_T_contra) -> bool`                                                                            |
+| `supportsx.iadd`<br>`supportsx.SupportsIAdd`                    | `__iadd__`           | `[_T_contra]`                    | `(_T_contra) -> None`                                                                            |
+| `supportsx.iand`<br>`supportsx.SupportsIAnd`                    | `__iand__`           | `[_T_contra]`                    | `(_T_contra) -> None`                                                                            |
+| `supportsx.ifloordiv`<br>`supportsx.SupportsIFloorDiv`          | `__ifloordiv__`      | `[_T_contra]`                    | `(_T_contra) -> None`                                                                            |
+| `supportsx.ilshift`<br>`supportsx.SupportsILShift`              | `__ilshift__`        | `[_T_contra]`                    | `(_T_contra) -> None`                                                                            |
+| `supportsx.imatmul`<br>`supportsx.SupportsIMatMul`              | `__imatmul__`        | `[_T_contra]`                    | `(_T_contra) -> None`                                                                            |
+| `supportsx.imod`<br>`supportsx.SupportsIMod`                    | `__imod__`           | `[_T_contra]`                    | `(_T_contra) -> None`                                                                            |
+| `supportsx.imul`<br>`supportsx.SupportsIMul`                    | `__imul__`           | `[_T_contra]`                    | `(_T_contra) -> None`                                                                            |
+| `supportsx.index`<br>`supportsx.SupportsIndex`                  | `__index__`          |                                  | `() -> int`                                                                                      |
+| `supportsx.int`<br>`supportsx.SupportsInt`                      | `__int__`            |                                  | `() -> int`                                                                                      |
+| `supportsx.invert`<br>`supportsx.SupportsInvert`                | `__invert__`         | `[_T_co]`                        | `() -> _T_co`                                                                                    |
+| `supportsx.ior`<br>`supportsx.SupportsIOr`                      | `__ior__`            | `[_T_contra]`                    | `(_T_contra) -> None`                                                                            |
+| `supportsx.ipow`<br>`supportsx.SupportsIPow`                    | `__ipow__`           | `[_T_contra, _T2_contra]`        | `(_T_contra, _T2_contra \| None = None) -> None`                                                 |
+| `supportsx.irshift`<br>`supportsx.SupportsIRShift`              | `__irshift__`        | `[_T_contra]`                    | `(_T_contra) -> None`                                                                            |
+| `supportsx.isub`<br>`supportsx.SupportsISub`                    | `__isub__`           | `[_T_contra]`                    | `(_T_contra) -> None`                                                                            |
+| `supportsx.iter`<br>`supportsx.SupportsIter`                    | `__iter__`           | `[_T_co]`                        | `() -> Iterator[_T_co]`                                                                          |
+| `supportsx.itruediv`<br>`supportsx.SupportsITrueDiv`            | `__itruediv__`       | `[_T_contra]`                    | `(_T_contra) -> None`                                                                            |
+| `supportsx.ixor`<br>`supportsx.SupportsIXor`                    | `__ixor__`           | `[_T_contra]`                    | `(_T_contra) -> None`                                                                            |
+| `supportsx.le`<br>`supportsx.SupportsLE`                        | `__le__`             | `[_T_contra]`                    | `(_T_contra) -> bool`                                                                            |
+| `supportsx.len`<br>`supportsx.SupportsLen`                      | `__len__`            |                                  | `() -> int`                                                                                      |
+| `supportsx.length_hint`<br>`supportsx.SupportsLengthHint`       | `__length_hint__`    |                                  | `() -> int`                                                                                      |
+| `supportsx.lshift`<br>`supportsx.SupportsLShift`                | `__lshift__`         | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.lt`<br>`supportsx.SupportsLT`                        | `__lt__`             | `[_T_contra]`                    | `(_T_contra) -> bool`                                                                            |
+| `supportsx.match_args`<br>`supportsx.SupportsMatchArgs`         | `__match_args__`     |                                  | `() -> Sequence[str]`                                                                            |
+| `supportsx.matmul`<br>`supportsx.SupportsMatMul`                | `__matmul__`         | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.missing`<br>`supportsx.SupportsMissing`              | `__missing__`        | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.mod`<br>`supportsx.SupportsMod`                      | `__mod__`            | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.mro_entries`<br>`supportsx.SupportsMroEntries`       | `__mro_entries__`    | `[_T]`                           | `(Sequence[_T]) -> Sequence[_T]`                                                                 |
+| `supportsx.mul`<br>`supportsx.SupportsMul`                      | `__mul__`            | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.neg`<br>`supportsx.SupportsNeg`                      | `__neg__`            | `[_T_co]`                        | `() -> _T_co`                                                                                    |
+| `supportsx.next`<br>`supportsx.SupportsNext`                    | `__next__`           | `[_T_co]`                        | `() -> _T_co`                                                                                    |
+| `supportsx.objclass`<br>`supportsx.SupportsObjClass`            | `__objclass__`       | `[_T_co]`                        | `() -> Type[_T_co]`                                                                              |
+| `supportsx.or_`<br>`supportsx.SupportsOr`                       | `__or__`             | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.pos`<br>`supportsx.SupportsPos`                      | `__pos__`            | `[_T_co]`                        | `() -> _T_co`                                                                                    |
+| `supportsx.post_init`<br>`supportsx.SupportsPostInit`           | `__post_init__`      | `[_P]`                           | `(_P) -> None`                                                                                   |
+| `supportsx.pow`<br>`supportsx.SupportsPow`                      | `__pow__`            | `[_T_contra, _T2_contra, _T_co]` | `(_T_contra, _T2_contra \| None = None) -> _T_co`                                                |
+| `supportsx.radd`<br>`supportsx.SupportsRAdd`                    | `__radd__`           | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.rand`<br>`supportsx.SupportsRAnd`                    | `__rand__`           | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.rdivmod`<br>`supportsx.SupportsRDivMod`              | `__rdivmod__`        | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.release_buffer`<br>`supportsx.SupportsReleaseBuffer` | `__release_buffer__` |                                  | `(memoryview) -> None`                                                                           |
+| `supportsx.reversed`<br>`supportsx.SupportsReversed`            | `__reversed__`       | `[_T_co]`                        | `() -> Iterator[_T_co]`                                                                          |
+| `supportsx.rfloordiv`<br>`supportsx.SupportsRFloorDiv`          | `__rfloordiv__`      | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.rlshift`<br>`supportsx.SupportsRLShift`              | `__rlshift__`        | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.rmatmul`<br>`supportsx.SupportsRMatMul`              | `__rmatmul__`        | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.rmod`<br>`supportsx.SupportsRMod`                    | `__rmod__`           | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.rmul`<br>`supportsx.SupportsRMul`                    | `__rmul__`           | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.ror`<br>`supportsx.SupportsROr`                      | `__ror__`            | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.round`<br>`supportsx.SupportsRound`                  | `__round__`          | `[_T_co, _T2_co]`                | `() -> _T_co, (int) -> _T2_co`                                                                   |
+| `supportsx.rpow`<br>`supportsx.SupportsRPow`                    | `__rpow__`           | `[_T_contra, _T2_contra, _T_co]` | `(_T_contra, _T2_contra \| None = None) -> _T_co`                                                |
+| `supportsx.rrshift`<br>`supportsx.SupportsRRShift`              | `__rrshift__`        | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.rshift`<br>`supportsx.SupportsRShift`                | `__rshift__`         | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.rsub`<br>`supportsx.SupportsRSub`                    | `__rsub__`           | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.rtruediv`<br>`supportsx.SupportsRTrueDiv`            | `__rtruediv__`       | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.rxor`<br>`supportsx.SupportsRXor`                    | `__rxor__`           | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.set`<br>`supportsx.SupportsSet`                      | `__set__`            | `[_T_contra, _T2_contra]`        | `(_T_contra, _T2_contra) -> None`                                                                |
+| `supportsx.setitem`<br>`supportsx.SupportsSetItem`              | `__setitem__`        | `[_T_contra, _T2_contra]`        | `(_T_contra, _T2_contra) -> None`                                                                |
+| `supportsx.set_name`<br>`supportsx.SupportsSetName`             | `__set_name__`       | `[_T_contra]`                    | `(Type[_T_contra], str) -> None`                                                                 |
+| `supportsx.sub`<br>`supportsx.SupportsSub`                      | `__sub__`            | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.truediv`<br>`supportsx.SupportsTrueDiv`              | `__truediv__`        | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+| `supportsx.trunc`<br>`supportsx.SupportsTrunc`                  | `__trunc__`          |                                  | `() -> Integral`                                                                                 |
+| `supportsx.xor`<br>`supportsx.SupportsXor`                      | `__xor__`            | `[_T_contra, _T_co]`             | `(_T_contra) -> _T_co`                                                                           |
+
+### Union Protocols
+
+| Protocol                                                                                                        | Parameters (in order)                        | Bases                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|:----------------------------------------------------------------------------------------------------------------|:---------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `supportsx.u.actx_mngr`<br>`supportsx.SupportsAsyncContextManager`<br>`supportsx.u.SupportsAsyncContextManager` | `[_T_co]`                                    | `SupportsAEnter[_T_co]`<br>`SupportsAExit`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `supportsx.u.bitops`<br>`supportsx.SupportsBitwiseOps`<br>`supportsx.u.SupportsBitwiseOps`                      | `[_T_contra, _T_co]`                         | `SupportsAnd[_T_contra, _T_co]`<br>`SupportsLShift[_T_contra, _T_co]`<br>`SupportsOr[_T_contra, _T_co]`<br>`SupportsRAnd[_T_contra, _T_co]`<br>`SupportsRLShift[_T_contra, _T_co]`<br>`SupportsROr[_T_contra, _T_co]`<br>`SupportsRRShift[_T_contra, _T_co]`<br>`SupportsRShift[_T_contra, _T_co]`<br>`SupportsRXor[_T_contra, _T_co]`<br>`SupportsXor[_T_contra, _T_co]`                                                                                                                                                                               |
+| `supportsx.u.cmps`<br>`supportsx.SupportsComparisons`<br>`supportsx.u.SupportsComparisons`                      | `[_T_contra]`                                | `SupportsGE[_T_contra]`<br>`SupportsGT[_T_contra]`<br>`SupportsLE[_T_contra]`<br>`SupportsLT[_T_contra]`                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `supportsx.u.ctx_mngr`<br>`supportsx.SupportsContextManager`<br>`supportsx.u.SupportsContextManager`            | `[_T_co]`                                    | `SupportsEnter[_T_co]<br>SupportsExit`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `supportsx.u.data_desc`<br>`supportsx.SupportsDataDescriptor`<br>`supportsx.u.SupportsDataDescriptor`           | `[_T_contra, _T2_contra, _T_co]`             | `SupportsDelete[_T_contra]`<br>`SupportsGet[_T_contra, _T_co]`<br>`SupportsSet[_T_contra, _T2_contra]`                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `supportsx.u.ibitops`<br>`supportsx.SupportsIBitwiseOps`<br>`supportsx.u.SupportsIBitwiseOps`                   | `[_T_contra]`                                | `SupportsIAnd[_T_contra]`<br>`SupportsILShift[_T_contra]`<br>`SupportsIOr[_T_contra]`<br>`SupportsIRShift[_T_contra]`<br>`SupportsIXor[_T_contra]`                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `supportsx.u.imathops`<br>`supportsx.SupportsIMathOps`<br>`supportsx.u.SupportsIMathOps`                        | `[_T_contra, _T2_contra]`                    | `SupportsIAdd[_T_contra]`<br>`SupportsIFloorDiv[_T_contra]`<br>`SupportsIMod[_T_contra]`<br>`SupportsIMul[_T_contra]`<br>`SupportsIPow[_T_contra, _T2_contra]`<br>`SupportsISub[_T_contra]`<br>`SupportsITrueDiv[_T_contra]`                                                                                                                                                                                                                                                                                                                            |
+| `supportsx.u.imathops2`<br>`supportsx.SupportsIMathOps2`<br>`supportsx.u.SupportsIMathOps2`                     | `[_T_contra, _T2_contra]`                    | `SupportsIMathOps[_T_contra, _T2_contra]`<br>`SupportsIMatMul[_T_contra]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `supportsx.u.items`<br>`supportsx.SupportsItems`<br>`supportsx.u.SupportsItems`                                 | `[_T_contra, _T2_contra, _T_co]`             | `SupportsDelItem[_T_contra]`<br>`SupportsGetItem[_T_contra, _T_co]`<br>`SupportsSetItem[_T_contra, _T2_contra]`                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `supportsx.u.length`<br>`supportsx.SupportsLength`<br>`supportsx.u.SupportsLength`                              |                                              | `SupportsLen`<br>`SupportsLengthHint`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `supportsx.u.math_funcs`<br>`supportsx.SupportsMathFunctions`<br>`supportsx.u.SupportsMathFunctions`            | `[_T_contra, _T_co, _T2_co, _T3_co, _T4_co]` | `SupportsAbs[_T2_co]`<br>`SupportsCeil`<br>`SupportsDivMod[_T_contra, _T_co]`<br>`SupportsFloor`<br>`SupportsRDivMod[_T_contra, _T_co]`<br>`SupportsRound[_T3_co, _T4_co]`<br>`SupportsTrunc`                                                                                                                                                                                                                                                                                                                                                           |
+| `supportsx.u.mathops`<br>`supportsx.SupportsMathOps`<br>`supportsx.u.SupportsMathOps`                           | `[_T_contra, _T2_contra, _T_co]`             | `SupportsAdd[_T_contra, _T_co]`<br>`SupportsFloorDiv[_T_contra, _T_co]`<br>`SupportsMod[_T_contra, _T_co]`<br>`SupportsMul[_T_contra, _T_co]`<br>`SupportsPow[_T_contra, _T2_contra, _T_co]`<br>`SupportsRAdd[_T_contra, _T_co]`<br>`SupportsRFloorDiv[_T_contra, _T_co]`<br>`SupportsRMod[_T_contra, _T_co]`<br>`SupportsRMul[_T_contra, _T_co]`<br>`SupportsRPow[_T_contra, _T2_contra, _T_co]`<br>`SupportsRSub[_T_contra, _T_co]`<br>`SupportsRTrueDiv[_T_contra, _T_co]`<br>`SupportsSub[_T_contra, _T_co]`<br>`SupportsTrueDiv[_T_contra, _T_co]` |
+| `supportsx.u.mathops2`<br>`supportsx.SupportsMathOps2`<br>`supportsx.u.SupportsMathOps2`                        | `[_T_contra, _T2_contra, _T_co]`             | `SupportsMathOps[_T_contra, _T2_contra, _T_co]`<br>`SupportsMatMul[_T_contra, _T_co]`<br>`SupportsRMatMul[_T_contra, _T_co]`                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `supportsx.u.type_conversion`<br>`supportsx.SupportsTypeConversion`<br>`supportsx.u.SupportsTypeConversion`     |                                              | `SupportsBytes`<br>`SupportsComplex`<br>`SupportsFloat`<br>`SupportsIndex`<br>`SupportsInt`                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `supportsx.u.type_conversion2`<br>`supportsx.SupportsTypeConversion2`<br>`supportsx.u.SupportsTypeConversion2`  |                                              | `SupportsBool`<br>`SupportsTypeConversion`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `supportsx.u.unary_ops`<br>`supportsx.SupportsUnaryOps`<br>`supportsx.u.SupportsUnaryOps`                       | `[_T_co]`                                    | `SupportsInvert[_T_co]`<br>`SupportsNeg[_T_co]`<br>`SupportsPos[_T_co]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+
+## Excluded Methods and Attributes
+
+The following methods are available on all objects, and are thus excluded:
+
+|                     |
+|:--------------------|
+| `__delattr__`       |
+| `__dir__`           |
+| `__eq__`            |
+| `__format__`        |
+| `__getattribute__`  |
+| `__getstate__`      |
+| `__hash__`          |
+| `__init__`          |
+| `__init_subclass__` |
+| `__ne__`            |
+| `__new__`           |
+| `__reduce__`        |
+| `__reduce_ex__`     |
+| `__repr__`          |
+| `__setattr__`       |
+| `__sizeof__`        |
+| `__str__`           |
+| `__subclasshook__`  |
+
+The following methods are available on all types, and are thus excluded:
+
+|                     |
+|:--------------------|
+| `__instancecheck__` |
+| `__prepare__`       |
+| `__subclasscheck__` |
+| `__subclasses__`    |
+| `mro`               |
+
+The following attributes are available on all types, and are thus excluded:
+
+|                      |
+|:---------------------|
+| `__base__`           |
+| `__bases__`          |
+| `__basicsize__`      |
+| `__class__`          |
+| `__dictoffset__`     |
+| `__flags__`          |
+| `__itemsize__`       |
+| `__module__`         |
+| `__mro__`            |
+| `__name__`           |
+| `__qualname__`       |
+| `__text_signature__` |
+| `__type_params__`    |
+| `__weakrefoffset__`  |
+
+Although `__slots__` and `__dict__` may not appear on an object, protocols for those objects are not currently supported by the Python specification due to the part they play in attribute access.
