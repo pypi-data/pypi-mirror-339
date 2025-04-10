@@ -1,0 +1,5 @@
+[opsmate.runtime.runtimes]
+runtime = mysql.runtime:MySQLRuntime
+
+[opsmate.tools]
+tool = mysql.tool:MySQLTool
