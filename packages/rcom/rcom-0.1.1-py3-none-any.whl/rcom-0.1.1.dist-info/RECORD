@@ -1,0 +1,10 @@
+rcom/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+rcom/rcom_client.py,sha256=ZxJfLpaljaMJOxIegx4f1bPkgHpeb1EydgyjSBsSHOU,2595
+rcom/rcom_registry.py,sha256=FMKL4Hnf5-LZpaCDdKhqHC-pdi0Aafbtf4-PhoztlLA,2726
+rcom/rcom_server.py,sha256=SLglKxpPWGtDT1Svj6J1a3W-BCNkYamNeMW_kvKiWCw,3320
+rcom/rcom_server__.py,sha256=GyeGfjoLmjNfCImyQ0C5ST1vMZVRiLWbhsf2vfnLqog,1472
+rcom-0.1.1.dist-info/licenses/LICENSE,sha256=IMF9i4xIpgCADf0U-V1cuf9HBmqWQd3qtI3FSuyW4zE,26526
+rcom-0.1.1.dist-info/METADATA,sha256=6Q5kmqp5l6m0ZNqlrjaLJIj7zhmvQVeqUd8t2xxRhKM,715
+rcom-0.1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+rcom-0.1.1.dist-info/top_level.txt,sha256=JL0winWVezzC-WkwIP3HggTOjREKnWFfp7DqR9u4qD0,5
+rcom-0.1.1.dist-info/RECORD,,
