@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: auto-upgrade-pip
+Version: 0.2.0
+Summary: Fast to upgrade your pip packages.
+Home-page: https://github.com/xystudio889/auto-upgrade-pip
+Author: xystudio
+Author-email: 173288240@qq.com
+License: MIT
+Requires-Python: >=3.6
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
