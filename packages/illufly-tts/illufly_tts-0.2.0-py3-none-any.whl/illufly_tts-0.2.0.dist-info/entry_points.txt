@@ -1,0 +1,6 @@
+[console_scripts]
+tts=illufly_tts.__main__:main
+tts-api=illufly_tts.api.__main__:main
+tts-client=illufly_tts.client.__main__:cli
+tts-server=illufly_tts.server.__main__:main
+
