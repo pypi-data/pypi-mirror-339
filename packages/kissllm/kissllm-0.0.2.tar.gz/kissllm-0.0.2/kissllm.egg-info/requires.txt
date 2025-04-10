@@ -1,0 +1,4 @@
+langfuse>=2.59.3
+openai>=1.63.0
+mcp>=0.1.0
+asyncio
