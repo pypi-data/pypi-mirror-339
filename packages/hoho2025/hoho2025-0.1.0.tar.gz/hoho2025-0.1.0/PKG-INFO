@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: hoho2025
+Version: 0.1.0
+Summary: Tools and utilites for the HoHo Dataset and S23DR Competition
+Home-page: https://github.com/s23dr/hoho2025
+Author: Jack Langerman, Dmytro Mishkin, S23DR Orgainizing Team
+Author-email: hoho@jackml.com
+Requires-Python: >=3.10
+License-File: LICENSE.txt
+Requires-Dist: datasets
+Requires-Dist: huggingface-hub
+Requires-Dist: ipywidgets
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: Pillow
+Requires-Dist: plotly
+Requires-Dist: pycolmap
+Requires-Dist: scipy
+Requires-Dist: torch
+Requires-Dist: trimesh
+Requires-Dist: webdataset
+Requires-Dist: manifold3d
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

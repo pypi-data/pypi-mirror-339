@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+hoho2025/__init__.py
+hoho2025/color_mappings.py
+hoho2025/example_solutions.py
+hoho2025/hoho.py
+hoho2025/metric_helper.py
+hoho2025/read_write_colmap.py
+hoho2025/vis.py
+hoho2025/viz3d.py
+hoho2025.egg-info/PKG-INFO
+hoho2025.egg-info/SOURCES.txt
+hoho2025.egg-info/dependency_links.txt
+hoho2025.egg-info/requires.txt
+hoho2025.egg-info/top_level.txt
