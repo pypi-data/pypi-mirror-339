@@ -1,0 +1,8 @@
+jax_plugins/xla_rocm60/__init__.py,sha256=oPvodH1-jFk_cH9r-DIPikLZSAevXRJqkZBw3eKoe9E,4490
+jax_plugins/xla_rocm60/version.py,sha256=cgG_Q3nK4PaGeW--dzvhuY7jsivvpDM3k9_hQxYvokc,6017
+jax_plugins/xla_rocm60/xla_rocm_plugin.so,sha256=GLWPngjIXuV-jyW0MidYOafnQbDA9BlDlmQMiERqhxs,559988000
+jax_rocm60_pjrt-0.5.0.dist-info/METADATA,sha256=7zScQV_XETCwxBy8TmPu3Ev0aqX8g3VV8OSPc3gIuqM,364
+jax_rocm60_pjrt-0.5.0.dist-info/WHEEL,sha256=R-pe4HujD5uwcmk8KMg6GmlnhwHtGhG0WQ41Uygk6p4,110
+jax_rocm60_pjrt-0.5.0.dist-info/entry_points.txt,sha256=E410tReOp2PB0yMZumMAmyLPaywVCAWVtUzjGvm20Bs,50
+jax_rocm60_pjrt-0.5.0.dist-info/top_level.txt,sha256=BMuBVFd0VZSL85gH2fQxPQpETv27dLmJ90vD27bu13Q,12
+jax_rocm60_pjrt-0.5.0.dist-info/RECORD,,
