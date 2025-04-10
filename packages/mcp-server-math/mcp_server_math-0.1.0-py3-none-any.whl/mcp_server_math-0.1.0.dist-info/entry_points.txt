@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-math = mcp_server_math:main
