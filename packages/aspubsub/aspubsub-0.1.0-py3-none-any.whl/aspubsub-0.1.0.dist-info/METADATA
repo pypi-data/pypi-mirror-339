@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: aspubsub
+Version: 0.1.0
+Summary: Asynchronous PubSub interface for python web frameworks.
+Author-email: Meow King <mr.meowking@posteo.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-Expression: MIT
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: loguru~=0.7.3
+Requires-Dist: orjson~=3.10.16
+Requires-Dist: redis~=5.2.1 ; extra == "redis"
+Requires-Dist: pytest ; extra == "test"
+Requires-Dist: pytest-asyncio ; extra == "test"
+Requires-Dist: build ; extra == "wheels"
+Requires-Dist: twine ; extra == "wheels"
+Project-URL: Homepage, https://codeberg.org/meow_king/aspubsub
+Provides-Extra: redis
+Provides-Extra: test
+Provides-Extra: wheels
+
+# AsPubSub
+
+Asynchronous PubSub interface for Python.
+
+Currently Supported Back-End:
+- InMemory
+- Redis PubSub (support `psubscribe` and `punsubscribe`)
+
+
+## Credits
+
+- [broadcaster](https://github.com/encode/broadcaster)
+
+
+
