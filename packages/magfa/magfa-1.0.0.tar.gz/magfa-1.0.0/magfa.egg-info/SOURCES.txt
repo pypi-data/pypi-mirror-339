@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+magfa/__init__.py
+magfa/error_codes.py
+magfa/klass.py
+magfa/logger.py
+magfa.egg-info/PKG-INFO
+magfa.egg-info/SOURCES.txt
+magfa.egg-info/dependency_links.txt
+magfa.egg-info/requires.txt
+magfa.egg-info/top_level.txt
+magfa/http_utils/__init__.py
+magfa/http_utils/klass.py
+magfa/http_utils/status_codes.py
