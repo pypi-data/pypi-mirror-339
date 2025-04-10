@@ -1,0 +1,15 @@
+hydrotools/svi_client/__init__.py,sha256=I65RpXZFL12QFeiAthsTQKpyxljQ7LC2gBGkSLW9CeQ,197
+hydrotools/svi_client/_version.py,sha256=LGVQyDsWifdACo7qztwb8RWWHds1E7uQ-ZqD8SAjyw4,22
+hydrotools/svi_client/clients.py,sha256=Siej32UIse67h5dY71J6QrfDxgy3OW1TJ5Efz9mJtoI,9845
+hydrotools/svi_client/consts.py,sha256=cYnHwdG8XbpOZV84oA4BS4aB1vYk9-8uROiC56OTPLw,4891
+hydrotools/svi_client/url_builders.py,sha256=zFq4BN_hkjoWfOGB4ejZq6mC88DvF6Yz5qd9sgffvX0,9206
+hydrotools/svi_client/types/__init__.py,sha256=opRQNgx_ftGHMyWd567MAfCM0QxAJIJhcsgwzZK3nc0,143
+hydrotools/svi_client/types/field_name_map.py,sha256=s5zwlpI9i9_u9iSamAcl7LlLko1KdTrNIUcrIyfm1JM,11045
+hydrotools/svi_client/types/type_definitions.py,sha256=-qsm4KkzX0oGQvNXV9CfwOxZtpgDBwakPCx7ngzFMJE,5590
+hydrotools/svi_client/types/utilities.py,sha256=ENa0oB5pEHKQN_bXwISUTNbM-RqJOqnbL5XoNOmGnBo,1793
+hydrotools_svi_client-1.1.0.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+hydrotools_svi_client-1.1.0.dist-info/licenses/NOTICE,sha256=HwME0VivoEktFQQkOsNocwRN6BJ8SrhoJHnWsvidlns,1097
+hydrotools_svi_client-1.1.0.dist-info/METADATA,sha256=P6rheJ6gNsDiR3cKZG-l_1i4oHNZ1IFiIAV8rrbXL7E,19456
+hydrotools_svi_client-1.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+hydrotools_svi_client-1.1.0.dist-info/top_level.txt,sha256=y0AGzG5RNvFMXcxxP_MxZ3zo0eg-tvmzyq3oREZw3YI,11
+hydrotools_svi_client-1.1.0.dist-info/RECORD,,
