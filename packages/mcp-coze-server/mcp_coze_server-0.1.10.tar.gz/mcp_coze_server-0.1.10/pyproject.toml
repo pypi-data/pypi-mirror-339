@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-coze-server"
+version = "0.1.10"
+authors = [
+    { name = "flink", email = "w741069229@gmail.com" }
+]
+description = "A MCP server implementation for Coze API"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+keywords = ["mcp", "coze", "api", "server"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "mcp>=1.6.0",
+    "pydantic>=2.0.0",
+    "cozepy-flink"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/shizeying/coze-mcp-server"
+"Bug Tracker" = "https://github.com/shizeying/coze-mcp-server/issues"
+"Documentation" = "https://github.com/shizeying/coze-mcp-server#readme"
+"Source Code" = "https://github.com/shizeying/coze-mcp-server"
+
+[project.scripts]
+mcp-coze-server = "mcp_coze_server.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.build_system]
+build-requires = [
+    "setuptools>=61.0",
+    "wheel",
+    "build",
+] 
