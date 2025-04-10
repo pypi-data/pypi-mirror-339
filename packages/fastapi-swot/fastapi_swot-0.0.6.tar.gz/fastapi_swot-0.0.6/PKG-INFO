@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: fastapi_swot
+Version: 0.0.6
+Summary: FastAPI SWOT
+Project-URL: Homepage, https://github.com/harrylowkey/fastapi-swot
+Project-URL: Bug Tracker, https://github.com/harrylowkey/fastapi-swot/issues
+Author-email: Harry Dang <harrydang.tech@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11.6
+Description-Content-Type: text/markdown
+
+# FastAPI SWOT
+
+Check edu email
+
+https://github.com/JetBrains/swot#
