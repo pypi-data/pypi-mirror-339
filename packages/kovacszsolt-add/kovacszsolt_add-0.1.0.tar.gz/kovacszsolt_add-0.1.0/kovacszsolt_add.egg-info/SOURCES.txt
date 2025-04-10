@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+kovacszsolt_add/__init__.py
+kovacszsolt_add.egg-info/PKG-INFO
+kovacszsolt_add.egg-info/SOURCES.txt
+kovacszsolt_add.egg-info/dependency_links.txt
+kovacszsolt_add.egg-info/top_level.txt
+tests/test_add.py
