@@ -1,0 +1,8 @@
+nso_client/__init__.py,sha256=GWmEpJJOJpoWsaaUq90iGOumVJUdtoR4i42kRdOJf7s,23846
+nso_client/exceptions.py,sha256=nxrcfY0BWMALZz9xeNJmdMGXZgqNLARcyPgwbPQoKEY,2744
+nso_client/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nso_client/types.py,sha256=SrPQHesRRy0jJUnplqCnV5Pi9Ge11kmWhPqw_nILyag,338
+python_nso_client-0.1.1.dist-info/METADATA,sha256=ZclEQ4n2VIvq2RByDliNXxzDpb94j1CKGZO4RxLj_Wk,2142
+python_nso_client-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+python_nso_client-0.1.1.dist-info/licenses/LICENSE.txt,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+python_nso_client-0.1.1.dist-info/RECORD,,
