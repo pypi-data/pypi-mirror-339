@@ -1,0 +1,89 @@
+Metadata-Version: 2.4
+Name: iceberg-mcp
+Version: 0.1.8
+Summary: An MCP server that interacts with Iceberg tables.
+Project-URL: Home, https://github.com/ryft-io/iceberg-mcp
+License-Expression: Apache-2.0
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: ipython>=8.32.0
+Requires-Dist: mcp[cli]>=1.3.0
+Requires-Dist: pyarrow>=19.0.1
+Requires-Dist: pyiceberg[glue,s3fs]>=0.9.0
+Description-Content-Type: text/markdown
+
+<div align="center">
+
+<!-- omit in toc -->
+# Iceberg-MCP 🚀
+<strong>Lakehouse AI native interaction.</strong>
+
+[![PyPI - Version](https://img.shields.io/pypi/v/iceberg-mcp.svg)](https://pypi.org/project/iceberg-mcp)
+[![License](https://img.shields.io/github/license/ryft-io/iceberg-mcp.svg)](https://github.com/ryft-io/iceberg-mcp/blob/main/LICENSE)
+
+
+</div>
+
+An MCP server that allows anyone to interact with their Iceberg Lakehouse through Claude, Cursor, or any other supporting MCP client.
+
+<!-- omit in toc -->
+## Table of Contents
+- [Installation](#installation)
+  - [Claud](#claud)
+  - [Cursor](#cursor)
+- [Configuration](#configuration)
+
+## Installation
+
+### Claud
+1. Edit the Claude Desktop configuration file, usually located at:
+  - On macOS: `~/Library/Application\ Support/Claude/claude_desktop_config.json`
+  - On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
+
+2. Add the following:
+```json
+{
+  "mcpServers": {
+    "iceberg-mcp": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--with",
+        "iceberg-mcp",
+        "iceberg-mcp"
+      ]
+    },
+    "env": {
+      "ICEBERG_MCP_PROFILE": "<aws-profile-name>"
+    }
+  }
+}
+```
+
+### Cursor
+
+1. Settings -> Cursor Settings -> MCP -> Add MCP server
+2. Add the following:
+```json
+{
+  "mcpServers": {
+    "iceberg-mcp": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--with",
+        "iceberg-mcp",
+        "iceberg-mcp"
+      ]
+    }
+  }
+}
+```
+
+## Configuration
+
+Environment variables can be used to configure the AWS connection:
+
+- `ICEBERG_MCP_PROFILE` - The aws profile name to use. This role will be assumed and use to connect to the catalog and the object storage. If not specified the default role will be used.
+- `ICEBERG_MCP_REGION` - The AWS region to use. This is used to determine the catalog and object storage location. `us-east-1` by default.
