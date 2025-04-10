@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multipart-decoder"
+version = "0.0.0.dev0"
+authors = [
+  { name="Satya Tulasi Jalandhar C H", email="satyatulasijalandharch2@gmail.com" },
+]
+description = "A lightweight Python package for parsing multipart/form-data content"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+  "requests_toolbelt==1.0.0"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENSE*"]
+
+[project.urls]
+Homepage = "https://github.com/satyatulasijalandharch/multipart-decoder"
+Issues = "https://github.com/satyatulasijalandharch/multipart-decoder/issues"
