@@ -1,0 +1,10 @@
+pandas
+numpy
+openpyxl
+pyarrow
+psutil
+et_xmlfile
+python-dateutil
+pytz
+tzdata
+six
