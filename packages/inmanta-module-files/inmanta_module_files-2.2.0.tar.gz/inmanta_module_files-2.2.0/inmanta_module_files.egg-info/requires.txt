@@ -1,0 +1,3 @@
+inmanta-module-std<9
+inmanta-module-mitogen<1
+inmanta-core>=15.1.0
