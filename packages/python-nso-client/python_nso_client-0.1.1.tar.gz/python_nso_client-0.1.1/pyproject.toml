@@ -1,0 +1,40 @@
+[project]
+name = "python-nso-client"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+license = "Apache-2.0"
+authors = [
+    { name = "James Harr", email = "jharr@internet2.edu" },
+]
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.28.1",
+    "structlog>=24.0.0"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.0",
+    "pytest-httpx>=0.35.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nso_client"]
+
+[tool.ruff]
+# Specify "first party" imports
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+# Sort imports
+extend-select = ["I"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "tests"]
+addopts = "--junitxml=report.xml --cov --cov-report=xml --cov-report=html"
