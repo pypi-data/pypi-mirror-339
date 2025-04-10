@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-agent = autonomous_agent_workflow:main
