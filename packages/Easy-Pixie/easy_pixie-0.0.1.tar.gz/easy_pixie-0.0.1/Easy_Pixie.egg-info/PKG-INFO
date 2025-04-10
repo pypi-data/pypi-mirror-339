@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: Easy-Pixie
+Version: 0.0.1
+Summary: A tool to simplify the use of python graphic library pixie-python.
+Home-page: https://github.com/Floating-Ocean
+Author: Floating Ocean
+Author-email: sea113290980@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pixie-python>=4.3.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Easy-Pixie
+A tool to simplify the use of python graphic library pixie-python.
+
+> [!TIP]
+> 
+> 项目基于 [pixie-python](https://github.com/treeform/pixie-python)，封装了部分常用功能，便于降低图片绘制的代码量。
+>
+> 同时，也可将本项目视为原仓库部分功能的使用示例，希望对你有所帮助。
+
+
+项目不定期更新，Prs Welcome.
+
