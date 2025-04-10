@@ -1,0 +1,14 @@
+egritools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+egritools/__main__.py,sha256=w-_ey3UqTU-6XxMjk7HpVK-DEUyFwKsTjhbNgAx1wvA,743
+egritools/change_extension.py,sha256=znn04PtmA0RtEjZ08Yu_81M-A3t-PnrF8tEjcsSuGLI,3132
+egritools/combine_txt.py,sha256=0pxIgaEbUYLjhb_mazgNDUSFRuHTZF78Ta6OYg2uHB0,5270
+egritools/create_venv.py,sha256=5geeI2xnQhS4fiZ8jmnbjk0LOQelDLInPJLsis34gRQ,6206
+egritools/gpt2_trainer.py,sha256=PPu3NhOYfinWgexIKz7VYTKKz1bljsVVYG9rCadfMFA,8471
+egritools/hf_upload.py,sha256=Jpyvs2L2DGeWpY5WNZPdojfbL8SyUDIAmfj9ywkCw74,6812
+egritools/preclean_gui.py,sha256=Q9SSqKn5N6N5B0y3NSNGr7SVTKgbiyv6_B6LBw_zlVI,2546
+egritools/wheel_manager.py,sha256=iCdJEyFB5krgC38K8c6oGwnG1QNREAuk5Dq7FPtDaTU,15060
+egritools-0.1.0.dist-info/entry_points.txt,sha256=xG4HxKhax9O15e2_FNJ6tRIx4_Iu2A6mertroujwVqg,340
+egritools-0.1.0.dist-info/licenses/LICENSE,sha256=c5Ev2Z9uVg7K6OAMHIUGiIkyWIJ3Dl9PuTrBQSrvreY,1097
+egritools-0.1.0.dist-info/WHEEL,sha256=Dyt6SBfaasWElUrURkknVFAZDHSTwxg3PaTza7RSbkY,100
+egritools-0.1.0.dist-info/METADATA,sha256=xBbvlKx1XohCrlgvHeD9hyOxuWiq5N9brXqT2ohJJbM,476
+egritools-0.1.0.dist-info/RECORD,,
