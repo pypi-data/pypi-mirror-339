@@ -1,0 +1,10 @@
+bioprinter/__init__.py,sha256=_3-LOHwft_vYN2whx4blH3bgvafkQerkPAXzXgemMNg,471
+bioprinter/bioprinter.py,sha256=TJ2IYZl3GcTq2rAlG_U2FeQKo5XbgiZZ01GIILDUENg,6571
+bioprinter/version.py,sha256=n3oM6B_EMz93NsTI18NNZd-jKFcUPzUkbIKj5VFK5ok,22
+bioprinter-0.1.6.dist-info/licenses/LICENCE.txt,sha256=QyMSzoNqxGhSBf5DlDFYD-ls8FsM-RM4Hl2hriMKwrg,1106
+examples/dolly_bioprint.py,sha256=0rFMADFoVqq9i8CRRhbImG49_SxIC_ePYAPW9_sOqU8,446
+tests/test_basics.py,sha256=kHzpJaU5dgcDwTJRopfY-lcE3tvj5ECY2c_xhhuoOKY,911
+bioprinter-0.1.6.dist-info/METADATA,sha256=_CmKtMsz-Ua5EakXtCcO_ShGm6kPiY5OaPvzeSGrPpM,3985
+bioprinter-0.1.6.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+bioprinter-0.1.6.dist-info/top_level.txt,sha256=nvkfKKdBtl3eLOUW-ZRJj3n01ntveN5T87SZ65SUvQs,26
+bioprinter-0.1.6.dist-info/RECORD,,
