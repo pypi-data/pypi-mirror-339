@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: QuPyt
+Version: 0.1.0
+Summary: Package to emulate and visualize quantum computations with a classical computer.
+Home-page: https://github.com/SoftLocked/QuPyt
+Author: Harikrishna Vardhineedi
+Author-email: harivardhineedi@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=2.2.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# QuPyt
