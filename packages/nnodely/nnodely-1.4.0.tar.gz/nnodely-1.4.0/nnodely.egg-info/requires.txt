@@ -1,0 +1,11 @@
+numpy
+torch
+onnx
+pandas
+reportlab
+matplotlib
+onnxruntime
+
+[:platform_machine == "x86_64" and python_version == "3.10"]
+numpy==1.26.4
+torch==2.2.2
