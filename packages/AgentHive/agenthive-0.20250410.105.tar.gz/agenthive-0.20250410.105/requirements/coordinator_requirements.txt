@@ -1,0 +1,4 @@
+-r base_requirements.txt
+uvicorn==0.34.0
+hypercorn==0.17.3
+supervisor==4.2.5
