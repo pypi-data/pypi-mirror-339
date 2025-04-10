@@ -1,0 +1,108 @@
+{
+  description = "Patches packages to use a newer version of glibc";
+
+  inputs = {
+    devbox.url = "github:jetify-com/devbox/0.14.0";
+    nixpkgs-glibc.url = "flake:nixpkgs/";
+    nixpkgs-dd6131.url = "github:NixOS/nixpkgs/dd613136ee91f67e5dba3f3f41ac99ae89c5406b";
+  };
+
+  outputs = args@{ self, devbox, nixpkgs-glibc, nixpkgs-dd6131 }:
+    let
+      # Initialize each nixpkgs input into a new attribute set with the
+      # schema "pkgs.<input>.<system>.<package>".
+      #
+      # Example: pkgs.nixpkgs-80c24e.x86_64-linux.python37
+      pkgs = builtins.mapAttrs (name: flake:
+        if builtins.hasAttr "legacyPackages" flake then
+          {
+            x86_64-linux = (import flake {
+              system = "x86_64-linux";
+              config.allowUnfree = true;
+              config.allowInsecurePredicate = pkg: true;
+            });
+          }
+        else null) args;
+
+      # selectDefaultOutputs takes a derivation and returns a list of its
+      # default outputs.
+      selectDefaultOutputs = drv: selectOutputs drv (drv.meta.outputsToInstall or [ drv.out ]);
+
+      # selectAllOutputs takes a derivation and returns all of its outputs (^*).
+      selectAllOutputs = drv: drv.all;
+
+      # selectOutputs takes a derivation and a list of output names, and returns
+      # those outputs.
+      #
+      # Example: selectOutputs nixpkgs#foo [ "out", "lib" ]
+      selectOutputs = drv: builtins.map (output: drv.${output});
+
+      patchDependencies = [
+      ];
+
+      patchGlibc = pkg: derivation rec {
+        # The package we're patching and any dependencies the patch needs.
+        inherit pkg patchDependencies;
+
+        # Keep the name the same as the package we're patching so that the
+        # length of the store path doesn't change. Otherwise patching binaries
+        # becomes trickier.
+        name = pkg.name;
+        system = pkg.system;
+
+        # buildDependencies is the package's build dependencies as a list of
+        # store paths. It includes transitive dependencies.
+        #
+        # Setting this environment variable provides a corpus of store paths
+        # that the `devbox patch --restore-refs` flag can use to restore
+        # references to Python build-time dependencies.
+        buildDependencies =
+          let
+            # mkNodes makes tree nodes for a list of derivation (package)
+            # outputs. A node is just the package with a "key" attribute added
+            # to it so it works with builtins.genericClosure.
+            mkNodes = builtins.map (drv: drv // { key = drv.outPath; });
+
+            # mkTree recursively traverses the buildInputs of the package we're
+            # patching. It returns a list of nodes, where each node represents
+            # a package output path in the dependency tree.
+            mkTree = builtins.genericClosure {
+              # Start with the package's buildInputs + the packages in its
+              # stdenv.
+              startSet = mkNodes (pkg.buildInputs ++ pkg.stdenv.initialPath);
+
+              # For each package, generate nodes for all of its outputs
+              # (node.all) and all of its buildInputs. Then visit those nodes.
+              operator = node: mkNodes (node.all or [ ] ++ node.buildInputs or [ ]);
+            };
+          in
+          builtins.map (drv: drv.outPath) mkTree;
+
+        # Programs needed by glibc-patch.bash.
+        inherit (nixpkgs-glibc.legacyPackages."${system}") bash coreutils gnused patchelf ripgrep;
+
+        isLinux = (builtins.match ".*linux.*" system) != null;
+        glibc = if isLinux then nixpkgs-glibc.legacyPackages."${system}".glibc else null;
+        gcc = if isLinux then nixpkgs-glibc.legacyPackages."${system}".stdenv.cc.cc.lib else null;
+
+        DEVBOX_DEBUG = 1;
+	src = self;
+        builder = "${devbox.packages.${system}.default}/bin/devbox";
+        args = [ "patch" "--restore-refs" ] ++
+          (if glibc != null then [ "--glibc" "${glibc}" ] else [ ]) ++
+          (if gcc != null then [ "--gcc" "${gcc}" ] else [ ]) ++
+          [ pkg ];
+      };
+    in
+    {
+      packages = {
+        x86_64-linux = {
+          python313 = patchGlibc pkgs.nixpkgs-dd6131.x86_64-linux.python313;
+        };
+      };
+
+      formatter = {
+        x86_64-linux = nixpkgs-glibc.legacyPackages.x86_64-linux.nixpkgs-fmt;
+      };
+    };
+}

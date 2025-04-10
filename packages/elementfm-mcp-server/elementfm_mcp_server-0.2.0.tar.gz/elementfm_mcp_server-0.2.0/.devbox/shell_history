@@ -1,0 +1,66 @@
+: 1743344791:0;uv add "mcp[cli]"
+: 1743344797:0;uv init
+: 1743344799:0;uv add "mcp[cli]"
+: 1743344822:0;ls
+: 1743344843:18;devbox add python@3.13.2
+: 1743344870:0;rm -rf .venv
+: 1743344881:0;uv init
+: 1743344890:0;rm pyproject.toml
+: 1743344894:0;uv init
+: 1743344898:0;ls
+: 1743344901:0;uv add "mcp[cli]"
+: 1743344937:0;cd ..
+: 1743345074:0;uv init
+: 1743345079:2;uv add "mcp[cli]"
+: 1743346248:1;mcp dev main.py
+: 1743347602:9;make
+: 1743347614:0;make logs
+: 1743348184:0;make stop
+: 1743348187:3;make 
+: 1743348224:0;make logs
+: 1743348234:0;uv add requests
+: 1743348239:3;make 
+: 1743348248:0;make clean
+: 1743348250:0;make 
+: 1743348253:10;make logs
+: 1743348264:0;gs
+: 1743348273:0;echo __pycache__ >> .gitignore
+: 1743348274:0;gs
+: 1743348285:0;cat README.md
+: 1743348551:0;gs
+: 1743348563:0;cp ../frontend/LICENSE . 
+: 1743348564:0;gs
+: 1743348569:0;git add . 
+: 1743348569:0;gs
+: 1743348578:0;gc -m 'initial checkin'
+: 1743348583:1;git push 
+: 1743360823:0;gs
+: 1743360828:0;git add .
+: 1743360829:0;gs
+: 1743360834:0;gc -m 'api adjustments'
+: 1743360835:1;git push 
+: 1743360907:0;gs
+: 1743360909:0;git add README.md
+: 1743360913:0;gc -m 'updated readme'
+: 1743360916:1;git push 
+: 1744205807:0;uvx main.py
+: 1744205810:0;mv run main.py
+: 1744205825:12;uv run main.py
+: 1744205982:0;uv publish 
+: 1744205999:0;uv pip publish --help
+: 1744206006:0;uv pip --help 
+: 1744206316:0;python -m build
+: 1744206340:0;pip install build
+: 1744209874:0;python -m build
+: 1744209899:0;pip install build 
+: 1744209980:5;uv build
+: 1744210027:1;uvx elementfm_mcp_server
+: 1744210114:0;uv pip publish dist/*
+: 1744210276:138;uv publish
+: 1744210632:1;uvx elementfm_mcp_server
+: 1744211530:5;uv build 
+: 1744211537:14;uv publish 
+: 1744211572:5;uv build 
+: 1744211580:5;uv publish 
+: 1744211590:0;ls
+: 1744211593:0;rm -r dist
