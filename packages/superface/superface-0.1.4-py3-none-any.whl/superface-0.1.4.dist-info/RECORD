@@ -1,0 +1,13 @@
+superface/__init__.py,sha256=SGrKww9lFkwRj5SB8VPCaL6wDXfwj1UL1bRC5y96AwQ,49
+superface/agno/__init__.py,sha256=tFU7v9c4TlvToKvT_a0K6n6869UgoImYr-B0giGXRQ8,32
+superface/agno/superface.py,sha256=vPiix5Cy3fZ85XjY3WJddfLMijtcGBxGyHISNgq6g7Y,3933
+superface/client/__init__.py,sha256=gmGmwOv9vpTvC__bOngNtXn7EvE2KlZhBit9XRWkXjI,90
+superface/client/exceptions.py,sha256=_4b17uMIbpnkfPIFcA6zmx5SKdIYUDsSiAPYtqZzqGw,94
+superface/client/schema_transformer.py,sha256=LcgnVgnptvougEHuifx8W1UVjDT5EMphvm51tYywA3E,1722
+superface/client/superface.py,sha256=CXz9desPZL7-4HKiTZl4xwg-8JUtp7Io7VIF6mH1jqc,4708
+superface/crewai/__init__.py,sha256=tFU7v9c4TlvToKvT_a0K6n6869UgoImYr-B0giGXRQ8,32
+superface/crewai/superface.py,sha256=xX2Qto7awZoJQD1gLQrjTjdT8cTZbZ0fsE6sweoKOMU,1317
+superface-0.1.4.dist-info/METADATA,sha256=84kv8m9_8oR7DgSusqvEHUk-eawprinJnU_yasfFr8k,545
+superface-0.1.4.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+superface-0.1.4.dist-info/top_level.txt,sha256=IEuzSy-jexYzpMVvT1vFuR0c6Sgk2PJSKLTLfpKh2Fo,10
+superface-0.1.4.dist-info/RECORD,,
