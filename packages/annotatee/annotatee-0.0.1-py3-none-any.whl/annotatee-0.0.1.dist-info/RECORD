@@ -1,0 +1,12 @@
+annotatee/__init__.py,sha256=W6KYLEvSMwDybsmA4hMuNK13LEn7cFkVeCGdtl_zPpI,1532
+annotatee/__main__.py,sha256=S5ByjohxAnPylHc8GlZOFCrbSWV3T_EY2Tk2woXADvI,5639
+annotatee/annotate.py,sha256=eeAopVFvq8h0Y05_9uT8qQhY67eFdhsQsdPhR8KyDn0,12054
+annotatee/main.py,sha256=QXOFaitF85SWqQLU-GFaAwUOR91Gk2nTeBUl7DkgGyY,4352
+annotatee/run.py,sha256=QXOFaitF85SWqQLU-GFaAwUOR91Gk2nTeBUl7DkgGyY,4352
+annotatee-0.0.1.data/data/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+annotatee-0.0.1.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+annotatee-0.0.1.dist-info/METADATA,sha256=AxmWWxx4P3JNy3XA26KxIb_jJEqAyqpXVyNJPAOLf9A,8956
+annotatee-0.0.1.dist-info/WHEEL,sha256=mguMlWGMX-VHnMpKOjjQidIo1ssRlCFu4a4mBpz1s2M,91
+annotatee-0.0.1.dist-info/entry_points.txt,sha256=TMO4O1RoRnUcuP58sor53cvbcqrNU6sWNE9A8X-W8w8,53
+annotatee-0.0.1.dist-info/top_level.txt,sha256=pBxX2GcxpmwytW-aJnIHL7Smh4Wdo2feScM79s4VdEw,10
+annotatee-0.0.1.dist-info/RECORD,,
