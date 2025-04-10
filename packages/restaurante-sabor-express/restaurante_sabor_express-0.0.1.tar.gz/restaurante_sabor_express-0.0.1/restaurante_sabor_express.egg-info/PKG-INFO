@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: restaurante-sabor-express
+Version: 0.0.1
+Summary: biblioteca para gerenciar restaurantes
+Author: Gabriela Rodrigues Campanha
+Author-email: gabrielarcampanha@gmail.com.br
+License: MIT License
+Keywords: restaurante,sabor,express
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
+
+# Uma biblioteca solicitada pela plataforma de cursos online DIO, como parte do treinamento  
