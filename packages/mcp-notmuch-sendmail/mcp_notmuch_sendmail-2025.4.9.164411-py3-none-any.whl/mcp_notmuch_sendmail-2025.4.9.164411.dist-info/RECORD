@@ -1,0 +1,13 @@
+mcp_notmuch_sendmail/__init__.py,sha256=1cns9GlSf5lnOKt_ElH1uvBRC4PcNIw9NTnJF1yYrgs,96
+mcp_notmuch_sendmail/core.py,sha256=Fyv3Fp_K-iZoGlyq_KRP5e2zTrhhDpCfrt9n41i0TMU,1545
+mcp_notmuch_sendmail/email_template.j2,sha256=-P6tnEvRcoUEI0uTfDb24AapMXoRkb8ncoSprQczWc4,190
+mcp_notmuch_sendmail/email_template_draft.j2,sha256=7Fb7sWsb2puNAmO599T3OkIyAcZk0UhJLoWrgrSMetg,1509
+mcp_notmuch_sendmail/latex.css,sha256=N015_bXUpXzl6nCXYIyll6UyQyKcrpqmWrF72Vq5d4A,2227
+mcp_notmuch_sendmail/notmuchlib.py,sha256=ZXcpt-83mNupgQex6hja1xuPhE74ZAoo5zyPwLjDh3k,5185
+mcp_notmuch_sendmail/sendmail.py,sha256=SNb6BfOrf8BLVYRqVg-YK2iDKjKys4sSA7NmE3Q04tE,6161
+mcp_notmuch_sendmail/server.py,sha256=uQ7v1uZYNCEcneVKEIKu03v0A6nmiQzT4EgPCamucII,2016
+mcp_notmuch_sendmail-2025.4.9.164411.dist-info/METADATA,sha256=Uq8IjnTDmibQ8mKNYRDp_8CiJg4JE6kMTD80YbgDEsI,8364
+mcp_notmuch_sendmail-2025.4.9.164411.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_notmuch_sendmail-2025.4.9.164411.dist-info/entry_points.txt,sha256=Tgb9RP0okiBXTmXzx5YvVnoyi4F1JK0mTpWLUq_A1MY,74
+mcp_notmuch_sendmail-2025.4.9.164411.dist-info/licenses/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+mcp_notmuch_sendmail-2025.4.9.164411.dist-info/RECORD,,
