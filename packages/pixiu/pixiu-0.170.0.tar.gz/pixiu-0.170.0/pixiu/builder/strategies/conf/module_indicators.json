@@ -1,0 +1,228 @@
+[
+  {
+    "module_config": {
+      "version": "1.0.0",
+      "name": "indicator",
+      "class": "IndicatorModule",
+      "file": "../modules/module_indicators.py",
+      "define": {
+        "SymbolPrice": {},
+        "SymbolData": {
+          "name": "SymbolData",
+          "members": [
+            {"name": "open", "type": "SymbolPrice"},
+            {"name": "close", "type": "SymbolPrice"},
+            {"name": "low", "type": "SymbolPrice"},
+            {"name": "high", "type": "SymbolPrice"},
+          ]
+        },
+      },
+      "functions": {
+        "ADX": {
+          "method": "adx",
+          "params": [
+            {"name": "symbol_data", "required": true, "type": "SymbolData"},
+            {"name": "period", "required": true, "type": "number"},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+          "return": {"type": "number", "variable": {"prefix": "adx"}},
+          "desc": "Average Directional Movement Index (Momentum Indicators)"
+        },
+        "MA": {
+          "method": "ma",
+          "params": [
+            {"name": "price_data", "required": true, "type": "price_data"},
+            {"name": "period", "required": true, "type": "number"},
+            {"name": "matype", "required": true, "type": "number"},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+          "return": {"type": "number"},
+          "desc": "Calculates the Moving Average indicator and returns its value"
+        },
+        "AD": {
+          "method": "ad",
+          "params": [
+            {"name": "symbol_data", "required": true, "type": "SymbolData"},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+          "return": {"type": "number"},
+          "desc": "Chaikin A/D Line (Volume Indicators)"
+        },
+        "ATR": {
+          "method": "atr",
+          "params": [
+            {"name": "symbol_data", "required": true, "type": "SymbolData"},
+            {"name": "period", "required": true, "type": "number"},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+          "return": {"type": "number"},
+          "desc": "Average True Range (Volatility Indicators)"
+        },
+        "BANDS": {
+          "method": "bands",
+          "params": [
+            {"name": "symbol_data", "required": true, "type": "SymbolData"},
+            {"name": "period", "required": true, "type": "number"},
+            {"name": "stddev_up", "required": true, "type": "number", "default": 2},
+            {"name": "stddev_down", "required": true, "type": "number", "default": 2},
+            {"name": "matype", "required": true, "type": "number", "default": 0},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+
+          "return": {"type": "number"},
+          "desc": "Bollinger Bands (Overlap Studies)"
+        },
+        "CCI": {
+          "method": "cci",
+          "params": [
+            {"name": "symbol_data", "required": true, "type": "SymbolData"},
+            {"name": "period", "required": true, "type": "number"},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+
+          "return": {"type": "number"},
+          "desc": "Commodity Channel Index (Momentum Indicators)"
+        },
+        "CHAIKIN": {
+          "method": "chaikin",
+          "params": [
+            {"name": "symbol_data", "required": true, "type": "SymbolData"},
+            {"name": "fast", "required": true, "type": "number"},
+            {"name": "slow", "required": true, "type": "number"},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+
+          "return": {"type": "number"},
+          "desc": "Chaikin A/D Oscillator (Volume Indicators)"
+        },
+        "DEMA": {
+          "method": "dema",
+          "params": [
+            {"name": "symbol_data", "required": true, "type": "SymbolData"},
+            {"name": "period", "required": true, "type": "number"},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+
+          "return": {"type": "number"},
+          "desc": "Double Exponential Moving Average (Overlap Studies)"
+        },
+        "MOMENTUM": {
+          "method": "momentum",
+          "params": [
+            {"name": "symbol_data", "required": true, "type": "SymbolData"},
+            {"name": "period", "required": true, "type": "number"},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+
+          "return": {"type": "number"},
+          "desc": "Momentum (Momentum Indicators)"
+        },
+        "MFI": {
+          "method": "mfi",
+          "params": [
+            {"name": "symbol_data", "required": true, "type": "SymbolData"},
+            {"name": "period", "required": true, "type": "number"},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+
+          "return": {"type": "number"},
+          "desc": "Money Flow Index (Momentum Indicators)"
+        },
+        "MACD": {
+          "method": "macd",
+          "params": [
+            {"name": "symbol_data", "required": true, "type": "SymbolData"},
+            {"name": "fast", "required": true, "type": "number"},
+            {"name": "slow", "required": true, "type": "number"},
+            {"name": "signal", "required": true, "type": "number"},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+
+          "return": {"type": "number"},
+          "desc": "Moving Average Convergence/Divergence (Momentum Indicators)"
+        },
+        "OBV": {
+          "method": "obv",
+          "params": [
+            {"name": "symbol_data", "required": true, "type": "SymbolData"},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+
+          "return": {"type": "number"},
+          "desc": "On Balance Volume (Volume Indicators)"
+        },
+        "SAR": {
+          "method": "sar",
+          "params": [
+            {"name": "symbol_data", "required": true, "type": "SymbolData"},
+            {"name": "acc", "required": true, "type": "number"},
+            {"name": "max", "required": true, "type": "number"},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+
+          "return": {"type": "number"},
+          "desc": "Parabolic SAR (Overlap Studies)"
+        },
+        "RSI": {
+          "method": "rsi",
+          "params": [
+            {"name": "symbol_data", "required": true, "type": "SymbolData"},
+            {"name": "period", "required": true, "type": "number"},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+
+          "return": {"type": "number"},
+          "desc": "Relative Strength Index (Momentum Indicators)"
+        },
+        "STDDEV": {
+          "method": "stddev",
+          "params": [
+            {"name": "symbol_data", "required": true, "type": "SymbolData"},
+            {"name": "period", "required": true, "type": "number"},
+            {"name": "stddev", "required": true, "type": "number", "default": 1},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+
+          "return": {"type": "number"},
+          "desc": "Standard Deviation (Statistic Functions)"
+        },
+        "STOCH": {
+          "method": "stochastic",
+          "params": [
+            {"name": "symbol_data", "required": true, "type": "SymbolData"},
+            {"name": "fastk", "required": true, "type": "number", "default": 5},
+            {"name": "slowk", "required": true, "type": "number", "default": 3},
+            {"name": "slowk_matype", "required": true, "type": "number", "default": 0},
+            {"name": "slowd", "required": true, "type": "number", "default": 3},
+            {"name": "slowd_matype", "required": true, "type": "number", "default": 0},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+
+          "return": {"type": "number"},
+          "desc": "Stochastic (Momentum Indicators)"
+        },
+        "TEMA": {
+          "method": "tema",
+          "params": [
+            {"name": "price_data", "required": true, "type": "price_data"},
+            {"name": "period", "required": true, "type": "number"},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+
+          "return": {"type": "number"},
+          "desc": "Triple Exponential Moving Average (Overlap Studies)"
+        },
+        "WPR": {
+          "method": "wpr",
+          "params": [
+            {"name": "symbol_data", "required": true, "type": "SymbolData"},
+            {"name": "period", "required": true, "type": "number"},
+            {"name": "shift", "required": true, "type": "number", "default": 1}
+          ],
+          "return": {"type": "number"},
+          "desc": "Williams' %R (Momentum Indicators)"
+        }
+      }
+    }
+  }
+]
