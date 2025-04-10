@@ -1,0 +1,9 @@
+gitpython==3.1.44
+pydriller==2.7
+tree-sitter
+tree-sitter-python
+tree-sitter-javascript
+tree-sitter-typescript
+tree-sitter-java
+pytest
+pytest-cov
