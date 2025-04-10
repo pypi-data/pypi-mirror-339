@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+requirements.txt
+serpyio/__init__.py
+serpyio/template.py
+serpyio.egg-info/PKG-INFO
+serpyio.egg-info/SOURCES.txt
+serpyio.egg-info/dependency_links.txt
+serpyio.egg-info/requires.txt
+serpyio.egg-info/top_level.txt
