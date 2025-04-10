@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: voynich
+Version: 1.0.1
+Summary: The Python SDK for The Voynich Ledger
+Home-page: https://github.com/prince-kal/py-voynich
+Author: Kal D. Abali
+Author-email: prince@merlinfinancial.tech
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Power is Knowledge
+The Python SDK & PyPi Library for The Voynich Manuscript.
+
+Documentation Link : https://merlinfinancial.tech
+
+PyPi Link : https://pypi.org/project/voynich
+
+Github Link : https://github.com/prince-kal/py-voynich
