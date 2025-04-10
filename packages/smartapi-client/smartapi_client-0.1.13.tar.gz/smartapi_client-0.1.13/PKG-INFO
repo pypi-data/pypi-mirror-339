@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: smartapi-client
+Version: 0.1.13
+Summary: A dynamic and flexible API client for OpenAPI and Postman specs.
+License: MIT
+Author: Raja D
+Author-email: rajaone987@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: PyYAML (>=6.0.1,<7.0.0)
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+
