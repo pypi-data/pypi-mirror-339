@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: bp-percentile
+Version: 0.2.0
+Summary: MCP server for BP percentile calculation
+Author-email: Hyung-Chul Lee <vital@snu.ac.kr>
+License-Expression: MIT
+Requires-Dist: mcp-server>=0.5.0
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: scipy>=1.7.0
