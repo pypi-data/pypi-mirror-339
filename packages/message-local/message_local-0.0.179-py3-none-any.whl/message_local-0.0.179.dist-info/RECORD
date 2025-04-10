@@ -1,0 +1,16 @@
+message_local/ChannelProviderConstants.py,sha256=LZ4NT1OvGaW1w5JPBbvlEk1GRGb4ShbMXhIaUjlhefs,180
+message_local/CompoundMessage.py,sha256=oFTAtpkyWF7y-QYzFBw7Ux2bWmy-ViCgsA0AK9FxYY0,35031
+message_local/CompoundMessageVerification.py,sha256=Fof98kwNMab1sm6vsd8HOR4ymwo7wu7H6CMWghkSq7M,37491
+message_local/GetTestIds.py,sha256=q_YkVLmOmlsiWRK-Otytx52tW5sj80SZ6Wtmo9UILiw,1242
+message_local/MessageChannels.py,sha256=VL2SakRASpR2lSvoossBTigY_8xsNCocEPqklLMT6ac,361
+message_local/MessageConstants.py,sha256=K1K-FBRxaC6XJ9vcT7WB3J7cTKE2FKFgOpJXHWXxvV8,736
+message_local/MessageImportance.py,sha256=nwH_xe7rnkwGj6ULbyCp1ooAs6jUisGXHr7iTkqAO0Y,119
+message_local/MessageLocal.py,sha256=jfEnzOGKZmCfklYD5f83TVETh8KZuLTbTSusuypK8QY,18222
+message_local/MessageTemplates.py,sha256=bEl0VytzbUGvLb2CC4lhOMNU5M-NJHNl_7pzJGbGXhc,7137
+message_local/Recipient.py,sha256=y7p79Ow8F5viipJSWUDMw-Evnk0fnFZjdFnbszUNwY0,6715
+message_local/SmsMessageLocal.py,sha256=2d_utVMHvLOuIj4n1rzm8wD7eXP18jfJvYt_BK88VxM,413
+message_local/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+message_local-0.0.179.dist-info/METADATA,sha256=UgvWFW1-cQWJ4nUk8DeX1fuGDrNAtBLaR7kER9CzTq0,939
+message_local-0.0.179.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+message_local-0.0.179.dist-info/top_level.txt,sha256=ihAaVTdaQSJWddaNv8xm5_cwCm9s7vfhgUjtVAffdaA,14
+message_local-0.0.179.dist-info/RECORD,,
