@@ -1,0 +1,3 @@
+[console_scripts]
+chuk-mcp-s3-bucket-manager = chuk_mcp_s3_bucket_manager.main:main
+mcp-s3-bucket-manager = chuk_mcp_s3_bucket_manager.main:main
