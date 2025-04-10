@@ -1,0 +1,13 @@
+meteofetch/__init__.py,sha256=92FSG2q6d54o1OClMO1mYJXMifzjmxglSrz8W0hvIRA,597
+meteofetch/_arome.py,sha256=hvM4-TFYdifk1vi_L0rUPtVjjkrI09Gt7qFVzz81DsQ,4834
+meteofetch/_arpege.py,sha256=mV14Hz4QnO2XlyTsbM6o-sLEJXYQrVMBrAd-raFY-bU,1682
+meteofetch/_ecmwf.py,sha256=07XngJCvTEqNzZ5d7JQM6NBWK9Ljk_tuwEjurKasGjA,5737
+meteofetch/_misc.py,sha256=CB0tPuAfu7cntrmbcfmGS8vMmIyDANmn44fPu7f2L9k,3806
+meteofetch/_model.py,sha256=iBhc0pTH1mh0hv_6rTuSHSb20TU3KkKVzqqfyHYYaTQ,6815
+meteofetch/gribdefs/grib2/shortName.def,sha256=ey0Ytwjix6cRIcWEyyl7cMEF1jhGyo9XkdgRpC6m5ik,97336
+meteofetch/gribdefs/grib2/localConcepts/lfpw/shortName.def,sha256=HXyGvfAA8AX5aCqyQLTQ5QVT-7qdxt6Bahqf5VaQads,130850
+meteofetch/gribdefs/grib2/tables/15/4.5.table,sha256=NH6rtDpRIRK4qWcz9m8NsplNg0KhStLIRw4SCOltQD0,2227
+meteofetch-0.4.1.dist-info/METADATA,sha256=WAFwP4jtHcwAlFoAZNh3kc0nDFZOvXJaNYWB61212D8,56674
+meteofetch-0.4.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+meteofetch-0.4.1.dist-info/licenses/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+meteofetch-0.4.1.dist-info/RECORD,,
