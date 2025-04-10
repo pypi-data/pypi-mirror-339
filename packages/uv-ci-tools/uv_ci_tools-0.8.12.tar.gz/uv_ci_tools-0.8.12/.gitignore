@@ -1,0 +1,26 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# App-generated files
+.cache
+.runtime
+.coverage
+
+# Virtual environments
+.venv
+
+# Config
+config.toml
+
+# Editors
+.vscode/
+.idea/
+
+# System
+.DS_Store
+

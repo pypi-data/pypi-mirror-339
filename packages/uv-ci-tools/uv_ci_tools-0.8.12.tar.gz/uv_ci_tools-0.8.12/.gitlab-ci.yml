@@ -1,0 +1,40 @@
+variables:
+    CACHE_DIR: $CI_PROJECT_DIR/.cache
+    UV_CACHE_DIR: $CACHE_DIR/uv
+    PYRIGHT_PYTHON_CACHE_DIR: $CACHE_DIR/pyright
+
+stages:
+    - test
+    - publish
+    - version
+
+test:
+    stage: test
+    image: ghcr.io/astral-sh/uv:debian-slim
+    script:
+        - uv sync --group dev
+        - source .venv/bin/activate
+        - ruff check
+        - pyright
+        - python test --expect-full
+    cache:
+        paths:
+            - $CACHE_DIR
+
+publish:
+    stage: publish
+    only:
+        - main
+    image: ghcr.io/astral-sh/uv:alpine
+    script:
+        - uv build
+        - uv publish --username __token__ --password $PYPI_TOKEN
+
+version:
+    stage: version
+    only:
+        - main
+    image: ghcr.io/astral-sh/uv:alpine
+    script:
+        - apk add git
+        - uvx uv-ci-tools bump-version patch --password $GITLAB_ACCESS_TOKEN
