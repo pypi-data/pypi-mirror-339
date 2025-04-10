@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: small-webrtc-prebuilt
+Version: 0.1.0
+Summary: Prebuilt Vite frontend for small-webrtc
+License: BSD 2-Clause License
+Requires-Dist: fastapi
+Requires-Dist: uvicorn[standard]
