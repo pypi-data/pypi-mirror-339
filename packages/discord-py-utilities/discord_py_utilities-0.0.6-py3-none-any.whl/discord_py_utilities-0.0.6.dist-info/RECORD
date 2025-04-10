@@ -1,0 +1,10 @@
+discord_py_utilities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+discord_py_utilities/bans.py,sha256=xVFMLneEdleaNRxVVg1dO_286xZbgqw3iEHxNJeLsTk,2441
+discord_py_utilities/exceptions.py,sha256=sHAVJ76JTC68UEkGwKqQkLfj6sVVBWuMlMgX0tvFW3g,1081
+discord_py_utilities/messages.py,sha256=Tav0RWNe66WnkhdkBF8xOYbaBdP34FS1UqR4qhApQLM,3831
+discord_py_utilities/permissions.py,sha256=huO3Zc_H_mwZyXCT8FQSHVp7P2tPeGtqYkTS9cV68b0,3280
+discord_py_utilities-0.0.6.dist-info/licenses/LICENSE.txt,sha256=7Z1lp6TIG8965mYl0iGnqqt1h5_PAMD5TW1D5UHQfw8,1076
+discord_py_utilities-0.0.6.dist-info/METADATA,sha256=Vbe6m6sRidZkXG7186sNmTFSNkigubp8lEQlwlRFLrs,958
+discord_py_utilities-0.0.6.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+discord_py_utilities-0.0.6.dist-info/top_level.txt,sha256=x9bOKDrUfZ8ipdi_5QZTscsN0YvzLoxwLsvnw-l00So,21
+discord_py_utilities-0.0.6.dist-info/RECORD,,
