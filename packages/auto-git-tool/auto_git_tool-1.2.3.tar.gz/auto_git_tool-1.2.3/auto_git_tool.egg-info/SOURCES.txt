@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+auto_git/__init__.py
+auto_git/cli.py
+auto_git_tool.egg-info/PKG-INFO
+auto_git_tool.egg-info/SOURCES.txt
+auto_git_tool.egg-info/dependency_links.txt
+auto_git_tool.egg-info/entry_points.txt
+auto_git_tool.egg-info/top_level.txt
