@@ -1,0 +1,4 @@
+[console_scripts]
+collate_sleep = asleep.collate_outputs:main
+get_sleep = asleep.get_sleep:main
+visu_sleep = asleep.visu_sleep:main
