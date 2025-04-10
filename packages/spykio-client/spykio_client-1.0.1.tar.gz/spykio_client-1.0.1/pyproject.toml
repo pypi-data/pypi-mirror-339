@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spykio-client"
+version = "1.0.1"
+description = "A client library for interacting with the Spykio API."
+readme = "README.md"
+authors = [{name = "Turtle Tech BV"}]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests>=2.25.0",
+]
+requires-python = ">=3.6"
+
+[project.urls]
+Homepage = "https://spyk.io/"

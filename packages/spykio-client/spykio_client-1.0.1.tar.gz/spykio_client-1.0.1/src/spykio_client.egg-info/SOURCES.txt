@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/spykio/__init__.py
+src/spykio/client.py
+src/spykio_client.egg-info/PKG-INFO
+src/spykio_client.egg-info/SOURCES.txt
+src/spykio_client.egg-info/dependency_links.txt
+src/spykio_client.egg-info/requires.txt
+src/spykio_client.egg-info/top_level.txt
