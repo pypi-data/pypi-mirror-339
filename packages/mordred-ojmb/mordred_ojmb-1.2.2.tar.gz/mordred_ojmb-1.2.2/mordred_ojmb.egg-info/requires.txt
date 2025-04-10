@@ -1,0 +1,11 @@
+six==1.*
+numpy>=2.0.0
+networkx==2.*
+pandas>=1.0.0
+rdkit
+tqdm
+
+[mordred]
+pandas
+tqdm
+rdkit
