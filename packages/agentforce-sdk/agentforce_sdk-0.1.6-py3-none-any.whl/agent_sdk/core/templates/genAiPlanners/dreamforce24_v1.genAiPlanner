@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlanner xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Dreamforce 24</description>
+    <genAiPlugins>
+        <genAiPluginName>Guided_Catering_Order_Generation</genAiPluginName>
+    </genAiPlugins>
+    <masterLabel>dreamforce24</masterLabel>
+    <plannerType>AiCopilot__ReAct</plannerType>
+</GenAiPlanner>

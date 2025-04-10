@@ -1,0 +1,19 @@
+{
+    "$schema": "https://cms.salesforce.com/types/lightning__copilotActionInput",
+    "$ref": "sfdc:propertyType/lightning__objectType",
+    "required": [
+        "query"
+    ],
+    "unevaluatedProperties": false,
+    "properties": {
+        "query": {
+            "title": "query",
+            "description": "Required. A string created by generative AI to be used in the knowledge article search.",
+            "lightning:type": "lightning__textType",
+            "$ref": "sfdc:propertyType/lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isUserInput": false
+        }
+    },
+    "lightning:type": "lightning__objectType"
+}

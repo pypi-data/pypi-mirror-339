@@ -1,0 +1,25 @@
+{
+  "$schema" : "https://cms.salesforce.com/types/lightning__copilotActionInput",
+  "$ref" : "sfdc:propertyType/lightning__objectType",
+  "required" : [ "query" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "query" : {
+      "title" : "query",
+      "description" : "Query asked by the user in natural language",
+      "lightning:type" : "lightning__textType",
+      "$ref" : "sfdc:propertyType/lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "mode" : {
+      "title" : "mode",
+      "description" : "Data Cloud retriever mode. Only specify when user explicitly asks for it. Possible values are: professor, smart, simple",
+      "lightning:type" : "lightning__textType",
+      "$ref" : "sfdc:propertyType/lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

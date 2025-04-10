@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>This topic covers the AI agent&apos;s ability to interact with users to collect order constraints for catering and generate draft orders based on those constraints.</description>
+    <developerName>Guided_Catering_Order_Generation</developerName>
+    <genAiFunctions>
+        <functionName>confirm_serviceability</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>update_order</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>generate_order</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Always ask for location, headcount, and date as the minimum required information.</description>
+        <developerName>Alwaysask0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>Always ask</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Guided Catering Order Generation</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>The AI will interact with users to gather constraints like location, headcount, date, and dietary preferences, and then generate appropriate catering options. It will create draft orders within internal systems that users can review and modify as needed.</scope>
+</GenAiPlugin>
