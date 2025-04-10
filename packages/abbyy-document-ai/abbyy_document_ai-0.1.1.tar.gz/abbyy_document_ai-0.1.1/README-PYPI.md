@@ -1,0 +1,645 @@
+# abbyy-document-ai
+
+Developer-friendly & type-safe Python SDK specifically catered to leverage *abbyy-document-ai* API.
+
+<div align="left">
+    <a href="https://www.speakeasy.com/?utm_source=abbyy-document-ai&utm_campaign=python"><img src="https://custom-icon-badges.demolab.com/badge/-Built%20By%20Speakeasy-212015?style=for-the-badge&logoColor=FBE331&logo=speakeasy&labelColor=545454" /></a>
+    <a href="https://opensource.org/licenses/MIT">
+        <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="width: 100px; height: 28px;" />
+    </a>
+</div>
+
+
+<br /><br />
+> [!IMPORTANT]
+> This SDK is not yet ready for production use. To complete setup please follow the steps outlined in your [workspace](https://app.speakeasy.com/org/abbyy/devex). Delete this section before > publishing to a package manager.
+
+<!-- Start Summary [summary] -->
+## Summary
+
+Document AI API: A modern, simple, and easy-to-integrate OCR and document processing API service
+<!-- End Summary [summary] -->
+
+<!-- Start Table of Contents [toc] -->
+## Table of Contents
+<!-- $toc-max-depth=2 -->
+* [abbyy-document-ai](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/#abbyy-document-ai)
+  * [SDK Installation](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/#sdk-installation)
+  * [IDE Support](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/#ide-support)
+  * [SDK Example Usage](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/#sdk-example-usage)
+  * [Authentication](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/#authentication)
+  * [Available Resources and Operations](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/#available-resources-and-operations)
+  * [Pagination](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/#pagination)
+  * [Retries](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/#retries)
+  * [Error Handling](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/#error-handling)
+  * [Server Selection](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/#server-selection)
+  * [Custom HTTP Client](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/#custom-http-client)
+  * [Resource Management](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/#resource-management)
+  * [Debugging](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/#debugging)
+* [Development](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/#development)
+  * [Maturity](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/#maturity)
+  * [Contributions](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/#contributions)
+
+<!-- End Table of Contents [toc] -->
+
+<!-- Start SDK Installation [installation] -->
+## SDK Installation
+
+> [!NOTE]
+> **Python version upgrade policy**
+>
+> Once a Python version reaches its [official end of life date](https://devguide.python.org/versions/), a 3-month grace period is provided for users to upgrade. Following this grace period, the minimum python version supported in the SDK will be updated.
+
+The SDK can be installed with either *pip* or *poetry* package managers.
+
+### PIP
+
+*PIP* is the default package installer for Python, enabling easy installation and management of packages from PyPI via the command line.
+
+```bash
+pip install abbyy-document-ai
+```
+
+### Poetry
+
+*Poetry* is a modern tool that simplifies dependency management and package publishing by using a single `pyproject.toml` file to handle project metadata and dependencies.
+
+```bash
+poetry add abbyy-document-ai
+```
+
+### Shell and script usage with `uv`
+
+You can use this SDK in a Python shell with [uv](https://docs.astral.sh/uv/) and the `uvx` command that comes with it like so:
+
+```shell
+uvx --from abbyy-document-ai python
+```
+
+It's also possible to write a standalone Python script without needing to set up a whole project like so:
+
+```python
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.9"
+# dependencies = [
+#     "abbyy-document-ai",
+# ]
+# ///
+
+from abbyy_document_ai import DocumentAi
+
+sdk = DocumentAi(
+  # SDK arguments
+)
+
+# Rest of script here...
+```
+
+Once that is saved to a file, you can run it with `uv run script.py` where
+`script.py` can be replaced with the actual file name.
+<!-- End SDK Installation [installation] -->
+
+<!-- Start IDE Support [idesupport] -->
+## IDE Support
+
+### PyCharm
+
+Generally, the SDK will work well with most IDEs out of the box. However, when using PyCharm, you can enjoy much better integration with Pydantic by installing an additional plugin.
+
+- [PyCharm Pydantic Plugin](https://docs.pydantic.dev/latest/integrations/pycharm/)
+<!-- End IDE Support [idesupport] -->
+
+<!-- Start SDK Example Usage [usage] -->
+## SDK Example Usage
+
+### Example
+
+```python
+# Synchronous Example
+from abbyy_document_ai import DocumentAi
+import os
+
+
+with DocumentAi(
+    api_key_auth=os.getenv("DOCUMENTAI_API_KEY_AUTH", ""),
+) as document_ai:
+
+    res = document_ai.documents.list(cursor="xyz")
+
+    while res is not None:
+        # Handle items
+
+        res = res.next()
+```
+
+</br>
+
+The same SDK client can also be used to make asychronous requests by importing asyncio.
+```python
+# Asynchronous Example
+from abbyy_document_ai import DocumentAi
+import asyncio
+import os
+
+async def main():
+
+    async with DocumentAi(
+        api_key_auth=os.getenv("DOCUMENTAI_API_KEY_AUTH", ""),
+    ) as document_ai:
+
+        res = await document_ai.documents.list_async(cursor="xyz")
+
+        while res is not None:
+            # Handle items
+
+            res = res.next()
+
+asyncio.run(main())
+```
+<!-- End SDK Example Usage [usage] -->
+
+<!-- Start Authentication [security] -->
+## Authentication
+
+### Per-Client Security Schemes
+
+This SDK supports the following security scheme globally:
+
+| Name           | Type | Scheme      | Environment Variable      |
+| -------------- | ---- | ----------- | ------------------------- |
+| `api_key_auth` | http | HTTP Bearer | `DOCUMENTAI_API_KEY_AUTH` |
+
+To authenticate with the API the `api_key_auth` parameter must be set when initializing the SDK client instance. For example:
+```python
+from abbyy_document_ai import DocumentAi
+import os
+
+
+with DocumentAi(
+    api_key_auth=os.getenv("DOCUMENTAI_API_KEY_AUTH", ""),
+) as document_ai:
+
+    res = document_ai.documents.list(cursor="xyz")
+
+    while res is not None:
+        # Handle items
+
+        res = res.next()
+
+```
+<!-- End Authentication [security] -->
+
+<!-- Start Available Resources and Operations [operations] -->
+## Available Resources and Operations
+
+<details open>
+<summary>Available methods</summary>
+
+
+### [documents](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/documents/README.md)
+
+* [list](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/documents/README.md#list) - List Documents
+
+### [models](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/models/README.md)
+
+
+#### [models.air_waybill](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/airwaybillsdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/airwaybillsdk/README.md#begin_field_extraction) - Begin Air Waybill Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/airwaybillsdk/README.md#get_extracted_fields) - Get Air Waybill Fields
+
+#### [models.arrival_notice](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/arrivalnoticesdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/arrivalnoticesdk/README.md#begin_field_extraction) - Begin Arrival Notice Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/arrivalnoticesdk/README.md#get_extracted_fields) - Get Arrival Notice Fields
+
+#### [models.bank_statement](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/bankstatementsdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/bankstatementsdk/README.md#begin_field_extraction) - Begin Bank Statement Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/bankstatementsdk/README.md#get_extracted_fields) - Get Bank Statement Fields
+
+#### [models.basic_contract](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/basiccontractsdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/basiccontractsdk/README.md#begin_field_extraction) - Begin Basic Contract Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/basiccontractsdk/README.md#get_extracted_fields) - Get Basic Contract Fields
+
+#### [models.bill_of_lading](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/billofladingsdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/billofladingsdk/README.md#begin_field_extraction) - Begin Bill Of Lading Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/billofladingsdk/README.md#get_extracted_fields) - Get Bill Of Lading Fields
+
+#### [models.brokerage_statement](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/brokeragestatementsdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/brokeragestatementsdk/README.md#begin_field_extraction) - Begin Brokerage Statement Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/brokeragestatementsdk/README.md#get_extracted_fields) - Get Brokerage Statement Fields
+
+#### [models.certificate_of_origin](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/certificateoforiginsdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/certificateoforiginsdk/README.md#begin_field_extraction) - Begin Certificate Of Origin Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/certificateoforiginsdk/README.md#get_extracted_fields) - Get Certificate Of Origin Fields
+
+#### [models.commercial_invoice](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/commercialinvoicesdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/commercialinvoicesdk/README.md#begin_field_extraction) - Begin Commercial Invoice Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/commercialinvoicesdk/README.md#get_extracted_fields) - Get Commercial Invoice Fields
+
+#### [models.customs_declaration](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/customsdeclarationsdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/customsdeclarationsdk/README.md#begin_field_extraction) - Begin Customs Declaration Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/customsdeclarationsdk/README.md#get_extracted_fields) - Get Customs Declaration Fields
+
+#### [models.dangerous_goods_declaration](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/dangerousgoodsdeclarationsdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/dangerousgoodsdeclarationsdk/README.md#begin_field_extraction) - Begin Dangerous Goods Declaration Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/dangerousgoodsdeclarationsdk/README.md#get_extracted_fields) - Get Dangerous Goods Declaration Fields
+
+#### [models.delivery_note](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/deliverynotesdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/deliverynotesdk/README.md#begin_field_extraction) - Begin Delivery Note Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/deliverynotesdk/README.md#get_extracted_fields) - Get Delivery Note Fields
+
+#### [models.document_conversion](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/documentconversion/README.md)
+
+* [begin_conversion](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/documentconversion/README.md#begin_conversion) - Begin Document Conversion
+* [get_conversion](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/documentconversion/README.md#get_conversion) - Get Conversion
+* [download_converted_document](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/documentconversion/README.md#download_converted_document) - Download Converted Document
+
+#### [models.hotel_invoice](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/hotelinvoicesdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/hotelinvoicesdk/README.md#begin_field_extraction) - Begin Hotel Invoice Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/hotelinvoicesdk/README.md#get_extracted_fields) - Get Hotel Invoice Fields
+
+#### [models.image_to_text](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/imagetotext/README.md)
+
+* [begin_text_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/imagetotext/README.md#begin_text_extraction) - Begin Image To Text Extraction
+* [get_extracted_text](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/imagetotext/README.md#get_extracted_text) - Get Extracted Text
+
+#### [models.international_consignment_note](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/internationalconsignmentnotesdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/internationalconsignmentnotesdk/README.md#begin_field_extraction) - Begin International Consignment Note Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/internationalconsignmentnotesdk/README.md#get_extracted_fields) - Get International Consignment Note Fields
+
+#### [models.invoice](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/invoicesdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/invoicesdk/README.md#begin_field_extraction) - Begin Invoice Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/invoicesdk/README.md#get_extracted_fields) - Get Invoice Fields
+
+#### [models.packing_list](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/packinglistsdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/packinglistsdk/README.md#begin_field_extraction) - Begin Packing List Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/packinglistsdk/README.md#get_extracted_fields) - Get Packing List Fields
+
+#### [models.personal_earnings_statement](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/personalearningsstatementsdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/personalearningsstatementsdk/README.md#begin_field_extraction) - Begin Personal Earnings Statement Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/personalearningsstatementsdk/README.md#get_extracted_fields) - Get Personal Earnings Statement Fields
+
+#### [models.purchase_order](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/purchaseordersdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/purchaseordersdk/README.md#begin_field_extraction) - Begin Purchase Order Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/purchaseordersdk/README.md#get_extracted_fields) - Get Purchase Order Fields
+
+#### [models.receipt](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/receiptsdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/receiptsdk/README.md#begin_field_extraction) - Begin Receipt Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/receiptsdk/README.md#get_extracted_fields) - Get Receipt Fields
+
+#### [models.remittance_advice](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/remittanceadvicesdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/remittanceadvicesdk/README.md#begin_field_extraction) - Begin Remittance Advice Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/remittanceadvicesdk/README.md#get_extracted_fields) - Get Remittance Advice Fields
+
+#### [models.sea_waybill](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/seawaybillsdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/seawaybillsdk/README.md#begin_field_extraction) - Begin Sea Waybill Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/seawaybillsdk/README.md#get_extracted_fields) - Get Sea Waybill Fields
+
+#### [models.taxi_receipt](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/taxireceiptsdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/taxireceiptsdk/README.md#begin_field_extraction) - Begin Taxi Receipt Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/taxireceiptsdk/README.md#get_extracted_fields) - Get Taxi Receipt Fields
+
+#### [models.us_form_w2](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/usformw2sdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/usformw2sdk/README.md#begin_field_extraction) - Begin US Form W2 Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/usformw2sdk/README.md#get_extracted_fields) - Get US Form W2 Fields
+
+#### [models.us_form1040](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/usform1040sdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/usform1040sdk/README.md#begin_field_extraction) - Begin US Form 1040 Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/usform1040sdk/README.md#get_extracted_fields) - Get US Form 1040 Fields
+
+#### [models.utility_bill](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/utilitybillsdk/README.md)
+
+* [begin_field_extraction](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/utilitybillsdk/README.md#begin_field_extraction) - Begin Utility Bill Field Extraction
+* [get_extracted_fields](https://github.com/abbyyProduct/document-ai-sdk-python/blob/master/docs/sdks/utilitybillsdk/README.md#get_extracted_fields) - Get Utility Bill Fields
+
+</details>
+<!-- End Available Resources and Operations [operations] -->
+
+<!-- Start Pagination [pagination] -->
+## Pagination
+
+Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
+returned response object will have a `Next` method that can be called to pull down the next group of results. If the
+return value of `Next` is `None`, then there are no more pages to be fetched.
+
+Here's an example of one such pagination call:
+```python
+from abbyy_document_ai import DocumentAi
+import os
+
+
+with DocumentAi(
+    api_key_auth=os.getenv("DOCUMENTAI_API_KEY_AUTH", ""),
+) as document_ai:
+
+    res = document_ai.documents.list(cursor="xyz")
+
+    while res is not None:
+        # Handle items
+
+        res = res.next()
+
+```
+<!-- End Pagination [pagination] -->
+
+<!-- Start Retries [retries] -->
+## Retries
+
+Some of the endpoints in this SDK support retries. If you use the SDK without any configuration, it will fall back to the default retry strategy provided by the API. However, the default retry strategy can be overridden on a per-operation basis, or across the entire SDK.
+
+To change the default retry strategy for a single API call, simply provide a `RetryConfig` object to the call:
+```python
+from abbyy_document_ai import DocumentAi
+from abbyy_document_ai.utils import BackoffStrategy, RetryConfig
+import os
+
+
+with DocumentAi(
+    api_key_auth=os.getenv("DOCUMENTAI_API_KEY_AUTH", ""),
+) as document_ai:
+
+    res = document_ai.documents.list(cursor="xyz",
+        RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False))
+
+    while res is not None:
+        # Handle items
+
+        res = res.next()
+
+```
+
+If you'd like to override the default retry strategy for all operations that support retries, you can use the `retry_config` optional parameter when initializing the SDK:
+```python
+from abbyy_document_ai import DocumentAi
+from abbyy_document_ai.utils import BackoffStrategy, RetryConfig
+import os
+
+
+with DocumentAi(
+    retry_config=RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False),
+    api_key_auth=os.getenv("DOCUMENTAI_API_KEY_AUTH", ""),
+) as document_ai:
+
+    res = document_ai.documents.list(cursor="xyz")
+
+    while res is not None:
+        # Handle items
+
+        res = res.next()
+
+```
+<!-- End Retries [retries] -->
+
+<!-- Start Error Handling [errors] -->
+## Error Handling
+
+Handling errors in this SDK should largely match your expectations. All operations return a response object or raise an exception.
+
+By default, an API error will raise a models.APIError exception, which has the following properties:
+
+| Property        | Type             | Description           |
+|-----------------|------------------|-----------------------|
+| `.status_code`  | *int*            | The HTTP status code  |
+| `.message`      | *str*            | The error message     |
+| `.raw_response` | *httpx.Response* | The raw HTTP response |
+| `.body`         | *str*            | The response content  |
+
+When custom error responses are specified for an operation, the SDK may also raise their associated exceptions. You can refer to respective *Errors* tables in SDK docs for more details on possible exception types for each operation. For example, the `list_async` method may raise the following exceptions:
+
+| Error Type                  | Status Code | Content Type     |
+| --------------------------- | ----------- | ---------------- |
+| models.BadRequestError      | 400         | application/json |
+| models.UnauthorizedError    | 401         | application/json |
+| models.TooManyRequestsError | 429         | application/json |
+| models.InternalServerError  | 500         | application/json |
+| models.APIError             | 4XX, 5XX    | \*/\*            |
+
+### Example
+
+```python
+from abbyy_document_ai import DocumentAi, models
+import os
+
+
+with DocumentAi(
+    api_key_auth=os.getenv("DOCUMENTAI_API_KEY_AUTH", ""),
+) as document_ai:
+    res = None
+    try:
+
+        res = document_ai.documents.list(cursor="xyz")
+
+        while res is not None:
+            # Handle items
+
+            res = res.next()
+
+    except models.BadRequestError as e:
+        # handle e.data: models.BadRequestErrorData
+        raise(e)
+    except models.UnauthorizedError as e:
+        # handle e.data: models.UnauthorizedErrorData
+        raise(e)
+    except models.TooManyRequestsError as e:
+        # handle e.data: models.TooManyRequestsErrorData
+        raise(e)
+    except models.InternalServerError as e:
+        # handle e.data: models.InternalServerErrorData
+        raise(e)
+    except models.APIError as e:
+        # handle exception
+        raise(e)
+```
+<!-- End Error Handling [errors] -->
+
+<!-- Start Server Selection [server] -->
+## Server Selection
+
+### Override Server URL Per-Client
+
+The default server can be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
+```python
+from abbyy_document_ai import DocumentAi
+import os
+
+
+with DocumentAi(
+    server_url="https://api.abbyy.com/document-ai",
+    api_key_auth=os.getenv("DOCUMENTAI_API_KEY_AUTH", ""),
+) as document_ai:
+
+    res = document_ai.documents.list(cursor="xyz")
+
+    while res is not None:
+        # Handle items
+
+        res = res.next()
+
+```
+<!-- End Server Selection [server] -->
+
+<!-- Start Custom HTTP Client [http-client] -->
+## Custom HTTP Client
+
+The Python SDK makes API calls using the [httpx](https://www.python-httpx.org/) HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with your own HTTP client instance.
+Depending on whether you are using the sync or async version of the SDK, you can pass an instance of `HttpClient` or `AsyncHttpClient` respectively, which are Protocol's ensuring that the client has the necessary methods to make API calls.
+This allows you to wrap the client with your own custom logic, such as adding custom headers, logging, or error handling, or you can just pass an instance of `httpx.Client` or `httpx.AsyncClient` directly.
+
+For example, you could specify a header for every request that this sdk makes as follows:
+```python
+from abbyy_document_ai import DocumentAi
+import httpx
+
+http_client = httpx.Client(headers={"x-custom-header": "someValue"})
+s = DocumentAi(client=http_client)
+```
+
+or you could wrap the client with your own custom logic:
+```python
+from abbyy_document_ai import DocumentAi
+from abbyy_document_ai.httpclient import AsyncHttpClient
+import httpx
+
+class CustomClient(AsyncHttpClient):
+    client: AsyncHttpClient
+
+    def __init__(self, client: AsyncHttpClient):
+        self.client = client
+
+    async def send(
+        self,
+        request: httpx.Request,
+        *,
+        stream: bool = False,
+        auth: Union[
+            httpx._types.AuthTypes, httpx._client.UseClientDefault, None
+        ] = httpx.USE_CLIENT_DEFAULT,
+        follow_redirects: Union[
+            bool, httpx._client.UseClientDefault
+        ] = httpx.USE_CLIENT_DEFAULT,
+    ) -> httpx.Response:
+        request.headers["Client-Level-Header"] = "added by client"
+
+        return await self.client.send(
+            request, stream=stream, auth=auth, follow_redirects=follow_redirects
+        )
+
+    def build_request(
+        self,
+        method: str,
+        url: httpx._types.URLTypes,
+        *,
+        content: Optional[httpx._types.RequestContent] = None,
+        data: Optional[httpx._types.RequestData] = None,
+        files: Optional[httpx._types.RequestFiles] = None,
+        json: Optional[Any] = None,
+        params: Optional[httpx._types.QueryParamTypes] = None,
+        headers: Optional[httpx._types.HeaderTypes] = None,
+        cookies: Optional[httpx._types.CookieTypes] = None,
+        timeout: Union[
+            httpx._types.TimeoutTypes, httpx._client.UseClientDefault
+        ] = httpx.USE_CLIENT_DEFAULT,
+        extensions: Optional[httpx._types.RequestExtensions] = None,
+    ) -> httpx.Request:
+        return self.client.build_request(
+            method,
+            url,
+            content=content,
+            data=data,
+            files=files,
+            json=json,
+            params=params,
+            headers=headers,
+            cookies=cookies,
+            timeout=timeout,
+            extensions=extensions,
+        )
+
+s = DocumentAi(async_client=CustomClient(httpx.AsyncClient()))
+```
+<!-- End Custom HTTP Client [http-client] -->
+
+<!-- Start Resource Management [resource-management] -->
+## Resource Management
+
+The `DocumentAi` class implements the context manager protocol and registers a finalizer function to close the underlying sync and async HTTPX clients it uses under the hood. This will close HTTP connections, release memory and free up other resources held by the SDK. In short-lived Python programs and notebooks that make a few SDK method calls, resource management may not be a concern. However, in longer-lived programs, it is beneficial to create a single SDK instance via a [context manager][context-manager] and reuse it across the application.
+
+[context-manager]: https://docs.python.org/3/reference/datamodel.html#context-managers
+
+```python
+from abbyy_document_ai import DocumentAi
+import os
+def main():
+
+    with DocumentAi(
+        api_key_auth=os.getenv("DOCUMENTAI_API_KEY_AUTH", ""),
+    ) as document_ai:
+        # Rest of application here...
+
+
+# Or when using async:
+async def amain():
+
+    async with DocumentAi(
+        api_key_auth=os.getenv("DOCUMENTAI_API_KEY_AUTH", ""),
+    ) as document_ai:
+        # Rest of application here...
+```
+<!-- End Resource Management [resource-management] -->
+
+<!-- Start Debugging [debug] -->
+## Debugging
+
+You can setup your SDK to emit debug logs for SDK requests and responses.
+
+You can pass your own logger class directly into your SDK.
+```python
+from abbyy_document_ai import DocumentAi
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+s = DocumentAi(debug_logger=logging.getLogger("abbyy_document_ai"))
+```
+
+You can also enable a default debug logger by setting an environment variable `DOCUMENTAI_DEBUG` to true.
+<!-- End Debugging [debug] -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+# Development
+
+## Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+## Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. Any manual changes added to internal files will be overwritten on the next generation. 
+We look forward to hearing your feedback. Feel free to open a PR or an issue with a proof of concept and we'll do our best to include it in a future release. 
+
+### SDK Created by [Speakeasy](https://www.speakeasy.com/?utm_source=abbyy-document-ai&utm_campaign=python)
