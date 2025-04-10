@@ -1,0 +1,9 @@
+[private]
+@help:
+    just --list
+
+run *args:
+    uv run wg-confgen {{args}}
+
+check *args:
+    uv run pytest tests {{args}}

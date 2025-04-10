@@ -1,0 +1,23 @@
+[project]
+name = "wg-confgen"
+version = "0.1.1"
+description = "Generator of consistent Wireguard configurations"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+wg-confgen = "wg_confgen:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/wg_confgen"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "cmplib>=1.3.0",
+]

@@ -1,0 +1,14 @@
+NEXT:
+
+0.1.1: 2025-04-10
+
+  [Fixes]
+  - Fix showing errors when initialising clients without PresharedKey
+
+0.1.0: 2025-04-09
+
+  Initial release
+
+  [Added]
+  - subcommands: show, modify, peers, remove, variable
+  - option to change wireguard's path
