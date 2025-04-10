@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: pyreporting
+Version: 0.0.2
+Summary: Progress, error reporting and logging for Python
+Project-URL: Documentation, https://github.com/CodeChoreography/pyreporting#readme
+Project-URL: Issues, https://github.com/CodeChoreography/pyreporting/issues
+Project-URL: Source, https://github.com/CodeChoreography/pyreporting
+Author-email: Tom Doel <tom.doel@codechoreography.co.uk>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9
+Requires-Dist: enlighten
+Requires-Dist: platformdirs
+Provides-Extra: tests
+Requires-Dist: pytest; extra == 'tests'
+Description-Content-Type: text/markdown
+
+# pyreporting
+Progress, error reporting and logging for Python
