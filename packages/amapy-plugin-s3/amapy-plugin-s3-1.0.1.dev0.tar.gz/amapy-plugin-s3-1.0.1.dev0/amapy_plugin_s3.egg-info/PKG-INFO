@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: amapy-plugin-s3
+Version: 1.0.1.dev0
+Summary: The S3 plugin for the ama project.
+Author-email: Swarup Mahanti <swarup.mahanti@roche.com>
+Maintainer-email: Swarup Mahanti <swarup.mahanti@roche.com>
+License: Copyright (c) 2024 Roche Diagnostics Computation Science & Informatics
+Requires-Python: <3.11,>=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: aioboto3<=10.2.0
+Requires-Dist: amapy-contents==1.*
+Requires-Dist: amapy-pluggy==1.*
+Requires-Dist: amapy-utils==1.*
+Requires-Dist: backoff==2.2.*
+
+# amapy-plugin-s3
+
+The S3 plugin for the ama project. It provides functionalities to
+manage and integrate Amazon S3 storage within the asset management system.
+
+## Installation
+
+The source code is currently hosted on GitHub at:
+https://github.com/Roche-CSI/ama
+
+Binary installers for the latest released version are available at the
+[Python Package Index (PyPI)](https://pypi.org/project/amapy-plugin-s3/)
+
+You can install using [pip](https://pip.pypa.io/en/stable/):
+
+```sh
+pip install amapy-plugin-s3
+```
+
+## Supported Python Versions
+
+Python == 3.10
+
+## License
+
+MIT License - see [LICENSE](https://github.com/Roche-CSI/ama/blob/main/LICENSE) for details.
