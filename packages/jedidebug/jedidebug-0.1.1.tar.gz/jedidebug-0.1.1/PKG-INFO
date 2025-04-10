@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: jedidebug
+Version: 0.1.1
+Summary: A library that motivates programmers with Star Wars quotes when their code has bugs
+Home-page: https://github.com/notarealprogrammer001/jedidebug
+Author: NotaRealProgrammer
+Author-email: notarealprogrammer010@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+
+        JediDebug is a lighthearted Python library that catches exceptions and provides
+        motivational Star Wars-themed wisdom. Perfect for keeping spirits high during
+        frustrating debugging sessions and adding a touch of the Force to your development workflow.
+    

@@ -1,0 +1,8 @@
+README.md
+setup.py
+jedidebug/__init__.py
+jedidebug/jedidebug.py
+jedidebug.egg-info/PKG-INFO
+jedidebug.egg-info/SOURCES.txt
+jedidebug.egg-info/dependency_links.txt
+jedidebug.egg-info/top_level.txt
