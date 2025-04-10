@@ -1,0 +1,10 @@
+taskiq_aiopg/__init__.py,sha256=aC0hXD_2lln_V7ldVUAJVdKB0ngjCCfkMv3jM4n_IeA,101
+taskiq_aiopg/exceptions.py,sha256=EW8qGkiOS5PL7xfdvR16W3XDt7cwbATzYfb42TJGr8M,314
+taskiq_aiopg/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+taskiq_aiopg/queries.py,sha256=0QGnuBFDmQh2xMqzVitqKsrDSdxff1mvrM2Cb_o9Mm8,492
+taskiq_aiopg/result_backend.py,sha256=BAEHNKa5hEffa56WCOjOfaRmOqGOqWztNQgoHT9aBHE,5529
+taskiq_aiopg-0.1.0.dist-info/licenses/LICENSE,sha256=2hyGO1fL0gsh9ExFeS6_QE-egvs03mgAHzehMS6q3rQ,1072
+taskiq_aiopg-0.1.0.dist-info/METADATA,sha256=zzL5yg7g8bSDp4gljJg5qcemzvFeIjgukzKG722nOy8,3141
+taskiq_aiopg-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+taskiq_aiopg-0.1.0.dist-info/top_level.txt,sha256=d1gDD1fJIFINrQhi4zDVGYhbOXJwswhV-Oh9mTPOI2k,13
+taskiq_aiopg-0.1.0.dist-info/RECORD,,
