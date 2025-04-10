@@ -1,0 +1,4 @@
+channels==3.0.3
+pymongo~=4.11.2
+asgiref~=3.8.1
+django-cors-headers==4.2.0
