@@ -1,0 +1,6 @@
+src/uptime_kuma_mcp_server/__init__.py,sha256=yPGWe87b42pmyxvrOHyi7BGe4WYd3qRUzIb32WCho-Q,75
+src/uptime_kuma_mcp_server/server.py,sha256=h_RaSNpJ97o27V8Bqse4xWMq0sbTOeFANEy-14WzdEw,4540
+uptime_kuma_mcp_server-0.1.4.dist-info/METADATA,sha256=efJxjWUpKJ7b2p0M2MUW78bmtNnQxqoGjG8lwr_XuGY,576
+uptime_kuma_mcp_server-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+uptime_kuma_mcp_server-0.1.4.dist-info/entry_points.txt,sha256=dFjd731fYQ4Qn1DLBlXp8gWk4TXWVkPOjwcTZHKoxaI,71
+uptime_kuma_mcp_server-0.1.4.dist-info/RECORD,,
