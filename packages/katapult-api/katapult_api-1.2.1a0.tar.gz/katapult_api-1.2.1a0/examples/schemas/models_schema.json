@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "label": {
+        "type": "string"
+      },
+      "value": {
+        "type": "string"
+      },
+      "key": {
+        "type": "string"
+      },
+      "shared": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "label",
+      "value"
+    ]
+  }
+}

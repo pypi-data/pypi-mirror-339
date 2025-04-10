@@ -1,0 +1,9 @@
+.idea
+_scratch
+__pycache__
+.coverage
+.pypirc
+dist
+*.egg-info
+.env
+.venv/

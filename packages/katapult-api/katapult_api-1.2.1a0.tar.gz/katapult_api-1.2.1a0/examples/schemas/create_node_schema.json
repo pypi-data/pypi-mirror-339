@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "latitude": {
+          "type": "number"
+        },
+        "longitude": {
+          "type": "number"
+        },
+        "_created": {
+          "type": "object",
+          "properties": {
+            "uid": {
+              "type": "string"
+            },
+            "timestamp": {
+              "type": "number"
+            },
+            "method": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "uid",
+            "timestamp",
+            "method"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "my_fav_pokemon": {
+              "type": "object",
+              "patternProperties": {
+                ".*": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "latitude",
+        "longitude",
+        "_created"
+      ]
+    }
+  },
+  "required": [
+    "key",
+    "data"
+  ]
+}

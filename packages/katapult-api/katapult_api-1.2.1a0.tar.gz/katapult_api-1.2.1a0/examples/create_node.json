@@ -1,0 +1,17 @@
+{
+  "key": "-OMmCNKt8Kcq4anA39Fk",
+  "data": {
+    "latitude": 30.0817046,
+    "longitude": -97.8429946,
+    "_created": {
+      "uid": "unknown",
+      "timestamp": 1743525348732,
+      "method": "api"
+    },
+    "attributes": {
+      "my_fav_pokemon": {
+        "-OMmCNKxyHKf1Q0cswZG": "charizard"
+      }
+    }
+  }
+}
