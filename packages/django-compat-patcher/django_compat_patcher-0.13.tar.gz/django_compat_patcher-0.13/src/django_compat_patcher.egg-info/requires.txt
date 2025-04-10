@@ -1,0 +1,3 @@
+compat-patcher-core>=1.2
+six
+Django
