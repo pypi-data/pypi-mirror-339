@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitghost"
+version = "1.0.0"
+description = "A CLI tool to securely manage private files/folders ignored in public git repositories."
+authors = [
+    { name = "Decoding Chris" }
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.0,<9.0",
+    "gitpython>=3.1,<4.0"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: POSIX :: Linux",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Version Control"
+]
+
+[project.scripts]
+gitghost = "gitghost.cli:cli"
