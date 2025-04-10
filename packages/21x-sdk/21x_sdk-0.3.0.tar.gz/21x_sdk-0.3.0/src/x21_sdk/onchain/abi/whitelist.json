@@ -1,0 +1,382 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "authority",
+        "type": "address"
+      },
+      {
+        "internalType": "uint64",
+        "name": "maxClients",
+        "type": "uint64"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "authority",
+        "type": "address"
+      }
+    ],
+    "name": "AccessManagedInvalidAuthority",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "caller",
+        "type": "address"
+      },
+      {
+        "internalType": "uint32",
+        "name": "delay",
+        "type": "uint32"
+      }
+    ],
+    "name": "AccessManagedRequiredDelay",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "caller",
+        "type": "address"
+      }
+    ],
+    "name": "AccessManagedUnauthorized",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "TransfersNotAccepted_NativeCurrencyNotAccepted",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Whitelist_MaxClientIdReached",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Whitelist_ZeroAddressClient",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "authority",
+        "type": "address"
+      }
+    ],
+    "name": "AuthorityUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "client",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "canTransfer",
+        "type": "bool"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "canBuy",
+        "type": "bool"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "canSell",
+        "type": "bool"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "canCancel",
+        "type": "bool"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "isMarketMaker",
+        "type": "bool"
+      }
+    ],
+    "name": "ClientInfoUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "client",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "id",
+        "type": "uint64"
+      }
+    ],
+    "name": "NewClient",
+    "type": "event"
+  },
+  {
+    "stateMutability": "payable",
+    "type": "fallback"
+  },
+  {
+    "inputs": [],
+    "name": "authority",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "isConsumingScheduledOp",
+    "outputs": [
+      {
+        "internalType": "bytes4",
+        "name": "",
+        "type": "bytes4"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "id",
+        "type": "uint64"
+      }
+    ],
+    "name": "readAddressAtId",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "clientAddress",
+        "type": "address"
+      }
+    ],
+    "name": "readAddressId",
+    "outputs": [
+      {
+        "internalType": "uint64",
+        "name": "",
+        "type": "uint64"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "clientAddress",
+        "type": "address"
+      }
+    ],
+    "name": "readClientInfo",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint64",
+            "name": "id",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bool",
+            "name": "canTransfer",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "canBuy",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "canSell",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "canCancel",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "isMarketMaker",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct LibStructs.ClientInformation",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "id",
+        "type": "uint64"
+      }
+    ],
+    "name": "readClientInfoWithAddress",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "clientAddress",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint64",
+            "name": "id",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bool",
+            "name": "canTransfer",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "canBuy",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "canSell",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "canCancel",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "isMarketMaker",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct LibStructs.ClientInformation",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newAuthority",
+        "type": "address"
+      }
+    ],
+    "name": "setAuthority",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "clientAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "canTransfer_",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "canBuy_",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "canSell_",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "canCancel_",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "isMarketMaker_",
+        "type": "bool"
+      }
+    ],
+    "name": "writeClientInfo",
+    "outputs": [
+      {
+        "internalType": "uint64",
+        "name": "",
+        "type": "uint64"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "stateMutability": "payable",
+    "type": "receive"
+  }
+]
