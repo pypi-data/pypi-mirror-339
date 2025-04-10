@@ -1,0 +1,7 @@
+{
+  "destination": "dotscripts",
+  "data": {
+    "jupyter.lab.extensions": ["package.json"],
+    "jupyter.lab.extension": true
+  }
+}
