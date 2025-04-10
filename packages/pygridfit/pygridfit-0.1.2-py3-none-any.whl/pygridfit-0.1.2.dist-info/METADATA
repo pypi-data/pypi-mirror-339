@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: pygridfit
+Version: 0.1.2
+Summary: A Python project named pygridfit
+Requires-Python: >=3.9.0
+Requires-Dist: matplotlib>=3.9.4
+Requires-Dist: numpy>=2.0.2
+Requires-Dist: pytest>=8.3.5
+Requires-Dist: scikit-learn>=1.6.1
+Requires-Dist: scipy>=1.13.1
+Requires-Dist: watermark>=2.5.0
+Provides-Extra: dev
+Requires-Dist: maturin; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Requires-Dist: twine; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# pygridfit
+
+Python port of the MATLAB [gridfit](https://www.mathworks.com/matlabcentral/fileexchange/8998-surface-fitting-using-gridfit) function (D'Errico, 2006). Work in progress.
+
+
+## Installation
+
+```bash
+source .venv/bin/activate
+uv pip install ".[dev]"
+```
+
+## Usage
+
+See the [example](https://github.com/berenslab/pygridfit/blob/main/notebooks/example.ipynb) notebook for usage.
