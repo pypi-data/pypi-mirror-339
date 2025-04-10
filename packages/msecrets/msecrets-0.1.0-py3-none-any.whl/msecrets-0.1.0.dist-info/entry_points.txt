@@ -1,0 +1,2 @@
+[console_scripts]
+msecrets = msecrets.cli:cli
