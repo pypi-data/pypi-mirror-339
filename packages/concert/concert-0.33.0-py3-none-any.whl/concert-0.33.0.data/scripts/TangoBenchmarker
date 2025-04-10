@@ -1,0 +1,7 @@
+#!python
+
+from concert.ext.tangoservers.benchmarking import TangoBenchmarker
+from tango import GreenMode
+
+if __name__ == '__main__':
+    TangoBenchmarker.run_server(green_mode=GreenMode.Asyncio)
