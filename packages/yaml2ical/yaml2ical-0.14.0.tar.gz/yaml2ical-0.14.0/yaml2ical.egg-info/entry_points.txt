@@ -1,0 +1,2 @@
+[console_scripts]
+yaml2ical = yaml2ical.cli:main

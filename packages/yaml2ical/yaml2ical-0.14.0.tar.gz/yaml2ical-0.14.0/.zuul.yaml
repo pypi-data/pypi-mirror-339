@@ -1,0 +1,23 @@
+- project:
+    check:
+      jobs:
+        - build-python-release
+        - nox-linters
+        - nox-py39:
+            nodeset: ubuntu-focal
+        - nox-py312:
+            nodeset: ubuntu-noble
+    gate:
+      jobs:
+        - build-python-release
+        - nox-linters
+        - nox-py39:
+            nodeset: ubuntu-focal
+        - nox-py312:
+            nodeset: ubuntu-noble
+    promote:
+      jobs:
+        - opendev-promote-python
+    release:
+      jobs:
+        - opendev-release-python

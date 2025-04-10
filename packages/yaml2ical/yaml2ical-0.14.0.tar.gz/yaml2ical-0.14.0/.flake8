@@ -1,0 +1,5 @@
+[flake8]
+exclude=.venv,.git,.nox,.tox,dist,doc,*lib/python*,*egg,build
+# E123, E125 and W503 are invalid per PEP-8; OpenStack's H rules don't apply
+ignore = E123,E125,H,W503
+show-source = True

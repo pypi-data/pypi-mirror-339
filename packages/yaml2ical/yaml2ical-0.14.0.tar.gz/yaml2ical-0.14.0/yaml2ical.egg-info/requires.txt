@@ -1,0 +1,15 @@
+Jinja2>=2.8
+PyYAML>=3.1.0
+icalendar
+pbr>=1.6
+pytz
+
+[test-linters]
+hacking<8,>=7
+
+[test-unit]
+coverage>=3.6
+fixtures>=3.0.0
+python-subunit>=0.0.18
+stestr>=1.0.0
+testtools>=1.4.0

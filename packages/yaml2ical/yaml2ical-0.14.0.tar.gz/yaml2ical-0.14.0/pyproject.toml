@@ -1,0 +1,56 @@
+
+[build-system]
+requires = ["pbr>=6.1.1"]
+build-backend = "pbr.build"
+
+[project]
+authors = [
+    {name = "OpenDev Contributors", email = "service-discuss@lists.opendev.org"},
+    {name = "NDSU IBM Capstone", email = "service-discuss@lists.opendev.org"},
+]
+classifiers = [
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "Jinja2>=2.8",  # BSD License (3 clause)
+    "PyYAML>=3.1.0",  # MIT
+    "icalendar",
+    "pbr>=1.6",  # Apache-2.0
+    "pytz",
+]
+description = "Convert YAML meeting descriptions into iCalendar files"
+dynamic = ["version"]
+license = "Apache-2.0"
+name = "yaml2ical"
+readme = {charset = "UTF-8", content-type = "text/x-rst", file = "README.rst"}
+requires-python = ">=3.9"
+
+# TODO: replace this with '[dependency-groups]' once pip 25.1 is released
+[project.optional-dependencies]
+test-linters = [
+    "hacking>=7,<8",  # Apache-2.0
+]
+test-unit = [
+    "coverage>=3.6",  # Apache-2.0
+    "fixtures>=3.0.0",  # Apache-2.0/BSD
+    "python-subunit>=0.0.18",  # Apache-2.0/BSD
+    "stestr>=1.0.0",
+    "testtools>=1.4.0",  # MIT
+]
+
+[project.scripts]
+    yaml2ical = "yaml2ical.cli:main"
+
+[project.urls]
+"Browse Source" = "https://opendev.org/opendev/yaml2ical"
+"Bug Reporting" = "https://storyboard.openstack.org/#!/project/opendev/yaml2ical"
+"Documentation" = "https://opendev.org/opendev/yaml2ical/src/branch/master/README.rst"
+"Git Clone URL" = "https://opendev.org/opendev/yaml2ical"
+"License Texts" = "https://opendev.org/opendev/yaml2ical/src/branch/master/LICENSE"
