@@ -1,0 +1,2 @@
+[console_scripts]
+symbols = symbols.__init__:main
