@@ -1,0 +1,28 @@
+[project]
+name = "helmfile-mcp-server"
+version = "0.1.0"
+description = "A FastMCP server for Helmfile operations"
+authors = [{ name = "Your Name", email = "your.email@example.com" }]
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp>=0.1.0",
+    "pydantic>=2.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "strict"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+python_classes = ["Test*"]
+asyncio_default_fixture_loop_scope = "function"

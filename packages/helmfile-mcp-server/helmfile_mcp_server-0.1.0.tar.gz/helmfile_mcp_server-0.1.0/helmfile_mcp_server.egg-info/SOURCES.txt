@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+server.py
+helmfile_mcp_server.egg-info/PKG-INFO
+helmfile_mcp_server.egg-info/SOURCES.txt
+helmfile_mcp_server.egg-info/dependency_links.txt
+helmfile_mcp_server.egg-info/requires.txt
+helmfile_mcp_server.egg-info/top_level.txt
+tests/test_server.py
