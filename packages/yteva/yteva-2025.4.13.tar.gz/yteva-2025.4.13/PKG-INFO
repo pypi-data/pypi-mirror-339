@@ -1,0 +1,67 @@
+Metadata-Version: 2.4
+Name: yteva
+Version: 2025.4.13
+Summary: yteva library for downloading audio and videos from YouTube and details about them.
+Home-page: https://t.me/yteva_lib
+Author: dev eva
+Author-email: source205eva@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# YTeva
+
+YTeva is a Python library that fetches and downloads audio files using Pyrogram.
+
+## Installation
+
+```bash
+pip install yteva
+```
+
+## Usage
+This is for Pyrogram users.
+
+```python
+from pyrogram import Client
+from yteva import YTeva
+
+app = Client("my_bot", api_id=123456, api_hash="your_api_hash", bot_token="your_bot_token")
+yteva = YTeva(api_key="your_api_key", bot_app=app)
+
+async async def main():
+    await app.start()
+    result = await yteva.download_audio("your_video_id")
+    print("Downloaded:", result)
+    await app.stop()
+```
+If you are using any program you can extract the link
+```python
+from yteva import YTeva_direct
+
+
+async def main():
+    yd = YTeva_direct(api_key="API_KEY")
+    test = await yd.play_audio_direct("VIDEO_ID") 
+    print(test)
+
+if __name__ == "__main__":
+    asyncio.run(main())  
+```
+
+
+## License
+
+MIT License
