@@ -1,0 +1,12 @@
+touchmap/__init__.py,sha256=tFtdYMBoh3K-e_SVOc3SbSCKSmiQFOb9_Iaffp7zNEY,60
+touchmap/braille_convert.py,sha256=kSyb1VcVEoipZxJSI86iPZraQJoriwypA2EzB3LrQjE,5601
+touchmap/encoder.py,sha256=47taDCbz89E9ZKHqntXPMGqq8JOl8L46dkgsLRN8P0Y,866
+touchmap/grade1map/__init__.py,sha256=Lv8uXtneT5750PLgCPUsATqsoFjCyuSbvPSMaPHJURg,35
+touchmap/grade1map/binarydict.py,sha256=0LNmE_ClDzU3SiWWeCugDMGVpCXh7Fms5LHHWrZ8w-o,1812
+touchmap/grade1map/brailledict.py,sha256=i6d5MAl13qkd7FEU-UN_6PxE4L1jK5QDkts2l_l9JeY,1419
+touchmap/grade1map/core.py,sha256=Db1Atf42XfgHh0dsp6_gkw9tk1x9y9-vBH-X1NPte7o,2286
+touchmap/grade1map/utils.py,sha256=PdKJ3ehVjk0Gc40uUCyqzT30-01_UN4kGMMbSpENQQk,561
+touchmap-0.2.0.dist-info/METADATA,sha256=0dTOCu5H0NfbmdCy6JrsbETMkJG2xCoPUYCY4alP3xo,3410
+touchmap-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+touchmap-0.2.0.dist-info/licenses/LICENSE,sha256=KdedWUhgVrEWkUZYVpImsDZgjNrA9G4vHq_JafuSyZA,9703
+touchmap-0.2.0.dist-info/RECORD,,
