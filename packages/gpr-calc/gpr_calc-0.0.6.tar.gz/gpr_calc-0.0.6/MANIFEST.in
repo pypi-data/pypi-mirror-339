@@ -1,0 +1,14 @@
+# Include Python source files
+include gpr_calc/*.py
+include gpr_calc/kernels/*.py
+
+# Include C++ source files
+include gpr_calc/kernels/*.cpp
+include gpr_calc/kernels/*.h
+
+# Include the compiled shared object (.so) files if they exist
+include gpr_calc/kernels/*.so
+
+# Include README and LICENSE files
+include README.md
+include LICENSE
