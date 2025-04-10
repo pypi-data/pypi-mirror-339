@@ -1,0 +1,75 @@
+Metadata-Version: 2.4
+Name: symbiosis-api-client
+Version: 0.0.2
+Summary: Python client for api.symbiosis.finance
+Project-URL: Documentation, https://symbiosis-api-client.readthedocs.io/en/latest/
+Project-URL: Issues, https://github.com/garootman/symbiosis-api-client/issues
+Project-URL: Source, https://github.com/garootman/symbiosis-api-client
+Author-email: garootman <dksg87@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: sphinx>=7.1.2
+Description-Content-Type: text/markdown
+
+# symbiosis-client-py
+
+> [!IMPORTANT]
+> WORK IN PROGRESS, DO NOT USE!
+
+Python client for [Symbiosis Finance](https://symbiosis.finance/) REST API
+
+## ToDo Plan:
+
+- [ ] Main functionality
+- [ ] Test Stuck transactions functionality
+- [ ] Throttling + Singleton
+- [ ] Acync support
+- [ ] Enums
+- [ ] Exception Codes
+- [ ] Testnet – when there are tokens available on Symbiosis
+- [X] tox for Python versions
+- [X] Pydantic models
+
+
+
+### Sources:
+
+- [Swagger](https://api.symbiosis.finance/crosschain/docs/)
+- [Source Docs](https://docs.symbiosis.finance/developer-tools/symbiosis-api)
+- [JS SDK Source code for reference](https://github.com/symbiosis-finance/js-sdk)
+
+
+
+# symbiosis-api-client
+
+[![PyPI - Version](https://img.shields.io/pypi/v/symbiosis-api-client.svg)](https://pypi.org/project/symbiosis-api-client)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/symbiosis-api-client.svg)](https://pypi.org/project/symbiosis-api-client)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install symbiosis-api-client
+```
+
+## License
+
+`symbiosis-api-client` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
