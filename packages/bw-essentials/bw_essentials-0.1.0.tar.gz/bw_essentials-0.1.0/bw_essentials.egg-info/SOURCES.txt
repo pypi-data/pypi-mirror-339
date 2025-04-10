@@ -1,0 +1,12 @@
+README.md
+setup.py
+bw_essentials/__init__.py
+bw_essentials.egg-info/PKG-INFO
+bw_essentials.egg-info/SOURCES.txt
+bw_essentials.egg-info/dependency_links.txt
+bw_essentials.egg-info/requires.txt
+bw_essentials.egg-info/top_level.txt
+bw_essentials/s3_utils/__init__.py
+bw_essentials/s3_utils/s3_utils.py
+configurations/__init__.py
+configurations/config.py
