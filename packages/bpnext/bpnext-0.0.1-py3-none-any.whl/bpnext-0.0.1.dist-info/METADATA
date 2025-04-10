@@ -1,0 +1,124 @@
+Metadata-Version: 2.4
+Name: bpnext
+Version: 0.0.1
+Summary: yet another BPNet implementation in PyTorch
+Project-URL: Repository, https://github.com/gtca/bpnext.git
+Project-URL: Bug Tracker, https://github.com/gtca/bpnext/issues
+Author-email: Danila Bredikhin <danila@stanford.edu>
+License: MIT
+License-File: LICENSE
+Keywords: ATAC,BPNet,CNN,DNA,chromatin,deep learning
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.11
+Requires-Dist: numpy>=1.25.0
+Requires-Dist: torch>=2.0.0
+Provides-Extra: docs
+Requires-Dist: furo; extra == 'docs'
+Requires-Dist: myst-parser; extra == 'docs'
+Requires-Dist: sphinx; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints; extra == 'docs'
+Requires-Dist: sphinx-autosummary-accessors; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme; extra == 'docs'
+Provides-Extra: io
+Requires-Dist: h5py; extra == 'io'
+Provides-Extra: test
+Requires-Dist: bpnet-lite; extra == 'test'
+Requires-Dist: h5py; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Description-Content-Type: text/markdown
+
+<img src="./docs/img/header.png" width=500/>
+
+# Next-generation BPNet models
+
+>[!WARNING]
+>This is an experimental playground for BPNet-like models.
+
+BPNet is a family of [base-resolution DNA sequence models](https://www.nature.com/articles/s41588-021-00782-6).
+
+This repository is an experimental playground for different models stemming from the original BPNet architecture.
+
+Model implementations in this repository are heavily based on, and would not be possible without, their original implementations, which are linked below.
+
+## Models
+
+### [BPNet](src/bpnext/models/bpnet.py)
+
+```python
+from bpnext.models import BPNet
+```
+
+BPNet is a model for predicting base-resolution transcription factor binding profiles from DNA sequences. BPNet models are trained using ChIP-nexus or ChIP-seq data.
+
+- The model is described in detail in the publication [Avsec et al., 2021](https://www.nature.com/articles/s41588-021-00782-6).
+
+- The model was originally implemented in TensorFlow by [zigaavsec](https://github.com/Avsecz): [bpnet](https://github.com/kundajelab/bpnet).
+
+### [ChromBPNet](src/bpnext/models/chrombpnet.py)
+
+```python
+from bpnext.models import ChromBPNet
+```
+
+ChromBPNet is a model for predicting base-resolution chromatin accessibility profiles from DNA sequences. ChromBPNet models are trained using ATAC-seq or DNase-seq data.
+
+- The model and its applications are described in detail in the preprint [Pampari et al., 2024](https://www.biorxiv.org/content/10.1101/2024.12.25.630221.abstract).
+
+- The model was originally implemented in TensorFlow by [panushri25](https://github.com/panushri25): [chrombpnet](https://github.com/kundajelab/chrombpnet). 
+
+- Object-oriented implementation of ChromBPNet has been later written by [jmschrei](https://github.com/jmschrei) in PyTorch: [dragonnfruit](https://github.com/jmschrei/bpnet-lite).
+
+### [DragoNNFruit](src/bpnext/models/dragonnfruit.py)
+
+```python
+from bpnext.models import DragoNNFruit
+```
+
+DragoNNFruit is a model for predicting base-resolution chromatin accessibility profiles from DNA sequences and cell states. The model has been designed to be trained on single-cell ATAC-seq data and multiome data.
+
+This model is currently under development.
+
+- The model has been originally implemented in PyTorch by [jmschrei](https://github.com/jmschrei): [dragonnfruit](https://github.com/jmschrei/dragonnfruit).
+
+## Citations
+
+If you use this code and these models in your research, please consider citing this repository as well as the following publications:
+
+BPNet:
+
+```bibtex
+@article{avsec2021base,
+  title={Base-resolution models of transcription-factor binding reveal soft motif syntax},
+  author={Avsec, {\v{Z}}iga and Weilert, Melanie and Shrikumar, Avanti and Krueger, Sabrina and Alexandari, Amr and Dalal, Khyati and Fropf, Robin and others},
+  journal={Nature genetics},
+  volume={53},
+  number={3},
+  pages={354--366},
+  year={2021},
+  publisher={Nature Publishing Group}
+}
+```
+
+ChromBPNet:
+
+```bibtex
+@article{pampari2024chrombpnet,
+  title={ChromBPNet: bias factorized, base-resolution deep learning models of chromatin accessibility reveal cis-regulatory sequence syntax, transcription factor footprints and regulatory variants},
+  author={Pampari, Anusri and Shcherbina, Anna and Kvon, Evgeny Z and Kosicki, Michael and Nair, Surag and Kundu, Soumya and Kathiria, Arwa S and others},
+  journal={bioRxiv},
+  year={2024},
+  publisher={Cold Spring Harbor Laboratory}
+}
+```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

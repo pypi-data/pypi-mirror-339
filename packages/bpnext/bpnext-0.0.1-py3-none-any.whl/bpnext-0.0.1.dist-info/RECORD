@@ -1,0 +1,14 @@
+bpnext/_version.py,sha256=vgltXBYF55vNcC2regxjGN0_cbebmm8VgcDdQaDapWQ,511
+bpnext/io/base.py,sha256=DSZp0jYpxjXN0uWe8vlKJNbtARH82wVtBFzzNX680LE,4173
+bpnext/io/dbsf.py,sha256=sU7n3Lk0dkT9PIPLpNARr_BHeycblR58XmhJmzOuGUo,23540
+bpnext/io/hdf5.py,sha256=ca5le_zt-9hbrfez-b78N9FhrikHmN41vHcuc_SPloM,26002
+bpnext/models/__init__.py,sha256=c6vxx_LiwheRYeaGmA52YxkDc91oC23FTJ_aeP41OCc,195
+bpnext/models/_mixins.py,sha256=l3dBfLgQBLNCaIIRHiZZe0qFqL1IkG8aH3F2dflbnuc,1736
+bpnext/models/bpnet.py,sha256=SDoWf0DXRsuno4qUJyK6BsDsm5rATWLsYYenPzjHpHs,9696
+bpnext/models/chrombpnet.py,sha256=bq8iBS0oQ3chPfDZbDlOcXEA57tN5lQuVaa-uJeWiFk,3840
+bpnext/models/dragonnfruit.py,sha256=zoDJX_Pytb4Lms0lqt5JHWDcZ4NWb9jkkhbrhhryUf8,13719
+bpnext/utils/losses.py,sha256=xKvvNuWBVIlscCYbWPxNSIWs4u4oZmYLQpO3VaDxAxQ,4045
+bpnext-0.0.1.dist-info/METADATA,sha256=26CDgtXtJIReEugbFtZOJh-0gVX5Zy0W4EA6LH2NoCI,5006
+bpnext-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+bpnext-0.0.1.dist-info/licenses/LICENSE,sha256=qIcMaVrfLtM2AGdQqTohLp4pFbDDyZwM5EmxOE9vBx8,1073
+bpnext-0.0.1.dist-info/RECORD,,
