@@ -1,0 +1,11 @@
+[workspace]
+authors = ["Jochen Weile <jweile@oicr.on.ca>"]
+channels = ["conda-forge"]
+name = "conda_build"
+platforms = ["osx-arm64","osx-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+conda-build = ">=25.3.2,<26"
