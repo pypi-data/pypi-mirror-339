@@ -1,0 +1,2 @@
+[console_scripts]
+uptime-kuma-mcp = uptime_kuma_mcp_server.server:main
