@@ -1,0 +1,2 @@
+[console_scripts]
+generate_interactive_bom = InteractiveHtmlBom.generate_interactive_bom:main
