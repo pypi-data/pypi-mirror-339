@@ -1,0 +1,8 @@
+README.md
+setup.py
+flask_image_compressor/__init__.py
+flask_image_compressor.egg-info/PKG-INFO
+flask_image_compressor.egg-info/SOURCES.txt
+flask_image_compressor.egg-info/dependency_links.txt
+flask_image_compressor.egg-info/requires.txt
+flask_image_compressor.egg-info/top_level.txt
