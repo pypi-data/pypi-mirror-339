@@ -1,0 +1,138 @@
+Metadata-Version: 2.4
+Name: email_deliverability
+Version: 0.1.0
+Summary: Comprehensive email deliverability management tools
+Home-page: https://github.com/innerkore/email-deliverability
+Author: Gagan (InnerKore)
+Author-email: gagan@innerkore.com
+Project-URL: Documentation, https://github.com/innerkore/email-deliverability/docs
+Project-URL: Source, https://github.com/innerkore/email-deliverability
+Project-URL: Tracker, https://github.com/innerkore/email-deliverability/issues
+Keywords: email,deliverability,spf,dkim,dmarc,email authentication
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: dnspython>=2.0.0
+Requires-Dist: requests>=2.25.0
+Requires-Dist: cryptography>=3.2.0
+Requires-Dist: schedule>=1.2.0
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: sphinx; extra == "dev"
+Requires-Dist: sphinx_rtd_theme; extra == "dev"
+Requires-Dist: twine==6.0.1; extra == "dev"
+Requires-Dist: wheel; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx_rtd_theme; extra == "docs"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Email Deliverability Management Library
+
+A comprehensive Python library for managing email deliverability, providing tools and guidance for email authentication (SPF, DKIM, DMARC), sender reputation monitoring, email list hygiene, and IP warming.
+
+## Features
+
+- **Email Authentication**
+  - SPF record creation, validation, and analysis
+  - DKIM key management and signature verification
+  - DMARC policy configuration and reporting
+
+- **Reputation Monitoring**
+  - IP blacklist checking
+  - Feedback loop complaint processing
+  - Domain reputation analysis
+  - Bounce rate analysis
+
+- **Email List Hygiene**
+  - Email format validation
+  - MX record checking
+  - Disposable email detection
+  - List quality scoring and recommendations
+
+- **IP Warming Tools**
+  - Customizable warming schedules
+  - Volume distribution by hour
+  - Multi-IP warming management
+  - Best practice recommendations
+
+- **Unified Facade Interface**
+  - Comprehensive deliverability checks
+  - Simplified access to all tools
+  - Actionable recommendations
+
+## Installation
+
+```bash
+pip install email_deliverability
+
+```
+
+## Quick Start
+
+```python
+
+from email_deliverability import DeliverabilityManager
+
+# Initialize the manager with your domain and IP
+manager = DeliverabilityManager(domain="example.com", ip="8.8.8.8")
+
+# Analyze authentication setup
+auth_results = manager.analyze_domain_setup()
+print(f"Authentication Score: {auth_results['overall_score']}/100")
+
+# Check IP reputation
+ip_results = manager.check_ip_reputation()
+if ip_results['status'] == 'clean':
+    print("IP is not listed on any blacklists")
+else:
+    print(f"IP is listed on {len(ip_results['blacklisted_on'])} blacklists")
+
+# Validate email addresses
+emails = ["user@example.com", "invalid@nonexistent.domain", "test@mailinator.com"]
+validation_results = manager.validate_email_list(emails)
+print(f"List Quality: {validation_results['analysis']['quality_level']}")
+
+# Create an IP warming plan
+warming_plan = manager.create_ip_warming_plan(daily_target=10000, warmup_days=30)
+print(f"Warming schedule created for {warming_plan['warmup_days']} days")
+
+# Get comprehensive deliverability status
+status = manager.check_deliverability_status()
+for recommendation in status['recommendations']:
+    print(f"- {recommendation}")
+
+
+```
+
+## Documentation
+
+Full documentation is available at [Read the Docs](https://email-deliverability.readthedocs.io/en/latest/).
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

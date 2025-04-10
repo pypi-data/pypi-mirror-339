@@ -1,0 +1,17 @@
+dnspython>=2.0.0
+requests>=2.25.0
+cryptography>=3.2.0
+schedule>=1.2.0
+
+[dev]
+pytest
+pytest-cov
+sphinx
+sphinx_rtd_theme
+twine==6.0.1
+wheel
+build
+
+[docs]
+sphinx
+sphinx_rtd_theme
