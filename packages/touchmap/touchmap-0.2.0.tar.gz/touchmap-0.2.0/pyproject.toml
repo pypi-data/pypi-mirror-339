@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "touchmap"
+version = "0.2.0"
+description = "A python library for converting text to braille."
+authors = [
+    { name = "Yajat Pathak", email = "kayakbraillent@gmail.com" }
+]
+dependencies = [
+    "regex"  
+]
+keywords = ["braille", "text-to-braille", "accessibility", "blind", "unicode", "grade1", "grade2", "touchmap", "pybraille", "kayak", "braillent"]
+readme = "README.md"
+requires-python = ">=3"
+license = { text = "Apache-2.0" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://github.com/Kayak-HSS/touchmap"
+Repository = "https://github.com/Kayak-HSS/touchmap"
+Issues = "https://github.com/Kayak-HSS/touchmap/issues"
