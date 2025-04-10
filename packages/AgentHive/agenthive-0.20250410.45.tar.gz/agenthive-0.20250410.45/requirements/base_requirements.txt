@@ -1,0 +1,23 @@
+# Core dependencies
+pydantic>=2.10.6
+sqlalchemy>=2.0.38
+asyncpg>=0.30.0
+
+# DB
+aiosqlite==0.21.0
+pytz==2025.1
+python-dateutil==2.9.0.post0
+
+# Redis
+redis>=5.2.1
+hiredis>=3.1.0
+
+# HTTP client
+aiohttp>=3.11.13
+httpx>=0.28.1
+
+# Utilities
+click>=8.1.8
+python-dotenv>=1.0.1
+pyyaml>=6.0.2
+psutil>=7.0.0

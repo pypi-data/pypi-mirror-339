@@ -1,0 +1,94 @@
+x-environment: &common-env
+  POSTGRES_USER: agenthive
+  POSTGRES_PASSWORD: agenthive_password
+  POSTGRES_DB: agenthive_db
+  POSTGRES_HOST: postgres
+  POSTGRES_PORT: 5432
+  POSTGRES_DATA_VOLUME: postgres_data
+  REDIS_HOST: redis
+  REDIS_PORT: 6379
+  REDIS_DATA_VOLUME: redis_data
+  REDIS_URL: redis://redis:6379/0
+  DATABASE_URL: postgresql+asyncpg://agenthive:agenthive_password@postgres:5432/agenthive_db
+  COORDINATOR_URL: http://coordinator:8000
+  LOG_LEVEL: INFO
+  METRICS_INTERVAL: 10
+  METRICS_RETENTION: 86400
+  WORKER_TIMEOUT: 60
+  HEARTBEAT_INTERVAL: 60
+  RESOURCE_CHECK_INTERVAL: 30
+
+services:
+  # Core storage services
+  postgres:
+    extends:
+      file: ./docker-compose.base.yml
+      service: postgres
+    environment:
+      <<: *common-env
+    networks:
+      - agenthive_network
+
+  redis:
+    extends:
+      file: ./docker-compose.base.yml
+      service: redis
+    environment:
+      <<: *common-env
+    networks:
+      - agenthive_network
+
+  # Coordinator service
+  coordinator:
+    extends:
+      file: ./docker-compose.base.yml
+      service: coordinator
+    environment:
+      <<: *common-env
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - agenthive_network
+    restart: unless-stopped
+
+  # Web monitoring interface
+  monitor:
+    extends:
+      file: ./docker-compose.base.yml
+      service: monitor
+    environment:
+      <<: *common-env
+    depends_on:
+      - coordinator
+    networks:
+      - agenthive_network
+    restart: unless-stopped
+
+  # Worker service (scalable)
+  worker:
+    extends:
+      file: ./docker-compose.base.yml
+      service: worker
+    environment:
+      <<: *common-env
+    depends_on:
+      - coordinator
+    networks:
+      - agenthive_network
+    restart: unless-stopped
+    deploy:
+      mode: replicated
+      replicas: 1
+
+networks:
+  agenthive_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    name: postgres_data
+  redis_data:
+    name: redis_data

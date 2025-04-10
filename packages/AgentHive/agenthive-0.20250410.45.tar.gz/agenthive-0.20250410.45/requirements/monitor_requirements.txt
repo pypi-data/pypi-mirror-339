@@ -1,0 +1,20 @@
+-r base_requirements.txt
+
+# Web server
+supervisor==4.2.5
+uvicorn==0.34.0
+fastapi==0.115.11
+starlette==0.46.1
+websockets==15.0.1
+
+# Database
+asyncpg==0.30.0
+
+# Utilities
+jinja2==3.1.6
+python-multipart==0.0.20
+
+# Metrics and visualization
+prometheus-client==0.21.1
+matplotlib==3.10.1
+pandas==2.2.3

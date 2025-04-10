@@ -1,0 +1,92 @@
+services:
+  redis:
+    image: redis:${REDIS_VERSION:-7.0-alpine}
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: ${HEALTH_CHECK_INTERVAL:-5s}
+      timeout: ${HEALTH_CHECK_TIMEOUT:-3s}
+      retries: ${HEALTH_CHECK_RETRIES:-3}
+    volumes:
+      - ${REDIS_DATA_VOLUME:-redis_data}:/data
+      - ${REDIS_CONF_PATH:-./redis/redis.conf}:/usr/local/etc/redis/redis.conf
+
+  postgres:
+    image: postgres:${POSTGRES_VERSION:-15-alpine}
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-agenthive}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-agenthive_password}
+      POSTGRES_DB: ${POSTGRES_DB:-agenthive_db}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - ${POSTGRES_DATA_VOLUME:-postgres_data}:/var/lib/postgresql/data
+      - ${POSTGRES_INIT_SQL_PATH:-./postgres/init.sql}:/docker-entrypoint-initdb.d/init.sql
+      - ${POSTGRES_CONF_PATH:-./postgres/postgresql.conf}:/etc/postgresql/postgresql.conf
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: ${HEALTH_CHECK_INTERVAL:-5s}
+      timeout: ${HEALTH_CHECK_TIMEOUT:-3s}
+      retries: ${HEALTH_CHECK_RETRIES:-3}
+
+  coordinator:
+    build:
+      context: ..
+      dockerfile: ./docker/coordinator/Dockerfile
+    image: agenthive_coordinator
+    env_file:
+      - ./coordinator/config/coordinator.env
+    environment:
+      REDIS_URL: redis://${REDIS_HOST:-redis}:${REDIS_PORT:-6379}/0
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-agenthive}:${POSTGRES_PASSWORD:-agenthive_password}@${POSTGRES_HOST:-postgres}:${POSTGRES_PORT:-5432}/${POSTGRES_DB:-agenthive_db}
+      LOG_LEVEL: INFO
+    ports:
+      - "8000:8000"  # API port
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  monitor:
+    build:
+      context: ..
+      dockerfile: ./docker/monitor/Dockerfile
+    image: agenthive_monitor
+    env_file:
+      - ./monitor/config/monitor.env
+    environment:
+      REDIS_URL: redis://${REDIS_HOST:-redis}:${REDIS_PORT:-6379}/0
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-agenthive}:${POSTGRES_PASSWORD:-agenthive_password}@${POSTGRES_HOST:-postgres}:${POSTGRES_PORT:-5432}/${POSTGRES_DB:-agenthive_db}
+      COORDINATOR_URL: http://coordinator:8000
+      LOG_LEVEL: INFO
+      METRICS_INTERVAL: 10
+      METRICS_RETENTION: 86400
+      WORKER_TIMEOUT: 60
+    ports:
+      - "8080:8080"  # Web UI port
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  worker:
+    build:
+      context: ..
+      dockerfile: ./docker/worker/Dockerfile
+    image: agenthive_worker
+    env_file:
+      - ./worker/config/worker.env
+    environment:
+      REDIS_URL: redis://${REDIS_HOST:-redis}:${REDIS_PORT:-6379}/0
+      COORDINATOR_URL: http://coordinator:8000
+      LOG_LEVEL: INFO
+      HEARTBEAT_INTERVAL: 10
+      RESOURCE_CHECK_INTERVAL: 30
+

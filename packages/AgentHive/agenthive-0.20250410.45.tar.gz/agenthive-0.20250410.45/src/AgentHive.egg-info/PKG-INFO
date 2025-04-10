@@ -1,0 +1,261 @@
+Metadata-Version: 2.4
+Name: AgentHive
+Version: 0.20250410.45
+Summary: AgentHive is a flexible, Python-based service framework for managing distributed task execution.
+Home-page: https://github.com/changyy/py-AgentHive
+Author: changyy
+Author-email: changyy.csie@gmail.com
+Project-URL: Bug Tracker, https://github.com/changyy/py-AgentHive/issues
+Project-URL: Documentation, https://py-agenthiveflow.readthedocs.io
+Project-URL: Source Code, https://github.com/changyy/py-AgentHive
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: sqlalchemy>=2.0.38
+Requires-Dist: asyncpg>=0.30.0
+Requires-Dist: aiosqlite==0.21.0
+Requires-Dist: pytz==2025.1
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: redis>=5.2.1
+Requires-Dist: hiredis>=3.1.0
+Requires-Dist: aiohttp>=3.11.13
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: click>=8.1.8
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: psutil>=7.0.0
+Requires-Dist: uvicorn==0.34.0
+Requires-Dist: hypercorn==0.17.3
+Requires-Dist: supervisor==4.2.5
+Requires-Dist: beautifulsoup4==4.12.2
+Requires-Dist: requests==2.31.0
+Requires-Dist: supervisor==4.2.5
+Requires-Dist: uvicorn==0.34.0
+Requires-Dist: fastapi==0.115.11
+Requires-Dist: starlette==0.46.1
+Requires-Dist: websockets==15.0.1
+Requires-Dist: asyncpg==0.30.0
+Requires-Dist: jinja2==3.1.6
+Requires-Dist: python-multipart==0.0.20
+Requires-Dist: prometheus-client==0.21.1
+Requires-Dist: matplotlib==3.10.1
+Requires-Dist: pandas==2.2.3
+Provides-Extra: dev
+Requires-Dist: pydantic>=2.10.6; extra == "dev"
+Requires-Dist: sqlalchemy>=2.0.38; extra == "dev"
+Requires-Dist: asyncpg>=0.30.0; extra == "dev"
+Requires-Dist: aiosqlite==0.21.0; extra == "dev"
+Requires-Dist: pytz==2025.1; extra == "dev"
+Requires-Dist: python-dateutil==2.9.0.post0; extra == "dev"
+Requires-Dist: redis>=5.2.1; extra == "dev"
+Requires-Dist: hiredis>=3.1.0; extra == "dev"
+Requires-Dist: aiohttp>=3.11.13; extra == "dev"
+Requires-Dist: httpx>=0.28.1; extra == "dev"
+Requires-Dist: click>=8.1.8; extra == "dev"
+Requires-Dist: python-dotenv>=1.0.1; extra == "dev"
+Requires-Dist: pyyaml>=6.0.2; extra == "dev"
+Requires-Dist: psutil>=7.0.0; extra == "dev"
+Requires-Dist: uvicorn==0.34.0; extra == "dev"
+Requires-Dist: hypercorn==0.17.3; extra == "dev"
+Requires-Dist: supervisor==4.2.5; extra == "dev"
+Requires-Dist: beautifulsoup4==4.12.2; extra == "dev"
+Requires-Dist: requests==2.31.0; extra == "dev"
+Requires-Dist: supervisor==4.2.5; extra == "dev"
+Requires-Dist: uvicorn==0.34.0; extra == "dev"
+Requires-Dist: fastapi==0.115.11; extra == "dev"
+Requires-Dist: starlette==0.46.1; extra == "dev"
+Requires-Dist: websockets==15.0.1; extra == "dev"
+Requires-Dist: asyncpg==0.30.0; extra == "dev"
+Requires-Dist: jinja2==3.1.6; extra == "dev"
+Requires-Dist: python-multipart==0.0.20; extra == "dev"
+Requires-Dist: prometheus-client==0.21.1; extra == "dev"
+Requires-Dist: matplotlib==3.10.1; extra == "dev"
+Requires-Dist: pandas==2.2.3; extra == "dev"
+Requires-Dist: pytest==8.3.5; extra == "dev"
+Requires-Dist: pytest-asyncio==0.25.3; extra == "dev"
+Requires-Dist: pytest-cov==6.0.0; extra == "dev"
+Requires-Dist: pytest-mock==3.14.0; extra == "dev"
+Requires-Dist: pytest-xdist==3.6.1; extra == "dev"
+Requires-Dist: hypothesis==6.128.2; extra == "dev"
+Requires-Dist: requests==2.32.3; extra == "dev"
+Requires-Dist: respx==0.22.0; extra == "dev"
+Requires-Dist: alembic==1.15.1; extra == "dev"
+Requires-Dist: fakeredis==2.27.0; extra == "dev"
+Requires-Dist: black==25.1.0; extra == "dev"
+Requires-Dist: isort==6.0.1; extra == "dev"
+Requires-Dist: mypy==1.15.0; extra == "dev"
+Requires-Dist: flake8==7.1.2; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# AgentHive
+
+AgentHive is a Python-based framework for managing distributed task execution with a focus on scalability and ease of use. It coordinates **producers (tasks)** and **consumers (workers)** in a high-availability setup, using Redis for messaging and PostgreSQL for persistent storage. With a powerful CLI, Docker Compose integration, and a web-based monitor, AgentHive is ideal for developers building extensible task-processing systems.
+
+## Key Features
+
+- **Task Coordination**: Producers submit tasks; workers process them dynamically.
+- **High Availability**: Coordinators manage workers and tasks with failover support.
+- **Dynamic Workers**: Workers declare task-handling capabilities, loaded at runtime.
+- **Real-Time Monitoring**: Web interface displays worker and task statuses via coordinator APIs.
+- **Dockerized**: Pre-configured services for easy deployment with Docker Compose.
+- **CLI-Driven**: Initialize projects and manage workers with simple `agenthive` commands.
+
+## Installation
+
+Install AgentHive from PyPI to use the CLI:
+
+```bash
+pip install agenthive
+```
+
+## Quick Start
+
+1. **Initialize a Project**
+   Create a new project with the `agenthive init` command:
+
+   ```bash
+   agenthive init my-project
+   cd my-project
+   ```
+
+2. **Run the System**
+   Start all services (Redis, PostgreSQL, coordinators, workers, monitor) using Docker Compose:
+
+   ```bash
+   docker-compose -f docker/docker-compose.yml up --build
+   ```
+
+3. **Customize Workers**
+   Add custom workers to `src/workers/` and rebuild the services:
+
+   ```bash
+   # Example: Add a new worker manually or extend CLI in the future
+   echo "print('Custom worker loaded')" > src/workers/custom_worker.py
+   docker-compose -f docker/docker-compose.yml up --build
+   ```
+
+## Project Structure
+
+After initialization, your project looks like this:
+
+```
+my-project/
+├── docker/
+│   ├── coordinator/
+│   │   └── Dockerfile
+│   ├── monitor/
+│   │   └── Dockerfile
+│   ├── workers/
+│   │   └── Dockerfile
+│   ├── docker-compose.yml
+│   ├── postgres/
+│   │   └── init.sql
+│   └── redis/
+│       └── redis.conf
+└── src/
+    └── workers/
+        ├── example_worker.py
+        └── requirements/
+            └── example_worker.txt
+```
+
+- **`docker/`**: Contains Dockerfiles and Compose configuration.
+- **`src/workers/`**: Directory for custom worker implementations.
+
+## Architecture
+
+- **Coordinators**: Assign tasks via Redis, track states in PostgreSQL.
+- **Workers**: Fetch tasks from Redis, report heartbeats, execute custom logic.
+- **Redis**: Message broker for tasks and status updates.
+- **PostgreSQL**: Persistent storage for task and worker data.
+- **Monitor**: Web UI querying coordinator APIs for system insights.
+
+## Usage
+
+### For End Users
+- Initialize with `agenthive init <project-name>` and run with Docker Compose.
+- Dockerfiles use `pip install agenthive` by default, requiring a PyPI-published version.
+
+### For Developers
+- Use `--agenthive-project-path` to test local code:
+  ```bash
+  agenthive init my-project --agenthive-project-path /path/to/agenthive
+  cd my-project
+  docker-compose -f docker/docker-compose.yml up --build
+  ```
+- This copies `/path/to/agenthive/src/`, `setup.py`, and `requirements/` into the project, configuring Dockerfiles to use local code instead of PyPI.
+
+## Development Setup
+
+1. **Clone and Install Locally**
+   ```bash
+   git clone https://github.com/changyy/py-AgentHive.git
+   cd py-AgentHive
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install -e .
+   ```
+
+2. **Test CLI**
+   ```bash
+   agenthive init test-project --agenthive-project-path .
+   cd test-project
+   docker-compose -f docker/docker-compose.yml up --build
+   ```
+
+3. **Run Original Development Environment**
+   Use the local `docker/` for core development:
+   ```bash
+   docker-compose -f docker/docker-compose.yml up --build
+   ```
+
+## Worker Customization
+
+Workers are Python modules in `src/workers/`. The worker service scans this directory dynamically at runtime. Example worker:
+
+```python
+# src/workers/example_worker.py
+from agenthive.core.worker import Worker
+from typing import Dict, Any
+
+class ExampleWorker(Worker):
+    TASK_TYPES = ["example_task"]
+
+    async def setup(self) -> None:
+        print("ExampleWorker setting up...")
+
+    async def process_task(self, task) -> Dict[str, Any]:
+        print(f"Processing task: {task.data}")
+        return {"result": "Task completed", "data": task.data}
+```
+
+Add dependencies in `src/workers/requirements/<worker_name>.txt` (e.g., `requests==2.32.3`).
+
+## Contributing
+
+Fork the repo, create a feature branch, and submit a pull request to `github.com/changyy/py-AgentHive`.
+
+## License
+
+MIT License. See the `LICENSE` file for details.

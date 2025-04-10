@@ -1,0 +1,25 @@
+-r base_requirements.txt
+
+# Testing
+pytest==8.3.5
+pytest-asyncio==0.25.3
+pytest-cov==6.0.0
+pytest-mock==3.14.0
+pytest-xdist==3.6.1
+hypothesis==6.128.2
+
+# Web & API testing
+requests==2.32.3
+respx==0.22.0
+
+# Database testing
+alembic==1.15.1
+
+# Redis testing
+fakeredis==2.27.0
+
+# Formatter & linters
+black==25.1.0
+isort==6.0.1
+mypy==1.15.0
+flake8==7.1.2

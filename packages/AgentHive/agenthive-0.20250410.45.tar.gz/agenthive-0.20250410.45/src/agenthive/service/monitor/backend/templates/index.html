@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        .dashboard-container {
+            padding: 20px;
+        }
+        .status-card {
+            margin-bottom: 20px;
+        }
+        .worker-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .task-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .badge-success {
+            background-color: #28a745;
+        }
+        .badge-warning {
+            background-color: #ffc107;
+        }
+        .badge-danger {
+            background-color: #dc3545;
+        }
+        .resource-meter {
+            height: 20px;
+            border-radius: 3px;
+            margin-bottom: 5px;
+        }
+        .system-stats {
+            font-size: 0.9rem;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .status-idle {
+            background-color: #28a745;
+        }
+        .status-busy {
+            background-color: #ffc107;
+        }
+        .status-offline {
+            background-color: #dc3545;
+        }
+        .refresh-btn {
+            margin-left: 10px;
+        }
+        #create-task-form {
+            margin-top: 20px;
+        }
+        #task-json-input {
+            font-family: monospace;
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">AgentHive Monitor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#workers">Workers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tasks">Tasks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#create-task">Create Task</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid dashboard-container">
+        <div class="row mb-4">
+            <div class="col">
+                <h2>System Dashboard <button id="refresh-btn" class="btn btn-sm btn-outline-primary refresh-btn">Refresh</button></h2>
+                <p>Real-time monitoring of your AgentHive system</p>
+            </div>
+        </div>
+
+        <!-- System Status -->
+        <div class="row" id="dashboard">
+            <div class="col-md-4">
+                <div class="card status-card">
+                    <div class="card-header bg-primary text-white">
+                        System Status
+                    </div>
+                    <div class="card-body">
+                        <table class="table system-stats">
+                            <tbody>
+                                <tr>
+                                    <td>Status:</td>
+                                    <td><span id="coordinator-status" class="badge bg-success">Running</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Uptime:</td>
+                                    <td id="system-uptime">--</td>
+                                </tr>
+                                <tr>
+                                    <td>Active Workers:</td>
+                                    <td id="active-workers-count">--</td>
+                                </tr>
+                                <tr>
+                                    <td>Pending Tasks:</td>
+                                    <td id="pending-tasks-count">--</td>
+                                </tr>
+                                <tr>
+                                    <td>Task Throughput:</td>
+                                    <td id="task-throughput">--</td>
+                                </tr>
+                                <tr>
+                                    <td>Last Update:</td>
+                                    <td id="last-update-time">--</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card status-card">
+                    <div class="card-header bg-primary text-white">
+                        Task Stats
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label class="form-label">Pending Tasks</label>
+                            <div class="progress resource-meter">
+                                <div id="pending-tasks-meter" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Assigned Tasks</label>
+                            <div class="progress resource-meter">
+                                <div id="assigned-tasks-meter" class="progress-bar bg-warning" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Completed Tasks</label>
+                            <div class="progress resource-meter">
+                                <div id="completed-tasks-meter" class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Failed Tasks</label>
+                            <div class="progress resource-meter">
+                                <div id="failed-tasks-meter" class="progress-bar bg-danger" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card status-card">
+                    <div class="card-header bg-primary text-white">
+                        Resource Usage
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label class="form-label">CPU Usage</label>
+                            <div class="progress resource-meter">
+                                <div id="cpu-meter" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Memory Usage</label>
+                            <div class="progress resource-meter">
+                                <div id="memory-meter" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Disk Usage</label>
+                            <div class="progress resource-meter">
+                                <div id="disk-meter" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Workers -->
+        <div class="row mt-4" id="workers">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        Active Workers
+                    </div>
+                    <div class="card-body worker-list">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Worker ID</th>
+                                    <th>Status</th>
+                                    <th>Tasks Processed</th>
+                                    <th>Current Task</th>
+                                    <th>Last Heartbeat</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="workers-table-body">
+                                <!-- Worker rows will be inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tasks -->
+        <div class="row mt-4" id="tasks">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        Recent Tasks
+                    </div>
+                    <div class="card-body task-list">
+                        <div class="mb-3">
+                            <label class="form-label">Filter by Status:</label>
+                            <select id="task-status-filter" class="form-select">
+                                <option value="">All</option>
+                                <option value="pending">Pending</option>
+                                <option value="assigned">Assigned</option>
+                                <option value="completed">Completed</option>
+                                <option value="failed">Failed</option>
+                            </select>
+                        </div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Task ID</th>
+                                    <th>Type</th>
+                                    <th>Status</th>
+                                    <th>Created</th>
+                                    <th>Assigned To</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tasks-table-body">
+                                <!-- Task rows will be inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Create Task -->
+        <div class="row mt-4" id="create-task">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        Create New Task
+                    </div>
+                    <div class="card-body">
+                        <ul class="nav nav-tabs" id="taskTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="time-report-tab" data-bs-toggle="tab" data-bs-target="#time-report-pane" type="button" role="tab" aria-controls="time-report-pane" aria-selected="true">Time Report</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="custom-task-tab" data-bs-toggle="tab" data-bs-target="#custom-task-pane" type="button" role="tab" aria-controls="custom-task-pane" aria-selected="false">Custom Task</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="taskTabsContent">
+                            <!-- Time Report Task Form -->
+                            <div class="tab-pane fade show active" id="time-report-pane" role="tabpanel" aria-labelledby="time-report-tab">
+                                <form id="time-report-form" class="mt-3">
+                                    <div class="mb-3">
+                                        <label for="time-format" class="form-label">Time Format</label>
+                                        <select id="time-format" class="form-select">
+                                            <option value="iso">ISO Format</option>
+                                            <option value="unix">Unix Timestamp</option>
+                                            <option value="human">Human Readable</option>
+                                            <option value="all">All Formats</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="include-date" checked>
+                                            <label class="form-check-label" for="include-date">
+                                                Include Date
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="include-time" checked>
+                                            <label class="form-check-label" for="include-time">
+                                                Include Time
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="time-report-priority" class="form-label">Priority</label>
+                                        <input type="number" class="form-control" id="time-report-priority" value="0" min="0" max="100">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Create Time Report Task</button>
+                                </form>
+                            </div>
+                            
+                            <!-- Custom Task Form -->
+                            <div class="tab-pane fade" id="custom-task-pane" role="tabpanel" aria-labelledby="custom-task-tab">
+                                <form id="custom-task-form" class="mt-3">
+                                    <div class="mb-3">
+                                        <label for="task-type" class="form-label">Task Type</label>
+                                        <select id="task-type" class="form-select">
+                                            <option value="echo">Echo</option>
+                                            <option value="transform">Transform</option>
+                                            <option value="time_report">Time Report</option>
+                                            <!-- Other task types will be loaded dynamically -->
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="task-priority" class="form-label">Priority</label>
+                                        <input type="number" class="form-control" id="task-priority" value="0" min="0" max="100">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="task-json-input" class="form-label">Task Data (JSON)</label>
+                                        <textarea class="form-control" id="task-json-input" rows="8">{
+    "key1": "value1",
+    "key2": "value2"
+}</textarea>
+                                        <div class="invalid-feedback" id="json-validation-feedback">
+                                            Invalid JSON format
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Create Custom Task</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Task Detail Modal -->
+    <div class="modal fade" id="taskDetailModal" tabindex="-1" aria-labelledby="taskDetailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="taskDetailModalLabel">Task Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <dl class="row">
+                        <dt class="col-sm-3">Task ID:</dt>
+                        <dd class="col-sm-9" id="modal-task-id"></dd>
+                        
+                        <dt class="col-sm-3">Type:</dt>
+                        <dd class="col-sm-9" id="modal-task-type"></dd>
+                        
+                        <dt class="col-sm-3">Status:</dt>
+                        <dd class="col-sm-9" id="modal-task-status"></dd>
+                        
+                        <dt class="col-sm-3">Created:</dt>
+                        <dd class="col-sm-9" id="modal-task-created"></dd>
+                        
+                        <dt class="col-sm-3">Assigned To:</dt>
+                        <dd class="col-sm-9" id="modal-task-assigned"></dd>
+                        
+                        <dt class="col-sm-3">Priority:</dt>
+                        <dd class="col-sm-9" id="modal-task-priority"></dd>
+                    </dl>
+                    
+                    <div id="task-result-section" class="mt-3">
+                        <h6>Task Result:</h6>
+                        <pre id="modal-task-result" class="bg-light p-3 rounded"></pre>
+                    </div>
+                    
+                    <div id="task-error-section" class="mt-3">
+                        <h6>Task Error:</h6>
+                        <pre id="modal-task-error" class="bg-light p-3 rounded text-danger"></pre>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Worker Detail Modal -->
+    <div class="modal fade" id="workerDetailModal" tabindex="-1" aria-labelledby="workerDetailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="workerDetailModalLabel">Worker Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <dl class="row">
+                        <dt class="col-sm-3">Worker ID:</dt>
+                        <dd class="col-sm-9" id="modal-worker-id"></dd>
+                        
+                        <dt class="col-sm-3">Status:</dt>
+                        <dd class="col-sm-9" id="modal-worker-status"></dd>
+                        
+                        <dt class="col-sm-3">Hostname:</dt>
+                        <dd class="col-sm-9" id="modal-worker-hostname"></dd>
+                        
+                        <dt class="col-sm-3">Tasks Processed:</dt>
+                        <dd class="col-sm-9" id="modal-worker-tasks"></dd>
+                        
+                        <dt class="col-sm-3">Last Heartbeat:</dt>
+                        <dd class="col-sm-9" id="modal-worker-heartbeat"></dd>
+                    </dl>
+                    
+                    <div class="mt-3">
+                        <h6>Capabilities:</h6>
+                        <div id="modal-worker-capabilities"></div>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <h6>Resource Usage:</h6>
+                        <div class="mb-3">
+                            <label class="form-label">CPU Usage</label>
+                            <div class="progress resource-meter">
+                                <div id="modal-worker-cpu" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Memory Usage</label>
+                            <div class="progress resource-meter">
+                                <div id="modal-worker-memory" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Constants
+    const API_BASE_URL = window.location.origin;
+    const REFRESH_INTERVAL = 5000; // ms
+    
+    // References to DOM elements
+    const refreshBtn = document.getElementById('refresh-btn');
+    const workersTableBody = document.getElementById('workers-table-body');
+    const tasksTableBody = document.getElementById('tasks-table-body');
+    const taskStatusFilter = document.getElementById('task-status-filter');
+    const timeReportForm = document.getElementById('time-report-form');
+    const customTaskForm = document.getElementById('custom-task-form');
+    const taskJsonInput = document.getElementById('task-json-input');
+    const jsonValidationFeedback = document.getElementById('json-validation-feedback');
+    
+    // Load initial data
+    async function loadInitialData() {
+        await Promise.all([
+            updateDashboard(),
+            //updateWorkers(),
+            updateTasks()
+        ]);
+    }
+    
+    // Update dashboard with consolidated API call
+    async function updateDashboard() {
+        try {
+            const response = await fetch(`${API_BASE_URL}/api/dashboard`);
+            const data = await response.json();
+            
+            // Update system status
+            document.getElementById('coordinator-status').textContent = data.system.status || 'Unknown';
+            document.getElementById('system-uptime').textContent = data.system.uptime || '--';
+            document.getElementById('active-workers-count').textContent = data.workers.active || 0;
+            document.getElementById('pending-tasks-count').textContent = data.tasks.pending || 0;
+            document.getElementById('task-throughput').textContent = `${data.tasks.throughput || 0} tasks/min`;
+            
+            const lastUpdate = new Date().toLocaleTimeString();
+            document.getElementById('last-update-time').textContent = lastUpdate;
+            
+            // Update task types dropdown if available
+            if (data.system.supported_task_types) {
+                const taskTypeSelect = document.getElementById('task-type');
+                taskTypeSelect.innerHTML = '';
+                
+                data.system.supported_task_types.forEach(type => {
+                    const option = document.createElement('option');
+                    option.value = type;
+                    option.textContent = type;
+                    taskTypeSelect.appendChild(option);
+                });
+            }
+            
+            // Update task meters
+            const totalTasks = data.tasks.total || 0;
+            
+            const pendingPercent = totalTasks ? (data.tasks.pending || 0) / totalTasks * 100 : 0;
+            const assignedPercent = totalTasks ? (data.tasks.assigned || 0) / totalTasks * 100 : 0;
+            const completedPercent = totalTasks ? (data.tasks.completed || 0) / totalTasks * 100 : 0;
+            const failedPercent = totalTasks ? (data.tasks.failed || 0) / totalTasks * 100 : 0;
+            
+            document.getElementById('pending-tasks-meter').style.width = `${pendingPercent}%`;
+            document.getElementById('assigned-tasks-meter').style.width = `${assignedPercent}%`;
+            document.getElementById('completed-tasks-meter').style.width = `${completedPercent}%`;
+            document.getElementById('failed-tasks-meter').style.width = `${failedPercent}%`;
+            
+            // Update resource meters
+            const cpuUsage = data.resources.cpu || 0;
+            const memoryUsage = data.resources.memory || 0;
+            const diskUsage = data.resources.disk || 0;
+            
+            document.getElementById('cpu-meter').style.width = `${cpuUsage}%`;
+            document.getElementById('memory-meter').style.width = `${memoryUsage}%`;
+            document.getElementById('disk-meter').style.width = `${diskUsage}%`;
+            
+            // Set color based on usage
+            const cpuMeter = document.getElementById('cpu-meter');
+            const memoryMeter = document.getElementById('memory-meter');
+            const diskMeter = document.getElementById('disk-meter');
+            
+            cpuMeter.className = `progress-bar ${cpuUsage > 80 ? 'bg-danger' : cpuUsage > 60 ? 'bg-warning' : 'bg-success'}`;
+            memoryMeter.className = `progress-bar ${memoryUsage > 80 ? 'bg-danger' : memoryUsage > 60 ? 'bg-warning' : 'bg-success'}`;
+            diskMeter.className = `progress-bar ${diskUsage > 80 ? 'bg-danger' : diskUsage > 60 ? 'bg-warning' : 'bg-success'}`;
+            
+            cpuMeter.textContent = `${Math.round(cpuUsage)}%`;
+            memoryMeter.textContent = `${Math.round(memoryUsage)}%`;
+            diskMeter.textContent = `${Math.round(diskUsage)}%`;
+            
+            // updateWorkers
+            workersTableBody.innerHTML = '';
+            data.workers?.details?.forEach(worker => {
+                const row = document.createElement('tr');
+                
+                const workerId = worker.worker_id;
+                const status = worker.status || 'unknown';
+                const tasksProcessed = worker.stats?.tasks_processed || 0;
+                const currentTask = worker.current_task || '-';
+                
+                // Calculate time since last heartbeat
+                const lastHeartbeat = worker.last_heartbeat ? new Date(typeof worker.last_heartbeat === 'number' && !Number.isInteger(worker.last_heartbeat) ?  worker.last_heartbeat * 1000 : worker.last_heartbeat ) : null;
+                //console.log('lastHeartbeat:', lastHeartbeat);
+                const heartbeatAgo = lastHeartbeat ? timeSince(lastHeartbeat) : 'Unknown';
+                
+                // Create status indicator
+                const statusClass = status === 'idle' ? 'status-idle' : 
+                                  status === 'busy' ? 'status-busy' : 'status-offline';
+                
+                row.innerHTML = `
+                    <td>${workerId}</td>
+                    <td><span class="status-indicator ${statusClass}"></span>${status}</td>
+                    <td>${tasksProcessed}</td>
+                    <td>${currentTask}</td>
+                    <td>${heartbeatAgo}</td>
+                    <td>
+                        <button class="btn btn-sm btn-info worker-details-btn" data-worker-id="${workerId}">Details</button>
+                    </td>
+                `;
+                
+                workersTableBody.appendChild(row);
+            });
+
+        } catch (error) {
+            console.error('Error updating dashboard:', error);
+        }
+    }
+    
+    /*
+    // Update workers table with summary API
+    async function updateWorkers() {
+        try {
+            const response = await fetch(`${API_BASE_URL}/api/workers/summary`);
+            const data = await response.json();
+            
+            workersTableBody.innerHTML = '';
+            
+            data.workers.forEach(worker => {
+                const row = document.createElement('tr');
+                
+                const workerId = worker.worker_id;
+                const status = worker.status || 'unknown';
+                const tasksProcessed = worker.tasks_processed || 0;
+                const currentTask = worker.current_task || '-';
+                
+                // Calculate time since last heartbeat
+                const lastHeartbeat = worker.last_heartbeat ? new Date(worker.last_heartbeat) : null;
+                const heartbeatAgo = lastHeartbeat ? timeSince(lastHeartbeat) : 'Unknown';
+                
+                // Create status indicator
+                const statusClass = status === 'idle' ? 'status-idle' : 
+                                  status === 'busy' ? 'status-busy' : 'status-offline';
+                
+                row.innerHTML = `
+                    <td>${workerId}</td>
+                    <td><span class="status-indicator ${statusClass}"></span>${status}</td>
+                    <td>${tasksProcessed}</td>
+                    <td>${currentTask}</td>
+                    <td>${heartbeatAgo}</td>
+                    <td>
+                        <button class="btn btn-sm btn-info worker-details-btn" data-worker-id="${workerId}">Details</button>
+                    </td>
+                `;
+                
+                workersTableBody.appendChild(row);
+            });
+            
+            // Add event listeners to detail buttons
+            document.querySelectorAll('.worker-details-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const workerId = e.target.getAttribute('data-worker-id');
+                    showWorkerDetails(workerId);
+                });
+            });
+            
+        } catch (error) {
+            console.error('Error updating workers:', error);
+        }
+    }
+    // */
+    
+    // Update tasks table with summary API
+    async function updateTasks() {
+        try {
+            const statusFilter = taskStatusFilter.value;
+            const url = statusFilter ? 
+                `${API_BASE_URL}/api/tasks/summary?status=${statusFilter}` : 
+                `${API_BASE_URL}/api/tasks/summary`;
+            
+            const response = await fetch(url);
+            const data = await response.json();
+            
+            tasksTableBody.innerHTML = '';
+            
+            data.tasks.forEach(task => {
+                const row = document.createElement('tr');
+                
+                const taskId = task.task_id;
+                const taskType = task.task_type || 'unknown';
+                const status = task.status || 'unknown';
+                
+                // Format created time
+                const createdAt = task.created_at ? new Date(task.created_at).toLocaleString() : 'Unknown';
+                
+                // Get assigned worker
+                const assignedTo = task.assigned_to || '-';
+                
+                // Set row color based on status
+                if (status === 'completed') {
+                    row.classList.add('table-success');
+                } else if (status === 'failed') {
+                    row.classList.add('table-danger');
+                } else if (status === 'assigned') {
+                    row.classList.add('table-warning');
+                }
+                
+                row.innerHTML = `
+                    <td>${taskId}</td>
+                    <td>${taskType}</td>
+                    <td>${status}</td>
+                    <td>${createdAt}</td>
+                    <td>${assignedTo}</td>
+                    <td>
+                        <button class="btn btn-sm btn-info task-details-btn" data-task-id="${taskId}">Details</button>
+                    </td>
+                `;
+                
+                tasksTableBody.appendChild(row);
+            });
+            
+            // Add event listeners to detail buttons
+            document.querySelectorAll('.task-details-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const taskId = e.target.getAttribute('data-task-id');
+                    showTaskDetails(taskId);
+                });
+            });
+            
+        } catch (error) {
+            console.error('Error updating tasks:', error);
+        }
+    }
+    
+    // Show task details in modal (original implementation)
+    async function showTaskDetails(taskId) {
+        try {
+            const response = await fetch(`${API_BASE_URL}/api/tasks/${taskId}`);
+            const task = await response.json();
+            
+            // Update modal fields
+            document.getElementById('modal-task-id').textContent = task.task_id;
+            document.getElementById('modal-task-type').textContent = task.task_type || 'Unknown';
+            document.getElementById('modal-task-status').textContent = task.status || 'Unknown';
+            document.getElementById('modal-task-created').textContent = task.created_at ? 
+                new Date(task.created_at).toLocaleString() : 'Unknown';
+            document.getElementById('modal-task-assigned').textContent = task.assigned_to || 'Not assigned';
+            document.getElementById('modal-task-priority').textContent = task.priority || '0';
+            
+            // Show result if completed
+            const resultSection = document.getElementById('task-result-section');
+            const resultPre = document.getElementById('modal-task-result');
+            
+            if (task.status === 'completed' && task.result) {
+                resultSection.style.display = 'block';
+                resultPre.textContent = JSON.stringify(task.result, null, 2);
+            } else {
+                resultSection.style.display = 'none';
+            }
+            
+            // Show error if failed
+            const errorSection = document.getElementById('task-error-section');
+            const errorPre = document.getElementById('modal-task-error');
+            
+            if (task.status === 'failed' && task.error) {
+                errorSection.style.display = 'block';
+                errorPre.textContent = task.error;
+            } else {
+                errorSection.style.display = 'none';
+            }
+            
+            // Show modal
+            const taskDetailModal = new bootstrap.Modal(document.getElementById('taskDetailModal'));
+            taskDetailModal.show();
+            
+        } catch (error) {
+            console.error('Error loading task details:', error);
+        }
+    }
+    
+    // Show worker details in modal (original implementation)
+    async function showWorkerDetails(workerId) {
+        try {
+            const response = await fetch(`${API_BASE_URL}/api/workers/${workerId}`);
+            const worker = await response.json();
+            
+            // Update modal fields
+            document.getElementById('modal-worker-id').textContent = worker.worker_id;
+            document.getElementById('modal-worker-status').textContent = worker.status || 'Unknown';
+            document.getElementById('modal-worker-hostname').textContent = worker.stats?.hostname || 'Unknown';
+            document.getElementById('modal-worker-tasks').textContent = worker.stats?.tasks_processed || '0';
+            
+            const lastHeartbeat = worker.last_seen ? 
+                new Date(worker.last_seen).toLocaleString() : 'Unknown';
+            document.getElementById('modal-worker-heartbeat').textContent = lastHeartbeat;
+            
+            // Show capabilities
+            const capabilitiesDiv = document.getElementById('modal-worker-capabilities');
+            capabilitiesDiv.innerHTML = '';
+            
+            const capabilities = worker.capabilities || [];
+            if (capabilities.length > 0) {
+                capabilities.forEach(cap => {
+                    const badge = document.createElement('span');
+                    badge.className = 'badge bg-secondary me-1';
+                    badge.textContent = cap;
+                    capabilitiesDiv.appendChild(badge);
+                });
+            } else {
+                capabilitiesDiv.textContent = 'No capabilities reported';
+            }
+            
+            // Show resource usage
+            const cpuUsage = worker.stats?.resource_usage?.cpu_percent || 0;
+            const memoryUsage = worker.stats?.resource_usage?.memory_percent || 0;
+            
+            const cpuBar = document.getElementById('modal-worker-cpu');
+            const memoryBar = document.getElementById('modal-worker-memory');
+            
+            cpuBar.style.width = `${cpuUsage}%`;
+            memoryBar.style.width = `${memoryUsage}%`;
+            
+            cpuBar.textContent = `${Math.round(cpuUsage)}%`;
+            memoryBar.textContent = `${Math.round(memoryUsage)}%`;
+            
+            cpuBar.className = `progress-bar ${cpuUsage > 80 ? 'bg-danger' : cpuUsage > 60 ? 'bg-warning' : 'bg-success'}`;
+            memoryBar.className = `progress-bar ${memoryUsage > 80 ? 'bg-danger' : memoryUsage > 60 ? 'bg-warning' : 'bg-success'}`;
+            
+            // Show modal
+            const workerDetailModal = new bootstrap.Modal(document.getElementById('workerDetailModal'));
+            workerDetailModal.show();
+            
+        } catch (error) {
+            console.error('Error loading worker details:', error);
+        }
+    }
+    
+    // Handle time report form submission with simplified API
+    timeReportForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const format = document.getElementById('time-format').value;
+        const includeDate = document.getElementById('include-date').checked;
+        const includeTime = document.getElementById('include-time').checked;
+        const priority = parseInt(document.getElementById('time-report-priority').value) || 0;
+        
+        const taskData = {
+            format: format,
+            include_date: includeDate,
+            include_time: includeTime
+        };
+        
+        try {
+            const response = await fetch(`${API_BASE_URL}/api/tasks/quick-create`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    task_type: 'time_report',
+                    priority: priority,
+                    data: taskData
+                })
+            });
+            
+            if (response.ok) {
+                const result = await response.json();
+                alert(`Time report task created successfully! Task ID: ${result.task_id}`);
+                
+                // Update tasks list
+                await updateTasks();
+            } else {
+                const error = await response.json();
+                alert(`Error creating task: ${error.detail || 'Unknown error'}`);
+            }
+        } catch (error) {
+            console.error('Error creating time report task:', error);
+            alert('Error creating task. See console for details.');
+        }
+    });
+    
+    // Handle custom task form submission with simplified API
+    customTaskForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const taskType = document.getElementById('task-type').value;
+        const priority = parseInt(document.getElementById('task-priority').value) || 0;
+        
+        // Validate JSON input
+        let taskData;
+        try {
+            taskData = JSON.parse(taskJsonInput.value);
+            taskJsonInput.classList.remove('is-invalid');
+        } catch (error) {
+            taskJsonInput.classList.add('is-invalid');
+            jsonValidationFeedback.textContent = 'Invalid JSON: ' + error.message;
+            return;
+        }
+        
+        try {
+            const response = await fetch(`${API_BASE_URL}/api/tasks/quick-create`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    task_type: taskType,
+                    priority: priority,
+                    data: taskData
+                })
+            });
+            
+            if (response.ok) {
+                const result = await response.json();
+                alert(`Task created successfully! Task ID: ${result.task_id}`);
+                
+                // Update tasks list
+                await updateTasks();
+            } else {
+                const error = await response.json();
+                alert(`Error creating task: ${error.detail || 'Unknown error'}`);
+            }
+        } catch (error) {
+            console.error('Error creating custom task:', error);
+            alert('Error creating task. See console for details.');
+        }
+    });
+    
+    // Handle task status filter change
+    taskStatusFilter.addEventListener('change', updateTasks);
+    
+    // Handle manual refresh
+    refreshBtn.addEventListener('click', async () => {
+        await Promise.all([
+            updateDashboard(),
+            //updateWorkers(),
+            updateTasks()
+        ]);
+    });
+    
+    // Validate JSON as user types
+    taskJsonInput.addEventListener('input', () => {
+        try {
+            JSON.parse(taskJsonInput.value);
+            taskJsonInput.classList.remove('is-invalid');
+        } catch (error) {
+            taskJsonInput.classList.add('is-invalid');
+            jsonValidationFeedback.textContent = 'Invalid JSON: ' + error.message;
+        }
+    });
+    
+    // Helper function to format relative time
+    function timeSince(date) {
+        const seconds = Math.floor((new Date() - date) / 1000);
+      
+        let interval = seconds / 31536000;
+        if (interval > 1) return Math.floor(interval) + " years ago";
+        
+        interval = seconds / 2592000;
+        if (interval > 1) return Math.floor(interval) + " months ago";
+        
+        interval = seconds / 86400;
+        if (interval > 1) return Math.floor(interval) + " days ago";
+        
+        interval = seconds / 3600;
+        if (interval > 1) return Math.floor(interval) + " hours ago";
+        
+        interval = seconds / 60;
+        if (interval > 1) return Math.floor(interval) + " minutes ago";
+        
+        return Math.floor(seconds) + " seconds ago";
+    }
+    
+    // Load initial data
+    loadInitialData();
+    
+    // Set up auto-refresh
+    setInterval(() => {
+        updateDashboard();
+        //updateWorkers();
+        updateTasks();
+    }, REFRESH_INTERVAL);
+});
+    </script>
+</body>
+</html>
