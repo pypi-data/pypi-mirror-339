@@ -1,0 +1,93 @@
+Metadata-Version: 2.4
+Name: mcp-coze-server
+Version: 0.1.10
+Summary: A MCP server implementation for Coze API
+Author-email: flink <w741069229@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/shizeying/coze-mcp-server
+Project-URL: Bug Tracker, https://github.com/shizeying/coze-mcp-server/issues
+Project-URL: Documentation, https://github.com/shizeying/coze-mcp-server#readme
+Project-URL: Source Code, https://github.com/shizeying/coze-mcp-server
+Keywords: mcp,coze,api,server
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.6.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: cozepy-flink
+Dynamic: license-file
+Dynamic: requires-python
+
+# MCP Coze Server
+
+A MCP server implementation for Coze API
+
+## Installation
+
+1. Install the package from PyPI:
+```bash
+pip install mcp-coze-server
+```
+
+2. Install additional dependencies:
+```bash
+pip install cozepy @ git+https://github.com/shizeying/coze-py.git@v0.13.1.post1
+```
+
+Or install from source:
+```bash
+git clone https://github.com/shizeying/coze-mcp-server.git
+cd coze-mcp-server
+pip install -r requirements.txt
+pip install -e .
+```
+
+## Usage
+
+1. 设置环境变量：
+
+```bash
+export COZE_API_TOKEN="your_api_token"
+export COZE_API_BASE="https://api.coze.cn"  # 或其他API地址
+```
+
+2. 运行服务器：
+
+```bash
+python -m mcp_coze_server
+```
+
+## Configuration
+
+Support the following configuration methods:
+
+1. Environment variables:
+   - COZE_API_TOKEN
+   - COZE_API_BASE
+
+2. Command line arguments:
+   - --coze-api-token
+   - --coze-api-base
+
+## Development
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/shizeying/coze-mcp-server.git
+```
+
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+pip install -e .
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 
