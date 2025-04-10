@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pdm-audit
+Version: 0.6.0
+Summary: A plug-in running a security audit when installing packages
+Author-Email: Carsten Igel <cig@bite-that-bit.de>
+License: MIT
+Project-URL: homepage, https://github.com/carstencodes/pdm-audit
+Requires-Python: >=3.9
+Requires-Dist: pdm>=2.23.1
+Requires-Dist: pip-audit>=2.9.0
+Requires-Dist: pdm-pfsc>=0.12.3
+Requires-Dist: pip>=25.0.1
+Description-Content-Type: text/markdown
+
+# pdm-audit
