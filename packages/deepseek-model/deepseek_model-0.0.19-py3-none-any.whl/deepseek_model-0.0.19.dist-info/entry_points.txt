@@ -1,0 +1,4 @@
+[console_scripts]
+deepseek = deepseek.main:main
+hcat = hcat.main:main
+htmltotext = htmltotext.main:main
