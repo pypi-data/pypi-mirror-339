@@ -1,0 +1,3 @@
+[console_scripts]
+py-avdu = py_avdu.main:main
+py_avdu = py_avdu.main:main
