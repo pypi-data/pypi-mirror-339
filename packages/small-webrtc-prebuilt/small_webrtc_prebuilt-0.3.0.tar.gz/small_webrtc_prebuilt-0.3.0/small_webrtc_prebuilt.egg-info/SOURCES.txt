@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+small_webrtc_prebuilt/__init__.py
+small_webrtc_prebuilt/frontend.py
+small_webrtc_prebuilt.egg-info/PKG-INFO
+small_webrtc_prebuilt.egg-info/SOURCES.txt
+small_webrtc_prebuilt.egg-info/dependency_links.txt
+small_webrtc_prebuilt.egg-info/requires.txt
+small_webrtc_prebuilt.egg-info/top_level.txt
+small_webrtc_prebuilt/client/dist/favicon.svg
+small_webrtc_prebuilt/client/dist/index.html
+small_webrtc_prebuilt/client/dist/pipecat-logo.svg
+small_webrtc_prebuilt/client/dist/assets/index-C3yYOOG3.css
+small_webrtc_prebuilt/client/dist/assets/index-D1movkZc.js
