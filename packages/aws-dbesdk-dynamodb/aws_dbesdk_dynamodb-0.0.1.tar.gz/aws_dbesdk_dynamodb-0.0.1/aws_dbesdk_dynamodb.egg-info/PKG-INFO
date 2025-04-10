@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: aws-dbesdk-dynamodb
+Version: 0.0.1
+Summary: Upcoming Python package.
+Author: Amazon Web Services
+Author-email: aws-crypto-tools@amazon.com
+Maintainer: Amazon Web Services
+Classifier: Development Status :: 1 - Planning
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: maintainer
+Dynamic: summary
+
+This package is under development. Expected release in the future.

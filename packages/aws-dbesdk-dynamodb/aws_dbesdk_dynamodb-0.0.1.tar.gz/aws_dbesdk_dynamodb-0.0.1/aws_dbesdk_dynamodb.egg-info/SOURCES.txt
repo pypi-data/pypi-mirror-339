@@ -1,0 +1,6 @@
+setup.py
+aws_dbesdk_dynamodb/__init__.py
+aws_dbesdk_dynamodb.egg-info/PKG-INFO
+aws_dbesdk_dynamodb.egg-info/SOURCES.txt
+aws_dbesdk_dynamodb.egg-info/dependency_links.txt
+aws_dbesdk_dynamodb.egg-info/top_level.txt
