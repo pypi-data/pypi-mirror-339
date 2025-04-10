@@ -1,0 +1,30 @@
+name: Lint&Test
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --all-extras --dev
+
+      - name: Install NLTK data
+        run: uv run python -m nltk.downloader --exit-on-error punkt_tab averaged_perceptron_tagger_eng
+
+      - name: Test with pyfltr
+        run: uv run pyfltr
+
+      - name: Prune uv cache for CI
+        run: uv cache prune --ci

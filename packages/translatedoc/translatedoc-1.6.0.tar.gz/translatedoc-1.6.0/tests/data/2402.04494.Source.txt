@@ -1,0 +1,727 @@
+4 2 0 2
+
+b e F 7 ] G L . s c [
+
+1 v 4 9 4 4 0 . 2 0 4 2 : v i X r a
+
+Grandmaster-Level Chess Without Search Anian Ruoss*,1, Grégoire Delétang*,1, Sourabh Medapati1, Jordi Grau-Moya1, Li Kevin Wenliang1, Elliot Catt1, John Reid1 and Tim Genewein1 *Equal contributions, 1Google DeepMind
+
+The recent breakthrough successes in machine learning are mainly attributed to scale: namely large- scale attention-based architectures and datasets of unprecedented scale. This paper investigates the impact of training at scale for chess. Unlike traditional chess engines that rely on complex heuristics, explicit search, or a combination of both, we train a 270M parameter transformer model with supervised learning on a dataset of 10 million chess games. We annotate each board in the dataset with
+
+action-values provided by the powerful Stockfish 16 engine, leading to roughly 15 billion data points. Our largest model reaches a Lichess blitz Elo of 2895 against humans, and successfully solves a series of challenging chess puzzles, without any domain-specific tweaks or explicit search algorithms. We also show that our model outperforms AlphaZero’s policy and value networks (without MCTS) and GPT-3.5-turbo-instruct. A systematic investigation of model and dataset size shows that strong chess
+
+performance only arises at sufficient scale. To validate our results, we perform an extensive series of ablations of design choices and hyperparameters.
+
+1. Introduction
+
+One of the most iconic successes of AI is IBM’s Deep Blue (Campbell et al., 2002) defeating the world chess champion Garry Kasparov in 1997. This was widely seen as the first major demonstration that machines are capable of out-competing humans in intellectual domains that require sophisticated rational reason- ing and strategic planning—feats of intelligence that were long believed to be exclusive to humans. Deep Blue was an expert system that combined an exten- sive database of chess knowledge
+
+and heuristics with a strong tree search algorithm (alpha-beta pruning). Almost all modern and much stronger chess engines follow a similar recipe, with Stockfish 16 currently be- ing the world’s strongest (publicly available) engine. Notable exceptions are DeepMind’s AlphaZero (Sil- ver et al., 2017), which uses search and self-taught heuristics but no human chess knowledge, and its open-source replication Leela Chess Zero, which cur- rently often comes in as a close second in chess com- puter
+
+competitions (Haworth and Hernandez, 2021).
+
+Recent breakthroughs in scaling up AI systems have resulted in dramatic progress in cognitive domains that remained challenging for earlier-generation sys- tems like Deep Blue. This progress has been driven by general-purpose techniques, in particular (self-) su- pervised training on expert data with attention-based architectures (Vaswani et al., 2017) applied at scale, resulting in the development of LLMs with impres- sive and unexpected cognitive abilities like OpenAI’s GPT series (Brown et al
+
+., 2020; OpenAI, 2023), the
+
+LLaMA family of models (Touvron et al., 2023a,b), or Google DeepMind’s Chinchilla (Hoffmann et al., 2022) and Gemini (Anil et al., 2023). However, it is unclear whether the same technique would work in a domain like chess, where successful policies typically rely on sophisticated algorithmic reasoning (search, dynamic programming) and complex heuristics. Thus, the main question of this paper is: Is it possible to use supervised learning to obtain a chess policy that gener- alizes well and thus l
+
+eads to strong play without explicit search?
+
+To study this question we apply the success recipe of general supervised training at scale to chess (see Figure 1). We use a standard attention-based archi- tecture and a standard supervised training protocol to learn to predict action-values (corresponding to win- percentages) for chess boards. The strength of the resulting chess policy thus depends entirely on the strength of the underlying action-value predictor. To get a large corpus of “ground-truth” action-values we use Stockfish 16 as an
+
+oracle to annotate millions of board states obtained from randomly drawn games on lichess.org, which are mostly played by humans vary- ing significantly in playing strength. As we will show this leads to a strong, grandmaster-level chess policy (Lichess blitz Elo 2895 against humans), driven by a modern transformer to predict action-values without any explicit search. This policy outperforms GPT-3.5- turbo-instruct (and, therefore, GPT-4 (Carlini, 2023)) and AlphaZero’s policy and value networks
+
+, which reach Elo ratings of 1755, 1620, and 1853, respec- tively. Therefore, our work shows that it is possible
+
+Corresponding author(s): {anianr,gdelt}@google.com © 2024 Google DeepMind. All rights reserved
+
+Grandmaster-Level Chess Without Search
+
+Board annotation via strong oracle (Stockfish 16) Draw N games, Compute SF oracle Action-value Best Action Board State State-value Action extract all unique _.& action-values [FEN] [Win%] [uci] J Galectionor | es s Yr) a Osa) a) games _| > cc <FENIS oI (PN notation for all Qdif3 legal actions 1 <FEN M> 31 Datasets Predictors Training sets a Test set 7% overlap with training set nostly early-game boards) State-value Action-value Behavioral cloning Loss: —log PSY(VS*(s)|s) Loss: Policy: a(s) = arg
+
+min Vo(T(s,a)) 4 E Avgga (8) log PV(Q**(s,a)|s,a) Loss: —log PB(aS*(s)|s) Source: games ° Policy: from Lichess (range of Elo) Policy: a(s) = arg max Q,(s,a) © Ag 8) . a(s) = arg max PP°(as) a A @€ Avggai(8) Vols!) = Epsvagl Qo(8, 4) = Epica [4] Source: curated chess puzzles —— from Lichess Puzzle Test set 1.33% overlap with training set Legal action with highest Legal action leading to next state y predicted probability. with minimal predicted expected state-value for opponent player. Legal acti
+
+on with maximal predicted expected action-value.
+
+Figure 1 | Top (Data annotation): We extract all boards from 𝑁 randomly drawn games from Lichess, discard duplicate board states, and compute the state-value for each board as the win-probability via Stockfish. We compute action-values and the best action for all legal moves of a board state in the same way. Bottom left (Dataset creation): We construct training and test sets of various sizes (see Table A1). Our largest training set has 15.3B action-values. Drawing games i.i.d. from the game data
+
+base for our test set leads to 14.7% of test-boards appearing in the largest training set (mostly very early game states). We also use a test set of 10k chess puzzles that come with a correct sequence of moves. Bottom right (Policies): We train predictors on three targets (state- or action-values, or oracle actions), each of which can be used for a chess policy. Our value predictors are discrete discriminators (classifiers) that predict into which bin 𝑧𝑖 ∈ {𝑧0, . . . , 𝑧𝐾 } the oracle value fall
+
+s.
+
+to distill a good approximation of Stockfish 16 into a feed-forward neural network via standard super- vised learning at sufficient scale—akin to the quote famously attributed to José Raúl Capablanca, world chess champion from 1921 to 1927: “I see only one move ahead, but it is always the correct one.”
+
+2. Methods
+
+We now provide details on the dataset creation, the predictors and policies, and the evaluation (see Fig- ure 1).
+
+2.1. Data
+
+We make the following main contributions:
+
+• We distill an approximation of Stockfish 16 into a neural predictor that generalizes well to novel board states.
+
+• We construct a policy from our neural predictor and show that it plays chess at grandmaster level (Lichess blitz Elo 2895) against humans and suc- ccessfully solves many challenging chess puzzles (up to Elo 2800). To the best of our knowledge this is currently the strongest chess engine with- out explicit search.
+
+To construct a dataset for supervised training we down- load 10 million games from Lichess (lichess.org) from February 2023. We extract all board states 𝑠 from these games and estimate the state-value 𝑉 SF(𝑠) for each state with Stockfish 16 using a time limit of 50ms per board (unbounded depth and level). The value of a state is the win percentage estimated by Stockfish, lying between 0% and 100%.1 We also use Stock- fish to estimate action-values 𝑄SF(𝑠, 𝑎) for all legal actions 𝑎 ∈ Alegal(𝑠) i
+
+n each state. Here we use a time limit of 50ms per state-action pair (unbounded depth and max skill level), which corresponds to an oracle Lichess blitz Elo of 2713 (see Section 3.1). The action- values (win percentages) also determine the oracle
+
+• We perform ablations of the model size and data set size, showing that robust generalization and strong chess play only arise at sufficient scale.
+
+1Stockfish returns a score in centipawns that we con- to the win percentage with the standard formula from vert win% = 50% · 2/(1 + exp(−0.00368208 · centipawns) ) https://lichess.org/page/accuracy.
+
+2
+
+Grandmaster-Level Chess Without Search
+
+best action 𝑎SF:
+
+𝑎SF(𝑠) = arg max 𝑎∈ Alegal (𝑠) 𝑄SF (𝑠, 𝑎).
+
+We rarely get time-outs when computing action-values via Stockfish, in which case we cannot determine the best action for a board state and drop the correspond- ing record from the behavioral cloning training set (see Table A1). Since we train on individual boards and not whole games we randomly shuffle the dataset after annotation.
+
+action-value prediction, and 78 for state-value predic- tion and behavioral cloning (see ‘Tokenization’ below). The output size is 𝐾 (the number of bins) for action- and state-value prediction and 1968 (the number of all possible legal actions) for behavioral cloning. We use learned positional encodings (Gehring et al., 2017) as the length of the input sequences is constant. Our largest model has roughly 270 million parameters. We provide all details for the model-size ablations in Section 3.3.
+
+For our largest training dataset, based on 10M games, this results in 15.32B action-value estimates (or ≈ 530M state-value estimates and best oracle ac- tions) to train on. To create test datasets we follow the same annotation procedure, but on 1k games down- loaded from a different month (March 2023, ≈ 1.8M action-value estimates, ≈ 60k state-value estimates and best oracle actions). Since there is only a small number of early-game board-states and players of- ten play popular openings, this i.
+
+i.d. test set contains 14.7% of boards that are also in the training set. We do not remove them, as doing so would introduce dis- tributional shift and skew test-set metrics. Finally, we also create a puzzle test set, following the procedure in Carlini (2023), consisting of 10k challenging board states that come with a correct sequence of moves to solve the puzzle, which we compare against in our puzzle set accuracy evaluation. Only 1.33% of the puzzle set boards appear in the training set (i.e.
+
+, the initial board states, not complete solution sequences). Since evaluation of puzzle solutions is slow, we use a subset of 1k puzzles in some of our evaluations (1.4% overlap with training set).
+
+Value binning The predictors we train are discrete discriminators (classifiers), therefore we convert win- percentages (the ground-truth state- or action-values) into discrete “classes” via binning: we divide the in- terval between 0% and 100% uniformly into 𝐾 bins (non-overlapping sub-intervals) and assign a one-hot code to each bin 𝑧𝑖 ∈ {𝑧0, . . . , 𝑧𝐾 }. If not mentioned otherwise, 𝐾 = 128. For our behavioral cloning ex- periments we train to predict oracle actions directly which are already
+
+discrete. We perform ablations for the number of bins in Section 3.4.
+
+2.2. Model
+
+For all our predictors we use a modern decoder- only transformer backbone (Touvron et al., 2023a,b; Vaswani et al., 2017) to parameterize a discrete prob- ability distribution by normalizing the transformer’s outputs with a log-softmax layer. The model thus outputs log probabilities. The context-size is 79 for
+
+Tokenization Board states 𝑠 are encoded as FEN strings which we convert to fixed-length strings of 77 characters where the ASCII-code of each character is one token. A FEN string is a description of all pieces on the board, whose turn it is, the castling availability for both players, a potential en passant target, a half- move clock and a full-move counter. We essentially take any variable-length field in the FEN string, and convert it into a fixed-length sub-string by padding with ‘.’ if neede
+
+d. We never flip the board; the FEN string always starts at rank 1, even when it is the black’s turn. We store the actions in UCI notation (e.g., ‘e2e4’ for the well-known white opening move). To tokenize them we determine all possible legal actions across games, which is 1968, sort them alphanumer- ically (case-sensitive), and take the action’s index as the token, meaning actions are always described by a single token (all details in Appendix A.1).
+
+Training protocol Predictors are trained by min- imizing cross-entropy loss (i.e., log-loss) via mini- batch based stochastic gradient descent using Adam (Kingma and Ba, 2015). We train for 10 million steps, which corresponds to 2.67 epochs for a batch size of 4096 with 15.32B data points (cf. Table A1). The target labels are either bin-indices in the case of state- or action-value prediction (see Section 2.1) or action indices for behavioral cloning; using a one- hot encoding in all cases (deta
+
+ils in Appendices A.2 and A.3).
+
+2.3. Predictors and Policies
+
+Our predictors are discrete distributions parameter- ized by neural networks 𝑃𝜃(𝑧|𝑥) that take a tokenized input 𝑥 and output a predictive distribution over dis- crete labels {𝑧0, . . . , 𝑧𝐾 }. Depending on the prediction- target we distinguish between three tasks (see Figure 1 for an overview).
+
+(AV) Action-value prediction The target label is the bin 𝑧𝑖 into which the ground-truth action-value estimate 𝑄SF(𝑠, 𝑎) falls. The input to the predictor is
+
+3
+
+Grandmaster-Level Chess Without Search
+
+the concatenation of tokenized state and action. The loss for a single data point is:
+
+Action-accuracy The test set percentage where the predictor policy picks the ground-truth best action: ˆ𝑎(𝑠) = 𝑎SF(𝑠).
+
+− log 𝑃AV 𝜃 (𝑧𝑖|𝑠, 𝑎) with 𝑧𝑖 := bin𝐾 (𝑄SF(𝑠, 𝑎)), (1)
+
+where 𝐾 is the number of bins and bin𝐾 (𝑥) is a function that computes the (one-hot) bin-index of value 𝑥. To use the predictor in a policy, we evaluate the predictor for all legal actions in the current state and pick the action with maximal expected action-value:
+
+aY(s) = argmax Epav(zj.q) 2] - acAlegal Qo(s,a)
+
+Action-ranking (Kendall’s 𝜏) The average Kendall rank correlation (a standard statistical test) across the test set, quantifying the correlation of the predicted actions with the ground-truth ranking by Stockfish in each state, ranging from -1 (exact inverse order) to 1 (exact same order) and 0 being no correlation. The predictor ranking is given by ˆ𝑄𝜃(𝑠, 𝑎), −ˆ𝑉𝜃(𝑇 (𝑠, 𝑎)), and 𝑃BC 𝜃 (𝑎|𝑠), respectively, for all legal actions. The ground-truth ranking is given by Stockfish’s action- values 𝑄SF
+
+(𝑠, 𝑎) for all legal actions.
+
+(SV) State-value prediction The target label is the bin 𝑧𝑖 that the ground-truth state-value 𝑉 SF(𝑠) falls into. The input to the predictor is the tokenized state. The loss for a single data point is:
+
+− log 𝑃SV 𝜃 (𝑧𝑖|𝑠) with 𝑧𝑖 := bin𝐾 (𝑉 SF (𝑠)). (2)
+
+To use the state-value predictor as a policy, we evaluate the predictor for all states 𝑠′ = 𝑇 (𝑠, 𝑎) that are reach- able via legal actions from the current state (where 𝑇 (𝑠, 𝑎) is the deterministic transition of taking action 𝑎 in state 𝑠). Since 𝑠′ implies that it is now the oppo- nent’s turn, the policy picks the action that leads to the state with the worst expected value for the opponent:
+
+Puzzle-accuracy We evaluate our policies on their capability of solving puzzles from a collection of Lichess puzzles that are rated by Elo difficulty from 399 to 2867, calculated by Lichess based on how of- ten each puzzle has been solved correctly. We use puzzle-accuracy as the percentage of puzzles where the policy’s action-sequence exactly matches the known solution action-sequence. For our main puzzle result in Section 3.2 we use 10k puzzles to report puzzle- accuracy, otherwise we use the f
+
+irst 1k puzzles to speed up evaluation.
+
+a8¥(s) = arg min Epsv (zis) [2] . aé Alegal ® Vols’)
+
+(BC) Behavioral cloning The target label is the (one- hot) action-index of the ground-truth action 𝑎SF(𝑠) within the set of all possible actions (see ‘Tokeniza- tion’ in Section 2.2). The input to the predictor is the tokenized state, which leads to the loss for a single data point:
+
+− log 𝑃BC 𝜃 (𝑎SF(𝑠)|𝑠). (3)
+
+This straightforwardly gives a policy that picks the highest-probability action:
+
+ˆ𝑎BC (𝑠) = arg max 𝑎∈ Alegal 𝑃BC 𝜃 (𝑎|𝑠).
+
+Game playing strength (Elo) We evaluate the play- ing strength (measured as an Elo rating) of the pre- dictor policies in two different ways: (i) we play Blitz games on Lichess against either only humans or only bots, and (ii) we run an internal tournament between all the agents from Table 1 except for GPT-3.5-turbo- instruct. We play 400 games per pair of agent, yielding 8400 games in total, and compute Elo ratings with BayesElo (Coulom, 2008), with the default confidence parameter of 0.5. We a
+
+nchor the relative BayesElo val- ues to the Lichess ELO vs. bots of our 270M model. For the game-playing strength evaluations only (i.e., not for determining the puzzle accuracy) we use a softmax policy for the first 5 full-moves, instead of the arg max policy described earlier, with a low tempera- ture of 0.005 for the value or action-value functions, 0.05 for the action functions (like the policy network of AlphaZero), and 0.5 for the visit counts used in the full version of AlphaZero. This re
+
+nders the poli- cies stochastic to both create variety in games, and prevents simple exploits via repeated play.
+
+2.4. Evaluation
+
+We use the following evaluation metrics to compare our models against each other and/or measure train- ing progress. The first two metrics evaluate the pre- dictors only; the second two evaluate the policies con- structed from our predictors.
+
+2.5. Baselines
+
+We compare the performance of our models against Stockfish 16 (with a time limit of 0.05s per legal move, i.e., the oracle used to generate our dataset), three
+
+4
+
+Grandmaster-Level Chess Without Search
+
+Agent | Search | Input | Tournament Elo | Lichess Elo | Accuracy (%) | Kendall’s t |  |  |  |  | vs. Bots | vs. Humans | Puzzles | Actions |  || 9M Transformer (ours) 136M Transformer (ours) 270M Transformer (ours) |  | FEN | 2007 (+15) | 2054 | - | 85.5 | 64.2 | 0.269 |
+|  |  | FEN | 2224 (+14) | 2156 | - | 92.1 | 68.5 | 0.295 |
+|  |  | FEN | 2299 (+14) | 2299 | 2895 | 93.5 | 69.4 | 0.300 |
+| GPT-3.5-turbo-instruct AlphaZero (policy net only) AlphaZero (value net only) |  | PGN | - | 1755 |
+
+- | 66.5 | - | - |
+|  |  | PGN | 1620 (+22) | - | - | 61.0 | - | - |
+|  |  | PGN | 1853 (+16) | - | - | 82.1 | - | - |
+| AlphaZero (400 MCTS simulations) Stockfish 16 (0.05s) [oracle] | v | PGN | 2502 (+15) |  | - | 95.8 |  |  |
+|  | v | FEN | 2706 (+20) | 2713 | - | 99.1 | 100.0 | 1.000 |
+
+Table 1 | Prediction and playing strength comparison for our models (three different sizes) against Stockfish 16, variants of AlphaZero (with and without Monte-Carlo tree search), and GPT-3.5-turbo-instruct. Tournament Elo ratings are determined by having the models play against each other and cannot be directly compared to the Lichess Elo. Lichess (blitz) Elo ratings result from playing against human opponents or bots on Lichess. Stockfish 16 (time limit of 50ms per move) is our data-generating
+
+oracle, thus obtaining a Kendall’s 𝜏 of 1 and 100% action accuracy. Models operating on the PGN observe the full move history, whereas FENs only contain very limited historical information. Best results without search in bold.
+
+variants of AlphaZero (Silver et al., 2017): (i) the original with 400 MCTS simulations, (ii) only the pol- icy network, and (iii) only value network (where (ii) and (iii) perform no additional search), and the GPT- 3.5-turbo-instruct from Carlini (2023). AlphaZero’s networks have 27.6M parameters and are trained on 44M games (details in Schrittwieser et al. (2020)). Note that these baselines have access to the whole game history (via the PGN), in contrast to our models that only observe the cur
+
+rent game state (which con- tains very limited historical information via the FEN). This helps the baseline policies for instance to easily deal with threefold repetition (games are drawn if the same board state is appears three times through- out the game), which requires a workaround for us (described in Section 5). Moreover, GPT-3.5-turbo- instruct also requires whole games encoded via PGN to reduce hallucinations according to Carlini (2023), who also finds that GPT-4 struggles to play full g
+
+ames without making illegal moves, so we do not compare against GPT-4.
+
+3.1. Main Result
+
+In Table 1 we show the playing strength (internal tour- nament Elo, external Lichess Elo, and puzzle solving competence) and predictor metrics of our large-scale transformer models when trained on the full (10M games) training set. Our main evaluation compares three transformer models with 9M, 136M, and 270M parameters after training (none of them overfit the training set as shown in Appendix B.1). The results show that all three models exhibit non-trivial gener- alization to novel boards and ca
+
+n successfully solve a large fraction of puzzles. Across all metrics, having larger models consistently improves scores, confirm- ing that model scale matters for strong chess perfor- mance. Our largest model achieves a blitz Elo of 2895 against human players, which places it into grandmas- ter territory. However, the Elo drops when playing against bots on Lichess, which may be a result of hav- ing a significantly different player-pool, some minor technical issues, and perhaps a qualitative diff
+
+erence in how bots exploit weaknesses compared to humans (see Section 5 for a detailed discussion of these issues).
+
+3. Results
+
+3.2. Puzzles
+
+Here we present our comprehensive experimental eval- uation. For all parameters not explicitly mentioned we use the same setting across our two main exper- iments (Section 3.1, Section 3.2); for investigating scaling behavior and all ablations in Section 3.3 and Section 3.4 we use a different set of default settings (geared towards getting representative results with better computational efficiency). We provide all de- tails in Appendix A.2 and Appendix A.3, respectively.
+
+In Figure 2 we compare the puzzle performance of our 270M parameter model against Stockfish 16 (time limit of 50ms per move), GPT-3.5-turbo-instruct, and AlphaZero’s value network. We use our large puzzle set of 10k puzzles, grouped by their assigned Elo dif- ficulty from Lichess. Stockfish 16 performs the best across all difficulty categories, followed by our 270M model. AlphaZero’s value network (trained on 44M games) and GPT-3.5-turbo-instruct achieve non-trivial puzzle performance, but signi
+
+ficantly lag behind our
+
+5
+
+Grandmaster-Level Chess Without Search
+
+mm Stockfish 16 (0.05s) [oracle] £ £ S S s 9 o* *£ mmm_270M Transformer (ours) 9 S RS Ss u 8 0 2 $ 2 8 s $ nu 8 0 S s s S Ss yy RSS Ss RS mmm GPT-3.5-turbo-instruct mmm AlphaZero (value net only) S s sy S 9 s§ Puzzle Rating (Elo)
+
+Accuracy (%)
+
+Figure 2 | Puzzle solving competency comparison between our 270M transformer, Stockfish 16 (time limit of 50ms per move), AlphaZero’s value network, and GPT-3.5-turbo-instruct on 10 000 Lichess puzzles (curated following Carlini (2023)).
+
+model. We emphasize that solving the puzzles requires a correct move sequence, and since our policy cannot explicitly plan ahead, solving the puzzle sequences relies entirely on having good value estimates that can be used greedily.
+
+3.3. Scaling “Laws”
+
+Figure 3 shows our scaling analysis over the dataset and model size. We visualize the puzzle accuracy (training and test loss in Figure A4), which correlates well with the other metrics and the overall playing strength. For small training set size (10k games, left panel) larger architectures (≥ 7M) start to overfit as training progresses. This effect disappears as the dataset size is increased to 100k (middle panel) and 1M games (right panel). The results also show that the final accuracy of a m
+
+odel increases as the dataset size is increased (consistently across model sizes). Similarly, we observe the general trend of increased architecture size leading to increased overall performance regard- less of dataset size (as also shown in our main result in Section 3.1).
+
+Ablation | Parameter | Accuracy (%) | Kendall’s t |  |  | Puzzles | Actions |  || Predictor-target | AV | 83.3 | 63.0 | 0.259 |
+|  | sv | 77.5 | 58.5 | 0.215 |
+|  | BC | 65.7 | 56.7 | 0.116 |
+| Network depth |  | 2 | 62.3 | 54.4 | 0.219 |
+|  | 4 | 76.2 | 59.9 | 0.242 |
+|  | 8 | 81.3 | 62.3 | 0.254 |
+| 16 | 80.4 | 62.3 | 0.255 |
+| Data sampler P | Uniform | 83.3 | 63.0 | 0.259 |
+|  | Weighted | 49.9 | 48.2 | 0.192 |
+| Value bins | 16 | 83.0 | 61.4 | 0.248 |
+|  | 32 | 83.0 | 63.2 | 0.261 |
+|  |
+
+64 | 84.4 | 63.1 | 0.259 |
+|  | 128 | 83.8 | 63.4 | 0.262 |
+|  | 256 | 83.7 | 63.0 | 0.260 |
+| . Loss function | log (class.) | 81.3 | 62.3 | 0.254 |
+|  | L2 (regr) | 82.6 | 58.9 | 0.235 |
+| . - oe Stockfish Limit [s] | 0.05 | 84.0 | 62.2 | 0.256 |
+|  | 0.1 | 85.4 | 62.5 | 0.254 |
+|  | 02 | 84.3 | 626 | 0.259 |
+|  | 0.5 | 83.3 | 63.0 | 0.259 |
+
+Table 2 | Ablations for different parameters (see Sec- tion 3.4).
+
+3.4. Variants and Ablations
+
+We test a series of experimental variants and perform extensive ablations using the 9M parameter model. The results and conclusions drawn are used to inform and justify our design choices and determine default model-, data-, and training-configurations. Table 2 summarizes all results.
+
+Predictor-targets By default we learn to predict action-values given a board state. Here we compare against using state-values or oracle actions (behavioral cloning) as the prediction targets. See Section 2.3 and Figure 1 for more details and how to construct poli- cies from each of the predictors. As the results in
+
+Table 2 show, the action-value predictor is superior in terms of action-ranking (Kendall’s 𝜏), action accuracy, and puzzle accuracy. The same trend is also shown in Figure A5 (in Appendix B.2, which tracks puzzle accuracy over training iterations for the different pre- dictors. This superior performance of action-value prediction might stem primarily from the significantly larger action-value dataset (15.3B state-action pairs vs. ≈ 530M states for our largest training set constructed from 10M ga
+
+mes). We thus run an additional abla- tion where we train all three predictors on exactly the same amount of data—results shown in Appendix B.2 largely confirm this hypothesis. Please see our more detailed discussion of the different predictor targets as we discuss these results in Appendix B.2, where
+
+6
+
+Grandmaster-Level Chess Without Search
+
+10'000 Games 100'000 Games 1'000'000 Games 80 60 40 Puzzle Accuracy (%) N ° 8 0 1 2 3 4 5 0 1 2 3 4 5 0 1 2 3 4 5 Step 1e6 Step 1e6 Step le6
+
+Figure 3 | Puzzle accuracy for different training set sizes (stated above panels) and model sizes (color-coded), evaluated with our small puzzle set of 1k puzzles. Generally, larger models trained on larger datasets lead to higher performance (which strongly correlates with test set performance and general chess playing strength), highlighting the importance of scale for strong chess play. This effect cannot be explained by memorization since < 1.41% of the initial puzzle board states appear in
+
+our training set. If the model size is too large in relation to the training set size learning is impeded and overfitting occurs.
+
+we also discuss performance discrepancy between be- havioral cloning and the state-value predictor based policy may be largely explained by the fact that we train on expert’s actions only instead of the full action distribution of the expert.
+
+increased performance is due to the increased data diversity seen under uniform sampling. As we train for very few epochs, the starting position and common opening positions are only seen a handful of times during training under uniform sampling, making it unlikely that strong early-game play of our models can be attributed to memorization.
+
+Network depth We show the influence of increasing the transformer’s depth while keeping the number of parameters constant in Table 2. Since transformers may learn to roll out iterative computation (which arises in search) across layers, deeper networks may hold the potential for deeper unrolls. We compensate for having fewer layers by varying the embedding di- mension and widening factor such that all models have the same number of parameters. The performance of our models increases with their d
+
+epth but seems to saturate at around 8 layers, indicating that depth is important, but not beyond a certain point.
+
+Value binning Table 2 shows the impact of varying the number of bins used for state- and action-value discretization (from 16 to 256), demonstrating that more bins lead to improved performance. To strike a balance between performance and computational efficiency, we use 𝐾 = 32 bins for our ablations and 𝐾 = 128 for the main experiments.
+
+Data sampler We remove duplicate board states dur- ing the generation of the training and test sets. This increases data diversity but introduces distributional shift compared to the “natural” game distribution of boards where early board states and popular open- ings occur more frequently. To quantify the effect of this shift we use an alternative “weighted” data sampler that draws boards from our filtered training set according to the distribution that would occur if we had not removed duplica
+
+tes. Results in Table 2 reveal that training on the natural distribution (via the weighted sampler) leads to significantly worse re- sults compared to sampling uniformly randomly from the filtered training set (both trained models are eval- uated on a filtered test set with uniform sampling, and the puzzle test set). We hypothesize that the
+
+Loss function We treat learning Stockfish action- values as a classification problem and thus train by minimizing cross-entropy loss (log-loss). This is as close as possible to the (tried and tested) standard LLM setup. An alternative is to treat the problem as a scalar regression problem. If we parameterize a fixed- variance Gaussian likelihood model with a transformer and perform maximum (log) likelihood estimation, this is equivalent to minimizing mean-squared error (L2 loss). To that end, we
+
+modify the architecture to output a scalar (without a final log-layer or similar). The log-loss outperforms the L2 loss on two out of the three metrics (Table 2).
+
+Stockfish time limit We create training sets from 1 million games annotated by Stockfish with varying time limits to manipulate the playing strength of our oracle. We report scores on the puzzle set (same for
+
+7
+
+Grandmaster-Level Chess Without Search
+
+all models) and a test set created using the same time limit as the training set (different for all models). Ta- ble 2 shows that a basic time-limit of 0.05 seconds gives only marginally worse puzzle performance. As a compromise between computational effort and fi- nal model performance we thus choose this as our default value (for our 10M games dataset we need about 15B action-evaluation calls with Stockfish, i.e., roughly 8680 days of unparallelized Stockfish evalua- tion time).
+
+(a) Possible Move (Mate-in-3) (b) Actual Move (Mate-in-5)
+
+4. Related Work
+
+Early chess AI research made heavy use of design- ing explicit search strategies coupled with heuristics, as evidenced by Turing’s initial explorations (Burt, 1955) and implementations like NeuroChess (Thrun, 1994). This approach culminated in systems like Deep Blue (Campbell et al., 2002) and Stockfish (Romstad et al., 2008), known for their advanced search algo- rithms. The development of AlphaZero (Silver et al., 2017) marked a paradigm shift, employing deep RL with Monte Carlo Tree Search, t
+
+hus learning its own heuristics (policy and value networks) instead of man- ually designing them. Neural networks play a signifi- cant role in chess AI (Klein, 2022), including enhance- ments to AlphaZero’s self-play mechanisms (V. et al., 2018), the use of deep RL (Lai, 2015), and a general trend of moving away from explicit search methods, by leveraging large-scale game datasets for training (David et al., 2016; Schrittwieser et al., 2020).
+
+Figure 4 | Two options to win the game in 3 or 5 moves, respectively (more options exist). Since they both map into the highest-value bin our bot ignores Nh6+, the fastest way to win (in 3), and instead plays Nd6+ (mate-in-5). Unfortunately, a state-based pre- dictor without explicit search cannot guarantee that it will continue playing the Nd6+ strategy and thus might randomly alternate between different strategies. Overall this increases the risk of drawing the game or losing due to a subseque
+
+nt (low-probability) mistake, such as a bad softmax sample. Board from a game between our 9M Transformer (white) and a human (blitz Elo of 2145).
+
+present our workarounds.
+
+The rise of large language models has also led to innovations in chess AI, cf. Kamlish’s language-based models (Kamlish et al., 2019), the encoding of chess games via natural language (DeLeo and Guven, 2022; Toshniwal et al., 2022), and the evaluation LLMs ability to play chess (Carlini, 2023; Gramaje, 2023). Czech et al. (2023) show that strategic input repre- sentations and value loss enhancements significantly boost chess performance of vision transformers, and Alrdahi and Batista-Navarro (20
+
+23); Feng et al. (2023) show that adding chess specific data sources (e.g., chess textbooks) to language model training can im- prove their chess performance. Stöckl (2021) explored scaling effects of transformers on chess performance, which resonates with our emphasis on the importance of model and dataset scale.
+
+5. Discussion
+
+In order to use our state-based policies to play against humans and bots, two minor technical issues appear that can only be solved by having (some) access to game history. We briefly discuss both issues and
+
+Blindness to threefold repetition By construction, our state-based predictor cannot detect the risk of threefold repetition (drawing because the same board occurs three times), since it has no access to the game history (FENs contain minimal historical info, suffi- cient for the Fifty Move rule). To reduce draws from threefold repetitions, we check if the bot’s next move would trigger the rule and set the corresponding ac- tion’s win percentage to 50% before computing the softmax. However, our b
+
+ots still cannot plan ahead to minimize the risk of being forced into threefold repetition.
+
+Indecisiveness in the face of overwhelming victory If Stockfish detects a mate-in-𝑘 (e.g., 3 or 5) it outputs 𝑘 and not a centipawn score. We map all such outputs to the maximal value bin (i.e., a win percentage of 100%). Similarly, in a very strong position, several actions may end up in the maximum value bin. Thus, across time-steps this can lead to our agent playing somewhat randomly, rather than committing to one plan that finishes the game quickly (the agent has no knowledge of its past mov
+
+es). This creates the paradoxical situation that our bot, despite being in a position of overwhelming win percentage, fails to
+
+8
+
+Grandmaster-Level Chess Without Search
+
+take the (virtually) guaranteed win and might draw or even end up losing since small chances of a mis- take accumulate with longer games (see Figure 4). To prevent some of these situations, we check whether the predicted scores for all top five moves lie above a win percentage of 99% and double-check this condi- tion with Stockfish, and if so, use Stockfish’s top move (out of these) to have consistency in strategy across time-steps.
+
+Elo: Humans vs. bots Table 1 shows a difference in Lichess Elo when playing against humans compared to bots. While the precise reasons are not entirely clear, we have three plausible hypotheses: (i) humans tend to resign when our bot has overwhelming win per- centage but many bots do not (meaning that the pre- viously described problem gets amplified when play- ing against bots); (ii) humans on Lichess rarely play against bots, meaning that the two player pools (hu- mans and bots) are hard to co
+
+mpare and Elo ratings between pools may be miscalibrated (Justaz, 2023); and (iii) based on preliminary (but thorough) anec- dotal analysis by a chess NM, our models make the occasional tactical mistake which may be penalized qualitatively differently (and more severely) by other bots compared to humans (see some of this analysis in Appendices B.4 and B.5). While investigating this Elo discrepancy further is interesting, it is not central to our paper and does not impact our main claims.
+
+5.1. Limitations
+
+While our largest model achieves very good perfor- mance, it does not completely close the gap to Stock- fish 16. All our scaling experiments point towards closing this gap eventually with a large enough model trained on enough data. However, the current results do not allow us to claim that the gap can certainly be closed. Another limitation, as discussed earlier, is that our predictors see the current state but not the com- plete game history. This leads to some fundamental technical limitatio
+
+ns that cannot be overcome without small domain-specific heuristics or augmenting the training data and observable info. Finally, when using a state-value predictor to construct a policy, we con- sider all possible subsequent states that are reachable via legal actions. This requires having a transition model 𝑇 (𝑠, 𝑎), and may be considered a version of 1-step search. While the main point is that our predic- tors do not explicitly search over action sequences, we limit the claim of ‘without sear
+
+ch’ to our action-value policy and behavioral cloning policy.
+
+feedforward neural network. In the course of this, we have made a serious attempt to produce a strong chess policy and estimate its playing strength, but we have not exhausted every conceivable option to maximize playing strength—it may well be that further tweaks of our approach could lead to even stronger policies. Similarly, we have made a serious attempt at calibrat- ing our policy’s playing strength via Lichess, where the claim of “grandmaster-level” play currently holds against human oppon
+
+ents, but we have not calibrated our policy under official tournament conditions. We also cannot rule out that opponents, through extensive repeated play, may be able to find and exploit weak- nesses reliably due to the fairly deterministic nature of our policy.
+
+6. Conclusion
+
+Our paper shows that is is possible to distill an approxi- mation of Stockfish 16 into a feed-forward transformer via standard supervised training. The resulting predic- tor generalizes well to unseen board states, and, when used in a policy, leads to strong chess play (Lichess Elo of 2895 against humans). We demonstrate that strong chess capabilities from supervised learning only emerge at sufficient dataset and model scale. Our work thus adds to a rapidly growing body of literature show- ing t
+
+hat complex and sophisticated algorithms can be distilled into feed-forward transformers, implying a paradigm-shift away from viewing large transformers as “mere” statistical pattern recognizers to viewing them as a powerful technique for general algorithm approximation.
+
+Impact Statement
+
+While the results of training transformer-based archi- tectures at scale in a (self) supervised way will have significant societal consequences in the near future, these concerns do not apply to a closed domain like chess that has limited real-world impact and has been a domain of machine superiority for decades. An- other advantage of supervised training on a single task over other forms of training (particularly self- play or reinforcement learning, and meta-learning) is that the method requir
+
+es a strong oracle solution to begin with (for data annotation) and is unlikely to significantly outperform the oracle—so the poten- tial for the method to rapidly introduce substantial unknown capabilities (with wide societal impacts) is very limited.
+
+Note that the primary goal of this project was to in- vestigate whether a complex, search-based algorithm, such as Stockfish 16, can be well approximated with a
+
+9
+
+Grandmaster-Level Chess Without Search
+
+Acknowledgments
+
+References
+
+We thank Aurélien Pomini, Avraham Ruderman, Eric Malmi, Charlie Beattie, Chris Colen, Chris Wolff, David Budden, Dashiell Shaw, Guillaume Desjardins, Ham- danil Rasyid, Himanshu Raj, Joel Veness, John Schultz, Julian Schrittwieser, Laurent Orseau, Lisa Schut, Marc Lanctot, Marcus Hutter, Matthew Aitchison, Nando de Freitas, Nenad Tomasev, Nicholas Carlini, Nick Birnie, Nikolas De Giorgis, Ritvars Reimanis, Satinder Baveja, Thomas Fulmer, Tor Lattimore, Vincent Tjeng, Vivek Veeriah, and Zhengdong
+
+Wang for insightful discus- sions and their helpful feedback.
+
+H. Alrdahi and R. Batista-Navarro. Learning to play chess from textbooks (LEAP): a corpus for eval- uating chess moves based on sentiment analysis. arXiv:2310.20260, 2023.
+
+R. Anil, S. Borgeaud, Y. Wu, J. Alayrac, J. Yu, R. Sori- cut, J. Schalkwyk, A. M. Dai, A. Hauth, K. Milli- can, D. Silver, S. Petrov, M. Johnson, I. Antonoglou, J. Schrittwieser, A. Glaese, J. Chen, E. Pitler, T. P. Lill- icrap, A. Lazaridou, O. Firat, J. Molloy, M. Isard, P. R. Barham, T. Hennigan, B. Lee, F. Viola, M. Reynolds, Y. Xu, R. Doherty, E. Collins, C. Meyer, E. Ruther- ford, E. Moreira, K. Ayoub, M. Goel, G. Tucker, E. Pi- queras, M. Krikun, I. Barr, N. Savinov, I. Danihelka, B. Roel
+
+ofs, A. White, A. Andreassen, T. von Glehn, L. Yagati, M. Kazemi, L. Gonzalez, M. Khalman, J. Sygnowski, and et al. Gemini: A family of highly capable multimodal models. arXiv:2312.11805, 2023.
+
+J. Bradbury, R. Frostig, P. Hawkins, M. J. Johnson, C. Leary, D. Maclaurin, G. Necula, A. Paszke, J. Van- derPlas, S. Wanderman-Milne, and Q. Zhang. JAX: composable transformations of Python+NumPy programs, 2018. URL http://github.com/ google/jax.
+
+T. B. Brown, B. Mann, N. Ryder, M. Subbiah, J. Ka- plan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell, S. Agarwal, A. Herbert-Voss, G. Krueger, T. Henighan, R. Child, A. Ramesh, D. M. Ziegler, J. Wu, C. Winter, C. Hesse, M. Chen, E. Sigler, M. Litwin, S. Gray, B. Chess, J. Clark, C. Berner, S. McCandlish, A. Radford, I. Sutskever, and D. Amodei. Language models are few-shot learners. In NeurIPS, 2020.
+
+C. Burt. Faster than thought: A symposium on digital computing machines. edited by b. v. bowden. British Journal of Statistical Psychology, 1955.
+
+M. Campbell, A. J. H. Jr., and F. Hsu. Deep blue. Artif. Intell., 2002.
+
+N. Carlini. models. writing/2023/chess-llm.html, 2023.
+
+R. Coulom. Whole-history rating: A bayesian rating system for players of time-varying strength. In Com- puters and Games, 2008.
+
+J. Czech, J. Blüml, and K. Kersting. Representation matters: The game of chess poses a challenge to vision transformers. arXiv:2304.14918, 2023.
+
+10
+
+Grandmaster-Level Chess Without Search
+
+O. E. David, N. S. Netanyahu, and L. Wolf. Deepchess: End-to-end deep neural network for automatic learning in chess. In ICANN (2), 2016.
+
+D. Klein. Neural arXiv:2209.01506, 2022. networks for chess.
+
+DeepMind, I. Babuschkin, K. Baumli, A. Bell, S. Bhu- patiraju, J. Bruce, P. Buchlovsky, D. Budden, T. Cai, A. Clark, I. Danihelka, A. Dedieu, C. Fantacci, J. Godwin, C. Jones, R. Hemsley, T. Hennigan, M. Hessel, S. Hou, S. Kapturowski, T. Keck, I. Ke- maev, M. King, M. Kunesch, L. Martens, H. Merzic, V. Mikulik, T. Norman, G. Papamakarios, J. Quan, R. Ring, F. Ruiz, A. Sanchez, L. Sartran, R. Schnei- der, E. Sezener, S. Spencer, S. Srinivasan, M. Stano- jević, W. Stokowiec, L. Wang, G. Zhou, and
+
+F. Vi- ola. The DeepMind JAX Ecosystem, 2020. URL http://github.com/google-deepmind.
+
+M. Lai. Giraffe: Using deep reinforcement learning to play chess. arXiv:1509.01549, 2015.
+
+OpenAI. GPT-4 technical report. arXiv:2303.08774, 2023.
+
+T. Romstad, M. Costalba, J. Kiiski, G. Linscott, Y. Nasu, M. Isozaki, H. Noda, and et al. Stockfish, 2008. URL https://stockfishchess.org.
+
+M. Sadler and N. Regan. Game Changer: AlphaZero’s Groundbreaking Chess Strategies and the Promise of AI. New In Chess, 2019.
+
+M. DeLeo and E. Guven. Learning chess with language models and transformers. arXiv:2209.11902, 2022.
+
+X. Feng, Y. Luo, Z. Wang, H. Tang, M. Yang, K. Shao, D. Mguni, Y. Du, and J. Wang. Chessgpt: Bridging policy learning and language modeling. arXiv:2306.09200, 2023.
+
+J. Schrittwieser, I. Antonoglou, T. Hubert, K. Simonyan, L. Sifre, S. Schmitt, A. Guez, E. Lockhart, D. Hass- abis, T. Graepel, T. P. Lillicrap, and D. Silver. Mas- tering atari, go, chess and shogi by planning with a learned model. Nat., 2020.
+
+N. Shazeer. GLU variants improve transformer. arXiv:2002.05202, 2020.
+
+J. Gehring, M. Auli, D. Grangier, D. Yarats, and Y. N. Dauphin. Convolutional sequence to sequence learn- ing. In ICML, 2017.
+
+B. A. Gramaje. Exploring GPT’s capabilities in chess- puzzles. Master’s thesis, Universitat Politècnica de València, 2023.
+
+D. Silver, T. Hubert, J. Schrittwieser, I. Antonoglou, M. Lai, A. Guez, M. Lanctot, L. Sifre, D. Kumaran, T. Graepel, T. P. Lillicrap, K. Simonyan, and D. Has- sabis. Mastering chess and shogi by self-play with a general reinforcement learning algorithm. arXiv:1712.01815, 2017.
+
+G. Haworth and N. Hernandez. The 20th top chess en- gine championship, TCEC20. J. Int. Comput. Games Assoc., 2021.
+
+A. Stöckl. Watching a language model learning chess. In RANLP, 2021.
+
+S. Thrun. Learning to play the game of chess. In NIPS, 1994.
+
+T. Hennigan, T. Cai, T. Norman, L. Martens, and I. Babuschkin. Haiku: Sonnet for JAX, 2020. URL http://github.com/deepmind/dm-haiku.
+
+S. Toshniwal, S. Wiseman, K. Livescu, and K. Gimpel. Chess as a testbed for language model state tracking. In AAAI, 2022.
+
+J. Hoffmann, S. Borgeaud, A. Mensch, E. Buchatskaya, T. Cai, E. Rutherford, D. de Las Casas, L. A. Hen- dricks, J. Welbl, A. Clark, T. Hennigan, E. Noland, K. Millican, G. van den Driessche, B. Damoc, A. Guy, S. Osindero, K. Simonyan, E. Elsen, J. W. Rae, O. Vinyals, and L. Sifre. Training compute-optimal large language models. arXiv:2203.15556, 2022.
+
+H. Touvron, T. Lavril, G. Izacard, X. Martinet, M. Lachaux, T. Lacroix, B. Rozière, N. Goyal, E. Ham- bro, F. Azhar, A. Rodriguez, A. Joulin, E. Grave, and G. Lample. Llama: Open and efficient foundation language models. arXiv:2302.13971, 2023a.
+
+Justaz. Exact ratings for everyone on lichess. https://lichess.org/@/justaz/blog/ exact-ratings-for-everyone-on-lichess/ klIoAEAU, 2023.
+
+I. Kamlish, I. B. Chocron, and N. McCarthy. Sentimate: Learning to play chess through natural language processing. arXiv:1907.08321, 2019.
+
+D. P. Kingma and J. Ba. Adam: A method for stochastic optimization. In ICLR (Poster), 2015.
+
+Llama 2: Open foundation and fine-tuned chat models. arXiv:2307.09288, 2023b.
+
+S. K. G. V., K. Goyette, A. Chamseddine, and B. Con- Deep pepper: Expert iteration based sidine. chess agent in the reinforcement learning setting. arXiv:1806.00683, 2018.
+
+A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, L. Kaiser, and I. Polosukhin. Attention is all you need. In NIPS, 2017.
+
+11
+
+Grandmaster-Level Chess Without Search
+
+A. Experimental Setup
+
+A.1. Tokenization
+
+The first part of a FEN string encodes the position of pieces rank-wise (row-wise). The only change we make is that we encode each empty square with a ‘.’, which always gives us 64 characters for a board. The next character denotes the active player (‘w’ or ‘b’). The next part of the FEN string denotes castling availability (up to four characters for King- and Queen- side for each color, or ‘-’ for no availability)—we take this string and if needed pad it with ‘.’ such that it always has length
+
+4. Next are two characters for the en passant target, which can be ‘-’ for no target; we use the two characters literally or ‘-.’ for no target. Finally we have the halfmove clock (up to two digits) and the fullmove number (up to three digits); we take the numbers as characters and pad them with ‘.’ to make sure they are always tokenized into two and three characters respectively.
+
+100000 80000 60000 40000 ° ha. 0.0 0.2 0.4 0.6 0.8 1.0 20000 Win %
+
+Count
+
+Figure A1 | The win percentages for our action-value dataset generated from 1000 games (cf. Table A1). We use 50 buckets to generate the histogram. The distribution is skewed towards 0 as we consider all legal moves per board and most actions are not advan- tageous for the player.
+
+A.2. Main Setup
+
+We use the same basic setup for all our main experi- ments and only vary the model architecture.
+
+Concretely our base setup is as follows: We train for 20 million steps with a batch size of 4096, meaning that we train for 5.35 epochs. We use the Adam op- timizer (Kingma and Ba, 2015) with a learning rate of 1e-4. We train on the dataset generated from 10 million games (cf. Table A1) for the action value policy with 128 return buckets and a stockfish time limit of 0.05s. We use the unique sampler and Polyak aver- aging for evaluation and evaluate on 1000 games (cf. Table A1) and 1000 puzzles
+
+from a different month than that used for training.
+
+of 4e-4. We train on the dataset generated from 1 million games (cf. Table A1) for the action value policy with 32 return buckets and a stockfish time limit of 0.5s. We use the unique sampler and train a vanilla decoder-only transformer (Vaswani et al., 2017) with post-normalization, 8 heads, 8 layers, an embedding dimension of 256, and no causal masking. We use Polyak averaging for evaluation and evaluate on 1000 games (cf. Table A1) and 1000 puzzles from a different month than that used for tr
+
+aining.
+
+A.4. Dataset Statistics
+
+We visualize some dataset statistics in Figures A1 and A2.
+
+We train a vanilla decoder-only transformer without causal masking (Vaswani et al., 2017), with the improvements proposed in LLaMA (Tou- vron et al., 2023a,b), i.e., post-normalization and SwiGLU (Shazeer, 2020). We use three different model configurations: (i) 8 heads, 8 layers, and an em- bedding dimension of 256, (ii) 8 heads, 8 layers, and an embedding dimension of 1024, and (iii) 8 heads, 16 layers, and an embedding dimension of 1024.
+
+A.3. Ablation Setup
+
+We use the same basic setup for all our ablation exper- iments and only vary the ablation parameters.
+
+Concretely our base setup is as follows: We train for 5 million steps with a batch size of 1024, meaning that we train for 3.19 epochs. We use the Adam op- timizer (Kingma and Ba, 2015) with a learning rate
+
+A.5. Playing-strength evaluation on Lichess
+
+We evaluate and calibrate the playing strength of our models by playing against humans and bots on Lichess. Our standard evaluation allows for both play- ing against bots and humans (see Table 1), but since humans tend to rarely play against bots the Elo ratings in this case are dominated by playing against other bots (see our discussion of how this essentially creates two different, somewhat miscalibrated, player pools in Section 5). In our case the policies in the column denoted with ‘vs. Bots
+
+’ in Table 1 have played against some humans but the number of games against hu- mans is < 4.5% of total games played. To get better calibration against humans we let our largest model play exclusively against humans (by not accepting games with other bots) which leads to a significantly higher Elo ranking (see Table 1). Overall we have
+
+12
+
+Grandmaster-Level Chess Without Search
+
+Split | Games | State-Value | Behavioral Cloning | Action-Value |  |  | Records | Bytes | Records | Bytes | Records | Bytes || Train | 104 | 591897 | 43.7 MB | 589 130 | 41.1 MB | 17 373 887 | 1.4 GB |
+|  | 10° | 5747753 | 422.0 MB | 5720672 | 397.4 MB | 167 912926 | 13.5 GB |
+|  | 10° | 55 259971 | 4.0 GB | 54991050 | 3.8 GB | 1606372407 | 129.0 GB |
+|  | 107 | 530 310 443 | 38.6 GB | 527 633 465 | 36.3 GB | 15316914724 | 1.2 TB |
+| Test | 103 | 62829 | 4.6 MB | 62561 | 4.4 MB | 1838218 | 14
+
+8.3 MB |
+
+Table A1 | Dataset sizes. For simplicity, we typically refer to the datasets by the number of games they were created from.
+
+400000 350000 300000 250000 Count 200000 150000 100000 oes ‘ 0 INf00ttetusssssseo-s-- aneeeno - 0 250 500 750 1000 1250 1500 1750 2000 Move Index
+
+Figure A2 | The moves (sorted by frequency) for our action-value dataset generated from 1000 games (cf. Table A1). We use 50 buckets to generate the his- togram. There are 1968 possible moves and the five most frequent ones are a2a3, g2g3, h2h3, a2a4, a7a6.
+
+played the following numbers of games for the dif- ferent policies shown in Table 1: 9M (553 games), 136M (169 games), 270M (228 games against bots, 174 games against humans), Stockfish (30 games), GPT-3.5-turbo-instruct (181 games).
+
+evaluation to be weaker for the first moves considered. Finally, due to the nature of our internal hardware setup, we use two different kinds of chips to run Stock- fish: (i) to compute the Lichess Elo, we use a 6-core Intel(R) Xeon(R) W-2135 CPU @ 3.70GHz, and (ii) to compute the tournament Elo, we use a single Tensor Processing Unit (V3), as for all the other agents.
+
+AlphaZero We use the AlphaZero version from 2020, with a network trained at that time (Schrittwieser et al., 2020). We use three different versions: (i) policy network only, (ii) value network only and (iii) standard version with search. For (i), we are using the probability distribution over actions returned by the policy network, and take the argmax as the best action. For (ii), we do a search limited to depth 1, with 100 MCTS simulations, enough to cover all legal actions, and take the argmax
+
+over visit counts. For (iii), we use the standard search from the paper, with 400 MCTS simulations and the exact same UCB scaling parameters. We also take the argmax over visit counts. Note that AlphaZero’s policy and value network have been trained on 44M games, whereas we trained our largest models on only 10M games.
+
+A.7. Computational Resources
+
+A.6. Stockfish and AlphaZero Setup
+
+Stockfish We use Stockfish 16 (the version from De- cember 2023) throughout the paper. When we play, we use the oracle we used for training, which is an unconventional way to play with this engine: We eval- uate each legal move in the position for 50ms, and return the best move based on these scores. This is not entirely equivalent to a standard thinking time of 50ms times the number of legal moves per position, as we force Stockfish to spend 50ms on moves that could be uninteresting and unexplo
+
+red. We chose to keep this setup to have a comparison to the oracle we train on. Note that, when comparing the legal moves in a given position, we do not clear Stockfish’s cache between the moves. Therefore, due to the way the cache works, this biases the accuracy of Stockfish’s
+
+Our codebase is based on JAX (Bradbury et al., 2018) and the DeepMind JAX Ecosystem (DeepMind et al., 2020; Hennigan et al., 2020). We used 4 Tensor Pro- cessing Units (V5) per model for the ablation exper- iments. We used 128 Tensor Processing Units (V5) per model to train our large (9M, 136M and 270M) models. We used a single Tensor Processing Unit (V3) per agent for our Elo tournament.
+
+B. Additional Results
+
+B.1. Loss Curves
+
+In Figure A3 we show the train and test loss curves (and the evolution of the puzzle accuracy) for the large models from Section 3.1. We observe that none of the
+
+13
+
+Grandmaster-Level Chess Without Search
+
+(a) Training Loss  (b) Test Loss  (c) Puzzle Accuracy 
+
+Figure A3 | Train and test loss curves and puzzle accuracy over time for the models from Section 3.1. We observe no overfitting, which justifies always using the fully trained model in our evaluations.
+
+Prediction Target | Relative Tournament Elo |  | Same # | of Games in Dataset | Same # of Data Points || Action-Value |  | +492 (+31) | +252 (+22) |
+| State-Value |  | +257 (+23) | +264 (+22) |
+| Behavioral-Cloning |  | 0 (+28) | 0 (+24) |
+
+Table A2 | Ranking the policies that arise from our three different predictors by having them play against each other in a tournament and computing relative Elo rankings (200 games per pairing; i.e., 600 games per column). When constructing the training data for all three predictors based on the same number of games (middle column), the action-value dataset is much larger than the state-value / behavioral cloning set, which leads to a stronger policy. When correcting for this by forcing the same
+
+number of training data points for all three (right column), the difference between state- and action-value prediction disappears.
+
+models overfit and that larger models improve both the training and the test loss.
+
+In Figure A4 we visualize the train and test loss curves for the scaling experiment from Section 3.3. In line with the results shown in the main paper we observe that on the smallest training set, models with ≥ 7M parameters start to overfit, but not for the larger training sets. Except for the overfitting cases we ob- serve that larger models improve both the training and test loss, regardless of training set size, and that larger training set size improves the test loss when keeping the model
+
+size constant.
+
+B.2. Predictor-Target Comparison
+
+In Figure A5 we compare the puzzle accuracy for the three different predictor targets (action-values, state- values, or best action) trained on 1 million games. As discussed in the main text, for a fixed number of games
+
+we have very different dataset sizes for state-value pre- diction (roughly 55 million states) and action-value prediction (roughly 1.6 billion states); see Table A1 for all dataset sizes. It seems plausible that learning action-values might pose a slightly harder learning problem, leading to slightly slower initial learning, but eventually this is compensated for by having much more data to train on compared to state-value learn- ing (see Figure A5, which shows this trend). Also note that since
+
+we use the same time-budget per Stockfish call, all action-values for one state use more Stockfish computation time in total (due to one call per action) when compared to state-values (one call per board). To control for the effect of dataset size, we train all three predictors (9M parameter model) on a fixed set of 40 million data points. Results are shown in Figure A6. As the results show, the state-value pol- icy in this case slightly outperforms the action-value policy, except for action-ran
+
+king (Kendall’s 𝜏), which makes sense since the action-value predictor is im- plicitly trained to produce good action rankings. To see how this translates into playing-strength, we pit all three policies (AV, SV, BC) against each other and determine their relative Elo rankings. Table A2 shows that when not controlling for the number of training data points, the action-value policy is strongest (in line with the findings in Table 2 and Figure A5), but when controlling for the number of training d
+
+ata points the action-value and state-value policy perform almost identical (in line with Figure A6).
+
+Throughout all these results we observe lower per- formance of the behavioral cloning policy, despite be- ing trained on a comparable number of datapoints as the state-value policy. The main hypothesis for this is that the amount of information in the behavioral cloning dataset is lower than the state value dataset, since we throw away any information in the state- or action-values beyond the index of the oracle action. We suspect that training on the full action distribution
+
+14
+
+Grandmaster-Level Chess Without Search
+
+(b) Test Loss
+
+Figure A4 | Loss curves when scaling model size and training set size.
+
+(a) Kendall’s 𝜏  (b) Puzzles Accuracy (%)  (c) Action Accuracy (%)
+
+Figure A5 | Comparison of the three different prediction targets (action-value, state-value, and behavioral cloning) train on the datasets generated from 1 million games. Note that this means that the action-value network is trained on roughly 30 times more data than the other two (cf. Table A1). Action-value learning (trained on 1.6B action-values) learns slightly slower but outperforms the other two variants in the long run (which are trained on roughly 55M states / best actions). Behavioral-c
+
+loning falls significantly short of state-value learning, even though both are trained on virtually the same amount of data.
+
+15
+
+Grandmaster-Level Chess Without Search
+
+(a) Kendall’s 𝜏  (b) Puzzles Accuracy (%)  (c) Action Accuracy (%)
+
+Figure A6 | Comparison of the three different prediction targets (action-value, state-value, and behavioral cloning) trained on exactly the same number of data points (40M). The superiority of action-value learning over state-value learning disappears (or even reverses to some degree), except when measuring the action-ranking correlation (Kendall’s 𝜏) which the action-value policy is indirectly trained to perform well on.
+
+of the oracle (with cross-entropy loss), rather than the best action only would largely close this gap, but we consider this question beyond the scope of this paper and limit ourselves to simply reporting the observed effect in our setting.
+
+B.3. Polyak Averaging
+
+We investigate the impact of Polyak averaging, an optimization technique where parameters are set to a weighted average over the last iterations rather than just using the most recent value, using the same setup as for our ablation experiments (see Appendix A.3). When using Polyak averaging with an exponential moving average decay factor of 0.99, we obtain a Kendall’s 𝜏 of 0.259, a puzzle accuracy of 83.3%, and an action accuracy of 63.0%. In contrast, standard evaluation, obtains a Kendall’s 𝜏
+
+of 0.258, a puzzle accuracy of 83.1%, and an action accuracy of 62.8%. Thus, we use Polyak averaging for all experiments.
+
+it frequently sacrifices material for long-term strategic gain. The agent plays optimistically: it prefers moves that give opponents difficult decisions to make even if they are not always objectively correct. It values king safety highly in that it only reluctantly exposes its own king to danger but also frequently sacrifices material and time to expose the opponent’s king. For example 17 .. Bg5 in game B.5.1 encouraged its op- ponent to weaken their king position. Its style incor- porates stra
+
+tegic motifs employed by the most recent neural engines (Sadler and Regan, 2019; Silver et al., 2017). For example it pushes wing pawns in the mid- dlegame when conditions permit (see game B.5.2). In game B.5.3 our agent executes a correct long-term exchange sacrifice. In game B.5.4 the bot uses a motif of a pin on the back rank to justify a pawn sacrifice for long term pressure. Game B.5.5 features a piece sacrifice to expose its opponent’s king. The sacrifice is not justified according to Stoc
+
+kfish although the opponent does not manage to tread the fine line to a permanent advantage and blunders six moves later with Bg7.
+
+B.4. Tactics
+
+In Figure A7, we analyze the tactics learned by our 270M transformer used against a human with a blitz Elo of 2145. We observe that our model has learned to sacrifice material when it is advantageous to build a longer-term advantage.
+
+B.5. Playing Style
+
+We recruited chess players of National Master level and above to analyze our agent’s games against bots and humans on the Lichess platform. They made the following qualitative assessments of its playing style and highlighted specific examples (see Figure A8). Our agent has an aggressive enterprising style where
+
+Our agent has a distinct playing style to Stockfish: one analyzer commented “it feels more enjoyable than playing a normal engine”, “as if you are not just hope- lessly crushed”. Indeed it does frequently agree with Stockfish’s move choices suggesting that our agent’s action-value predictions match Stockfish’s. However the disagreements can be telling: the piece sacrifice in the preceding paragraph is such an example. Also, game B.5.6 is interesting because our agent makes moves that Stockfish s
+
+trongly disagrees with. In partic- ular our agent strongly favours 18 .. Rxb4 and believes black is better, in contrast Stockfish believes white is better and prefers Nd4. Subsequent analysis by the masters suggests Stockfish is objectively correct in this instance. Indeed on the very next move our agent has
+
+16
+
+Grandmaster-Level Chess Without Search
+
+Human (2145 Elo)
+
+270M Transformer
+
+Human (2145 Elo)
+
+270M Transformer
+
+(a) Blunder (Bd4 was best)
+
+(b) Inaccuracy (d4 was best)
+
+(c) Checkmate is now un- avoidable (Bf2 was best)
+
+Figure A7 | Example of the learned tactics for our 270M transformer (vs. a human player with a blitz Elo of 2145). Our model decides to sacrifice two pawns since the white bishop will not be able to prevent it from promoting one of the pawns. The individual subfigure captions contain the Stockfish analysis from Lichess (i.e., our model plays optimally).
+
+17
+
+Grandmaster-Level Chess Without Search
+
+(a) King weakening
+
+(b) Wing pawn push
+
+(c) Exchange sacrifice for long term compensation
+
+(d) Long term sacrifice
+
+(e) Exposing the opponent’s king
+
+(f) Disagreement with Stockfish
+
+(g) Optimistic blunder
+
+Figure A8 | Examples of our 270M transformer’s playing style against online human opponents.
+
+18
+
+Grandmaster-Level Chess Without Search
+
+reversed its opinion and agrees with Stockfish.
+
+B.5.4. Long term sacrifice game
+
+Our agent’s aggressive style is highly successful against human opponents and achieves a grandmaster- level Lichess Elo of 2895. However, we ran another instance of the bot and allowed other engines to play it. Its estimated Elo was far lower, i.e., 2299. Its ag- gressive playing style does not work as well against engines that are adept at tactical calculations, par- ticularly when there is a tactical refutation to a sub- optimal move. Most losses against bots can be ex- plained by just one tac
+
+tical blunder in the game that the opponent refutes. For example Bxh3 in game B.5.7 loses a piece to g4.
+
+Finally, the recruited chess masters commented that our agent’s style makes it very useful for opening reper- toire preparation. It is no longer feasible to surprise human opponents with opening novelties as all the best moves have been heavily over-analyzed. Modern opening preparation amongst professional chess play- ers now focuses on discovering sub-optimal moves that pose difficult problems for opponents. This aligns ex- tremely well with our agent’s aggressive, enterprising playing style wh
+
+ich does not always respect objective evaluations of positions.
+
+B.5.1. King weakening game
+
+1. e4 c5 2. Nf3 Nc6 3. Bb5 g6 4. O-O Bg7 5. c3 Nf6 6. Re1 O-O 7. d4 d5 8. e5 Ne4 9. Bxc6 bxc6 10. Nbd2 Nxd2 11. Bxd2 Qb6 12. dxc5 Qxc5 13. h3 Qb5 14. b4 a5 15. a4 Qc4 16. Rc1 Bd7 17. Bg5 f6 18. Bd2 Bf5 19. exf6 exf6 20. Nd4 Bd7 21. Nb3 axb4 22. cxb4 Qh4 23. Nc5 Bf5 24. Ne6 Rfc8 25. Nxg7 Kxg7 26. Re7+ Kh8 27. a5 Re8 28. Qe2 Be4 29. Rxe8+ Rxe8 30. f3 1-0
+
+1. d4 d5 2. c4 e6 3. Nf3 Nf6 4. Nc3 Bb4 5. Bg5 dxc4 6. e4 b5 7. a4 Bb7 8. axb5 Bxe4 9. Bxc4 h6 10. Bd2 Bb7 11. O-O O-O 12. Be3 c6 13. bxc6 Nxc6 14. Qb3 Qe7 15. Ra4 a5 16. Rd1 Rfd8 17. d5 exd5 18. Nxd5 Nxd5 19. Rxd5 Rxd5 20. Bxd5 Rd8 21. Ra1 a4 22. Rxa4 Qd7 23. Bc4 Qd1+ 24. Qxd1 Rxd1+ 25. Bf1 Ba5 26. Rc4 Rb1 27. Rc2 Nb4 28. Rc5 Nc6 29. Bc1 Bb4 30. Rc2 g5 31. h4 g4 32. Nh2 h5 33. Bd3 Ra1 34. Nf1 Ne5 35. Be2 Be4 36. Rc8+ Kh7 37. Be3 Re1 38. Bb5 Bd3 39. Bxd3+ Nxd3 40. Rd8 Nxb2 41. Rd5 Be7 42. Rd7 Bx
+
+h4 43. g3 Bf6 44. Rxf7+ Kg6 45. Rxf6+ Kxf6 46. Bd4+ Kg5 47. Bxb2 Rb1 48. Bc3 Kf5 49. Kg2 Rb3 50. Ne3+ Ke4 51. Bf6 Rb5 52. Kf1 Rb6 53. Bc3 Rb3 54. Bd2 Kd3 55. Be1 Rb5 56. Ng2 Ke4 57. Ke2 Rb2+ 58. Bd2 Rc2 59. Ne3 Ra2 60. Nc4 Kd4 61. Nd6 Ke5 62. Ne8 Kf5 63. Kd3 Ra6 64. Bc3 Rc6 65. Bb4 Kg6 66. Nd6 Ra6 67. Bc5 Ra5 68. Bd4 Ra6 69. Nc4 Ra4 70. Nb6 Ra5 71. Ke4 h4 72. gxh4 Kh5 73. Bf6 Ra2 74. Ke3 Ra3+ 75. Ke2 g3 76. Nd5 Ra2+ 77. Kf3 gxf2 78. Nf4+ Kh6 79. Kg2 f1=Q+ 80. Kxf1 Rc2 81. Bg5+ Kh7 82. Ne2 Kg6 83
+
+. Kf2 Ra2 84. Kf3 Ra4 85. Ng3 Rc4 86. Bf4 Rc3+ 87. Kg4 Rc4 88. h5+ Kf6 89. Nf5 Ra4 90. Ne3 Ra5 91. Nc4 Ra4 92. Ne5 Kg7 93. Kf5 Ra5 94. Kg5 Rb5 95. Kg4 Rb1 96. Kf5 Rb5 97. Ke4 Ra5 98. h6+ Kh7 99. Bd2 Ra2 100. Be3 Ra6 101. Ng4 Ra3 102. Bd2 Ra2 103. Bf4 Ra5 104. Kf3 Rf5 105. Ke3 Kg6 106. Ke4 Rh5 107. Kf3 Rh3+ 108. Kg2 Rh5 109. Kg3 Ra5 110. Be3 Ra3 111. Kf3 Rb3 112. Ke4 Rb4+ 113. Bd4 Ra4 114. Ke5 Rc4 115. Kd5 Ra4 116. Ke4 Rb4 117. Kd3 Ra4 118. Kc3 Ra3+ 119. Kc4 Rg3 120. Ne3 Rh3 121. Kd5 Rxh6 122. Bb
+
+6 Rh3 123. Nc4 Rh5+ 124. Ke6 Rg5 125. Nd2 Rg2 126. Nf1 Rb2 127. Bd8 Re2+ 128. Kd5 Re1 129. Ne3 Rxe3 130. Bh4 Kf5 131. Bf2 Rd3+ 132. Kc4 Ke4 133. Bc5 Rc3+ 134. Kxc3 1/2-1/2
+
+B.5.2. Wing pawn push game
+
+B.5.5. Expose king game
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Ng3 c5 6. Bb5+ Bd7 7. Bxd7+ Nbxd7 8. dxc5 Qa5+ 9. Qd2 Qxc5 10. Nf3 h5 11. O-O h4 12. Ne2 h3 13. g3 e5 14. Nc3 Qc6 15. Qe2 Bb4 16. Bd2 O-O 17. Rae1 Rfe8 18. Ne4 Bxd2 19. Qxd2 Nxe4 0-1
+
+1. e4 c5 2. Nf3 Nc6 3. Na3 Nf6 4. e5 Nd5 5. d4 cxd4 6. Nb5 a6 7. Nbxd4 g6 8. Bc4 Nc7 9. Nxc6 bxc6 10. Ng5 Ne6 11. Nxf7 Kxf7 12. Bxe6+ Kxe6 13. Bd2 Kf7 14. Qf3+ Kg8 15. e6 dxe6 16. O-O-O Qd5 17. Qe3 Bg7 18. Bc3 Qxa2 19. Rd8+ Kf7 20. Qf4+ Bf6 21. Rxh8 Qa1+ 22. Kd2 Qxh1 23. Bxf6 exf6 24. Qc7+ 1-0
+
+B.5.3. Exchange sacrifice game
+
+1. d4 d5 2. c4 e6 3. Nc3 Bb4 4. cxd5 exd5 5. Nf3 Nf6 6. Bg5 h6 7. Bh4 g5 8. Bg3 Ne4 9. Rc1 h5 10. h3 Nxg3 11. fxg3 c6 12. e3 Bd6 13. Kf2 h4 14. g4 Bg3+ 15. Ke2 O-O 16. Kd2 Re8 17. Bd3 Nd7 18. Kc2 Rxe3 19. Kb1 Qe7 20. Qc2 Nf8 21. Rhf1 Ne6 22. Bh7+ Kg7 23. Bf5 Rxf3 24. gxf3 Nxd4 25. Qd3 Nxf5 26. gxf5 Qe5 27. Ka1 Bxf5 28. Qe2 Re8 29. Qxe5+ Rxe5 30. Rfd1 Bxh3 31. Rc2 Re3 32. Ne2 Bf5 33. Rcd2 Rxf3 34. Nxg3 hxg3 0-1
+
+B.5.6. Stockfish disagreement game
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e6 6. Ndb5 d6 7. Bf4 e5 8. Bg5 a6 9. Na3 b5 10. Nd5 Qa5+ 11. Bd2 Qd8 12. Bg5 Be7 13. Bxf6 Bxf6 14. c4 b4 15. Nc2 Rb8 16. g3 b3 17. axb3 Rxb3 18. Ncb4 Rxb4 19. Nxb4 Nxb4 20. Qa4+ Kf8 21. Qxb4 g6 22. Bg2 h5 23. h4 Kg7 24. O-O g5 25. hxg5 Bxg5 26. f4 Be7 27. fxe5 dxe5 28. Qc3 Bc5+ 29. Kh2 Qg5 30. Rf5
+
+19
+
+Grandmaster-Level Chess Without Search
+
+Bxf5 31. Qxe5+ Qf6 32. Qxf6+ Kxf6 33. exf5 Kg5 34. Bd5 Rb8 35. Ra2 f6 36. Be6 Kg4 37. Kg2 Rb3 38. Bf7 Rxg3+ 39. Kf1 h4 40. Ra5 Bd4 41. b4 h3 42. Bd5 h2 43. Bg2 Rb3 44. Rxa6 Rb1+ 45. Ke2 Rb2+ 0-1
+
+B.5.7. Blunder game
+
+1. b3 e5 2. Bb2 Nc6 3. e3 d5 4. Bb5 Bd6 5. Bxc6+ bxc6 6. d3 Qg5 7. Nf3 Qe7 8. c4 Nh6 9. Nbd2 O-O 10. c5 Bxc5 11. Nxe5 Bb7 12. d4 Bd6 13. O-O c5 14. Qh5 cxd4 15. exd4 Rae8 16. Rfe1 f6 17. Nd3 Qf7 18. Qf3 Bc8 19. h3 Nf5 20. g3 Ne7 21. Bc3 Bxh3 22. g4 f5 23. Qxh3 fxg4 24. Qxg4 h5 25. Qe6 g5 26. Qxf7+ Rxf7 27. Bb4 Ref8 28. Bxd6 cxd6 29. b4 Nf5 30. Re6 Kg7 31. Rd1 Rc7 32. Nf3 g4 33. Nd2 h4 34. Nb3 Rc2 35. Nf4 g3 36. Nh5+ Kh7 37. fxg3 Nxg3 38. Nxg3 Rg8 39. Rd3 Rxa2 40. Rxd6 Rb2 41. Rxd5 Rxg3+ 42. Rxg3
+
+hxg3 43. Nc5 Kg6 44. b5 Rxb5 45. Kg2 a5 46. Kxg3 a4 47. Rd6+ Kf5 48. Nxa4 Rb3+ 49. Kf2 Rh3 50. Nc5 Kg5 51. Rc6 Kf5 52. d5 Ke5 53. d6 Rh2+ 54. Kg3 Rd2 55. d7 Rxd7 56. Nxd7+ Ke4 57. Rd6 Ke3 58. Nf6 Ke2 59. Ng4 Ke1 60. Kf3 Kf1 61. Rd1# 1-0
+
+20
