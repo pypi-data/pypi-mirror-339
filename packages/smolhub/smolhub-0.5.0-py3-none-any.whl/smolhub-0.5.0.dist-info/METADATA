@@ -1,0 +1,57 @@
+Metadata-Version: 2.4
+Name: smolhub
+Version: 0.5.0
+Author: Yuvraj Singh
+Author-email: yuvraj.mist@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+Requires-Dist: transformers
+Requires-Dist: datasets
+Requires-Dist: wandb
+Requires-Dist: tqdm
+Requires-Dist: pyyaml
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+
+# SmolHub
+
+A lightweight package for fine-tuning language models using LoRA (Low-Rank Adaptation).
+
+## Installation
+
+```bash
+pip install smolhub
+```
+
+## Usage
+
+```python
+from smolhub.scripts.finetune import SFTTrainer
+from smolhub.scripts.lora import LoRAModel
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# Load model and tokenizer
+model = AutoModelForCausalLM.from_pretrained("openai-community/gpt2")
+tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2")
+
+# Apply LoRA
+lora_model = LoRAModel(model)
+
+# Initialize trainer and train
+trainer = SFTTrainer(
+    model=lora_model,
+    train_dataloader=train_dataloader,
+    val_dataloader=val_dataloader,
+    test_dataloader=test_dataloader,
+    optimizer=optimizer,
+    scheduler=scheduler
+)
+
+trainer.train()
+```
