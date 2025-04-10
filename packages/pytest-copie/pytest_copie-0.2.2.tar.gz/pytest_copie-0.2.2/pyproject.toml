@@ -1,0 +1,116 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pytest-copie"
+version = "0.2.2"
+description = "The pytest plugin for your copier templates 📒"
+keywords = [
+  "Python",
+  "pytest",
+  "pytest-plugin",
+  "copier"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+requires-python = ">=3.8"
+dependencies = [
+  "deprecated>=1.2.14",
+  "copier",
+  "pytest",
+  "plumbum",
+]
+
+[[project.authors]]
+name = "Pierrick Rambaud"
+email = "pierrick.rambaud49@gmail.com"
+
+[project.license]
+text = "MIT"
+
+[project.readme]
+file = "README.rst"
+content-type = "text/x-rst"
+
+[project.urls]
+Homepage = "https://github.com/12rambau/pytest-copie"
+
+[project.entry-points."pytest11"]
+copie = "pytest_copie.plugin"
+
+[project.optional-dependencies]
+test = [
+  "pytest",
+  "pytest-cov",
+  "pytest-deadfixtures"
+]
+doc = [
+  "sphinx>=6.2.1",
+  "sphinx-immaterial",
+  "sphinx-copybutton",
+  "sphinx-autoapi",
+  "sphinxemoji",
+]
+
+[tool.hatch.build.targets.wheel]
+only-include = ["pytest_copie"]
+
+[tool.hatch.envs.default]
+dependencies = [
+  "pre-commit",
+  "commitizen",
+  "nox[uv]"
+]
+post-install-commands = ["pre-commit install"]
+
+[tool.commitizen]
+tag_format = "v$major.$minor.$patch$prerelease"
+update_changelog_on_bump = false
+version = "0.2.2"
+version_files = [
+    "pyproject.toml:version",
+    "pytest_copie/__init__.py:__version__",
+    "docs/conf.py:release",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "demo_template"]
+
+[tool.ruff]
+line-length = 100
+fix = true
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "D", "RUF"]
+ignore = [
+  "E501",  # line too long | Black take care of it
+  "D212",  # Multi-line docstring | We use D213
+  "D101",  # Missing docstring in public class | We use D106
+]
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.coverage.run]
+source = ["pytest_copie"]
+
+[tool.mypy]
+scripts_are_modules = true
+ignore_missing_imports = true
+install_types = true
+non_interactive = true
+warn_redundant_casts = true
+
+[tool.codespell]
+ignore-words-list = "copie"
