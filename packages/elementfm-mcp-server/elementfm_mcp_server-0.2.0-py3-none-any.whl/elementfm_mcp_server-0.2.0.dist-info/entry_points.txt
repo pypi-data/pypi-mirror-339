@@ -1,0 +1,2 @@
+[console_scripts]
+elementfm_mcp_server = elementfm_mcp_server.server:main
