@@ -1,0 +1,14 @@
+config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+config/settings.toml,sha256=xnMFDn-9pmgJApHx8wRQNuU2KiFON7nGttiLRpZAbEU,2001
+url_revive/.secrets.toml,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+url_revive/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+url_revive/archive_reader.py,sha256=e2cXtn0klldZtjjuA1miPf4aPl0oY-xpxEvyAA84U-s,3426
+url_revive/cli_parser.py,sha256=oKeNywvY4QPLBOgnrnwOzuYdKb-YSYCoSwRYKpPKG70,3186
+url_revive/config.py,sha256=m4AF3b-3OPrgwQ3igWKnTmc2uf66Cxr_4kYX7W446yY,186
+url_revive/main.py,sha256=WFz9e1C2WG2eooafhr23x44f3DnACjyP4LAyzMn-Gho,3162
+url_revive/networking.py,sha256=UPiSpktkLUZmdefw3CzlEOylDJfQnxuBXWWlsKoZS9k,2271
+url_revive-0.1.1.dist-info/LICENSE,sha256=LrhgYZ3RzAj5-1yJkW-oSojOMsY-lVORpe0ML7Utkrc,1073
+url_revive-0.1.1.dist-info/METADATA,sha256=M570XnYwBIh33h_nz4NpyeWePNiD8DNtkvwoEr3L2DQ,3911
+url_revive-0.1.1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+url_revive-0.1.1.dist-info/entry_points.txt,sha256=OLiqeIYur3o0-PQD3kmsEOb1mqOek-32WyP0KkPqx9c,51
+url_revive-0.1.1.dist-info/RECORD,,

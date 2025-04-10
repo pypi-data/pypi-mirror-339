@@ -1,0 +1,3 @@
+[console_scripts]
+url-revive=url_revive.main:main
+
