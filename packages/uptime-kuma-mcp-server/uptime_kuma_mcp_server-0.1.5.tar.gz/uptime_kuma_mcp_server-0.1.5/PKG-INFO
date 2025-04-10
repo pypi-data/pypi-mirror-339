@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: uptime-kuma-mcp-server
+Version: 0.1.5
+Summary: Uptime Kuma MCP Server for managing monitors
+Project-URL: Homepage, https://github.com/camusama/uptime-kuma-mcp-server
+Author-email: Marquez Yang <marquez.yang@foxmail.com>
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: dotenv>=0.9.9
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: uptime-kuma-api>=1.2.1
+Description-Content-Type: text/markdown
+
+# Uptime Kuma MCP Server
+
+A server for managing Uptime Kuma monitors via MCP protocol.
+
+## Installation
+
+```bash
+pip install uptime-kuma-mcp-server
+```
