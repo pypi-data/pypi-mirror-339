@@ -1,0 +1,2 @@
+[console_scripts]
+uboot-env = py_uboot_env.cli:main
