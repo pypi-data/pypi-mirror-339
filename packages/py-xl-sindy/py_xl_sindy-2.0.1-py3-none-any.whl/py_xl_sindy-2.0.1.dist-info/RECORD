@@ -1,0 +1,14 @@
+xlsindy/__init__.py,sha256=PYGxFwwzSRdcqdSW_hkc2M_OTQrmVfU9DrwFr31w9co,278
+xlsindy/catalog_gen.py,sha256=QSoxd2GuhFDIvWsiLebZt2Gvlxsa5ofKC6KEjfm0hH0,18445
+xlsindy/dynamics_modeling.py,sha256=ngp3TViUVwGtes8q01oBzQ37CZMvQHtU3UsoiaNL9YY,15106
+xlsindy/euler_lagrange.py,sha256=5GjQ4c9tgX3SH7OC6xDKr5aqg31-ucYB1EswB7xxrPE,4632
+xlsindy/optimization.py,sha256=Sn9m53CdSoRJy36OK35b01h3Bwq2lo0Pr2uqW_SEUnQ,7073
+xlsindy/render.py,sha256=m19FV54eSDZqVlUahmNtCowt7hoSPlzDodUgH_NuNNE,4362
+xlsindy/result_formatting.py,sha256=RfTZi7Ut--yJtAMUmr4JcF3ZN5z6uz-V6Se9_tk1mSQ,2080
+xlsindy/simulation.py,sha256=F-n0VDbOlzetgJXCRSzBYv8QR6UuPUB-dilLUCJ82ik,3816
+xlsindy/sindy_util.py,sha256=QTHYtr2Y2v8xObi-oHk55geQIfo2K5K0uRryKOai2rA,162
+xlsindy/utils.py,sha256=zAaKRfABXyuPh0MgnYbdJqgNbgJHc73vSRRlmE2zloY,1176
+py_xl_sindy-2.0.1.dist-info/LICENSE,sha256=6mUaIHgEuFHcZbVG6A-drwHdv54IligO2X9SFx4v18M,1073
+py_xl_sindy-2.0.1.dist-info/METADATA,sha256=aTxbTNUWll_0iQRZmkx3QeLCdKvfF2-porvsQkWbCr4,2519
+py_xl_sindy-2.0.1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+py_xl_sindy-2.0.1.dist-info/RECORD,,
