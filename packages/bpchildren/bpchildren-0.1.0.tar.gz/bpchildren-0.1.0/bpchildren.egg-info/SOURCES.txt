@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+bpchildren/__init__.py
+bpchildren/__main__.py
+bpchildren.egg-info/PKG-INFO
+bpchildren.egg-info/SOURCES.txt
+bpchildren.egg-info/dependency_links.txt
+bpchildren.egg-info/entry_points.txt
+bpchildren.egg-info/requires.txt
+bpchildren.egg-info/top_level.txt
