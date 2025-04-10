@@ -1,0 +1,7 @@
+bw_essentials/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bw_essentials/s3_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bw_essentials/s3_utils/s3_utils.py,sha256=2H4HgkLi7hUdJtDs9GIMHdTm4963ArbCBeuWNp-PXxI,5140
+bw_essentials-0.1.3.dist-info/METADATA,sha256=MXMEzyRqtk5Dh-VW5fTofCeuCLRkmRBYJNN1t-nUmIc,662
+bw_essentials-0.1.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+bw_essentials-0.1.3.dist-info/top_level.txt,sha256=gDc5T_y5snwKGXDQUusEus-FEt0RFwG644Yn_58wQOQ,14
+bw_essentials-0.1.3.dist-info/RECORD,,
