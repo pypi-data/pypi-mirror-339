@@ -1,0 +1,9 @@
+tangent_client/__init__.py,sha256=d1TNia2ZrizOYKJEG-jrGKGzf7YAWgWxtg6uyWdPUqk,5336
+tangent_client/_version.py,sha256=MpF6n5KgHcnAvgKnJJSahGk62qnLfROA34WIMIl04Vs,1069
+tangent_client/client.py,sha256=va9-LA3bjrMhgnUES1ITLfzaRQABC91DgncSrCj-6Pk,10737
+tangent_client/logging.py,sha256=zOWyePcENjoDWFfCCbKHWTqdRRGqpYG2v-UnqCih-HU,473
+tangent_client/logging.yaml,sha256=WQQLhv5MxOZvvMoCTSpQYHignZjQuqtG-JlNQW6CXi0,8191
+tangent_client/utils/__init__.py,sha256=Y-5Bck5-EknoWJcGkRJUP3lfTIauSe5cG1Lebncxzkc,28
+tangent_client-0.1.0.dist-info/METADATA,sha256=AMLst7odYA3C8tzngn83ghwtylHKa1rdyxJv5dAUZBc,1462
+tangent_client-0.1.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+tangent_client-0.1.0.dist-info/RECORD,,
