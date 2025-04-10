@@ -1,0 +1,10 @@
+extended_sklearn_metrics/__init__.py,sha256=IIAUenlLVOTtjEFsi64z3bzIBuHWmx7Vq5sjDo58MCk,246
+extended_sklearn_metrics/model_evaluation.py,sha256=XSN9Yu-xVI4KeRJb5y3zCUB5i7vU0xQVjrYtvJ46qUU,3445
+tests/__init__.py,sha256=8P-9SEzDfsZjtV0eah1ahqU1RouKJQ5sa5K_qH2xweg,39
+tests/run_tests.py,sha256=dbBZYD-BY2cdFFPdyAAsWfyO00FlpoJ1pLZkcQgFvRE,631
+tests/test_model_evaluation.py,sha256=_vg9SdRjWnN7VBB96-ArM6ssY6vNYg5TIXTJLP81pGU,4064
+extended_sklearn_metrics-0.1.8.dist-info/LICENSE,sha256=UFLj-_M3z532v55RU9Zsuf_51V9JPmawfD_P4ihTVE8,1084
+extended_sklearn_metrics-0.1.8.dist-info/METADATA,sha256=RE1XJJa8uPRDwo0PnV46TuzFYHRwxP7vtCMaYrAbPpc,3294
+extended_sklearn_metrics-0.1.8.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+extended_sklearn_metrics-0.1.8.dist-info/top_level.txt,sha256=UN7HFBc2QrM-mIyendXM9MQ2aNdx1HRMGGXmc5ZmTQo,31
+extended_sklearn_metrics-0.1.8.dist-info/RECORD,,
