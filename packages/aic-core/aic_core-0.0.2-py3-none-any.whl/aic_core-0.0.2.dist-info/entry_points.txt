@@ -1,0 +1,2 @@
+[console_scripts]
+feedly-mcp = aic_core.mcp.feedly:main
