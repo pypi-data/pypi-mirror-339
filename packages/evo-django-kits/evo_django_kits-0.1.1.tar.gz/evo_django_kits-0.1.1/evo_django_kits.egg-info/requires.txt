@@ -1,0 +1,17 @@
+django
+python-dotenv
+loguru
+django-filter
+
+[test]
+pytest
+coverage
+flake8
+black
+isort
+pytest-cov
+codecov
+mypy
+gitchangelog
+mkdocs
+GitPython
