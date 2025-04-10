@@ -1,0 +1,14 @@
+README.md
+setup.py
+PyZest.egg-info/PKG-INFO
+PyZest.egg-info/SOURCES.txt
+PyZest.egg-info/dependency_links.txt
+PyZest.egg-info/requires.txt
+PyZest.egg-info/top_level.txt
+core/__init__.py
+core/data.py
+core/download.py
+core/files.py
+core/gui.py
+core/telegram.py
+core/web.py

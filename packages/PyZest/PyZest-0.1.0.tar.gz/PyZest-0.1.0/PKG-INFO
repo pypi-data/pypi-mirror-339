@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: PyZest
+Version: 0.1.0
+Summary: Easy Python Tools
+Home-page: https://github.com/redflymeer/PyZest
+Author: RedFlyMeer
+Author-email: redflymeer@gmail.com
+Keywords: python easy http gui telegram web files
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Web
+Web working with Fetch_url and scraple_links
+Fetch_url it's get url
+Scraple link it's parse url
+# Data
+Data is list with information
+# Download
+Download it's just  download
+Download_file("Link")
+# Gui
+Gui working on PySide6
+Gui it's just a PySide6
+# Files
+Files working on json with read_lines and write_json
+# Telegram
+Telegram working on Aiogram
+And it's just aiogram 
+# Examples
+You can read code in folder examples
