@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shelect"
+version = "0.1.1"
+description = "SQL for your local CSV/JSON files"
+authors = [{name = "Sufian Rhazi", email = "sufian@gmail.com"}]
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.8"
+dependencies = [
+    "sqlglot>=26.12.0",
+]
+
+[tool.setuptools]
+packages = ["shelect"]
+
+[project.urls]
+Homepage = "https://github.com/sufianrhazi/shelect"
+Issues = "https://github.com/sufianrhazi/shelect/issues"
+
+[project.scripts]
+shelect = "shelect.cli:main"
