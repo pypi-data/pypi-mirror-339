@@ -1,0 +1,10 @@
+hydrotools._restclient>=4.1.0
+numpy>=1.20.0
+pandas
+geopandas
+pydantic
+typing_extensions
+
+[develop]
+pytest
+pytest-aiohttp
