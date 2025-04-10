@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: caravagene
+Version: 0.1.9
+Summary: Plot multi-part genetic constructs.
+Author: Zulko
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/Edinburgh-Genome-Foundry/Caravagene
+Keywords: SBOL,DNA,assembly,plot
+Description-Content-Type: text/x-rst
+License-File: LICENCE.txt
+Requires-Dist: docopt
+Requires-Dist: openpyxl
+Requires-Dist: jinja2
+Requires-Dist: pandas
+Provides-Extra: cli
+Requires-Dist: watchdog; extra == "cli"
+Dynamic: license-file
+
+Caravagene
+==========
+
+Caravagene (full documentation `here <https://edinburgh-genome-foundry.github.io/Caravagene/>`_)
+is a Python library to plot schemas of DNA constructs from a list of parts.
+
+Infos
+-----
+
+Caravagene requires `WkHTMLtoPDF <https://wkhtmltopdf.org/>`_ to be installed. On Ubuntu, install it with:
+
+.. code:: shell
+
+    apt-get install wkhtmltopdf
+
+**PIP installation:**
+
+.. code:: bash
+
+  pip install caravagene
+
+**Web documentation:** `<https://edinburgh-genome-foundry.github.io/Caravagene/>`_
+
+**Github page:** `<https://github.com/Edinburgh-Genome-Foundry/Caravagene>`_
+
+**Live demo:** `<https://cuba.genomefoundry.org/sketch_constructs>`_
+
+**License:** MIT
+
+Copyright 2017 Edinburgh Genome Foundry, University of Edinburgh
