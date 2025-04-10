@@ -1,0 +1,48 @@
+[project]
+name = "hanzo-iam"
+version = "1.29.0"
+authors = [{name = "IAM", email = "wbin90620@gmail.com"}]
+description = "Python SDK built for IAM"
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["IAM"]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests>=2.31.0",
+    "pyjwt>=2.8.0",
+    "cryptography>=41.0.7",
+    "aiohttp>=3.9.1",
+]
+
+[project.urls]
+"Home" = "https://github.com/hanzoai/iam-python-sdk"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 120
+target-version = ["py36", "py37", "py38", "py39", "py310", "py311"]
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 120
+
+select = [
+    "E", # pycodestyle errors
+    "W", # pycodestyle warnings
+    "F", # pyflakes
+    "I", # isort
+    "C", # flake8-comprehensions
+    "B", # flake8-bugbear
+]
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["I", "F"]
+unfixable = []
