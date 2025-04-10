@@ -1,0 +1,41 @@
+[project]
+name = "senschar"
+version = "25.0"
+description = "Scientific sensor image characterization package"
+license = { file = "LICENSE" }
+readme = "README.md"
+keywords = ["ccd", "imaging", "astronomy", "sensors"]
+authors = [{ name = "Michael Lesser" }, { email = "mlesser@arizona.edu" }]
+dependencies = [
+    "loguru",
+    "numpy",
+    "astropy",
+    "psutil",
+    "fastapi",
+    "uvicorn",
+    "jinja2",
+    "dash",
+    "dash-bootstrap-components",
+    "dash_daq",
+    "pandas",
+    "scipy",
+    "matplotlib",
+    "pyside6",
+    "pdfkit",
+    "markdown",
+    "pypdf",
+    "pywin32; sys_platform == 'win32'",
+    "mkdocstrings[python]>=0.18",
+]
+requires-python = ">= 3.10"
+
+[project.urls]
+Documentation = "https://senschar.readthedocs.io/"
+Repository = "https://github.com/mplesser/senschar/"
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project.scripts]
+azcammonitor = "senschar.__main__:main"
