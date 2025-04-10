@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+
+colorlog
+h5py
+numpy
+omegaconf
+pandas
+pyyaml
+safetensors
+scipy
+tensorboard
+torchaudio>=0.10.0
+tqdm
