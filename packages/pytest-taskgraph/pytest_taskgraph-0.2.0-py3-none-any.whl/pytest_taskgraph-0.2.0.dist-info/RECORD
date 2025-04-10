@@ -1,0 +1,7 @@
+pytest_taskgraph/__init__.py,sha256=PmIlc92nDPXfVc-VETMaglY7UL0eK09vj2dVTFBSOIk,72
+pytest_taskgraph/fixtures/gen.py,sha256=1TcmoHABkZBuXVAcc5tI1rjnR8C_BiMxztKi5ZwmKzA,8004
+pytest_taskgraph/fixtures/vcs.py,sha256=wPnePh3umOFOAomkaP9cVcUyrQ5vwAibT2CJmgQfbK8,4801
+pytest_taskgraph-0.2.0.dist-info/METADATA,sha256=kMssvC2HMnUKzvtDe434Oprx2fj6O38wsqFFmQRKVCY,237
+pytest_taskgraph-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pytest_taskgraph-0.2.0.dist-info/entry_points.txt,sha256=9V4zAXwEn6g4UW35HLxmnlrFHnDVEKa7Nxk1iY_QIUE,47
+pytest_taskgraph-0.2.0.dist-info/RECORD,,
