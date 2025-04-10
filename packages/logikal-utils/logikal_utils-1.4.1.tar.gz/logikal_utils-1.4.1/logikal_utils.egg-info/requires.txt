@@ -1,0 +1,8 @@
+termcolor>=2.5
+
+[docker]
+docker~=7.1
+
+[download]
+requests~=2.32
+tqdm~=4.67
