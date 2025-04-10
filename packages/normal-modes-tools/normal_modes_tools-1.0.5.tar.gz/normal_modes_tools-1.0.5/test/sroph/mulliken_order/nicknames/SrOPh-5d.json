@@ -1,0 +1,233 @@
+[
+  {
+    "Mulliken": {
+      "number": 1,
+      "symmetry": "a1"
+    },
+    "frequency, cm-1": 2407.84
+  },
+  {
+    "Mulliken": {
+      "number": 2,
+      "symmetry": "a1"
+    },
+    "frequency, cm-1": 2385.14
+  },
+  {
+    "Mulliken": {
+      "number": 3,
+      "symmetry": "a1"
+    },
+    "frequency, cm-1": 2361.02
+  },
+  {
+    "Mulliken": {
+      "number": 4,
+      "symmetry": "a1"
+    },
+    "frequency, cm-1": 1653.28
+  },
+  {
+    "Mulliken": {
+      "number": 5,
+      "symmetry": "a1"
+    },
+    "frequency, cm-1": 1472.4
+  },
+  {
+    "Mulliken": {
+      "number": 6,
+      "symmetry": "a1"
+    },
+    "frequency, cm-1": 1268.49
+  },
+  {
+    "Mulliken": {
+      "number": 7,
+      "symmetry": "a1"
+    },
+    "frequency, cm-1": 974.68
+  },
+  {
+    "Mulliken": {
+      "number": 8,
+      "symmetry": "a1"
+    },
+    "frequency, cm-1": 903.1
+  },
+  {
+    "Mulliken": {
+      "number": 9,
+      "symmetry": "a1"
+    },
+    "frequency, cm-1": 853.05
+  },
+  {
+    "Mulliken": {
+      "number": 10,
+      "symmetry": "a1"
+    },
+    "frequency, cm-1": 797.39
+  },
+  {
+    "Mulliken": {
+      "number": 11,
+      "symmetry": "a1"
+    },
+    "frequency, cm-1": 589.85
+  },
+  {
+    "Mulliken": {
+      "number": 12,
+      "symmetry": "a1"
+    },
+    "frequency, cm-1": 234.52
+  },
+  {
+    "Mulliken": {
+      "number": 13,
+      "symmetry": "a2"
+    },
+    "frequency, cm-1": 795.97
+  },
+  {
+    "Mulliken": {
+      "number": 14,
+      "symmetry": "a2"
+    },
+    "frequency, cm-1": 663.93
+  },
+  {
+    "Mulliken": {
+      "number": 15,
+      "symmetry": "a2"
+    },
+    "frequency, cm-1": 373.45
+  },
+  {
+    "Mulliken": {
+      "number": 16,
+      "symmetry": "b1"
+    },
+    "frequency, cm-1": 792.34
+  },
+  {
+    "Mulliken": {
+      "number": 17,
+      "symmetry": "b1"
+    },
+    "frequency, cm-1": 775.62
+  },
+  {
+    "Mulliken": {
+      "number": 18,
+      "symmetry": "b1"
+    },
+    "frequency, cm-1": 643.3
+  },
+  {
+    "Mulliken": {
+      "number": 19,
+      "symmetry": "b1"
+    },
+    "frequency, cm-1": 567.75
+  },
+  {
+    "Mulliken": {
+      "number": 20,
+      "symmetry": "b1"
+    },
+    "frequency, cm-1": 456.35
+  },
+  {
+    "Mulliken": {
+      "number": 21,
+      "symmetry": "b1"
+    },
+    "frequency, cm-1": 259.08
+  },
+  {
+    "Mulliken": {
+      "number": 22,
+      "symmetry": "b1"
+    },
+    "frequency, cm-1": 81.18
+  },
+  {
+    "Mulliken": {
+      "number": 23,
+      "symmetry": "b2"
+    },
+    "frequency, cm-1": 2393.1
+  },
+  {
+    "Mulliken": {
+      "number": 24,
+      "symmetry": "b2"
+    },
+    "frequency, cm-1": 2370.26
+  },
+  {
+    "Mulliken": {
+      "number": 25,
+      "symmetry": "b2"
+    },
+    "frequency, cm-1": 1620.26
+  },
+  {
+    "Mulliken": {
+      "number": 26,
+      "symmetry": "b2"
+    },
+    "frequency, cm-1": 1385.23
+  },
+  {
+    "Mulliken": {
+      "number": 27,
+      "symmetry": "b2"
+    },
+    "frequency, cm-1": 1289.95
+  },
+  {
+    "Mulliken": {
+      "number": 28,
+      "symmetry": "b2"
+    },
+    "frequency, cm-1": 1048.15
+  },
+  {
+    "Mulliken": {
+      "number": 29,
+      "symmetry": "b2"
+    },
+    "frequency, cm-1": 851.87
+  },
+  {
+    "Mulliken": {
+      "number": 30,
+      "symmetry": "b2"
+    },
+    "frequency, cm-1": 819.88
+  },
+  {
+    "Mulliken": {
+      "number": 31,
+      "symmetry": "b2"
+    },
+    "frequency, cm-1": 602.52
+  },
+  {
+    "Mulliken": {
+      "number": 32,
+      "symmetry": "b2"
+    },
+    "frequency, cm-1": 429.7
+  },
+  {
+    "Mulliken": {
+      "number": 33,
+      "symmetry": "b2"
+    },
+    "frequency, cm-1": 62.06
+  }
+]
