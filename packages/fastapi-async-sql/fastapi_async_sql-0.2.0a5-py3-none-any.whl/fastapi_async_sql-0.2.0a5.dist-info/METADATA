@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: fastapi-async-sql
+Version: 0.2.0a5
+Summary: Common utilities for Async SQL FastAPI applications
+Requires-Python: >=3.12
+Requires-Dist: fastapi-filter[sqlalchemy]<3.0.0,>=2.0.0
+Requires-Dist: fastapi-pagination<0.13.0,>=0.12.26
+Requires-Dist: fastapi<0.113.0,>=0.100.0
+Requires-Dist: inflect<8.0.0,>=7.3.1
+Requires-Dist: sqlalchemy[asyncio]>=2.0.32
+Requires-Dist: sqlmodel<0.1.0,>=0.0.21
+Description-Content-Type: text/markdown
+
+# FastAPI Async SQL
+Common utilities for Async SQL FastAPI applications
+
+## Installation
+<div class="termy">
+
+```console
+uv pip install fastapi-async-sql
+---> 100%
+```
+
+</div>
+
+## Features
+- AsyncSQLModelMiddleware: A middleware to handle database connections with AsyncSQLAlchemy
+- [SQLModel](https://sqlmodel.tiangolo.com/): A library to handle database models with Pydantic and SQLAlchemy
+- Base models for `SQLModel`:
+  - `BaseSQLModel`: A opinionated base model for SQLAlchemy models
+  - `BaseTimestampModel`: A base model with timestamps for SQLAlchemy models
+  - `BaseUUIDModel`: A base model with UUID for SQLAlchemy models
+- `BaseRepository`: A base repository to handle CRUD operations with SQLAlchemy models
+- Filtering, Sorting and Searching with [FastAPI Filter](https://fastapi-filter.netlify.app/): A library to handle filtering and sorting of data
+- Pagination with [FastAPI Pagination](https://uriyyo-fastapi-pagination.netlify.app/): A library to handle pagination of data
+
