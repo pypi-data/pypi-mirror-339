@@ -1,0 +1,2 @@
+[console_scripts]
+autogit = auto_git.cli:aic

@@ -1,0 +1,15 @@
+[project]
+name = "auto-git-tool"
+version = "1.2.4"
+description = "Git uchun avtomatlashtirilgan add, AI commit va push buyrug‘i"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [{name = "Husanboy Azamov", email = "azamovhusanboy08@gmail.com"}]
+
+[project.urls]
+Homepage = "https://github.com/Husanjonazamov/auto-git"
+Repository = "https://github.com/Husanjonazamov/auto-git"
+
+[project.scripts]
+autogit = "auto_git.cli:aic"
