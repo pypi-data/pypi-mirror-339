@@ -1,0 +1,374 @@
+Metadata-Version: 2.1
+Name: ArcusModbus
+Version: 0.2.7
+Summary: Titan IMX servo controller
+Author: Daniel Curtis
+Author-email: dwc00012@mix.wvu.edu
+Keywords: python,Arcus Titan IMX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: pymodbus
+
+ï»¿# Arcus Modbus Communication
+This document is to serve as a guide to communicating with Arcus Titan IMX servos using the Modbus TCP protocol. Specifically, it will be in Python using the ArcusModbus library (with a dependency on the pymodbus library).
+
+The library uses asynchronous programing to allow movement of multiple motors simultaneously and the checking of registers/coils while the motor is performing another task. The downside of this style of programing is that it is more complicated to write programs for it, as you must deal with the horrors of the asyncio package. This guide should help you to understand this package (if you don't already) and understand each method that the ArcusModbus library provides to help you control your motors. It will include multiple examples per section to help your understanding.
+
+# asyncio Library
+## What Is It?
+The asyncio package is a package that allows the user to write non-blocking software for different I/O devices that may have physical/software delays that the user cannot control.
+When I say blocking, I am referring to any line of code that completely halts all of the software until that line is complete. The best example of this is the time.sleep() method. It will halt the runtime for a certain amount of time specified in the argument. Another example is a while loop. You are trapped in that loop and cannot continue until its condition is met (or a condition is no longer met). In the previous non-asynchronous version of ArcusModbus, the home() and move() command would halt the program until the move/home is complete, which prevents other motors from homing/moving and will not allow you to check the motor's status, both of which are fatal flaws.
+Asyncio provides several methods to write non-blocking code, which allows multiple things to run concurrently, which is very useful when you have multiple motors you need to address at the same time. It does this through the use of its async/await syntax (which is honestly where most of the annoyance with the library comes from).
+## async/await
+To declare a function as being asynchronous, you simply need to tag on the async tag before the function:
+```py 
+import asyncio
+
+async def function(*args):
+	#function stuff 
+```
+This on its own doesn't really do much, but where it comes in handy is when using the await keyword. Let us have some other function, let's call it g(x), and we really need to wait for g(x) to finish before doing anything else in our function. Well we can say:
+```py
+import asyncio
+
+async def function(x):
+	await g(x)
+	#rest of the function
+```
+and if g(x) returns something:
+```py
+import asyncio
+
+async def function(x):
+	returnedValue = await g(x)
+	#rest of the function
+```
+Now, when function(x) is called, it will reach our line calling g(x). When it sees the await tag, it will tell our program to return to where we called function from until g(x) finishes, upon which it will return back to function to continue.
+## Calling async Functions
+If you try calling function on its own, you will get an error. This is because in asyncio you need to have what is called an event_loop in order to call async functions. There are several ways to create one, but the thing that asyncio recommend you use is asyncio.run(function(*args)). This will create and handle the event loop for you and allow you to call your function. Here's an example of that:
+```py
+import asyncio
+
+async def function(x):
+	returnedValue = await g(x)
+	print(returnedValue) #print is an example of a function where you cannot use await
+
+if __name__ == "__main__":
+	asyncio.run(function(5))
+```
+don't worry about the if statement too much, it just tells the program to start execution there. Still, it is good habit to use it.
+
+Now if you have multiple functions, or if you are using an external library (our case), it would instead be useful to call a main function that can call other functions:
+```py
+import function.py #assume this contains our function(x)
+import asyncio
+
+async def main():
+	await function(5)
+	await function(4)
+	#other main function shenanigans
+
+if __name__ == "__main__":
+	asyncio.run(main())
+```
+Notice however that I use await to call the function from main(). This means main will also get halted until function completes, so doesn't this defeat the point of what we are doing?
+Not necessarily, await is just one way to call functions if you depend on their output for something else, but we have methods to run functions concurrently if that is what you desire.
+## asyncio.create_task() and asyncio.gather()
+It should be noted that async def is called a coroutine by asyncio, and await coroutine is a task. In order to run a coroutine a corresponding task needs to be given to the event_loop, which await does. However await also tells the program to wait for the task to complete before continuing, which isn't what we want. So instead let's use asyncio.create_task(). It will create a task and give it to the event_loop, but it will not tell the program to wait, so for example:
+```py
+import function.py
+import asyncio
+
+async def main():
+	task1 = asyncio.create_task(function(5))
+	task2 = asyncio.create_task(function(4))
+	
+	print("This printed while the two tasks are running simultaneously!")
+
+if __name__ == "__main__":
+	asyncio.run(main())
+```
+You can still ask these tasks to wait later if you need to, such as if their output is important but you also want to do other things while they are running:
+```py
+import function.py
+import asyncio
+
+async def main():
+	task1 = asyncio.create_task(function(5))
+	task2 = asyncio.create_task(function(4))
+	
+	print("This printed while the two tasks are running simultaneously!")
+	
+	result1 = await task1
+	result2 = await task2
+
+	print(result1)
+	print(result2)
+
+if __name__ == "__main__":
+	asyncio.run(main())
+```
+asyncio.gather() does the same thing, except you can pass multiple methods at the same time:
+```py
+async def main():
+	task = asyncio.gather(function(5), function(4))
+	
+	print("This printed while the two tasks are running simultaneously!")
+	
+	result1, result2 = await task
+
+	print(result1)
+	print(result2)
+
+if __name__ == "__main__":
+	asyncio.run(main())
+```
+That is pretty much all you need to know about asyncio to use the ArcusModbus library. That said I am heavily oversimplifying how the library works, as I have only been showing the high level methods that the library provides. There are several low level methods to get better control over your program, but they aren't needed for this so teach them to yourself as needed.
+# ArcusModbus
+## Setup
+First things first, you need to configure your motor using the Titan 6.0 software. I will not be going in depth on this, as they already have documentation on it. The most important points to remember are to change the protocol to Modbus TCP and to use the correct IP address, which can be found by opening command prompt and using ipconfig /all. But on to the actual software:
+
+Download the latest version using
+> pip install ArcusModbus --upgrade
+
+From there you can boot up your favorite code editor and begin writing code. Remember to import ArcusModbus AND asyncio, as the code will not work without it.
+
+## Probes Class
+This class includes all the methods and variables needed to control your probe, and to declare it you need to feed it three pieces of information:
+```py
+import ArcusModbus as Ar
+import asyncio
+
+if __name__ == "__main__":
+	probe1 = Ar.Probes(IP, Insert Radius, Counts per mm)
+```
+The first one is obvious, just the IP you configured from earlier. The insert radius is how far the probe can move (in mm) from its homed position, if you try moving past that an exception is thrown. Finally you have counts per mm, which as the name implies is how many counts in the motor correspond to 1 mm of linear movement of the probe. On its own, it should be around 3600. I determine this measurement manually with calipers and a sharpie.
+These values are internally stored as Probes.ip, Probes.r, and Probes.CPMM respectively, in case you ever feel the need to access these.
+Now that we have a Probes object, we can begin to manipulate it using the methods provided:
+## Probes.connect()
+This function will use the given IP to create an Asynchronous Modbus Client from the pymodbus library, and will then connect to the probe using said client. This function should be awaited, as every other function depends on this client.
+```py
+import ArcusModbus as Ar
+import asyncio
+
+async def main(probe: Probes):
+	await probe.connect()
+	print("connected!")
+
+if __name__ == "__main__":
+	probe1 = Ar.Probes(IP, Insert Radius, Counts per mm)
+	asyncio.run(main(probe1))
+
+```
+Also I choose to specify a main() function that only accepts one probe object. This is just for simplicity, you can have any amount of probes as an argument:
+```py
+async def main(*probe: Probes):
+```
+And handle it accordingly.
+## Probes.disconnect()
+Pretty self explanatory what this does. It turns off the probe then severs the connection. It also must be awaited.
+```py
+import ArcusModbus as Ar
+import asyncio
+
+async def main(probe: Probes):
+	await probe.connect()
+	print("connected!")
+
+	await asyncio.sleep(5) #just a quick way to pause time
+	#if you place this in another function it will return control to whomever
+	#called it for 5 seconds before requesting control back.
+
+	await probe.disconnect()
+
+if __name__ == "__main__":
+	probe1 = Ar.Probes(IP, Insert Radius, Counts per mm)
+	asyncio.run(main(probe1))
+```
+## Probes.initiate(speed: int, acceleration: int)
+Takes in a specified speed and acceleration and will turn the probe on with those variables (along with setting its jerk and homing mode but the user doesn't need to worry about that). It does so by calling another function which we will talk about in a moment. This is the last function that must be awaited.
+```py
+import ArcusModbus as Ar
+import asyncio
+
+async def main(probe: Probes):
+	await probe.connect()
+	print("connected!")
+	await probe.initiate(300, 4000)
+	print("motor on!")
+
+	await asyncio.sleep(5) #just a quick way to pause time
+	#if you place this in another function it will return control to whomever
+	#called it for 5 seconds before requesting control back.
+
+	await probe.disconnect()
+
+if __name__ == "__main__":
+	probe1 = Ar.Probes(IP, Insert Radius, Counts per mm)
+	asyncio.run(main(probe1))
+```
+## Probes.checkRegisters(*registers)
+Takes in a set of registers NOT AS A LIST, and returns a list with the values at those registers. This function does not need to be awaited (which means it can be, it just isn't a requirement). This function and the next one are mostly used internally by other functions. To check the motor status please use the Probes.motorStatus() method:
+```py
+import ArcusModbus as Ar
+import asyncio
+
+async def main(probe: Probes):
+	await probe.connect()
+	print("connected!")
+	await probe.initiate(300, 4000)
+	print("motor on!")
+
+	pos, vel = await probe.checkRegisters(0,2) #0 is position, 2 is the velocity
+
+	await asyncio.sleep(5) #just a quick way to pause time
+	#if you place this in another function it will return control to whomever
+	#called it for 5 seconds before requesting control back.
+
+	await probe.disconnect()
+
+if __name__ == "__main__":
+	probe1 = Ar.Probes(IP, Insert Radius, Counts per mm)
+	asyncio.run(main(probe1))
+```
+## Probes.writeRegisters(register, value)
+Takes in a set of registers and values AS TWO LISTS, and writes each value to its corresponding register. Also does not need to be awaited. Even if you are only writing to one register you do need to include the brackets:
+```py
+import ArcusModbus as Ar
+import asyncio
+
+async def main(probe: Probes):
+	await probe.connect()
+	print("connected!")
+	await probe.initiate(300, 4000)
+	print("motor on!")
+
+	pos, vel = await probe.checkRegisters(0,2) #0 is position, 2 is the velocity
+	
+	await probe.writeRegisters([14],[0]) #changes the encoder's value to 0
+	#really though this function shouldn't need to be called at all by the user
+
+	await asyncio.sleep(5) #just a quick way to pause time
+	#if you place this in another function it will return control to whomever
+	#called it for 5 seconds before requesting control back.
+
+	await probe.disconnect()
+
+if __name__ == "__main__":
+	probe1 = Ar.Probes(IP, Insert Radius, Counts per mm)
+	asyncio.run(main(probe1))
+```
+It shouldn't need to be said, but if the length of register and the length of value aren't equal an out of bounds index error will be thrown.
+
+## Probes.motorStatus()
+returns a 5-element array of 1s or 0s which tell you: [enabled, in position, moving, fault, homed]
+This function is also used internally a lot. It also does not need to be awaited, but you should if you actually want to read the values. The motor also sometimes will report the wrong value for in position, so keep that in mind. Furthermore, if your motor has a poorly tuned PID it may jitter around a position and keep the moved bit triggered on, which will prevent any other move operation, neither of these problems are problems with the library, rather the motor itself.
+```py
+import ArcusModbus as Ar
+import asyncio
+
+async def main(probe: Probes):
+	await probe.connect()
+	print("connected!")
+	await probe.initiate(300, 4000)
+	print("motor on!")
+
+	pos, vel = await probe.checkRegisters(0,2) #0 is position, 2 is the velocity
+	
+	await probe.writeRegisters([14],[0]) #changes the encoder's value to 0
+	#really though this function shouldn't need to be called at all by the user
+
+	status = await probe.motorStatus()
+	print(status)
+
+	await asyncio.sleep(5) #just a quick way to pause time
+	#if you place this in another function it will return control to whomever
+	#called it for 5 seconds before requesting control back.
+
+	await probe.disconnect()
+
+if __name__ == "__main__":
+	probe1 = Ar.Probes(IP, Insert Radius, Counts per mm)
+	asyncio.run(main(probe1))
+```
+## probes.home()
+This will home the motor (out of PHASMA for a v2 model) until it hits a limit switch (for now this is incorrect, it instead runs until it hits something and stalls), upon which it will set its position to 0 and the home bit to 1 (also currently wrong, it just sets a flag to true), allowing the move method to be used. This and the move method I recommend using the asyncio.create_task() method for, that way you can tell every motor to begin homing. Then I would call await to actually wait for it to finish homing.
+```py
+import ArcusModbus as Ar
+import asyncio
+
+async def main(probe: Probes):
+	await probe.connect()
+	print("connected!")
+	await probe.initiate(300, 4000)
+	print("motor on!")
+
+	pos, vel = await probe.checkRegisters(0,2) #0 is position, 2 is the velocity
+	
+	await probe.writeRegisters([14],[0]) #changes the encoder's value to 0
+	#really though this function shouldn't need to be called at all by the user
+
+	status = await probe.motorStatus()
+	print(status)
+
+	home = asyncio.create_task(probe.home())
+
+	#you can do some stuff here if you like, or if you have multiple motors tell
+	#them to home as well
+
+	await home
+
+	await asyncio.sleep(5) #just a quick way to pause time
+	#if you place this in another function it will return control to whomever
+	#called it for 5 seconds before requesting control back.
+
+	await probe.disconnect()
+
+if __name__ == "__main__":
+	probe1 = Ar.Probes(IP, Insert Radius, Counts per mm)
+	asyncio.run(main(probe1))
+```
+This method also returns True after homing, in case you want to use that for something.
+## Probe.move(distance: float)
+Specify a distance to move (in mm) and if it isn't greater than the insert radius, the motor isn't already moving, and the motor has been homed already, it will move to that distance. Keep in mind that this doesn't mean move by that amount, it means move to that position. So if you say probe.move(50) then probe.move(51), it will first move 50 mm, then move 1 mm. Once again you can use asyncio.create_task(probe.move(distance)) if you want to move multiple motors at once or check its status while moving. If you don't care to do that, you can just call await.
+```py
+import ArcusModbus as Ar
+import asyncio
+
+async def main(probe: Probes):
+	await probe.connect()
+	print("connected!")
+	await probe.initiate(300, 4000)
+	print("motor on!")
+
+	pos, vel = await probe.checkRegisters(0,2) #0 is position, 2 is the velocity
+	
+	await probe.writeRegisters([14],[0]) #changes the encoder's value to 0
+	#really though this function shouldn't need to be called at all by the user
+
+	status = await probe.motorStatus()
+	print(status)
+
+	home = asyncio.create_task(probe.home())
+
+	#you can do some stuff here if you like, or if you have multiple motors tell
+	#them to home as well
+
+	await home
+
+	await asyncio.sleep(5) #just a quick way to pause time
+	#if you place this in another function it will return control to whomever
+	#called it for 5 seconds before requesting control back.
+
+	await probe.move(50.8) #move to 2 inches
+	#rembember, it's move TO, NOT move BY.
+
+	await probe.disconnect()
+
+if __name__ == "__main__":
+	probe1 = Ar.Probes(IP, Insert Radius, Counts per mm)
+	asyncio.run(main(probe1))
+```
+## Probes.ESTOP()
+This is the final function and honestly if your code is well written you should not use this method. It force stops all movement, reports the status and any faults, then shuts down the motor. Once again, you shouldn't need to call it. If you wanted to, I would check the motor current and call ESTOP if it rapidly spikes (that said, I don't know if you can even find that over Modbus, so experiment with it if you like) or if the homing is taking an abnormal amount of time.
