@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: bw-essentials
+Version: 0.1.2
+Summary: Reusable utilities for S3, email, Data Loch, encryption, and more
+Author: Your Name
+Author-email: you@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: boto3>=1.26.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# bw-essentials
+
+A reusable utility toolkit for working with S3, email, encryption, and more in your microservices.
