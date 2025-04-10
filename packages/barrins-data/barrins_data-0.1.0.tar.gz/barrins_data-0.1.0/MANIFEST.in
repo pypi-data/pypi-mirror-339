@@ -1,0 +1,16 @@
+include LICENSE README.md CHANGELOG.rst
+
+graft src
+include .env.ini
+
+global-exclude */.pytest_cache/*
+global-exclude */__pycache__/*
+global-exclude */databases/*
+global-exclude */logs/*
+
+global-exclude *.egg-info/*
+global-exclude *.DS_Store
+global-exclude *.json
+global-exclude tests/*
+
+graft side_projects

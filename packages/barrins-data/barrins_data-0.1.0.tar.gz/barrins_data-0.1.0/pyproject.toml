@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "barrins_data"
+version = "0.1.0"
+authors = [
+    { name = "Martin Cuchet", email = "martin.cuchet+barrinsdata@gmail.com" }
+]
+description = "API meant to extract and provide data based on MTGO scrapping."
+readme = "README.md"
+license = { file = "LICENSE.md" }
+keywords = ["mtg", "Magic: the Gathering", "CCG", "MTGO"]
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 2 - Pre-Alpha",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Framework :: Flask",
+    "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "sqlmodel",
+    "sqlalchemy",
+    "alembic",
+    "pydantic",
+    "pydantic-settings",
+    "python-dotenv",
+    "toml",
+    "numpy",
+    "scikit-learn",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "ruff",
+    "zest.releaser[recommended]",
+    "pytest",
+    "httpx",
+]
+
+[tool.setuptools.packages.find]
+include = ["barrins*"]
+
+# required for dynamic version
+[tool.setuptools_scm]
+
+[tool.zest-releaser]
+create-wheel = true
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+
+[tool.ruff.lint]
+ignore = ["E402", "E712", "F403"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-line-length = "dynamic"

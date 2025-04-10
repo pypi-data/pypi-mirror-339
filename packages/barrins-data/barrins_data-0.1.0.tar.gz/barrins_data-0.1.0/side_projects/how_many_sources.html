@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Many Sources</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        #result { display: none; margin-top: 20px; font-size: 1.2em; }
+        #loading { display: none; margin-top: 20px; font-size: 1.2em; color: blue; }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">How many sources to cast a spell?</h1>
+        <div class="card">
+            <div class="card-body">
+                <form id="spellForm" onsubmit="return false;" class="row g-3">
+                    <div class="col-md-4">
+                        <label for="lands" class="form-label">How many lands are in your deck?</label>
+                        <input type="number" id="lands" name="lands" class="form-control" min="0" max="60" value="39" required />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="colority" class="form-label">What is the colority of the spell?</label>
+                        <input type="text" name="colority" id="colority" class="form-control" value="1CC" required pattern="[0-9C]*" title="Please enter only numbers and 'C'." />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="simulations" class="form-label"># of simulations</label>
+                        <div class="input-group">
+                          <span class="input-group-text" id="inputGroupPrepend2">#</span>
+                          <input type="number" class="form-control" name="simulations" id="simulations" min="0" max="100000" value="5000" required />
+                        </div>
+                      </div>
+                    <button type="button" class="btn btn-primary" onclick="onSubmit()">Calculate the amount of good lands needed</button>
+                </form>
+                <div id="disclaimer" class="mt-3 fs-6">
+                    Note: The simulation uses a limited number of iterations.
+                    Results are displayed based on the lower bound of the confidence interval.
+                </div>
+            </div>
+        </div>
+        <div>
+            <div id="result" class="mt-3">
+                <p id="resultText">
+                    You need at least <strong><span id="good_lands"></span> lands</strong> producing the required color
+                    to cast a <strong><span id="wanted_colority"></span></strong> spell
+                    by turn <strong><span id="wanted_turn"></span></strong>.
+
+                    This represents a <strong><span id="success_rate"></span> &pm; <span id="ci"></span> %</strong> chance of success.
+
+                    <span id="games"></span> out of <span id="wanted_simulations"></span> were discarded due to insufficient amount of lands
+                    by required turn. This represents <span id="irrelevant_rate"></span> % of the games simulated.
+                </p>
+                <p>
+                    <i class="fs-6">
+                        The confidence interval is calculated using the
+                        <a href="https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval">Wilson score interval</a>
+                        formulae.
+                    </i>
+                </p>
+            </div>
+            <div id="loading" class="mt-3">Calculating...</div>
+        </div>
+
+    </div>
+
+    <script>
+        function onSubmit() {
+            // Show loading message
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('loading').style.display = 'block';
+
+            // Get the values from the form
+            var num_lands = parseInt(document.getElementById('lands').value, 10);
+            var colority = document.getElementById('colority').value;
+            var num_simulations = parseInt(document.getElementById('simulations').value, 10);
+
+            if (isNaN(num_lands) || num_lands < 0 || num_lands > 60) {
+                showResult('Please enter a valid number of lands between 0 and 60.');
+                return;
+            }
+
+            const colorityPattern = /^[0-9C]*$/;
+            if (!colorityPattern.test(colority)) {
+                showResult('Please enter a valid colority containing only numbers and "C".');
+                return;
+            }
+
+            if (isNaN(num_simulations) || num_simulations < 0 || num_simulations > 100000) {
+                showResult('Please enter a valid number of simulations between 0 and 100,000.');
+                return;
+            }
+
+            var turn = calculateManaCost(colority);
+            var colorityCount = countOccurrences(colority, "C");
+
+            for (let i = 0; i <= num_lands; i++) {
+                var result = runSimulations(i, turn, colorityCount, num_simulations);
+                var successRate = result[0] / result[1];
+                var confidenceInterval = computeUncertainty(result[0], result[1]);
+                console.log(result, successRate, confidenceInterval);
+                if (confidenceInterval[0] >= 0.9) {
+                    document.getElementById('good_lands').innerText = i;
+                    document.getElementById('wanted_colority').innerText = colority;
+                    document.getElementById('wanted_turn').innerText = turn;
+                    document.getElementById('success_rate').innerText = (successRate*100).toFixed(2);
+                    document.getElementById('ci').innerText = ((confidenceInterval[1] - confidenceInterval[0]) / 2 * 100).toFixed(2);
+                    document.getElementById('games').innerText = num_simulations-result[1];
+                    document.getElementById('wanted_simulations').innerText = num_simulations;
+                    document.getElementById('irrelevant_rate').innerText = ((num_simulations-result[1])/num_simulations * 100).toFixed(2);
+
+                    document.getElementById('result').style.display = 'block';
+                    document.getElementById('loading').style.display = 'none';
+
+                    return;
+                }
+            }
+
+            showResult('Could not determine the required number of good lands.');
+        }
+
+        function showResult(message) {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('result').innerText = message;
+        }
+
+        function calculateManaCost(manaCost) {
+            let totalCost = 0;
+            for (let i = 0; i < manaCost.length; i++) {
+                const char = manaCost[i];
+                if (char === "C") {
+                    totalCost += 1;
+                } else {
+                    totalCost += parseInt(char, 10);
+                }
+            }
+            return totalCost;
+        }
+
+        function countOccurrences(str, charToCount) {
+            let count = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === charToCount) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        function runSimulations(goodLands, turn, colority, simulations) {
+            let numSuccess = 0, numGames = 0;
+
+            for (let i = 0; i < simulations; i++) {
+                const outcome = getOutcome(goodLands, turn, colority);
+                if (outcome === "Success") numSuccess++;
+                if (outcome !== "Irrelevant") numGames++;
+            }
+
+            return [numSuccess, numGames];
+        }
+
+        function getOutcome(goodLands, turn, colority) {
+            const library = buildLibrary(goodLands);
+            let hand = { "Good Land": 0, "Other Land": 0, "Spell": 0 };
+
+            for (let handsize = 7; handsize >= 4; handsize--) {
+                shuffleArray(library);
+                const unique = [...new Set(library.slice(0, 7))];
+                unique.forEach(cardType => {
+                    hand[cardType] = library.slice(0, 7).filter(card => card === cardType).length;
+                });
+
+                if (mulliganHand(hand, handsize)) {
+                    break;
+                }
+            }
+
+            for (let i = 7; i < 7 + turn - 1; i++) {
+                hand[library[i]]++;
+            }
+
+            if (hand["Good Land"] + hand["Other Land"] < turn) {
+                return "Irrelevant";
+            }
+            if (hand["Good Land"] < colority) {
+                return "Failure";
+            }
+            return "Success";
+        }
+
+        function buildLibrary(goodLands) {
+            const LANDS_IN_DECK = parseInt(document.getElementById('lands').value, 10);
+            const deck = [
+                ...Array(goodLands).fill("Good Land"),
+                ...Array(LANDS_IN_DECK - goodLands).fill("Other Land"),
+                ...Array(99 - LANDS_IN_DECK).fill("Spell")
+            ];
+            return shuffleArray(deck);
+        }
+
+        function mulliganHand(hand, handsize) {
+            let keephand = false;
+            const nbLandsInHand = hand["Good Land"] + hand["Other Land"];
+
+            if (handsize === 7) {
+                keephand = nbLandsInHand >= 3 && nbLandsInHand <= 5;
+            }
+            if (handsize === 6) {
+                if (hand["Spell"] > 3) {
+                    hand["Spell"] -= 1;
+                } else {
+                    bottomALand(hand, 1);
+                }
+                keephand = nbLandsInHand >= 2 && nbLandsInHand <= 4;
+            }
+            if (handsize === 5) {
+                if (hand["Spell"] > 3) {
+                    hand["Spell"] -= 2;
+                } else if (hand["Spell"] === 3) {
+                    bottomALand(hand, 1);
+                    hand["Spell"] -= 1;
+                } else {
+                    bottomALand(hand, 2);
+                }
+                keephand = nbLandsInHand >= 2 && nbLandsInHand <= 4;
+            }
+            if (handsize === 4) {
+                if (hand["Spell"] > 3) {
+                    hand["Spell"] -= 3;
+                } else if (hand["Spell"] === 3) {
+                    bottomALand(hand, 1);
+                    hand["Spell"] -= 2;
+                } else if (hand["Spell"] === 2) {
+                    bottomALand(hand, 2);
+                    hand["Spell"] -= 1;
+                } else {
+                    bottomALand(hand, 3);
+                }
+                keephand = true;
+            }
+
+            return keephand;
+        }
+
+        function bottomALand(hand, landsToBottom) {
+            const bottomOtherLands = Math.min(hand["Other Land"], landsToBottom);
+            hand["Other Land"] -= bottomOtherLands;
+
+            const bottomGoodLands = Math.min(hand["Good Land"], landsToBottom - bottomOtherLands);
+            hand["Good Land"] -= bottomGoodLands;
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function computeUncertainty(numSuccess, numGames) {
+            if (numGames === 0) {
+                return [0.0, 1.0];
+            }
+
+            const p = numSuccess / numGames;
+            const z = 1.96; // Assuming a 95% confidence level
+
+            const denominator = 1 + (z ** 2 / numGames);
+            const center = (p + (z ** 2) / (2 * numGames)) / denominator;
+            const margin = (
+                z * Math.sqrt((p * (1 - p) / numGames) + (z ** 2) / (4 * numGames ** 2))
+            ) / denominator;
+
+            return [center - margin, center + margin];
+        }
+    </script>
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

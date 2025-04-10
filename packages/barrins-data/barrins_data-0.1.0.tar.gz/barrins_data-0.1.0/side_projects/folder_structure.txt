@@ -1,0 +1,41 @@
+|- duel.py
+|- LICENSE
+|- logger.md
+|- pyproject.toml
+|- pytest.ini
+|- README.md
+|- src
+  |- app
+    |- config
+      |- formats.json
+      |- formats.py
+      |- logger.py
+      |- settings.py
+    |- databases
+      |- cards.sqlite
+    |- logs
+      |- critical.log
+      |- debug.log
+      |- error.log
+      |- info.log
+      |- warning.log
+    |- main.py
+    |- models
+      |- cards.py
+      |- decklist.py
+      |- duel.py
+      |- engine_manager.py
+    |- routes
+      |- cards.py
+    |- scripts
+      |- card_updater.py
+      |- mtgo_update.py
+    |- services
+    |- utils
+      |- github.py
+      |- scryfall.py
+|- tests
+  |- test_models
+    |- test_decklist.py
+  |- test_routes
+  |- test_services
