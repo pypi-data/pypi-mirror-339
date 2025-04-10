@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+sQQideR/DatabaseContext.c
+sQQideR/QueryHistory.c
+sQQideR/SQLBuilder.c
+sQQideR/__init__.py
+sQQider.egg-info/PKG-INFO
+sQQider.egg-info/SOURCES.txt
+sQQider.egg-info/dependency_links.txt
+sQQider.egg-info/top_level.txt
