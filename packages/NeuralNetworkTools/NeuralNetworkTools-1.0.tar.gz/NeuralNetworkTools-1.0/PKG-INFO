@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: NeuralNetworkTools
+Version: 1.0
+Summary: A simple libary for self made Neural network. Include relu and relu derivative, loss and softmax. WARING NUMPY IS REQURED
+Home-page: https://github.com/Foloip
+Author: foloip
+Author-email: NeuralNetworkTools@gmail.com
+License: MIT
+Keywords: sis
+Platform: UNKNOWN
+License-File: LICENSE
+
+UNKNOWN
+
