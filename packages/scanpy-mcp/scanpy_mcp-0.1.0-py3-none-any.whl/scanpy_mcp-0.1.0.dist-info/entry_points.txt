@@ -1,0 +1,2 @@
+[console_scripts]
+scmcp = scanpy_mcp.cli:run
