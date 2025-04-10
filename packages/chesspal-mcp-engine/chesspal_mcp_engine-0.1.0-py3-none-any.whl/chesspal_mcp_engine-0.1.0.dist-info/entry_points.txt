@@ -1,0 +1,3 @@
+[console_scripts]
+chesspal-mcp-engine=dylangames_mcp_chess_engine.main:main
+
