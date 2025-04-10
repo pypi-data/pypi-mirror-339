@@ -1,0 +1,16 @@
+stringcalc/__init__.py,sha256=gTPuQjuhWOIGeb2ILIx_Lb_cXAR6YOZt5zq8eAk5zi0,73
+stringcalc/cli.py,sha256=Cc-1UuA-bG4LJzpeZG30Njee5eafdRLLlmqCC7XCHws,14483
+stringcalc/frets.py,sha256=p9o7yrp9adCqzVyEp8AzxMecu5XwGM98UOM21yCYyYk,3476
+stringcalc/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stringcalc/tension.py,sha256=3e8oZDJuyJYR-g-bjgTC049d1mE7HBrRgux9yx58nWs,14210
+stringcalc/data/__init__.py,sha256=K9uwWfdSMDlhF15qV84g1ZGpG0784rOsUFuSN_rc4EQ,27
+stringcalc/data/aquila-nng.csv,sha256=nV-kXoRPEXr59NvzMyYob5dg5E3yEw3SW7x1obBeK80,1762
+stringcalc/data/daddario-tension.csv,sha256=gX2waKA9Vt9Bg-jkIC62fugTAZ38EHTegOEhi5fFcsk,124808
+stringcalc/data/ghs.csv,sha256=RQiBahLEkrozCjru1K6T2UKu60LUgJQt3PWKwps4BwA,26173
+stringcalc/data/stringjoy.csv,sha256=qGKvHcLKMpGMo8tN10qkyocbp8OT0WtzTqQNge_RFqU,5004
+stringcalc/data/worth.csv,sha256=S0HVB7sww4gTR4DunkHcqR1YHgVHG8b_u_63B6vkE7s,288
+stringcalc-0.1.0.dev15.dist-info/entry_points.txt,sha256=0DV5ry2A4YzcRzPmWKPXWSFG_dd2rE1Q17UORWHN9vI,49
+stringcalc-0.1.0.dev15.dist-info/LICENSE,sha256=QJZDkt5nq7Pto8WzgmPHKnpeTyEyyqscYUFlKoyXgZg,1090
+stringcalc-0.1.0.dev15.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+stringcalc-0.1.0.dev15.dist-info/METADATA,sha256=vB6hjihaJuUvGoPelpp9HhPUvIL-i0RFYwKIppIY-BY,1436
+stringcalc-0.1.0.dev15.dist-info/RECORD,,
