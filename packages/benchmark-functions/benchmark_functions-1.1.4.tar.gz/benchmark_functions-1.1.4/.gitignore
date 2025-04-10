@@ -1,0 +1,4 @@
+*.pyc
+dist
+benchmark_functions.egg-info
+build

@@ -1,0 +1,28 @@
+{
+ "BC-35": {
+  "definition": "f(x)=\\sin(..)",
+  "minima": {
+   "2": [
+    [
+     "+",
+     [
+      0.2, 0.0
+     ]
+    ],
+	[
+     "+",
+     [
+      0.0, 0.0
+     ]
+    ]
+   ]
+  },
+  "reference": "",
+  "suggested bounds": {
+   "lower": -1,
+   "upper": 1
+  },
+  "summary": "",
+  "version": "0.1"
+ }
+}

@@ -1,0 +1,18 @@
+cache:
+ paths:
+  - ~/.cache/pip/
+
+before_script:
+ - pip3 install -r requirements.txt
+
+test_metadata:
+  stage: test
+  image: python:3.6
+  script:
+    - python3 tests.py TestMetadata
+
+test_optima:
+  stage: test
+  image: python:3.6
+  script:
+    - python3 tests.py TestOptima
