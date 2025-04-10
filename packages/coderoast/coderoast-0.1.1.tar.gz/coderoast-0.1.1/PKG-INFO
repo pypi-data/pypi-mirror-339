@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: coderoast
+Version: 0.1.1
+Summary: A library that insults programmers when their code throws errors
+Home-page: https://github.com/notarealprogrammer001/coderoast
+Author: Not A Programmer
+Author-email: notarealprogrammer010@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+
+        CodeRoast is a silly Python library that catches exceptions and provides
+        insulting commentary on your programming skills. Great for masochistic
+        programmers or teaching humility to overconfident coders.
+    
