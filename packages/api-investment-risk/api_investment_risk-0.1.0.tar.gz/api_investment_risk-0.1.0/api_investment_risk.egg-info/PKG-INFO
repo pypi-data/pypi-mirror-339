@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: api_investment_risk
+Version: 0.1.0
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: requests>=2.32.3
+Requires-Dist: numpy>=2.2.3
+Dynamic: requires-dist
