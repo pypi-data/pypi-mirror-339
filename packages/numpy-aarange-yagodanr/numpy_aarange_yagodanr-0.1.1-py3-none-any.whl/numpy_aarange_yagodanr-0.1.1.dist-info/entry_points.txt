@@ -1,0 +1,2 @@
+[console_scripts]
+numpy_aarange = numpy_aarange.__main__:main
