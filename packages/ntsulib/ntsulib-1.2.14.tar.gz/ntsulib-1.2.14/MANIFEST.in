@@ -1,0 +1,3 @@
+include ntsulib/c/libs/*.dll
+include ntsulib/*.typed
+graft stubs/ntsulib

@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: ntsulib
+Version: 1.2.14
+Summary: ntsulib
+Home-page: 
+Author: NTsukine
+Author-email: NTsukine <398339897@qq.com>
+Keywords: utility,library,python,ntsulib
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: altgraph==0.17.4
+Requires-Dist: backports.tarfile==1.2.0
+Requires-Dist: certifi==2025.1.31
+Requires-Dist: chardet==5.2.0
+Requires-Dist: charset-normalizer==3.4.1
+Requires-Dist: docutils==0.21.2
+Requires-Dist: id==1.5.0
+Requires-Dist: idna==3.10
+Requires-Dist: importlib_metadata==8.6.1
+Requires-Dist: jaraco.classes==3.4.0
+Requires-Dist: jaraco.context==6.0.1
+Requires-Dist: jaraco.functools==4.1.0
+Requires-Dist: keyring==25.6.0
+Requires-Dist: markdown-it-py==3.0.0
+Requires-Dist: mdurl==0.1.2
+Requires-Dist: more-itertools==10.6.0
+Requires-Dist: mypy==1.15.0
+Requires-Dist: mypy-extensions==1.0.0
+Requires-Dist: nh3==0.2.21
+Requires-Dist: packaging==24.2
+Requires-Dist: pefile==2023.2.7
+Requires-Dist: psycopg2==2.9.10
+Requires-Dist: Pygments==2.19.1
+Requires-Dist: pyinstaller==6.12.0
+Requires-Dist: pyinstaller-hooks-contrib==2025.2
+Requires-Dist: PyMySQL==1.1.1
+Requires-Dist: PyQt5==5.15.11
+Requires-Dist: PyQt5-Qt5==5.15.2
+Requires-Dist: PyQt5_sip==12.17.0
+Requires-Dist: python-a2s==1.4.1
+Requires-Dist: pywin32-ctypes==0.2.3
+Requires-Dist: readme_renderer==44.0
+Requires-Dist: requests==2.32.3
+Requires-Dist: requests-toolbelt==1.0.0
+Requires-Dist: rfc3986==2.0.0
+Requires-Dist: rich==13.9.4
+Requires-Dist: tenacity==9.1.2
+Requires-Dist: twine==6.1.0
+Requires-Dist: typing_extensions==4.13.0
+Requires-Dist: urllib3==2.3.0
+Requires-Dist: zipp==3.21.0
+
+# ntsulib - Python 实用工具库
+
+[![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://python.org)
+[![License](https://img.shields.io/badge/license-GPL-green.svg)](LICENSE)
+[![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+`ntsulib` 是一个 Python 实用工具库，提供异步处理、C 语言交互、加密、MySQL 操作等常用功能封装。
+
+## 功能模块
+
+| 模块 | 描述 | Logo |
+|------|------|------|
+| **AsyncUtils** | 异步处理工具 | ![AsyncIO](https://img.shields.io/badge/-Asyncio-3776AB?logo=python&logoColor=white) |
+| **CLib** | C语言交互接口 | ![C](https://img.shields.io/badge/-C-A8B9CC?logo=c&logoColor=white) |
+| **Crypto** | 加密解密工具 | ![Crypto](https://img.shields.io/badge/-Cryptography-6DB33F?logo=gnu&logoColor=white) |
+| **MySQL** | 数据库操作封装 | ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?logo=mysql&logoColor=white) |
+| **Network** | 网络请求工具 | ![Network](https://img.shields.io/badge/-Network-2496ED?logo=internet-explorer&logoColor=white) |
+| **Logger** | 日志记录工具 | ![Logging](https://img.shields.io/badge/-Logging-000000?logo=loggly&logoColor=white) |
+
+## 安装
+
+```bash
+pip install ntsulib
