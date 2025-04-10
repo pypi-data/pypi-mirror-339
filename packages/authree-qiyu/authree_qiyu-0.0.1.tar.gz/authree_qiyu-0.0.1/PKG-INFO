@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: authree_qiyu
+Version: 0.0.1
+Author: qiyu
+Author-email: yiyanjyx@yeah.net
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-python
