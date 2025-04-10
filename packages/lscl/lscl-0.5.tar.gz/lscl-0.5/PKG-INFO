@@ -1,0 +1,122 @@
+Metadata-Version: 2.3
+Name: lscl
+Version: 0.5
+Summary: Logstash configuration language handling
+Keywords: logstash,lscl
+Author: Thomas Touhey
+Author-email: thomas@touhey.fr
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: CeCILL-C Free Software License Agreement (CECILL-C)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Typing :: Typed
+Requires-Dist: eval-type-backport (>=0.2,<0.3) ; python_version < "3.10"
+Requires-Dist: pydantic (>=2.7,<3)
+Requires-Dist: typing-extensions (>=4.12,<5)
+Project-URL: Bug Tracker, https://gitlab.com/kaquel/lscl/-/issues
+Project-URL: Documentation, https://lscl.touhey.pro/
+Project-URL: Homepage, https://lscl.touhey.pro/
+Project-URL: Source Code, https://gitlab.com/kaquel/lscl
+Description-Content-Type: text/x-rst
+
+lscl -- Logstash configuration language handling
+================================================
+
+lscl is a Python module for parsing and rendering Logstash_ configurations
+in its own language, named LSCL for "LogStash Configuration Language".
+
+The project is present at the following locations:
+
+* `Official website and documentation at
+  lscl.touhey.pro <lscl website_>`_;
+* `lscl repository on Gitlab <lscl on Gitlab_>`_;
+* `lscl project on PyPI <lscl on PyPI_>`_.
+
+As described in `Reading Logstash configurations`_ and `Rendering
+Logstash configurations`_, you can use this module to create, parse, update
+and render Logstash pipelines. Here is an example where lscl is used to add
+an ``add_field`` operation on an existing pipeline:
+
+.. code-block:: python
+
+    from lscl.lang import LsclAttribute, LsclBlock
+    from lscl.parser import parse_lscl
+    from lscl.renderer import render_as_lscl
+
+
+    SOURCE = """
+    input {
+        stdin { }
+    }
+    filter {
+        dissect {
+            mapping => {
+                "message" => "[%{ts}] %{message}"
+            }
+        }
+    }
+    output {
+        elasticsearch { codec => rubydebug }
+    }
+    """
+
+    content = parse_lscl(SOURCE)
+
+    # Find the 'filter' block at top level.
+    # If the block is not found, create it.
+    for el in content:
+        if isinstance(el, LsclBlock) and el.name == "filter":
+            break
+    else:
+        el = LsclBlock(name="filter")
+        content.append(el)
+
+    # Add the add_field filter.
+    el.content.append(
+        LsclBlock(
+            name="mutate",
+            content=[
+                LsclAttribute(name="add_field", content={"mytag": "myvalue"}),
+            ],
+        )
+    )
+
+    print(render_as_lscl(content), end="")
+
+The script will output the following:
+
+.. code-block:: text
+
+    input {
+      stdin {}
+    }
+    filter {
+      dissect {
+        mapping => {
+          message => "[%{ts}] %{message}"
+        }
+      }
+      mutate {
+        add_field => {
+          mytag => myvalue
+        }
+      }
+    }
+    output {
+      elasticsearch {
+        codec => rubydebug
+      }
+    }
+
+.. _Logstash: https://www.elastic.co/fr/logstash
+.. _lscl website: https://lscl.touhey.pro/
+.. _lscl on Gitlab: https://gitlab.com/kaquel/lscl
+.. _lscl on PyPI: https://pypi.org/project/lscl
+.. _Reading Logstash configurations:
+    https://lscl.touhey.pro/developer-guides/read.html
+.. _Rendering Logstash configurations:
+    https://lscl.touhey.pro/developer-guides/render.html
+
