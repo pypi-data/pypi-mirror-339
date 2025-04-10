@@ -1,0 +1,15 @@
+uuidtool/__init__.py,sha256=dd1wdtB_14ClBU0ob7FKsFqBsbSwMfbddBmleRxX2yQ,245
+uuidtool/cli.py,sha256=D_TFqRXoj692iJtLMiR6AtmjqD50ia9w5iltJGZ8ogA,5598
+uuidtool/utils.py,sha256=fGKEmIIcakQ_FW_MSBX9a7Smt0-xgv0gMIQWT9Zchzg,7127
+uuidtool/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uuidtool/commands/edit.py,sha256=TBhekkmC_TK_-RgrjUAL2YUq4k2bYSK84WpdHOYtRag,8916
+uuidtool/commands/info.py,sha256=odwnPA08JKDygKCqsn8rrcSb3HIsqRqNMW52drmc6Dk,9542
+uuidtool/commands/new.py,sha256=xJafrkwWanicGJYflfUz-eLx1BzaUTt4OyfB0W6M0M0,12188
+uuidtool/commands/range.py,sha256=wrKQ0-2xUt_6ngHzql8qZK327bJy6DWJ2XfYXbS-BLk,1856
+uuidtool/commands/sandwich.py,sha256=HWgXjnzpOC02FQesyRMqlYtsEOL2BAdwKLqvro4PMOo,1817
+uuidtool-1.2.dist-info/LICENSE,sha256=ATFOYlavBHmkv03U93okDKVx7N_QLEVTeiKBMw0q8yo,1073
+uuidtool-1.2.dist-info/METADATA,sha256=UPPpKpWZeodI_Mz-_XMlSY7XvJ_WGmZwi4eXKgdONIk,3037
+uuidtool-1.2.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+uuidtool-1.2.dist-info/entry_points.txt,sha256=p-W6azwS2G-3kfdlGzMgfyf6QuSw2782sDvk2orCd9Y,47
+uuidtool-1.2.dist-info/top_level.txt,sha256=hEmg21V8nCgCylHFtlcBtjXoYHsO37w7Fj752P_Ehp8,9
+uuidtool-1.2.dist-info/RECORD,,
