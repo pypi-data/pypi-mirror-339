@@ -1,0 +1,180 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version"
+        required: true
+        default: "0.0.0"
+        type: string
+      prerelease:
+        description: "Is this a prerelease?"
+        required: true
+        default: false
+        type: boolean
+      python_version:
+        description: "Python version to use"
+        required: false
+        default: "3.12"
+        type: string
+
+# Set default permissions to minimum required
+permissions:
+  contents: read
+
+jobs:
+  # Load configuration using the reusable workflow
+  config:
+    name: Load Configuration
+    uses: ./.github/workflows/load-config.yml
+    with:
+      python_version_override: ${{ github.event.inputs.python_version }}
+
+  # Run tests, linting, and type checking by reusing existing workflows
+  test:
+    name: Run Tests
+    needs: config
+    uses: ./.github/workflows/test.yml
+    with:
+      python-versions: '["${{ needs.config.outputs.python_version }}"]'
+      coverage: true
+      security-check: true
+
+  lint:
+    name: Run Linting
+    needs: config
+    uses: ./.github/workflows/lint.yml
+    with:
+      python-version: ${{ needs.config.outputs.python_version }}
+
+  type-check:
+    name: Run Type Checking
+    needs: config
+    uses: ./.github/workflows/type-check.yml
+    with:
+      python-version: ${{ needs.config.outputs.python_version }}
+
+  # Bump version, update changelog, and create tag
+  prepare-release:
+    name: Prepare Release
+    needs: [config, test, lint, type-check]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      version: ${{ steps.get_version.outputs.version }}
+      tag: ${{ steps.get_version.outputs.tag }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Use the composite action for Python setup
+      - name: Set up Python
+        uses: ./.github/actions/python-setup
+        with:
+          python-version: ${{ needs.config.outputs.python_version }}
+          dependencies: "commitizen"
+          cache: "true"
+
+      - name: Configure Git
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+      - name: Get version
+        id: get_version
+        run: |
+          VERSION=$(python -c "from configparser import ConfigParser; c = ConfigParser(); c.read('pyproject.toml'); print(c['project']['version'].strip('\"'))")
+          TAG="v$VERSION"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "tag=$TAG" >> $GITHUB_OUTPUT
+          echo "Detected version: $VERSION (tag: $TAG)"
+
+      - name: Generate changelog
+        run: |
+          echo "Generating changelog for version ${{ steps.get_version.outputs.version }}..."
+          cz changelog --incremental > CHANGELOG.md
+          echo "Changelog generated successfully!"
+          echo "Preview of changelog:"
+          cat CHANGELOG.md | head -n 10
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.get_version.outputs.tag }}
+          name: Release ${{ steps.get_version.outputs.tag }}
+          body_path: CHANGELOG.md
+          draft: false
+          prerelease: ${{ github.event.inputs.prerelease }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+  # Build and publish to PyPI
+  publish:
+    name: Build and Publish
+    needs: [config, prepare-release]
+    runs-on: ubuntu-latest
+    environment: publish
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.prepare-release.outputs.tag }}
+
+      # Use the composite action for Python setup
+      - name: Set up Python
+        uses: ./.github/actions/python-setup
+        with:
+          python-version: ${{ needs.config.outputs.python_version }}
+          cache: "true"
+
+      - name: Verify version
+        run: |
+          PACKAGE_VERSION=$(python -c "from configparser import ConfigParser; c = ConfigParser(); c.read('pyproject.toml'); print(c['project']['version'].strip('\"'))")
+          if [ "$PACKAGE_VERSION" != "${{ needs.prepare-release.outputs.version }}" ]; then
+            echo "::error::Version mismatch! Expected version ${{ needs.prepare-release.outputs.version }} but found $PACKAGE_VERSION"
+            exit 1
+          fi
+          echo "Version verification successful: $PACKAGE_VERSION"
+
+      - name: Build package
+        run: uv build
+        env:
+          UV_CACHE_DIR: ${{ runner.temp }}/uv-cache
+
+      - name: Generate SBOM
+        uses: anchore/sbom-action@v0
+        with:
+          format: spdx-json
+          output-file: sbom.spdx.json
+          artifact-name: sbom.spdx.json
+
+      - name: Upload SBOM
+        uses: actions/upload-artifact@v4
+        with:
+          name: sbom
+          path: sbom.spdx.json
+          retention-days: 90
+
+      # Use Makefile to publish the package
+      - name: Verify and publish package
+        run: |
+          echo "Verifying package before publishing..."
+          # List the built distributions
+          ls -la dist/
+
+          # Publish to PyPI using Makefile
+          echo "Publishing package to PyPI..."
+          uv publish
+
+      - name: Upload package artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+          retention-days: 7
