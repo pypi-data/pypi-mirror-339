@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: colorina
+Version: 0.1.3
+Summary: A simple greeting function
+Author-email: Your Name <you@example.com>
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
