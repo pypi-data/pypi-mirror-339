@@ -1,0 +1,2 @@
+[console_scripts]
+caravagene = caravagene.cli:main
