@@ -1,0 +1,13 @@
+libdir=/tmp/tmpui5nat78/wheel/platlib/cupynumeric/lib64
+libnameprefix=
+libnamesuffix=
+libsuffix=
+includedir=/tmp/tmpui5nat78/wheel/platlib/cupynumeric/include/openblas
+
+openblas_config=USE_64BITINT=OFF NO_CBLAS= NO_LAPACK= NO_LAPACKE= DYNAMIC_ARCH=OFF DYNAMIC_OLDER=OFF NO_AFFINITY=ON USE_OPENMP=OFF HASWELL MAX_THREADS=16 
+Name: OpenBLAS
+Description: OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version
+Version: 0.3.29
+URL: https://github.com/OpenMathLib/OpenBLAS
+Libs: -L${libdir} -l${libnameprefix}openblas${libnamesuffix}${libsuffix} 
+Cflags: -I${includedir} -fopenmp 
