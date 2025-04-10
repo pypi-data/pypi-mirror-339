@@ -1,0 +1,102 @@
+Metadata-Version: 2.4
+Name: small-to-big-rag
+Version: 0.1.0
+Summary: Small-to-Big RAG implementation for more effective retrieval augmented generation
+Home-page: https://github.com/WSIB-Innovation/small-to-big-package
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: langchain-text-splitters>=0.0.1
+Requires-Dist: openai>=1.0.0
+Requires-Dist: chromadb>=0.4.0
+Requires-Dist: python-dotenv>=1.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Small-to-Big RAG
+
+A Python package implementing the Small-to-Big RAG approach for more effective retrieval augmented generation.
+
+## Installation
+
+```bash
+pip install small-to-big-rag
+```
+
+## Usage
+
+```python
+from small_to_big_rag import SmallToBigRAG
+import os
+
+# Initialize with Azure OpenAI credentials
+rag = SmallToBigRAG(
+    api_key=os.environ.get("AZURE_OPENAI_API_KEY"),
+    azure_endpoint=os.environ.get("AZURE_OPENAI_ENDPOINT"),
+    api_version="2024-10-21",
+    embedding_model="text-embedding-3-small",
+    llm_model="gpt-4o-mini"
+)
+
+# Load a document
+rag.load_file("path/to/document.txt")
+
+# Or load text directly
+text = """
+Your document text here.
+This can be multi-paragraph content.
+
+The system will split this into paragraphs and sentences.
+"""
+rag.load_text(text)
+
+# Generate a response
+response = rag.generate_response(
+    query="What is the main topic of the document?",
+    system_prompt="You are a helpful assistant specialized in document analysis."
+)
+
+# Print the answer
+print(response["answer"])
+
+# Access source information
+print("\nSources used:")
+for i, sentence in enumerate(response["sources"]["sentences"]):
+    print(f"Sentence {i+1}: {sentence[:100]}...")
+
+for i, paragraph in enumerate(response["sources"]["paragraphs"]):
+    print(f"Paragraph {i+1}: {paragraph[:100]}...")
+```
+
+## Features
+
+- Small-to-Big RAG approach that retrieves both sentences and their parent paragraphs
+- Maintains relationships between sentences and paragraphs for better context
+- Uses ChromaDB for vector storage and retrieval
+- Supports Azure OpenAI API
+- Easy-to-use Python API
+
+## Requirements
+
+- Python 3.8+
+- langchain-text-splitters
+- openai
+- chromadb
+- python-dotenv
+
+## License
+
+MIT
