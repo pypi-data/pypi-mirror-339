@@ -1,0 +1,38 @@
+Claude:
+
+1) Port the following code to Python:
+
+( dump of https://raw.githubusercontent.com/Sammy-T/avdu/ab57ed96cccdedd3b88b54f72215ea1b9f0fa50b/vault/decrypt.go)
+
+2) Please refactor the classes Header, Slot, Params and KeyParams to be Pydantic BaseModels
+
+3) That's great, thanks.  Please refactor the names of all class variables from Camel Case to snake_case.
+
+4) Remove the Field with aliases
+
+5) Replace List with list, and add type annotactions <sic> to the methods on VaultEncrypted 
+
+6) Don't import list from typing.  It's a built-in.
+
+7) Please port these Go structs to Python Pydantic BaseModels, to represent the decrypted vault, changing the case of the field names to snake_case:
+
+(dump of ~35 lines to Group from https://github.com/Sammy-T/avdu/blob/4f3e45aa89216fb4ae4bc468247e62cbd508fceb/vault/vault.go#L44)
+
+8) Port this to Python: (getHash and imports from https://github.com/Sammy-T/avdu/blob/ab57ed96cccdedd3b88b54f72215ea1b9f0fa50b/otp/otp.go)
+
+ChatGPT (I hit Claude's free limit)
+
+9) Please port this Go Code to Python 3 using snake case and type annotations:
+(https://github.com/Sammy-T/avdu/blob/ab57ed96cccdedd3b88b54f72215ea1b9f0fa50b/otp/totp.go#L36 onwards)
+
+10) Port this Go function to Python please:
+(String() from https://github.com/Sammy-T/avdu/blob/ab57ed96cccdedd3b88b54f72215ea1b9f0fa50b/otp/totp.go#L26 )
+
+Failure!
+
+Incorrect TOTP codes were being generated, so I then deleted the code from the LLMs from Steps 8-10,
+and used pyotp and the basic example from its docs instead.
+https://pyauth.github.io/pyotp/#quick-overview-of-using-one-time-passwords-on-your-phone.
+
+Success!
+
