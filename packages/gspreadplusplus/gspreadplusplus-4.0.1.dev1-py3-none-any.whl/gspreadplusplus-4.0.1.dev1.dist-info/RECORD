@@ -1,0 +1,11 @@
+gspreadplusplus.py,sha256=fSGbkK6u1zn2IHudLZLrEQrrTSkYVBLoNmEHk9avawQ,13706
+gpp/__init__.py,sha256=48kKmJCm8r5Y-c7Sn1ejcteNUk1XCBi5y-YmH62KwYM,185
+gpp/core.py,sha256=yKPP2TdkgtOucHUF6j5nPtOcMea7vKtcCV6heCcsNQY,15016
+gpp/functions.py,sha256=n5I4HbzIN5ujQHaP3FoGJpcL5XJVlwr-T--BrWKSJOw,3235
+gpp/operations.py,sha256=dy57AC4WLhhPxJxjlIm8Kz1RLB7SdLGjDmdPC5HDW7I,5394
+gpp/utils.py,sha256=A9Bqr1KFXWTHyX80GpPz_mlOMLla66d-NcDR47b8IC0,2640
+gspreadplusplus-4.0.1.dev1.dist-info/LICENSE,sha256=xTNH1BcvuiITmUvczAiYbTtkoV5Whg_z-BRv8MXAVpc,521
+gspreadplusplus-4.0.1.dev1.dist-info/METADATA,sha256=wXIjsQBJLYc3QIu4F0bBWFbwhynWBhmqc3CA-rXDE_w,10139
+gspreadplusplus-4.0.1.dev1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+gspreadplusplus-4.0.1.dev1.dist-info/top_level.txt,sha256=qCPXL2wQwtUV0CGlufpMSmgAJObkZARdNC7tLK8X57g,20
+gspreadplusplus-4.0.1.dev1.dist-info/RECORD,,
