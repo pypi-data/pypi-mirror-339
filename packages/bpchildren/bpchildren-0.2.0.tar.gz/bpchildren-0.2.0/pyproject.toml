@@ -1,0 +1,14 @@
+[project]
+name = "bpchildren"
+version = "0.2.0"
+description = "MCP server for BP percentile calculation"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [
+    {name = "Hyung-Chul Lee", email = "vital@snu.ac.kr"}
+]
+dependencies = ["scipy","mcp"]
+
+[project.scripts]
+bpchildren = "bpchildren.__main__:main"
