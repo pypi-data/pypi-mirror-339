@@ -1,0 +1,18 @@
+[
+    {
+        "payload": 0.1201171875,
+        "topic": "homeassistant/sensor/bar/bar-eth0sent/state"
+    },
+    {
+        "payload": 0.0,
+        "topic": "homeassistant/sensor/bar/bar-eth0sentrate/state"
+    },
+    {
+        "payload": 0.4453125,
+        "topic": "homeassistant/sensor/bar/bar-eth0received/state"
+    },
+    {
+        "payload": 0.0,
+        "topic": "homeassistant/sensor/bar/bar-eth0receivedrate/state"
+    }
+]
