@@ -1,0 +1,9 @@
+README.md
+setup.py
+WebScraperX/__init__.py
+WebScraperX/fetcher.py
+WebScraperX.egg-info/PKG-INFO
+WebScraperX.egg-info/SOURCES.txt
+WebScraperX.egg-info/dependency_links.txt
+WebScraperX.egg-info/requires.txt
+WebScraperX.egg-info/top_level.txt

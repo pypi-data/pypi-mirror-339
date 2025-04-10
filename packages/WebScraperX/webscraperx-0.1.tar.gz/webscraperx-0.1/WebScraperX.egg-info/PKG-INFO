@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: WebScraperX
+Version: 0.1
+Summary: Bir web sitesini alir ve HTML yapisini Python objesi olarak dondurur.
+Home-page: https://github.com/ruzgar/WebScraperX
+Author: Ruzgar
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# WebScraperX
+
+Web sayfasÄ±nÄ± alÄ±r ve Python Ã¼zerinden HTML iÃ§eriÄŸine eriÅŸmeni saÄŸlar.
+
+## Kurulum
+
+```bash
+pip install WebScraperX
+```
+
+## KullanÄ±m
+
+```python
+from WebScraperX import WebScraperX
+
+scraper = WebScraperX()
+html = scraper.fetch("https://example.com")
+
+print(html)  # tÃ¼m HTML iÃ§eriÄŸi
+
+soup = scraper.as_python()
+print(soup.title.text)  # sayfanÄ±n baÅŸlÄ±ÄŸÄ±
+```
