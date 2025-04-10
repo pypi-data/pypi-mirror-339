@@ -1,0 +1,2 @@
+[console_scripts]
+openfga-mcp = openfga_mcp:run
