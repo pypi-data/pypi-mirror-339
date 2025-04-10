@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-notmuch-sendmail = mcp_notmuch_sendmail.server:main
