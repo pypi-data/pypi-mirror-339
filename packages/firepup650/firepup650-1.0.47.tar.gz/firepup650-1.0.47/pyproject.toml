@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "firepup650"
+version = "1.0.47"
+authors = ["Firepup650 <firepup650@firepup650.com>"]
+description = "Package containing various shorthand things I use, and a few imports I almost always use"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+]
+license = "MIT"
+repository = "https://git.h.hackclub.app/Firepup650/firepup-py-package"
+[tool.poetry.urls]
+"Bug Tracker" = "https://git.h.hackclub.app/Firepup650/firepup-py-package/issues"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fkeycapture = "^1.2.7"
+fpsql = "^1, !=1.0.26"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
