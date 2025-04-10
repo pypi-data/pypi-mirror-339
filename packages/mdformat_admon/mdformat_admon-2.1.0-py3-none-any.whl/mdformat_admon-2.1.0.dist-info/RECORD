@@ -1,0 +1,14 @@
+mdformat_admon/__init__.py,sha256=SIPKP5RF060XNVgBJ3NHSN_bvOtI1Lf7E4YJ1kLrvzM,315
+mdformat_admon/plugin.py,sha256=2I9n8eLKg9WLvZYAcQgMRYrz1HPk0pOTJlP2PCsrQGU,1681
+mdformat_admon/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mdformat_admon/_synced/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mdformat_admon/_synced/admon_factories/README.md,sha256=F7De73FZpQek1yst7_O6gLH8z0bQgYMRW1W3_Qrf4B4,2068
+mdformat_admon/_synced/admon_factories/__init__.py,sha256=9_UhhiQ3UmwGj-UEtP4VvkshcZ94SbCt4wbiHCcPV0k,332
+mdformat_admon/_synced/admon_factories/_whitespace_admon_factories.py,sha256=kl-Q08bbbYz-66CKKxCF_iZHhBpzK6gaRS-OZM-1nCI,7046
+mdformat_admon/mdit_plugins/__init__.py,sha256=C6kS-W2bwpVKLB5pslvSn_NiXR5RgQVJSS9RjNETfbE,209
+mdformat_admon/mdit_plugins/_python_markdown_admon.py,sha256=swpaYRVrzHn-bBtH0KkRcWulWnrgkr6IQbz-UaDfT70,2476
+mdformat_admon-2.1.0.dist-info/entry_points.txt,sha256=9bO0j-MxDPaKXf5Q_1Wa2bWX5PjTCrzdwyHRzgdwa3Y,50
+mdformat_admon-2.1.0.dist-info/licenses/LICENSE,sha256=hzqPXgmLv4e3Lkx2jyCqZuPv4OodmG9RcCivu8TdGEc,1066
+mdformat_admon-2.1.0.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+mdformat_admon-2.1.0.dist-info/METADATA,sha256=5bzQDZbSZwc2IODnnFP1BVr0OHwnbbbs9SFXCtKndhM,3605
+mdformat_admon-2.1.0.dist-info/RECORD,,

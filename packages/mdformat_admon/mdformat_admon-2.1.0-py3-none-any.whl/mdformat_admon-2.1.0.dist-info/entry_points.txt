@@ -1,0 +1,3 @@
+[mdformat.parser_extension]
+admon=mdformat_admon
+
