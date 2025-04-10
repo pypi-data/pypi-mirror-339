@@ -1,0 +1,13 @@
+[project]
+name = "easyvoice"
+version = "0.1.0"
+description = "Simple NLP, TTS, and ASR library"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [{name = "Yuras", email = "mix1122@gmail.com"}]
+dependencies = ["nltk", "gTTS", "SpeechRecognition"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
