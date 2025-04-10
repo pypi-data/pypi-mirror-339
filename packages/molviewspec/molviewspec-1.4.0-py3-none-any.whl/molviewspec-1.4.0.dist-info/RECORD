@@ -1,0 +1,10 @@
+molviewspec/__init__.py,sha256=8n7dQUWtaf00qDZCxFLoJOpasxaUFUF_ySeqUW5puDM,287
+molviewspec/builder.py,sha256=LHa5VxwDEMhCIK5fD1lIr_pTsdZD8x1gyEqhJ8k4EXc,65020
+molviewspec/mvsx_converter.py,sha256=VwfokT5kcJVbd6RnY-3QN7PBcEIToMv5xJ9M23gwAHA,13446
+molviewspec/nodes.py,sha256=hgrXhp1Jj3gpxMP1DKWTJORq5FFhQi_-iKmYDmqbF08,37875
+molviewspec/utils.py,sha256=4Fg-2iccBp3pQQ5cP6laMgYwPRek1wWxRqtfjQrTuQg,2062
+molviewspec-1.4.0.dist-info/licenses/LICENSE.txt,sha256=d61i6cvuq5-45Te7Kp3cuMHM55L9rO589JJWaq97iTA,1097
+molviewspec-1.4.0.dist-info/METADATA,sha256=otp-VP4z3TewsXZwiZdlNitYp1IfVis3NCs1pE0P2Ek,9509
+molviewspec-1.4.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+molviewspec-1.4.0.dist-info/top_level.txt,sha256=cLpGScTWyYBtQno41ewJngeyB1QWHeYAxKd0tr7RAcg,12
+molviewspec-1.4.0.dist-info/RECORD,,
