@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dedal"
+version = "0.1.2"
+description = "This package includes all the essential tools required to set up an EBRAINS Software Distribution environment."
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Adrian Ciu", email = "adrian.ciu@codemart.ro" },
+    { name = "Eric Müller", email = "mueller@kip.uni-heidelberg.de" },
+    { name = "Jithu Murugan", email = "j.murugan@fz-juelich.de" }
+]
+dependencies = [
+    "oras",
+    "spack",
+    "ruamel.yaml",
+    "click",
+    "jsonpickle",
+    "pyyaml",
+]
+
+[project.scripts]
+dedal = "dedal.cli.spack_manager_api:cli"
+
+[tool.setuptools.data-files]
+"dedal" = [
+    "dedal/logger/logging.conf",
+    "dedal/docs/resources/*.png"
+]
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-mock", "pytest-ordering", "coverage"]
