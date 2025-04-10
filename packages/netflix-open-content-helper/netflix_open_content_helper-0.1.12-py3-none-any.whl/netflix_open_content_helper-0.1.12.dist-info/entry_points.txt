@@ -1,0 +1,2 @@
+[console_scripts]
+noc = netflix_open_content_helper.cli:app
