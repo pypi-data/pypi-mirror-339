@@ -1,0 +1,5 @@
+sinapsis>=0.1.1
+
+[all]
+sinapsis-dfine[all]
+sinapsis-rfdetr[all]
