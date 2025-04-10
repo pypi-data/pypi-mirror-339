@@ -1,0 +1,17 @@
+LICENCE.txt
+MANIFEST.in
+README.rst
+pypi-readme.rst
+pyproject.toml
+examples/basic_example.py
+tests/test_basics.py
+zymp/__init__.py
+zymp/plotting.py
+zymp/stacked_sites_array.py
+zymp/tools.py
+zymp/version.py
+zymp.egg-info/PKG-INFO
+zymp.egg-info/SOURCES.txt
+zymp.egg-info/dependency_links.txt
+zymp.egg-info/requires.txt
+zymp.egg-info/top_level.txt
