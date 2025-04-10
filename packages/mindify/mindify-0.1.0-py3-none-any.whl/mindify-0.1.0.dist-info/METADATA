@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: mindify
+Version: 0.1.0
+Summary: mindify common library
+Home-page: http://gitee.com/mindify/mindify
+Author: James Hu
+Author-email: jameshu@live.com
+Keywords: mindify
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: summary
