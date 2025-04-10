@@ -1,0 +1,17 @@
+MANIFEST.in
+readme.md
+requirements.txt
+setup.py
+Datasets/dvd.db
+Datasets/project.db
+SQLMetadataR.egg-info/PKG-INFO
+SQLMetadataR.egg-info/SOURCES.txt
+SQLMetadataR.egg-info/dependency_links.txt
+SQLMetadataR.egg-info/top_level.txt
+explorer/__init__.py
+explorer/analyzers.py
+explorer/cli.py
+explorer/extractors.py
+explorer/models.py
+explorer/semantic_processor.py
+explorer/sql_explorer.py
