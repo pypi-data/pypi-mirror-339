@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "cozepy-flink"
+version = "0.13.1.post2"
+description = "OpenAPI SDK for Coze(coze.com/coze.cn) - Custom Version"
+authors = ["chyroc <chyroc@bytedance.com>", "YOUR_NAME <YOUR_EMAIL>"]
+readme = "README.md"
+license = "MIT"
+packages = [
+    { include = "cozepy" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pydantic = "^2.5.0"
+authlib = "^1.2.0"
+httpx = "^0.27.0"
+typing-extensions = "^4.3.0"
+distro = "^1.9.0"
+websockets = "^14.1.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0.0"
+pytest-cov = "^4.0.0"
+pytest-asyncio = "^0.21.0"
+ruff = "^0.6.0"
+pre-commit = "^2.9.0"
+respx = "^0.21.1"
+mypy = "^1.0.0"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]
+
+[tool.mypy]
+exclude = [
+    "examples/",
+    "tests/"
+]
+
+[tool.coverage.report]
+precision = 1
+skip_covered = true
+exclude_lines = [
+    "abc.abstractmethod",
+    "if TYPE_CHECKING.*:",
+    "raise NotImplementedError",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
