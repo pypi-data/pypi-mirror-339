@@ -1,0 +1,16 @@
+phone_mcp/__init__.py,sha256=uo7aM7jE29bnwJHGhkIrS8VgZ5pJz9JGgBPy08YcvD4,166
+phone_mcp/__main__.py,sha256=D0B6GkxB4Fz2F7p3s8UmsvWA8cydu5OPaaGDGZ5LUdU,958
+phone_mcp/cli.py,sha256=_WNvPRQkyIUNOsa-SjV0zMb_laOihdPN63UyyZXduTY,4793
+phone_mcp/config.py,sha256=3c4SmYIvC8YauL-ZeAt6jOsVN3Ohif5z4j4aeBWnPZ0,485
+phone_mcp/core.py,sha256=ssPASwOewjYZbiYKoKtRMZOIs_2l11ELpERoVyT1mtA,3124
+phone_mcp/tools/__init__.py,sha256=DpEBmtDxL7Gzp5l-wPcp6JqgDoUPoHfbqshmzQttlBM,586
+phone_mcp/tools/apps.py,sha256=6lah9HdbV4C5r22n1GGrl9WTBxLTH9YTQ8b0aivhLaU,3690
+phone_mcp/tools/call.py,sha256=XTTFJw-nMKgCj-rrtNWNwG65DXhamaQbPCtkDffkSZ4,3491
+phone_mcp/tools/media.py,sha256=j_kChCZomGOyklDfB5TIfqo7iQmJwq2HfXLfP1HD8aA,3444
+phone_mcp/tools/messaging.py,sha256=nqCa7cUQmmhFAqzUuUGlFSQYUn44gxGJaXPR8pUOtrM,3631
+phone_mcp-0.1.5.dist-info/licenses/LICENSE,sha256=iFMoul--_fGeD8AW6VvGkxMTLny7EEdbBeSRJy-AoSI,1080
+phone_mcp-0.1.5.dist-info/METADATA,sha256=YVrUITcVz8fziFpxprnAllA3DLOSrraPp5vzTrzj6KE,6069
+phone_mcp-0.1.5.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+phone_mcp-0.1.5.dist-info/entry_points.txt,sha256=PoiYOQJF6cbTyX1lWM9AS0jNqJKva9dnVuP7LwTAVkw,122
+phone_mcp-0.1.5.dist-info/top_level.txt,sha256=-No-WpG7EI5z1ELdCpI6FbIjzSKBh8IsmLyQcNxeYek,10
+phone_mcp-0.1.5.dist-info/RECORD,,
