@@ -1,0 +1,37 @@
+[project]
+name = "era5-downloader"
+version = "0.1.8"
+description = "A lightweight and fast downloader for ERA5 data from the Google Cloud ARCO store. "
+authors = [{name = "Luke Gregor", email = "lukgre@gmail.com"}]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "dask[array]>=2024",
+    "fsspec>=2024",
+    "gcsfs>=2024",
+    "h5netcdf>=1.1",
+    "loguru>=0.7",
+    "netcdf4>=1.6",
+    "pandas>=2",
+    "python-dotenv>=1",
+    "scipy>=1.1",
+    "tenacity>=9.0.0",
+    "xarray>=2024",
+]
+
+[project.optional-dependencies]
+jupyter = ["ipykernel", "ipywidgets"]
+full = ["zarr", "s3fs", "tqdm", "matplotlib", "plotly"]
+
+
+[tool.setuptools]
+packages = ["era5_downloader"]
+
+### install package for local use with hatch ### 
+[tool.hatch.build]
+packages = ["era5_downloader"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
