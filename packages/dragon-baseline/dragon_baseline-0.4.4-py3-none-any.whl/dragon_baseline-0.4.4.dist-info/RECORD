@@ -1,0 +1,16 @@
+dragon_baseline/__init__.py,sha256=UqGYo1KFMHcclnjSEgD_zuoHNQljGUDQezgrVv2mExc,730
+dragon_baseline/__main__.py,sha256=RTJ-u3Cv4T_d16SsTEj7yVy7MFtmDw0MQAUg2ugRWZo,1406
+dragon_baseline/main.py,sha256=yKzAUiojfQjRs7kb3Qsdh9_CcOjlH3ca2eEGxqFKEDs,33793
+dragon_baseline/nlp_algorithm.py,sha256=HWNvAy2q1fKEzSngooAcoWSZvDoB_l6NAfQMvp26Gto,21919
+dragon_baseline/run_classification.py,sha256=B_qy6_eflJtzjSbKxUyAHP0A3jJXx6Alc7NLLpDTU20,34654
+dragon_baseline/run_classification_multi_label.py,sha256=C5FAQBYfYywIqvMrBJ0x5KMxxMM32roZeqC-GXLQw6Q,36429
+dragon_baseline/run_ner.py,sha256=hWK9RUVzwZ6eo6P0t6dL0Z6foaSmVZt5vbBnnBuQjGo,33468
+dragon_baseline/architectures/__init__.py,sha256=rxtg8D_ylMEZ-q4ea6_nVS8Y-FmaRGe7tTCf_DN0KhQ,644
+dragon_baseline/architectures/clf_multi_head.py,sha256=Tj_SYVV5Fb0cmw9nTKz7AGN2jN2icn_zhQ61VvBigQo,6028
+dragon_baseline/architectures/ner_multi_head.py,sha256=qbyBLwkwgA-BfRAfGrosSJmfTUMjTDnJPFoRv0k6U98,7565
+dragon_baseline/architectures/reg_multi_head.py,sha256=M4IQy_QPW2dO2b2gisx-jwVSNQlTeuITLlEbaEVoNUU,5823
+dragon_baseline-0.4.4.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dragon_baseline-0.4.4.dist-info/METADATA,sha256=PASBJgVglqvW9wSvuRttn7sHIBBDl5H5nNg_kxA9caE,8491
+dragon_baseline-0.4.4.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+dragon_baseline-0.4.4.dist-info/top_level.txt,sha256=lv6GSkEI8K-vI9NWySq2_OVGZVBAnwoCG1Fy8B2RoGk,16
+dragon_baseline-0.4.4.dist-info/RECORD,,
