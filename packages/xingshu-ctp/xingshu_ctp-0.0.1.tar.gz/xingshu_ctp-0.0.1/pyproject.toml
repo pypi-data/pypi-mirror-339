@@ -1,0 +1,24 @@
+[project]
+name = "xingshu_ctp"     # 包名
+version = "0.0.1"       # 版本
+authors = [
+  { name="bhzy", email="2024305928@qq.com" },        # 用户名和邮箱
+]
+description = "星枢(xingshu)框架的CTP底层接口"     # 搜索结果页显示的单行内容   包的简述
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+# 添加第三方依赖包
+dependencies = [
+  "importlib_metadata == 8.6.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/bhzyxyqy/xingshu"      # 项目地址
+Issues = "https://github.com/bhzyxyqy/xingshu/issues"
