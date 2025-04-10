@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61.0"]  # Use setuptools as the build backend
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clayPlotter"
+version = "0.1.0" # Initial version
+description = "A Python package for creating configurable choropleth maps."
+authors = [
+    { name = "Clay", email = "claytoneyoung+clayPlotter@gmail.com" },
+]
+readme = "README.md" # Assuming a README will be created later
+license = { text = "MIT" } # Use SPDX identifier
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    # "License :: OSI Approved :: MIT License", # Removed, covered by license field
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: GIS",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "geopandas>=0.13.0", # Specify reasonable minimum versions
+    "matplotlib>=3.7.0",
+    "pandas>=1.5.0",
+    "PyYAML>=6.0",
+    "shapely>=2.0",
+    "requests>=2.28.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/borealByte/clayPlotter"
+Repository = "https://github.com/borealByte/clayPlotter"
+
+[project.optional-dependencies]
+dev = [
+    "jupyter>=1.0.0",
+    "nbconvert>=7.0.0",
+    "pytest>=7.0.0", # Also include pytest here for consistency
+    "build>=0.10.0", # And build
+    "twine>=4.0.0", # For uploading to PyPI
+]
+
+# Optional: Configure uv tool settings if needed
+# [tool.uv]
+# ...
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0" # Must match [project] version
+version_files = [
+    "pyproject.toml:^version", # Use regex to find version = "..."
+    "src/clayPlotter/__version__.py:^__version__" # Use regex for __version__ = "..."
+]
+tag_format = "v$version"
+bump_message = "chore(release): bump version to $current_version → $new_version"
+update_changelog_on_bump = true
+major_version_zero = true # Allows 0.x.y versions
+
+[tool.setuptools.package-data]
+# Include YAML files from the resources directory within the package
+clayPlotter = ["resources/*.yaml"]
