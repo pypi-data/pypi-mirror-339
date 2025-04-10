@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+bp_percentile/__init__.py
+bp_percentile/__main__.py
+bp_percentile.egg-info/PKG-INFO
+bp_percentile.egg-info/SOURCES.txt
+bp_percentile.egg-info/dependency_links.txt
+bp_percentile.egg-info/entry_points.txt
+bp_percentile.egg-info/requires.txt
+bp_percentile.egg-info/top_level.txt
