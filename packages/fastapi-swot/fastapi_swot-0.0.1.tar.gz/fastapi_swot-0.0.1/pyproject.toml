@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fastapi_swot"
+version = "0.0.1"
+authors = [
+  { name="Harry Dang", email="harrydang.tech@gmail.com" },
+]
+description = "FastAPI SWOT"
+readme = "README.md"
+requires-python = ">=3.11.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies=[]
+
+# license = "MIT"
+# license-expression = ["LICEN[CS]E*"]
+# license-file = ["LICENCSE"]
+
+[project.urls]
+"Homepage" = "https://github.com/harrylowkey/fastapi-swot"
+"Bug Tracker" = "https://github.com/harrylowkey/fastapi-swot/issues"
