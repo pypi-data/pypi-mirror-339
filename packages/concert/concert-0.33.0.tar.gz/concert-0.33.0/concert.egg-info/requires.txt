@@ -1,0 +1,11 @@
+ipython
+matplotlib
+numpy
+pint>=0.12
+prettytable
+pyqtgraph
+pyxdg
+scipy
+tifffile
+pyzmq>=23.2.1
+psutil
