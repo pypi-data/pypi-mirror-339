@@ -1,0 +1,2 @@
+[console_scripts]
+firefox_cookie = firefox_cookie.__main__:main

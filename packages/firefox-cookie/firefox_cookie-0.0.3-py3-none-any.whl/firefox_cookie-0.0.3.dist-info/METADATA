@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: firefox_cookie
+Version: 0.0.3
+Summary: get firefox cookie
+Home-page: https://github.com/irakhlin/firefox-cookie
+Author: Ilya Rakhlin
+Author-email: i.rakhlin@gmail.com
+Requires-Dist: lz4
+Requires-Dist: shadowcopy; python_version >= "3.7" and platform_system == "Windows"
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
