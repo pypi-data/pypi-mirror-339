@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+stabledynamics/__init__.py
+stabledynamics.egg-info/PKG-INFO
+stabledynamics.egg-info/SOURCES.txt
+stabledynamics.egg-info/dependency_links.txt
+stabledynamics.egg-info/requires.txt
+stabledynamics.egg-info/top_level.txt
