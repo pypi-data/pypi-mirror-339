@@ -1,0 +1,66 @@
+# Phone MCP Plugin
+
+A phone control plugin for MCP that allows you to control your Android phone through ADB commands.
+
+## Features
+
+- Make and receive phone calls
+- Send and receive text messages
+- Take screenshots and screen recordings
+- Control media playback
+- Set alarms
+- Open apps
+- Check device connection
+- And more...
+
+## Prerequisites
+
+- Python 3.7 or higher
+- ADB (Android Debug Bridge) installed and in your system PATH
+- An Android device with USB debugging enabled
+- Connected Android device via USB
+
+## Installation
+
+```bash
+pip install phone-mcp
+```
+
+## Usage
+
+This plugin can be used with uvx. Here are some example commands:
+
+```bash
+# Make a phone call
+uvx phone call_number "1234567890"
+
+# Send a text message
+uvx phone send_text_message "1234567890" "Hello from MCP!"
+
+# Take a screenshot
+uvx phone take_screenshot
+
+# Check device connection
+uvx phone check_device_connection
+
+# Open an app
+uvx phone open_app "camera"
+```
+
+## Available Commands
+
+- `call_number(phone_number: str)`: Make a phone call
+- `end_call()`: End the current call
+- `send_text_message(phone_number: str, message: str)`: Send a text message
+- `take_screenshot()`: Take a screenshot
+- `start_screen_recording(duration_seconds: int = 30)`: Record screen
+- `open_app(app_name: str)`: Open an application
+- `set_alarm(hour: int, minute: int, label: str = "Alarm")`: Set an alarm
+- `play_media()`: Play/pause media
+- `receive_text_messages(limit: int = 5)`: Check recent messages
+- `receive_incoming_call()`: Handle incoming calls
+- `check_device_connection()`: Check ADB connection
+
+## License
+
+MIT License 
