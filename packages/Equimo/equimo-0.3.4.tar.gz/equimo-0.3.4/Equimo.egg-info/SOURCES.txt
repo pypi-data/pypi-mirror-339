@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+pyproject.toml
+Equimo.egg-info/PKG-INFO
+Equimo.egg-info/SOURCES.txt
+Equimo.egg-info/dependency_links.txt
+Equimo.egg-info/requires.txt
+Equimo.egg-info/top_level.txt
+equimo/__init__.py
+equimo/io.py
+equimo/utils.py
+tests/test_models.py
