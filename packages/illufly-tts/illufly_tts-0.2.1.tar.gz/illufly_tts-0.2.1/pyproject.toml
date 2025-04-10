@@ -1,0 +1,55 @@
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "illufly-tts"
+version = "0.2.1"
+description = "Text-to-Speech module for Illufly AI"
+authors = ["arcstep <43801@qq.com>"]
+readme = "README.md"
+packages = [
+    { include = "illufly_tts", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+click = ">=8.0.0"
+pydantic = ">=1.8.2"
+python-dotenv = ">=0.19.0"
+loguru = ">=0.5.3"
+
+# 客户端依赖
+fastapi = {version = ">=0.68.0"}
+uvicorn = {version = ">=0.15.0"}
+python-multipart = {version = ">=0.0.5"}
+aiofiles = {version = ">=0.8.0"}
+mcp = {version = ">=1.6.0,<2.0.0"}
+anyio = {version = ">=3.6.0"}
+
+# 服务端依赖
+torch = ">=2.0.0"
+torchaudio = ">=2.0.0,<2.2.2"
+kokoro = {version = ">=0.8.1"}
+phonemizer = {version = "^3.3.0"}
+misaki = {version = ">=0.8.1", extras = ["en"], python = ">=3.11,<3.13"}
+ordered-set = {version = ">=4.1.0"}
+pypinyin = {version = ">=0.54.0", python = ">=3.11,<4"}
+soundfile = {version = ">=0.12.1"}
+numpy = {version = ">=1.22.0,<2.0.0"}
+transformers = {version = ">=4.30.0,<4.31.0"}
+
+# 英文G2P核心依赖
+g2p-en = {version = ">=2.1.0"}  # 英文音素转换库
+langid = {version = ">=1.1.6"}  # 语言识别库
+jieba = {version = "^0.42.1"}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0.0"
+black = "^23.0.0"
+isort = "^5.12.0"
+pytest-asyncio = "0.21.1"
+
+[tool.poetry.scripts]
+# 主入口点
+tts = "illufly_tts.__main__:main"
