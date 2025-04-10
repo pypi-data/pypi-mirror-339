@@ -1,0 +1,154 @@
+[project]
+description = "A Python management solution for C++ dependencies"
+name = "cppython"
+authors = [
+    { name = "Synodic Software", email = "contact@synodic.software" },
+]
+readme = "README.md"
+dynamic = []
+requires-python = ">=3.13"
+dependencies = [
+    "typer>=0.15.2",
+    "pydantic>=2.11.3",
+    "packaging>=24.2",
+    "requests>=2.32.3",
+    "types-requests>=2.32.0.20250328",
+]
+version = "0.8.1.dev1"
+
+[project.license]
+text = "MIT"
+
+[project.optional-dependencies]
+pytest = [
+    "pytest>=8.3.5",
+    "pytest-mock>=3.14.0",
+]
+git = [
+    "dulwich>=0.22.8",
+]
+pdm = [
+    "pdm>=2.23.0",
+]
+
+[project.urls]
+homepage = "https://github.com/Synodic-Software/CPPython"
+repository = "https://github.com/Synodic-Software/CPPython"
+
+[project.entry-points."cppython.scm"]
+git = "cppython.plugins.git.plugin:GitSCM"
+
+[project.entry-points."cppython.generator"]
+cmake = "cppython.plugins.cmake.plugin:CMakeGenerator"
+
+[project.entry-points."cppython.provider"]
+conan = "cppython.plugins.conan.plugin:ConanProvider"
+vcpkg = "cppython.plugins.vcpkg.plugin:VcpkgProvider"
+
+[project.entry-points.pdm]
+cppython = "cppython.plugins.pdm.plugin:CPPythonPlugin"
+
+[project.entry-points.pytest11]
+cppython = "cppython.test.pytest.fixtures"
+
+[project.scripts]
+cppython = "cppython.console.entry:app"
+
+[dependency-groups]
+lint = [
+    "ruff>=0.11.4",
+    "mypy>=1.15.0",
+]
+test = [
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.1",
+    "pytest-mock>=3.14.0",
+]
+
+[tool.pytest.ini_options]
+log_cli = true
+testpaths = [
+    "tests",
+]
+
+[tool.mypy]
+exclude = "__pypackages__"
+plugins = [
+    "pydantic.mypy",
+]
+strict = true
+
+[tool.ruff]
+line-length = 120
+preview = true
+
+[tool.ruff.lint]
+ignore = [
+    "D206",
+    "D300",
+    "D415",
+    "E111",
+    "E114",
+    "E117",
+]
+select = [
+    "D",
+    "F",
+    "I",
+    "PL",
+    "UP",
+    "E",
+    "B",
+    "SIM",
+    "PT",
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+docstring-code-format = true
+indent-style = "space"
+quote-style = "single"
+
+[tool.coverage.report]
+skip_empty = true
+
+[tool.pdm]
+plugins = [
+    "-e file:///${PROJECT_ROOT}",
+]
+
+[tool.pdm.options]
+update = [
+    "--update-all",
+    "--unconstrained",
+]
+
+[tool.pdm.version]
+source = "scm"
+
+[tool.pdm.scripts.analyze]
+shell = "ruff check cppython tests"
+
+[tool.pdm.scripts.format]
+shell = "ruff format"
+
+[tool.pdm.scripts.lint]
+composite = [
+    "analyze",
+    "format",
+    "type-check",
+]
+
+[tool.pdm.scripts.test]
+shell = "pytest --cov=cppython --verbose tests"
+
+[tool.pdm.scripts.type-check]
+shell = "mypy ."
+
+[build-system]
+build-backend = "pdm.backend"
+requires = [
+    "pdm.backend",
+]
