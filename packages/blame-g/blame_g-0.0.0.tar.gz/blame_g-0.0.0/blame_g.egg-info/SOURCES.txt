@@ -1,0 +1,10 @@
+README.md
+setup.py
+blame-g/__init__.py
+blame-g/main.py
+blame_g.egg-info/PKG-INFO
+blame_g.egg-info/SOURCES.txt
+blame_g.egg-info/dependency_links.txt
+blame_g.egg-info/entry_points.txt
+blame_g.egg-info/requires.txt
+blame_g.egg-info/top_level.txt

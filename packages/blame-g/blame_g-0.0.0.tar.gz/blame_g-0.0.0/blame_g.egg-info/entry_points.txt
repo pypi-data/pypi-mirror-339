@@ -1,0 +1,2 @@
+[console_scripts]
+blame-g = blame_g.main:main

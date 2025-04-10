@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: blame-g
+Version: 0.0.0
+Home-page: 
+Author: Mohammed Muzammil Anwar
+Author-email: mohammad.muzammil100@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: argparse
+Requires-Dist: gitpython
+Requires-Dist: rich
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
