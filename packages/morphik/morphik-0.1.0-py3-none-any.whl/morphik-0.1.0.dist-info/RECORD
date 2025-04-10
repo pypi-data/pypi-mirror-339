@@ -1,0 +1,9 @@
+morphik/__init__.py,sha256=NJaVsfpAHLrb8O-L9j3fBJK4JsOE8Vto_alcFg26xVw,242
+morphik/async_.py,sha256=koc-ryqt0MtV4sJTSSztsW_ctSzTcn4J8QAQSJX0JCY,52116
+morphik/exceptions.py,sha256=v4XGmfq5B0KrZEF6M1ID8A50-45-SRAQZTrXGXM6n0Q,260
+morphik/models.py,sha256=GZn3DGvzgcAyfb6z2fNzfnSiq0EQBNEEJj6Qfiwv-nU,16376
+morphik/rules.py,sha256=nAEYseCxjrpK5QELeBxYI9RD4A8-aNThQkWV0d-Owjs,1512
+morphik/sync.py,sha256=3h3bG5tuUyBOrXNQ-bYs2OluDfcrQIH69S7BBpylmuM,52734
+morphik-0.1.0.dist-info/METADATA,sha256=qBZH5DeFC0WaTcwEwxr5Ybrrx84ElR1OTuYzNgRses8,1010
+morphik-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+morphik-0.1.0.dist-info/RECORD,,
