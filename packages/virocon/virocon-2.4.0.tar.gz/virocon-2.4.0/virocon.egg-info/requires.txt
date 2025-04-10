@@ -1,0 +1,17 @@
+matplotlib>=2.2.0
+networkx
+numpy
+pandas
+scikit-learn
+scipy
+
+[dev]
+Sphinx
+ruff
+pre-commit
+
+[test]
+pytest
+pytest-cov
+coverage
+coveralls
