@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jyen-data-structure"
+version = "0.1.0"
+description = "A Python package implementing fundamental data structures such as arrays, stacks, queues, linked lists, graphs, and trees."
+readme = "README.md"
+authors = [
+    { name = "Joshua Juste Emmanuel Yun Pei NIKIEMA", email = "joshuanikiema24@gmail.com" }
+]
+license = { file = "LICENCE" }
+keywords = ["data structures", "python", "educational", "stack", "queue", "graph", "tree", "linked list", "array"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Education",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+requires-python = ">=3.8"
+
+[project.urls]
+"Homepage" = "https://github.com/Yunpei24/data_structures_jyen"
+"Documentation" = "https://yunpei24.github.io/data_structures_jyen"
+"Bug Tracker" = "https://github.com/Yunpei24/data_structures_jyen/issues"
+
+[tool.setuptools]
+packages = ["data_structures_jyen"]
+
+[tool.setuptools.package-data]
+"data_structures_jyen" = ["*.py"]
