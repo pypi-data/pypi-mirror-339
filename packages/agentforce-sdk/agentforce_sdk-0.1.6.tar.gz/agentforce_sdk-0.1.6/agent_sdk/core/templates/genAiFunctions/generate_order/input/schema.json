@@ -1,0 +1,25 @@
+{
+  "$schema" : "https://cms.salesforce.com/types/lightning__copilotActionInput",
+  "$ref" : "sfdc:propertyType/lightning__objectType",
+  "required" : [ "expected_output", "query" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "expected_output" : {
+      "title" : "expected output",
+      "description" : "Expected order Id.  Try your best to come up with a fake order id",
+      "$ref" : "sfdc:propertyType/lightning__textType",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "query" : {
+      "title" : "query",
+      "description" : "JSON string containing the following attributes:\nlocation: string,\nheadcount: number,\ndatetime: string,\npreferences?: string\n\nIMPORTANT:  generate a string as input.",
+      "$ref" : "sfdc:propertyType/lightning__textType",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

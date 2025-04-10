@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>System level prompts.</description>
+    <developerName>GLOBAL_INST_TOPIC_NAME</developerName>
+    <genAiPluginInstructions>
+        <description>AGENTFORCE_DESCRIPTION</description>
+        <developerName>Instruction1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>Instruction 1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Always ask a follow up question to keep the conversation going until the user has no more questions.</description>
+        <developerName>Instruction2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>Instruction 2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When passing in an input to an action, never return a dataType. Always return a generated sample response</description>
+        <developerName>Instruction3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>Instruction 3</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>GLOBAL_INST_TOPIC_NAME</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>system level prompts</scope>
+</GenAiPlugin>

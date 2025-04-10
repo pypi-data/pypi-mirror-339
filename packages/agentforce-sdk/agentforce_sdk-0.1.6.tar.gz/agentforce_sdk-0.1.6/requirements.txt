@@ -1,0 +1,26 @@
+# Salesforce AgentForce SDK Dependencies
+requests>=2.25.0
+simple-salesforce>=1.12.0
+jsonschema>=4.0.0
+aiohttp>=3.8.0
+python-dotenv>=0.20.0
+click>=8.0.0
+tqdm>=4.60.0
+
+# Development Dependencies
+pytest>=7.0.0
+pytest-cov>=4.0.0
+black>=22.0.0
+flake8>=5.0.0
+isort>=5.10.0
+mypy>=0.950 
+pytest-dependency>=0.5.1
+
+# Pydantic
+pydantic>=2.11.1
+
+# LLM 
+openai>=1.72.0
+
+# Integration Tests
+tabulate>=0.9.0

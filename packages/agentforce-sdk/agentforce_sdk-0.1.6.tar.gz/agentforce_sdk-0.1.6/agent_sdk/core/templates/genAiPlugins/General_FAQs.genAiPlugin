@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>Assist users with common queries about AGENTFORCE_COMPANY_NAME and its products, policies, agent capabilities or business procedures.</description>
+    <developerName>GENERAL_FAQ_TOPIC_NAME</developerName>
+    <genAiFunctions>
+        <functionName>AGENTFORCE_KNOWLEDGE_ACTION_NAME</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Use the knowledge base to answer general questions about policies, procedures, and usage.</description>
+        <developerName>Instruction1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>Instruction 1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the customer's question is too vague or general, ask for more details and clarification to give a better answer.</description>
+        <developerName>Instruction2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>Instruction 2</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>GENERAL_FAQ_TOPIC_LABEL</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to help customers with their queries and issues by answering questions about AGENTFORCE_COMPANY_NAME, its products, procedures, or policies by searching knowledge.</scope>
+</GenAiPlugin>
