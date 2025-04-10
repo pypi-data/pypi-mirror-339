@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: sbol2build
+Version: 0.0b1
+Summary: SBOL2Build: python package for construction of SBOL objects during build planning
+Author-email: Gonzalo Vidal <gonzalo.vidalpena@colorado.edu>, Ryan Greer <ryan.greer@colorado.edu>
+Maintainer-email: Ryan Greer <ryan.greer@colorado.edu>
+Project-URL: Homepage, https://github.com/MyersResearchGroup/SBOL2Build
+Project-URL: Bug Tracker, https://github.com/MyersResearchGroup/SBOL2Build/issues
+Keywords: SBOL,genetic,automation,build,synthetic biology
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sbol2
+Requires-Dist: biopython
+Requires-Dist: pydna
+Provides-Extra: test
+Requires-Dist: pytest<5.0.0; extra == "test"
+Requires-Dist: pytest-cov[all]; extra == "test"
+Dynamic: license-file
+
+# SBOL2Build
+SBOL2 utility functions to support build plan
