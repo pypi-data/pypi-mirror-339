@@ -1,0 +1,29 @@
+[project]
+name = "mcp-server-math"
+version = "0.1.0"
+description = "A MCP server providing LLM with various mathematical capabilities"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Jiaxin Zhang", email = "jiaxinzhang18@gmail.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "pydantic",
+]
+
+[project.urls]
+Homepage = "https://github.com/jiaxinzhang18/mcp-server-math"
+Issues = "https://github.com/jiaxinzhang18/mcp-server-math/issues"
+
+[project.scripts]
+mcp-server-math = "mcp_server_math:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
