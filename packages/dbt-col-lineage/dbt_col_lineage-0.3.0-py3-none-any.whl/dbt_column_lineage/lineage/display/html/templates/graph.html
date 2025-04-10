@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DBT Column Lineage</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/styles.css') }}">
+    <script src="{{ url_for('static', path='/vendor/d3.v7.min.js') }}"></script>
+    <script src="https://dagrejs.github.io/project/dagre/latest/dagre.min.js"></script>
+    <script src="{{ url_for('static', path='/js/config.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/dataProcessor.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/utils.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/renderer.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/interactions.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/graph.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            {% if explore_mode %}
+            <div class="explore-panel">
+                <h3>Explore Lineage</h3>
+                <div class="model-selector">
+                    <label for="modelSelect">Model:</label>
+                    <select id="modelSelect">
+                        <option value="">Select a model</option>
+                    </select>
+                </div>
+                <div class="column-selector">
+                    <label for="columnSelect">Column:</label>
+                    <select id="columnSelect" disabled>
+                        <option value="">Select a column</option>
+                    </select>
+                </div>
+                <button id="loadLineage" disabled>Load Lineage</button>
+            </div>
+            {% endif %}
+            <div class="controls">
+                <h3>Controls</h3>
+                <button id="zoomIn">Zoom In</button>
+                <button id="zoomOut">Zoom Out</button>
+                <button id="resetView">Reset View</button>
+                <button id="relayout">Re-layout</button>
+            </div>
+        </div>
+        <div id="graph"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Data:', {{ data | tojson }});
+            let graphInstance = initGraph({{ data | tojson }});
+            
+            {% if explore_mode %}
+            const modelSelect = document.getElementById('modelSelect');
+            const columnSelect = document.getElementById('columnSelect');
+            const loadLineageBtn = document.getElementById('loadLineage');
+            const graphContainer = document.getElementById('graph');
+            
+            let allModelsData = [];
+            
+            fetch('/api/models')
+                .then(response => response.json())
+                .then(models => {
+                    allModelsData = models;
+                    models.forEach(model => {
+                        const option = document.createElement('option');
+                        option.value = model.name;
+                        option.textContent = model.name;
+                        modelSelect.appendChild(option);
+                    });
+                });
+                
+            modelSelect.addEventListener('change', function() {
+                columnSelect.innerHTML = '<option value="">Select a column</option>';
+                columnSelect.disabled = !this.value;
+                loadLineageBtn.disabled = true;
+                
+                if (this.value) {
+                    const model = allModelsData.find(m => m.name === this.value);
+                    if (model && model.columns) {
+                        model.columns.forEach(column => {
+                            const option = document.createElement('option');
+                            option.value = column.name;
+                            option.textContent = `${column.name} (${column.type || 'unknown'})`;
+                            columnSelect.appendChild(option);
+                        });
+                    }
+                }
+            });
+            
+            columnSelect.addEventListener('change', function() {
+                loadLineageBtn.disabled = !this.value;
+            });
+            
+            loadLineageBtn.addEventListener('click', function() {
+                const model = modelSelect.value;
+                const column = columnSelect.value;
+                if (model && column) {
+                    fetch(`/api/lineage/${model}/${column}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.error) {
+                                console.error(data.error);
+                                return;
+                            }
+                            graphContainer.innerHTML = '';
+                            
+                            graphInstance = initGraph(data);
+                        });
+                }
+            });
+            {% endif %}
+        });
+    </script>
+</body>
+</html>
