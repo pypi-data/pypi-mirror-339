@@ -1,0 +1,10 @@
+calico_lib/__init__.py,sha256=3LaGzQqjucIGJ6YtmwrqoCywl-Xtww4KpIgWnbanBHY,209
+calico_lib/judge_api.py,sha256=myUYGWkejLRkOAk0yrg37cFAHE9eTTfVZjGfsgMu-H4,2060
+calico_lib/legacy.py,sha256=V2osNpmtdspo8d83qB4WZPOYACUMS0QyIx7KOZbZPV0,3762
+calico_lib/multicase.py,sha256=M7bulyBdj5fMps_-FEoPZBo2GRmtCFbBTtKJPlQsUhI,1219
+calico_lib/problem.py,sha256=EZQk2pKDe_b6KEe6g7LdrLilH_nKtbTbLREzPJpM9qM,9550
+calico_lib/runner.py,sha256=XAy9gcPhNjv5Aqh8OfM3GcmXRasge92IcscYEz2i1KI,1082
+calico_lib-0.1.5.dist-info/licenses/LICENSE,sha256=syWBnTwR2ALVi7IGc3xY4fHHJXv5UmySVtVcOR7Qt-Y,1079
+calico_lib-0.1.5.dist-info/WHEEL,sha256=BXjIu84EnBiZ4HkNUBN93Hamt5EPQMQ6VkF7-VZ_Pu0,100
+calico_lib-0.1.5.dist-info/METADATA,sha256=T8mFQ-EBmgxOsIONMrP7hEl1DxtiHhIeeKy0zY4SAqM,1481
+calico_lib-0.1.5.dist-info/RECORD,,
