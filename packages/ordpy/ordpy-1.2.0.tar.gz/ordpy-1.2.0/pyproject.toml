@@ -1,0 +1,25 @@
+[project]
+name = "ordpy"
+version = "1.2.0"
+authors = [{ name="Arthur A. B. Pessa and Haroldo V. Ribeiro", email="arthur_pessa@hotmail.com" },]
+description = "A Python package for data analysis with permutation entropy and ordinal network methods"
+readme = "README.rst"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/arthurpessa/ordpy"
+Repository = "https://github.com/arthurpessa/ordpy"
+Issues = "https://github.com/arthurpessa/ordpy/issues"
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "numpy>=1.20",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
