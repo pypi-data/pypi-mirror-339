@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: sentry-script-runner
+Version: 0.1.6
+Summary: A web application for running Python scripts.
+License-Expression: Apache-2.0
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Flask==3.1.0
+Requires-Dist: pyyaml==6.0.2
+Requires-Dist: requests==2.32.3
+Requires-Dist: jsonschema==4.23.0
+Requires-Dist: google-api-python-client==2.145.0
+Requires-Dist: google-auth[pyopenssl]==2.38.0
+Requires-Dist: click==8.1.7
+Requires-Dist: setuptools==78.1.0
+Requires-Dist: sentry-infra-event-notifier==0.0.10
+Requires-Dist: sentry-sdk[flask]==2.25.0
+Dynamic: license-file
+
+# script-runner
+Run Python scripts on production data.
+
+This application can run in either combined or multi-region mode.
+
+For multi-region mode, set `mode: region` for region, and `mode: main` for the main deployment. `mode: combined` runs both together.
+
+
+## Example data:
+- These are in the examples/scripts directory
+- You can generate data for the examples via `make generate-example-data`
+
+
+## Configuration
+Runs in `combined`, `main` and `region` mode. Combined is mostly for dev and testing.
+
+check `config.schema.json`
+
