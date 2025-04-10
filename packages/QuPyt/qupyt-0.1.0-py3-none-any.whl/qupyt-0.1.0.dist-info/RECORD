@@ -1,0 +1,16 @@
+qupyt/__init__.py,sha256=-zICOK7vZVGweuCZnTJAiBnmcexnTFED2yWXzSIVcqc,162
+qupyt/gates.py,sha256=UabWPoAD2n_aIGigG7d6UaKen08XoZQWjBvazvbzbFA,545
+qupyt/layers.py,sha256=fbWG9yaHkaVrXHE-cfT0smEKTJsXlU7F-y3WifVixTs,379
+qupyt/qubit.py,sha256=JB0ZoH-zNYQrhfBSTq6ro7ZAcERCoSXEMpRm_eMcJqw,1009
+qupyt/states.py,sha256=nUqENctAHkyYOzT7sURNvB7bzhzrYMe3Ros61K001GQ,812
+qupyt/subroutines.py,sha256=zdmWcUKcepOwLvqxztbUdQijHecAgM5U333VLh56Dnk,379
+qupyt/algorithms/__init__.py,sha256=KbXFgySUGh1Z49AE3x4wsDCjFAn5pX1QUHaTWom7-u4,227
+qupyt/algorithms/bernstein_vazirani.py,sha256=bl_2VvDU6I8hjIrA0F925P2mZ2twuwyzH2Ws4I-raR8,1456
+qupyt/algorithms/deutsch.py,sha256=UU99YnCaAvMQWNuqqt4bRAutIubsAz1b9AJ0hszBNuo,1191
+qupyt/algorithms/deutsch_josza.py,sha256=1kCabh0hounERPDDQ6BcucS6jOT9J31lZOepyGrb770,1719
+qupyt/algorithms/grover.py,sha256=o9aq8RSIeTqc9Lqx7XFK8vxgjnHvr3z6fV5b5_ozELc,3534
+qupyt-0.1.0.dist-info/licenses/LICENSE,sha256=ElOUq4_gIWIT1sU5U8KwetOnh5UN5OgAfN9nJuT7oaA,1067
+qupyt-0.1.0.dist-info/METADATA,sha256=YgrY1RQpfRew05qNIE_SYyb1ckrGkbBtAuez44EV9mA,699
+qupyt-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+qupyt-0.1.0.dist-info/top_level.txt,sha256=kJ9JQz2EU46LgHDLgcgAd54AiYKp3YP0vnPt86-6tpg,6
+qupyt-0.1.0.dist-info/RECORD,,
