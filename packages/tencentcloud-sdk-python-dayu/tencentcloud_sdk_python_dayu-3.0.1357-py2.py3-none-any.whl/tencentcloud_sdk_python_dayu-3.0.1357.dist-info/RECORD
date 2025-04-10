@@ -1,0 +1,10 @@
+tencentcloud/__init__.py,sha256=vfqQBixvxvgkqxcTAs74aI5qYIpkt7NgWQgRMC1xeNU,631
+tencentcloud/dayu/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/dayu/v20180709/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/dayu/v20180709/dayu_client.py,sha256=M5A1ei0HuJrWF9B49uj8fix3X3doks16WATuRXp4URw,103066
+tencentcloud/dayu/v20180709/errorcodes.py,sha256=iNjTdFeVWIWGXMP-7_jhdvFGmsAeoC2jQEmvd1SHeZk,1440
+tencentcloud/dayu/v20180709/models.py,sha256=hj68dw9ddx9kNGQRdp2RspY88LG6IB11h5lwwdm2l28,678539
+tencentcloud_sdk_python_dayu-3.0.1357.dist-info/METADATA,sha256=-VrZEVJ2pgRED7FFXJ5_p0vd4vQu4z4ilXo9FQDE6tY,1501
+tencentcloud_sdk_python_dayu-3.0.1357.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+tencentcloud_sdk_python_dayu-3.0.1357.dist-info/top_level.txt,sha256=g-8OyzoqI6O6LiS85zkeNzhB-osEnRIPZMdyRd_0eL0,13
+tencentcloud_sdk_python_dayu-3.0.1357.dist-info/RECORD,,
