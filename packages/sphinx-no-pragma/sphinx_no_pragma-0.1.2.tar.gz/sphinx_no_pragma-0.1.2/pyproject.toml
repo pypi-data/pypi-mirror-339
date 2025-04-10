@@ -1,0 +1,181 @@
+[project]
+name = "sphinx-no-pragma"
+description = "Strip pragmas from your docs."
+readme = "README.rst"
+version = "0.1.2"
+dependencies = [
+    "docutils",
+    "sphinx",
+]
+authors = [
+    {name = "Artur Barseghyan", email = "artur.barseghyan@gmail.com"},
+]
+license = "MIT"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development",
+]
+keywords = ["sphinx", "documentation", "pragma"]
+
+[project.urls]
+"Homepage" = "https://github.com/barseghyanartur/sphinx-no-pragma/"
+"Bug Tracker" = "https://github.com/barseghyanartur/sphinx-no-pragma/issues"
+"Documentation" = "https://sphinx-no-pragma.readthedocs.io/"
+"Source Code" = "https://github.com/barseghyanartur/sphinx-no-pragma/"
+"Changelog" = "https://sphinx-no-pragma.readthedocs.io/en/latest/changelog.html"
+
+[project.optional-dependencies]
+all = ["sphinx-no-pragma[dev,test,docs]"]
+dev = [
+    "black",
+    "detect-secrets",
+    "doc8",
+    "ipython",
+    "isort",
+    "mypy",
+    "ruff",
+    "twine",
+    "uv",
+]
+test = [
+    "pytest",
+    "pytest-cov",
+    "pytest-rst",
+]
+docs = [
+    "sphinx-rtd-theme>=1.3.0",
+]
+
+[tool.setuptools]
+py-modules = ["sphinx_no_pragma"]
+
+[tool.black]
+line-length = 80
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+force-exclude = 'docs/_static/example_1\.py'
+extend-exclude = '''
+/(
+  # The following are specific to Black, you probably don't want those.
+  | blib2to3
+  | tests/data
+  | profiling
+  | migrations
+)/
+'''
+
+# Build system information below.
+# NOTE: You don't need this in your own Black configuration.
+[build-system]
+requires = ["setuptools>=41.0", "setuptools-scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.isort]
+profile = "black"
+combine_as_imports = true
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 80
+known_first_party = [
+    "example_1",
+]
+known_third_party = ["sphinx_no_pragma"]
+skip = ["wsgi.py", "builddocs/"]
+
+[tool.ruff]
+line-length = 80
+
+# Enable Pyflakes `E` and `F` codes by default.
+select = ["E", "F"]
+ignore = []
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    "docs",
+]
+per-file-ignores = {}
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# Assume Python 3.8.
+target-version = "py38"
+
+[tool.doc8]
+ignore-path = [
+    "docs/requirements.txt",
+    "sphinx-no-pragma.egg-info/SOURCES.txt",
+]
+
+[tool.pytest.ini_options]
+minversion = "0.1.2"
+addopts = [
+    "-ra",
+    "-vvv",
+    "-q",
+   "--cov=sphinx_no_pragma",
+   "--ignore=.tox",
+   "--ignore=requirements",
+   "--ignore=release",
+   "--ignore=tmp",
+   "--cov-report=html",
+   "--cov-report=term",
+   "--cov-report=annotate",
+   "--cov-append",
+   "--capture=no",
+]
+testpaths = [
+    "sphinx_no_pragma.py",
+    "test*.py",
+]
+
+[tool.coverage.run]
+relative_files = true
+omit = [
+    ".tox/*",
+]
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+    "pragma: no cover",
+    "@overload",
+]
+
+[tool.mypy]
+check_untyped_defs = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unused_configs = true
