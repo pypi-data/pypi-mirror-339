@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: EnydayPy
+Version: 1.0.1
+Summary: Enyday API
+Home-page: https://github.com/bruadam/EnydayPy
+Author: Bruno Adam
+Author-email: bruno.adam@pm.me
+Keywords: OpenAPI,OpenAPI-Generator,Enyday API,Energy Management System,Energy Community,Denmark
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: urllib3<3.0.0,>=1.25.3
+Requires-Dist: python-dateutil>=2.8.2
+Requires-Dist: pydantic>=2
+Requires-Dist: typing-extensions>=4.7.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+    This API allows integration with the Enyday platform, providing access to user authentication, user details, authorization data, address information, and power consumption data. It helps in integrating Enyday into platforms like Home Assistant. 
+    
