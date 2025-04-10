@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+qubisafe/__init__.py
+qubisafe/website.py
+qubisafe.egg-info/PKG-INFO
+qubisafe.egg-info/SOURCES.txt
+qubisafe.egg-info/dependency_links.txt
+qubisafe.egg-info/top_level.txt
