@@ -1,0 +1,47 @@
+%ocsf = true
+
+ocsf = {"metadata": {"version": "1.3.0",
+                     "product": {"vendor_name": "Wiz",
+                                 "feature": {"name": "issue"}}},
+        "category_uid": 2,
+        "category_name": "Findings",
+        "class_uid": 2002,
+        "class_name": "Vulnerability Finding",
+        "activity_id": 1,
+        "activity_name": "Create",
+        "type_uid": 200201,
+        "type_name": "Vulnerability Finding: Create"}
+
+ocsf.uid = del(.id)
+ocsf.time = to_unix_timestamp(now())
+
+ocsf.finding_info = {"severity_id": 99,
+                     "severity": del(.score),
+                     "uid": ocsf.uid,
+                     "title": del(.sourceRule.name),
+                     "src_url": del(.portalUrl),
+                     "status_detail": del(.status)}
+
+ocsf.first_seen_time = del(.firstDetectedAt)
+ocsf.last_seen_time = del(.lastDetectedAt)
+
+ocsf.vulnerabilities = [{"cve": del(.name),
+                         "desc": del(.CVEDescription),
+                         "severity": del(.CVSSSeverity),
+                         "remediation": {"desc": del(.remediation),
+                                         "references": [del(.link)]},
+                         "affected_packages": [{"name": del(.detailedName),
+                                                "fixed_in_version": del(.fixedVersion),
+                                                "is_exploit_available": del(.hasExploit)}]}]
+
+if (!is_nullish(.entitySnapshot.providerId)) {
+    ocsf.observables = [{"value": del(.entitySnapshot.providerId),
+                         "name": del(.entitySnapshot.nativeType)}]
+}
+
+unmapped, _ = compact(., string: true, array: true, null: true, nullish: true)
+if (!is_null(unmapped) && !is_empty(unmapped)) {
+  ocsf.unmapped = encode_json(unmapped)
+}
+
+. = compact(ocsf, string: true, array: true, null: true, nullish: true)
