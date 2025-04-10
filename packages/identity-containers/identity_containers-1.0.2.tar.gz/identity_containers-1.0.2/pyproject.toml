@@ -1,0 +1,15 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "identity-containers"
+authors = [{ name = "Paul Pinterits" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+dynamic = ["version", "description"]
+requires-python = ">=3.9"
+dependencies = ["typing-extensions"]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov"]
