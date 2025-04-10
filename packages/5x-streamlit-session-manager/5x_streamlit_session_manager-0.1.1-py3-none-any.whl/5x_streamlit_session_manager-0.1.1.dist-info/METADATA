@@ -1,0 +1,85 @@
+Metadata-Version: 2.4
+Name: 5x-streamlit-session-manager
+Version: 0.1.1
+Summary: A library to fetch user session data from encrypted URL parameters in 5x Streamlit apps
+Home-page: https://github.com/5X-nextgen-customer-repo-prod/streamlit_session_manager.gitc
+Author: 5X
+Author-email: support@5x.co
+License: MIT
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: extra-streamlit-components
+Requires-Dist: cryptography>=36.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Streamlit Session Manager
+
+A simple session management library for Streamlit applications that allows easy access to user session data from cookies.
+
+## Installation
+
+```bash
+pip install 5x-streamlit-session-manager
+```
+
+## Usage
+
+```python
+import streamlit as st
+from streamlit_session_manager import SessionManager
+
+# Initialize the session manager
+session = SessionManager()
+
+# Get user details
+user = session.get_user()
+if user:
+    email = user.get('email')
+    first_name = user.get('first_name')
+    last_name = user.get('last_name')
+
+# Or get just the email
+email = session.get_email()
+
+# Or get the full name
+full_name = session.get_full_name()
+```
+
+## Features
+
+- Easy access to user session data
+- Get email address from session
+- Get user's full name
+- Get complete user details
+- Error handling and type safety
+
+## Requirements
+
+- Python 3.7+
+- Streamlit 1.0.0+
+- extra-streamlit-components 0.1.0+
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
