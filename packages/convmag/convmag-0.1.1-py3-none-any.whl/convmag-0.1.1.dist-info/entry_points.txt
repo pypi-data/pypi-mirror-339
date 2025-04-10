@@ -1,0 +1,2 @@
+[console_scripts]
+convmag = convmag.cli:cli
