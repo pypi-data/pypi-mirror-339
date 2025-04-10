@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+sdncenter/__init__.py
+sdncenter/currency_converter_simple.py
+sdncenter/currency/__init__.py
+sdncenter/currency/converter/__init__.py
+sdncenter/currency/converter/currency_converter.py
+sdncenter/currency/repositories/__init__.py
+sdncenter/currency/repositories/exchange_rates.py
+sdncenter_currency_converter.egg-info/PKG-INFO
+sdncenter_currency_converter.egg-info/SOURCES.txt
+sdncenter_currency_converter.egg-info/dependency_links.txt
+sdncenter_currency_converter.egg-info/top_level.txt
+tests/test_currency_converter_simple.py
