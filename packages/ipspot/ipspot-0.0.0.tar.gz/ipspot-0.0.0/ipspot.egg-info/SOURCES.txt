@@ -1,0 +1,6 @@
+ipspot_setup.py
+ipspot/__init__.py
+ipspot.egg-info/PKG-INFO
+ipspot.egg-info/SOURCES.txt
+ipspot.egg-info/dependency_links.txt
+ipspot.egg-info/top_level.txt
