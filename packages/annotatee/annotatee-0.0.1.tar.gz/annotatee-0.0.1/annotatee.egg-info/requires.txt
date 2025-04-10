@@ -1,0 +1,7 @@
+pandas
+numpy
+enzymetk
+sciutil>=1.0.3
+sciviso
+seaborn
+typer

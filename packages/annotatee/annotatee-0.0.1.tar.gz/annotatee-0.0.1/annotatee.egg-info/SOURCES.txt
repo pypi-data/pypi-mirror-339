@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+annotatee/__init__.py
+annotatee/__main__.py
+annotatee/annotate.py
+annotatee.egg-info/PKG-INFO
+annotatee.egg-info/SOURCES.txt
+annotatee.egg-info/dependency_links.txt
+annotatee.egg-info/entry_points.txt
+annotatee.egg-info/requires.txt
+annotatee.egg-info/top_level.txt
+tests/test_annotatee.py

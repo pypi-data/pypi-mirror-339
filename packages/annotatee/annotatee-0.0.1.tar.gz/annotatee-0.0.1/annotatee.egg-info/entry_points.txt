@@ -1,0 +1,2 @@
+[console_scripts]
+annotatee = annotatee.__main__:app
