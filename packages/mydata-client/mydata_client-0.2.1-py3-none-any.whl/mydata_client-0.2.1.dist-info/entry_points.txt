@@ -1,0 +1,4 @@
+[console_scripts]
+ingest-xsd=mydata.ingest_xsd:ingest
+mydata=mydata.__main__:cli
+
