@@ -1,0 +1,140 @@
+Metadata-Version: 2.1
+Name: illufly-tts
+Version: 0.2.0
+Summary: Text-to-Speech module for Illufly AI
+Author: arcstep
+Author-email: 43801@qq.com
+Requires-Python: >=3.11,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: client
+Provides-Extra: full
+Provides-Extra: server
+Requires-Dist: aiofiles (>=0.8.0) ; extra == "full" or extra == "client"
+Requires-Dist: anyio (>=3.6.0) ; extra == "full" or extra == "client"
+Requires-Dist: click (>=8.0.0)
+Requires-Dist: fastapi (>=0.68.0) ; extra == "full" or extra == "client"
+Requires-Dist: g2p-en (>=2.1.0) ; extra == "full" or extra == "server"
+Requires-Dist: jieba (>=0.42.1,<0.43.0) ; extra == "full" or extra == "server"
+Requires-Dist: kokoro (>=0.8.1) ; extra == "full" or extra == "server"
+Requires-Dist: langid (>=1.1.6) ; extra == "full" or extra == "server"
+Requires-Dist: loguru (>=0.5.3)
+Requires-Dist: mcp (>=1.6.0,<2.0.0) ; extra == "full" or extra == "client" or extra == "server"
+Requires-Dist: misaki[zh] (>=0.8.1) ; (python_version >= "3.11" and python_version < "3.13") and (extra == "full" or extra == "server")
+Requires-Dist: nltk (>=3.8.1)
+Requires-Dist: numpy (>=1.22.0,<2.0.0) ; extra == "full" or extra == "server"
+Requires-Dist: ordered-set (>=4.1.0) ; extra == "full" or extra == "server"
+Requires-Dist: pydantic (>=1.8.2)
+Requires-Dist: pypinyin (>=0.54.0) ; (python_version >= "3.11" and python_version < "4") and (extra == "full" or extra == "server")
+Requires-Dist: python-dotenv (>=0.19.0)
+Requires-Dist: python-multipart (>=0.0.5) ; extra == "full" or extra == "client"
+Requires-Dist: soundfile (>=0.12.1) ; extra == "full" or extra == "server"
+Requires-Dist: torch (==2.2.2) ; extra == "full" or extra == "server"
+Requires-Dist: torchaudio (==2.2.2) ; extra == "full" or extra == "server"
+Requires-Dist: transformers (>=4.30.0,<4.31.0) ; extra == "full" or extra == "server"
+Requires-Dist: uvicorn (>=0.15.0) ; extra == "full" or extra == "client"
+Description-Content-Type: text/markdown
+
+# Illufly TTS - 模块化语音合成服务
+
+高质量的模块化中文语音合成系统，支持多种部署方式。
+
+## 特点
+
+- **模块化设计**：可以按需安装客户端、服务端或完整包
+- **低资源需求**：客户端几乎不需要额外依赖
+- **易于集成**：可以直接复制API端点到其他应用
+- **多种部署**：支持命令行、MCP协议和REST API接口
+
+## 安装方式
+
+### 1. 完整安装
+
+包含所有组件，适合单机部署或完整服务：
+
+```bash
+pip install "illufly-tts[full]"
+```
+
+### 2. 仅客户端
+
+轻量级安装，只包含客户端组件：
+
+```bash
+pip install "illufly-tts[client]"
+```
+
+### 3. 仅服务端
+
+包含TTS核心服务：
+
+```bash
+pip install "illufly-tts[server]"
+```
+
+## 使用方式
+
+### 完整服务（单机模式）
+
+```bash
+# 启动完整服务（包含API和TTS引擎）
+python -m illufly_tts serve --voices-dir=./voices --device=cpu
+```
+
+### 拆分部署
+
+```bash
+# 在服务器上启动MCP服务
+python -m illufly_tts server --voices-dir=./voices --device=cuda --transport=sse --port=31572
+
+# 在客户端启动API服务
+python -m illufly_tts api --server-host=tts-server-ip --server-port=31572
+```
+
+### 命令行客户端
+
+```bash
+# 通过命令行使用
+python -m illufly_tts client speak --process-command="/usr/bin/python" --process-args="-m,illufly_tts,server" "你好世界"
+
+# 获取可用语音
+python -m illufly_tts client voices
+```
+
+### 集成到其他应用
+
+```python
+from fastapi import FastAPI
+from illufly_tts.api.endpoints import mount_tts_service
+
+app = FastAPI()
+
+# 添加自定义认证逻辑
+async def get_current_user():
+    # 实现你的认证逻辑
+    return {"user_id": "my_user"}
+
+# 挂载TTS服务
+mount_tts_service(
+    app=app,
+    require_user=get_current_user,
+    host="tts-server-host",  # 或使用子进程方式
+    port=31572,
+    prefix="/api/tts"
+)
+```
+
+## 直接复制集成
+
+如果你希望完全避免依赖，可以直接复制以下关键文件：
+
+1. `src/illufly_tts/client/mcp_client.py` - MCP客户端
+2. `src/illufly_tts/api/endpoints.py` - FastAPI端点
+
+然后按照上面的集成示例整合到你的应用中。
+
+## 更多信息
+
+详细文档请参阅项目Wiki或API文档。
+
