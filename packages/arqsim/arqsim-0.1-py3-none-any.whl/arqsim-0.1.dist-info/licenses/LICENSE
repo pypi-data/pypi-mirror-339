@@ -1,0 +1,11 @@
+
+---
+
+### 🧪 `tests/test_arq.py` (optional)
+
+```python
+from arqsim import stop_and_wait, arq_sim
+
+def test_import():
+    assert callable(stop_and_wait)
+    assert callable(arq_sim)
