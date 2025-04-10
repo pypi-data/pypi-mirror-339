@@ -1,0 +1,26 @@
+[project]
+name = "geckoterminal-py"
+version = "0.2.5"
+description = ""
+authors = [
+    {name = "cardosofede", email = "federico.cardoso.e@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "glom>=24.11.0",
+    "httpx>=0.28.1",
+    "pandas>=2.2.3",
+]
+
+[tool.ruff]
+# Decrease the maximum line length to 79 characters.
+line-length = 100
+src = ["src"]
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

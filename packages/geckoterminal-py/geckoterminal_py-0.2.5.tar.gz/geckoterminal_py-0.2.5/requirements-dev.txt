@@ -1,0 +1,12 @@
+# Create requirements-dev.txt
+-r requirements.txt  # Include base requirements
+# Test dependencies
+pytest>=7.4.0
+pytest-asyncio>=0.21.1
+coverage>=7.2.7
+
+# Dev dependencies
+ruff>=0.0.278
+pre-commit>=3.3.3
+isort>=5.12.0
+jupyter>=1.0.0 
