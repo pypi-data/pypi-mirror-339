@@ -1,0 +1,11 @@
+packagelister/__init__.py,sha256=fPLVi8BHetidlfYbV5EzuKq8H8AWpFsNz7t_g9Zb--Y,300
+packagelister/localscanner.py,sha256=baWH_xmiDr9ih8QaVRhHGVYzp-8Tprzi4fX_lJgybwg,9808
+packagelister/packagelister.py,sha256=kGv-PpMPOPsAjHpNWuyghnLwI2eVYpYEqDg8l-Doi9Y,8233
+packagelister/packagelister_cli.py,sha256=e7BlyeGiUnK0ovhgURwWb_UGIVrJneTMMoUx9GQHS8E,2692
+packagelister/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+packagelister/whouses.py,sha256=ldMBP0V_VZSYMdrK-zqzrKkJ85BVrJ8N5TKodXWvtlc,2646
+packagelister-2.1.0.dist-info/METADATA,sha256=bBshkgmwsupbUDmHgzJ0e61qzALTxOZ3eCvzeXMlJ_0,1972
+packagelister-2.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+packagelister-2.1.0.dist-info/entry_points.txt,sha256=X9WezQOYPMZAJI43FuIAQRZyRzSZ5hmQdpo5ocgXOSo,152
+packagelister-2.1.0.dist-info/licenses/LICENSE.txt,sha256=GA4k0f8zyJsPeXl_v_6h0BQT4BnMtK-NX8QSGL0JbCQ,1086
+packagelister-2.1.0.dist-info/RECORD,,
