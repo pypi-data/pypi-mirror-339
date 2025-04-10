@@ -1,0 +1,67 @@
+{#-
+# Authors: The scikit-plots developers
+# SPDX-License-Identifier: BSD-3-Clause
+
+# https://jinja.palletsprojects.com/en/stable/templates/
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files
+-#}
+# ---------------------------------------------------------
+# CITATION.cff file for {{ library_name }}
+# This file provides citation information for users
+# who want to cite the library, related papers, and books.
+# Generated CITATION.cff helper in APA, MLA, Chicago, and Harvard style by github.
+# ---------------------------------------------------------
+
+cff-version: 1.2.0  {# The version of the CFF format used. #}
+message: "{{ message | trim }}"  {# Optional message to users. #}
+authors:  {# Authors and contributors of the software project. #}
+- family-names: "{{ author | trim }}"
+  {#- given-names: "{{ given_names | trim }}" -#}
+  {#- orcid: "{{ orcid | trim }}" -#}  {#- Optional, if you have an ORCID. -#}
+  {#- affiliation: "{{ affiliation | trim }}" -#}  {#- Optional, but recommended, Contributor Organization. #}
+title: "{{ title | trim }}"  {# The name of your software. #}
+version: "{{ version | trim }}"  {# The current version of your software. #}
+doi: {{ doi | trim }}  {# Optional DOI (if archived on platforms like Zenodo). #}
+date-released: {{ date_released | trim }}  {# Date when this version was released. #}
+url:  "{{ doc_url | trim }}"
+preferred-citation:
+  type: {{ type | trim }}
+  authors:  {# Authors and contributors of the software project. #}
+  - family-names: "{{ author | trim }}"
+  title: "{{ title | trim }}"  {# The name of your software. #}
+  version: "{{ version | trim }}"  {# The current version of your software. #}
+  doi: {{ doi | trim }}  {# Optional DOI (if archived on platforms like Zenodo). #}
+  date-released: {{ date_released | trim }}  {# Date when this version was released. #}
+  url:  "{{ doc_url | trim }}"
+
+{#-
+# Optionally, add references to any related articles or papers
+# Uncomment and fill in the details when needed.
+# references:
+#   - type: article
+#     authors:
+#       - family-names: AuthorLastName
+#         given-names: AuthorFirstName
+#     title: "Title of Related Research Paper"
+#     year: 2024
+#     date-published: 2007-06-18
+#     journal: "Journal Name"
+#     volume: x
+#     issue: x
+#     start: xx
+#     end: xx
+#     doi: 10.1016/j.dat.xxxx.xx.xxx
+#     publisher:
+#       name: IEEE Computer Society
+#       website: ''
+#     abstract: ''
+#
+#   - type: book
+#     authors:
+#       - family-names: AuthorLastName
+#         given-names: AuthorFirstName
+#     title: "Title of Related Book"
+#     publisher: "Publisher Name"
+#     year: 2024
+#     isbn: "978-1-234-56789-0"
+-#}
