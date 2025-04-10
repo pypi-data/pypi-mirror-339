@@ -1,0 +1,29 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/nautobot/nautobot-cdn-models/develop/nautobot_cdn_models/app-config-schema.json",
+    "$comment": "TBD: Update $id, replace `develop` with the future release tag",
+    "type": "object",
+    "properties": {
+        "default_statuses": {
+            "type": "object",
+            "properties": {
+                "CdnSite": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [
+                        "Active",
+                        "Maintenance",
+                        "Planned",
+                        "Staged",
+                        "Decommissioned",
+                        "Moved to next phase"
+                    ]
+                }
+            },
+            "additionalProperties": false
+        }
+    },
+    "additionalProperties": false
+}
