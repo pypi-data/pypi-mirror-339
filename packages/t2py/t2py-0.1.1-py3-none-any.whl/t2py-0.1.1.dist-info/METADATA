@@ -1,0 +1,62 @@
+Metadata-Version: 2.4
+Name: t2py
+Version: 0.1.1
+Summary: Python interface for Titan 2 device
+Author-email: Fizz <fizzler@black.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Requires-Dist: hidapi>=0.14.0
+Provides-Extra: dev
+Requires-Dist: black>=22.0.0; extra == 'dev'
+Requires-Dist: flake8>=4.0.0; extra == 'dev'
+Requires-Dist: isort>=5.0.0; extra == 'dev'
+Requires-Dist: mypy>=0.900; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# T2PY
+
+Python interface for Titan 2. Simple and easy to use.
+
+## Install
+```bash
+pip install t2py
+```
+
+## Example
+```python
+import t2py
+
+# Find Titan Two devices
+devices = t2py.Titan2.getdisc()
+for port, vid, pid in devices:
+    print(f"Found Titan Two: {port}")
+
+# Connect and send data
+t2 = t2py.Titan2()  # Uses default VID/PID
+if t2.connect():
+    # Send GVC values (will be converted to fixed point)
+    t2.sendgvc([1, 100])  # First value is flag, second is signal
+    
+    # Stop signaling
+    t2.sendgvc([1, 0])
+    t2.disconnect()
+```
+
+## Dev
+```bash
+git clone https://github.com/yourusername/t2py.git
+cd t2py
+pip install -e ".[dev]"
+```
+
+MIT License 
