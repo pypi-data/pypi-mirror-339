@@ -1,0 +1,17 @@
+amapy_plugin_posix/__init__.py,sha256=6gqw05fHNJfer6IW2byxTehXzyaBpIMhtkfmHzlEGeE,46
+amapy_plugin_posix/posix_blob.py,sha256=xezlEPGFM8kZPnG18cZhWxzvypliskNKTooB-5lYKBs,2334
+amapy_plugin_posix/posix_mixin.py,sha256=a4g7Di3gZi4z296UyG3ZFBkJIDpkhvh9At8iRJrsqpU,1255
+amapy_plugin_posix/posix_storage.py,sha256=9FU8jhp0qsQBsjGQ_mnnHohuCyNXGQzHZ8XblJ6EdX0,3758
+amapy_plugin_posix/posix_url.py,sha256=9s9s_N9-ll6vbUCEZxvGfqwzU9z3tV5efsxc18ednE4,909
+amapy_plugin_posix/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+amapy_plugin_posix/tests/test_posix_storage.py,sha256=RrjxIUkuqD-pfQFevJZ7xhXRVRCjFLhmQpBIu0nkOv8,2642
+amapy_plugin_posix/transporter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+amapy_plugin_posix/transporter/async_posix_transporter.py,sha256=H9CT4fYux1AWAJYEE_r0StpCA5ipVGQav6g3malXDOo,653
+amapy_plugin_posix/transporter/async_shutil.py,sha256=NhRwmKy92KgsagnFK8pPZD_exlP5JvFPgf7y9nVkqIA,1071
+amapy_plugin_posix/transporter/posix_transport_resource.py,sha256=-t5D-L34Zfb3OPZJsWcu0hDK9Ec5pDip0A4Et6Itdm4,600
+amapy_plugin_posix/transporter/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+amapy_plugin_posix/transporter/tests/test_async_posix_transporter.py,sha256=3gdArj6fCwCXT2Kv6M7GT3PQ6piwJ_S6ynJOtqyimRg,2472
+amapy_plugin_posix-1.0.1.dev0.dist-info/METADATA,sha256=dgdyvbkbkMV-MNZ5wq9CZfcSIOmA_3sCrCMWeuDzl0Y,1163
+amapy_plugin_posix-1.0.1.dev0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+amapy_plugin_posix-1.0.1.dev0.dist-info/top_level.txt,sha256=MHYHjzKg14zJX7mUsYUE_ReKgJm7E31hZ3gYGVILKCg,19
+amapy_plugin_posix-1.0.1.dev0.dist-info/RECORD,,
