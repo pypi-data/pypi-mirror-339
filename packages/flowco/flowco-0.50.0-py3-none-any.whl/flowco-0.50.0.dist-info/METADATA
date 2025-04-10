@@ -1,0 +1,113 @@
+Metadata-Version: 2.4
+Name: flowco
+Version: 0.50.0
+Summary: Yep.
+Project-URL: Homepage, https://github.com/stephenfreund/flowco
+Author-email: Stephen Freund <sfreund@williams.edu>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: black>=24.0
+Requires-Dist: deepdiff>=7.0.1
+Requires-Dist: fsspec
+Requires-Dist: google-auth-oauthlib
+Requires-Dist: graphviz
+Requires-Dist: graphviz>=0.20.3
+Requires-Dist: instructor==1.3.1
+Requires-Dist: ipykernel>=6.29.4
+Requires-Dist: jsonmerge>=1.9.2
+Requires-Dist: litellm[proxy]>=1.39.6
+Requires-Dist: markdown
+Requires-Dist: matplotlib
+Requires-Dist: nbclient>=0.10.0
+Requires-Dist: nbconvert>=7.16.4
+Requires-Dist: nbformat
+Requires-Dist: nbformat>=5.1.3
+Requires-Dist: numpy
+Requires-Dist: openai>=1.30.5
+Requires-Dist: pandas
+Requires-Dist: pillow>=10.3.0
+Requires-Dist: pydantic
+Requires-Dist: pytest>=6.2.5
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: requests
+Requires-Dist: s3fs
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: seaborn
+Requires-Dist: statsmodels
+Requires-Dist: streamlit-code-editor
+Requires-Dist: streamlit-extras>=0.4.7
+Requires-Dist: streamlit==1.41.1
+Requires-Dist: termcolor>=2.5.0
+Requires-Dist: types-pyyaml>=6.0
+Provides-Extra: devel
+Requires-Dist: playwright==1.39.0; extra == 'devel'
+Requires-Dist: pytest-playwright-snapshot==1.0; extra == 'devel'
+Requires-Dist: pytest-rerunfailures==12.0; extra == 'devel'
+Requires-Dist: pytest==7.4.0; extra == 'devel'
+Requires-Dist: requests==2.31.0; extra == 'devel'
+Requires-Dist: wheel; extra == 'devel'
+Description-Content-Type: text/markdown
+
+
+
+# Flowco
+![flowco](https://github.com/user-attachments/assets/9591f546-ef52-4c16-999a-ca9e2a149586)
+
+Flowco is designed to run as a web service.  
+However, it can also be run locally by following these instructions.  
+
+### Configuration
+
+* Use a conda virtual environment or some other virtual environment.
+* Use Python 3.11.  
+* Ensure `dot` is on your path.
+* Ensure `npm` and `node` are on your path to build the project from the source.
+
+### API Key
+
+> [!IMPORTANT]
+>
+> Flowco currently needs to be connected to an [OpenAI account](https://openai.com/api/). _Your account will need to have a positive balance for this to work_ ([check your balance](https://platform.openai.com/account/usage)). [Get a key here.](https://platform.openai.com/account/api-keys)
+>
+> Once you have an API key, set it as an environment variable called `OPENAI_API_KEY`.
+>
+> ```bash
+> export OPENAI_API_KEY=<your-api-key>
+> ```
+
+### Installing
+
+#### From the source
+
+Clone the repo and install:
+
+```bash
+pip3 install -e .
+```
+
+This installs a bunch of normal packages and a custom component for Streamlit.  
+
+#### From a prebuilt wheel
+
+You can alternatively install
+a prebuilt wheel:
+
+```bash
+pip3 install dist/flowco-py3-none-any.whl 
+```
+
+### Running
+
+On the command line, run `flowco`, passing it the directory in which to store its files.  That directory
+should already exist:
+
+```bash
+mkdir /tmp/example
+flowco /tmp/example
+```
+
+Use `-v` to turn on logging.
