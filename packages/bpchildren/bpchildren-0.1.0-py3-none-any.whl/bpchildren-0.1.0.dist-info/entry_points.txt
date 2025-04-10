@@ -1,0 +1,2 @@
+[console_scripts]
+bpchildren = bpchildren.__main__:main
