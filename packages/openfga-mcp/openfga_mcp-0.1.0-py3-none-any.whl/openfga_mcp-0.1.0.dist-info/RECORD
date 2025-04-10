@@ -1,0 +1,10 @@
+openfga_mcp/__init__.py,sha256=ptL8GJCFAF1ZbfAw6znf1E3JpFv1kwacXQRsez4W5T4,61
+openfga_mcp/__main__.py,sha256=Pe3oCxu5FAfVsCds6Bh56entrPvVwIvSHzjySGGN_uI,77
+openfga_mcp/openfga.py,sha256=BqGb_it9swH8OarBVeH-pwGF9K3K47ZfvfZJm2QJBoE,4282
+openfga_mcp/server.py,sha256=2bbbkKbqEi7gMgt2L2EUJ7cD3wgHEimQo7_MkQr1JK8,5271
+openfga_mcp/sse.py,sha256=GRpNsstDaB4fstorH3YaYARscLAxRuSV2xvYAg331cw,1785
+openfga_mcp-0.1.0.dist-info/METADATA,sha256=AvbVnwIFvaDh3h0VFFaUMdKINVAlwYZB3-qdCUFNipo,2990
+openfga_mcp-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+openfga_mcp-0.1.0.dist-info/entry_points.txt,sha256=VU1M9HTZqVid9LDuCcZuZE5t0CreR0qkrWsPlFjzaMI,48
+openfga_mcp-0.1.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+openfga_mcp-0.1.0.dist-info/RECORD,,
