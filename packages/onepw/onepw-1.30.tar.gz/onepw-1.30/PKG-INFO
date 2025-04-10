@@ -1,0 +1,641 @@
+Metadata-Version: 2.4
+Name: onepw
+Version: 1.30
+Summary: A Python module for 1Password integration
+Home-page: https://www.pg12.org/software
+Author: A Andersen
+Author-email: a.andersen@pg12.org
+License: Modified BSD License
+Project-URL: Download, https://www.pg12.org/dist/py/lib/onepw/
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: summary
+
+<!-- This documentation is generate using the `pypimdoc` module -->
+<!-- Available from [PyPi](https://pypi.org/project/pypimdoc/)  -->
+
+### <a id="module-onepw"></a>The `onepw` Python module for 1Password integration
+
+[1Password](https://1password.com) is a popular password manager used
+by individuals and organisations. It has a [desktop
+app](https://1password.com/downloads) for many platforms and a
+[support community](https://1password.community) where ideas are
+shared and questions are asked and answered. For developers, it also
+provides [SDKs, tools and
+support](https://developer.1password.com). The `onepw` module uses
+[1Password CLI](https://developer.1password.com/docs/cli) command line
+tool to implement its features. For more advanced 1Password
+integration the [SDKs from
+1Password](https://developer.1password.com/docs/sdks/) should be
+considered.
+
+**<a id="Table+of+contents"></a>Table of contents**
+
+ - [To install and use the module](#install)
+     - [Alternative 1Password modules](#Alternative+1Passwor)
+     - [Compatability notice](#Compatability+notice)
+ - [Class `OnePW`](#onepw1)
+     - [Initialize `OnePW`](#Initialize+%60OnePW%60)
+     - [Method `OnePW.add`](#onepw.add1)
+     - [Method `OnePW.delete`](#onepw.delete1)
+     - [Method `OnePW.get`](#onepw.get1)
+     - [Method `OnePW.list`](#onepw.list1)
+     - [Method `OnePW.read`](#onepw.read1)
+ - [To use the module as a console script](#To+use+the+module+as)
+     - [Command `onepw`](#Command+%60onepw%60)
+     - [Command `onepw get`](#Command+%60onepw+get%60)
+     - [Command `onepw list`](#Command+%60onepw+list%60)
+     - [Command `onepw read`](#Command+%60onepw+read%60)
+     - [Command `onepw add`](#Command+%60onepw+add%60)
+     - [Command `onepw delete`](#Command+%60onepw+delet)
+
+### <a id="install"></a>To install and use the module
+
+The `onepw` Python module implements a limited *1Password* integration
+using *1Password CLI*:
+
+ - https://developer.1password.com/docs/cli
+
+To use the module, install the *1Password CLI* tool `op`:
+
+ - https://1password.com/downloads/command-line/
+
+(or install it with a package tool, e.g.,
+*[HomeBrew](https://brew.sh)* on a Mac).
+
+The `onepw` module is available from my software repository and from
+PyPi:
+
+ - https://www.pg12.org/software
+
+ - https://pypi.org/project/onepw/
+
+It is best to install the module and the companion console script
+`onepw` with `pip`:
+
+```bash
+pip install onepw
+```
+
+It is recommended to integrated the *1Password CLI* tool with the
+*1Password* desktop app (to use the desktop app to authenticate). See
+Step 2 here for details:
+
+ - https://developer.1password.com/docs/cli/get-started/
+
+
+#### <a id="Alternative+1Passwor"></a>Alternative 1Password modules
+
+Other similar Python modules, with overlapping, extended or different
+functionality, are available. The obvious first choice is the SDKs
+from *1Password*:
+
+ - https://developer.1password.com/docs/sdks/
+
+Their Python SDK is in active development and should be considered
+when integrating *1Password* with Python:
+
+ - https://github.com/1Password/onepassword-sdk-python
+
+Another option is to use the `keyring` module with the third-party
+backend *OnePassword Keyring*:
+
+ - https://pypi.org/project/keyring/
+
+ - https://pypi.org/project/onepassword-keyring/
+
+One downside of this approach is that when *OnePassword Keyring*
+backend is installed, it replaces the default backend of the `keyring`
+module. I prefer that the default behavior of `keyring` is unchanged
+(using the system keychain/keyring) and use a specific module (like
+`onepw`) for *1Password* integration in Python.
+
+
+#### <a id="Compatability+notice"></a>Compatability notice
+
+Version 1.22 of `onepw` introduces a *non-backwards compatible*
+change. From version 1.22 of `onepw`, the return value format of the
+method `get` has changed when the `field` argument has the value
+`"all"` (or `True`). In this case, the returned dictionary only
+includes the fields (and not other information about the 1Password
+entry). To get more data about the 1Password entry, you now have to
+use the new `info` argument of the `get` method.
+
+In version 1.22, the console script command `onepw get` also has some
+argument changes. The `--title` argument is replaced by the positional
+argument `TITLE-OR-ID` and the `--field` and `--info` arguements are
+updated to match the changes of the `get` method. The old usage of
+`--title` instead of `TITLE-OR-ID` will still work but is not
+documented in newer versions.
+
+
+
+### <a id="onepw1"></a>Class `OnePW`
+
+*A Python class for 1Password sessions*
+
+When an instance of this class is created, a *1Password* session
+is started.  With this session you can perform *1Password CLI*
+commands. The following methods for such commands are available:
+
+ - `get`: get a field from a 1Password entry
+
+ - `list`: list all entries from 1Password
+
+ - `add`: add an entry to 1Password
+
+ - `delete`: delete an entry from 1Password
+
+ - `read`: read the value from a 1Password reference
+
+In the following example, a *1Password* session is created and the
+password from the `"An example"` entry in 1Password is fetched:
+
+```python
+import onepw
+op = onepw.OnePW()
+pw = op.get("An example", field="password")
+```
+
+In the next example, a new entry with the title `"A new example"`
+is created and an entry with the title `"An example"` is deleted:
+
+```python
+import onepw
+from secrets import token_urlsafe
+op = onepw.OnePW()
+op.add("A new example", username="a@user.name", password=token_urlsafe(12))
+op.delete("An example")
+```
+
+The `read` command is similar to the `get` command, but instead of
+a title of a field, we provide a [1Password secret reference](https://developer.1password.com/docs/cli/secret-reference-syntax/).
+In this example the `read` command returns a value matching the
+1Password secret reference `"op://Personal/Example/Passwd"`:
+
+```python
+import onepw
+op = onepw.OnePW()
+pw = op.read("op://Personal/Example/Passwd")
+```
+
+In the final example, all 1Password entries with duplicated titles
+are printed with their titles and all ids matching that title:
+
+```python
+# Start 1Password session
+import onepw
+op = onepw.OnePW()
+
+# Get all 1Password entries as a list of id-title tuples
+l = op.list(return_format="id-title")
+
+# Create a new list only with the titles
+lt = [t for i, t in l]
+
+# Create a dictionary with all duplicated titles, where the titles
+# are keys and a list of entry ids with that title are the values
+dup = {t: [j for j, u in l if u == t] for i, t in l if lt.count(t) > 1}
+
+# Print out duplicated titles and the ids of their entries
+for t in dup:
+    print(f"{t}: {','.join(dup[t])}")
+```
+
+This is an example of what this code could print out, where each
+line is an entry title followed by a colon and multiple entry ids
+separated by commas (one for each duplicate with this title):
+
+```python
+An Entry: auniqu4idfrom1p4ssw0rdapp1,4uni9ueidfromlpa22wordit3m
+Another Entry: auniqueidfrom1password1tem,aun19u316from16asswordapp9
+```
+
+
+
+#### <a id="Initialize+%60OnePW%60"></a>Initialize `OnePW`
+
+```python
+OnePW(account: str | None = None, pw: str | None = None)
+```
+
+*Instantiate a 1Password session*
+
+When a *1Password* session is instantiated you are signed in
+to *1Password*. If the *1Password CLI* tool is integrated with
+the *1Password* desktop app, the desktop app is used to sign
+in to *1Password*. Otherwise, the password has to be provided,
+either as the argument `pw` (usually not recommended) or
+prompted for.
+
+**Arguments:**
+
+`account` -- The account to sign in to (usually, not needed;
+default `None`)
+
+`pw` -- The password used to sign in (usually, not needed;
+default `None`)
+
+
+
+
+#### <a id="onepw.add1"></a>Method `OnePW.add`
+
+```python
+add(title: str, username: str, password: str, email: str | None = None, url: str | None = None)
+```
+
+*Add a new entry to 1Password*
+
+Add a new entry to 1Password with the provided values. A
+title, username and password are required. The method raises a
+`OnePWError` exception if adding the entry fails.
+
+**Arguments:**
+
+`title` -- The title of the entry
+
+`username` -- The username added to the entry
+
+`password` -- The password added to the entry
+
+`email` -- The email address added to the entry (default `None`)
+
+`url` -- The URL added to the entry (default `None`)
+
+
+
+
+#### <a id="onepw.delete1"></a>Method `OnePW.delete`
+
+```python
+delete(title: str, no_archive: bool = False)
+```
+
+*Delete an entry from 1Password*
+
+Delete an entry from 1Password with the given title. 
+
+**Arguments:**
+
+`title` -- The title of the entry to delete
+
+`no_archive` -- Do not archive entry when deleted (default
+`False`)
+
+
+
+
+#### <a id="onepw.get1"></a>Method `OnePW.get`
+
+```python
+get(title: str, field: bool | str = False, info: bool | str = False, vault: str | None = None, return_format: str | None = None) -> str | dict
+```
+
+*Get a field from a 1Password entry*
+
+Get the value of a field or other information from the
+1Password entry with the title or id `title`.  When using the
+method you should either use the `field` or the `info`
+argument (and not both at the same time). If `field` or `info`
+is not given, the value of the `"password"` field of the
+1Password entry is returned.
+
+When a specific field is specified, like `"username"`,
+`"password"` or `"email"`, the value of that specific field is
+returned (a text string). If `field` is set to `"all"` or
+`True`, a dictionary with all fields are returned. If `field`
+is `True` or `"all"`, and `return_format` *is not* set, the
+returned dictionary will have a format like this (numbers of
+items in the dictionary will vary):
+
+```python
+{
+  "username": "an@email.address",
+  "password": "a s3cret p4ssw0rd"
+}
+```
+
+It is possible to get a 1Password reference to the field(s)
+instead of the value(s). Set the `return_format` argument to
+`"reference"` to achieve this. This will work both when
+`field` is `True` or `"all"`, and when `field` spcecifies a
+specific field in the 1Password entry.
+
+If `field` is `False` and `info` is not `False`, information
+about the 1Password entry (and not the fields) is returned. If
+`info` is `True` or `"all"`, a dictionary with information
+about the entry, including id, title and more, is returned. If
+`info` is a text string, the specific information identified
+by this text string (key) is returned. If `field` is `False`
+and `info` is `True` or `"all"`, and `return_format` *is not*
+not set, the returned dictionary will have a format like this
+(numbers of items in the `"urls"` section will vary):
+
+```python
+{
+  "id": "auniqu4idfrom1p4ssw0rdapp1",
+  "title": "An example",
+  "vault": "Personal",
+  "category": "LOGIN",
+  "urls": {
+    "website": "https://a.web.page/"
+  }
+}
+```
+
+If the `info` argument is `True` or `"all"` and the
+`return_format` argument is `"raw-dict"`, the raw dictionary
+containing all the details about the entry is returned
+(including all the fields and a much more).
+
+The `get` method raises a `OnePWError` exception if an entry
+with the given title and/or field/info is not found.
+
+**Arguments/return value:**
+
+`title` -- The title of the entry (can also be the id of the
+entry)
+
+`field` -- The field to get from the entry, where `True` or
+`"all"` will return all fields as a dictionary (default
+`False`, meaning that the `"password"` field of the entry is
+returned if `info` is `False`, too)
+
+`info` -- Get information about the entry, where `True` or
+`"all"` will return all information as a dictionary (default
+`False`)
+
+`vault` -- Look for entry in this vault (default `None`,
+meaning every vault)
+
+`return_format` -- Specifies an alternative format to the
+returned field/data from the entry (default `None`)
+
+`return` -- The value of field(s) in the entry or information
+about the entry
+
+
+
+
+#### <a id="onepw.list1"></a>Method `OnePW.list`
+
+```python
+list(categories: str | None = None, favorite: bool = False, tags: str | None = None, vault: str | None = None, return_format: str = 'title') -> list | dict
+```
+
+*List all entries in 1Password*
+
+List all the entries in 1Password with their titles, ids or as
+a dictionary representation.  By default, the method returns a
+list of all entry titles.
+
+If `return_format` is set to `"id"`, it returns a list of all
+entry ids. If `return_format` is set to `"title-id"`, it
+returns a list of all entries where each entry in the list is
+a title-id tuple. If `return_format` is set to `"id-title"`,
+it returns a list of all entries where each entry in the list
+is a id-title tuple.
+
+If `return_format` is set to `"dict"` or `"id-dict"`, it
+returns a dictionary of all entries and some data, where the
+key for each entry is the title (if `return_format` is
+`"dict"`) or the id (if `return_format` is `"id-dict"`) of the
+entry.
+
+If `return_format` is set to `"raw-dict"` or `"id-raw-dict"`,
+it returns a dictionary of all entries and all the details
+about each entry, where the key for each entry is the title
+(if `return_format` is `"raw-dict"`) or the id (if
+`return_format` is `"id-raw-dict"`) of the entry.
+
+Be aware that in the case where the argument `return_format`
+is `"dict"` or `"raw-dict"` and two or more entries have the
+same title, only one of them will be in the returned
+dictionary.
+
+**Arguments/return value:**
+
+`categories` -- only list items in these comma-separated
+categories (default `None`, meaning all entries)
+
+`favorite` -- only list favorite items (default `False`,
+meaning all entries)
+
+`tags` -- only list items with these comma-separated tags
+(default `None`, meaning all entries)
+
+`vault` -- only list items in this vault (default `None`,
+meaning all vaults)
+
+`return_format` -- the return format of the returned list or
+dictionary (default `"title"`, meaning a list of entry titles)
+
+`return` -- returns a list or a dictionary with all the
+entries
+
+
+
+
+#### <a id="onepw.read1"></a>Method `OnePW.read`
+
+```python
+read(reference: str) -> str
+```
+
+*Read value of an entry field by reference*
+
+Return the value of the entry field given by a 1Password
+reference. The following is an example of such a reference:
+
+```
+op://Personal/Example/Passwd
+```
+
+**Arguments/return value:**
+
+`reference` -- 1Password reference to a field in an entry
+
+`return` -- The value of the field
+
+
+
+
+### <a id="To+use+the+module+as"></a>To use the module as a console script
+
+
+#### <a id="Command+%60onepw%60"></a>Command `onepw`
+
+
+*Perform 1Password CLI commands*
+
+**Usage:**
+
+```bash
+onepw [-h] [-V] [--doc [{get,list,read,add,delete}]] [--account ACCOUNT] [--pw PASSWORD] {get,list,read,add,delete} ...
+```
+
+**Positional arguments:**
+
+Name | Description
+---- | -----------
+`{get,list,read,add,delete}` | the command to perform
+
+**Options:**
+
+Name | Description
+---- | -----------
+`-h, --help` | show this help message and exit
+`-V, --version` | show program's version number and exit
+`--doc [{get,list,read,add,delete}]` | print documentation of module or specific method
+`--account ACCOUNT` | the 1Password account (usually, not necessary)
+`--pw PASSWORD` | the 1Password secret password (be careful using this)
+
+Use `onepw {get,list,read,add,delete} -h` to show help message for a
+Specific command
+
+<!-- This documentation is generate using the `pypimdoc` module -->
+<!-- Available from [PyPi](https://pypi.org/project/pypimdoc/)  -->
+
+
+#### <a id="Command+%60onepw+get%60"></a>Command `onepw get`
+
+
+*Get the value of a field from an entry in 1Password*
+
+**Usage:**
+
+```bash
+onepw get [-h] [--field [FIELD]] [--info [{id,title,vault,category,urls}]] [--reference] TITLE-OR-ID
+```
+
+**Positional arguments:**
+
+Name | Description
+---- | -----------
+`TITLE-OR-ID` | the title or id of the entry to get the value from
+
+**Options:**
+
+Name | Description
+---- | -----------
+`-h, --help` | show this help message and exit
+`--field [FIELD]` | the field of the entry to get the value from, or if `all`, return all fields in a JSON string (default `password`)
+`--info [{id,title,vault,category,urls}]` | get information about the entry, instead of the value of a field (it is possible to specify what info: id, title, vault, category, urls)
+`--reference` | get reference to field, not value
+
+<!-- This documentation is generate using the `pypimdoc` module -->
+<!-- Available from [PyPi](https://pypi.org/project/pypimdoc/)  -->
+
+
+#### <a id="Command+%60onepw+list%60"></a>Command `onepw list`
+
+
+*List all entries in 1Password*
+
+**Usage:**
+
+```bash
+onepw list [-h] [--categories CATEGORIES] [--favorite] [--tags TAGS] [--vault VAULT]
+```
+
+**Options:**
+
+Name | Description
+---- | -----------
+`-h, --help` | show this help message and exit
+`--categories CATEGORIES` | only list items in these categories (comma-separated)
+`--favorite` | only list favorite items
+`--tags TAGS` | only list items with these tags (comma-separated)
+`--vault VAULT` | only list items in this vault
+
+<!-- This documentation is generate using the `pypimdoc` module -->
+<!-- Available from [PyPi](https://pypi.org/project/pypimdoc/)  -->
+
+
+#### <a id="Command+%60onepw+read%60"></a>Command `onepw read`
+
+
+*Read the value from a 1Password reference*
+
+**Usage:**
+
+```bash
+onepw read [-h] REFERENCE
+```
+
+**Positional arguments:**
+
+Name | Description
+---- | -----------
+`REFERENCE` | the reference to a field in a 1Pasword entry
+
+**Options:**
+
+Name | Description
+---- | -----------
+`-h, --help` | show this help message and exit
+
+<!-- This documentation is generate using the `pypimdoc` module -->
+<!-- Available from [PyPi](https://pypi.org/project/pypimdoc/)  -->
+
+
+#### <a id="Command+%60onepw+add%60"></a>Command `onepw add`
+
+
+*Add an entry to 1Password*
+
+**Usage:**
+
+```bash
+onepw add [-h] --title TITLE --username USERNAME [--password PASSWORD] [--email EMAIL] [--url URL]
+```
+
+**Options:**
+
+Name | Description
+---- | -----------
+`-h, --help` | show this help message and exit
+`--title TITLE` | the title of the new entry
+`--username USERNAME` | the user name in the new entry
+`--password PASSWORD` | the password in the new entry (`onepw add` will ask for the password if it is not provided)
+`--email EMAIL` | the email address in the new entry (optional)
+`--url URL` | the URL in the new entry (optional)
+
+<!-- This documentation is generate using the `pypimdoc` module -->
+<!-- Available from [PyPi](https://pypi.org/project/pypimdoc/)  -->
+
+
+#### <a id="Command+%60onepw+delet"></a>Command `onepw delete`
+
+
+*Delete an entry from 1Password*
+
+**Usage:**
+
+```bash
+onepw delete [-h] --title TITLE [--no-confirm] [--no-archive]
+```
+
+**Options:**
+
+Name | Description
+---- | -----------
+`-h, --help` | show this help message and exit
+`--title TITLE` | the title of the entry to delete
+`--no-confirm` | do not confirm before deleting entry (default `False`)
+`--no-archive` | do not archive deleted entry (default `False`)
+
+
