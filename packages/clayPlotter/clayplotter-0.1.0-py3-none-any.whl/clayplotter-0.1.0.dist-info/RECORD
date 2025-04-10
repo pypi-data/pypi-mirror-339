@@ -1,0 +1,14 @@
+clayPlotter/__init__.py,sha256=w4JJrJVW9Gkdi0Xk5c8XMCu92oUebwT0vZGlvDQmRqg,38
+clayPlotter/__version__.py,sha256=Pru0BlFBASFCFo7McHdohtKkUtgMPDwbGfyUZlE2_Vw,21
+clayPlotter/data_loader.py,sha256=htp4HEl_hZgi_bdpRReQFpPLQRUouF21PdV1sB66478,3135
+clayPlotter/geo_data_manager.py,sha256=L-Mg1MityAkJnFaAt7GH0pXXbOjuwyLtV_1RX8To_HQ,9450
+clayPlotter/plotter.py,sha256=mrmvYwFA49jmL_tc_OyTxKaF2K4gk5Z8Xkf_N9ow5SE,52560
+clayPlotter/resources/brazil_states.yaml,sha256=HlAq3f_ksHnQeWyvuFkUs-LtDpP6jZEwqQcfqvL45iQ,3838
+clayPlotter/resources/canada_provinces.yaml,sha256=aqV3rJF12165wiWj8YRL7Z-lgnywcBj4F6KHs4UaFJw,5242
+clayPlotter/resources/china_provinces.yaml,sha256=mWq5P-Tgmx0hG5IU0ixRyWJCW-PdyOfYNq2qSOO9jRk,4458
+clayPlotter/resources/usa_states.yaml,sha256=wrNUPhtI2nc1UBom0wTLMckirRQmgvvvmJ2AXgCw_F8,6643
+clayplotter-0.1.0.dist-info/licenses/LICENSE,sha256=lbQAo1lv90jOHiAYtTOgTLF5RYBeedwkJJM86iFm0Ao,1497
+clayplotter-0.1.0.dist-info/METADATA,sha256=gmaeGtsd5jp5C3sna8FeEoJbI0QSjKntJ54LwxgnTQw,8638
+clayplotter-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+clayplotter-0.1.0.dist-info/top_level.txt,sha256=4XyxkAsfUqLPTXehOEZim_k5PwevEuV8h6t6pXon724,12
+clayplotter-0.1.0.dist-info/RECORD,,
