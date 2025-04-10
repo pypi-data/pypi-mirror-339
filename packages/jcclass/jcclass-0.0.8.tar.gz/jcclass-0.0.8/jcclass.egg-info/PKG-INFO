@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: jcclass
+Version: 0.0.8
+Summary: Jenkinson and Collison automated gridded classification
+Home-page: https://github.com/PedroLormendez/jcclass
+Author: Pedro Herrera-Lormendez
+Author-email: peth31@gmail.com
+License: MIT
+Requires-Python: >=3.7
+Requires-Dist: numpy>=1.19.5
+Requires-Dist: xarray>=0.16.2
+Requires-Dist: matplotlib>=3.2.0
+Requires-Dist: pyproj
+Requires-Dist: cartopy>=0.17.0
+Requires-Dist: cftime
+Requires-Dist: netCDF4
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
