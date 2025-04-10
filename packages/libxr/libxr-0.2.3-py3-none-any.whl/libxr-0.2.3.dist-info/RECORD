@@ -1,0 +1,16 @@
+libxr/ConfigCubemxProject.py,sha256=en9ornLUuhP6GWcuhVsGTsVh--9Sov3Y7LWZ_xG_5D0,5705
+libxr/GeneratorCode.py,sha256=Z6nQ5znj1qXSaLPq6nfhNPjZOeK4orNEgPRg6RFilEQ,1760
+libxr/GeneratorCodeSTM32.py,sha256=JdCGJ538XBqB4WUSNuycMegKY9KD4tilyJMfzPz_6WQ,32874
+libxr/GeneratorSTM32CMake.py,sha256=amWoH-YXVGDrmDFucHlgLJ2jGoU06cWtU8zWHxSzGqM,2829
+libxr/GeneratorSTM32CMakeClang.py,sha256=MnPfcXNw9gbhtvNDcqy1k7TvH8pUIo5BFP3xcRw0BE4,9898
+libxr/GeneratorSTM32IT.py,sha256=3A9szDhilIB5MY2KhlVSyHnZnfHqof_78gL2z1xZFhA,3817
+libxr/PeripheralAnalyzer.py,sha256=akZ9pdtvIMcGXjzbJPx9IqzZHyfu6xrLoRYKl_G_qfA,1441
+libxr/PeripheralAnalyzerSTM32.py,sha256=nNixRiG8g_qpy1qdqhoT5xZ22fwbaFZnGjH6_KALv5U,34303
+libxr/STM32FlashGenerator.py,sha256=1a25eylEoZkv_Bql1JTH9TNFXw7Z67KNjXbEBkg_eUU,5376
+libxr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libxr-0.2.3.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+libxr-0.2.3.dist-info/METADATA,sha256=D_r8CoAhusUfXgaLKqxHhVNNg8w7iNl8950iJv4-RdU,19260
+libxr-0.2.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+libxr-0.2.3.dist-info/entry_points.txt,sha256=FqVIdGxhXOtr908coLlmIzye8n33F9e9EQM7tF9xseY,436
+libxr-0.2.3.dist-info/top_level.txt,sha256=0vP35BOdjPQ5JZ5m_etdvH-Sq9HGnmOu7s2xhKgXCkI,6
+libxr-0.2.3.dist-info/RECORD,,
