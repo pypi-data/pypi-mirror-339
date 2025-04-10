@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+PyLucas/__MetaData__.py
+PyLucas/__init__.py
+PyLucas.egg-info/PKG-INFO
+PyLucas.egg-info/SOURCES.txt
+PyLucas.egg-info/dependency_links.txt
+PyLucas.egg-info/requires.txt
+PyLucas.egg-info/top_level.txt
+PyLucas/Class/ConfigEditor.py
+PyLucas/Class/LogManager.py
+PyLucas/Func/Function.py
