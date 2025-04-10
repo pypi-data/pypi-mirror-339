@@ -1,0 +1,7 @@
+# C/cython source files
+include goesgcp/*
+include README.md
+include LICENSE
+include requirements.txt
+recursive-include goesgcp *.c
+include pyproject.toml
