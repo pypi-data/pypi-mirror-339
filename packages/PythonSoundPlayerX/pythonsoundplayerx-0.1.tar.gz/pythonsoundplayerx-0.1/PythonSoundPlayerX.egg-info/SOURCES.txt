@@ -1,0 +1,10 @@
+README.md
+setup.py
+PythonSoundPlayerX/__init__.py
+PythonSoundPlayerX/player.py
+PythonSoundPlayerX/utils.py
+PythonSoundPlayerX.egg-info/PKG-INFO
+PythonSoundPlayerX.egg-info/SOURCES.txt
+PythonSoundPlayerX.egg-info/dependency_links.txt
+PythonSoundPlayerX.egg-info/requires.txt
+PythonSoundPlayerX.egg-info/top_level.txt

@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: PythonSoundPlayerX
+Version: 0.1
+Summary: Python 3.13 uyumlu sessiz mp3/wav oynatici kutuphane
+Home-page: https://github.com/ruzgar/PythonSoundPlayerX
+Author: Ruzgar
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pygame
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# PythonSoundPlayerX
+
+Python 3.13 uyumlu, geliÅŸmiÅŸ mp3/wav oynatÄ±cÄ± kÃ¼tÃ¼phane. HatalarÄ± yakalar, format kontrolÃ¼ yapar.
+
+## KullanÄ±m
+
+```python
+from PythonSoundPlayerX import play
+
+play("ornek.mp3")
+```
+
+Veya:
+
+```python
+from PythonSoundPlayerX import player
+
+player.play("ornek.wav")
+```
