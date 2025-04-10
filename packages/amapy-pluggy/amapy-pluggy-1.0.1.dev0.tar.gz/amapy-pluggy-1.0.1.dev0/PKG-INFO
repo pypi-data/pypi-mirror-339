@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: amapy-pluggy
+Version: 1.0.1.dev0
+Summary: A Plugin handler for ama project.
+Author-email: Swarup Mahanti <swarup.mahanti@roche.com>
+Maintainer-email: Swarup Mahanti <swarup.mahanti@roche.com>
+License: Copyright (c) 2024 Roche Diagnostics Computation Science & Informatics
+Requires-Python: <3.11,>=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: amapy-utils==1.*
+Requires-Dist: pluggy==1.5.*
+
+# amapy-pluggy
+
+A Plugin handler for ama project. It provides functionalities to
+manage and integrate various plugins within the asset management system.
+
+## Installation
+
+The source code is currently hosted on GitHub at:
+https://github.com/Roche-CSI/ama
+
+Binary installers for the latest released version are available at the
+[Python Package Index (PyPI)](https://pypi.org/project/amapy-pluggy/)
+
+You can install using [pip](https://pip.pypa.io/en/stable/):
+
+```sh
+pip install amapy-pluggy
+```
+
+## Supported Python Versions
+
+Python == 3.10
+
+## License
+
+MIT License - see [LICENSE](https://github.com/Roche-CSI/ama/blob/main/LICENSE) for details.
