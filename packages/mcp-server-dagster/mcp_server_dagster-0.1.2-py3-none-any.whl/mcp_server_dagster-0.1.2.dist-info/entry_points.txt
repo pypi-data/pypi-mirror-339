@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-dagster = mcp_dagster:main
