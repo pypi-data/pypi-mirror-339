@@ -1,0 +1,16 @@
+fusionpbx_pilot/__init__.py,sha256=mdp2CftfqYbdKtP-eWv1z7rAUycYv6X1ntXSMUf8Kss,22
+fusionpbx_pilot/page_objects/__init__.py,sha256=z0YxwL4kug3-ycH_eLgTsGVhjUzM1DSS4bIzsKFfEuQ,87
+fusionpbx_pilot/page_objects/fusionpbx.py,sha256=zwmCi7Pd-MnsJJamxaudjQ3UbtuwGCkBga0kiQ7PG4s,596
+fusionpbx_pilot/page_objects/page_objects.py,sha256=iE703LBG132ImWxFwlSgQdPZhQut3p7ssev23Z8VlqU,7624
+fusionpbx_pilot/page_objects/apps/__init__.py,sha256=2d-v89ZG8PtFP4tdkoz6Nh2fe-CzmEAU4CjwFbPC4wE,96
+fusionpbx_pilot/page_objects/apps/extension.py,sha256=2yWsomK5XcR1BOydZzgOit-OVZNwGp7Z597oLtUTNbY,4885
+fusionpbx_pilot/page_objects/apps/extensions.py,sha256=G3nXHrATQ-36svQADHluruj-eljZY8ZhLoE8xvD5OTI,1629
+fusionpbx_pilot/page_objects/core/__init__.py,sha256=8LPjA4JR238rUr912HdFweaMykL-_TjGnf-i5VpGTyE,137
+fusionpbx_pilot/page_objects/core/domain.py,sha256=wGdSLOBPI4okoq1bovvrgDU8JjrL6S2BYT90JQjfTuw,3681
+fusionpbx_pilot/page_objects/core/domains.py,sha256=MMgjUa_thzDnJMGigJ-_b9ogSU-yMmN13RoDtMeeCdo,949
+fusionpbx_pilot/page_objects/core/user.py,sha256=PeDOYeu958oOg2xY8lI_EeXtLZDxvWh_8y1AxKiqJDE,22
+fusionpbx_pilot-0.1.2.dist-info/licenses/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+fusionpbx_pilot-0.1.2.dist-info/METADATA,sha256=LZUYpmFEjb1vO5m3tBl5oi-5WVPvvgro7jxbp02O84o,3304
+fusionpbx_pilot-0.1.2.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+fusionpbx_pilot-0.1.2.dist-info/top_level.txt,sha256=3vGYpmxjf7F6JswdDok5kbpPoe0SYoc6ahsJtDomqRM,16
+fusionpbx_pilot-0.1.2.dist-info/RECORD,,
