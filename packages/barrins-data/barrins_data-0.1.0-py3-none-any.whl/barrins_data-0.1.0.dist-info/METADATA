@@ -1,0 +1,36 @@
+Metadata-Version: 2.2
+Name: barrins_data
+Version: 0.1.0
+Summary: API meant to extract and provide data based on MTGO scrapping.
+Author-email: Martin Cuchet <martin.cuchet+barrinsdata@gmail.com>
+Keywords: mtg,Magic: the Gathering,CCG,MTGO
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Flask
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: sqlmodel
+Requires-Dist: sqlalchemy
+Requires-Dist: alembic
+Requires-Dist: pydantic
+Requires-Dist: pydantic-settings
+Requires-Dist: python-dotenv
+Requires-Dist: toml
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: zest.releaser[recommended]; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: httpx; extra == "dev"
+
+# MTGO ANALYSIS - API
