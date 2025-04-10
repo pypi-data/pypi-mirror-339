@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: websleuth
+Version: 0.1.3
+Summary: WebSleuth - A lightweight, extensible web scraping framework.
+Author-email: Sooraj <soorajkknmd@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/soorajInsights/WebSleuth
+Project-URL: Repository, https://github.com/soorajInsights/WebSleuth
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: fake-useragent
+Requires-Dist: lxml
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Dynamic: license-file
+
+# 🕵️ WebSleuth
+
+**WebSleuth** is a lightweight, developer-friendly Python library that simplifies web scraping. It wraps around core tools like `requests`, `BeautifulSoup`, user-agent rotation, proxy handling, retry logic, and more—designed to be the developer's alternative to boilerplate scraping setup.
+
+---
+
+## 🚀 Features
+
+- ✅ Queue-based URL handling
+- ✅ CSS & XPath parser support
+- ✅ User-Agent rotation with `fake-useragent`
+- ✅ Proxy support (including free/public proxies)
+- ✅ Retry logic with exponential backoff
+- ✅ Easy export to JSON or CSV
+- ✅ Custom parser middleware support
+- ✅ Zero CLI opinionation — integrate into your own code!
+
+---
+
+## 📦 Installation
+
+```bash
+pip install websleuth
+
