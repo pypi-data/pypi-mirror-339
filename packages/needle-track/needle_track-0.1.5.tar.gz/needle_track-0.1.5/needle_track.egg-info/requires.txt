@@ -1,0 +1,5 @@
+numpy>=2.0.0
+pandas>=2.0.0
+astropy>=7.0.0
+lasair>=0.1.1
+requests>=2.30.0
