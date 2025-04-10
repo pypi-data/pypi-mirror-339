@@ -1,0 +1,303 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-30 15:29+0200\n"
+"PO-Revision-Date: 2024-08-28 20:01+0000\n"
+"Last-Translator: Serhii Horichenko <m@sgg.im>\n"
+"Language-Team: Ukrainian <https://translate.edugit.org/projects/aleksis/aleksis-app-resint/uk/>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"X-Generator: Weblate 5.0.2\n"
+
+#: aleksis/apps/resint/apps.py:28
+msgid "Access PDF file for live document"
+msgstr "Доступ PDF файлу для онлайн-документа"
+
+#: aleksis/apps/resint/models.py:60
+msgid "Slug used in URL name"
+msgstr "Закінчення (slug) в URL-адресі"
+
+#: aleksis/apps/resint/models.py:61
+msgid "If you use 'example', the filename will be 'example.pdf'."
+msgstr "При використанні 'приклад' ім'я файлу буде 'приклад.pdf'."
+
+#: aleksis/apps/resint/models.py:64 aleksis/apps/resint/models.py:193
+#: aleksis/apps/resint/templates/resint/group/list.html:19
+msgid "Name"
+msgstr "Повне ім'я"
+
+#: aleksis/apps/resint/models.py:66
+msgid "Publishing weekday"
+msgstr "День тижня публікації"
+
+#: aleksis/apps/resint/models.py:68
+#: aleksis/apps/resint/templates/resint/group/list.html:22
+msgid "Publishing time"
+msgstr "Час публікації"
+
+#: aleksis/apps/resint/models.py:71
+msgid "Default PDF"
+msgstr "Типовий PDF"
+
+#: aleksis/apps/resint/models.py:72
+msgid "This PDF file will be shown if there is no current PDF."
+msgstr "Цей файл PDF буде відображатися, якщо немає актуального PDF."
+
+#: aleksis/apps/resint/models.py:76
+msgid "Show in menu"
+msgstr "Показати в меню"
+
+#: aleksis/apps/resint/models.py:77 aleksis/apps/resint/models.py:194
+msgid "Show for not logged-in users"
+msgstr "Відображати для користувачів, які не увійши"
+
+#: aleksis/apps/resint/models.py:80 aleksis/apps/resint/models.py:142
+msgid "Poster group"
+msgstr "Група документів"
+
+#: aleksis/apps/resint/models.py:81
+#: aleksis/apps/resint/templates/resint/group/list.html:4
+#: aleksis/apps/resint/templates/resint/group/list.html:14
+msgid "Poster groups"
+msgstr "Групи документів"
+
+#: aleksis/apps/resint/models.py:83
+msgid "Can view all posters of this group"
+msgstr "Може бачити усі документи цієї групи"
+
+#: aleksis/apps/resint/models.py:84
+msgid "Can upload new posters to this group"
+msgstr "Може завантажувати нові документи до цієї групи"
+
+#: aleksis/apps/resint/models.py:85
+msgid "Can change all posters of this group"
+msgstr "Може змінювати усі документи цієї групи"
+
+#: aleksis/apps/resint/models.py:86
+msgid "Can delete all posters of this group"
+msgstr "Може видаляти усі документи цієї групи"
+
+#: aleksis/apps/resint/models.py:145
+msgid "Calendar week"
+msgstr "Календарний тиждень"
+
+#: aleksis/apps/resint/models.py:150
+msgid "Year"
+msgstr "Рік"
+
+#: aleksis/apps/resint/models.py:153
+msgid "PDF"
+msgstr "PDF"
+
+#: aleksis/apps/resint/models.py:161
+msgid "Poster"
+msgstr "Документ"
+
+#: aleksis/apps/resint/models.py:162
+#: aleksis/apps/resint/templates/resint/poster/list.html:5
+#: aleksis/apps/resint/templates/resint/poster/list.html:8
+msgid "Posters"
+msgstr "Документи"
+
+#: aleksis/apps/resint/models.py:190
+msgid "Slug"
+msgstr "Мітка"
+
+#: aleksis/apps/resint/models.py:191
+msgid "This will be used for the name of the current PDF file."
+msgstr "Це буде використовуватися для назви поточного PDF-файлу."
+
+#: aleksis/apps/resint/models.py:199
+msgid "Current file"
+msgstr "Поточний файл"
+
+#: aleksis/apps/resint/models.py:203
+msgid "Was the last update triggered manually?"
+msgstr "Останнє оновлення було запущене вручну?"
+
+#: aleksis/apps/resint/models.py:207
+msgid "Live document"
+msgstr "Онлайн-документ"
+
+#: aleksis/apps/resint/models.py:208
+#: aleksis/apps/resint/templates/resint/live_document/list.html:8
+#: aleksis/apps/resint/templates/resint/live_document/list.html:9
+msgid "Live documents"
+msgstr "Онлайн-документи"
+
+#: aleksis/apps/resint/tables.py:20 aleksis/apps/resint/tables.py:22
+#: aleksis/apps/resint/templates/resint/group/list.html:49
+#: aleksis/apps/resint/templates/resint/poster/list.html:81
+msgid "Edit"
+msgstr "Редагувати"
+
+#: aleksis/apps/resint/tables.py:27 aleksis/apps/resint/tables.py:29
+#: aleksis/apps/resint/templates/resint/group/list.html:58
+#: aleksis/apps/resint/templates/resint/poster/list.html:87
+msgid "Delete"
+msgstr "Видалити"
+
+#: aleksis/apps/resint/templates/resint/group/create.html:5
+#: aleksis/apps/resint/templates/resint/group/create.html:8
+msgid "Create poster group"
+msgstr "Створити групу документів"
+
+#: aleksis/apps/resint/templates/resint/group/edit.html:5
+#: aleksis/apps/resint/templates/resint/group/edit.html:8
+msgid "Edit poster group"
+msgstr "Редагувати групу документів"
+
+#: aleksis/apps/resint/templates/resint/group/list.html:10
+msgid "Create new poster group"
+msgstr "Створити нову групу документів"
+
+#: aleksis/apps/resint/templates/resint/group/list.html:20
+msgid "Filename"
+msgstr "Назва файлу"
+
+#: aleksis/apps/resint/templates/resint/group/list.html:21
+msgid "Publishing day"
+msgstr "День публікації"
+
+#: aleksis/apps/resint/templates/resint/group/list.html:23
+msgid "Default PDF file"
+msgstr "Типовий файл PDF"
+
+#: aleksis/apps/resint/templates/resint/group/list.html:24
+#: aleksis/apps/resint/templates/resint/poster/list.html:65
+msgid "Actions"
+msgstr "Дії"
+
+#: aleksis/apps/resint/templates/resint/group/list.html:40
+msgid "Open"
+msgstr "Відкрити"
+
+#: aleksis/apps/resint/templates/resint/group/list.html:65
+msgid "There are no poster groups available."
+msgstr "Немає доступних груп документів."
+
+#: aleksis/apps/resint/templates/resint/live_document/create.html:8
+#: aleksis/apps/resint/templates/resint/live_document/create.html:12
+#, python-format
+msgid "Create %(document)s"
+msgstr "Створити %(document)s"
+
+#: aleksis/apps/resint/templates/resint/live_document/edit.html:8
+#: aleksis/apps/resint/templates/resint/live_document/edit.html:12
+#, python-format
+msgid "Edit %(document)s"
+msgstr "Редагувати %(document)s"
+
+#: aleksis/apps/resint/templates/resint/live_document/list.html:15
+msgid "Create live document"
+msgstr "Створити онлайн-документ"
+
+#: aleksis/apps/resint/templates/resint/live_document/list.html:23
+#, python-format
+msgid "Create %(name)s"
+msgstr "Створити %(name)s"
+
+#: aleksis/apps/resint/templates/resint/live_document/list.html:31
+msgid "There is no app installed which registers any live document types."
+msgstr "Не встановлена програма для реєстрації бодай якогось типу онлайн документів."
+
+#: aleksis/apps/resint/templates/resint/poster/edit.html:5
+#: aleksis/apps/resint/templates/resint/poster/edit.html:8
+msgid "Edit poster"
+msgstr "Редагувати документ"
+
+#: aleksis/apps/resint/templates/resint/poster/list.html:23
+#, python-format
+msgid ""
+"\n"
+"                      Week %(week)s/%(year)s\n"
+"                    "
+msgstr ""
+"\n"
+"                      Тиждень %(week)s/%(year)s\n"
+"                    "
+
+#: aleksis/apps/resint/templates/resint/poster/list.html:35
+msgid "There is no poster for this week."
+msgstr "На цьому тижні документів немає."
+
+#: aleksis/apps/resint/templates/resint/poster/list.html:42
+msgid "Show current PDF"
+msgstr "Показати поточний PDF"
+
+#: aleksis/apps/resint/templates/resint/poster/list.html:54
+msgid "Upload new poster"
+msgstr "Завантажити новий документ"
+
+#: aleksis/apps/resint/templates/resint/poster/list.html:58
+msgid "All uploaded posters"
+msgstr "Усі завантажені документи"
+
+#: aleksis/apps/resint/templates/resint/poster/list.html:62
+msgid "Group"
+msgstr "Група"
+
+#: aleksis/apps/resint/templates/resint/poster/list.html:63
+msgid "Week"
+msgstr "Тиждень"
+
+#: aleksis/apps/resint/templates/resint/poster/list.html:64
+msgid "Valid from ... to"
+msgstr "Дійсний з ... по"
+
+#: aleksis/apps/resint/templates/resint/poster/list.html:75
+msgid "Show"
+msgstr "Показати"
+
+#: aleksis/apps/resint/templates/resint/poster/upload.html:5
+#: aleksis/apps/resint/templates/resint/poster/upload.html:8
+#: aleksis/apps/resint/templates/resint/poster/upload.html:16
+msgid "Upload poster"
+msgstr "Завантажити документ"
+
+#: aleksis/apps/resint/views.py:50 aleksis/apps/resint/views.py:61
+msgid "The poster group has been saved."
+msgstr "Група документів збережена."
+
+#: aleksis/apps/resint/views.py:71
+msgid "The poster group has been deleted."
+msgstr "Група документів видалена."
+
+#: aleksis/apps/resint/views.py:114
+msgid "The poster has been uploaded."
+msgstr "Документ завантажений."
+
+#: aleksis/apps/resint/views.py:125
+msgid "The poster has been changed."
+msgstr "Документ змінений."
+
+#: aleksis/apps/resint/views.py:135
+msgid "The poster has been deleted."
+msgstr "Документ видалений."
+
+#: aleksis/apps/resint/views.py:197
+msgid "The live document has been created."
+msgstr "Онлайн-документ створений."
+
+#: aleksis/apps/resint/views.py:212
+msgid "The live document has been saved."
+msgstr "Онлайн-документ збережений."
+
+#: aleksis/apps/resint/views.py:223
+msgid "The live document has been deleted."
+msgstr "Онлайн-документ видалений."
+
+#~ msgid "Documents"
+#~ msgstr "Документи"
+
+#~ msgid "Manage posters"
+#~ msgstr "Керування документами"
