@@ -1,0 +1,11 @@
+authree_qiyu-0.0.4.dist-info/licenses/LICENSE,sha256=xngZcABY8LpWScjBTaVAoLgaG5xa5QIUJMX2aRUusMo,1082
+crud/__init__.py,sha256=4NJh9jYcpBtLWxiLXHrnR-fNVhJ6Q4cWugVU5Nuo9CM,37
+crud/core.py,sha256=JGTsIMN-1R_ljZebPThLJ-iV-v-oXPF0yFUm2DLkqFI,112
+crud/ephe/seas_18.se1,sha256=X9nCqhZU43wJpq61WAdueVQJt9xL2UjrwPqn1Kdoa1s,223002
+crud/ephe/sefstars.txt,sha256=GLDcr75bckB3PauiwDijJfWz_EFj9h4Kf06Sq9T1F8Y,136618
+crud/ephe/semo_18.se1,sha256=7PpU2_W8C1qbw-BO0oYpqCHphiXqyuOPQHBZO7oOKYA,1304771
+crud/ephe/sepl_18.se1,sha256=C35Bbjwb6eag3R1xHa5_doV5Og598T92NjpJPcJ7bqE,484055
+authree_qiyu-0.0.4.dist-info/METADATA,sha256=6wpufeaSlMVL4HWNbapoWk-IKaaFMSmWBeg8G7dL8_o,318
+authree_qiyu-0.0.4.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+authree_qiyu-0.0.4.dist-info/top_level.txt,sha256=lSsZ7QjV7fghbA4e0pvsbjz-Tz3ZuKoxBTNUStsjUUE,5
+authree_qiyu-0.0.4.dist-info/RECORD,,
