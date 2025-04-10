@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+betacode_parser/__init__.py
+betacode_parser/coptic_lists.py
+betacode_parser/coptic_parser.py
+betacode_parser/greek_lists.py
+betacode_parser/greek_parser.py
+betacode_parser/hebrew_lists.py
+betacode_parser/hebrew_parser.py
+betacode_parser/parser.py
+betacode_parser.egg-info/PKG-INFO
+betacode_parser.egg-info/SOURCES.txt
+betacode_parser.egg-info/dependency_links.txt
+betacode_parser.egg-info/top_level.txt
