@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "smashcima"
+authors = [
+  { name="Jiří Mayer", email="mayer@ufal.mff.cuni.cz" },
+]
+dependencies = [
+    "numpy",
+    "opencv-contrib-python",
+    "requests",
+    "tqdm",
+    "nameof",
+    "punq",
+    "mung",
+    "muscima",
+    "scikit-image", # needed for `muscima`
+    "albumentations",
+    "augraphy"
+]
+description = "Training data synthesizer for OMR"
+readme = "README.md"
+requires-python = ">=3.8"
+dynamic = ["version"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/OMR-Research/Smashcima"
+Source = "https://github.com/OMR-Research/Smashcima"
+Issues = "https://github.com/OMR-Research/Smashcima/issues"
+
+[project.optional-dependencies]
+jupyter = [
+    "jupyter",
+    "voila",
+    "ipympl",
+    "ipycytoscape"
+]
+gradio = [
+    "gradio",
+    "coolname"
+]
+
+[tool.hatch.version]
+path = "smashcima/_version.py"
+
+[tool.hatch.build]
+include = ["/smashcima"]
