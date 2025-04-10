@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: ceonstock-db
+Version: 0.8.0
+Summary: Defines database schema and provides functionality to interact with the database.
+Author-email: Dayne Kolk <daynekolk@hotmail.com>
+Requires-Python: >=3.11
+Requires-Dist: psycopg2-binary>=2.9.10
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: sqlmodel>=0.0.24
+Description-Content-Type: text/markdown
+
+# cstock_db
+Python package for Ceonstock db interaction
