@@ -1,0 +1,12 @@
+[workspace]
+restore_data_on_startup = True
+save_data_on_exit = True
+save_history = True
+save_non_project_files = False
+project_type = 'empty-project-type'
+recent_files = ['lib\\thermalift.py', 'lib\\brine_density.py', 'examples\\Case ST\\test_well.py', '..\\..\\Task 3.3\\wellbore model 01.04.02025\\main.py']
+
+[main]
+version = 0.2.0
+recent_files = []
+

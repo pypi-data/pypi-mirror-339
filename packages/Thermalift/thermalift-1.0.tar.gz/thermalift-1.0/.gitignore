@@ -1,0 +1,5 @@
+**/Case ST/formation_temperature_test.py
+**/Case ST/*.csv
+**/Case ST/*.xlsx
+!**/Case ST/formation_temperature.csv
+!**/Case ST/zenith_measerements.csv
