@@ -1,0 +1,15 @@
+# Directories
+media/
+4khd
+__pycache__/
+dist/
+.venv
+storage/
+_local/
+files/
+
+# Files
+*.html
+.DS_Store
+.beta.app/
+.in
