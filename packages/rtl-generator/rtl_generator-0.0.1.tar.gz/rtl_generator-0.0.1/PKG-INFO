@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: rtl_generator
+Version: 0.0.1
+Summary: Extensible RTL generator/parameterizer written in Python
+Project-URL: Homepage, https://github.com/brandonhippe/rtl-generator.git
+Project-URL: Issues, https://github.com/brandonhippe/rtl-generator/issues
+Author-email: Brandon Hippe <bhippe@pdx.edu>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: prettytable~=3.14.0
+Requires-Dist: pyyaml~=6.0.2
+Requires-Dist: rapidfuzz~=3.12.1
+Requires-Dist: wcwidth~=0.2.13
+Description-Content-Type: text/markdown
+
+# RTL-Generator
+
+This repository contains an RTL-Generator and flexible parameterizer written in Python. Documentation is ongoing, so check back here later to learn how to use this program.
