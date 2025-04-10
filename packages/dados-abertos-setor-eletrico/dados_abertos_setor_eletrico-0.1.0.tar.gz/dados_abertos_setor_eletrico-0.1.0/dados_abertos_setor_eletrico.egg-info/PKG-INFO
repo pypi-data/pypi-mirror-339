@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: dados-abertos-setor-eletrico
+Version: 0.1.0
+Summary: Coleta e tratamento de dados públicos do setor elétrico brasileiro (ONS e ANEEL).
+Home-page: https://github.com/diegonerii/Dados-Abertos-Setor-Eletrico-Brasileiro
+Author: Diego Neri
+Author-email: diego.holanda.neri@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: python-dotenv
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Este projeto oferece uma interface simples em Python para acessar e baixar dados públicos do Setor Elétrico nos 3 principais órgãos: CCEE (Câmara de Comercialização de Energia Elétrica), ONS (Operador Nacional do Sistema) e ANEEL (Agência Nacional de Energia Elétrica)

@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+dados_abertos_setor_eletrico/__init__.py
+dados_abertos_setor_eletrico/app.py
+dados_abertos_setor_eletrico.egg-info/PKG-INFO
+dados_abertos_setor_eletrico.egg-info/SOURCES.txt
+dados_abertos_setor_eletrico.egg-info/dependency_links.txt
+dados_abertos_setor_eletrico.egg-info/requires.txt
+dados_abertos_setor_eletrico.egg-info/top_level.txt
