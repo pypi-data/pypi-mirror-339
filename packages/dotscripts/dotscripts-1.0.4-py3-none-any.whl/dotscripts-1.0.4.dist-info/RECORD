@@ -1,0 +1,16 @@
+LICENSE,sha256=swqU5AALTjsH8WH4rMGYCMnxABgROxkTNgJ6UuHDcNw,1550
+README.md,sha256=x-J6YKQ-pfCXAp44uq5i3cdgJgygBnyYAU_eTv4lVH4,3057
+pyproject.toml,sha256=fq0K6hM9ymoEZbdUN0bkSLZkwqnbpQU4-XDkU7VPlMw,1591
+dotscripts/labextension/package.json,sha256=JbCfP91Oj0ZrPwg5Ygx13ii8gPtwMEQa790zgaa-6os,5476
+dotscripts-1.0.4.data/data/share/jupyter/labextensions/dotscripts/build_log.json,sha256=FEoQyjVatTm8fzX80CkEwVFLeGqNkOuJ7EDi7zU7p4Y,22444
+dotscripts-1.0.4.data/data/share/jupyter/labextensions/dotscripts/package.json,sha256=JbCfP91Oj0ZrPwg5Ygx13ii8gPtwMEQa790zgaa-6os,5476
+dotscripts-1.0.4.data/data/share/jupyter/labextensions/dotscripts/static/lib_index_js.6e8f095b827fdc447c56.js,sha256=GcFX5WF0n6yuRFMijz0M7eX2f3LM6zDA3m-9pf3DZ4Q,5888
+dotscripts-1.0.4.data/data/share/jupyter/labextensions/dotscripts/static/lib_index_js.6e8f095b827fdc447c56.js.map,sha256=XbcsBW2XrZGNduDGHT5NP7aEgOvy1b0kY5mnoUqzpZA,8453
+dotscripts-1.0.4.data/data/share/jupyter/labextensions/dotscripts/static/remoteEntry.954ca465e0e951a49263.js,sha256=eyKoTxwVZJkrJ7XKy3NDzNasrchO2wXLuUAy3IQ4xjU,26207
+dotscripts-1.0.4.data/data/share/jupyter/labextensions/dotscripts/static/remoteEntry.954ca465e0e951a49263.js.map,sha256=0NsPPSv07iOAPfHJIKcnoimXk1M8NqAhlX4IlwYoV1s,24887
+dotscripts-1.0.4.data/data/share/jupyter/labextensions/dotscripts/static/style.js,sha256=-CQt0ZTPaCTvrRiLcznxflAbfvIKlOVzjOos-muaXQ8,118
+dotscripts-1.0.4.data/data/share/jupyter/labextensions/dotscripts/install.json,sha256=9_WWG0REJGGvB_Pi1DbHI_9knezo8sc6w8v1_DNNXyg,140
+dotscripts-1.0.4.dist-info/METADATA,sha256=a43SEHd8tLidctdb7OEhkTIPIAAsomwA2qZfxnfYxv4,5569
+dotscripts-1.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dotscripts-1.0.4.dist-info/licenses/LICENSE,sha256=swqU5AALTjsH8WH4rMGYCMnxABgROxkTNgJ6UuHDcNw,1550
+dotscripts-1.0.4.dist-info/RECORD,,
