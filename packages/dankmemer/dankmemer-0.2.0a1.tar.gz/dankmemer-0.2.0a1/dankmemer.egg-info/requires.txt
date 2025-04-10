@@ -1,0 +1,6 @@
+aiohttp>=3.7.4
+rapidfuzz>=1.6.0
+
+[dev]
+pytest>=6.0
+pytest-asyncio>=0.14.0
