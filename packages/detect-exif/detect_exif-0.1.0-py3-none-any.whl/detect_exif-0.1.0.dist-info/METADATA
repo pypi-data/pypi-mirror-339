@@ -1,0 +1,141 @@
+Metadata-Version: 2.4
+Name: detect-exif
+Version: 0.1.0
+Summary: A simple commandline tool to remove the EXIF data from image files.
+Author: Olaf Lipinski
+License: MIT License
+        
+        Copyright (c) 2025 Olaf Lipinski
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/olipinski/detect-exif
+Project-URL: Bug Tracker, https://github.com/olipinski/detect-exif/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Topic :: Security
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Natural Language :: English
+Requires-Python: <3.14,>=3.9.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pillow>=1.1.0
+Requires-Dist: piexif
+Dynamic: license-file
+
+# detect-exif
+
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+A Python tool that detects and optionally removes sensitive EXIF metadata from
+image files. Works as both a standalone command-line utility and a pre-commit
+hook to prevent accidentally committing images with private data.
+
+## Why detect-exif?
+
+Images often contain hidden metadata like:
+
+- GPS coordinates of where a photo was taken
+- Camera make, model, and serial number
+- Date and time information
+- Software/firmware details
+- Copyright information
+- Names, comments, and other personally identifiable data
+
+This tool helps protect your privacy by:
+
+1. Detecting sensitive EXIF data in your images
+1. Highlighting specifically concerning information (GPS data, device details)
+1. Optionally removing all metadata while preserving the image itself
+
+## Features
+
+- Detects various types of sensitive EXIF data in JPG, PNG, and WebP images
+- Special checking for GPS coordinates with human-readable output
+- Preserves image orientation when removing EXIF data
+- Works as a pre-commit hook to detect images with sensitive metadata before
+  commit
+- Optional automatic removal of EXIF data (both in CLI and pre-commit hook)
+- Integrated with pre-commit hook ecosystem
+
+## Installation
+
+```bash
+pip install detect-exif
+```
+
+## Usage
+
+### As a Command-Line Tool
+
+Check images for EXIF data (standard output):
+
+```bash
+detect-exif path/to/image.jpg path/to/another.jpg
+```
+
+Remove EXIF data:
+
+```bash
+detect-exif --remove path/to/image.jpg path/to/another.jpg
+```
+
+For quieter output (useful in scripts and pre-commit hooks):
+
+```bash
+detect-exif --quiet path/to/image.jpg
+```
+
+For detailed output with full information:
+
+```bash
+detect-exif --verbose path/to/image.jpg
+```
+
+### As a Pre-Commit Hook
+
+Add to your `.pre-commit-config.yaml`:
+
+```yaml
+repos:
+  - repo: https://github.com/olipinski/detect-exif
+    rev: v0.1.0  # Use the latest version
+    hooks:
+      - id: detect-exif
+        # By default, the hook only detects EXIF data with minimal output
+        # To enable automatic removal, add:
+        # args: [--remove]
+        # For detailed output, add:
+        # args: [--verbose]
+        # For both removal and detailed output:
+        # args: [--remove, --verbose]
+```
+
+## License
+
+MIT License - See LICENSE file for details
