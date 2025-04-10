@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="portalbrasil.intranet"
+    >
+
+  <configure zcml:condition="installed AccessControl.security">
+    <permission
+        id="portalbrasil.intranet.colaborador.add"
+        title="portalbrasil.intranet: Add Colaborador"
+        />
+    <permission
+        id="portalbrasil.intranet.area.add"
+        title="portalbrasil.intranet: Add Area"
+        />
+    <permission
+        id="portalbrasil.intranet.servico.add"
+        title="portalbrasil.intranet: Add Servico"
+        />
+  </configure>
+
+</configure>
