@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: pyqtgraph-ext
+Version: 2025.4.9
+Summary: Collection of PyQtGraph widgets/tools.
+Keywords: pyqtgraph,pyqt,pyside,widget,plot,graph,chart
+Author-Email: Marcel Goldschen-Ohm <goldschen-ohm@utexas.edu>
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Project-URL: homepage, https://github.com/marcel-goldschen-ohm/pyqtgraph-ext
+Project-URL: repository, https://github.com/marcel-goldschen-ohm/pyqtgraph-ext
+Project-URL: issues, https://github.com/marcel-goldschen-ohm/pyqtgraph-ext/issues
+Requires-Python: >=3.10
+Requires-Dist: numpy>=1.26.2
+Requires-Dist: scipy>=1.11.4
+Requires-Dist: lmfit>=1.2.2
+Requires-Dist: qtpy>=2.4.1
+Requires-Dist: qtawesome>=1.4.0
+Requires-Dist: pyqtgraph>=0.13.3
+Requires-Dist: pyqt-ext>=2025.4.9.2
+Description-Content-Type: text/markdown
+
+# pyqtgraph-ext
+Collection of [PyQtGraph](https://www.pyqtgraph.org) widgets/tools with custom styling or behavior.
+
+![GitHub Tag](https://img.shields.io/github/v/tag/marcel-goldschen-ohm/pyqtgraph-ext?cacheSeconds=1)
+![build-test](https://github.com/marcel-goldschen-ohm/pyqtgraph-ext/actions/workflows/build-test.yml/badge.svg)
+![GitHub Release](https://img.shields.io/github/v/release/marcel-goldschen-ohm/pyqtgraph-ext?include_prereleases&cacheSeconds=1)
+![publish](https://github.com/marcel-goldschen-ohm/pyqtgraph-ext/actions/workflows/publish.yml/badge.svg)
+
+The goal of this repo is to provide useful extensions to PyQtGraph all in one place. There are several other PyQtGraph extensions out there, but to my knowledge all of these are very limited in scope. Given this goal, **I encourage everyone to contribute your own extensions to this repo!**
+
+In addition to being useful out-of-the-box, you may find these tools to be helpful templates for rolling your own custom widgets.
+
+- [Install](#install)
+- [Documentation](#documentation)
+
+## Install
+Requires a PyQt package. Should work with PySide6, PyQt6, or PyQt5.
+```shell
+pip install PySide6
+```
+Install latest release version:
+```shell
+pip install pyqtgraph-ext
+```
+Or install latest development version:
+```shell
+pip install pyqtgraph-ext@git+https://github.com/marcel-goldschen-ohm/pyqtgraph-ext
+```
+
+## Documentation
+:construction:
+
+- [AxisRegion](#axisregion)
+- [View](#view)
+- [Plot](#plot)
+- [Figure](#figure)
+- [PlotGrid](#plotgrid)
+- [Graph](#graph)
+
+### AxisRegion
+`pyqtgraph.LinearRegionItem` with text label.
+
+### View
+`pyqtgraph.ViewBox` that knows how to draw `AxisRegion`s.
+
+### Plot
+`pyqtgraph.PlotItem` with MATLAB styling.
+
+### Figure
+`pyqtgraph.PlotWidget` with MATLAB styling.
+
+### PlotGrid
+`pyqtgraph.GraphicsLayoutWidget` that can set the size of all `View`s to be the same.
+
+### Graph
+`pyqtgraph.PlotDataItem` with context menu and style dialog.
+
+## Dev Notes
+```
+pdm lock --dev
+pdm lock --prod -L pdm.prod.lock
+```
