@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: librogect
+Version: 0.1.1
+Summary: Что это за библиотека? Она создана, чтобы считать корни квадратного уравнения. Использование: Так как это молодая библиотека, многое придётся сделать вручную. Чтобы начать поиск корней, нужно написать команду resh('(-) (a)x^2 +(-) (b)x +(-) (c) = 0'). Вместо (a), (b), (c) нужно уточнить числа. Если нужно, чтобы a или b были равны единице перед x^2 или x соответственно, то перед ними следует написать 1. Также с 0. 
+Author: Никитос
+Author-email: matika059@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-python
+Dynamic: summary
