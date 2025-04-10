@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "discopilot"
+version = "0.1.7"
+description = "A Discord bot that cross-posts to social media platforms"
+readme = "README.md"
+authors = [
+    {name = "tengfei", email = "tengfei@twinko.ai"},
+]
+license = "Apache-2.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "discord.py>=2.0.0",
+    "tweepy>=4.14.0",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/twinko-ai/discopilot"
+"Bug Tracker" = "https://github.com/twinko-ai/discopilot/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "isort>=5.0.0",
+    "flake8>=6.0.0",
+    "flake8-pyproject>=1.2.3",
+]
+
+[project.scripts]
+discopilot = "discopilot.scripts.run_bot:main"
+discopilot-setup = "discopilot.scripts.setup_cmd:main"
+discopilot-service = "discopilot.scripts.install_service:main"
+
+[tool.setuptools]
+packages = ["discopilot"]
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "--cov=discopilot --cov-report=term-missing"
+asyncio_mode = "strict"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "E501"]
+exclude = [".git", "__pycache__", "build", "dist", ".venv"]
