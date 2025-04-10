@@ -1,0 +1,13 @@
+{% extends 'base/layout.html' %}
+{% load static %}
+{% block content %}
+<h2>Link Module to InventoryItem</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary" type="submit">
+        Save
+    </button>
+</form>
+{% endblock %}
