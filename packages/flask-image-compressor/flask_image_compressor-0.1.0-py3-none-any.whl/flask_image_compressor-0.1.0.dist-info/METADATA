@@ -1,0 +1,172 @@
+Metadata-Version: 2.4
+Name: flask-image-compressor
+Version: 0.1.0
+Summary: A Flask extension for automatic image compression and optimization
+Home-page: https://github.com/gnubyte/flask-image-compressor
+Author: gnubyte
+Author-email: gnubyte@users.noreply.github.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: flask
+Requires-Dist: werkzeug
+Requires-Dist: pillow
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Flask Image Compressor
+
+A Flask extension that provides automatic image compression and optimization for your static images.
+
+## Features
+
+- Automatic image compression for static images
+- Support for multiple image formats (JPEG, PNG, WebP)
+- Global compression quality settings
+- Per-image compression quality override
+- Image resizing with aspect ratio preservation
+- WebP support with JPEG/PNG fallback
+- Progressive JPEG loading
+- PNG optimization with transparency support
+- Responsive images with srcset
+- Lazy loading support
+- Caching of compressed images
+- Easy integration with Flask applications
+
+## Installation
+
+```bash
+pip install flask-image-compressor
+```
+
+## Quick Start
+
+### Basic Usage
+
+```python
+from flask import Flask
+from flask_image_compressor import ImageCompressor
+
+# Create the compressor instance
+compressor = ImageCompressor()
+
+def create_app():
+    app = Flask(__name__)
+    
+    # Configure the app
+    app.config.update({
+        'IMAGE_COMPRESSION_QUALITY': 75,  # Default compression quality
+        'IMAGE_MAX_WIDTH': 1920,          # Default max width
+        'IMAGE_MAX_HEIGHT': 1080,         # Default max height
+        'IMAGE_WEBP_ENABLED': True,       # Enable WebP support
+        'IMAGE_PROGRESSIVE': True,        # Enable progressive JPEGs
+        'IMAGE_PNG_OPTIMIZE': True,       # Enable PNG optimization
+        'IMAGE_PNG_COMPRESSION_LEVEL': 6  # PNG compression level (0-9)
+    })
+    
+    # Initialize the compressor with the app
+    compressor.init_app(app)
+    
+    return app
+
+app = create_app()
+```
+
+### Using in Templates
+
+```html
+<!-- Basic compression with WebP support -->
+{{ compressed_image('images/photo.jpg') | safe }}
+
+<!-- Compressed with specific size -->
+{{ compressed_image('images/photo.jpg', max_width=800, max_height=600) | safe }}
+
+<!-- Responsive images with multiple sizes -->
+{{ responsive_image('images/photo.jpg') | safe }}
+
+<!-- WebP with specific quality -->
+{{ webp_image('images/photo.jpg', quality=80) | safe }}
+
+<!-- Disable lazy loading -->
+{{ compressed_image('images/photo.jpg', lazy=False) | safe }}
+```
+
+## Configuration Options
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| `IMAGE_COMPRESSION_QUALITY` | 85 | Default compression quality (0-100) |
+| `IMAGE_MAX_WIDTH` | 1920 | Maximum width for resized images |
+| `IMAGE_MAX_HEIGHT` | 1080 | Maximum height for resized images |
+| `IMAGE_WEBP_ENABLED` | True | Enable WebP format support |
+| `IMAGE_PROGRESSIVE` | True | Enable progressive JPEG loading |
+| `IMAGE_PNG_OPTIMIZE` | True | Enable PNG optimization |
+| `IMAGE_PNG_COMPRESSION_LEVEL` | 6 | PNG compression level (0-9) |
+
+## Advanced Usage
+
+### Responsive Images
+
+Generate multiple sizes for different viewports:
+
+```html
+{{ responsive_image('images/photo.jpg', 
+    sizes=[(400, 90), (800, 85), (1200, 80), (1600, 75)]) | safe }}
+```
+
+### Custom Compression
+
+```python
+# In your route
+@app.route('/image')
+def get_image():
+    return render_template('image.html', 
+        image=compressor.compressed_image('images/photo.jpg', 
+            quality=60, 
+            max_width=800,
+            lazy=False
+        )
+    )
+```
+
+## How it Works
+
+1. When an image is requested:
+   - Checks if a compressed version exists in cache
+   - If not, creates a new compressed version
+   - Applies format-specific optimizations
+   - Generates WebP version if enabled
+   - Caches the results for future use
+
+2. Format-specific optimizations:
+   - JPEG: Quality compression, progressive loading
+   - PNG: Compression level, transparency preservation
+   - WebP: Generated for JPEGs with fallback
+
+## Development
+
+### Building the Package
+
+```bash
+# Install build tools
+pip install twine wheel
+
+# Build the package
+./build_pypi.sh
+
+# Upload to PyPI
+twine upload dist/*
+```
+
+## License
+
+MIT License 
