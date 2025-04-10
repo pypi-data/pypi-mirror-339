@@ -1,0 +1,11 @@
+requests
+beautifulsoup4
+fake-useragent
+lxml
+
+[dev]
+pytest
+black
+flake8
+twine
+build
