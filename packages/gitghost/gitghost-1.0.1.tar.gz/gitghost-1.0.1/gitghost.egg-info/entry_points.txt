@@ -1,0 +1,2 @@
+[console_scripts]
+gitghost = gitghost.cli:cli
