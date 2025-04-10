@@ -1,0 +1,71 @@
+name: Integration Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'Pull request number (for external PRs)'
+        required: false
+        type: number
+  schedule:
+    # everyday at 12:00
+    - cron: '0 12 * * *'
+env:
+  UV_VERSION: "0.6.6"
+
+jobs:
+
+  test-integration:
+    name: Integration
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.12']
+    env:
+      NEXUS_QA_USER_EMAIL: ${{ secrets.NEXUS_QA_USER_EMAIL }}
+      NEXUS_QA_USER_PASSWORD: ${{ secrets.NEXUS_QA_USER_PASSWORD }}
+      NEXUS_DOMAIN: "qa.myqos.com"
+      NEXUS_STORE_TOKENS: "false"
+      NEXUS_QA_QSYS_DEVICE: ${{ secrets.NEXUS_QA_QSYS_DEVICE }}
+
+    steps:
+      - name: Comment action run link on PR
+        if: ${{ github.event.inputs.pr_number && github.event.inputs.pr_number != '' }}
+        uses: thollander/actions-comment-pull-request@v3
+        with:
+          message: |
+            Integration tests are running on this PR at:
+            ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}.
+          pr-number: ${{ github.event.inputs.pr_number }}
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: '0'
+          # Use the pull request merge commit ref if one is provided
+          ref: ${{ github.event.inputs.pr_number && format('refs/pull/{0}/merge', github.event.inputs.pr_number) || 'main' }}
+
+      - name: Set up uv & venv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: ${{ env.UV_VERSION }}
+          enable-cache: true
+          python-version: ${{ matrix.python-version }}
+          cache-dependency-glob: uv.lock
+      
+      - name: Set up qnexus login tokens
+        run: |
+          uv run python integration/setup_tokens.py
+
+      - name: Run integration tests
+        run: |
+          uv run pytest integration/ --html=integration-results.html --timeout=600 -ra --reruns 3
+
+      - name: Upload integration test results
+        uses: actions/upload-artifact@master
+        with:
+          path: |
+            ./integration-results-*.html
+            ./assets/*.css
+          name: integration-results
