@@ -1,0 +1,66 @@
+# Nautobot CDN Models
+
+<p align="center">
+  <img src="docs/images/CDN_Models_Logo.png" class="logo" height="200px">
+  <br>
+  <a href="https://github.com/byrn-baker/nautobot-app-cdn-models/actions"><img src="https://github.com/byrn-baker/nautobot-app-cdn-models/actions/workflows/ci.yml/badge.svg?branch=main"></a>
+  <a href="https://docs.nautobot.com/projects/cdn-models/en/latest/"><img src="https://readthedocs.org/projects/nautobot-plugin-cdn-models/badge/"></a>
+  <a href="https://pypi.org/project/nautobot-cdn-models/"><img src="https://img.shields.io/pypi/v/nautobot-cdn-models"></a>
+  <a href="https://pypi.org/project/nautobot-cdn-models/"><img src="https://img.shields.io/pypi/dm/nautobot-cdn-models"></a>
+  <br>
+  An <a href="https://networktocode.com/nautobot-apps/">App</a> for <a href="https://nautobot.com/">Nautobot</a>.
+</p>
+
+## Overview
+
+A plugin for [Nautobot](https://github.com/nautobot/nautobot) that is meant to model content delivery configurations.
+
+### Screenshots
+
+More screenshots can be found in the [Using the App](https://docs.nautobot.com/projects/cdn-models/en/latest/user/app_use_cases/) page in the documentation. Here's a quick overview of some of the app's added functionality:
+
+![Navigation Menu](docs/images/navmenu.png)
+
+![CDNSITEs](docs/images/cdnsite.png "Policy View")
+
+## Documentation
+
+Full documentation for this App can be found over on the [Nautobot Docs](https://docs.nautobot.com) website:
+
+- [User Guide](https://docs.nautobot.com/projects/cdn-models/en/latest/user/app_overview/) - Overview, Using the App, Getting Started.
+- [Administrator Guide](https://docs.nautobot.com/projects/cdn-models/en/latest/admin/install/) - How to Install, Configure, Upgrade, or Uninstall the App.
+- [Developer Guide](https://docs.nautobot.com/projects/cdn-models/en/latest/dev/contributing/) - Extending the App, Code Reference, Contribution Guide.
+- [Release Notes / Changelog](https://docs.nautobot.com/projects/cdn-models/en/latest/admin/release_notes/).
+- [Frequently Asked Questions](https://docs.nautobot.com/projects/cdn-models/en/latest/user/faq/).
+
+### Contributing to the Documentation
+
+You can find all the Markdown source for the App documentation under the [`docs`](https://github.com/byrn-baker/nautobot-app-cdn-models/tree/develop/docs) folder in this repository. For simple edits, a Markdown capable editor is sufficient: clone the repository and edit away.
+
+If you need to view the fully-generated documentation site, you can build it with [MkDocs](https://www.mkdocs.org/). A container hosting the documentation can be started using the `invoke` commands (details in the [Development Environment Guide](https://docs.nautobot.com/projects/cdn-models/en/latest/dev/dev_environment/#docker-development-environment)) on [http://localhost:8001](http://localhost:8001). Using this container, as your changes to the documentation are saved, they will be automatically rebuilt and any pages currently being viewed will be reloaded in your browser.
+
+Any PRs with fixes or improvements are very welcome!
+
+## Questions
+
+For any questions or comments, please check the [FAQ](https://docs.nautobot.com/projects/cdn-models/en/latest/user/faq/) first. Feel free to also swing by the [Network to Code Slack](https://networktocode.slack.com/) (channel `#nautobot`), sign up [here](http://slack.networktocode.com/) if you don't have an account.
+
+
+
+### Migrating from a previous version that used Nautobot 1.5.7
+\d nautobot_cdn_models_hypercachememoryprofile
+
+ALTER TABLE nautobot_cdn_models_hypercachememoryprofile
+ALTER COLUMN created TYPE timestamp with time zone USING created::timestamp with time zone;
+
+ALTER TABLE nautobot_cdn_models_siterole
+ALTER COLUMN created TYPE timestamp with time zone USING created::timestamp with time zone;
+
+ALTER TABLE nautobot_cdn_models_cdnsite
+ALTER COLUMN created TYPE timestamp with time zone USING created::timestamp with time zone;
+
+ALTER TABLE nautobot_cdn_models_cdnconfigcontext
+ALTER COLUMN created TYPE timestamp with time zone USING created::timestamp with time zone;
+
+ ALTER TABLE nautobot_cdn_models_cdnconfigcontextschema
+ ALTER COLUMN created TYPE timestamp with time zone USING created::timestamp with time zone;
