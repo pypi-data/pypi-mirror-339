@@ -1,0 +1,3 @@
+[console_scripts]
+reg_metrics = benchmarks.registration_metrics:main
+suite2p = suite2p.__main__:main
