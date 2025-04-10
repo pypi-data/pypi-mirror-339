@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: hat-splitter
+Version: 0.1.8
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE
+Summary: HAT splitter
+Author: Michael Barlow <michael.barlow@aleph-alpha-ip.ai>
+Author-email: Michael Barlow <michael.barlow@aleph-alpha-ip.ai>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/Aleph-Alpha/hat-splitter
+
+# hat-splitter
+
+The `hat-splitter` package implements the HAT splitting rule. If you don't know
+what that is, you probably won't find this package useful.
+
+## Installation
+
+```bash
+pip install hat-splitter
+```
+
+## Usage
+
+```python
+from hat_splitter import HATSplitter
+
+my_hat_splitter = HATSplitter()
+split_text: list[str] = my_hat_splitter.split("Hello, world!")
+assert split_text == ["Hello,", " world!"]
+
+split_text: list[bytes] = my_hat_splitter.split_with_limit("Hello, world!", 4)
+assert split_text == [b'Hell', b'o,', b' wor', b'ld!']
+```
+
