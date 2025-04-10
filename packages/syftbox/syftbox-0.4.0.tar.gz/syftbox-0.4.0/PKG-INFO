@@ -1,0 +1,148 @@
+Metadata-Version: 2.4
+Name: syftbox
+Version: 0.4.0
+Summary: Add your description here
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: aiofiles>=24.1.0
+Requires-Dist: croniter==6.0.0
+Requires-Dist: curl-cffi==0.10.0
+Requires-Dist: distro==1.9.0
+Requires-Dist: fastapi==0.115.12
+Requires-Dist: gunicorn==23.0.0
+Requires-Dist: httpx==0.28.1
+Requires-Dist: jinja2==3.1.6
+Requires-Dist: loguru==0.7.3
+Requires-Dist: msgpack>=1.1.0
+Requires-Dist: opentelemetry-exporter-otlp-proto-grpc==1.31.1
+Requires-Dist: opentelemetry-instrumentation-fastapi==0.52b1
+Requires-Dist: opentelemetry-instrumentation-sqlite3==0.52b1
+Requires-Dist: pathspec==0.12.1
+Requires-Dist: pid==3.0.4
+Requires-Dist: psutil==6.1.1
+Requires-Dist: py-fast-rsync==0.1.0
+Requires-Dist: pydantic-settings==2.8.1
+Requires-Dist: pydantic[email]==2.11.3
+Requires-Dist: pyjwt==2.10.1
+Requires-Dist: python-multipart==0.0.20
+Requires-Dist: pyyaml==6.0.2
+Requires-Dist: requests>=2.32.3
+Requires-Dist: rich==14.0.0
+Requires-Dist: textual==1.0.0
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: typer==0.15.2
+Requires-Dist: typing-extensions==4.13.1
+Requires-Dist: uvicorn==0.34.0
+Requires-Dist: wcmatch==10.0
+Description-Content-Type: text/markdown
+
+```
+ ____         __ _   ____
+/ ___| _   _ / _| |_| __ )  _____  __
+\___ \| | | | |_| __|  _ \ / _ \ \/ /
+ ___) | |_| |  _| |_| |_) | (_) >  <
+|____/ \__, |_|  \__|____/ \___/_/\_\
+       |___/
+```
+
+# Quickstart User Installation
+
+## SyftBox 1 liner
+
+curl -LsSf https://syftbox.openmined.org/install.sh | sh -s -- run
+
+## Manual install
+
+### install uv
+
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+### create a virtualenv somewhere
+
+uv venv .venv
+
+### Install Syftbox
+
+uv pip install -U syftbox
+
+### run the client
+
+uv run syftbox client
+
+# Quickstart Client Developer Installation
+
+### Step 0: Open your terminal to the root of this Github repository
+
+Begin by opening your terminal and navigating to the root directory of this github repository (so when you run 'ls' it should show folders like "syftbox", "server", "tests", etc.). Then run the commands in steps 1-4:
+
+### Step 1: Install Homebrew
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### Step 2: Install uv (using homebrew — which is better for this than pip)
+
+```
+brew install uv
+```
+
+### Step 3: Install a virtual environment using uv
+
+```
+uv venv
+```
+
+### Step 4: Install a relative version of uv.
+
+```
+uv pip install -e .
+```
+
+### Step 5: Run the client
+
+```
+uv run syftbox/client/client.py
+```
+
+# Alternative Options
+
+### Run Client
+
+```
+syftbox client --config_path=./config.json --sync_folder=~/Desktop/SyftBox --email=your@email.org --port=8082  --server=https://syftbox.openmined.org
+```
+
+### Staging Server
+
+If you have issues or want to use a bleeding edge server try --server=https://syftboxstage.openmined.org
+
+### Deploy
+
+This builds the latest source to a wheel and deploys and restarts the server:
+https://syftbox.openmined.org
+
+```
+./scripts/deploy.sh
+```
+
+### Dev Mode
+
+Run the server and clients locally in editable mode with:
+Server:
+
+```
+./scripts/server.sh
+```
+
+Client1:
+
+```
+./scripts/madhava.sh
+```
+
+Client2:
+
+```
+./scripts/andrew.sh
+```
