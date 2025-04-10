@@ -1,0 +1,190 @@
+#Please
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "barinbar"
+version = "0.2.0"
+description = "Generate a cool bar in bar chart"
+authors = ["Daniel Vecera <daniel.vecera@outlook.com>"]
+readme = "README.md"
+license = "MIT" # Use SPDX identifier
+packages = [{include = "barinbar"}] # Tells Poetry to look for the 'barinbar' directory in the root
+
+[tool.poetry.dependencies]
+python = ">=3.10.0"
+matplotlib = "*" # Use '*' or specify version constraints
+pandas = "*"
+squarify = "*"
+numpy = "*"
+[tool.poetry.group.dev.dependencies]
+isort = "*"
+black = {extras = ["jupyter"], version = "*"}
+ruff = "*"
+twine = "*"
+
+
+
+# Keep existing tool configurations
+[tool.isort]
+profile = "black"
+line_length=120
+known-first-party = ["barinbar"]
+force-sort-within-sections = true
+
+[tool.ruff.format]
+# Existing settings
+quote-style = "double"
+
+docstring-code-format = true
+docstring-code-line-length = 120
+
+# Additional formatter settings
+line-ending = "auto"       # Automatically detect the appropriate line endings
+skip-magic-trailing-comma = false  # Keep trailing commas for better diffs
+preview = true             # Enable preview formatter features
+indent-style = "space"
+# Ensure consistent formatting within docstring code blocks
+
+
+[tool.ruff]
+# Same as Black.
+line-length = 120
+indent-width = 4
+target-version = "py312"
+
+
+
+
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+    "references",
+    "models",
+    "data"
+]
+# Fix errors automatically when possible
+fix = true
+
+[tool.ruff.lint]
+# Allow unused variables when underscore-prefixed
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort
+    "C",   # complexity (mccabe)
+    "N",   # naming
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "A",   # flake8-builtins
+    "C4",  # flake8-comprehensions
+    "SIM", # flake8-simplify
+    "PT",  # flake8-pytest-style
+    "RET", # flake8-return
+    "PLR", # pylint rules (refactor)
+    "PLE", # pylint errors
+
+    # Additional rules aligned with your Python guidelines
+    "D",    # pydocstyle - for docstring formatting rules
+    "ERA",  # eradicate - catches commented out code (aligns with clean code)
+    "PD",   # pandas-vet - optimal pandas usage (descriptive operations over index access)
+    "PIE",  # flake8-pie - misc. rules focused on code quality
+    "PL",   # pylint - general pylint rules for readability
+    "COM",  # flake8-commas - comma consistency
+    "TRY",  # flake8-try-except-raise - exception handling
+    "NPY",  # NumPy-specific rules (since you use data science stack)
+    "TCH",  # flake8-type-checking - type annotations checking
+    "RUF",  # Ruff-specific rules
+    "FBT",  # flake8-boolean-trap - prevents boolean traps (aligns with explicit code)
+    "S",    # flake8-bandit - security checks
+    "SLF",  # flake8-self - self consistency (aligned with your OOP guidelines)
+    "TD",   # flake8-todos - TODO management
+    "ISC",  # flake8-implicit-str-concat - string concatenation consistency
+]
+
+# Add additional ignore rules that don't align with your preferences
+ignore = [
+    "E266",  # Too many leading '#' for block comment (you have this already)
+    "D203",  # 1 blank line required before class docstring (conflicts with D211)
+    "ANN101", # Missing type annotation for self (redundant)
+    "ANN102", # Missing type annotation for cls (redundant)
+    "COM812", # Trailing comma missing (handled by formatter),
+    "D105", # undocumented-magic-method (D105) -
+    "W505", # docstring is too long (handled by formatter),
+    "C408", # too many blank lines (handled by formatter),
+    "PLR2004",
+    "N812",
+    "TRY003", #try except raise
+    "PD013", # use melt instead of stack whereas stack is preferred as multiindex is cool,
+    "S301", #allow pickle even if it can be dangerous,
+    "PD015",
+    "D205" #missing-blank-line-after-summary - doesn't work properly with splitting lines due to length
+] #allow magic values]
+
+
+
+[tool.ruff.lint.pep8-naming]
+
+ignore-names = ["setUp", "tearDown", "setUpClass",
+ "tearDownClass", "setUpModule", "tearDownModule", "asyncSetUp", "asyncTearDown", "setUpTestData", "failureException", "longMessage", "maxDiff", "X", "*X*"]
+# Additional Ruff settings to match your guidelines
+
+[tool.ruff.lint.pydocstyle]
+# Follow Google-style docstrings for conciseness
+convention = "google"
+
+[tool.ruff.lint.flake8-implicit-str-concat]
+# Allow multiline string concatenation for readability
+allow-multiline = true
+
+[tool.ruff.lint.flake8-type-checking]
+# Strict typing that matches your guidelines
+strict = true
+
+
+[tool.ruff.lint.mccabe]
+# Max complexity - though you emphasize readability over performance
+max-complexity = 8
+
+[tool.ruff.lint.pylint]
+# Based on your Python style guidelines
+max-args = 4            # Your guide emphasizes readable, explicit code
+max-nested-blocks = 3   # Your style guide prefers flat over nested
+max-positional-args = 1
+
+[tool.ruff.lint.pycodestyle]
+max-line-length = 120    # Match your Black config
+ignore-overlong-task-comments = true
+
+
+[tool.ruff.lint.isort]
+known-first-party = ["barinbar"]
+force-sort-within-sections = true
+combine-as-imports = true    # Consistent with your style guide
