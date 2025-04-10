@@ -1,0 +1,9 @@
+minictl-0.1.8.dist-info/METADATA,sha256=wMwKO3yqiS-0YlBg7HtvznbFxU1Hr7HiSaE-432Gn7M,3680
+minictl-0.1.8.dist-info/WHEEL,sha256=7t-v1JmmzYY_tZ4_P5e2Jb22-0P4_9CTurfjkvFh4Uc,112
+minictl-0.1.8.dist-info/licenses/LICENSE,sha256=gl36-eaqhQ-Ko5hlNTwfn6-UwWTMD6aS23GO5DEYSg8,1068
+minictl.libs/libgcc_s-b5472b99.so.1,sha256=wh8CpjXz9IccAyeERcB7YDEx7NH2jF-PykwOyYNeRRI,453841
+minictl/__init__.py,sha256=DYeeSZHG1ZV8EGurfzQ4N1TqcPd1oZ_wTemHeeqLTjw,111
+minictl/__init__.pyi,sha256=LQ9u58CTqFqDwohU8l6G62Dx6fscAYQfPHUIYq56qlg,8350
+minictl/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+minictl/minictl.pypy310-pp73-x86-linux-gnu.so,sha256=g3QJbGhyHdaQp7AbQ3l7W1eQi69tVZQ0hfOpqacg_TM,981557
+minictl-0.1.8.dist-info/RECORD,,
