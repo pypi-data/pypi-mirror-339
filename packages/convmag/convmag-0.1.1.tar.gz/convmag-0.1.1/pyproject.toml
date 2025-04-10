@@ -1,0 +1,86 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "convmag"
+description = "Conversion between units used in magnetism."
+authors = [
+    {name = "Thomas G. Woodcock"},
+    {name = "The convmag Developers"},
+]
+license = "MIT"
+license-files = ["LICENSE"]
+
+classifiers=[
+    'Programming Language :: Python :: 3',
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: End Users/Desktop',
+    'Intended Audience :: Science/Research',
+    'Operating System :: OS Independent',
+    'Topic :: Scientific/Engineering',
+    'Topic :: Scientific/Engineering :: Physics',
+    'Topic :: Utilities',
+]
+keywords = ["python", "conversion", "units", "magnetism", "magnetic"]
+requires-python = ">=3.6"
+dynamic = ["version"]
+
+[project.readme]
+'file' = "README.md"
+'content-type' = "text/markdown"
+
+[project.urls]
+'Source' = 'https://github.com/tgwoodcock/convmag.git'
+'Bug Tracker' = 'https://github.com/tgwoodcock/convmag.git/issues'
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "pre-commit                   >= 1.16",
+]
+
+[tool.ruff.lint]
+select = [
+  "B",   # flake8-bugbear
+  "D",   # pydocstyle
+  "E",   # pycodestyle
+  "F",   # Pyflakes
+  "I",   # isort
+  "SIM", # flake8-simplify
+  "UP",  # pyupgrade
+]
+ignore = [
+  # conflict with other rules
+  "D203", # one-blank-line-before-class (conflicts with D204)
+  "D212", # multi-line-summary-first-line (conflicts with D213)
+  # conflict with formatter
+  "D206", # indent-with-spaces
+  "D300", # triple-single-quotes
+  "E111", # indentation-with-invalid-multiple
+  "E114", # indentation-with-invalid-multiple-comment
+  "E117", # over-indented
+  # conflict with Python 3.6 compatibility
+  "UP022", # replace-stdout-stderr
+  # personal preference
+  "SIM108", # turnary operator instead of if else block
+  "D205", # one-blank-line-required-between-summary-line-and-description
+]
+
+[tool.ruff.lint.isort]
+known-local-folder = ["src"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[project.scripts]
+convmag = "convmag.cli:cli"
+
+[tool.setuptools.dynamic]
+version = {attr = "convmag.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

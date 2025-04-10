@@ -1,0 +1,4 @@
+
+[dev]
+ruff
+pre-commit>=1.16
