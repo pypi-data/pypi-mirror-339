@@ -1,0 +1,8 @@
+openrouter_agent/__init__.py,sha256=M20bHOHpnlh7B-qReDApX5SQUnO7wB8ahq-v_4Y6Jx0,359
+openrouter_agent/agent.py,sha256=JqgriXV0vuI8A9f1tif1N8HiAMcmXQgUeEmTRv9cI8w,2010
+openrouter_agent/cli.py,sha256=UgnzT6chXNewbXRezcMkOqVAhEFCQHaYsSUunikF1kw,20416
+openrouter_agent/example_bot.py,sha256=DqIRhhT59xoqNqsc3YfQqZPtJ5KmMsCQm9lOcNpz5Xg,1999
+openrouter_agent-0.1.0.dist-info/METADATA,sha256=2A5nq0On5CkMy62cBp8yAymPCg_kl6d31ETmrRb4SnI,7825
+openrouter_agent-0.1.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+openrouter_agent-0.1.0.dist-info/entry_points.txt,sha256=Jy5NdGD_6Rp7W5RRVuWd99jYCGQXtgeCDBDtbz6Xjs8,61
+openrouter_agent-0.1.0.dist-info/RECORD,,
