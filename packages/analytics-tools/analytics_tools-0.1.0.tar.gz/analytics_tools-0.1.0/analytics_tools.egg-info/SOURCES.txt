@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+analytics_tools.egg-info/PKG-INFO
+analytics_tools.egg-info/SOURCES.txt
+analytics_tools.egg-info/dependency_links.txt
+analytics_tools.egg-info/requires.txt
+analytics_tools.egg-info/top_level.txt
+woe_iv_calculator/__init__.py
+woe_iv_calculator/woe_iv_calculator.py
