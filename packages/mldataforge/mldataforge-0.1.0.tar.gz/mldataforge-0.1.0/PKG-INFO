@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: mldataforge
+Version: 0.1.0
+Summary: swiss army knife of scripts for transforming and processing datasets for machine learning.
+Project-URL: Homepage, https://github.com/schneiderkamplab/mldataforge
+Project-URL: Bug Tracker, https://github.com/schneiderkamplab/mldataforge/issues
+Author: Peter Schneider-Kamp
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Requires-Dist: click
+Requires-Dist: datasets
+Requires-Dist: mltiming
+Requires-Dist: mosaicml-streaming
+Description-Content-Type: text/markdown
+
+# mldatasets
+swiss army knife of scripts for transforming and processing datasets for machine learning
