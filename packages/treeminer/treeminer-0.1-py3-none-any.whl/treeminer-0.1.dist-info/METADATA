@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: treeminer
+Version: 0.1
+Summary: Multi-language and extensible library for mining Git repositories
+Project-URL: Homepage, https://github.com/andrehora/treeminer
+Project-URL: Issues, https://github.com/andrehora/treeminer/issues
+Author-email: Andre Hora <andrehoraa@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Python: >=3.9
+Requires-Dist: gitpython==3.1.44
+Requires-Dist: pydriller==2.7
+Requires-Dist: tree-sitter
+Requires-Dist: tree-sitter-java
+Requires-Dist: tree-sitter-javascript
+Requires-Dist: tree-sitter-python
+Requires-Dist: tree-sitter-typescript
+Description-Content-Type: text/markdown
+
+[![tests](https://github.com/andrehora/treeminer/actions/workflows/tests.yml/badge.svg)](https://github.com/andrehora/treeminer/actions/workflows/tests.yml)
+
+# TreeMiner :deciduous_tree: :pick:
+
+Multi-Language and Extensible Tool for Mining Git Repositories
