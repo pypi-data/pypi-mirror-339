@@ -1,0 +1,11 @@
+torch_grid_utils/__init__.py,sha256=lYwXVF4OHks7-MFSkunJj0DXG_qKeuZEA_QSlxRDYsU,483
+torch_grid_utils/coordinate_grid.py,sha256=IN7uofztuRwBT4bS03_0cb7_lHoonatqP4uwIdVxflQ,2170
+torch_grid_utils/fftfreq_grid.py,sha256=45n0gPdioRTEb1kjdfsKjOuWVXvYLLvBRT9qkrB1CWI,7529
+torch_grid_utils/geometry.py,sha256=qG-p55cpPjzT1rO0mIlF1Ceqspki5VjuuNUuoRg2xjw,602
+torch_grid_utils/shapes_2d.py,sha256=HmUJ9xvtOxTKlFMljJSWZ8UDHjcPWQGPL0fMb4M7hz0,3450
+torch_grid_utils/shapes_3d.py,sha256=zSe0ne6ElvSSNcjLd5jVfDHToBKD1l74bD8FBtOzF1o,3760
+torch_grid_utils/soft_edge.py,sha256=o--hBbk_UsYx1AleVcj01Gt_Uws9OUNwxDikm8Pg_Gk,2162
+torch_grid_utils-0.0.2.dist-info/METADATA,sha256=wHbGx-ZTGh0BxODk9e0tatvMGliKoeO7_m01vz1mTsE,1915
+torch_grid_utils-0.0.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+torch_grid_utils-0.0.2.dist-info/licenses/LICENSE,sha256=Kbo_h3sPum8rDAhMerH9fl4hzFn-QUCekJf05zk2epY,1499
+torch_grid_utils-0.0.2.dist-info/RECORD,,
