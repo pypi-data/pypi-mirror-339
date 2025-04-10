@@ -1,0 +1,9 @@
+wheel
+requests
+backoff
+websocket-client
+apscheduler
+
+[doc]
+sphinx
+sphinx-rtd-theme
