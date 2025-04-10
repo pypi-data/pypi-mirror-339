@@ -1,0 +1,2 @@
+[console_scripts]
+collagemaker = collagemaker.main:main
