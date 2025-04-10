@@ -1,0 +1,476 @@
+Metadata-Version: 2.4
+Name: jimiko
+Version: 2.0.7rc13
+Summary: High-performance SSH and SFTPclient for network automation
+Home-page: https://github.com/jameshill/jimiko
+Author: James Hill
+Author-email: James Hill <jmhill2@gmail.com>
+License: MIT
+Keywords: ssh,networking,automation,libssh2,paramiko,netmiko
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Requires-Dist: pytest>=7.0.0; extra == "test"
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# Jimiko
+
+A high-performance SSH client for network automation and device management, built with libssh2. Inspired by Paramiko and Netmiko, but with a focus on performance and non-blocking operations.
+
+## Features
+
+- Non-blocking SSH operations for high performance
+- Support for interactive shell sessions
+- Configurable timeouts and interrupt handling
+- Cross-platform support (macOS, Linux, Rhel)
+- Python 3.6+ compatibility
+- Optimized for network device automation
+- Support legacy unauthenicated network devices 
+- Built on libssh2 for maximum performance
+
+## Installation
+
+### Prerequisites Building from Source
+
+#### Windows
+```bash
+# Using vcpkg
+vcpkg install libssh2:x64-windows
+```
+
+#### macOS
+```bash
+# Using Homebrew
+brew install libssh2
+```
+
+#### Linux (Debian/Ubuntu)
+```bash
+sudo apt-get install libssh2-1-dev
+```
+
+#### Linux (CentOS/RHEL)
+```bash
+sudo yum install libssh2-devel
+```
+
+### Installing the Package 
+
+```bash
+# No prerequisites required 
+pip install jimiko
+```
+
+## API Documentation
+
+### SSH Client (PyJimikoClient)
+
+#### Constructor Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| ip | string | Required | IP address or hostname of the remote server |
+| username | string | "" | Username for authentication |
+| password | string | "" | Password for authentication |
+| expected_prompt | string | "" | Regex pattern to identify command completion |
+| auth | bool | True | Whether to use authentication |
+| port | int | 22 | SSH port number |
+| command_timeout_ms | uint32 | 30000 | Command execution timeout in milliseconds |
+| read_timeout_ms | uint32 | 5000 | Read operation timeout in milliseconds |
+| terminal_type | string | "vt100" | Terminal type to use for PTY requests |
+| use_pty | bool | True | Whether to request a PTY (set to False for some Cisco devices) |
+
+#### Main Methods
+
+| Method | Parameters | Return | Description |
+|--------|------------|--------|-------------|
+| connect() | None | bool | Establishes connection to the server |
+| disconnect() | None | None | Closes the connection |
+| send(command, command_timeout_ms, read_timeout_ms, expected_prompt) | string, uint32, uint32, string | string | Sends a command and returns output |
+| get_initial_output(timeout_ms) | uint32 | string | Captures initial banner output |
+
+#### PTY Options
+
+When using shell connections, the SSH client uses a PTY (Pseudo Terminal). The available terminal types include:
+
+- "vt100" - DEC VT100 terminal (default, recommended for Cisco devices)
+- "vt102" - DEC VT102 terminal
+- "vt220" - DEC VT220 terminal
+- "xterm" - X Window System terminal
+- "ansi" - ANSI terminal
+- "linux" - Linux console
+- "vanilla" - Basic terminal
+- "dumb" - Minimal terminal
+
+Different network devices may require different terminal types for optimal compatibility. For Cisco devices, "vt100" is typically the most reliable option.
+
+### SFTP Client (PyJimikoSFTPClient)
+
+#### Constructor Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| ip | string | Required | IP address or hostname of the remote server |
+| username | string | Required | Username for authentication |
+| password | string | Required | Password for authentication |
+| port | int | 22 | SSH port number |
+| operation_timeout_ms | uint32 | 30000 | Operation timeout in milliseconds |
+
+#### Main Methods
+
+| Method | Parameters | Return | Description |
+|--------|------------|--------|-------------|
+| connect() | None | bool | Establishes SFTP connection |
+| disconnect() | None | None | Closes the connection |
+| put(local_path, remote_path, mode) | string, string, int | bool | Uploads file to remote server |
+| get(remote_path, local_path) | string, string | bool | Downloads file from remote server |
+| list_dir(path) | string | vector<SFTPFileInfo> | Lists directory contents |
+| file_exists(path) | string | bool | Checks if file exists |
+| file_info(path) | string | SFTPFileInfo | Gets file information |
+| make_dir(path, mode) | string, int | bool | Creates a directory |
+| remove_file(path) | string | bool | Deletes a file |
+| remove_dir(path) | string | bool | Removes a directory |
+| rename(old_path, new_path) | string, string | bool | Renames a file or directory |
+
+## Usage Examples
+
+### SSH Client (Authenticated)
+
+```python
+from jimiko import PyJimikoClient
+
+# Create SSH client with authentication
+client = PyJimikoClient(
+    ip="192.168.1.1",
+    username="admin",
+    password="password123",
+    expected_prompt="[$#>]",  # Regex pattern for common prompts
+    auth=True,
+    port=22,
+    command_timeout_ms=5000,   # 5 seconds command timeout
+    read_timeout_ms=10000,     # 10 seconds read timeout
+    terminal_type="vt100"      # Use vt100 for Cisco devices
+)
+
+# Connect to device
+if client.connect():
+    # Basic command - uses the default prompt
+    result = client.send("show version")
+    print(result)
+    
+    # Configure command with custom prompt
+    config_result = client.send("configure terminal", expected_prompt="\\(config\\)#")
+    interface_result = client.send("interface GigabitEthernet0/1", expected_prompt="\\(config-if\\)#")
+    
+    # Return to enable mode
+    client.send("end", expected_prompt="#")
+    
+    # Command with longer timeout
+    result = client.send("show tech-support", command_timeout_ms=60000)
+    print(result)
+    
+    # Disconnect when done
+    client.disconnect()
+```
+
+### SSH Client (Non-Authenticated)
+
+```python
+from jimiko import PyJimikoClient
+
+# Create SSH client without authentication (for legacy devices)
+client = PyJimikoClient(
+    ip="192.168.1.2",
+    auth=False,
+    port=22,
+    terminal_type="vt100"  # Using vt100 terminal type
+)
+
+# Connect to device
+if client.connect():
+    # Get initial banner/login prompt
+    initial_output = client.get_initial_output(timeout_ms=5000)
+    print(initial_output)
+    
+    # Send login credentials manually if needed
+    if "login:" in initial_output:
+        result = client.send("admin")
+        result = client.send("password123")
+    
+    # Now send commands as normal
+    result = client.send("show interface")
+    print(result)
+    
+    # Disconnect when done
+    client.disconnect()
+```
+
+### SFTP Client
+
+```python
+from jimiko import PyJimikoSFTPClient
+import os
+
+# Create SFTP client
+sftp = PyJimikoSFTPClient(
+    ip="192.168.1.1",
+    username="admin",
+    password="password123",
+    port=22,
+    operation_timeout_ms=30000  # 30 second timeout
+)
+
+# Connect to server
+if sftp.connect():
+    # Upload a file (with mode 0644)
+    sftp.put("local_file.txt", "/remote/path/file.txt", 0o644)
+    
+    # Download a file
+    sftp.get("/remote/path/file.txt", "downloaded_file.txt")
+    
+    # List directory contents
+    files = sftp.list_dir("/remote/path")
+    for file_info in files:
+        print(f"Name: {file_info.name}, Size: {file_info.size} bytes")
+    
+    # Check if file exists
+    if sftp.file_exists("/remote/path/file.txt"):
+        # Get file info
+        info = sftp.file_info("/remote/path/file.txt")
+        print(f"File size: {info.size}, Modified: {info.mtime}")
+        
+        # Create directory
+        sftp.make_dir("/remote/path/new_dir", 0o755)
+        
+        # Rename file
+        sftp.rename("/remote/path/file.txt", "/remote/path/new_file.txt")
+        
+        # Delete file
+        sftp.remove_file("/remote/path/new_file.txt")
+        
+        # Remove directory
+        sftp.remove_dir("/remote/path/new_dir")
+    
+    # Disconnect when done
+    sftp.disconnect()
+```
+
+## Why Jimiko?
+
+Jimiko similar features of Paramiko and Netmiko with high-performance C++ implementation:
+
+- **Performance**: Built on libssh2 with C++ for maximum speed
+- **Non-blocking**: All operations are non-blocking by default
+- **Timeouts**: Fine-grained timeout control for all operations
+- **Device Support**: Special support for network devices including non-authenicated ssh sessions
+- **Error Handling**: Robust error handling with specific exceptions
+- **Cross-Platform**: macOS and Linux
+
+## Development Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/jameshill/jimiko.git
+cd jimiko
+```
+
+2. Install development dependencies:
+```bash
+pip install -r requirements-dev.txt
+```
+
+3. Build the extension:
+```bash
+python setup.py build_ext --inplace
+```
+
+## Building from Source
+
+### Windows
+```bash
+# Set VCPKG_ROOT environment variable
+# See github workflow
+set VCPKG_ROOT=C:\vcpkg\installed\x64-windows
+python setup.py build
+```
+
+### macOS
+```
+Build locally on Mac.
+bash
+python setup.py build
+```
+
+## License
+
+MIT License
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request 
+
+# Docker Build Environment for Jimiko
+
+This directory contains a Docker-based build environment for compiling Jimiko with static linking of libssh2 and OpenSSL using manylinux-2014 compatibility.
+
+## Features
+
+- Based on Fedora 35 (producing binaries compatible with CentOS/Rhel)
+- Statically links libssh2 and OpenSSL with position independent code (-fPIC)
+- Produces portable binary wheels that work on Centos/Rhel systems
+- MacOS build locally 
+- Ubuntu - wip
+
+## Prerequisites
+
+- Docker installed and running
+- Access to the Fedora Docker registry
+
+## Building the Docker Image
+
+From the root of the project:
+
+```bash
+See ./docker/
+Build Python 3.6-3.11 
+./docker/build_sequential.sh 
+```
+
+## Customizing the Build
+
+The Docker image includes:
+- Modern GCC compiler from Fedora 35
+- OpenSSL 1.1.1w built from source with -fPIC
+- libssh2 1.11.0 built from source with -fPIC
+- Environment variables set for static linking
+
+If you need to customize the build process:
+
+1. Modify the `Dockerfile` to install additional dependencies
+2. Adjust the `build.sh` script to change how the wheel is built
+3. Rebuild the Docker image with your changes
+
+## Troubleshooting
+
+- If you encounter issues with the static libraries, check that the paths in `build.sh` match the actual paths in the container.
+- Make sure your project is properly mounted as a volume in the container.
+- For debugging, you can run the container with an interactive shell and execute build steps manually.
+- For "dangerous relocation" errors when linking static libraries, ensure they were compiled with -fPIC.
+- If you experience linker issues with Python, ensure that the Python shared libraries are in the LD_LIBRARY_PATH.
+
+## What Gets Created
+
+The build process creates several artifacts:
+
+1. A standard Python wheel in the `dist/` directory
+2. A specific wheel with "-manylinux" in the filename (also in `dist/`)
+3. A platform-specific binary file in `src/jimiko/` named `_jimiko_wrapper.cpython-<python-version>-manylinux2024_x86_64.so`
+
+The extracted binary file is used when creating a universal wheel that includes binaries for multiple platforms.
+
+## Troubleshooting
+
+### Cisco Device Connection Issues
+
+When connecting to Cisco IOS XE devices, you might encounter "Channel open failure" or "Error reading from channel: transport read" errors. This is often related to how these devices handle PTY allocation. Try these solutions:
+
+1. **Disable PTY allocation**:
+   ```python
+   # Connect to Cisco device without PTY allocation
+   client = PyJimikoClient(
+       ip="192.168.1.1",
+       username="admin",
+       password="password123",
+       expected_prompt="#",
+       use_pty=False  # Skip PTY allocation entirely for problematic devices
+   )
+   ```
+
+2. **Adjust timeouts**:
+   ```python
+   client = PyJimikoClient(
+       ip="192.168.1.1",
+       username="admin",
+       password="password123",
+       expected_prompt="#",
+       command_timeout_ms=60000,   # 60 seconds
+       read_timeout_ms=30000       # 30 seconds
+   )
+   ```
+
+3. **Disable pagination on Cisco devices**:
+   ```python
+   client.connect()
+   client.send("terminal length 0")
+   ```
+
+4. **Try different terminal types** if PTY is required:
+   ```python
+   client = PyJimikoClient(
+       ip="192.168.1.1",
+       username="admin",
+       password="password123",
+       expected_prompt="#",
+       terminal_type="dumb"  # Try alternative terminal types
+   )
+   ```
+
+If you're still having issues, check the SSH configuration on your Cisco device using:
+```
+show running-config | include ssh
+show ssh
+```   
+
+### Command Prompt Handling
+
+By default, the SSH client uses the prompt pattern specified during initialization to detect when a command has completed. However, for specific commands, you can override this behavior:
+
+1. **Default prompt handling**: The prompt pattern from the constructor is used to detect command completion:
+   ```python
+   client = PyJimikoClient(
+       ip="192.168.1.1",
+       username="admin",
+       password="password123",
+       expected_prompt="#",  # This will be used for all commands by default
+   )
+   ```
+
+2. **Per-command prompt override**: For special commands that have different output patterns, you can specify a command-specific prompt:
+   ```python
+   # Use the default prompt
+   result = client.send("show version")
+   
+   # Use a custom prompt for a specific command
+   result = client.send("configure terminal", expected_prompt="\\(config\\)#")
+   
+   # Use a specific prompt for a yes/no prompt
+   result = client.send("reload", expected_prompt="\\[yes/no\\]")
+   ```
+
+3. **Prompt matching**: Both default and override prompts support:
+   - Regular expressions (preferred for more complex patterns)
+   - Simple string matching (as fallback if regex parsing fails)
+
+This approach provides flexibility for working with various device types that may have different prompt styles or interactive commands.   
