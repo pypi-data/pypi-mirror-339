@@ -1,0 +1,13 @@
+manuscript_cover_letter/__init__.py,sha256=ruULPQI7A5xxFhCYlc2-Yak7eGnabqCYTahYYvxbPtc,19
+manuscript_cover_letter/about.py,sha256=oF1DsrjaajT3GQoWoMotbzzY-AiOKqjbVOUR7-anip8,487
+manuscript_cover_letter/program.py,sha256=hnVyXDY0sUOvMrkHAPTZFJTJkBP0AK1iA06GTzIUAtE,6619
+manuscript_cover_letter/icons/logo.png,sha256=R79RAelTywti_qVK7i6KfdObs4XHsoq_GfrCplLv61g,15207
+manuscript_cover_letter/modules/__init__.py,sha256=ruULPQI7A5xxFhCYlc2-Yak7eGnabqCYTahYYvxbPtc,19
+manuscript_cover_letter/modules/lib_cover_basic.py,sha256=JgsLhaIambCX2ZwA37E_-DZQddsVEvPHrHXFwiIDN-4,5656
+manuscript_cover_letter/modules/lib_cover_style1.py,sha256=01gdAcvd-zWnSm0K5DEpSLPkfATNSVbggUmfxBpuEPE,5702
+manuscript_cover_letter-0.1.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+manuscript_cover_letter-0.1.0.dist-info/METADATA,sha256=Wr8_pQGe5tcZxKmpuR2PYGNfe5AiMBVgpX-D7UmuL9g,1829
+manuscript_cover_letter-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+manuscript_cover_letter-0.1.0.dist-info/entry_points.txt,sha256=3w1UqJMXjCeHg3msmvkajpN7QxOETX-AZiJXy1b1YxU,81
+manuscript_cover_letter-0.1.0.dist-info/top_level.txt,sha256=Xqj5B2mRSWTeJiipfnAVUVWJ013itk3el9qAMn2FLzU,24
+manuscript_cover_letter-0.1.0.dist-info/RECORD,,
