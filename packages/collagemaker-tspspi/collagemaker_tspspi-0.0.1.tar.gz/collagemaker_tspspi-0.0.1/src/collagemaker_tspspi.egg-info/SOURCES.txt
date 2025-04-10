@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.cfg
+src/collagemaker/__init__.py
+src/collagemaker/main.py
+src/collagemaker_tspspi.egg-info/PKG-INFO
+src/collagemaker_tspspi.egg-info/SOURCES.txt
+src/collagemaker_tspspi.egg-info/dependency_links.txt
+src/collagemaker_tspspi.egg-info/entry_points.txt
+src/collagemaker_tspspi.egg-info/requires.txt
+src/collagemaker_tspspi.egg-info/top_level.txt

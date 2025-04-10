@@ -1,0 +1,36 @@
+# A simple collage generator
+
+A very simple generator for image collages out of a set of images. Currently
+all images are resized into a square format and then places on one or more lines,
+partially overlapping and rotated in random orientations.
+
+## Installation
+
+```
+pip install collagemaker-tspspi
+```
+
+## Usage
+
+```
+usage: collagemaker [-h] --output OUTPUT [--lines LINES] [--bgcolor BGCOLOR]
+                    [--overlap OVERLAP] [--lineoverlap LINEOVERLAP]
+                    images [images ...]
+
+Create a flowing image collage with overlap and rotation.
+
+positional arguments:
+  images                Input image files
+
+options:
+  -h, --help            show this help message and exit
+  --output OUTPUT       Output file
+  --lines LINES         Number of lines (default: 2)
+  --bgcolor BGCOLOR     Background color (CSS name or #RRGGBB[AA], default:
+                        transparent)
+  --overlap OVERLAP     Fractional horizontal overlap between images (default:
+                        0.3)
+  --lineoverlap LINEOVERLAP
+                        Fractional vertical overlap between lines (default:
+                        0.1)
+```
