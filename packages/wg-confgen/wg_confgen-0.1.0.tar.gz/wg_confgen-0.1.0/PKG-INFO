@@ -1,0 +1,218 @@
+Metadata-Version: 2.4
+Name: wg-confgen
+Version: 0.1.0
+Summary: Generator of consistent Wireguard configurations
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# wg-confgen
+
+wg-confgen is generator of consistent Wireguard configurations.
+
+wg-confgen stores data about all clients in a JSON file (by default: wg0.json in
+current directory) and generates consistent Wireguard configs per client. You
+can edit this JSON by hand or use built-in `wg-confgen modify` subcommand. It
+contains sensitive information (clients' private keys) so it should be stored
+securely, similar to ordinary Wireguard configuration files.
+
+## Installation
+
+There are several ways to install wg-confgen:
+
+- just copy `src/wg_confgen/wg_confgen.py` anywhere in your `$PATH`, for
+  example: `cp src/wg_confgen/wg_confgen.py /usr/local/bin/wg-confgen`
+- `pipx install .`
+- `uv tool install .`
+
+## Usage
+
+### wg-confgen show
+
+Generate Wireguard configuration for a given client.
+
+```
+$ wg-confgen show client
+```
+
+A nifty trick is generating QR codes from the generated configuration, which can
+be easily transferred to mobile Wireguard clients (just remember to decrease the
+font size of your terminal, because QR codes for Wireguard configs can be quite
+big).
+
+```
+$ wg-confgen show client | qrencode -t ANSI
+```
+
+### wg-confgen modify
+
+To add clients or modify their settings, use `wg-confgen modify <param1>
+<value1> <param2> <value2> ...`. This subcommand allows changing and removing
+many parameters at once, or adding or removing values from parameters which
+allow more than one value (for example, adding more AllowedIPs or Peers).
+
+Syntax:
+
+```
+wg-confgen modify [options] <client> [changes...]
+
+changes := <parameter> [modification_type] <value...>
+modification_type := "set" | "add" | "remove"
+```
+
+Modification types:
+
+- `set`: set parameter to a given value (default when missing)
+- `add`: add a value to the list of parameters (e.g. IP address to AllowedIPs)
+- `remove`: remove a value from the list of parameters, or unset the parameter
+
+Instead of literal value, special values can be used:
+
+- `unset`: unsets the value for the client, including the inherited default (as
+  provided by "defaults" section in input JSON); in JSON this state is
+  represented as explicit `null` assigned to the parameter
+- `default`: brings back parameter value to the default (as provided by
+  "defaults" section in input JSON); in JSON this state is represented as a
+  missing key for a parameter
+- `generate`: automatically generate a key. This is useful as a default for
+  PresharedKey, which will enable automatic generation of PresharedKey for all
+  configured clients. When used on clients, it will force one time regeneration
+  of private or preshared keys.
+
+[!NOTE]
+> Keys (PrivateKey, PresharedKey) are not inherited from "defaults" section.
+
+`modify` subcommand can be used to change defaults for all of the clients:
+`wg-confgen modify defaults ...`.
+
+[!TIP]
+> A side-effect of running `wg-confgen modify` is that all missing private keys
+> will be regenerated. This is true even for "no-op" modify without any changes,
+> like `wg-confgen modify defaults`
+
+Examples:
+
+```
+$ wg-confgen modify client_name \
+    PrivateKey set `wg genpk` \
+    PersistentKeepalive 30 \
+    AllowedIPs add 192.168.1.0/24 10.0.0.{id}/32 \
+    DNS remove 8.8.8.8
+
+$ wg-confgen modify defaults PresharedKey generate
+
+$ wg-confgen modify client-with-key-rotation \
+    PrivateKey generate
+    PresharedKey generate
+```
+
+### wg-confgen peers
+
+To quickly add or remove a client as a peer to many other clients, use `peers`
+subcommand.
+
+Add `server` as a peer to all clients (but not vice-versa):
+
+```
+$ wg-confgen peers server addto '*'
+```
+
+Add `server` as a peer to only selected clients:
+
+```
+$ wg-confgen peers server addto client1 client2 'client_pattern*'
+```
+
+Remove `server` from all clients peers:
+
+```
+$ wg-confgen peers server removefrom '*'
+```
+
+### wg-confgen remove
+
+Remove clients. This will remove them from Peers of remaining clients.
+
+```
+$ wg-confgen remove client1 client2
+```
+
+### wg-confgen variable
+
+To set variables, which can be then interpolated as `{var.<varname>}`, use `wg
+confgen variable`. This subcommand accepts a list of pairs `<variable> <value>`
+and then will set a variable to desired value, or remove it if `<value>` has a
+special value `unset`. For example:
+
+```
+$ wg-confgen variable net 10.8.0 mask 24
+$ wg confgen modify defaults Address "{var.net}.{id}/{var.mask}"
+```
+
+## Parameters Handling
+
+There are few special cases about how `wg-confgen` handles some Wireguard
+parameters:
+
+- `PrivateKey` and `PublicKey` must be always kept synchronised, so `wg-confgen`
+  will disregard any manually set public keys and instead will regenerate them
+  as necessary
+- `Endpoint` will use `ListenPort` of client, unless a different port is
+  explicitly specified for `Endpoint`
+
+## JSON
+
+You can see example of JSON database in `wg0.json` in this repository.
+
+JSON files used by wg-confgen are quite simple. They're root object is  a
+dictionary with following fields:
+
+- `clients`: an ordered mapping of clients. Order of clients is important,
+  because it decides about the value of `{id}` interpolation variable. Each
+  field of client maps directly to the names of Wireguard parameters. Parameter
+  names in JSON are case sensitive. `PublicKey` is omitted because wg-confgen
+  always regenerates it.
+- `defaults`: a dummy "client" object which provides default values for all the
+  other clients in the `clients` section.
+- `variables`: mapping which provides a space for arbitrary user-provided
+  variables which can be used in clients' parameters.
+
+### Meaning of the Parameters
+
+- when parameter is missing in the client, the default value from `defaults`
+  will be used
+- when parameter is set to `null`, it means that this particular parameter for
+  the client should not be set, even if default is used
+- when a key is set to `"__GENERATE__"` string, wg-confgen will generate the
+  associated key
+- variable interpolations are enclosed in curly braces
+    - `{id}`: number of client, starting from 1
+    - `{name}`: name of client, obtained from the key in the mapping in
+      `clients` section
+    - `{var.<name>}`: variable from `variables` section (strings only)
+
+```json
+{
+    "clients": {
+        "server": {
+            "PrivateKey": "2Nf4mHbWfJl9YDwSrf6WvwRQTMpd2uIO5qrwqxbtf0Y=",
+            "Peers": ["client1", "client2"]
+        },
+        "client1": {
+            "PrivateKey": "gMRn6H/TAfS2A6Ltk8ZEvjbZeuQXK6iHOVPtAR4qbF0=",
+            "PersistentKeepalive": null,
+        },
+        "client2": {
+            "PrivateKey": "wI8muH8Tv7Mm6S+B9ceqMkAxfKPC9eAesiobmMKt0Xk=",
+            "AllowedIPs": ["{var.net}.{id}/32", "192.168.1.0/24"],
+        }
+    },
+    "defaults": {
+        "Address": "{var.net}.{id}/24",
+        "PersistentKeepalive": 25,
+        "Peers": ["server"]
+    },
+    "variables": {
+        "net": "10.8.0"
+    }
+}
+```

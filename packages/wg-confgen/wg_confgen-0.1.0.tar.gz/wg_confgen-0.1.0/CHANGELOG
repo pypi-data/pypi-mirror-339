@@ -1,0 +1,9 @@
+NEXT:
+
+0.1.0: 2025--04-09
+
+  Initial release
+
+  [Added]
+  - subcommands: show, modify, peers, remove, variable
+  - option to change wireguard's path

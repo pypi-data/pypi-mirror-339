@@ -1,0 +1,25 @@
+{
+    "clients": {
+        "server": {
+            "PrivateKey": "2Nf4mHbWfJl9YDwSrf6WvwRQTMpd2uIO5qrwqxbtf0Y=",
+            "Peers": ["client1", "client2"]
+        },
+        "client1": {
+            "PrivateKey": "gMRn6H/TAfS2A6Ltk8ZEvjbZeuQXK6iHOVPtAR4qbF0=",
+            "PersistentKeepalive": 25,
+            "Peers": ["server"]
+        },
+        "client2": {
+            "PrivateKey": "wI8muH8Tv7Mm6S+B9ceqMkAxfKPC9eAesiobmMKt0Xk=",
+            "AllowedIPs": ["{var.net}.{id}/32", "192.168.1.0/24"],
+            "Peers": ["server"]
+        }
+    },
+    "defaults": {
+        "Address": "{var.net}.{id}/24",
+        "PersistentKeepalive": 25
+    },
+    "variables": {
+        "net": "10.8.0"
+    }
+}
