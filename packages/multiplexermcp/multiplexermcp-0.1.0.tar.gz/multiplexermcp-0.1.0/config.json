@@ -1,0 +1,34 @@
+{
+    "mcpServers": {
+        "wolfram-only": {
+            "command": "uv",
+            "args": [
+                "run",
+                "multiplexermcp"
+            ],
+            "env": {
+                "ENABLED_SERVERS": "[\"wolframalpha\"]"
+            }
+        },
+        "searxng-only": {
+            "command": "uv",
+            "args": [
+                "run",
+                "multiplexermcp"
+            ],
+            "env": {
+                "ENABLED_SERVERS": "[\"searxng\"]"
+            }
+        },
+        "wolfram-and-searxng": {
+            "command": "uv",
+            "args": [
+                "run",
+                "multiplexermcp"
+            ],
+            "env": {
+                "ENABLED_SERVERS": "[\"wolframalpha\", \"searxng\"]"
+            }
+        }
+    }
+}
