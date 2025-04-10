@@ -1,0 +1,12 @@
+tsilva_notebook_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tsilva_notebook_utils/colab.py,sha256=FD_Y9kBtoDl6ie8Uy_t0rmOrF3gqsMFcURuhKZIBZVU,710
+tsilva_notebook_utils/gpu.py,sha256=IkT9yIMBUxKtCBrSn6pSctYMt60wIIy9hxH00km6z50,727
+tsilva_notebook_utils/huggingface.py,sha256=tQ54PxPtEnPgJD2vq4b7iRAAPVVs9RTr445PtPaWgl0,409
+tsilva_notebook_utils/plots.py,sha256=ydWh7VAVdwk1peM9r17HO-cfr387aUlO8ewMTa4hb7o,2728
+tsilva_notebook_utils/popdesk.py,sha256=ruqfan8jX7K-0MXCxYl9xK5b2YFIX3C_iuc9EtSjw8Y,306
+tsilva_notebook_utils/video.py,sha256=0srv-ySvNmMg_2Hajn3ECaAZgwRFF5thtikcnlJ0YLk,3625
+tsilva_notebook_utils/wandb.py,sha256=4NwWpXetNWkSkaoHMwkbR7f8hE47iejxu5i07vbNDjA,590
+tsilva_notebook_utils-0.0.9.dist-info/METADATA,sha256=yN6PMf-gCRATX-qU7A8EwpaFFkGEGgOt3x9opY7vXsQ,2191
+tsilva_notebook_utils-0.0.9.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tsilva_notebook_utils-0.0.9.dist-info/licenses/LICENSE,sha256=gTrdDdqFDu7VtWezebCYIHmebmc-XTVxqWTZGKvDux0,1068
+tsilva_notebook_utils-0.0.9.dist-info/RECORD,,
