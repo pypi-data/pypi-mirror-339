@@ -1,0 +1,15 @@
+datadiode_RobustSoliton/RobustSolitonReceiver.py,sha256=oyqQvf3VR59ixlArH1tqgYzEwvTpiGOLG2Fdk3XQmLE,264113
+datadiode_RobustSoliton/RobustSolitonSender.py,sha256=e0j02SxmB42L36vdOf5nRY3iIC8XWzSBxn6x_L7w7zM,29623
+datadiode_RobustSoliton/__init__.py,sha256=Axwg_7d9gowZKKtiR9oRvQmda1Hr3l8PtO-NGhLRfXg,24
+datadiode_RobustSoliton/__main__.py,sha256=Jzds4jkAF1Rkm8X6xhjOF4GNGdAGrAJjutq_QgHHl1Q,3521
+datadiode_RobustSoliton/fastfe.py,sha256=Hi3ZVzVhRWyq3EHjc299JxSajHTTcGVxaPFYG-TdmUg,4629
+datadiode_RobustSoliton/fixed_fec.py,sha256=9A3617KQwBAMkAgZ-kxM8HcQQkcEePez_RwdzuutHHc,21465
+datadiode_RobustSoliton/prng.py,sha256=I_NvalCLtaJQPRMGshlwkfwayuJW_p0T5RwiyHar7l4,15604
+datadiode_RobustSoliton/soliton.py,sha256=TwG3Ey7Innp7vgLjR-bqRaRuS0cXAdVj02gzWUVWdG0,1812
+datadiode_RobustSoliton/utils.py,sha256=BoGenP7jixSaJZCgx7UPG31X251fSCrDYszGJfE98cg,10590
+datadiode_robustsoliton-1.0.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+datadiode_robustsoliton-1.0.0.dist-info/METADATA,sha256=6nxIgiCzBMG2eCfVkTRJzI4pIVv26-1ehxFbuFpyck8,2177
+datadiode_robustsoliton-1.0.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+datadiode_robustsoliton-1.0.0.dist-info/entry_points.txt,sha256=YDeDJ7wbKeYmB24bGHReLPVkj1bjMlpoGC_b3TVLzcg,82
+datadiode_robustsoliton-1.0.0.dist-info/top_level.txt,sha256=KPtsIkPxQ9LB1Jf2bo0CCqTCjThGWkad0bV1Nz5W8nM,24
+datadiode_robustsoliton-1.0.0.dist-info/RECORD,,
