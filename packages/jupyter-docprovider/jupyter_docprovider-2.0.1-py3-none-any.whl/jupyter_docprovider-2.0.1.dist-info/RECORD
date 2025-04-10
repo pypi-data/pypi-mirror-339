@@ -1,0 +1,16 @@
+jupyter_docprovider/__init__.py,sha256=pvzIgrnwXG3rAiMW5TvmGOCW0CPWIlk54yXEw_O_jrc,260
+jupyter_docprovider/_version.py,sha256=wAxkK8w13vqoF47A8iqWdSlIgRRXmZiQ0R4wePZfzhs,22
+jupyter_docprovider-2.0.1.data/data/share/jupyter/labextensions/@jupyter/docprovider-extension/package.json,sha256=X9N40tWHtBNHa_BFJOn14W-IQ5CT_tCo24y2ggLLSwI,3937
+jupyter_docprovider-2.0.1.data/data/share/jupyter/labextensions/@jupyter/docprovider-extension/static/240.cc74569552563e7ef963.js,sha256=zHRWlVJWPn75Y7lNUBpH0XxuYSqPwW1DJp-sZdNxYGE,19100
+jupyter_docprovider-2.0.1.data/data/share/jupyter/labextensions/@jupyter/docprovider-extension/static/444.13de0fd44849e3f7d780.js,sha256=E94P1EhJ4_fXgNC7xISUph3poODWDafmpcC1VjMr5jE,377
+jupyter_docprovider-2.0.1.data/data/share/jupyter/labextensions/@jupyter/docprovider-extension/static/576.21a3c1a9ebaebb58d346.js,sha256=IaPBqeuuu1jTRrtz1BM6mTu3VX8y9wZKPEVmn7h6MXY,15521
+jupyter_docprovider-2.0.1.data/data/share/jupyter/labextensions/@jupyter/docprovider-extension/static/703.cb9bbec9cae41ec846f0.js,sha256=y5u-ycrkHshG8DNYi1yGEnHQAjSFFyjO6psi_ha4zH4,5396
+jupyter_docprovider-2.0.1.data/data/share/jupyter/labextensions/@jupyter/docprovider-extension/static/944.a13dc96a22c557e2f32c.js,sha256=oT3JaiLFV-LzLEmqfgYGYt3Ncl_N_1kwsiR6NsGmiw0,9261
+jupyter_docprovider-2.0.1.data/data/share/jupyter/labextensions/@jupyter/docprovider-extension/static/remoteEntry.00a773594f2eba197f98.js,sha256=AKdzWU8uuhl_mGYMW79FG_3NXnWSYmhQBmegirHq5XU,9059
+jupyter_docprovider-2.0.1.data/data/share/jupyter/labextensions/@jupyter/docprovider-extension/static/style.js,sha256=IIvKvBMPlm9SdCt0l2x7pOx2ZMG7tbWWhxCH8l4ylSU,173
+jupyter_docprovider-2.0.1.data/data/share/jupyter/labextensions/@jupyter/docprovider-extension/static/third-party-licenses.json,sha256=nnZ52TZVE91M8jZgWfQVFCDoWVR8IzoxPxnrmTNQPgg,7896
+jupyter_docprovider-2.0.1.data/data/share/jupyter/labextensions/@jupyter/docprovider-extension/install.json,sha256=NO9HH1zbt0jedIG_-lqpMiOhO1OAvrUmoUfIjgyzvpE,199
+jupyter_docprovider-2.0.1.dist-info/METADATA,sha256=xrt3aJTZjYeIGlf3wftshhDSFGFiu2oI7hTEcKof63M,4762
+jupyter_docprovider-2.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+jupyter_docprovider-2.0.1.dist-info/licenses/LICENSE,sha256=mhO0ZW9EiWOPg0dUgB-lNbJ0CGwRmTdbeAg_se1SOnY,2833
+jupyter_docprovider-2.0.1.dist-info/RECORD,,
