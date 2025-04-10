@@ -1,0 +1,7 @@
+setup.py
+beautified/__init__.py
+beautified/style.py
+beautified.egg-info/PKG-INFO
+beautified.egg-info/SOURCES.txt
+beautified.egg-info/dependency_links.txt
+beautified.egg-info/top_level.txt
