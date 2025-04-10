@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+./pyillustrator/__init__.py
+./pyillustrator/config.py
+./pyillustrator/plots.py
+./pyillustrator/utils.py
+pyillustrator.egg-info/PKG-INFO
+pyillustrator.egg-info/SOURCES.txt
+pyillustrator.egg-info/dependency_links.txt
+pyillustrator.egg-info/requires.txt
+pyillustrator.egg-info/top_level.txt
+tests/test_plots.py
