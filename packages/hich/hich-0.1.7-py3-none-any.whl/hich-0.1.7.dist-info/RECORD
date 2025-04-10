@@ -1,0 +1,16 @@
+hich/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hich/__main__.py,sha256=UndSqgz-lXXLIgfzeZr15anlMQ-iJJMemW9F_81gWeI,343
+hich/commands/fasta.py,sha256=W4Q6AH6hN0-EqKFBP193OdyK8Y5j0JUKIz_NFZkdF7s,3798
+hich/commands/matrix.py,sha256=ujIlgok25j4G3RfIIyAxFn4Mi95HOANht9PPJlwBFIk,6301
+hich/commands/pairs.py,sha256=BXh5K_Pt5dr4cdgI5BvFHvsWB2bBzzgiKnLROUjCJUE,11287
+hich/commands/report.py,sha256=tGFb0q8-XL0Krs1H0PT-a5eFNxvcnLSvVtmDvEXt2ww,3169
+hich/fasta/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hich/fasta/digest_re.py,sha256=v-oYt7ADdRg1X7H92JZRzbTEFb5D7KCfdpXj366PlGs,2437
+hich/matrix/hicrep.py,sha256=PWmTaqRas22ndWs9G_c_vuf8zx_oq1fzPi2F8GJoImo,6353
+hich/pairs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hich/pairs/convert.py,sha256=-EO5Ak04-od1MdzE0NXo8Wq9iddqghdG5YZXHCElecA,3573
+hich/pairs/header.py,sha256=K-NVkofVcRMdQTv8DaYvDUqXuSaGpGpYTqTWjT-4Gl8,11360
+hich/pairs/pairssql.py,sha256=2hMBKjn1fb4KTfn6VGIQeY73DSqDGK-q2xkw2N1q-gY,7634
+hich-0.1.7.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+hich-0.1.7.dist-info/METADATA,sha256=alQvoGlWkAIXAzJGl6I69YfULluYP1E2SVEgjSu68kw,280
+hich-0.1.7.dist-info/RECORD,,
