@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: arolla-test
+Version: 0.0.0.post6
+Requires-Dist: protobuf <6.0.0dev,>=5.26.1
+
