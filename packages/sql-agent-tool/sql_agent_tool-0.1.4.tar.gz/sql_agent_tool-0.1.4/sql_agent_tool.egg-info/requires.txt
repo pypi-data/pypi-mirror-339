@@ -1,0 +1,15 @@
+sqlalchemy>=2.0
+psycopg2-binary>=2.9
+groq>=0.1
+pydantic>=2.0
+sqlparse>=0.4
+python-dotenv>=0.20
+openai
+google-google-generativeai
+google
+
+[dev]
+pytest>=7.0
+pytest-mock>=3.0
+black>=23.0
+flake8>=6.0
