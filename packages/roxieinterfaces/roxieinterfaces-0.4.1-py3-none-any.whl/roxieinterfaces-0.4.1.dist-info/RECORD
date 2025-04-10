@@ -1,0 +1,17 @@
+roxieinterfaces/__init__.py,sha256=JJeAY__tDG34lBG6Tam2rc0qWKt86H66ZAw0WcAKlRw,135
+roxieinterfaces/ansys.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+roxieinterfaces/extgeom.py,sha256=UpZDlZLZIsHq4Unn7HR4vlSzQMnIjbfFLkmGBWDYKqI,1118
+roxieinterfaces/geom/__init__.py,sha256=ChgIPcqCqjRgpS1GGKwxY8CXz5ILT5USjCTyyiwOJ-A,280
+roxieinterfaces/geom/api.py,sha256=YtwYIM0Bl9KNOdc2sOgi2PorTgIeldbJbC15FYiQ02M,2845
+roxieinterfaces/geom/bsplines.py,sha256=HRH5QPFMHuCHpzXNKohqNoj5rj7lr1hbWJqU9TkxWBY,24670
+roxieinterfaces/geom/geom.py,sha256=bw6Cs3FlNN4M-R_GpSB_Ef9dflcsjfrWokVyunYtkvE,52278
+roxieinterfaces/geom/math_tools.py,sha256=Li28x3faJ4fqDf3id2rx_hRoVHgjSRFLT-93brQ6808,8095
+roxieinterfaces/mesh/__init__.py,sha256=HT2oHvQjUSU3zAX7dprf_N1Pjj-5JCrbV8yqrJjikwM,189
+roxieinterfaces/mesh/mesh_tools.py,sha256=3K4GaesKIlPJJbQcuG0Pu2AVf2z9PrVW403QspALwAU,10334
+roxieinterfaces/mesh/meshes.py,sha256=eioxSjsMbAOnhLN2I-MTer1ZHkfT_yf_pfIYzHRW37Q,18657
+roxieinterfaces/mesh/stepplot.py,sha256=sTatM4-QShZjWY-7Z_juWdowJaXBOEK_broZfEZ6c3A,4566
+roxieinterfaces-0.4.1.dist-info/LICENSES/BSD-4-Clause.txt,sha256=yA2SfwPbchK6Q6hpo4PiScGbQIWf8Nni4vlo5P3PAF8,1618
+roxieinterfaces-0.4.1.dist-info/METADATA,sha256=7uGg2PeYSZ0b_SaON0sWurdYgXyWg-Ao3oVBP2uiCuA,2091
+roxieinterfaces-0.4.1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+roxieinterfaces-0.4.1.dist-info/entry_points.txt,sha256=3Y9qpJVpcAIJpYgANU9HnWRKVz_Kk8Wzc9LBbbsc9dY,66
+roxieinterfaces-0.4.1.dist-info/RECORD,,
