@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+nucypher_snaptime.egg-info/PKG-INFO
+nucypher_snaptime.egg-info/SOURCES.txt
+nucypher_snaptime.egg-info/dependency_links.txt
+nucypher_snaptime.egg-info/requires.txt
+nucypher_snaptime.egg-info/top_level.txt
+snaptime/__init__.py
+snaptime/main.py
+tests/test_snap.py

@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: nucypher-snaptime
+Version: 0.2.5
+Summary: Transform timestamps with a simple DSL
+Home-page: https://github.com/zartstrom/snaptime
+Download-URL: https://github.com/zartstrom/snaptime/tarball/0.2.4
+Author: Philipp Hitzler
+Author-email: phj.hitzler@gmail.com
+Keywords: snap,datetime,date,truncate,transform
+License-File: LICENSE.txt
+Requires-Dist: python-dateutil
+Requires-Dist: pytz
+Dynamic: author
+Dynamic: author-email
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
