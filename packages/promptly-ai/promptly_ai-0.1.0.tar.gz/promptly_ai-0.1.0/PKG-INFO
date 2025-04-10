@@ -1,0 +1,75 @@
+Metadata-Version: 2.4
+Name: promptly-ai
+Version: 0.1.0
+Summary: A Python package for managing prompts using Jinja2 templates
+Project-URL: Homepage, https://github.com/owainlewis/promptly
+Project-URL: Documentation, https://github.com/owainlewis/promptly#readme
+Project-URL: Repository, https://github.com/owainlewis/promptly.git
+Author-email: Owain Lewis <owain@owainlewis.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: jinja2,prompts,templates
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Requires-Dist: jinja2>=3.0.0
+Requires-Dist: pyyaml>=6.0.0
+Provides-Extra: dev
+Requires-Dist: flake8>=6.0.0; extra == 'dev'
+Requires-Dist: ipykernel>=6.0.0; extra == 'dev'
+Requires-Dist: mypy>=1.0.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Requires-Dist: types-pyyaml>=6.0.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Promptly
+
+Promptly is a simple Python library for managing AI prompts.
+
+## Build
+
+![Test](https://github.com/owainlewis/promptly/actions/workflows/test.yml/badge.svg)
+
+## Installation (WIP)
+
+```bash
+pip install promptly
+```
+
+## Quick Start
+
+Create a prompt 
+
+```
+---
+version: 1.0.0
+author: Owain Lewis
+description: Example prompt to demonstrate the use of the Promptly library
+model: gpt-4o
+---
+You are a helpful assistant.
+
+The time is {{ time }}.
+```
+
+Render it using Promptly
+
+```python
+from promptly_ai import render
+from datetime import datetime
+
+system_prompt = render("examples/prompts/hello.j2", time=datetime.now().isoformat())
+
+print(system_prompt)
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
