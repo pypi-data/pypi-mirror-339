@@ -1,0 +1,15 @@
+sanskrit-grammar/NNExpression.py,sha256=BKESF_mcleFFjjo_YwCTc57YmAeG6oGaMy0Em2fWTmg,2529
+sanskrit-grammar/__init__.py,sha256=um6X2C27OsN-AoDe8tFVAM4IrK_2fUtbKTrw9DHB5lk,43284
+sanskrit-grammar/ashtadhyayi_simulator.py,sha256=drWuxQcWdmgMnThiaYdpsHyQM81N9hiSo6m_BWD9aR8,2797
+sanskrit-grammar/morphological_analyzer.py,sha256=CGKg7bp6fGr1HhazZ2g9bvaxdYgecLsVGVgaE5kU7Iw,5968
+sanskrit-grammar/morphology.py,sha256=82Rr55EBZ8EDXNcbe3uv4Q2xczKOYiuO_vARWfnqWYk,628
+sanskrit-grammar/samasa.py,sha256=4j4QGqEOUigDBTFJeiIfR8u5r5ghh0ryZ0mwfGSfYKI,242
+sanskrit-grammar/sandhi.py,sha256=LxGCz7t1WvNhI1OPE791fxHwm3_p2lyPv60VUg9rE8U,3006
+sanskrit-grammar/sanskrit_hindi_accessor.py,sha256=1MhRRr44UergTkmeaZQ12Npnq7Cbi7Pify29VzLGJ48,4108
+sanskrit-grammar/stem_generator.py,sha256=LASYWQW-6sk4n2T287_hBxqHcuv3fol7Zyy3U-mT8Xw,2877
+sanskrit-grammar/test.py,sha256=vpuj8HqJfesZy6ZWuDysKWQuw5GV3Aez3nVp0IIvjfY,2105
+sanskrit-grammar/upasarga_pratyaya.py,sha256=xFk7Q__Jppu1OhYlahiQ3KYryUWC7OMtbhaQNDozUQM,303
+sanskrit_grammar-0.1.0.dist-info/METADATA,sha256=6HxnBwkCC8ET3F8f5LXvafPlNclMSMf-LNjhBc8C0Yg,5849
+sanskrit_grammar-0.1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+sanskrit_grammar-0.1.0.dist-info/top_level.txt,sha256=BUQRMUWxiHefZfoq4_rpHp3UsjohYWsgsLbQyIeOReU,17
+sanskrit_grammar-0.1.0.dist-info/RECORD,,
