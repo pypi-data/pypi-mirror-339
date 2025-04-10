@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: bp_percentile
+Version: 0.1.0
+Summary: Blood Pressure Percentile Calculation
+Home-page: https://github.com/vitaldb/bp_percentile
+Author: VitalLab
+Author-email: vital@snu.ac.kr
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: mcp
+Requires-Dist: scipy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+Model Context Server for Blood Pressure Percentile Calculation
