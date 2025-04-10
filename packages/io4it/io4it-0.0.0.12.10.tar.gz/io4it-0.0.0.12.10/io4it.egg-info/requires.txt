@@ -1,0 +1,15 @@
+boto3
+docling
+docling-core
+speechbrain
+whisper
+whisper-openai
+pyannote.audio
+pyannote.core
+wave
+scikit-learn
+
+[cuda]
+torch==2.6.0+cu126
+torchvision==0.17.2+cu126
+torchaudio==2.6.0+cu126
