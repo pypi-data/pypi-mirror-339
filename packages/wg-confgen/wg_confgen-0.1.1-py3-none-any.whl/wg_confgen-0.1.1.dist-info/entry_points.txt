@@ -1,0 +1,2 @@
+[console_scripts]
+wg-confgen = wg_confgen:main
