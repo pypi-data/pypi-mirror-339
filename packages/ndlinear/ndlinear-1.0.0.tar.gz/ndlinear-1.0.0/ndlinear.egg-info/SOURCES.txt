@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ndlinear/__init__.py
+ndlinear/ndlinear.py
+ndlinear.egg-info/PKG-INFO
+ndlinear.egg-info/SOURCES.txt
+ndlinear.egg-info/dependency_links.txt
+ndlinear.egg-info/requires.txt
+ndlinear.egg-info/top_level.txt
