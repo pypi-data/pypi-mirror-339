@@ -1,0 +1,2 @@
+[console_scripts]
+pba-cli = minimal_pba_cli.cli:main

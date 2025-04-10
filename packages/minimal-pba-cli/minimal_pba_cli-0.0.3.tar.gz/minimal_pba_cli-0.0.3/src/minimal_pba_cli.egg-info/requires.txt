@@ -1,0 +1,5 @@
+packaging>=24.2
+requests>=2.32.3
+rich>=14.0.0
+trogon[typer]>=0.6.0
+typer>=0.12.5
