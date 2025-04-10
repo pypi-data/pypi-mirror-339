@@ -1,0 +1,4 @@
+aiohttp>=3.8.5
+pydantic>=1.10.21
+certifi>=2023.7.22
+requests>=2.31.0

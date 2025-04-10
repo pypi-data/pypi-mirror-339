@@ -1,0 +1,162 @@
+[project]
+name = "ya_tracker_client"
+version = "0.1.0"
+description = "Async Yandex Tracker Client"
+authors = [
+    { name = "Дмитрий Анфимов", email = "work@danfimov.ru" },
+
+]
+license = { text = "MIT License" }
+keywords = [
+    "Yandex",
+    "Tracker",
+    "API",
+    "async",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Framework :: AsyncIO",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Typing :: Typed",
+]
+readme = "README.md"
+requires-python=">=3.10,<=3.14"
+dependencies = [
+    "aiohttp>=3.8.5",
+    "pydantic>=1.10.21",
+    "certifi>=2023.7.22",
+    "requests>=2.31.0",
+]
+
+[project.urls]
+"Bug Tracker" = "https://github.com/danfimov/ya_tracker_client/issues"
+"Repository" = "https://github.com/danfimov/ya_tracker_client/"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "coverage>=7.8.0",
+    "pytest-asyncio>=0.26.0",
+    "pytest-cov>=6.1.1",
+    "ruff>=0.11.4",
+    "polyfactory>=2.20.0",
+    "gevent>=23.9.1",
+    "pre-commit>=4.2.0",
+    "python-dotenv>=v1.1.0",
+]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ya_tracker_client*"]
+exclude = ["examples", "tests", "assets"]
+
+[tool.pytest]
+python_files = "test_*.py"
+python_classes = ["*Test", "Test*"]
+python_functions = "test_*"
+testpaths = "tests/"
+
+[tool.coverage.report]
+exclude_lines = [
+    "# pragma: no cover",
+    "def __repr__",
+    "def __str__",
+    "def __unicode__",
+]
+show_missing = true
+skip_empty = true
+omit = [
+  "*/__init__.py",
+]
+
+[tool.coverage.html]
+directory = "pytest-cov-report"
+
+[tool.coverage.run]
+branch = true
+concurrency = ['gevent']
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+addopts = ["-p no:pastebin", "-p no:nose", "-p no:doctest"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "PLR0913",  # Too many arguments in function definition
+    "A005",  # Module `queue` shadows a Python standard-library module
+
+    # Missing docstrings
+    "D100",  # in public module
+    "D104",  # in public package
+    "D103",  # in public functions
+    "D101",  # in public class
+    "D102",  # in public method
+    "D105",  # in magic method
+    "D107",  # in __init__
+
+    # Conflicted rules
+    "D203",  # with D211
+    "D212",  # with D213
+
+    # TODO: Annotations should be fixed in public methods
+    "ANN001",
+    "ANN401",
+    "ANN201",
+    "ANN202",
+    "ANN003",
+
+    # todo comments
+    "TD003",
+    "TD002",
+    "FIX002",
+
+    # strange rule about bool arguments
+    "FBT001",
+    "FBT002",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+    "INP001",  # missing __init__.py
+    "S101",  # assert usage
+    "S106",  # possible hardcoded password
+    "S311",  # standard pseudo-random generators are not suitable for cryptographic purposes
+    "ARG002",  # unused method argument (triggered by fixtures)
+]
+"examples/*" = [
+    "BLE001",
+    "INP001",
+]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "single"
+multiline-quotes = "single"
+
+[tool.ruff.lint.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 10
+
+[tool.ruff.lint.isort]
+known-local-folder = ["ya_tacker_client"]
+lines-after-imports = 2
