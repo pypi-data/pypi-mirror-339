@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+src/authree_qiyu.egg-info/PKG-INFO
+src/authree_qiyu.egg-info/SOURCES.txt
+src/authree_qiyu.egg-info/dependency_links.txt
+src/authree_qiyu.egg-info/top_level.txt
+src/crud/__init__.py
+src/crud/core.py
+src/crud/ephe/seas_18.se1
+src/crud/ephe/sefstars.txt
+src/crud/ephe/semo_18.se1
+src/crud/ephe/sepl_18.se1
