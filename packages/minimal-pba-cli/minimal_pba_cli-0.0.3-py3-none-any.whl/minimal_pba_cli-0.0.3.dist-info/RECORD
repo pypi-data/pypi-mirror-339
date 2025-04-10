@@ -1,0 +1,9 @@
+minimal_pba_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+minimal_pba_cli/cli.py,sha256=0dtKBA8qki8btRTA-mPN3W5chWZDtp7ODlkIzxsjOeI,2199
+minimal_pba_cli/plugin.py,sha256=wkJ9-EnzYD1Kmh5qGpJGGC4d5W3K4GldIPCGziNdJVo,6828
+minimal_pba_cli/upgrade.py,sha256=dOb805I2R123j-6-o0YWdLqz0fc3iXxhv3V6cgqGLeI,722
+minimal_pba_cli-0.0.3.dist-info/METADATA,sha256=WhQAkQhOv0GKAEGdssEd5qeDks-BZmLJx_LA0V9Ba80,1061
+minimal_pba_cli-0.0.3.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+minimal_pba_cli-0.0.3.dist-info/entry_points.txt,sha256=x68CcYLn1YO-L5pxZWZ2_c_pnItDYOKOrsr0qajqKd4,53
+minimal_pba_cli-0.0.3.dist-info/top_level.txt,sha256=3BnK5rJB60RMKeHN8DV2nRgu-QpbQV4HVWZgiVc_mJA,16
+minimal_pba_cli-0.0.3.dist-info/RECORD,,
