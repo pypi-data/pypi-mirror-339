@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: xarray-treeview
+Version: 2025.4.9.2
+Summary: PyQt/PySide model/view for tree of Xarray datasets.
+Keywords: PyQt,PySide,xarray,tree
+Author-Email: Marcel Goldschen-Ohm <goldschen-ohm@utexas.edu>
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Project-URL: homepage, https://github.com/marcel-goldschen-ohm/xarray-treeview
+Project-URL: repository, https://github.com/marcel-goldschen-ohm/xarray-treeview
+Project-URL: issues, https://github.com/marcel-goldschen-ohm/xarray-treeview/issues
+Requires-Python: >=3.10
+Requires-Dist: numpy>=1.26.2
+Requires-Dist: xarray>=2025.3.1
+Requires-Dist: qtpy>=2.4.1
+Requires-Dist: qtawesome>=1.4.0
+Requires-Dist: pyqt-ext>=2025.4.9.2
+Description-Content-Type: text/markdown
+
+# xarray-treeview
+PyQt/PySide tree model/view interface for an Xarray DataTree.
+
+![GitHub Tag](https://img.shields.io/github/v/tag/marcel-goldschen-ohm/xarray-treeview?cacheSeconds=1)
+![build-test](https://github.com/marcel-goldschen-ohm/xarray-treeview/actions/workflows/build-test.yml/badge.svg)
+![GitHub Release](https://img.shields.io/github/v/release/marcel-goldschen-ohm/xarray-treeview?include_prereleases&cacheSeconds=1)
+![publish](https://github.com/marcel-goldschen-ohm/xarray-treeview/actions/workflows/publish.yml/badge.svg)
+
+- [Install](#install)
+- [Quick Start](#quick-start)
+- [Documentation](#documentation)
+
+## Install
+Requires a PyQt package. Should work with PySide6, PyQt6, or PyQt5.
+```shell
+pip install PySide6
+```
+Install latest release version:
+```shell
+pip install xarray-treeview
+```
+Or install latest development version:
+```shell
+pip install xarray-treeview@git+https://github.com/marcel-goldschen-ohm/xarray-treeview
+```
+
+## Quick Start
+```python
+from qtpy.QtWidgets import QApplication
+from xarray_treeview import *
+
+app = QApplication()
+
+# Xarray DataTree
+dt: DataTree = ...
+
+# XarrayTreeModel: without drag-n-drop
+# XarrayDndTreeModel: with drag-n-drop (move within tree only)
+model = XarrayDndTreeModel()
+model.setDataTree(dt)
+
+# XarrayTreeViewer includes XarrayTreeView plus info and attrs views
+# but you can use XarrayTreeView standalone too.
+viewer = XarrayTreeViewer()
+view: XarrayTreeView = viewer.view()
+view.setModel(model)
+
+viewer.show()
+app.exec()
+```
+
+## Documentation
+:construction:
