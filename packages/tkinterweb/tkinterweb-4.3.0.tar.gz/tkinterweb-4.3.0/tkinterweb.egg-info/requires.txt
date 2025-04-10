@@ -1,0 +1,12 @@
+pillow
+tkinterweb-tkhtml
+
+[full]
+cairosvg
+pythonmonkey
+
+[javascript]
+pythonmonkey
+
+[svg]
+cairosvg
