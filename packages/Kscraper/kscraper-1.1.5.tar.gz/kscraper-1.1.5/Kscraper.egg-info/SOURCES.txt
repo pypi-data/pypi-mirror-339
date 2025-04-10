@@ -1,0 +1,9 @@
+README.md
+setup.py
+Kscraper/__init__.py
+Kscraper/client.py
+Kscraper.egg-info/PKG-INFO
+Kscraper.egg-info/SOURCES.txt
+Kscraper.egg-info/dependency_links.txt
+Kscraper.egg-info/requires.txt
+Kscraper.egg-info/top_level.txt
