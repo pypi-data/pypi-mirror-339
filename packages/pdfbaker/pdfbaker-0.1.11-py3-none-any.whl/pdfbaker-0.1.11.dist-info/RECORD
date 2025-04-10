@@ -1,0 +1,8 @@
+pdfbaker/__init__.py,sha256=CHMDiJPozYFwRI2qsN96n95R3_pckAY6Ewzthfkkgxw,676
+pdfbaker/__main__.py,sha256=qESn1CbbEE2Fj5FFAC7uTFsdbsf_ZVP-zSXHmG9MjgU,5098
+pdfbaker/common.py,sha256=7O8Pf4RuecgNG5Ts0eR9QUwS4MwED-3SkWox58XceK4,6898
+pdfbaker/render.py,sha256=xFaVGYVydZbkoep0inqL4-mfXTQhrp6eCMmbrvtBROo,5816
+pdfbaker-0.1.11.dist-info/METADATA,sha256=Po33hPqN9M7cscHtPOiiNIe1cIg_cFf-H3cFX5C1C7M,4246
+pdfbaker-0.1.11.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pdfbaker-0.1.11.dist-info/entry_points.txt,sha256=bRcx2wRHVj_hSIRpm9o3x1s3rQ6Vs2FyqISFvzOMEn0,51
+pdfbaker-0.1.11.dist-info/RECORD,,
