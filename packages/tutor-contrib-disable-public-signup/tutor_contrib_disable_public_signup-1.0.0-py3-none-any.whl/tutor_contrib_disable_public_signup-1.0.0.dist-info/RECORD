@@ -1,0 +1,12 @@
+tutordisable_public_signup/__about__.py,sha256=ZhzQKWZ8RFrTIkj7z87B144DI95e8LMfA5w8NDWQDtg,23
+tutordisable_public_signup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tutordisable_public_signup/plugin.py,sha256=kDSzq-uhSbEmaCD-YyM9rKaK4V16m1UsoNABIbAqE8U,7940
+tutordisable_public_signup/patches/.gitignore,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tutordisable_public_signup/templates/disable-public-signup/apps/.gitignore,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tutordisable_public_signup/templates/disable-public-signup/build/.gitignore,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tutordisable_public_signup/templates/disable-public-signup/tasks/lms/.gitignore,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tutor_contrib_disable_public_signup-1.0.0.dist-info/METADATA,sha256=-ck_Z-iggK1RKzO6qgz7ZwyrKYMxr8mpGaiauPjJlEI,1860
+tutor_contrib_disable_public_signup-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tutor_contrib_disable_public_signup-1.0.0.dist-info/entry_points.txt,sha256=dUfb2jlVKBRvb21tJzblR5MXhOq-HYJpsuI2O55QfiU,76
+tutor_contrib_disable_public_signup-1.0.0.dist-info/licenses/LICENSE.txt,sha256=Ehui51NnaWICvRhWqLqKCqzEQQbm2D7UcKjnOXU3Ubc,1097
+tutor_contrib_disable_public_signup-1.0.0.dist-info/RECORD,,

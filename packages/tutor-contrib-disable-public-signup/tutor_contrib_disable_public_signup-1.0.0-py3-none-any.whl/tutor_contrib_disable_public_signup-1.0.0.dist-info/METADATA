@@ -1,0 +1,53 @@
+Metadata-Version: 2.4
+Name: tutor-contrib-disable-public-signup
+Version: 1.0.0
+Summary: plugin to assign ALLOW_PUBLIC_ACCOUNT_CREATIONALLOW_PUBLIC_ACCOUNT_CREATION as False
+Project-URL: Documentation, https://github.com/maamounhajnajeeb/tutor-contrib-disable-public-signup#readme
+Project-URL: Issues, https://github.com/maamounhajnajeeb/tutor-contrib-disable-public-signup/issues
+Project-URL: Source, https://github.com/maamounhajnajeeb/tutor-contrib-disable-public-signup
+Author: Maamoun Haj Najeeb
+Author-email: maamoun.haj.najeeb@gmail.com
+License: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9
+Requires-Dist: tutor<20.0.0,>=19.0.0
+Provides-Extra: dev
+Requires-Dist: tutor[dev]<20.0.0,>=19.0.0; extra == 'dev'
+Description-Content-Type: text/x-rst
+
+disable-public-signup plugin for `Tutor <https://docs.tutor.edly.io>`__
+#######################################################################
+
+plugin to assign ALLOW_PUBLIC_ACCOUNT_CREATIONALLOW_PUBLIC_ACCOUNT_CREATION as False
+
+
+Installation
+************
+
+.. code-block:: bash
+
+    pip install git+https://github.com/maamounhajnajeeb/tutor-contrib-disable-public-signup
+
+Usage
+*****
+
+.. code-block:: bash
+
+    tutor plugins enable disable-public-signup
+
+
+License
+*******
+
+This software is licensed under the terms of the MIT.
