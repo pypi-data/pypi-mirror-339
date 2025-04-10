@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: xingshu_sqlite
+Version: 0.0.1
+Summary: 星枢(xingshu)框架的SQLite数据库接口
+Author-email: bhzy <2024305928@qq.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/bhzyxyqy/xingshu
+Project-URL: Issues, https://github.com/bhzyxyqy/xingshu/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: importlib_metadata==8.6.1
+Requires-Dist: peewee==3.17.9
+Dynamic: license-file
+
+# 星枢(xingshu)框架的SQLite数据库接口
+
+## 说明
+
+基于peewee开发的SQLite数据库接口，无需另外安装配置数据库软件，易于使用适合初学者用户。
+
+## 安装
+
+直接使用pip命令：
+
+```
+pip install xingshu_sqlite
+```
+
+## 使用
+
+在星枢(xingshu)中使用SQLite时，需要在全局配置中填写以下字段信息：
+
+| 名称              | 含义 | 必填 | 举例        |
+| ----------------- | ---- | ---- | ----------- |
+| database.name     | 名称 | 是   | sqlite      |
+| database.database | 实例 | 是   | database.db |
+

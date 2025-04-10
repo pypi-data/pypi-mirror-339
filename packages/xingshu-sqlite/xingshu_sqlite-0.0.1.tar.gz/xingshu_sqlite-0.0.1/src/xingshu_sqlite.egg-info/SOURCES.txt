@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/xingshu_sqlite/__init__.py
+src/xingshu_sqlite/sqlite_database.py
+src/xingshu_sqlite.egg-info/PKG-INFO
+src/xingshu_sqlite.egg-info/SOURCES.txt
+src/xingshu_sqlite.egg-info/dependency_links.txt
+src/xingshu_sqlite.egg-info/requires.txt
+src/xingshu_sqlite.egg-info/top_level.txt
