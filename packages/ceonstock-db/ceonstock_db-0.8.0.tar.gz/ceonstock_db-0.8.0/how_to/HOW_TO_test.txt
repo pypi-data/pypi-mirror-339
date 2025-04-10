@@ -1,0 +1,51 @@
+--------------------
+--- Setup pytest
+--------------------
+
+	pip install pytest
+
+--------------------
+--- Setup pytest coverage report
+--------------------
+	pip install pytest-cov
+
+--------------------
+--- Create tests
+--------------------
+Put tests inside a folder: tests/
+add as many files as desired e.g.
+
+tests/
+	test_serialization.py
+	test_json_io.py
+
+To be detected by pytest, filenames 
+must end or start with 'test'.
+
+--------------------
+--- Run tests
+--------------------
+In cmdline (system):
+
+	pytest
+
+Or to leverage current python virtualenv
+
+	python -m pytest
+
+--------------------
+--- Coverage Reports
+--------------------
+Install pytest coverage:
+
+	pip install pytest-cov
+
+Add the --cov flag to pytest
+
+	python -m pytest --cov
+
+Generate a html coverage report:
+
+	coverage html
+or
+	python -m coverage html

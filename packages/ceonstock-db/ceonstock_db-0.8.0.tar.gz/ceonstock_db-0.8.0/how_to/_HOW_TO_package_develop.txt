@@ -1,0 +1,75 @@
+--------------------
+--- Useful resource
+--------------------
+https://stackoverflow.com/questions/6323860/sibling-package-imports/50193944#50193944
+
+--------------------
+--- Module Imports
+--------------------
+Although it's possible to use relative imports,
+they can cause errors depending on how the script/
+module/package is being run.
+
+The recommended approach is:
+	1. setup the package for installation (create a setup.py)
+	2. setup a virtual env where your package will be installed
+	3. pip install the package in DEVELOPMENT mode with 
+	the -e flag so that changes will be reflected
+	4. In your modules, use absolute imports that start with 
+	the package name
+
+Then, create the package so that all
+sibling folder imports evrything via the package.
+
+--------------------
+--- Example file structure
+--------------------.
+. (root)
+├── myproject
+│   ├── api
+│   │   ├── api_key.py
+│   │   ├── api.py
+│   │   └── __init__.py
+│   ├── examples
+│   │   ├── example_one.py
+│   │   ├── example_two.py
+│   │   └── __init__.py
+│   ├── LICENCE.md
+│   ├── README.md
+│   └── tests
+│       ├── __init__.py
+│       └── test_one.py
+├── setup.py
+└── venv
+    ├── Include
+    ├── Lib
+    ├── pyvenv.cfg
+    └── Scripts [87 entries exceeds filelimit, not opening dir]
+
+--------------------
+--- setup.py example
+--------------------
+
+	from setuptools import setup, find_packages
+	setup(name='myproject', version='1.0', packages=find_packages())
+
+
+--------------------
+--- virtual env
+--------------------
+Create:
+	python -m venv venv
+Activate:
+	source ./venv/bin/activate
+
+--------------------
+--- install package (requires setup.py)
+--------------------
+from the root directory:
+
+	pip install -e .
+
+--------------------
+--- Example Imports
+--------------------
+	from myproject.api.api import function_from_api
