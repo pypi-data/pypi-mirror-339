@@ -1,0 +1,12 @@
+Series#,Vol.#,Volume Modality,Series Modality,Acq.Plane,Isotropic,Bvalue,SeriesDesc,ImageType,StudyPath,StudyPathName
+1,0,t1w,t1w,ax,False,-12345,3_PLANE_LOC,"['ORIGINAL', 'PRIMARY', 'OTHER']",/localscratch/Users/cavriley/ascb_fixed_data/3385_MRI_BRAIN_2354922057154122,3385_MRI_BRAIN_2354922057154122
+10,0,t1w,t1w,cor,False,-12345,COR_T1_POST_GAD,"['ORIGINAL', 'PRIMARY', 'OTHER']",/localscratch/Users/cavriley/ascb_fixed_data/3385_MRI_BRAIN_2354922057154122,3385_MRI_BRAIN_2354922057154122
+2,0,flair,flair,ax,False,-12345,AXIAL_FLAIR,"['ORIGINAL', 'PRIMARY', 'OTHER']",/localscratch/Users/cavriley/ascb_fixed_data/3385_MRI_BRAIN_2354922057154122,3385_MRI_BRAIN_2354922057154122
+3,0,t2w,t2w,ax,False,-12345,AX_T2,"['ORIGINAL', 'PRIMARY', 'OTHER']",/localscratch/Users/cavriley/ascb_fixed_data/3385_MRI_BRAIN_2354922057154122,3385_MRI_BRAIN_2354922057154122
+4,0,t1w,t1w,ax,False,-12345,AXIAL_T1,"['ORIGINAL', 'PRIMARY', 'OTHER']",/localscratch/Users/cavriley/ascb_fixed_data/3385_MRI_BRAIN_2354922057154122,3385_MRI_BRAIN_2354922057154122
+5,0,t2w,t2w,ax,False,-12345,AX_T2,"['ORIGINAL', 'PRIMARY', 'OTHER']",/localscratch/Users/cavriley/ascb_fixed_data/3385_MRI_BRAIN_2354922057154122,3385_MRI_BRAIN_2354922057154122
+6,0,gret2star,gret2star,ax,False,-12345,AXIAL_GRADIENT,"['ORIGINAL', 'PRIMARY', 'OTHER']",/localscratch/Users/cavriley/ascb_fixed_data/3385_MRI_BRAIN_2354922057154122,3385_MRI_BRAIN_2354922057154122
+7,0,t2w,tracew,ax,False,1000,DIFFUSION_Ax__EPI_S_b_1000_T,"['ORIGINAL', 'PRIMARY', 'OTHER']",/localscratch/Users/cavriley/ascb_fixed_data/3385_MRI_BRAIN_2354922057154122,3385_MRI_BRAIN_2354922057154122
+7,1,t2w,tracew,ax,False,0,DIFFUSION_Ax__EPI_S_b_1000_T,"['ORIGINAL', 'PRIMARY', 'OTHER']",/localscratch/Users/cavriley/ascb_fixed_data/3385_MRI_BRAIN_2354922057154122,3385_MRI_BRAIN_2354922057154122
+8,0,t1w,t1w,sag,False,-12345,SAG_T1_POST,"['ORIGINAL', 'PRIMARY', 'OTHER']",/localscratch/Users/cavriley/ascb_fixed_data/3385_MRI_BRAIN_2354922057154122,3385_MRI_BRAIN_2354922057154122
+9,0,t1w,t1w,ax,False,-12345,AX_FS_T1_POST_GAD,"['ORIGINAL', 'PRIMARY', 'OTHER']",/localscratch/Users/cavriley/ascb_fixed_data/3385_MRI_BRAIN_2354922057154122,3385_MRI_BRAIN_2354922057154122
